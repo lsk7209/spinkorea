@@ -28,6 +28,6 @@
   - [x] Add Footer with Legal Links
 
 ## Phase 3: Deployment
-- [ ] **GitHub Deployment**
-  - [ ] Check Git Status
-  - [ ] Commit & Push Changes
+- [/] **GitHub Deployment**
+  - [x] Check Git Status
+  - [x] Commit & Push Changes (Waiting for Remote URL)
