@@ -1,0 +1,18 @@
+{
+    "name": "SpinFlow",
+    "short_name": "SpinFlow",
+    "description": "공정한 결정 룰렛 - 점심 메뉴, 발표자, 당첨자 랜덤 추첨",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#00d9ff",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/vite.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}

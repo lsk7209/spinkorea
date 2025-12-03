@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spinflow.pages.dev/sitemap.xml

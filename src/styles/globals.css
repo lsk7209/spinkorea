@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-neon-border;
+  }
+  
+  body {
+    @apply bg-neon-bg text-gray-100 font-sans antialiased;
+    min-height: 100dvh;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(0, 217, 255, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(255, 0, 110, 0.05) 0px, transparent 50%);
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-neon-card backdrop-blur-sm border border-neon-border rounded-2xl shadow-card;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-card-hover hover:border-neon-primary/40;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-primary text-neon-dark font-bold rounded-xl px-6 py-3
+           shadow-neon-md hover:shadow-neon-lg
+           transition-all duration-300
+           hover:scale-105 active:scale-95
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+  
+  .btn-secondary {
+    @apply bg-neon-card border border-neon-primary/30 text-neon-primary font-semibold rounded-xl px-6 py-3
+           hover:bg-neon-primary/10 hover:border-neon-primary/50
+           transition-all duration-300
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-neon-primary to-neon-accent-light bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .neon-glow {
+    box-shadow: 0 0 25px rgba(0, 217, 255, 0.3), 0 0 50px rgba(0, 217, 255, 0.15);
+  }
+  
+  .neon-glow-accent {
+    box-shadow: 0 0 25px rgba(255, 0, 110, 0.3), 0 0 50px rgba(255, 0, 110, 0.15);
+  }
+  
+  .glass {
+    @apply bg-neon-card backdrop-blur-md border border-neon-border;
+  }
+}
+

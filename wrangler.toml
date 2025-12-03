@@ -1,0 +1,16 @@
+name = "spinflow"
+compatibility_date = "2024-01-01"
+
+# Pages 프로젝트 설정
+pages_build_output_dir = "dist"
+
+# D1 데이터베이스 바인딩
+[[d1_databases]]
+binding = "DB"
+database_name = "spinflow-db"
+database_id = "74567cb3-8c64-4ef9-8ed1-6009d85ada1a" # 프로덕션에서 생성 후 ID 입력
+
+# Cron 트리거 (선택적)
+# [[triggers.crons]]
+# cron = "0 0 * * *" # 매일 자정
+
