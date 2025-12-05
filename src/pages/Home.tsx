@@ -1,9 +1,4 @@
-/**
- * Page: Home
- * 메인 룰렛 페이지
- */
-
-import { useState, useCallback } from 'react';
+import { useState, useCallback, type ComponentType } from 'react';
 import { Toaster } from 'sonner';
 import { LayoutGrid } from 'lucide-react';
 import { useStatePersistence } from '@/hooks/use-state-persistence';
@@ -35,13 +30,17 @@ interface HomeProps {
     title?: string;
     description?: string;
     keywords?: string;
+    ArticleComponent?: ComponentType;
+    structuredData?: Record<string, any>;
 }
 
 export default function Home({
     initialItems = DEFAULT_ITEMS,
     title = "SpinFlow - 온라인 룰렛 돌리기 | 원판돌리기 | 랜덤 추첨기",
     description = "무료 온라인 룰렛 돌리기 SpinFlow. 점심 메뉴 추천, 벌칙 정하기, 당첨자 추첨, 순서 정하기 등 다양한 결정을 쉽고 공정하게! 설치 없이 바로 사용하는 원판돌리기 게임.",
-    keywords = "룰렛, 룰렛돌리기, 원판돌리기, 룰렛게임, 랜덤추첨기, 제비뽑기, 사다리타기, 점심메뉴추천, 벌칙정하기, 당첨자추첨, SpinFlow, 스핀플로우, 온라인룰렛, 모바일룰렛"
+    keywords = "룰렛, 룰렛돌리기, 원판돌리기, 룰렛게임, 랜덤추첨기, 제비뽑기, 사다리타기, 점심메뉴추천, 벌칙정하기, 당첨자추첨, SpinFlow, 스핀플로우, 온라인룰렛, 모바일룰렛",
+    ArticleComponent = SEOArticle,
+    structuredData
 }: HomeProps) {
     const {
         items,
@@ -87,7 +86,7 @@ export default function Home({
 
     return (
         <div className="min-h-[100dvh] bg-neon-bg flex flex-col">
-            <SEO title={title} description={description} keywords={keywords} />
+            <SEO title={title} description={description} keywords={keywords} structuredData={structuredData} />
             {/* 헤더 */}
             <header className="w-full px-4 py-6 border-b border-neon-border/50">
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -226,7 +225,7 @@ export default function Home({
             />
 
             {/* SEO Article 섹션 */}
-            <SEOArticle />
+            <ArticleComponent />
             <Toaster position="top-center" richColors />
         </div>
     );

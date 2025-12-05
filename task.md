@@ -1,6 +1,6 @@
 # 🚀 SpinFlow: Optimization & Expansion Tasks
 
-## Phase 1: Code Optimization & Infrastructure [Current Focus]
+## Phase 1: Code Optimization & Infrastructure
 - [x] **Infrastructure Setup**
   - [x] Run `wrangler d1 create spinflow-db`
   - [x] Update `wrangler.toml` with Database ID
@@ -15,19 +15,35 @@
   - [x] Setup Google Analytics (GA4)
   - [x] Generate `robots.txt` & `sitemap.xml`
 
-## Phase 2: Utility & Content Expansion [Next Step]
+## Phase 2: Utility & Content Expansion
 - [x] **New Features**
   - [x] Create **Template System** (Lunch, Lotto, etc.)
   - [x] Implement **PWA** (Manifest, Icons)
 - [x] **Content Pages (SEO)**
   - [x] Create `/lunch-menu` Landing Page
   - [x] Create `/random-number` Landing Page
+  - [x] Add **AEO/GEO Summary Blocks** to Articles
+  - [x] Implement **Structured Data (JSON-LD)**
 - [x] **AdSense Essentials**
   - [x] Add `Privacy Policy` Page
   - [x] Add `Terms of Service` Page
   - [x] Add Footer with Legal Links
 
 ## Phase 3: Deployment
-- [/] **GitHub Deployment**
+- [x] **GitHub Deployment**
   - [x] Check Git Status
-  - [x] Commit & Push Changes (Waiting for Remote URL)
+  - [x] Commit & Push Changes
+  - [x] Code Cleanup & Optimization
+
+## Phase 4: Content Strategy (Blog)
+- [x] **Blog Infrastructure**
+  - [x] Design Post Data Structure (`src/data/posts.ts`)
+  - [x] Create `/blog` Index Page
+  - [x] Create `/blog/:slug` Dynamic Page
+- [x] **First Content**
+  - [x] Write Post: "결정 장애 극복 가이드" (Links to Lunch/Roulette tools)
+
+## Phase 5: Monitoring & Iteration [Next]
+- [ ] Connect Google Search Console
+- [ ] Submit Sitemap
+- [ ] Request AdSense Review

@@ -11,6 +11,9 @@ export default function Footer() {
                 </div>
 
                 <div className="flex items-center gap-6">
+                    <Link to="/blog" className="hover:text-white transition-colors">
+                        블로그
+                    </Link>
                     <Link to="/privacy" className="hover:text-white transition-colors">
                         개인정보처리방침
                     </Link>

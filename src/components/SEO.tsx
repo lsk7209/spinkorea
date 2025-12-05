@@ -6,13 +6,15 @@ interface SEOProps {
     description: string;
     keywords?: string;
     image?: string;
+    structuredData?: Record<string, any>;
 }
 
 export default function SEO({
     title,
     description,
     keywords = "룰렛, 원판돌리기, 랜덤추첨기, SpinFlow",
-    image = "/og-image.png"
+    image = "/og-image.png",
+    structuredData
 }: SEOProps) {
     const location = useLocation();
     const canonicalUrl = `https://spinflow.pages.dev${location.pathname}`;
@@ -21,42 +23,58 @@ export default function SEO({
         // Title
         document.title = title;
 
-        // Meta Tags
-        const setMetaTag = (name: string, content: string, isProperty = false) => {
-            let element = document.querySelector(`meta[${isProperty ? 'property' : 'name'}="${name}"]`);
+        // Helper to set meta tags
+        const setMetaTag = (selector: string, content: string, attrName: string = 'name') => {
+            let element = document.querySelector(`meta[${selector}]`);
             if (!element) {
                 element = document.createElement('meta');
-                element.setAttribute(isProperty ? 'property' : 'name', name);
+                // Handle property vs name attributes
+                const [key, value] = selector.replace(/"/g, '').split('=');
+                element.setAttribute(key || attrName, value || '');
                 document.head.appendChild(element);
             }
             element.setAttribute('content', content);
         };
 
-        setMetaTag('description', description);
-        setMetaTag('keywords', keywords);
+        // Standard Meta Tags
+        setMetaTag('name="description"', description);
+        setMetaTag('name="keywords"', keywords);
 
         // Open Graph
-        setMetaTag('og:title', title, true);
-        setMetaTag('og:description', description, true);
-        setMetaTag('og:image', image, true);
-        setMetaTag('og:url', canonicalUrl, true);
+        setMetaTag('property="og:title"', title);
+        setMetaTag('property="og:description"', description);
+        setMetaTag('property="og:image"', image);
+        setMetaTag('property="og:url"', canonicalUrl);
+        setMetaTag('property="og:type"', 'website');
 
-        // Twitter
-        setMetaTag('twitter:title', title, true);
-        setMetaTag('twitter:description', description, true);
-        setMetaTag('twitter:image', image, true);
-        setMetaTag('twitter:url', canonicalUrl, true);
+        // Twitter Card
+        setMetaTag('name="twitter:card"', 'summary_large_image');
+        setMetaTag('name="twitter:title"', title);
+        setMetaTag('name="twitter:description"', description);
+        setMetaTag('name="twitter:image"', image);
+        setMetaTag('name="twitter:url"', canonicalUrl);
 
-        // Canonical URL
-        let link = document.querySelector('link[rel="canonical"]');
-        if (!link) {
-            link = document.createElement('link');
-            link.setAttribute('rel', 'canonical');
-            document.head.appendChild(link);
+        // Canonical Link
+        let linkCanonical = document.querySelector('link[rel="canonical"]');
+        if (!linkCanonical) {
+            linkCanonical = document.createElement('link');
+            linkCanonical.setAttribute('rel', 'canonical');
+            document.head.appendChild(linkCanonical);
         }
-        link.setAttribute('href', canonicalUrl);
+        linkCanonical.setAttribute('href', canonicalUrl);
 
-    }, [title, description, keywords, image, canonicalUrl]);
+        // Structured Data (JSON-LD)
+        if (structuredData) {
+            let scriptJSONLD = document.querySelector('script[type="application/ld+json"]');
+            if (!scriptJSONLD) {
+                scriptJSONLD = document.createElement('script');
+                scriptJSONLD.setAttribute('type', 'application/ld+json');
+                document.head.appendChild(scriptJSONLD);
+            }
+            scriptJSONLD.textContent = JSON.stringify(structuredData);
+        }
+
+    }, [title, description, keywords, image, canonicalUrl, structuredData]);
 
     return null;
 }
