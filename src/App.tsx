@@ -7,6 +7,12 @@ import Terms from '@/pages/Terms';
 import BlogIndex from '@/pages/BlogIndex';
 import BlogPost from '@/pages/BlogPost';
 import Footer from '@/components/Footer';
+import LottoGenerator from '@/pages/tools/LottoGenerator';
+import DiceRoller from '@/pages/tools/DiceRoller';
+import CoinFlip from '@/pages/tools/CoinFlip';
+import YesNoOracle from '@/pages/tools/YesNoOracle';
+import RandomTeam from '@/pages/tools/RandomTeam';
+import PasswordGenerator from '@/pages/tools/PasswordGenerator';
 
 function App() {
   return (
@@ -15,6 +21,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/lunch-menu" element={<LunchMenu />} />
         <Route path="/random-number" element={<RandomNumber />} />
+        <Route path="/tools/lotto-generator" element={<LottoGenerator />} />
+        <Route path="/tools/dice-roller" element={<DiceRoller />} />
+        <Route path="/tools/coin-flip" element={<CoinFlip />} />
+        <Route path="/tools/yes-no-oracle" element={<YesNoOracle />} />
+        <Route path="/tools/random-team" element={<RandomTeam />} />
+        <Route path="/tools/random-password" element={<PasswordGenerator />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/blog" element={<BlogIndex />} />
