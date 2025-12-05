@@ -13,6 +13,12 @@ import CoinFlip from '@/pages/tools/CoinFlip';
 import YesNoOracle from '@/pages/tools/YesNoOracle';
 import RandomTeam from '@/pages/tools/RandomTeam';
 import PasswordGenerator from '@/pages/tools/PasswordGenerator';
+import TextCounter from '@/pages/tools/TextCounter';
+import CaseConverter from '@/pages/tools/CaseConverter';
+import LoremIpsum from '@/pages/tools/LoremIpsum';
+import JsonFormatter from '@/pages/tools/JsonFormatter';
+import UriEncoder from '@/pages/tools/UriEncoder';
+import Base64Encoder from '@/pages/tools/Base64Encoder';
 
 function App() {
   return (
@@ -27,6 +33,13 @@ function App() {
         <Route path="/tools/yes-no-oracle" element={<YesNoOracle />} />
         <Route path="/tools/random-team" element={<RandomTeam />} />
         <Route path="/tools/random-password" element={<PasswordGenerator />} />
+        <Route path="/tools/text-counter" element={<TextCounter />} />
+        <Route path="/tools/case-converter" element={<CaseConverter />} />
+        <Route path="/tools/lorem-ipsum" element={<LoremIpsum />} />
+        <Route path="/tools/json-formatter" element={<JsonFormatter />} />
+        <Route path="/tools/uri-encoder" element={<UriEncoder />} />
+        <Route path="/tools/base64-encoder" element={<Base64Encoder />} />
+        {/* Batch 2 Complete */}
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/blog" element={<BlogIndex />} />

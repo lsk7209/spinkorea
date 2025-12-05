@@ -13,6 +13,7 @@ import ShareButtons from '@/components/ShareButtons';
 import LastResultBanner from '@/components/LastResultBanner';
 import SEOArticle from '@/components/SEOArticle';
 import SEO from '@/components/SEO';
+import MoreTools from '@/components/MoreTools';
 
 const DEFAULT_ITEMS = [
     '한식',
@@ -223,6 +224,9 @@ export default function Home({
                 items={items}
                 onUpdate={handleUpdateItems}
             />
+
+            {/* 더 많은 도구 섹션 */}
+            <MoreTools />
 
             {/* SEO Article 섹션 */}
             <ArticleComponent />
