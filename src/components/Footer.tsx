@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row items-center gap-4">
                     <span className="font-semibold text-neon-primary">SpinFlow</span>
                     <span className="hidden md:inline">|</span>
-                    <span>© {new Date().getFullYear()} All Rights Reserved.</span>
+                    <span>© {new Date().getFullYear()} All Rights Reserved. (v1.2.0)</span>
                 </div>
 
                 <div className="flex items-center gap-6">
