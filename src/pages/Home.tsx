@@ -198,7 +198,12 @@ export default function Home({
                         items={items}
                         winningIndex={winningIndex}
                         isSpinning={isSpinning}
-                        size={typeof window !== 'undefined' ? Math.min(340, window.innerWidth - 48) : 320}
+                        size={typeof window !== 'undefined'
+                            ? (window.innerWidth >= 768
+                                ? 520 // PC size
+                                : Math.min(340, window.innerWidth - 48)) // Mobile size
+                            : 320
+                        }
                     />
                 </div>
 
