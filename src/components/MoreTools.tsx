@@ -25,28 +25,35 @@ const TOOLS = [
 
 export default function MoreTools() {
     return (
-        <section className="w-full max-w-7xl mx-auto px-4 py-12 border-t border-neon-border/30">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gradient">
-                🚀 더 많은 유틸리티 도구
-            </h2>
+        <section className="w-full max-w-7xl mx-auto px-4 py-12 border-t border-white/10">
+            <div className="text-center mb-8 space-y-2">
+                <p className="text-xs uppercase tracking-[0.25em] text-neon-primary">More tools</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gradient">🚀 유틸리티 모음</h2>
+                <p className="text-sm text-gray-400">빠른 결정, 변환, 생성까지 한 곳에서.</p>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                 {TOOLS.map((tool) => (
                     <Link
                         key={tool.path}
                         to={tool.path}
-                        className="group bg-white/5 border border-white/10 hover:border-neon-primary/50 hover:bg-white/10 rounded-xl p-4 transition-all hover:-translate-y-1 hover:shadow-lg flex flex-col items-center text-center gap-3"
+                        className="group relative overflow-hidden card card-hover p-4 flex flex-col items-start gap-3"
                     >
-                        <div className={`p-3 rounded-full bg-black/30 ${tool.color} group-hover:scale-110 transition-transform`}>
-                            <tool.icon size={24} />
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-neon-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className={`p-3 rounded-xl bg-black/30 ${tool.color} group-hover:scale-110 transition-transform`}>
+                            <tool.icon size={22} />
                         </div>
-                        <div>
-                            <h3 className="font-bold text-gray-200 group-hover:text-white mb-1 transition-colors">
+                        <div className="space-y-1">
+                            <h3 className="font-bold text-gray-100 group-hover:text-white transition-colors">
                                 {tool.name}
                             </h3>
-                            <p className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">
+                            <p className="text-xs text-gray-400 leading-relaxed">
                                 {tool.desc}
                             </p>
                         </div>
+                        <span className="text-[11px] text-neon-primary font-semibold mt-auto inline-flex items-center gap-1">
+                            바로가기
+                            <span aria-hidden>↗</span>
+                        </span>
                     </Link>
                 ))}
             </div>

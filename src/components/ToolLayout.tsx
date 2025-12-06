@@ -20,39 +20,36 @@ export default function ToolLayout({
             <SEO title={title} description={description} {...seoProps} />
 
             {/* Header */}
-            <header className="w-full px-4 py-4 border-b border-neon-border/50 backdrop-blur-md sticky top-0 z-50 bg-neon-bg/80">
-                <div className="max-w-4xl mx-auto flex items-center justify-between">
+            <header className="w-full px-4 py-4 border-b border-white/10 backdrop-blur-xl sticky top-0 z-50 bg-black/30">
+                <div className="max-w-4xl mx-auto flex items-center justify-between gap-3">
                     <Link
                         to="/"
                         className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors group"
                     >
-                        <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-                        <span className="font-medium">Home</span>
+                        <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/5 border border-white/10 group-hover:border-neon-primary/50">
+                            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+                        </span>
+                        <span className="font-medium hidden sm:inline">메인으로</span>
                     </Link>
-                    <h1 className="text-lg md:text-xl font-bold text-gradient truncate max-w-[200px] md:max-w-none">
+                    <h1 className="text-lg md:text-xl font-bold text-gradient truncate text-center flex-1">
                         {title}
                     </h1>
-                    <div className="w-16"></div> {/* Spacer for center alignment */}
+                    <div className="w-12 sm:w-16" />
                 </div>
             </header>
 
             {/* Main Content */}
-            <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-8 md:py-12">
+            <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-8 md:py-12 space-y-6">
                 {/* Tool Container */}
-                <div className="bg-neon-dark border border-neon-border rounded-2xl p-6 md:p-8 shadow-2xl shadow-neon-primary/5 mb-8">
+                <div className="card card-hover p-6 md:p-8 shadow-2xl shadow-neon-primary/10">
                     {children}
                 </div>
 
-                {/* Description & Ad Slot Placeholder */}
-                <div className="prose prose-invert max-w-none">
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-8 text-center text-gray-400 text-sm">
-                        {/* Adsense Slot Placeholder */}
-                        <p>Advertisement Area</p>
-                    </div>
-
-                    <div className="bg-neon-dark/50 border border-neon-border/30 rounded-xl p-6">
-                        <h2 className="text-xl font-semibold text-neon-primary mb-4">About this Tool</h2>
-                        <p className="text-gray-300 leading-relaxed whitespace-pre-line">
+                {/* Description */}
+                <div className="grid gap-4 md:grid-cols-[1fr]">
+                    <div className="card border-white/10 p-6">
+                        <h2 className="text-xl font-semibold text-neon-primary mb-3">About this tool</h2>
+                        <p className="text-gray-200 leading-relaxed whitespace-pre-line">
                             {description}
                         </p>
                     </div>
