@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import SEO, { SEOProps } from '@/components/SEO';
+import SEO, { type SEOProps } from '@/components/SEO';
 
 interface ToolLayoutProps extends SEOProps {
     children: ReactNode;

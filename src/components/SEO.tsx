@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-interface SEOProps {
+export interface SEOProps {
     title: string;
     description: string;
     keywords?: string;

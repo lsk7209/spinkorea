@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Copy, RefreshCw, KeyRound, ShieldCheck, ShieldAlert, Shield } from 'lucide-react';
+import { Copy, RefreshCw, KeyRound, ShieldCheck, ShieldAlert, Shield, Check } from 'lucide-react';
 import { toast } from 'sonner';
 import ToolLayout from '@/components/ToolLayout';
 
@@ -31,7 +31,11 @@ export default function PasswordGenerator() {
         if (!charset) return;
 
         let newPassword = '';
-        const cryptoObj = window.crypto || window.msCrypto;
+        const cryptoObj = window.crypto ?? (window as unknown as { msCrypto?: Crypto }).msCrypto;
+        if (!cryptoObj?.getRandomValues) {
+            toast.error('안전한 랜덤 생성기를 사용할 수 없습니다.');
+            return;
+        }
         const randomValues = new Uint32Array(length);
         cryptoObj.getRandomValues(randomValues);
 

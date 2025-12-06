@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Change, diffChars, diffLines, diffWords } from 'diff';
+import type { Change } from 'diff';
+import { diffChars, diffLines, diffWords } from 'diff';
 import { RefreshCcw } from 'lucide-react';
 import ToolLayout from '@/components/ToolLayout';
 
