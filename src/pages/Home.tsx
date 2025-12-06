@@ -1,4 +1,4 @@
-import { useState, useCallback, type ComponentType } from 'react';
+import { useState, useCallback, useRef, type ComponentType } from 'react';
 import { Toaster } from 'sonner';
 import { LayoutGrid } from 'lucide-react';
 import { useStatePersistence } from '@/hooks/use-state-persistence';
@@ -14,6 +14,7 @@ import LastResultBanner from '@/components/LastResultBanner';
 import SEOArticle from '@/components/SEOArticle';
 import SEO from '@/components/SEO';
 import MoreTools from '@/components/MoreTools';
+import RecommendedPresets from '@/components/RecommendedPresets';
 
 const DEFAULT_ITEMS = [
     '한식',
@@ -55,6 +56,7 @@ export default function Home({
     const [isEditorModalOpen, setIsEditorModalOpen] = useState(false);
     const [isTemplateModalOpen, setIsTemplateModalOpen] = useState(false);
     const [showResult, setShowResult] = useState(false);
+    const rouletteSectionRef = useRef<HTMLDivElement>(null);
 
     const handleResult = useCallback(
         (result: string) => {
@@ -85,6 +87,14 @@ export default function Home({
         [updateItems]
     );
 
+    const applyPreset = useCallback(
+        (presetItems: string[]) => {
+            handleUpdateItems(presetItems);
+            rouletteSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        },
+        [handleUpdateItems]
+    );
+
     return (
         <div className="min-h-[100dvh] bg-neon-bg flex flex-col">
             <SEO title={title} description={description} keywords={keywords} structuredData={structuredData} />
@@ -113,8 +123,10 @@ export default function Home({
                 )}
             </header>
 
+            <RecommendedPresets onSelect={applyPreset} fallbackItems={initialItems} />
+
             {/* 메인 콘텐츠 */}
-            <main className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 px-4 py-12 pb-40 max-w-7xl mx-auto w-full">
+            <main ref={rouletteSectionRef} className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 px-4 py-12 pb-40 max-w-7xl mx-auto w-full">
                 {/* 모바일: 룰렛 중앙, 데스크톱: 룰렛 좌측 */}
                 <div className="flex-shrink-0">
                     <RouletteWheel
