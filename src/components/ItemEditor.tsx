@@ -85,12 +85,13 @@ export default function ItemEditor({ items, onUpdate }: ItemEditorProps) {
           rows={10}
           className="
             w-full px-4 py-3
-            bg-neon-dark/50 border border-neon-border rounded-xl
-            text-gray-100 placeholder-gray-500
-            focus:outline-none focus:ring-2 focus:ring-neon-primary/50 focus:border-neon-primary
+            bg-white border border-gray-200 rounded-xl
+            text-gray-900 placeholder-gray-400
+            focus:outline-none focus:ring-2 focus:ring-aurora-primary/50 focus:border-aurora-primary
             resize-y
             transition-all duration-200
-            text-sm leading-relaxed
+            text-base leading-relaxed font-medium
+            shadow-inner
             "
           placeholder="항목1&#10;항목2&#10;항목3"
         />

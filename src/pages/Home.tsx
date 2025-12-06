@@ -204,6 +204,7 @@ export default function Home({
                                 : Math.min(340, window.innerWidth - 48)) // Mobile size
                             : 320
                         }
+                        onSpin={handleSpin}
                     />
                 </div>
 

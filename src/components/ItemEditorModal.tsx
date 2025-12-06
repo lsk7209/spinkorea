@@ -85,9 +85,9 @@ export default function ItemEditorModal({
           rows={15}
           className="
             flex-1 w-full px-4 py-2
-            bg-neon-dark border border-neon-primary/30 rounded-lg
-            text-neon-primary placeholder-neon-primary/50
-            focus:outline-none focus:ring-2 focus:ring-neon-primary focus:border-transparent
+            bg-white border border-gray-200 rounded-lg
+            text-gray-900 placeholder-gray-400
+            focus:outline-none focus:ring-2 focus:ring-aurora-primary focus:border-transparent
             resize-none
           "
           placeholder="항목1&#10;항목2&#10;항목3"

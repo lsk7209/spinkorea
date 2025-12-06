@@ -16,6 +16,7 @@ interface RouletteWheelProps {
   winningIndex: number | null;
   isSpinning: boolean;
   size?: number;
+  onSpin?: () => void;
 }
 
 export default function RouletteWheel({
@@ -23,6 +24,7 @@ export default function RouletteWheel({
   winningIndex,
   isSpinning,
   size = 300,
+  onSpin,
 }: RouletteWheelProps) {
   const radius = size / 2;
   const centerX = radius;
@@ -36,36 +38,36 @@ export default function RouletteWheel({
 
     const anglePerSector = 360 / items.length;
     return items.map((item, index) => {
-      const startAngle = index * anglePerSector - 90; // -90도부터 시작 (상단)
-      const endAngle = (index + 1) * anglePerSector - 90;
-      
+      const startAngle = index * anglePerSector; // 0도부터 시작 (3시 방향)
+      const endAngle = (index + 1) * anglePerSector;
+
       // SVG path 계산
       const startAngleRad = (startAngle * Math.PI) / 180;
       const endAngleRad = (endAngle * Math.PI) / 180;
-      
+
       const x1 = centerX + radius * Math.cos(startAngleRad);
       const y1 = centerY + radius * Math.sin(startAngleRad);
       const x2 = centerX + radius * Math.cos(endAngleRad);
       const y2 = centerY + radius * Math.sin(endAngleRad);
-      
+
       const largeArcFlag = anglePerSector > 180 ? 1 : 0;
-      
+
       const path = `M ${centerX} ${centerY} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2} Z`;
-      
+
       // 텍스트 위치 계산
       const textAngle = (startAngle + endAngle) / 2;
       const textAngleRad = (textAngle * Math.PI) / 180;
       const textRadius = radius * 0.7;
       const textX = centerX + textRadius * Math.cos(textAngleRad);
       const textY = centerY + textRadius * Math.sin(textAngleRad);
-      
+
       return {
         index,
         item,
         path,
         textX,
         textY,
-        textAngle: textAngle + 90, // SVG 변환을 위해 조정
+        textAngle: textAngle + 180, // 텍스트 회전 조정 (읽기 편하게)
       };
     });
   }, [items, radius, centerX, centerY]);
@@ -80,47 +82,28 @@ export default function RouletteWheel({
     }
 
     if (isSpinning) {
-      // 스핀 시작: 현재 위치에서 최소 3바퀴 이상 회전하여 당첨 위치로
+      // 스핀 시작
       const anglePerSector = 360 / items.length;
-      
-      // 섹터는 -90도부터 시작 (상단이 0도)
-      // 당첨 섹터의 중앙 각도 계산 (라디안이 아닌 도 단위)
-      const sectorStartAngle = winningIndex * anglePerSector - 90;
-      const sectorEndAngle = (winningIndex + 1) * anglePerSector - 90;
-      const sectorCenterAngle = (sectorStartAngle + sectorEndAngle) / 2;
-      
-      // 포인터가 상단(0도)을 가리키므로, 당첨 섹터 중앙이 0도에 오도록 회전
-      // SVG rotate는 시계 방향이므로, 반시계 방향으로 회전하려면 음수
-      // 섹터 중앙이 0도에 오려면: rotation = -sectorCenterAngle
+
+      // 당첨 섹터의 중앙 각도 (0도 기준)
+      // index 0의 중앙 = anglePerSector / 2
+      const sectorCenterAngle = winningIndex * anglePerSector + anglePerSector / 2;
+
+      // 목표: 해당 섹터 중앙이 0도(3시)에 오도록 회전
+      // SVG Container가 이미 -90도(12시)로 돌아가 있으므로, 
+      // 3시에 맞추면 화면상 12시가 됨.
       const targetRotation = -sectorCenterAngle;
-      
-      // 최소 3바퀴 (1080도) 이상 회전
-      // 현재 회전에서 시작하여 최소 3바퀴 + 목표 각도로 정확히 정렬
-      // 이전 회전의 오프셋을 제거한 뒤 새로운 목표 각도에 맞춥니다.
+
       const currentRotation = currentRotationRef.current;
       const currentOffset = currentRotation % 360;
       const deltaToTarget = targetRotation - currentOffset;
       const minFullRotations = 1080; // 최소 3바퀴
       const totalRotation = currentRotation + minFullRotations + deltaToTarget;
-      
+
       setRotation(totalRotation);
       currentRotationRef.current = totalRotation;
-    } else {
-      // 스핀 종료: 당첨 위치에 정확히 멈춤 (이미 계산된 rotation 유지)
     }
   }, [isSpinning, winningIndex, items.length]);
-
-  // 개선된 색상 팔레트
-  const solidColors = [
-    '#00d9ff',
-    '#ff006e',
-    '#00ff88',
-    '#ffaa00',
-    '#aa00ff',
-    '#00aaff',
-    '#ff0066',
-    '#66ff00',
-  ];
 
   return (
     <div className="relative flex items-center justify-center" style={{ width: size, height: size }}>
@@ -129,6 +112,7 @@ export default function RouletteWheel({
         height={size}
         viewBox={`0 0 ${size} ${size}`}
         className="relative z-10"
+        style={{ transform: 'rotate(-90deg)' }} // 0번 인덱스를 12시로 정렬
       >
         <defs>
           <filter id="glow">
@@ -139,7 +123,7 @@ export default function RouletteWheel({
             </feMerge>
           </filter>
         </defs>
-        
+
         <motion.g
           animate={{
             rotate: rotation,
@@ -156,7 +140,7 @@ export default function RouletteWheel({
             const isWinner = winningIndex === sector.index;
             const colorIndex = idx % solidColors.length;
             const solidColor = solidColors[colorIndex];
-            
+
             return (
               <g key={sector.index}>
                 <defs>
@@ -199,7 +183,7 @@ export default function RouletteWheel({
             );
           })}
         </motion.g>
-        
+
         {/* 중앙 포인터 */}
         <defs>
           <linearGradient id="pointer-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -220,6 +204,26 @@ export default function RouletteWheel({
           }}
         />
       </svg>
+
+      {/* 중앙 스핀 버튼 */}
+      {onSpin && (
+        <button
+          onClick={onSpin}
+          disabled={isSpinning || items.length === 0}
+          className={`
+            absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+            w-16 h-16 rounded-full z-20
+            bg-white border-4 border-gray-100 shadow-xl
+            flex items-center justify-center
+            text-aurora-primary font-black text-sm tracking-widest
+            hover:scale-110 active:scale-90 transition-transform duration-200
+            ${isSpinning ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-[0_0_20px_rgba(255,255,255,0.5)]'}
+          `}
+          aria-label="룰렛 돌리기"
+        >
+          SPIN
+        </button>
+      )}
     </div>
   );
 }
