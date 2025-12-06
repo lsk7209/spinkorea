@@ -1,4 +1,5 @@
-import { useState, useCallback, useRef, type ComponentType } from 'react';
+import { useState, useCallback, useRef, useEffect, type ComponentType } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import { LayoutGrid } from 'lucide-react';
 import { useStatePersistence } from '@/hooks/use-state-persistence';
@@ -15,6 +16,7 @@ import SEOArticle from '@/components/SEOArticle';
 import SEO from '@/components/SEO';
 import MoreTools from '@/components/MoreTools';
 import RecommendedPresets from '@/components/RecommendedPresets';
+import { TEMPLATES } from '@/data/templates';
 
 const DEFAULT_ITEMS = [
     '한식',
@@ -59,6 +61,9 @@ export default function Home({
     const [isTemplateModalOpen, setIsTemplateModalOpen] = useState(false);
     const [showResult, setShowResult] = useState(false);
     const rouletteSectionRef = useRef<HTMLDivElement>(null);
+    const lastAppliedSlugRef = useRef<string | null>(null);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleResult = useCallback(
         (result: string) => {
@@ -96,6 +101,40 @@ export default function Home({
         },
         [handleUpdateItems]
     );
+
+    // Intercept deep links like /spinflow/lunch or /spinflow/lotto and apply presets in-place without leaving /spinflow
+    useEffect(() => {
+        const path = location.pathname.replace(/^\//, '');
+        const segments = path.split('/'); // e.g., ["spinflow", "lunch"]
+        const slug = segments[0] === 'spinflow' ? segments[1] : undefined;
+
+        if (!slug) {
+            lastAppliedSlugRef.current = null;
+            return;
+        }
+
+        if (lastAppliedSlugRef.current === slug) {
+            return;
+        }
+
+        const presetIdMap: Record<string, string> = {
+            lunch: 'lunch-korean',
+            'truth-or-dare': 'truth-dare',
+            lotto: 'lotto',
+        };
+
+        const presetId = presetIdMap[slug];
+        const presetItems =
+            presetId && TEMPLATES.find((t) => t.id === presetId)?.items;
+
+        if (presetItems && presetItems.length > 0) {
+            handleUpdateItems(presetItems);
+            lastAppliedSlugRef.current = slug;
+            // Replace URL back to /spinflow to avoid further navigations / bookmarking deep slug
+            navigate('/spinflow', { replace: true });
+            rouletteSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, [location.pathname, handleUpdateItems, navigate]);
 
     return (
         <div className="min-h-[100dvh] bg-neon-bg flex flex-col">
