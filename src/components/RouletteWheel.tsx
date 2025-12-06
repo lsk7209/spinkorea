@@ -11,6 +11,18 @@
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
+// 개선된 색상 팔레트
+const solidColors = [
+  '#00d9ff',
+  '#ff006e',
+  '#00ff88',
+  '#ffaa00',
+  '#aa00ff',
+  '#00aaff',
+  '#ff0066',
+  '#66ff00',
+];
+
 interface RouletteWheelProps {
   items: string[];
   winningIndex: number | null;
