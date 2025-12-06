@@ -95,10 +95,13 @@ export default function RouletteWheel({
       const targetRotation = -sectorCenterAngle;
       
       // 최소 3바퀴 (1080도) 이상 회전
-      // 현재 회전에서 시작하여 최소 3바퀴 + 목표 각도
-      const baseRotation = currentRotationRef.current % 360; // 현재 각도를 0-360 범위로
+      // 현재 회전에서 시작하여 최소 3바퀴 + 목표 각도로 정확히 정렬
+      // 이전 회전의 오프셋을 제거한 뒤 새로운 목표 각도에 맞춥니다.
+      const currentRotation = currentRotationRef.current;
+      const currentOffset = currentRotation % 360;
+      const deltaToTarget = targetRotation - currentOffset;
       const minFullRotations = 1080; // 최소 3바퀴
-      const totalRotation = baseRotation + minFullRotations + targetRotation;
+      const totalRotation = currentRotation + minFullRotations + deltaToTarget;
       
       setRotation(totalRotation);
       currentRotationRef.current = totalRotation;
