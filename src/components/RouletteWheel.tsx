@@ -108,7 +108,7 @@ export default function RouletteWheel({
       const currentRotation = currentRotationRef.current;
       const currentOffset = currentRotation % 360;
       const deltaToTarget = targetRotation - currentOffset;
-      const minFullRotations = 1080; // 최소 3바퀴
+      const minFullRotations = 2880; // 8바퀴 (기존 3바퀴에서 증가)
       const totalRotation = currentRotation + minFullRotations + deltaToTarget;
 
       setRotation(totalRotation);
@@ -139,8 +139,8 @@ export default function RouletteWheel({
             rotate: rotation,
           }}
           transition={{
-            duration: isSpinning ? 3 + Math.random() * 4 : 0.5, // 3-7초 스핀, 0.5초 정지
-            ease: isSpinning ? [0.25, 0.1, 0.25, 1] : 'easeOut', // 물리 기반 감속
+            duration: isSpinning ? 5 : 0.5, // 5초 동안 회전
+            ease: isSpinning ? [0.2, 0.8, 0.2, 0.99] : 'easeOut', // 초기 가속 후 천천히 감속
           }}
           style={{
             transformOrigin: `${centerX}px ${centerY}px`,
