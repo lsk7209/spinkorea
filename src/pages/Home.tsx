@@ -149,30 +149,41 @@ export default function Home({
     return (
         <div className="min-h-[100dvh] bg-neon-bg flex flex-col">
             <SEO title={title} description={description} keywords={keywords} structuredData={structuredData} />
-            {/* 헤더 */}
-            <header className="w-full px-4 py-6 border-b border-white/10 backdrop-blur-xl sticky top-0 z-40 bg-black/30">
-                <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
-                    <div>
-                        <h1 className="text-3xl md:text-4xl font-extrabold text-gradient mb-1 leading-tight">
-                            {title}
-                        </h1>
-                        <p className="text-xs md:text-sm text-gray-400 max-w-2xl leading-relaxed">{description}</p>
+            {/* Header / Hero Section */}
+            <header className="w-full relative overflow-hidden flex flex-col items-center justify-center pt-20 pb-12 px-4">
+                {/* Background Decor */}
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+                    <div className="absolute top-[-20%] left-[10%] w-[600px] h-[600px] bg-aurora-primary/20 rounded-full blur-[120px] animate-float-slow" />
+                    <div className="absolute bottom-[-20%] right-[10%] w-[600px] h-[600px] bg-aurora-purple/20 rounded-full blur-[120px] animate-float-slow" style={{ animationDelay: '2s' }} />
+                    <div className="absolute top-[40%] left-[50%] -translate-x-1/2 w-[400px] h-[400px] bg-aurora-accent/10 rounded-full blur-[100px] animate-pulse-soft" />
+                </div>
+
+                <div className="animate-slide-up flex flex-col items-center text-center z-10 max-w-4xl mx-auto">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 animate-fade-in hover:bg-white/10 transition-colors cursor-default group">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-aurora-secondary opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-aurora-secondary"></span>
+                        </span>
+                        <span className="text-gray-300 text-sm font-medium tracking-wide group-hover:text-white transition-colors">Trendy Decision Maker</span>
                     </div>
 
-                    <button
-                        onClick={() => setIsTemplateModalOpen(true)}
-                        className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all text-sm text-gray-300 hover:text-white hover:-translate-y-0.5"
-                    >
-                        <LayoutGrid size={18} />
-                        <span className="hidden md:inline">템플릿</span>
-                    </button>
+                    <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tight leading-none text-white drop-shadow-2xl">
+                        <span className="bg-gradient-to-r from-aurora-primary via-aurora-secondary to-aurora-accent bg-clip-text text-transparent hover:opacity-90 transition-opacity cursor-default animate-shimmer bg-[length:200%_auto]">Spin</span>
+                        <span className="text-white">Flow</span>
+                    </h1>
+
+                    <p className="text-lg md:text-2xl text-gray-300 max-w-2xl leading-relaxed font-medium">
+                        결정이 망설여질 때, <br className="md:hidden" />
+                        <span className="text-aurora-secondary font-bold">SpinFlow</span>가 답을 드립니다.
+                    </p>
                 </div>
-                {lastResult && (
-                    <div className="max-w-7xl mx-auto mt-4">
-                        <LastResultBanner result={lastResult} />
-                    </div>
-                )}
             </header>
+
+            {lastResult && (
+                <div className="max-w-xl mx-auto w-full px-4 mb-8 text-center animate-pop z-20">
+                    <LastResultBanner result={lastResult} />
+                </div>
+            )}
 
             <RecommendedPresets onSelect={applyPreset} fallbackItems={initialItems} />
 
@@ -223,20 +234,20 @@ export default function Home({
 
                 {/* 모바일: 항목 수정 버튼 */}
                 <div className="md:hidden w-full max-w-sm">
-                    <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="grid grid-cols-2 gap-4 mb-6">
                         <button
                             type="button"
                             onClick={() => setIsEditorModalOpen(true)}
-                            className="btn-secondary w-full"
+                            className="btn-secondary w-full backdrop-blur-md bg-white/5 border-white/10 hover:bg-white/10 group"
                         >
-                            항목 수정
+                            <span className="group-hover:scale-110 transition-transform">✏️</span> 항목 수정
                         </button>
                         <button
                             type="button"
                             onClick={() => setIsTemplateModalOpen(true)}
-                            className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-gray-300 font-semibold hover:bg-white/10 transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5"
+                            className="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-2xl text-white font-bold hover:border-aurora-primary/50 transition-all flex items-center justify-center gap-2 hover:-translate-y-1 active:scale-95 shadow-lg shadow-black/20"
                         >
-                            <LayoutGrid size={18} />
+                            <LayoutGrid size={20} className="text-aurora-secondary" />
                             템플릿
                         </button>
                     </div>

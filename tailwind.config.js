@@ -6,51 +6,54 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Pretendard', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+      },
       colors: {
-        // 개선된 네온 느와르 테마
-        'neon-bg': '#0a0e27',
-        'neon-bg-light': '#141829',
-        'neon-primary': '#00d9ff',
-        'neon-primary-dark': '#00b8d9',
-        'neon-accent': '#ff006e',
-        'neon-accent-light': '#ff4d9a',
-        'neon-dark': '#050813',
-        'neon-card': 'rgba(20, 24, 41, 0.8)',
-        'neon-border': 'rgba(0, 217, 255, 0.2)',
+        // Aurora Holographic Theme
+        'aurora-bg': '#030014', // Deep Space
+        'aurora-bg-light': '#0a0a2e',
+        'aurora-primary': '#4facfe', // Soft Blue
+        'aurora-secondary': '#00f2fe', // Cyan
+        'aurora-accent': '#ff0080', // Pink
+        'aurora-purple': '#7928ca', // Rich Purple
+        'aurora-card': 'rgba(255, 255, 255, 0.03)', // Crystal clear glass
+        'aurora-border': 'rgba(255, 255, 255, 0.08)',
       },
       boxShadow: {
-        'neon-sm': '0 0 15px rgba(0, 217, 255, 0.2), 0 0 30px rgba(0, 217, 255, 0.1)',
-        'neon-md': '0 0 25px rgba(0, 217, 255, 0.3), 0 0 50px rgba(0, 217, 255, 0.15)',
-        'neon-lg': '0 0 40px rgba(0, 217, 255, 0.4), 0 0 80px rgba(0, 217, 255, 0.2)',
-        'neon-accent-sm': '0 0 15px rgba(255, 0, 110, 0.2), 0 0 30px rgba(255, 0, 110, 0.1)',
-        'neon-accent-md': '0 0 25px rgba(255, 0, 110, 0.3), 0 0 50px rgba(255, 0, 110, 0.15)',
-        'neon-accent-lg': '0 0 40px rgba(255, 0, 110, 0.4), 0 0 80px rgba(255, 0, 110, 0.2)',
-        'card': '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 1px rgba(0, 217, 255, 0.1)',
-        'card-hover': '0 12px 48px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 217, 255, 0.2)',
+        'glow-sm': '0 0 10px rgba(79, 172, 254, 0.3)',
+        'glow-md': '0 0 20px rgba(121, 40, 202, 0.3)',
+        'glow-lg': '0 0 40px rgba(0, 242, 254, 0.2), 0 0 80px rgba(255, 0, 128, 0.1)',
+        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+        'glass-hover': '0 8px 32px 0 rgba(31, 38, 135, 0.37), inset 0 0 0 1px rgba(255, 255, 255, 0.1)',
       },
       backgroundImage: {
-        'gradient-neon': 'linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(255, 0, 110, 0.1) 100%)',
-        'gradient-primary': 'linear-gradient(135deg, #00d9ff 0%, #00b8d9 100%)',
-        'gradient-accent': 'linear-gradient(135deg, #ff006e 0%, #ff4d9a 100%)',
+        'gradient-aurora': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', // Blue to Cyan
+        'gradient-cosmic': 'linear-gradient(135deg, #7928ca 0%, #ff0080 100%)', // Purple to Pink
+        'gradient-text': 'linear-gradient(to right, #4facfe 0%, #00f2fe 50%, #ff0080 100%)',
       },
       animation: {
-        'spin-slow': 'spin 3s linear infinite',
-        'pulse-glow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'fade-in': 'fadeIn 0.2s ease-out',
-        'scale-up': 'scaleUp 0.2s ease-out',
+        'aurora': 'aurora 20s linear infinite',
+        'float-slow': 'float 8s ease-in-out infinite',
+        'pulse-soft': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'shimmer': 'shimmer 2.5s linear infinite',
       },
       keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+        aurora: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         },
-        scaleUp: {
-          '0%': { opacity: '0', transform: 'scale(0.95)' },
-          '100%': { opacity: '1', transform: 'scale(1)' },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-15px)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
       },
     },
   },
   plugins: [],
 }
-
