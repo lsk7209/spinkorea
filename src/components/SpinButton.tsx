@@ -34,14 +34,16 @@ function SpinButton({ onClick, disabled = false, isSpinning = false }: SpinButto
       className={`
         fixed bottom-8 left-1/2 -translate-x-1/2 z-50
         w-28 h-28 rounded-full
-        bg-gradient-primary text-neon-dark
+        bg-gradient-aurora text-white
         font-extrabold text-xl
-        shadow-neon-lg
+        shadow-glow-lg
         transition-all duration-300
-        hover:scale-110 hover:shadow-neon-lg
+        hover:scale-110 hover:shadow-[0_0_50px_rgba(79,172,254,0.6)]
         active:scale-95
-        focus:outline-none focus:ring-4 focus:ring-neon-primary/50 focus:ring-offset-4 focus:ring-offset-neon-bg
+        focus:outline-none focus:ring-4 focus:ring-aurora-primary/50 focus:ring-offset-4 focus:ring-offset-aurora-bg
         disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100
+        z-[100]
+        border-4 border-white/20 backdrop-blur-sm
         ${isSpinning ? 'animate-pulse-glow' : ''}
       `}
       aria-label={isSpinning ? '회전 중...' : '룰렛 돌리기'}

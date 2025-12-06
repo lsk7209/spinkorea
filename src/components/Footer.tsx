@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
-        <footer className="w-full py-8 px-4 border-t border-neon-primary/20 bg-neon-dark/50 backdrop-blur-sm mt-auto">
+        <footer className="w-full py-8 px-4 border-t border-aurora-border bg-aurora-bg/50 backdrop-blur-sm mt-auto">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
                 <div className="flex flex-col md:flex-row items-center gap-4">
-                    <span className="font-semibold text-neon-primary">SpinFlow</span>
+                    <span className="font-semibold text-aurora-primary">SpinFlow</span>
                     <span className="hidden md:inline">|</span>
                     <span>© {new Date().getFullYear()} All Rights Reserved. (v1.2.0)</span>
                 </div>

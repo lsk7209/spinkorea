@@ -6,6 +6,8 @@ import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import Terms from '@/pages/Terms';
 import BlogIndex from '@/pages/BlogIndex';
 import BlogPost from '@/pages/BlogPost';
+import ToolsIndex from '@/pages/ToolsIndex';
+import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LottoGenerator from '@/pages/tools/LottoGenerator';
 import DiceRoller from '@/pages/tools/DiceRoller';
@@ -24,11 +26,15 @@ import SpinflowStandalone from '@/pages/SpinflowStandalone';
 function App() {
   return (
     <>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/spinflow-standalone" element={<SpinflowStandalone />} />
         <Route path="/lunch-menu" element={<LunchMenu />} />
         <Route path="/random-number" element={<RandomNumber />} />
+
+        <Route path="/tools" element={<ToolsIndex />} />
+
         <Route path="/tools/lotto-generator" element={<LottoGenerator />} />
         <Route path="/tools/dice-roller" element={<DiceRoller />} />
         <Route path="/tools/coin-flip" element={<CoinFlip />} />
