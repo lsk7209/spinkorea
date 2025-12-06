@@ -12,6 +12,7 @@
     "db:migrate": "wrangler d1 execute spinflow-db --file=./db/schema.sql"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
     "@types/canvas-confetti": "^1.9.0",
     "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
@@ -23,16 +24,21 @@
     "wrangler": "^4.50.0"
   },
   "dependencies": {
+    "@types/diff": "^7.0.2",
     "@vitejs/plugin-react": "^5.1.1",
     "canvas-confetti": "^1.9.4",
+    "diff": "^8.0.2",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.554.0",
     "lz-string": "^1.5.0",
     "nanoid": "^5.1.6",
+    "qrcode.react": "^4.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-ga4": "^2.1.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.10.0",
+    "remark-gfm": "^4.0.1",
     "sonner": "^2.0.7"
   }
 }
