@@ -10,12 +10,22 @@ const LAST_STATE_KEY = 'spinflow:lastState';
 const LAST_RESULT_KEY = 'spinflow:lastResult';
 const RESULT_EXPIRY_MINUTES = 5;
 
+interface StatePersistenceOptions {
+  /**
+   * 초기 렌더링 시 URL 파라미터가 없을 때 localStorage 저장값보다
+   * 전달된 initialItems를 우선 적용할지 여부.
+   * 프리셋/랜딩 페이지에서 저장된 상태가 아닌 템플릿을 강제 적용할 때 사용.
+   */
+  preferInitialOnFirstLoad?: boolean;
+}
+
 /**
  * 상태 지속성 훅
  * @param initialItems - 초기 항목 배열
  * @returns 상태 및 상태 업데이트 함수
  */
-export function useStatePersistence(initialItems: string[] = []) {
+export function useStatePersistence(initialItems: string[] = [], options: StatePersistenceOptions = {}) {
+  const { preferInitialOnFirstLoad = false } = options;
   const [items, setItems] = useState<string[]>(initialItems);
   const [urlWarning, setUrlWarning] = useState(false);
   const [urlUnsafe, setUrlUnsafe] = useState(false);
@@ -26,7 +36,7 @@ export function useStatePersistence(initialItems: string[] = []) {
     const urlState = getStateFromUrl();
     if (urlState && urlState.items.length > 0) {
       setItems(urlState.items);
-    } else {
+    } else if (!preferInitialOnFirstLoad) {
       const savedState = localStorage.getItem(LAST_STATE_KEY);
       if (savedState) {
         try {

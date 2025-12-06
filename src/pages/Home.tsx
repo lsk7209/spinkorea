@@ -34,6 +34,7 @@ interface HomeProps {
     keywords?: string;
     ArticleComponent?: ComponentType;
     structuredData?: Record<string, any>;
+    preferInitialOnFirstLoad?: boolean;
 }
 
 export default function Home({
@@ -42,7 +43,8 @@ export default function Home({
     description = "무료 온라인 룰렛 돌리기 SpinFlow. 점심 메뉴 추천, 벌칙 정하기, 당첨자 추첨, 순서 정하기 등 다양한 결정을 쉽고 공정하게! 설치 없이 바로 사용하는 원판돌리기 게임.",
     keywords = "룰렛, 룰렛돌리기, 원판돌리기, 룰렛게임, 랜덤추첨기, 제비뽑기, 사다리타기, 점심메뉴추천, 벌칙정하기, 당첨자추첨, SpinFlow, 스핀플로우, 온라인룰렛, 모바일룰렛",
     ArticleComponent = SEOArticle,
-    structuredData
+    structuredData,
+    preferInitialOnFirstLoad = false,
 }: HomeProps) {
     const {
         items,
@@ -51,7 +53,7 @@ export default function Home({
         lastResult,
         urlWarning,
         urlUnsafe,
-    } = useStatePersistence(initialItems);
+    } = useStatePersistence(initialItems, { preferInitialOnFirstLoad });
 
     const [isEditorModalOpen, setIsEditorModalOpen] = useState(false);
     const [isTemplateModalOpen, setIsTemplateModalOpen] = useState(false);
