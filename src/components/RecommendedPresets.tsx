@@ -48,7 +48,7 @@ export default function RecommendedPresets({ onSelect, fallbackItems }: Recommen
         <section className="w-full max-w-7xl mx-auto px-4 py-8">
             <div className="flex items-center justify-between mb-4">
                 <div>
-                    <p className="text-xs uppercase tracking-wide text-neon-primary">추천 프리셋</p>
+                    <p className="text-xs uppercase tracking-[0.24em] text-neon-primary">Recommended presets</p>
                     <h2 className="text-2xl md:text-3xl font-bold text-white mt-1">원하는 주제로 바로 세팅</h2>
                 </div>
             </div>

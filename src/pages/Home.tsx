@@ -150,18 +150,18 @@ export default function Home({
         <div className="min-h-[100dvh] bg-neon-bg flex flex-col">
             <SEO title={title} description={description} keywords={keywords} structuredData={structuredData} />
             {/* 헤더 */}
-            <header className="w-full px-4 py-6 border-b border-neon-border/50">
-                <div className="max-w-7xl mx-auto flex items-center justify-between">
+            <header className="w-full px-4 py-6 border-b border-white/10 backdrop-blur-xl sticky top-0 z-40 bg-black/30">
+                <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
                     <div>
-                        <h1 className="text-3xl md:text-4xl font-extrabold text-gradient mb-1">
+                        <h1 className="text-3xl md:text-4xl font-extrabold text-gradient mb-1 leading-tight">
                             {title}
                         </h1>
-                        <p className="text-xs md:text-sm text-gray-400">{description}</p>
+                        <p className="text-xs md:text-sm text-gray-400 max-w-2xl leading-relaxed">{description}</p>
                     </div>
 
                     <button
                         onClick={() => setIsTemplateModalOpen(true)}
-                        className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-colors text-sm text-gray-300 hover:text-white"
+                        className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all text-sm text-gray-300 hover:text-white hover:-translate-y-0.5"
                     >
                         <LayoutGrid size={18} />
                         <span className="hidden md:inline">템플릿</span>
@@ -177,14 +177,17 @@ export default function Home({
             <RecommendedPresets onSelect={applyPreset} fallbackItems={initialItems} />
 
             {/* 메인 콘텐츠 */}
-            <main ref={rouletteSectionRef} className="flex-1 flex flex-col md:flex-row items-center justify-center gap-8 px-4 py-12 pb-40 max-w-7xl mx-auto w-full">
+            <main
+                ref={rouletteSectionRef}
+                className="flex-1 flex flex-col md:flex-row items-center justify-center gap-10 px-4 py-10 pb-32 max-w-7xl mx-auto w-full"
+            >
                 {/* 모바일: 룰렛 중앙, 데스크톱: 룰렛 좌측 */}
                 <div className="flex-shrink-0">
                     <RouletteWheel
                         items={items}
                         winningIndex={winningIndex}
                         isSpinning={isSpinning}
-                        size={typeof window !== 'undefined' ? Math.min(300, window.innerWidth - 32) : 300}
+                        size={typeof window !== 'undefined' ? Math.min(340, window.innerWidth - 48) : 320}
                     />
                 </div>
 
@@ -231,7 +234,7 @@ export default function Home({
                         <button
                             type="button"
                             onClick={() => setIsTemplateModalOpen(true)}
-                            className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-gray-300 font-semibold hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+                            className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-gray-300 font-semibold hover:bg-white/10 transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5"
                         >
                             <LayoutGrid size={18} />
                             템플릿
