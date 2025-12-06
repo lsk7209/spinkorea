@@ -214,10 +214,10 @@ export default function RouletteWheel({
           }}
         >
           <polygon
-            points={`${centerX},${centerY - radius + 10} ${centerX - 12},${centerY - radius - 15} ${centerX + 12},${centerY - radius - 15}`}
+            points={`${centerX},${centerY - radius + 20} ${centerX - 24},${centerY - radius - 20} ${centerX + 24},${centerY - radius - 20}`}
             fill="url(#pointer-gradient)"
             stroke="rgba(255,255,255,0.6)"
-            strokeWidth={1.5}
+            strokeWidth={2}
             filter="url(#glow)"
             className="neon-glow"
             style={{
