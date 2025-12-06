@@ -79,7 +79,7 @@ export default function RouletteWheel({
         path,
         textX,
         textY,
-        textAngle: textAngle + 180, // 텍스트 회전 조정 (읽기 편하게)
+        textAngle: textAngle + 90, // 텍스트 회전 조정 (방사형)
       };
     });
   }, [items, radius, centerX, centerY]);
@@ -98,13 +98,12 @@ export default function RouletteWheel({
       const anglePerSector = 360 / items.length;
 
       // 당첨 섹터의 중앙 각도 (0도 기준)
-      // index 0의 중앙 = anglePerSector / 2
+      // index 0의 중앙 = anglePerSector / 2 (3시 방향 기준)
       const sectorCenterAngle = winningIndex * anglePerSector + anglePerSector / 2;
 
-      // 목표: 해당 섹터 중앙이 0도(3시)에 오도록 회전
-      // SVG Container가 이미 -90도(12시)로 돌아가 있으므로, 
-      // 3시에 맞추면 화면상 12시가 됨.
-      const targetRotation = -sectorCenterAngle;
+      // 목표: 해당 섹터 중앙이 -90도(12시)에 오도록 회전
+      // 0도(3시)에 있는 섹터 중앙을 -90도(12시)로 보내려면: -90 - sectorCenterAngle
+      const targetRotation = -90 - sectorCenterAngle;
 
       const currentRotation = currentRotationRef.current;
       const currentOffset = currentRotation % 360;
@@ -124,7 +123,6 @@ export default function RouletteWheel({
         height={size}
         viewBox={`0 0 ${size} ${size}`}
         className="relative z-10"
-        style={{ transform: 'rotate(-90deg)' }} // 0번 인덱스를 12시로 정렬
       >
         <defs>
           <filter id="glow">
@@ -204,7 +202,7 @@ export default function RouletteWheel({
           </linearGradient>
         </defs>
         <polygon
-          points={`${centerX},${centerY - radius - 12} ${centerX - 16},${centerY - radius + 12} ${centerX + 16},${centerY - radius + 12}`}
+          points={`${centerX},${centerY - radius + 10} ${centerX - 12},${centerY - radius - 15} ${centerX + 12},${centerY - radius - 15}`}
           fill="url(#pointer-gradient)"
           stroke="rgba(255,255,255,0.6)"
           strokeWidth={1.5}
