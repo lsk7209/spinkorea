@@ -37,6 +37,11 @@ interface HomeProps {
     ArticleComponent?: ComponentType;
     structuredData?: Record<string, any>;
     preferInitialOnFirstLoad?: boolean;
+    /**
+     * 프리셋 딥링크(/spinflow/lunch 등)를 감지하여 자동으로 적용/루트로 되돌리는 동작을 끌지 여부.
+     * 새로운 전용 페이지에서 라우터 변경 없이만 동작시키고 싶을 때 true로 설정.
+     */
+    disableDeepLinkPresetSync?: boolean;
 }
 
 export default function Home({
@@ -47,6 +52,7 @@ export default function Home({
     ArticleComponent = SEOArticle,
     structuredData,
     preferInitialOnFirstLoad = false,
+    disableDeepLinkPresetSync = false,
 }: HomeProps) {
     const {
         items,
@@ -104,6 +110,10 @@ export default function Home({
 
     // Intercept deep links like /spinflow/lunch or /spinflow/lotto and apply presets in-place without leaving /spinflow
     useEffect(() => {
+        if (disableDeepLinkPresetSync) {
+            return;
+        }
+
         const path = location.pathname.replace(/^\//, '');
         const segments = path.split('/'); // e.g., ["spinflow", "lunch"]
         const slug = segments[0] === 'spinflow' ? segments[1] : undefined;

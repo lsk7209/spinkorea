@@ -19,12 +19,14 @@ import LoremIpsum from '@/pages/tools/LoremIpsum';
 import JsonFormatter from '@/pages/tools/JsonFormatter';
 import UriEncoder from '@/pages/tools/UriEncoder';
 import Base64Encoder from '@/pages/tools/Base64Encoder';
+import SpinflowStandalone from '@/pages/SpinflowStandalone';
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/spinflow-standalone" element={<SpinflowStandalone />} />
         <Route path="/lunch-menu" element={<LunchMenu />} />
         <Route path="/random-number" element={<RandomNumber />} />
         <Route path="/tools/lotto-generator" element={<LottoGenerator />} />
