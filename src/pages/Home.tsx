@@ -200,7 +200,7 @@ export default function Home({
                         isSpinning={isSpinning}
                         size={typeof window !== 'undefined'
                             ? (window.innerWidth >= 768
-                                ? 520 // PC size
+                                ? 620 // PC size (확대)
                                 : Math.min(340, window.innerWidth - 48)) // Mobile size
                             : 320
                         }
