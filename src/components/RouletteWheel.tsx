@@ -208,12 +208,15 @@ export default function RouletteWheel({
           </linearGradient>
         </defs>
         <polygon
-          points={`${centerX},${centerY - radius} ${centerX - 18},${centerY - radius + 25} ${centerX + 18},${centerY - radius + 25}`}
+          points={`${centerX},${centerY - radius - 12} ${centerX - 16},${centerY - radius + 12} ${centerX + 16},${centerY - radius + 12}`}
           fill="url(#pointer-gradient)"
+          stroke="rgba(255,255,255,0.6)"
+          strokeWidth={1.5}
           filter="url(#glow)"
           className="neon-glow"
           style={{
             transition: 'all 0.3s ease',
+            pointerEvents: 'none',
           }}
         />
       </svg>
