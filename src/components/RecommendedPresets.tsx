@@ -57,9 +57,13 @@ export default function RecommendedPresets({ onSelect, fallbackItems }: Recommen
                 {presets.map((preset) => (
                     <button
                         key={preset.id}
-                        onClick={() => onSelect([...preset.items])}
-                        className="group text-left bg-white/5 border border-white/10 hover:border-neon-primary/40 rounded-2xl p-4 transition-all hover:-translate-y-1 hover:shadow-neon-sm flex flex-col gap-2"
                         type="button"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            onSelect([...preset.items]);
+                        }}
+                        className="group text-left bg-white/5 border border-white/10 hover:border-neon-primary/40 rounded-2xl p-4 transition-all hover:-translate-y-1 hover:shadow-neon-sm flex flex-col gap-2"
                     >
                         <span className="text-2xl drop-shadow">{preset.icon}</span>
                         <div className="flex-1">
@@ -67,8 +71,8 @@ export default function RecommendedPresets({ onSelect, fallbackItems }: Recommen
                             <p className="text-xs text-gray-400 mt-1 leading-snug">{preset.description}</p>
                         </div>
                         <span className="text-xs font-semibold text-neon-primary group-hover:text-white flex items-center gap-1">
-                            이동
-                            <span aria-hidden>→</span>
+                            바로 적용
+                            <span aria-hidden>✓</span>
                         </span>
                     </button>
                 ))}
