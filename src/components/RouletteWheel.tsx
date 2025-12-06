@@ -147,7 +147,8 @@ export default function RouletteWheel({
           }}
         >
           {sectors.map((sector, idx) => {
-            const isWinner = winningIndex === sector.index;
+            // !isSpinning 조건을 추가하여 회전 중에는 당첨 효과를 숨김
+            const isWinner = !isSpinning && winningIndex === sector.index;
             const colorIndex = idx % solidColors.length;
             const solidColor = solidColors[colorIndex];
 
@@ -201,18 +202,29 @@ export default function RouletteWheel({
             <stop offset="100%" stopColor="#00b8d9" stopOpacity="1" />
           </linearGradient>
         </defs>
-        <polygon
-          points={`${centerX},${centerY - radius + 10} ${centerX - 12},${centerY - radius - 15} ${centerX + 12},${centerY - radius - 15}`}
-          fill="url(#pointer-gradient)"
-          stroke="rgba(255,255,255,0.6)"
-          strokeWidth={1.5}
-          filter="url(#glow)"
-          className="neon-glow"
-          style={{
-            transition: 'all 0.3s ease',
-            pointerEvents: 'none',
+        <motion.g
+          style={{ transformOrigin: `${centerX}px ${centerY - radius - 5}px` }}
+          animate={{
+            rotate: isSpinning ? [0, -15, 0, 5, 0] : 0,
           }}
-        />
+          transition={{
+            duration: 0.1,
+            repeat: isSpinning ? Infinity : 0,
+            ease: "linear"
+          }}
+        >
+          <polygon
+            points={`${centerX},${centerY - radius + 10} ${centerX - 12},${centerY - radius - 15} ${centerX + 12},${centerY - radius - 15}`}
+            fill="url(#pointer-gradient)"
+            stroke="rgba(255,255,255,0.6)"
+            strokeWidth={1.5}
+            filter="url(#glow)"
+            className="neon-glow"
+            style={{
+              pointerEvents: 'none',
+            }}
+          />
+        </motion.g>
       </svg>
 
       {/* 중앙 스핀 버튼 */}
