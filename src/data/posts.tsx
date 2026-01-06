@@ -26,6 +26,7 @@ export const BLOG_POSTS: BlogPost[] = [
                     "오늘 점심 뭐 먹지?"라는 질문에 5분 이상 고민해본 적이 있다면,
                     여러분은 '결정 장애' 혹은 심리학 용어로 <strong>'결정 피로(Decision Fatigue)'</strong>를 겪고 있는 것입니다.
                     현대인은 하루에 약 35,000번의 결정을 내린다고 합니다. 이 과정에서 뇌의 에너지는 급격히 소모됩니다.
+                    (<a href="https://ko.wikipedia.org/wiki/%EA%B2%B0%EC%A0%95_%ED%94%BC%EB%A1%9C" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">출처: 위키백과 - 결정 피로</a>)
                 </p>
 
                 <h2 className="text-2xl font-bold text-white mt-8 mb-4">1. 사소한 결정은 '운명'에 맡기세요</h2>
@@ -535,6 +536,7 @@ export const BLOG_POSTS: BlogPost[] = [
                 <h2 className="text-2xl font-bold text-white mt-8 mb-4">3. 그레이스케일 모드 활용</h2>
                 <p>
                     스마트폰 화면을 흑백으로 설정하면 시각적 자극이 줄어들어 자연스럽게 사용 시간이 감소합니다.
+                    (<a href="https://www.sciencedirect.com/science/article/pii/S0747563219303723" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">연구 출처</a>)
                     설정 → 접근성 → 색상 필터에서 활성화할 수 있습니다.
                 </p>
 
@@ -590,7 +592,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
                 <h2 className="text-2xl font-bold text-white mt-8 mb-4">QR 코드란?</h2>
                 <p>
-                    QR 코드는 1994년 일본의 덴소웨이브(Denso Wave)가 개발한 2차원 바코드입니다.
+                    QR 코드는 1994년 일본의 <a href="https://en.wikipedia.org/wiki/QR_code" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">덴소웨이브(Denso Wave)</a>가 개발한 2차원 바코드입니다.
                     기존 바코드가 가로 방향으로만 정보를 저장하는 반면,
                     QR 코드는 가로와 세로 두 방향으로 정보를 저장해 더 많은 데이터를 담을 수 있습니다.
                 </p>
@@ -680,6 +682,9 @@ export const BLOG_POSTS: BlogPost[] = [
                 </div>
 
                 <h2 className="text-2xl font-bold text-white mt-8 mb-4">JSON의 기본 문법</h2>
+                <p className="mb-4">
+                    JSON은 <a href="https://www.json.org/json-ko.html" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">공식 표준</a>으로 정의된 간단한 문법을 따릅니다:
+                </p>
                 <ul className="list-disc pl-6 space-y-2">
                     <li><strong>객체(Object):</strong> 중괄호 {`{}`}로 감싸고, "키": 값 형태로 작성</li>
                     <li><strong>배열(Array):</strong> 대괄호 []로 감싸고, 쉼표로 구분</li>
@@ -758,7 +763,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
                 <h2 className="text-2xl font-bold text-white mt-8 mb-4">2. 역산 계획법 (Backward Planning)</h2>
                 <p>
-                    목표일로부터 역으로 계획을 세우세요.
+                    <a href="https://en.wikipedia.org/wiki/Backward_planning" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">목표일로부터 역으로 계획</a>을 세우세요.
                 </p>
                 <div className="bg-white/5 p-4 rounded-lg">
                     <p className="font-bold text-white mb-2">📚 예: 시험 준비</p>
