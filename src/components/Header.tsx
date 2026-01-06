@@ -24,6 +24,7 @@ export default function Header() {
     const navLinks = [
         { name: '룰렛돌리기', path: '/' },
         { name: '유틸리티', path: '/tools' },
+        { name: '블로그', path: '/blog' },
         { name: '소개', path: '/about' },
     ];
 
