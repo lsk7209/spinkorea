@@ -17,7 +17,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'overcome-decision-fatigue',
         title: '결정 장애(Decision Fatigue)를 극복하는 3가지 과학적인 방법',
         description: '현대인의 고질병 결정 장애. 점심 메뉴 고르기부터 인생의 중요한 선택까지, 뇌 과학이 알려주는 스트레스 없는 결정법을 소개합니다.',
-        date: '2024-05-20',
+        date: '2025-12-10',
         tags: ['심리학', '생산성', '결정장애', '팁'],
         thumbnail: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2670&auto=format&fit=crop',
         content: (
@@ -68,7 +68,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'bmi-healthy-weight-guide',
         title: 'BMI 계산기로 알아보는 건강한 체중 관리의 모든 것',
         description: 'BMI(체질량지수)의 의미와 한계, 올바른 체중 관리 방법까지. 숫자에만 의존하지 않는 진정한 건강 관리 가이드입니다.',
-        date: '2024-06-15',
+        date: '2025-12-11',
         tags: ['건강', 'BMI', '다이어트', '웰빙'],
         thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2670&auto=format&fit=crop',
         content: (
@@ -143,7 +143,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'password-security-guide',
         title: '강력한 비밀번호 만들기: 해킹으로부터 계정을 지키는 완벽 가이드',
         description: '매년 수백만 개의 계정이 해킹됩니다. 안전한 비밀번호를 만들고 관리하는 방법을 알아보세요.',
-        date: '2024-07-10',
+        date: '2025-12-12',
         tags: ['보안', '비밀번호', '팁', '인터넷'],
         thumbnail: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2670&auto=format&fit=crop',
         content: (
@@ -218,7 +218,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'color-code-complete-guide',
         title: '색상 코드 완벽 가이드: HEX, RGB, HSL 이해하기',
         description: '웹 디자인에서 색상을 표현하는 다양한 방법을 알아봅니다. HEX, RGB, HSL의 차이점과 활용법을 완벽 정리합니다.',
-        date: '2024-08-05',
+        date: '2025-12-13',
         tags: ['디자인', '웹개발', '색상', '가이드'],
         thumbnail: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?q=80&w=2670&auto=format&fit=crop',
         content: (
@@ -323,7 +323,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'time-management-productivity',
         title: '시간 관리의 기술: 생산성을 2배로 높이는 실전 전략',
         description: '바쁘게 움직이는데 왜 할 일은 줄지 않을까요? 시간 관리 전문가들이 추천하는 실천 가능한 생산성 향상 전략을 소개합니다.',
-        date: '2024-09-01',
+        date: '2025-12-14',
         tags: ['생산성', '시간관리', '자기계발', '팁'],
         thumbnail: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2668&auto=format&fit=crop',
         content: (
@@ -410,7 +410,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'random-choice-psychology',
         title: '랜덤 선택의 심리학: 왜 우리는 결정을 위임하고 싶어하는가',
         description: '동전 던지기, 룰렛 돌리기... 우리는 왜 중요한 선택을 운에 맡기려 할까요? 심리학적 관점에서 랜덤 선택의 본질을 탐구합니다.',
-        date: '2024-10-15',
+        date: '2025-12-15',
         tags: ['심리학', '결정', '인사이트', '룰렛'],
         thumbnail: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop',
         content: (
@@ -506,7 +506,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'digital-wellbeing-tips',
         title: '디지털 웰빙: 스마트폰과 건강하게 공존하는 7가지 방법',
         description: '하루 평균 7시간을 스마트폰과 함께하는 현대인. 디지털 피로를 줄이고 건강한 기기 사용 습관을 만드는 실천 가이드입니다.',
-        date: '2024-11-10',
+        date: '2025-12-16',
         tags: ['웰빙', '생산성', '건강', '라이프스타일'],
         thumbnail: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2670&auto=format&fit=crop',
         content: (
@@ -577,7 +577,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'qr-code-guide',
         title: 'QR 코드 완벽 가이드: 원리부터 활용까지',
         description: '어디에나 있는 QR 코드. 어떻게 작동하는지, 어떻게 만들고 활용하는지 알아봅니다.',
-        date: '2024-11-25',
+        date: '2025-12-17',
         tags: ['기술', '가이드', 'QR코드', '마케팅'],
         thumbnail: 'https://images.unsplash.com/photo-1595079676339-1534801ad6cf?q=80&w=2670&auto=format&fit=crop',
         content: (
@@ -653,7 +653,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'json-for-beginners',
         title: 'JSON 완벽 이해: 개발자가 아니어도 알아야 하는 데이터 형식',
         description: 'API, 설정 파일, 데이터 교환의 핵심 JSON. 비개발자도 쉽게 이해할 수 있도록 설명합니다.',
-        date: '2024-12-05',
+        date: '2025-12-18',
         tags: ['개발', '가이드', 'JSON', '기초'],
         thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2670&auto=format&fit=crop',
         content: (
@@ -727,7 +727,7 @@ export const BLOG_POSTS: BlogPost[] = [
         slug: 'dday-calculator-life-hacks',
         title: 'D-Day 계산기 200% 활용법: 목표 달성의 비밀 무기',
         description: '시험, 프로젝트 마감, 결혼식, 휴가까지. D-Day 계산기를 활용해 동기부여를 높이고 목표를 관리하는 방법을 알아봅니다.',
-        date: '2024-12-20',
+        date: '2025-12-19',
         tags: ['생산성', '목표관리', '팁', '라이프해킹'],
         thumbnail: 'https://images.unsplash.com/photo-1435527173128-983b87201f4d?q=80&w=2667&auto=format&fit=crop',
         content: (
