@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Percent, ArrowRight, RefreshCw } from 'lucide-react';
+import { Percent, RefreshCw } from 'lucide-react';
 import ToolLayout from '@/components/ToolLayout';
 
 export default function PercentageCalculator() {
@@ -123,7 +123,7 @@ export default function PercentageCalculator() {
                 {/* Case 3: Percentage Change */}
                 <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
                     <h3 className="text-lg font-bold text-green-400 mb-4 flex items-center gap-2">
-                        <RefreshCw size={20} /> 증감률(투익률) 계산하기
+                        <RefreshCw size={20} /> 증감률(수익률) 계산하기
                     </h3>
                     <div className="flex flex-col md:flex-row items-center gap-4 text-lg">
                         <div className="flex items-center gap-2 w-full md:w-auto">

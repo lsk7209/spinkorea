@@ -37,8 +37,31 @@ export default function TextCounter() {
     return (
         <ToolLayout
             title="글자수 세기 (네이버/자소서 기준)"
-            description="자기소개서, 블로그 포스팅, 레포트 작성 시 필수! 공백 포함/제외 글자수, 바이트(Byte), 단어 수, 줄 수를 실시간으로 계산해주는 무료 도구입니다."
+            description="자기소개서, 블로그, 레포트 작성 시 필수! 공백 포함/제외 글자수, 바이트(Byte), 단어 수, 줄 수를 실시간으로 계산합니다. 네이버, 사람인, 잡코리아 등 다양한 플랫폼의 글자수 기준에 대응합니다."
             keywords="글자수세기, 글자수검사기, 자소서글자수, 네이버글자수, 바이트계산기, 단어수세기, Character Counter"
+            howToUse={[
+                "텍스트 입력창에 글자를 직접 타이핑하거나 붙여넣기(Ctrl+V) 하세요",
+                "입력과 동시에 글자수, 바이트, 단어수 등이 실시간으로 계산됩니다",
+                "필요 시 복사 버튼으로 작성한 내용을 클립보드에 저장하세요",
+                "초기화 버튼으로 내용을 모두 지울 수 있습니다"
+            ]}
+            tips={[
+                "자기소개서는 보통 '공백 제외' 기준 500~1,000자를 요구합니다",
+                "네이버 블로그는 '바이트' 기준을 사용하는 경우가 많습니다 (한글 1자 = 3Byte)",
+                "SEO를 위한 블로그 포스팅은 공백 제외 1,500자 이상을 권장합니다",
+                "제목은 모바일 표시 기준 20~25자가 적당합니다"
+            ]}
+            faqs={[
+                { question: "공백 포함과 공백 제외 중 어떤 것을 봐야 하나요?", answer: "지원서나 서비스마다 기준이 다릅니다. 대부분의 자소서는 '공백 포함' 또는 '공백 제외'를 명시하니 해당 기준에 맞춰 확인하세요." },
+                { question: "바이트(Byte)는 왜 글자수와 다른가요?", answer: "UTF-8 인코딩에서 한글 1자는 3바이트, 영문/숫자는 1바이트를 차지합니다. 일부 시스템에서는 바이트 제한을 사용하기 때문에 확인이 필요합니다." },
+                { question: "작성한 내용이 저장되나요?", answer: "아니요, 입력한 텍스트는 서버에 저장되지 않으며, 페이지를 새로고침하면 사라집니다. 중요한 내용은 별도로 저장해주세요." },
+                { question: "최대 몇 자까지 입력할 수 있나요?", answer: "기술적으로는 수십만 자까지 입력 가능하지만, 너무 긴 텍스트는 브라우저 성능에 영향을 줄 수 있습니다." }
+            ]}
+            relatedTools={[
+                { name: "대소문자 변환기", path: "/tools/case-converter", description: "텍스트의 대소문자를 일괄 변환" },
+                { name: "Lorem Ipsum 생성기", path: "/tools/lorem-ipsum", description: "더미 텍스트 생성" },
+                { name: "JSON 포맷터", path: "/tools/json-formatter", description: "JSON 데이터 정리 및 포맷팅" }
+            ]}
         >
             <div className="flex flex-col gap-6">
 
@@ -100,28 +123,6 @@ export default function TextCounter() {
                 </div>
             </div>
 
-            {/* AEO Content */}
-            <div className="mt-12 border-t border-white/10 pt-8">
-                <h3 className="text-lg font-semibold text-white mb-4">📝 자소서/블로그 글자수 가이드</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h4 className="text-neon-secondary font-medium mb-2">자기소개서 (공백 제외/포함)</h4>
-                        <ul className="text-gray-400 text-sm space-y-1">
-                            <li>일반적으로 <strong>500자 ~ 1,000자</strong> 요구</li>
-                            <li>기업마다 기준(Byte vs 자수)이 다르니 확인 필수</li>
-                            <li>이력서 제목은 30자 이내가 적당</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 className="text-neon-secondary font-medium mb-2">블로그 포스팅 (SEO)</h4>
-                        <ul className="text-gray-400 text-sm space-y-1">
-                            <li>최적 길이: <strong>공백 제외 1,500자 이상</strong></li>
-                            <li>체류 시간을 위해 이미지/동영상 적절히 배치</li>
-                            <li>제목은 모바일 기준 20~25자 권장</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </ToolLayout>
     );
 }

@@ -55,8 +55,12 @@ export default function CssShadowGenerator() {
                     <div className="flex justify-between items-center bg-white/5 p-3 rounded-lg">
                         <span className="text-gray-200 font-bold">Inset</span>
                         <div
+                            role="switch"
+                            aria-checked={inset}
+                            tabIndex={0}
                             className={`w-12 h-6 rounded-full p-1 cursor-pointer transition-colors ${inset ? 'bg-neon-primary' : 'bg-gray-600'}`}
                             onClick={() => setInset(!inset)}
+                            onKeyDown={(e) => e.key === 'Enter' && setInset(!inset)}
                         >
                             <div className={`w-4 h-4 rounded-full bg-white shadow transition-transform ${inset ? 'translate-x-6' : 'translate-x-0'}`} />
                         </div>
@@ -126,7 +130,17 @@ export default function CssShadowGenerator() {
 }
 
 // Sub-component for Sliders
-function ControlSlider({ label, value, min, max, onChange, unit = '', step = 1 }: any) {
+interface ControlSliderProps {
+    label: string;
+    value: number;
+    min: number;
+    max: number;
+    onChange: (value: number) => void;
+    unit?: string;
+    step?: number;
+}
+
+function ControlSlider({ label, value, min, max, onChange, unit = '', step = 1 }: ControlSliderProps) {
     return (
         <div>
             <div className="flex justify-between mb-2">

@@ -2,7 +2,7 @@ import SEO from '@/components/SEO';
 
 export default function PrivacyPolicy() {
     return (
-        <div className="min-h-screen bg-neon-bg text-gray-300 px-4 py-12">
+        <div className="min-h-[100dvh] bg-neon-bg text-gray-300 px-4 py-12">
             <SEO
                 title="개인정보처리방침 - SpinFlow"
                 description="SpinFlow의 개인정보처리방침입니다. 이용자의 개인정보 보호를 위한 정책을 확인하세요."

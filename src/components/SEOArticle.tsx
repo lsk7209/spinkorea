@@ -111,6 +111,91 @@ export default function SEOArticle() {
           </div>
         </div>
       </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold text-neon-primary mb-4">
+          왜 SpinFlow인가?
+        </h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white/5 p-4 rounded-lg border border-white/10">
+            <h3 className="font-bold text-white mb-2">🔒 100% 프라이버시</h3>
+            <p className="text-sm text-gray-400">
+              모든 데이터는 브라우저에서만 처리됩니다. 서버에 어떤 정보도 전송되지 않습니다.
+            </p>
+          </div>
+          <div className="bg-white/5 p-4 rounded-lg border border-white/10">
+            <h3 className="font-bold text-white mb-2">⚡ 설치 불필요</h3>
+            <p className="text-sm text-gray-400">
+              앱 설치 없이 웹 브라우저에서 바로 사용하세요. 모든 기기에서 접속 가능합니다.
+            </p>
+          </div>
+          <div className="bg-white/5 p-4 rounded-lg border border-white/10">
+            <h3 className="font-bold text-white mb-2">🔗 쉬운 공유</h3>
+            <p className="text-sm text-gray-400">
+              URL 하나로 룰렛 설정을 공유하세요. 그룹 결정에 완벽한 솔루션입니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold text-neon-primary mb-4">
+          더 많은 유틸리티 도구
+        </h2>
+        <p className="mb-4">
+          SpinFlow는 룰렛 외에도 다양한 무료 온라인 도구를 제공합니다.
+          로또 번호 생성기, 비밀번호 생성기, 글자수 세기, BMI 계산기 등
+          일상에서 자주 사용하는 도구들을 한 곳에서 이용하세요.
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <a href="/tools/lotto-generator" className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors text-center">
+            <span className="block text-lg mb-1">🎱</span>
+            <span className="text-sm">로또 번호</span>
+          </a>
+          <a href="/tools/random-password" className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors text-center">
+            <span className="block text-lg mb-1">🔐</span>
+            <span className="text-sm">비밀번호 생성</span>
+          </a>
+          <a href="/tools/text-counter" className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors text-center">
+            <span className="block text-lg mb-1">📝</span>
+            <span className="text-sm">글자수 세기</span>
+          </a>
+          <a href="/tools/bmi-calculator" className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors text-center">
+            <span className="block text-lg mb-1">⚖️</span>
+            <span className="text-sm">BMI 계산기</span>
+          </a>
+        </div>
+        <p className="mt-4 text-center">
+          <a href="/tools" className="text-neon-primary hover:underline">
+            전체 도구 보기 →
+          </a>
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold text-neon-primary mb-4">
+          블로그에서 더 알아보기
+        </h2>
+        <p className="mb-4">
+          결정 장애 극복법, 시간 관리 팁, 비밀번호 보안 가이드 등
+          일상에 도움이 되는 다양한 콘텐츠를 블로그에서 확인하세요.
+        </p>
+        <div className="space-y-3">
+          <a href="/blog/overcome-decision-fatigue" className="block p-4 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors">
+            <h3 className="font-bold text-white">결정 장애(Decision Fatigue)를 극복하는 3가지 과학적인 방법</h3>
+            <p className="text-sm text-gray-400 mt-1">뇌 과학이 알려주는 스트레스 없는 결정법</p>
+          </a>
+          <a href="/blog/random-choice-psychology" className="block p-4 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors">
+            <h3 className="font-bold text-white">랜덤 선택의 심리학: 왜 우리는 결정을 위임하고 싶어하는가</h3>
+            <p className="text-sm text-gray-400 mt-1">심리학적 관점에서 랜덤 선택의 본질 탐구</p>
+          </a>
+        </div>
+        <p className="mt-4 text-center">
+          <a href="/blog" className="text-neon-primary hover:underline">
+            블로그 전체 보기 →
+          </a>
+        </p>
+      </section>
     </article>
   );
 }

@@ -10,9 +10,18 @@ export default function Footer() {
                     <span>© {new Date().getFullYear()} All Rights Reserved. (v1.2.0)</span>
                 </div>
 
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-6 flex-wrap justify-center">
+                    <Link to="/about" className="hover:text-white transition-colors">
+                        소개
+                    </Link>
                     <Link to="/blog" className="hover:text-white transition-colors">
                         블로그
+                    </Link>
+                    <Link to="/faq" className="hover:text-white transition-colors">
+                        FAQ
+                    </Link>
+                    <Link to="/contact" className="hover:text-white transition-colors">
+                        문의하기
                     </Link>
                     <Link to="/privacy" className="hover:text-white transition-colors">
                         개인정보처리방침
@@ -20,9 +29,6 @@ export default function Footer() {
                     <Link to="/terms" className="hover:text-white transition-colors">
                         이용약관
                     </Link>
-                    <a href="mailto:contact@spinflow.pages.dev" className="hover:text-white transition-colors">
-                        문의하기
-                    </a>
                 </div>
             </div>
         </footer>

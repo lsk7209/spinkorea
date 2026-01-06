@@ -78,8 +78,30 @@ export default function PasswordGenerator() {
     return (
         <ToolLayout
             title="강력한 비밀번호 생성기"
-            description="해킹으로부터 안전한 랜덤 비밀번호를 생성하세요. 길이, 특수문자 포함 여부를 설정하여 나만의 강력한 암호를 만들 수 있습니다."
+            description="해킹으로부터 안전한 랜덤 비밀번호를 생성하세요. 암호학적으로 안전한 난수 생성기(Crypto API)를 사용하여 예측 불가능한 비밀번호를 만들어 드립니다. 길이, 대문자, 소문자, 숫자, 특수문자 포함 여부를 자유롭게 설정할 수 있습니다."
             keywords="비밀번호생성, 암호생성, 랜덤비밀번호, 패스워드제너레이터, 비밀번호보안, 안전한비밀번호"
+            howToUse={[
+                "비밀번호 길이를 슬라이더로 조절하세요 (4~50자, 권장: 16자 이상)",
+                "포함할 문자 종류를 선택하세요 (대문자, 소문자, 숫자, 특수문자)",
+                "'새로운 비밀번호 생성' 버튼을 클릭하세요",
+                "생성된 비밀번호 옆의 복사 버튼을 눌러 클립보드에 저장하세요"
+            ]}
+            tips={[
+                "최소 12자 이상, 가능하면 16자 이상을 권장합니다",
+                "모든 문자 유형을 포함하면 보안 강도가 크게 향상됩니다",
+                "사이트마다 다른 비밀번호를 사용하세요",
+                "비밀번호 관리자(1Password, Bitwarden 등)와 함께 사용하면 편리합니다"
+            ]}
+            faqs={[
+                { question: "생성된 비밀번호는 안전한가요?", answer: "네, 암호학적으로 안전한 난수 생성기(Crypto API)를 사용합니다. 생성된 비밀번호는 서버에 저장되지 않으며, 오직 사용자의 브라우저에서만 처리됩니다." },
+                { question: "비밀번호 길이는 몇 자가 좋나요?", answer: "보안 전문가들은 최소 12자 이상, 가능하면 16자 이상을 권장합니다. 길이가 길수록 브루트 포스 공격에 대한 저항력이 강해집니다." },
+                { question: "특수문자를 포함해야 하나요?", answer: "가능하면 포함하는 것이 좋습니다. 다만, 일부 웹사이트에서 특정 특수문자를 허용하지 않는 경우가 있으니 확인이 필요합니다." },
+                { question: "같은 비밀번호가 생성될 수 있나요?", answer: "이론적으로 가능하지만, 16자 비밀번호의 경우 가능한 조합이 천문학적으로 많아 실질적으로 불가능합니다." }
+            ]}
+            relatedTools={[
+                { name: "Base64 인코더", path: "/tools/base64-encoder", description: "텍스트를 Base64로 인코딩/디코딩" },
+                { name: "QR 코드 생성기", path: "/tools/qr-code-generator", description: "텍스트나 URL을 QR 코드로 변환" }
+            ]}
         >
             <div className="max-w-2xl mx-auto space-y-8">
 
@@ -176,15 +198,6 @@ export default function PasswordGenerator() {
                 </div>
             </div>
 
-            {/* AEO Content */}
-            <div className="mt-12 border-t border-white/10 pt-8">
-                <h3 className="text-lg font-semibold text-white mb-4">🔐 안전한 비밀번호 관리 수칙</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-400 text-sm">
-                    <li>최소 12자 이상, 대문자/소문자/숫자/특수문자를 혼합해서 사용하세요.</li>
-                    <li>이름, 생일, 전화번호 등 개인정보가 포함된 비밀번호는 피하세요.</li>
-                    <li>사이트마다 다른 비밀번호를 사용하는 것이 가장 안전합니다.</li>
-                </ul>
-            </div>
         </ToolLayout>
     );
 }

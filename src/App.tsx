@@ -7,6 +7,9 @@ import Terms from '@/pages/Terms';
 import BlogIndex from '@/pages/BlogIndex';
 import BlogPost from '@/pages/BlogPost';
 import ToolsIndex from '@/pages/ToolsIndex';
+import About from '@/pages/About';
+import FAQ from '@/pages/FAQ';
+import Contact from '@/pages/Contact';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import LottoGenerator from '@/pages/tools/LottoGenerator';
@@ -50,6 +53,9 @@ function App() {
         {/* Batch 2 Complete */}
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<BlogIndex />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         {/* Fallback for unknown routes */}

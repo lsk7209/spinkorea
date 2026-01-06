@@ -17,7 +17,7 @@ export default function SEO({
     structuredData
 }: SEOProps) {
     const location = useLocation();
-    const canonicalUrl = `https://spinflow.pages.dev${location.pathname}`;
+    const canonicalUrl = `https://spinflow.vercel.app${location.pathname}`;
 
     useEffect(() => {
         // Title
