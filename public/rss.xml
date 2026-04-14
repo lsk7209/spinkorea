@@ -5,8 +5,64 @@
     <link>https://spinflow.vercel.app/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙 등 일상에 도움이 되는 다양한 콘텐츠를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://spinflow.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>온라인 주사위·동전 던지기: 실제보다 더 공정한 디지털 랜덤</title>
+      <link>https://spinflow.vercel.app/blog/dice-coin-online</link>
+      <description>보드게임, 내기, 순서 정하기... 주사위나 동전이 없을 때 스마트폰으로 바로 사용하는 온라인 주사위·동전 던지기 활용법입니다.</description>
+      <pubDate>Sat, 08 Feb 2026 00:00:00 +0900</pubDate>
+      <guid>https://spinflow.vercel.app/blog/dice-coin-online</guid>
+    </item>
+
+    <item>
+      <title>랜덤 팀 편성의 힘: 공정하고 빠른 팀 나누기 완벽 가이드</title>
+      <link>https://spinflow.vercel.app/blog/random-team-building</link>
+      <description>운동회, MT, 스터디 그룹... 팀 나누기가 어렵다면? 랜덤 팀 편성이 왜 가장 공정한지, 무료 랜덤 팀 편성기 활용법을 알려드립니다.</description>
+      <pubDate>Wed, 05 Feb 2026 00:00:00 +0900</pubDate>
+      <guid>https://spinflow.vercel.app/blog/random-team-building</guid>
+    </item>
+
+    <item>
+      <title>단위 변환기 완벽 가이드: km↔mile, kg↔lb, °C↔°F 빠른 변환</title>
+      <link>https://spinflow.vercel.app/blog/unit-converter-guide</link>
+      <description>해외여행, 해외 직구, 영어 레시피에서 단위가 달라 헷갈릴 때! 자주 쓰는 단위 변환표와 무료 단위 변환기 활용법을 공유합니다.</description>
+      <pubDate>Sat, 01 Feb 2026 00:00:00 +0900</pubDate>
+      <guid>https://spinflow.vercel.app/blog/unit-converter-guide</guid>
+    </item>
+
+    <item>
+      <title>퍼센트 계산기 완벽 가이드: 할인율·세금·인상률 빠르게 계산</title>
+      <link>https://spinflow.vercel.app/blog/percentage-calculator-guide</link>
+      <description>30% 할인이면 얼마? 세금 포함 가격은? 퍼센트 계산이 헷갈릴 때 무료 퍼센트 계산기로 즉시 해결하는 방법을 알려드립니다.</description>
+      <pubDate>Tue, 28 Jan 2026 00:00:00 +0900</pubDate>
+      <guid>https://spinflow.vercel.app/blog/percentage-calculator-guide</guid>
+    </item>
+
+    <item>
+      <title>글자수 세기 완벽 가이드: 자소서·SNS·유튜브 최적 글자수</title>
+      <link>https://spinflow.vercel.app/blog/text-counter-guide</link>
+      <description>자기소개서는 몇 글자? 인스타그램 캡션은? SNS·자소서·블로그별 최적 글자수와 무료 글자수 세기 도구 활용법을 알려드립니다.</description>
+      <pubDate>Sat, 25 Jan 2026 00:00:00 +0900</pubDate>
+      <guid>https://spinflow.vercel.app/blog/text-counter-guide</guid>
+    </item>
+
+    <item>
+      <title>로또 번호 생성기 완벽 가이드: 랜덤이 최선인 이유</title>
+      <link>https://spinflow.vercel.app/blog/lotto-number-strategy</link>
+      <description>매주 로또 번호 고르기가 어렵다면? 번호 선택 전략과 확률 이야기, 무료 로또 번호 생성기 활용법을 알려드립니다.</description>
+      <pubDate>Wed, 22 Jan 2026 00:00:00 +0900</pubDate>
+      <guid>https://spinflow.vercel.app/blog/lotto-number-strategy</guid>
+    </item>
+
+    <item>
+      <title>만 나이 계산기 완벽 가이드: 만 나이·세는 나이·연 나이 한 번에 정리</title>
+      <link>https://spinflow.vercel.app/blog/age-calculator-guide</link>
+      <description>2023년부터 한국도 만 나이가 공식 기준입니다. 만 나이·세는 나이·연 나이 차이와 계산법, 무료 만 나이 계산기 활용법을 알려드립니다.</description>
+      <pubDate>Mon, 20 Jan 2026 00:00:00 +0900</pubDate>
+      <guid>https://spinflow.vercel.app/blog/age-calculator-guide</guid>
+    </item>
 
     <item>
       <title>강력한 비밀번호 만들기 완벽 가이드 - 해킹에서 내 계정 지키는 법</title>

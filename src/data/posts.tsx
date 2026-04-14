@@ -1398,4 +1398,468 @@ export const BLOG_POSTS: BlogPost[] = [
       </div>
     ),
   },
+  {
+    slug: "age-calculator-guide",
+    title: "만 나이 계산기 완벽 가이드: 만 나이·세는 나이·연 나이 한 번에 정리",
+    description:
+      "2023년부터 한국도 만 나이가 공식 기준입니다. 만 나이·세는 나이·연 나이 차이와 계산법, 무료 만 나이 계산기 활용법을 알려드립니다.",
+    date: "2026-01-20",
+    tags: ["만나이", "나이계산기", "한국나이", "가이드"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          2023년 6월부터 한국도 <strong className="text-white">만 나이</strong>
+          가 법적·사회적 공식 기준이 되었습니다. 세는 나이, 연 나이, 만 나이가
+          혼용되어 헷갈리는 분들을 위해 세 가지 나이 계산법을 완벽 정리합니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">만 나이란?</h2>
+        <p>
+          만 나이는 <strong>생일을 기준으로 실제로 살아온 햇수</strong>를
+          계산합니다. 태어나는 순간 0살로 시작해서, 생일이 지날 때마다 1살씩
+          올라갑니다. 전 세계 대부분의 국가에서 사용하는 국제 표준입니다.
+        </p>
+        <div className="bg-white/5 p-4 rounded-lg">
+          <p className="font-bold text-neon-primary mb-2">계산 예시</p>
+          <p>
+            2000년 8월 15일생 → 2026년 4월 기준 →{" "}
+            <strong className="text-white">만 25세</strong> (생일 미경과)
+          </p>
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          세 가지 나이 비교표
+        </h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-white/20">
+                <th className="text-left py-2 px-3">종류</th>
+                <th className="text-left py-2 px-3">시작</th>
+                <th className="text-left py-2 px-3">기준</th>
+                <th className="text-left py-2 px-3">사용 분야</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["만 나이", "0세", "생일", "법률·의료·국제"],
+                ["세는 나이", "1세", "1월 1일", "일상 대화"],
+                ["연 나이", "0세", "1월 1일", "청소년보호법·병역법"],
+              ].map(([type, start, basis, use], i) => (
+                <tr key={i} className="border-b border-white/10">
+                  <td className="py-2 px-3 font-bold text-white">{type}</td>
+                  <td className="py-2 px-3">{start}</td>
+                  <td className="py-2 px-3">{basis}</td>
+                  <td className="py-2 px-3">{use}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          생년월일만 입력하면 세 가지 나이를 한번에 확인하고, 띠·별자리·생일
+          D-Day까지 알 수 있는{" "}
+          <Link
+            to="/tools/age-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 만 나이 계산기
+          </Link>
+          를 사용해보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "lotto-number-strategy",
+    title: "로또 번호 생성기 완벽 가이드: 랜덤이 최선인 이유",
+    description:
+      "매주 로또 번호 고르기가 어렵다면? 번호 선택 전략과 확률 이야기, 무료 로또 번호 생성기 활용법을 알려드립니다.",
+    date: "2026-01-22",
+    tags: ["로또", "랜덤", "확률", "행운"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1607344645866-009c320b63e0?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          로또 6/45의 당첨 확률은{" "}
+          <strong className="text-white">약 1/814만</strong>. 그런데도 매주
+          수백만 명이 참여합니다. 어떤 번호 선택 전략이 가장 합리적일까요?
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          왜 랜덤이 최선인가?
+        </h2>
+        <p>
+          수학적으로 모든 조합의 당첨 확률은 동일합니다. 하지만{" "}
+          <strong>당첨금 배분</strong>은 다릅니다. 생일·연속 숫자 등 인기 번호로
+          당첨되면 수십 명이 배당금을 나눠 갖습니다. 완전 랜덤 번호는 다른
+          당첨자와 겹칠 확률이 낮아 단독 당첨 시 더 많은 금액을 받을 수
+          있습니다.
+        </p>
+        <div className="bg-white/5 p-4 rounded-lg">
+          <p className="font-bold text-neon-primary mb-2">
+            피해야 할 번호 패턴
+          </p>
+          <ul className="space-y-1 text-sm">
+            <li>• 생일·기념일 (1~31에 편중)</li>
+            <li>• 연속 숫자 (1-2-3-4-5-6)</li>
+            <li>• 배수 패턴 (5-10-15-20-25-30)</li>
+            <li>• 이전 당첨 번호 그대로 사용</li>
+          </ul>
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/lotto-generator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 로또 번호 생성기
+          </Link>
+          는 암호학적으로 안전한 난수로 편향 없는 6개 번호를 즉시 추첨합니다.
+          번호 고민 없이 바로 사용해보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "text-counter-guide",
+    title: "글자수 세기 완벽 가이드: 자소서·SNS·유튜브 최적 글자수",
+    description:
+      "자기소개서는 몇 글자? 인스타그램 캡션은? SNS·자소서·블로그별 최적 글자수와 무료 글자수 세기 도구 활용법을 알려드립니다.",
+    date: "2026-01-25",
+    tags: ["글자수", "자기소개서", "SNS", "글쓰기"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          자기소개서, 이메일 제목, SNS 게시물, 유튜브 제목까지 각 플랫폼마다
+          최적의 글자수 기준이 있습니다.{" "}
+          <Link
+            to="/tools/text-counter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 글자수 세기 도구
+          </Link>
+          로 정확하게 확인하며 완성도를 높이세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          플랫폼별 최적 글자수 가이드
+        </h2>
+        <div className="space-y-2">
+          {[
+            [
+              "자기소개서 (항목당)",
+              "500~800자",
+              "700자가 채용담당자 집중 최적",
+            ],
+            ["이메일 제목", "30~50자", "모바일에서 잘리지 않는 기준"],
+            ["인스타그램 캡션", "138~150자", "더보기 클릭 전 보이는 길이"],
+            ["유튜브 제목", "60~70자", "검색 결과에서 잘리지 않는 기준"],
+            ["블로그 본문", "1,500자 이상", "구글 SEO 기준 최소 길이"],
+            ["구글 메타 설명", "120~160자", "검색 결과 스니펫 표시 길이"],
+          ].map(([platform, range, tip], i) => (
+            <div
+              key={i}
+              className="bg-white/5 p-3 rounded-lg grid grid-cols-3 gap-2 items-center text-sm"
+            >
+              <p className="font-bold text-white">{platform}</p>
+              <p className="text-neon-primary font-mono text-center">{range}</p>
+              <p className="text-gray-400 text-xs">{tip}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          자기소개서 글자수 꿀팁
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            제한 글자수의 <strong>90~95%</strong>를 채우는 것이 성의 있어
+            보입니다.
+          </li>
+          <li>공백 포함/미포함 기준을 미리 확인하세요.</li>
+          <li>글자수가 넘치면 형용사·부사부터 줄이세요.</li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/text-counter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 글자수 세기
+          </Link>
+          는 공백 포함/미포함, 바이트 수, 단어 수를 한꺼번에 확인할 수 있습니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "percentage-calculator-guide",
+    title: "퍼센트 계산기 완벽 가이드: 할인율·세금·인상률 빠르게 계산",
+    description:
+      "30% 할인이면 얼마? 세금 포함 가격은? 퍼센트 계산이 헷갈릴 때 무료 퍼센트 계산기로 즉시 해결하는 방법을 알려드립니다.",
+    date: "2026-01-28",
+    tags: ["퍼센트", "계산기", "할인", "수학"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          "30% 할인이면 실제로 얼마를 아끼는 거지?" 일상에서 퍼센트 계산은 자주
+          필요하지만 머릿속으로 빠르게 계산하기 어렵습니다.{" "}
+          <Link
+            to="/tools/percentage-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 퍼센트 계산기
+          </Link>
+          를 활용하면 실수 없이 즉시 계산할 수 있습니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          자주 쓰는 퍼센트 계산 공식
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "할인가 계산",
+              "원가 × (1 - 할인율/100)",
+              "10만원 30% 할인 → 7만원",
+            ],
+            [
+              "세금 포함 계산",
+              "가격 × (1 + 세율/100)",
+              "5만원 부가세 10% → 5만5천원",
+            ],
+            [
+              "증감률 계산",
+              "(변화량 ÷ 원래값) × 100",
+              "100→120만원 → 20% 증가",
+            ],
+          ].map(([type, formula, example], i) => (
+            <div
+              key={i}
+              className="bg-white/5 border border-white/10 p-4 rounded-xl"
+            >
+              <h3 className="font-bold text-neon-primary mb-1">{type}</h3>
+              <p className="font-mono text-sm text-gray-300 bg-black/30 p-2 rounded mb-1">
+                {formula}
+              </p>
+              <p className="text-sm text-gray-400">예: {example}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          복잡한 퍼센트 계산은{" "}
+          <Link
+            to="/tools/percentage-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 퍼센트 계산기
+          </Link>
+          에 맡기세요. 할인율, 증감률, 비율 계산을 오류 없이 처리합니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "unit-converter-guide",
+    title: "단위 변환기 완벽 가이드: km↔mile, kg↔lb, °C↔°F 빠른 변환",
+    description:
+      "해외여행, 해외 직구, 영어 레시피에서 단위가 달라 헷갈릴 때! 자주 쓰는 단위 변환표와 무료 단위 변환기 활용법을 공유합니다.",
+    date: "2026-02-01",
+    tags: ["단위변환", "길이", "무게", "온도", "가이드"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          미국 레시피에서 "350°F"를 보거나 제품 무게가 "5 lbs"로 표시될 때
+          어떻게 하시나요?{" "}
+          <Link
+            to="/tools/unit-converter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 단위 변환기
+          </Link>
+          로 즉시 해결하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          자주 쓰는 단위 변환 공식
+        </h2>
+        <div className="space-y-4">
+          {[
+            {
+              title: "📏 길이",
+              items: [
+                "1 inch = 2.54 cm",
+                "1 foot = 30.48 cm",
+                "1 mile = 1.609 km",
+              ],
+            },
+            {
+              title: "⚖️ 무게",
+              items: ["1 lb = 453.6 g", "1 oz = 28.35 g", "1 kg = 2.205 lb"],
+            },
+            {
+              title: "🌡️ 온도",
+              items: [
+                "°F → °C: (°F - 32) ÷ 1.8",
+                "°C → °F: (°C × 1.8) + 32",
+                "물 끓는점: 100°C = 212°F",
+              ],
+            },
+          ].map((section, i) => (
+            <div key={i}>
+              <h3 className="font-bold text-white mb-2">{section.title}</h3>
+              <div className="bg-white/5 p-4 rounded-lg space-y-1 font-mono text-sm">
+                {section.items.map((item, j) => (
+                  <p key={j}>{item}</p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          공식을 외울 필요 없이{" "}
+          <Link
+            to="/tools/unit-converter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 단위 변환기
+          </Link>
+          에서 길이, 무게, 온도, 부피를 즉시 변환하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "random-team-building",
+    title: "랜덤 팀 편성의 힘: 공정하고 빠른 팀 나누기 완벽 가이드",
+    description:
+      "운동회, MT, 스터디 그룹... 팀 나누기가 어렵다면? 랜덤 팀 편성이 왜 가장 공정한지, 무료 랜덤 팀 편성기 활용법을 알려드립니다.",
+    date: "2026-02-05",
+    tags: ["팀나누기", "팀편성", "랜덤", "조편성"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          팀을 나눌 때마다 불만이 생기는 이유는 <strong>주관적 판단</strong>이
+          개입되기 때문입니다.{" "}
+          <Link
+            to="/tools/random-team"
+            className="text-neon-primary hover:underline"
+          >
+            무료 랜덤 팀 편성기
+          </Link>
+          로 누구도 불평할 수 없는 공정한 팀을 구성하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          랜덤 팀 편성이 필요한 상황
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            "🏃 운동회·체육대회",
+            "🎓 학교 팀 프로젝트",
+            "💼 회사 워크숍",
+            "🏕️ MT·야유회",
+            "🎮 게임 팀 배정",
+            "📚 스터디 그룹 편성",
+          ].map((item, i) => (
+            <div key={i} className="bg-white/5 p-3 rounded-lg text-sm">
+              {item}
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          랜덤 팀 편성의 장점
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>공정성:</strong> 같은 결과도 랜덤 배정이면 수용도가 훨씬
+            높습니다.
+          </li>
+          <li>
+            <strong>새로운 연결:</strong> 평소 교류 없던 사람들과 팀을 이루며 새
+            인간관계가 생깁니다.
+          </li>
+          <li>
+            <strong>결정 피로 해소:</strong> 리더가 팀 구성으로 받는 스트레스가
+            사라집니다.
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          다음 팀 나누기에서는{" "}
+          <Link
+            to="/tools/random-team"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 랜덤 팀 편성기
+          </Link>
+          를 사용해보세요. 30초면 충분합니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "dice-coin-online",
+    title: "온라인 주사위·동전 던지기: 실제보다 더 공정한 디지털 랜덤",
+    description:
+      "보드게임, 내기, 순서 정하기... 주사위나 동전이 없을 때 스마트폰으로 바로 사용하는 온라인 주사위·동전 던지기 활용법입니다.",
+    date: "2026-02-08",
+    tags: ["주사위", "동전던지기", "랜덤", "보드게임"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1611996575749-79a3a250f948?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          주사위가 없어서 보드게임을 못 하거나 동전이 없어서 내기를 못 하셨나요?
+          스마트폰이 있다면 걱정 없습니다. 온라인 주사위와 동전 던지기는
+          실제보다 더 공정한 결과를 보장합니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          물리적 vs 디지털 랜덤
+        </h2>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="bg-white/5 border border-white/10 p-4 rounded-xl">
+            <h3 className="font-bold text-white mb-2">🎲 물리적 주사위</h3>
+            <ul className="space-y-1 text-sm text-gray-400">
+              <li>• 무게 중심 불균형 가능</li>
+              <li>• 굴리는 방식에 편향</li>
+              <li>• 분실 위험</li>
+            </ul>
+          </div>
+          <div className="bg-neon-primary/10 border border-neon-primary/30 p-4 rounded-xl">
+            <h3 className="font-bold text-white mb-2">💻 온라인 주사위</h3>
+            <ul className="space-y-1 text-sm text-gray-300">
+              <li>• 암호학적 난수 (완전 공정)</li>
+              <li>• 물리적 편향 없음</li>
+              <li>• 다면체 주사위 지원</li>
+            </ul>
+          </div>
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/dice-roller"
+            className="text-neon-primary hover:underline"
+          >
+            주사위 던지기
+          </Link>
+          와{" "}
+          <Link
+            to="/tools/coin-flip"
+            className="text-neon-primary hover:underline"
+          >
+            동전 던지기
+          </Link>
+          를 앱 설치 없이 바로 사용해보세요!
+        </p>
+      </div>
+    ),
+  },
 ];

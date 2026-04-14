@@ -1,143 +1,196 @@
-import { useState, useRef } from 'react';
-import { QRCodeCanvas } from 'qrcode.react';
-import { Download, RefreshCw } from 'lucide-react';
-import { toast } from 'sonner';
-import ToolLayout from '@/components/ToolLayout';
+import { useState, useRef } from "react";
+import { QRCodeCanvas } from "qrcode.react";
+import { Download, RefreshCw } from "lucide-react";
+import { toast } from "sonner";
+import ToolLayout from "@/components/ToolLayout";
 
 export default function QrCodeGenerator() {
-    const [value, setValue] = useState('https://spinflow.kr');
-    const [size, setSize] = useState(256);
-    const [bgColor, setBgColor] = useState('#ffffff');
-    const [fgColor, setFgColor] = useState('#000000');
-    const qrRef = useRef<HTMLDivElement>(null);
+  const [value, setValue] = useState("https://spinflow.kr");
+  const [size, setSize] = useState(256);
+  const [bgColor, setBgColor] = useState("#ffffff");
+  const [fgColor, setFgColor] = useState("#000000");
+  const qrRef = useRef<HTMLDivElement>(null);
 
-    const downloadQrCode = () => {
-        const canvas = qrRef.current?.querySelector('canvas');
-        if (canvas) {
-            const url = canvas.toDataURL('image/png');
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'qrcode.png';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            toast.success('QR 코드가 저장되었습니다.');
-        } else {
-            toast.error('QR 코드 생성 중 오류가 발생했습니다.');
-        }
-    };
+  const downloadQrCode = () => {
+    const canvas = qrRef.current?.querySelector("canvas");
+    if (canvas) {
+      const url = canvas.toDataURL("image/png");
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "qrcode.png";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      toast.success("QR 코드가 저장되었습니다.");
+    } else {
+      toast.error("QR 코드 생성 중 오류가 발생했습니다.");
+    }
+  };
 
-    const reset = () => {
-        setValue('https://spinflow.kr');
-        setSize(256);
-        setBgColor('#ffffff');
-        setFgColor('#000000');
-    };
+  const reset = () => {
+    setValue("https://spinflow.kr");
+    setSize(256);
+    setBgColor("#ffffff");
+    setFgColor("#000000");
+  };
 
-    return (
-        <ToolLayout
-            title="QR 코드 생성기"
-            description="URL, 텍스트, 이메일 등을 무료 QR 코드로 변환하세요. 색상과 크기를 커스터마이징하고 이미지로 저장할 수 있습니다."
-            keywords="qr code generator, qr 생성, 큐알코드 만들기, 무료 qr 코드, url to qr"
-        >
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+  return (
+    <ToolLayout
+      title="QR 코드 생성기"
+      description="URL, 텍스트, 이메일 등을 무료 QR 코드로 변환하세요. 색상과 크기를 커스터마이징하고 이미지로 저장할 수 있습니다."
+      keywords="qr code generator, qr 생성, 큐알코드 만들기, 무료 qr 코드, url to qr"
+      howToUse={[
+        "변환할 URL 또는 텍스트를 입력하세요.",
+        "원하는 색상과 크기를 설정하세요.",
+        "QR 코드가 실시간으로 생성됩니다.",
+        "PNG 이미지로 다운로드하여 사용하세요.",
+      ]}
+      faqs={[
+        {
+          question: "QR 코드 URL은 얼마나 길어도 되나요?",
+          answer:
+            "QR 코드는 최대 4,296자를 저장할 수 있습니다. 단, URL이 길수록 QR 코드가 복잡해져 인식률이 떨어집니다. URL 단축 서비스 활용을 권장합니다.",
+        },
+        {
+          question: "생성된 QR 코드를 어디에 사용할 수 있나요?",
+          answer:
+            "명함, 포스터, 현수막, 제품 패키지, 식당 메뉴판, 이메일 서명 등 다양한 곳에 활용 가능합니다. 인쇄 시 최소 2cm×2cm 이상 크기로 출력하세요.",
+        },
+        {
+          question: "QR 코드는 무료로 영구 사용 가능한가요?",
+          answer:
+            "네, SpinFlow에서 생성한 QR 코드는 완전 무료이며 만료 기간이 없습니다. 연결된 URL이 유효해야 올바르게 작동합니다.",
+        },
+      ]}
+      relatedTools={[
+        {
+          name: "URL 인코더",
+          path: "/tools/uri-encoder",
+          description: "URL을 안전하게 인코딩/디코딩",
+        },
+        {
+          name: "Base64 변환",
+          path: "/tools/base64-encoder",
+          description: "텍스트를 Base64로 변환",
+        },
+        {
+          name: "비밀번호 생성기",
+          path: "/tools/random-password",
+          description: "강력한 보안 비밀번호 생성",
+        },
+      ]}
+    >
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        {/* Input & Settings */}
+        <div className="bg-white/5 border border-white/10 p-6 rounded-xl space-y-6">
+          <div>
+            <label className="text-sm text-gray-400 mb-2 block font-bold">
+              내용 입력 (URL, 텍스트)
+            </label>
+            <textarea
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              className="w-full h-32 bg-black/30 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:border-neon-primary resize-none"
+              placeholder="https://example.com 또는 텍스트 입력"
+            />
+          </div>
 
-                {/* Input & Settings */}
-                <div className="bg-white/5 border border-white/10 p-6 rounded-xl space-y-6">
-                    <div>
-                        <label className="text-sm text-gray-400 mb-2 block font-bold">내용 입력 (URL, 텍스트)</label>
-                        <textarea
-                            value={value}
-                            onChange={(e) => setValue(e.target.value)}
-                            className="w-full h-32 bg-black/30 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:border-neon-primary resize-none"
-                            placeholder="https://example.com 또는 텍스트 입력"
-                        />
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                        <div>
-                            <label className="text-xs text-gray-500 mb-1 block">배경색 (Background)</label>
-                            <div className="flex items-center gap-2">
-                                <input
-                                    type="color"
-                                    value={bgColor}
-                                    onChange={(e) => setBgColor(e.target.value)}
-                                    className="w-8 h-8 rounded border-none cursor-pointer bg-transparent"
-                                />
-                                <span className="text-xs text-gray-300 font-mono uppercase">{bgColor}</span>
-                            </div>
-                        </div>
-                        <div>
-                            <label className="text-xs text-gray-500 mb-1 block">전경색 (Foreground)</label>
-                            <div className="flex items-center gap-2">
-                                <input
-                                    type="color"
-                                    value={fgColor}
-                                    onChange={(e) => setFgColor(e.target.value)}
-                                    className="w-8 h-8 rounded border-none cursor-pointer bg-transparent"
-                                />
-                                <span className="text-xs text-gray-300 font-mono uppercase">{fgColor}</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label className="text-xs text-gray-500 mb-2 block">크기 (Size: {size}px)</label>
-                        <input
-                            type="range"
-                            min={128}
-                            max={512}
-                            step={32}
-                            value={size}
-                            onChange={(e) => setSize(parseInt(e.target.value))}
-                            className="w-full h-1 bg-white/20 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:bg-neon-primary [&::-webkit-slider-thumb]:rounded-full"
-                        />
-                    </div>
-
-                    <button
-                        onClick={reset}
-                        className="w-full text-gray-400 hover:text-white text-sm flex items-center justify-center gap-1 py-2 hover:bg-white/5 rounded transition-colors"
-                    >
-                        <RefreshCw size={14} /> 설정 초기화
-                    </button>
-                </div>
-
-                {/* Preview & Download */}
-                <div className="flex flex-col items-center gap-6">
-                    <div
-                        ref={qrRef}
-                        className="bg-white p-4 rounded-xl shadow-lg transform transition-transform hover:scale-105 duration-300"
-                    >
-                        <QRCodeCanvas
-                            value={value}
-                            size={size}
-                            bgColor={bgColor}
-                            fgColor={fgColor}
-                            level={"H"}
-                            includeMargin={true}
-                        />
-                    </div>
-
-                    <div className="text-center space-y-4">
-                        <button
-                            onClick={downloadQrCode}
-                            disabled={!value}
-                            className={`
-                                flex items-center justify-center gap-2 px-8 py-3 rounded-xl font-bold transition-all
-                                ${value
-                                    ? 'bg-neon-primary hover:bg-neon-primary/80 text-black shadow-lg shadow-neon-primary/20 hover:-translate-y-1'
-                                    : 'bg-gray-700 text-gray-500 cursor-not-allowed'}
-                            `}
-                        >
-                            <Download size={20} />
-                            PNG 이미지 저장
-                        </button>
-                        <p className="text-xs text-gray-500">
-                            * 고해상도 PNG 파일로 저장됩니다.
-                        </p>
-                    </div>
-                </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs text-gray-500 mb-1 block">
+                배경색 (Background)
+              </label>
+              <div className="flex items-center gap-2">
+                <input
+                  type="color"
+                  value={bgColor}
+                  onChange={(e) => setBgColor(e.target.value)}
+                  className="w-8 h-8 rounded border-none cursor-pointer bg-transparent"
+                />
+                <span className="text-xs text-gray-300 font-mono uppercase">
+                  {bgColor}
+                </span>
+              </div>
             </div>
-        </ToolLayout>
-    );
+            <div>
+              <label className="text-xs text-gray-500 mb-1 block">
+                전경색 (Foreground)
+              </label>
+              <div className="flex items-center gap-2">
+                <input
+                  type="color"
+                  value={fgColor}
+                  onChange={(e) => setFgColor(e.target.value)}
+                  className="w-8 h-8 rounded border-none cursor-pointer bg-transparent"
+                />
+                <span className="text-xs text-gray-300 font-mono uppercase">
+                  {fgColor}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label className="text-xs text-gray-500 mb-2 block">
+              크기 (Size: {size}px)
+            </label>
+            <input
+              type="range"
+              min={128}
+              max={512}
+              step={32}
+              value={size}
+              onChange={(e) => setSize(parseInt(e.target.value))}
+              className="w-full h-1 bg-white/20 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:bg-neon-primary [&::-webkit-slider-thumb]:rounded-full"
+            />
+          </div>
+
+          <button
+            onClick={reset}
+            className="w-full text-gray-400 hover:text-white text-sm flex items-center justify-center gap-1 py-2 hover:bg-white/5 rounded transition-colors"
+          >
+            <RefreshCw size={14} /> 설정 초기화
+          </button>
+        </div>
+
+        {/* Preview & Download */}
+        <div className="flex flex-col items-center gap-6">
+          <div
+            ref={qrRef}
+            className="bg-white p-4 rounded-xl shadow-lg transform transition-transform hover:scale-105 duration-300"
+          >
+            <QRCodeCanvas
+              value={value}
+              size={size}
+              bgColor={bgColor}
+              fgColor={fgColor}
+              level={"H"}
+              includeMargin={true}
+            />
+          </div>
+
+          <div className="text-center space-y-4">
+            <button
+              onClick={downloadQrCode}
+              disabled={!value}
+              className={`
+                                flex items-center justify-center gap-2 px-8 py-3 rounded-xl font-bold transition-all
+                                ${
+                                  value
+                                    ? "bg-neon-primary hover:bg-neon-primary/80 text-black shadow-lg shadow-neon-primary/20 hover:-translate-y-1"
+                                    : "bg-gray-700 text-gray-500 cursor-not-allowed"
+                                }
+                            `}
+            >
+              <Download size={20} />
+              PNG 이미지 저장
+            </button>
+            <p className="text-xs text-gray-500">
+              * 고해상도 PNG 파일로 저장됩니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </ToolLayout>
+  );
 }
