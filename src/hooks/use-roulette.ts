@@ -2,8 +2,8 @@
  * 룰렛 로직 및 애니메이션 상태 관리 훅
  */
 
-import { useState, useCallback, useRef } from 'react';
-import { getRandomIndex } from '@/utils/random';
+import { useState, useCallback, useRef } from "react";
+import { getRandomIndex } from "@/utils/random";
 
 interface UseRouletteOptions {
   items: string[];
@@ -34,8 +34,8 @@ export function useRoulette({ items, onResult }: UseRouletteOptions) {
     setResult(null);
     setWinningIndex(selectedIndex); // 당첨 인덱스를 미리 설정하여 회전 목표 설정
 
-    // 최소 3초, 최대 7초 회전 (물리 기반 감속은 컴포넌트에서 처리)
-    const spinDuration = 3000 + Math.random() * 4000; // 3-7초
+    // RouletteWheel 애니메이션(5초)과 동기화
+    const spinDuration = 5000;
 
     // 스핀 종료 후 결과 표시
     if (spinTimeoutRef.current) {
@@ -45,7 +45,7 @@ export function useRoulette({ items, onResult }: UseRouletteOptions) {
     spinTimeoutRef.current = window.setTimeout(() => {
       setResult(selectedItem);
       setIsSpinning(false);
-      
+
       if (onResult) {
         onResult(selectedItem);
       }
@@ -70,4 +70,3 @@ export function useRoulette({ items, onResult }: UseRouletteOptions) {
     reset,
   };
 }
-
