@@ -30,6 +30,6 @@ React 19, TypeScript, Vite, Tailwind CSS, Framer Motion, Cloudflare D1(→Turso)
 - 개발자 (JSON 포맷, Base64, URL 인코딩 등)
 
 ## 서비스 URL
-- 메인: https://spinflow.vercel.app
-- 유틸리티: https://spinflow.vercel.app/tools
-- 블로그: https://spinflow.vercel.app/blog
+- 메인: https://www.spinkorea.kr
+- 유틸리티: https://www.spinkorea.kr/tools
+- 블로그: https://www.spinkorea.kr/blog

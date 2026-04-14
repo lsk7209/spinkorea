@@ -2,162 +2,162 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SpinFlow 블로그</title>
-    <link>https://spinflow.vercel.app/blog</link>
+    <link>https://www.spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙 등 일상에 도움이 되는 다양한 콘텐츠를 제공합니다.</description>
     <language>ko</language>
     <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0900</lastBuildDate>
-    <atom:link href="https://spinflow.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://www.spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
       <title>온라인 주사위·동전 던지기: 실제보다 더 공정한 디지털 랜덤</title>
-      <link>https://spinflow.vercel.app/blog/dice-coin-online</link>
+      <link>https://www.spinkorea.kr/blog/dice-coin-online</link>
       <description>보드게임, 내기, 순서 정하기... 주사위나 동전이 없을 때 스마트폰으로 바로 사용하는 온라인 주사위·동전 던지기 활용법입니다.</description>
       <pubDate>Sat, 08 Feb 2026 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/dice-coin-online</guid>
+      <guid>https://www.spinkorea.kr/blog/dice-coin-online</guid>
     </item>
 
     <item>
       <title>랜덤 팀 편성의 힘: 공정하고 빠른 팀 나누기 완벽 가이드</title>
-      <link>https://spinflow.vercel.app/blog/random-team-building</link>
+      <link>https://www.spinkorea.kr/blog/random-team-building</link>
       <description>운동회, MT, 스터디 그룹... 팀 나누기가 어렵다면? 랜덤 팀 편성이 왜 가장 공정한지, 무료 랜덤 팀 편성기 활용법을 알려드립니다.</description>
       <pubDate>Wed, 05 Feb 2026 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/random-team-building</guid>
+      <guid>https://www.spinkorea.kr/blog/random-team-building</guid>
     </item>
 
     <item>
       <title>단위 변환기 완벽 가이드: km↔mile, kg↔lb, °C↔°F 빠른 변환</title>
-      <link>https://spinflow.vercel.app/blog/unit-converter-guide</link>
+      <link>https://www.spinkorea.kr/blog/unit-converter-guide</link>
       <description>해외여행, 해외 직구, 영어 레시피에서 단위가 달라 헷갈릴 때! 자주 쓰는 단위 변환표와 무료 단위 변환기 활용법을 공유합니다.</description>
       <pubDate>Sat, 01 Feb 2026 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/unit-converter-guide</guid>
+      <guid>https://www.spinkorea.kr/blog/unit-converter-guide</guid>
     </item>
 
     <item>
       <title>퍼센트 계산기 완벽 가이드: 할인율·세금·인상률 빠르게 계산</title>
-      <link>https://spinflow.vercel.app/blog/percentage-calculator-guide</link>
+      <link>https://www.spinkorea.kr/blog/percentage-calculator-guide</link>
       <description>30% 할인이면 얼마? 세금 포함 가격은? 퍼센트 계산이 헷갈릴 때 무료 퍼센트 계산기로 즉시 해결하는 방법을 알려드립니다.</description>
       <pubDate>Tue, 28 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/percentage-calculator-guide</guid>
+      <guid>https://www.spinkorea.kr/blog/percentage-calculator-guide</guid>
     </item>
 
     <item>
       <title>글자수 세기 완벽 가이드: 자소서·SNS·유튜브 최적 글자수</title>
-      <link>https://spinflow.vercel.app/blog/text-counter-guide</link>
+      <link>https://www.spinkorea.kr/blog/text-counter-guide</link>
       <description>자기소개서는 몇 글자? 인스타그램 캡션은? SNS·자소서·블로그별 최적 글자수와 무료 글자수 세기 도구 활용법을 알려드립니다.</description>
       <pubDate>Sat, 25 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/text-counter-guide</guid>
+      <guid>https://www.spinkorea.kr/blog/text-counter-guide</guid>
     </item>
 
     <item>
       <title>로또 번호 생성기 완벽 가이드: 랜덤이 최선인 이유</title>
-      <link>https://spinflow.vercel.app/blog/lotto-number-strategy</link>
+      <link>https://www.spinkorea.kr/blog/lotto-number-strategy</link>
       <description>매주 로또 번호 고르기가 어렵다면? 번호 선택 전략과 확률 이야기, 무료 로또 번호 생성기 활용법을 알려드립니다.</description>
       <pubDate>Wed, 22 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/lotto-number-strategy</guid>
+      <guid>https://www.spinkorea.kr/blog/lotto-number-strategy</guid>
     </item>
 
     <item>
       <title>만 나이 계산기 완벽 가이드: 만 나이·세는 나이·연 나이 한 번에 정리</title>
-      <link>https://spinflow.vercel.app/blog/age-calculator-guide</link>
+      <link>https://www.spinkorea.kr/blog/age-calculator-guide</link>
       <description>2023년부터 한국도 만 나이가 공식 기준입니다. 만 나이·세는 나이·연 나이 차이와 계산법, 무료 만 나이 계산기 활용법을 알려드립니다.</description>
       <pubDate>Mon, 20 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/age-calculator-guide</guid>
+      <guid>https://www.spinkorea.kr/blog/age-calculator-guide</guid>
     </item>
 
     <item>
       <title>강력한 비밀번호 만들기 완벽 가이드 - 해킹에서 내 계정 지키는 법</title>
-      <link>https://spinflow.vercel.app/blog/strong-password-guide</link>
+      <link>https://www.spinkorea.kr/blog/strong-password-guide</link>
       <description>123456, qwerty... 아직도 이런 비밀번호를 쓰고 계신가요? 해커도 못 뚫는 강력한 비밀번호 만드는 법과 무료 비밀번호 생성기 활용법을 알려드립니다.</description>
       <pubDate>Sun, 12 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/strong-password-guide</guid>
+      <guid>https://www.spinkorea.kr/blog/strong-password-guide</guid>
     </item>
 
     <item>
       <title>무료 QR코드 생성기 완벽 가이드 - 링크를 QR코드로 5초 만에 변환</title>
-      <link>https://spinflow.vercel.app/blog/qr-code-generator-guide</link>
+      <link>https://www.spinkorea.kr/blog/qr-code-generator-guide</link>
       <description>QR코드가 무엇인지, 어떻게 만드는지, 어디에 활용하는지 완벽하게 알아봅니다. 무료 온라인 QR코드 생성기로 명함, 포스터, 메뉴판까지 손쉽게 제작하세요.</description>
       <pubDate>Sun, 05 Jan 2026 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/qr-code-generator-guide</guid>
+      <guid>https://www.spinkorea.kr/blog/qr-code-generator-guide</guid>
     </item>
 
     <item>
       <title>D-Day 계산기 200% 활용법: 목표 달성의 비밀 무기</title>
-      <link>https://spinflow.vercel.app/blog/dday-calculator-life-hacks</link>
+      <link>https://www.spinkorea.kr/blog/dday-calculator-life-hacks</link>
       <description>시험, 프로젝트 마감, 결혼식, 휴가까지. D-Day 계산기를 활용해 동기부여를 높이고 목표를 관리하는 방법을 알아봅니다.</description>
       <pubDate>Thu, 19 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/dday-calculator-life-hacks</guid>
+      <guid>https://www.spinkorea.kr/blog/dday-calculator-life-hacks</guid>
     </item>
     
     <item>
       <title>JSON 완벽 이해: 개발자가 아니어도 알아야 하는 데이터 형식</title>
-      <link>https://spinflow.vercel.app/blog/json-for-beginners</link>
+      <link>https://www.spinkorea.kr/blog/json-for-beginners</link>
       <description>API, 설정 파일, 데이터 교환의 핵심 JSON. 비개발자도 쉽게 이해할 수 있도록 설명합니다.</description>
       <pubDate>Wed, 18 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/json-for-beginners</guid>
+      <guid>https://www.spinkorea.kr/blog/json-for-beginners</guid>
     </item>
     
     <item>
       <title>QR 코드 완벽 가이드: 원리부터 활용까지</title>
-      <link>https://spinflow.vercel.app/blog/qr-code-guide</link>
+      <link>https://www.spinkorea.kr/blog/qr-code-guide</link>
       <description>어디에나 있는 QR 코드. 어떻게 작동하는지, 어떻게 만들고 활용하는지 알아봅니다.</description>
       <pubDate>Tue, 17 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/qr-code-guide</guid>
+      <guid>https://www.spinkorea.kr/blog/qr-code-guide</guid>
     </item>
     
     <item>
       <title>디지털 웰빙: 스마트폰과 건강하게 공존하는 7가지 방법</title>
-      <link>https://spinflow.vercel.app/blog/digital-wellbeing-tips</link>
+      <link>https://www.spinkorea.kr/blog/digital-wellbeing-tips</link>
       <description>하루 평균 7시간을 스마트폰과 함께하는 현대인. 디지털 피로를 줄이고 건강한 기기 사용 습관을 만드는 실천 가이드입니다.</description>
       <pubDate>Mon, 16 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/digital-wellbeing-tips</guid>
+      <guid>https://www.spinkorea.kr/blog/digital-wellbeing-tips</guid>
     </item>
     
     <item>
       <title>랜덤 선택의 심리학: 왜 우리는 결정을 위임하고 싶어하는가</title>
-      <link>https://spinflow.vercel.app/blog/random-choice-psychology</link>
+      <link>https://www.spinkorea.kr/blog/random-choice-psychology</link>
       <description>동전 던지기, 룰렛 돌리기... 우리는 왜 중요한 선택을 운에 맡기려 할까요? 심리학적 관점에서 랜덤 선택의 본질을 탐구합니다.</description>
       <pubDate>Sun, 15 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/random-choice-psychology</guid>
+      <guid>https://www.spinkorea.kr/blog/random-choice-psychology</guid>
     </item>
     
     <item>
       <title>시간 관리의 기술: 생산성을 2배로 높이는 실전 전략</title>
-      <link>https://spinflow.vercel.app/blog/time-management-productivity</link>
+      <link>https://www.spinkorea.kr/blog/time-management-productivity</link>
       <description>바쁘게 움직이는데 왜 할 일은 줄지 않을까요? 시간 관리 전문가들이 추천하는 실천 가능한 생산성 향상 전략을 소개합니다.</description>
       <pubDate>Sat, 14 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/time-management-productivity</guid>
+      <guid>https://www.spinkorea.kr/blog/time-management-productivity</guid>
     </item>
     
     <item>
       <title>색상 코드 완벽 가이드: HEX, RGB, HSL 이해하기</title>
-      <link>https://spinflow.vercel.app/blog/color-code-complete-guide</link>
+      <link>https://www.spinkorea.kr/blog/color-code-complete-guide</link>
       <description>웹 디자인에서 색상을 표현하는 다양한 방법을 알아봅니다. HEX, RGB, HSL의 차이점과 활용법을 완벽 정리합니다.</description>
       <pubDate>Fri, 13 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/color-code-complete-guide</guid>
+      <guid>https://www.spinkorea.kr/blog/color-code-complete-guide</guid>
     </item>
     
     <item>
       <title>강력한 비밀번호 만들기: 해킹으로부터 계정을 지키는 완벽 가이드</title>
-      <link>https://spinflow.vercel.app/blog/password-security-guide</link>
+      <link>https://www.spinkorea.kr/blog/password-security-guide</link>
       <description>매년 수백만 개의 계정이 해킹됩니다. 안전한 비밀번호를 만들고 관리하는 방법을 알아보세요.</description>
       <pubDate>Thu, 12 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/password-security-guide</guid>
+      <guid>https://www.spinkorea.kr/blog/password-security-guide</guid>
     </item>
     
     <item>
       <title>BMI 계산기로 알아보는 건강한 체중 관리의 모든 것</title>
-      <link>https://spinflow.vercel.app/blog/bmi-healthy-weight-guide</link>
+      <link>https://www.spinkorea.kr/blog/bmi-healthy-weight-guide</link>
       <description>BMI(체질량지수)의 의미와 한계, 올바른 체중 관리 방법까지. 숫자에만 의존하지 않는 진정한 건강 관리 가이드입니다.</description>
       <pubDate>Wed, 11 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/bmi-healthy-weight-guide</guid>
+      <guid>https://www.spinkorea.kr/blog/bmi-healthy-weight-guide</guid>
     </item>
     
     <item>
       <title>결정 장애(Decision Fatigue)를 극복하는 3가지 과학적인 방법</title>
-      <link>https://spinflow.vercel.app/blog/overcome-decision-fatigue</link>
+      <link>https://www.spinkorea.kr/blog/overcome-decision-fatigue</link>
       <description>현대인의 고질병 결정 장애. 점심 메뉴 고르기부터 인생의 중요한 선택까지, 뇌 과학이 알려주는 스트레스 없는 결정법을 소개합니다.</description>
       <pubDate>Tue, 10 Dec 2025 00:00:00 +0900</pubDate>
-      <guid>https://spinflow.vercel.app/blog/overcome-decision-fatigue</guid>
+      <guid>https://www.spinkorea.kr/blog/overcome-decision-fatigue</guid>
     </item>
   </channel>
 </rss>
