@@ -11,6 +11,14 @@ export interface BlogPost {
   thumbnail?: string;
 }
 
+// 오늘 날짜 기준으로 공개된 포스트만 반환 (워드프레스 예약글 방식)
+export function getPublishedPosts(): BlogPost[] {
+  const today = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
+  return BLOG_POSTS.filter((post) => post.date <= today).sort((a, b) =>
+    a.date > b.date ? -1 : 1,
+  );
+}
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "overcome-decision-fatigue",
@@ -2598,6 +2606,3425 @@ export const BLOG_POSTS: BlogPost[] = [
             SpinFlow Diff 비교 도구
           </Link>
           에 두 텍스트를 붙여넣으면 변경 사항이 즉시 색상으로 표시됩니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "uri-encoder-guide",
+    title: "URL 인코딩 완벽 가이드: 한글 주소가 %EC%95%88%EB%85%95이 되는 이유",
+    description:
+      "URL에서 한글이 이상한 문자로 변하는 이유, 퍼센트 인코딩의 원리, 개발자가 꼭 알아야 할 URL 인코딩·디코딩 완벽 가이드입니다.",
+    date: "2026-03-22",
+    tags: ["URL인코딩", "퍼센트인코딩", "개발", "한글"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          브라우저 주소창에서 한글을 입력하면{" "}
+          <strong className="text-white">
+            %EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94
+          </strong>
+          처럼 변하는 걸 본 적 있나요? 이것이{" "}
+          <strong>퍼센트 인코딩(Percent Encoding)</strong>, 즉 URL 인코딩입니다.{" "}
+          <Link
+            to="/tools/uri-encoder"
+            className="text-neon-primary hover:underline"
+          >
+            무료 URL 인코더/디코더
+          </Link>
+          로 즉시 변환해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          왜 URL에서 한글이 깨지는가?
+        </h2>
+        <p>
+          URL은 ASCII 문자만 안전하게 전송할 수 있도록 설계되었습니다. 한글,
+          띄어쓰기, 특수문자(
+          <code className="bg-white/10 px-1 rounded">&amp; = ? #</code> 등)는
+          URL에서 특별한 의미를 가지거나 ASCII 범위를 벗어나기 때문에 반드시
+          인코딩해야 합니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          URL 인코딩이 필요한 실전 상황
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "쿼리 파라미터",
+              "검색어에 특수문자·한글 포함 시 — ?q=%EC%84%9C%EC%9A%B8",
+            ],
+            ["API 요청", "REST API 경로에 한글 파라미터 전달 시"],
+            ["폼 데이터", "HTML form이 POST로 데이터를 전송할 때 자동 인코딩"],
+            ["파일 경로", "파일명에 공백·한글이 포함된 URL 생성 시"],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          encodeURI vs encodeURIComponent 차이
+        </h2>
+        <div className="space-y-2">
+          <div className="bg-white/5 p-4 rounded-lg">
+            <p className="font-mono text-sm text-green-400 mb-1">
+              encodeURI(url)
+            </p>
+            <p className="text-sm text-gray-400">
+              URL 전체를 인코딩.{" "}
+              <code className="bg-white/10 px-1 rounded">: / ? # &</code> 등 URL
+              구조 문자는 유지
+            </p>
+          </div>
+          <div className="bg-white/5 p-4 rounded-lg">
+            <p className="font-mono text-sm text-blue-400 mb-1">
+              encodeURIComponent(value)
+            </p>
+            <p className="text-sm text-gray-400">
+              파라미터 값 인코딩. URL 구조 문자까지 모두 인코딩 → 쿼리스트링
+              값에 사용
+            </p>
+          </div>
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/uri-encoder"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow URL 인코더/디코더
+          </Link>
+          로 클릭 한 번에 변환하세요. 한글, 이모지, 특수문자 모두 지원합니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "unix-timestamp-guide",
+    title: "Unix 타임스탬프 완벽 가이드: 개발자가 시간을 숫자로 다루는 법",
+    description:
+      "1970년 1월 1일부터 세는 Unix 타임스탬프가 무엇인지, 왜 개발자들이 사용하는지, 밀리초 vs 초 차이까지 완벽하게 정리했습니다.",
+    date: "2026-03-25",
+    tags: ["Unix타임스탬프", "Epoch", "개발", "시간변환"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1501139083538-0139583c060f?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          데이터베이스 로그에서{" "}
+          <strong className="text-white">1713916800</strong> 같은 숫자를 본 적
+          있나요? 이것이 <strong>Unix 타임스탬프</strong>입니다. 1970년 1월 1일
+          00:00:00 UTC(유닉스 에포크)로부터 경과한 초(또는 밀리초)를 나타냅니다.{" "}
+          <Link
+            to="/tools/unix-timestamp"
+            className="text-neon-primary hover:underline"
+          >
+            무료 Unix 타임스탬프 변환기
+          </Link>
+          로 바로 변환하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          왜 개발자는 날짜 대신 숫자를 쓰는가?
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "타임존 독립",
+              "타임스탬프는 UTC 기준 단일 숫자 → 전 세계 어디서든 동일한 시점",
+            ],
+            [
+              "정렬 용이",
+              "숫자 비교만으로 시간 순서 정렬 가능 — 문자열 날짜보다 훨씬 빠름",
+            ],
+            [
+              "저장 효율",
+              "32비트 정수 4바이트로 표현 — 날짜 문자열보다 메모리 절약",
+            ],
+            ["연산 단순화", "두 타임스탬프를 빼면 바로 경과 시간(초) 계산"],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          초(s) vs 밀리초(ms) — 헷갈리면 버그 발생!
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            ["초 단위 (Unix)", "10자리 — 1713916800\nPython, PHP, DB 기본값"],
+            [
+              "밀리초 단위",
+              "13자리 — 1713916800000\nJavaScript Date.now() 기본값",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-white mb-2 text-sm">{t}</p>
+              <pre className="text-xs text-gray-400 whitespace-pre-wrap">
+                {d}
+              </pre>
+            </div>
+          ))}
+        </div>
+        <p className="text-sm bg-yellow-500/10 border border-yellow-500/30 p-3 rounded-lg text-yellow-300">
+          ⚠️ JavaScript에서 <code>Date.now()</code>는 밀리초. 초 단위로
+          변환하려면 <code>Math.floor(Date.now() / 1000)</code>
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          2038년 문제란?
+        </h2>
+        <p>
+          32비트 정수로 타임스탬프를 저장하면 2038년 1월 19일에 오버플로가
+          발생합니다. 이미 대부분의 현대 시스템은 64비트로 전환했지만, 레거시
+          시스템에서는 여전히 주의가 필요합니다.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/unix-timestamp"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow Unix 타임스탬프 변환기
+          </Link>
+          로 현재 시간의 타임스탬프 확인, 날짜↔숫자 변환을 즉시 처리하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "case-converter-guide",
+    title:
+      "카멜케이스·스네이크케이스·파스칼케이스: 개발자 네이밍 컨벤션 완벽 정리",
+    description:
+      "camelCase, snake_case, PascalCase, kebab-case... 각 케이스가 어떤 상황에 쓰이는지, 언어별 표준 컨벤션까지 한 번에 정리합니다.",
+    date: "2026-03-28",
+    tags: ["네이밍컨벤션", "카멜케이스", "스네이크케이스", "개발"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          변수명 하나로 팀원과 싸워본 적 있나요? 네이밍 컨벤션은 코드의 일관성과
+          가독성을 결정하는 핵심 규칙입니다.{" "}
+          <Link
+            to="/tools/case-converter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 케이스 변환기
+          </Link>
+          로 원하는 형식으로 즉시 변환하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          케이스 종류 한눈에 보기
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "camelCase",
+              "첫 단어 소문자, 이후 단어 첫 글자 대문자",
+              "JavaScript 변수·함수명",
+            ],
+            [
+              "PascalCase",
+              "모든 단어 첫 글자 대문자",
+              "클래스명, React 컴포넌트, TypeScript 인터페이스",
+            ],
+            [
+              "snake_case",
+              "모든 소문자, 단어 사이 언더스코어",
+              "Python 변수·함수, 데이터베이스 컬럼명",
+            ],
+            [
+              "kebab-case",
+              "모든 소문자, 단어 사이 하이픈",
+              "CSS 클래스명, URL 경로, HTML 속성",
+            ],
+            [
+              "SCREAMING_SNAKE",
+              "모든 대문자, 언더스코어",
+              "상수(Constants), 환경변수",
+            ],
+          ].map(([name, desc, usage], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-mono font-bold text-neon-primary mb-1">
+                {name}
+              </p>
+              <p className="text-sm text-gray-300 mb-1">{desc}</p>
+              <p className="text-xs text-gray-500">📌 {usage}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          언어별 표준 컨벤션
+        </h2>
+        <div className="space-y-2">
+          {[
+            [
+              "JavaScript / TypeScript",
+              "변수·함수: camelCase | 클래스: PascalCase | 상수: SCREAMING_SNAKE",
+            ],
+            [
+              "Python",
+              "변수·함수: snake_case | 클래스: PascalCase | 상수: SCREAMING_SNAKE",
+            ],
+            ["CSS / HTML", "클래스·ID: kebab-case"],
+            ["SQL / DB", "컬럼·테이블: snake_case"],
+            ["URL 경로", "kebab-case 권장 (SEO 친화적)"],
+          ].map(([lang, rule], i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-start bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-neon-primary font-bold text-sm min-w-[160px]">
+                {lang}
+              </span>
+              <span className="text-gray-400 text-sm">{rule}</span>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/case-converter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 케이스 변환기
+          </Link>
+          로 텍스트를 원하는 형식으로 즉시 변환하세요. 복사 버튼 한 번으로
+          끝납니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "yes-no-oracle-guide",
+    title: "예스/노 신탁기: 결정을 못 내릴 때 랜덤이 도움이 되는 심리학적 이유",
+    description:
+      "동전 던지기, 예스/노 신탁기... 왜 중요한 결정에 랜덤을 쓰면 오히려 더 좋은 결과가 나오는지 심리학 연구로 알아봅니다.",
+    date: "2026-04-01",
+    tags: ["결정심리학", "예스노", "랜덤결정", "심리학"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          "그냥 동전으로 정해버릴까?"라고 생각해본 적 있나요? 실제로 이 방법이
+          효과적이라는 심리학 연구가 있습니다.{" "}
+          <Link
+            to="/tools/yes-no-oracle"
+            className="text-neon-primary hover:underline"
+          >
+            무료 예스/노 신탁기
+          </Link>
+          로 결정의 부담을 내려놓으세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          동전 던지기 실험 — 시카고 대학교 연구
+        </h2>
+        <p>
+          경제학자 스티븐 레빗(Steven Levitt)의 연구에 따르면, 동전 던지기로
+          중요한 결정(이직, 이사, 이별 등)을 내린 사람들이{" "}
+          <strong className="text-white">6개월 후 더 행복하다고 응답</strong>
+          했습니다. 결정 자체보다 결정 후 실행력이 행복을 결정한다는 것입니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          랜덤 결정이 도움이 되는 심리학적 메커니즘
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "결과 편향 제거",
+              "본인이 결정하면 결과가 나빠도 '내 탓'이라는 후회가 크지만, 랜덤은 책임을 분산시켜 실행에 집중하게 함",
+            ],
+            [
+              "분석 마비 탈출",
+              "선택지를 오래 고민할수록 뇌의 에너지가 소모되어 오히려 나쁜 결정을 함 — 랜덤이 이 루프를 끊음",
+            ],
+            [
+              "직관 확인 도구",
+              "동전이 '예스'로 나왔을 때 실망하면 → 실제 원하는 건 '노'라는 뜻. 내 감정을 확인하는 거울 역할",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-2">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          이런 상황에 쓰세요
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            "🍕 뭐 먹을지 못 정할 때",
+            "💼 이직 제안 수락 여부",
+            "🎬 오늘 볼 영화 고르기",
+            "✉️ 연락할지 말지 망설일 때",
+            "🏃 오늘 운동할지 쉴지",
+            "💸 살까 말까 충동구매 방지",
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-white/5 p-3 rounded-lg text-sm text-center"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          지금 결정을 못 내리고 있다면{" "}
+          <Link
+            to="/tools/yes-no-oracle"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 예스/노 신탁기
+          </Link>
+          를 눌러보세요. 결과에 대한 내 감정이 진짜 원하는 것을 알려줄 겁니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "developer-tools-collection",
+    title: "개발자·기획자가 매일 쓰는 무료 온라인 도구 7선",
+    description:
+      "설치 없이 브라우저에서 바로 쓰는 무료 개발자 도구 모음. JSON 포매터, Base64, URL 인코더, Diff 비교, Unix 타임스탬프, 케이스 변환, CSS 그림자까지.",
+    date: "2026-04-05",
+    tags: ["개발자도구", "온라인툴", "무료도구", "생산성"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          개발하다 보면 매번 같은 작업을 반복합니다. JSON 예쁘게 출력하기, 토큰
+          디코딩, URL 인코딩... 설치 없이 브라우저에서 바로 쓸 수 있는{" "}
+          <Link to="/tools" className="text-neon-primary hover:underline">
+            SpinFlow 무료 도구 모음
+          </Link>
+          을 소개합니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          개발자 필수 도구 7선
+        </h2>
+        <div className="space-y-3">
+          {[
+            {
+              name: "JSON 포매터",
+              path: "/tools/json-formatter",
+              desc: "압축된 JSON을 들여쓰기로 정렬. API 응답 디버깅 필수 도구",
+              tag: "백엔드",
+            },
+            {
+              name: "Base64 인코더/디코더",
+              path: "/tools/base64-encoder",
+              desc: "JWT 토큰 페이로드 확인, 이미지 Data URL 변환, HTTP Basic 인증 디코딩",
+              tag: "보안",
+            },
+            {
+              name: "URL 인코더/디코더",
+              path: "/tools/uri-encoder",
+              desc: "한글·특수문자 퍼센트 인코딩. API 파라미터 디버깅에 필수",
+              tag: "API",
+            },
+            {
+              name: "Unix 타임스탬프 변환기",
+              path: "/tools/unix-timestamp",
+              desc: "DB 로그의 숫자 타임스탬프를 사람이 읽는 날짜로 즉시 변환",
+              tag: "DB",
+            },
+            {
+              name: "Diff 비교 도구",
+              path: "/tools/diff-checker",
+              desc: "두 텍스트의 차이를 빨간·초록으로 시각화. 설정 파일·코드 비교",
+              tag: "리뷰",
+            },
+            {
+              name: "케이스 변환기",
+              path: "/tools/case-converter",
+              desc: "camelCase ↔ snake_case ↔ PascalCase ↔ kebab-case 즉시 변환",
+              tag: "코딩",
+            },
+            {
+              name: "CSS 그림자 생성기",
+              path: "/tools/css-shadow-generator",
+              desc: "슬라이더로 box-shadow 값 시각적으로 조정 후 CSS 코드 복사",
+              tag: "프론트",
+            },
+          ].map((tool, i) => (
+            <Link
+              key={i}
+              to={tool.path}
+              className="flex items-start gap-4 bg-white/5 hover:bg-white/10 p-4 rounded-lg transition-colors block"
+            >
+              <span className="text-xs bg-neon-primary/20 text-neon-primary px-2 py-1 rounded font-mono min-w-[48px] text-center">
+                {tool.tag}
+              </span>
+              <div>
+                <p className="font-bold text-white mb-1">{tool.name}</p>
+                <p className="text-sm text-gray-400">{tool.desc}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          위 도구들 외에도{" "}
+          <Link to="/tools" className="text-neon-primary hover:underline">
+            SpinFlow 전체 도구 목록
+          </Link>
+          에서 24개의 무료 온라인 도구를 확인하세요. 북마크 하나로 매일 반복
+          작업을 줄이세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "random-number-science",
+    title: "진짜 랜덤이란 무엇인가: 컴퓨터는 어떻게 랜덤 숫자를 만드는가",
+    description:
+      "컴퓨터가 만드는 랜덤은 진짜 랜덤일까요? 의사 난수(PRNG)와 진성 난수(TRNG)의 차이, 로또·암호화·게임에서 랜덤이 쓰이는 방식을 설명합니다.",
+    date: "2026-04-10",
+    tags: ["랜덤", "난수생성", "컴퓨터과학", "암호화"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          로또 번호 생성기, 게임 아이템 드랍, 암호화 키... 모두 '랜덤'에
+          의존합니다. 그런데{" "}
+          <strong className="text-white">
+            컴퓨터는 진짜 랜덤을 만들 수 있을까요?
+          </strong>{" "}
+          <Link
+            to="/tools/lotto-generator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 랜덤 번호 생성기
+          </Link>
+          로 직접 확인해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          의사 난수(PRNG) vs 진성 난수(TRNG)
+        </h2>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {[
+            {
+              title: "의사 난수 (PRNG)",
+              color: "text-blue-400",
+              border: "border-blue-500/30",
+              points: [
+                "수학 알고리즘으로 생성",
+                "시드(seed)값이 같으면 같은 수열",
+                "빠르고 예측 가능 → 게임·시뮬레이션에 적합",
+                "예: Math.random(), Java Random",
+              ],
+            },
+            {
+              title: "진성 난수 (TRNG)",
+              color: "text-green-400",
+              border: "border-green-500/30",
+              points: [
+                "물리적 현상(열잡음, 방사선) 활용",
+                "완전히 예측 불가능",
+                "느리지만 진짜 랜덤 → 암호화 키에 필수",
+                "예: 하드웨어 보안 모듈(HSM)",
+              ],
+            },
+          ].map((card, i) => (
+            <div
+              key={i}
+              className={`bg-white/5 border ${card.border} p-4 rounded-lg`}
+            >
+              <p className={`font-bold ${card.color} mb-3`}>{card.title}</p>
+              <ul className="space-y-1">
+                {card.points.map((p, j) => (
+                  <li key={j} className="text-sm text-gray-400 flex gap-2">
+                    <span>•</span>
+                    <span>{p}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          분야별 랜덤 활용 방식
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "🔐 암호화",
+              "CSPRNG(암호학적으로 안전한 난수) 사용 — 예측 불가능성이 생명",
+            ],
+            [
+              "🎰 로또·복권",
+              "물리적 기계(공 추첨) 또는 TRNG — 조작 방지를 위해 하드웨어 랜덤",
+            ],
+            ["🎮 게임 드랍률", "PRNG로 충분 — 빠른 속도와 재현 가능성이 중요"],
+            [
+              "📊 통계 시뮬레이션",
+              "PRNG + 고정 시드 — 같은 조건에서 재현 가능해야 함",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-white mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-sm bg-blue-500/10 border border-blue-500/30 p-3 rounded-lg text-blue-300">
+          💡 브라우저의 <code>Math.random()</code>은 PRNG라 암호화에 절대 사용
+          금지. 보안이 필요한 경우 <code>crypto.getRandomValues()</code>를
+          사용하세요.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          일상의 결정에는 완벽한 랜덤이 필요하지 않습니다.{" "}
+          <Link
+            to="/tools/lotto-generator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 로또 번호 생성기
+          </Link>
+          나{" "}
+          <Link
+            to="/tools/dice-roller"
+            className="text-neon-primary hover:underline"
+          >
+            주사위 굴리기
+          </Link>
+          로 재미있고 공정한 결정을 내려보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "burnout-prevention",
+    title: "번아웃 예방법: 쉬는 것도 기술이다",
+    description:
+      "현대인 3명 중 1명이 겪는 번아웃. 예방법과 회복 전략을 과학적으로 알아봅니다.",
+    date: "2026-04-15",
+    tags: ["번아웃", "심리학", "생산성", "회복"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          WHO는 2019년 번아웃(Burnout)을 공식 직업 현상으로 인정했습니다. 단순한
+          피로가 아니라{" "}
+          <strong className="text-white">
+            만성 스트레스로 인한 에너지 고갈 상태
+          </strong>
+          입니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          번아웃의 3가지 신호
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "탈진(Exhaustion)",
+              "아무리 자도 피곤하고, 일 시작 전부터 지쳐있는 상태",
+            ],
+            [
+              "냉소(Cynicism)",
+              "업무·동료에 대한 무관심, '어차피 안 되는데' 생각의 반복",
+            ],
+            [
+              "효능감 저하",
+              "과거엔 잘하던 일에서 더 이상 성취감을 느끼지 못함",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          예방을 위한 실천법
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>일정한 업무 종료 시간</strong> 설정 — 퇴근 후 메신저 확인
+            차단
+          </li>
+          <li>
+            <strong>주도적인 휴식</strong> — 수동적(SNS 스크롤)이 아닌 회복형
+            활동(산책, 독서)
+          </li>
+          <li>
+            <strong>NO 말하기 연습</strong> — 과부하의 주원인은 거절 못 하는
+            습관
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          번아웃은 갑자기 오지 않습니다. 신호가 보일 때 멈추는 것이 가장
+          효과적인 치료입니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "lotto-statistics",
+    title: "로또 번호 통계 분석: 자주 나오는 번호가 있을까?",
+    description:
+      "로또 1~45번 중 정말 자주 나오는 번호가 있는지 통계로 알아봅니다. 도박사의 오류와 진짜 확률의 차이.",
+    date: "2026-04-16",
+    tags: ["로또", "통계", "확률", "랜덤"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          "34번이 제일 많이 나왔대!" — 사실일 수도 있습니다. 하지만{" "}
+          <strong className="text-white">
+            다음 회차에 34번이 더 나올 확률은 여전히 1/45
+          </strong>
+          입니다.{" "}
+          <Link
+            to="/tools/lotto-generator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 로또 번호 생성기
+          </Link>
+          로 번호를 뽑아보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          도박사의 오류(Gambler's Fallacy)
+        </h2>
+        <p>
+          과거 결과가 미래 확률에 영향을 준다는 착각입니다. 동전을 10번 던져
+          앞면이 9번 나왔다고 다음에 뒷면이 나올 확률이 높아지지 않습니다. 각
+          시행은 완전히 독립적입니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          그럼에도 전략이 있다면?
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "당첨 확률 자체는 동일",
+              "어떤 번호 조합을 선택해도 1등 확률은 1/8,145,060으로 동일",
+            ],
+            [
+              "당첨금 나눔 최소화",
+              "1~9 같은 인기 번호를 피하면 당첨 시 상금을 나눌 사람이 줄어듦",
+            ],
+            [
+              "자동 vs 수동",
+              "수동 번호 선택이 당첨 확률을 높이지는 않음 — 심리적 만족감의 차이",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/lotto-generator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 로또 번호 생성기
+          </Link>
+          로 완전 무작위 번호를 생성하세요. 어떤 방식으로 골라도 확률은
+          동일합니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "pareto-principle",
+    title: "파레토 법칙(80/20 법칙)으로 하루를 설계하는 법",
+    description:
+      "결과의 80%는 원인의 20%에서 나온다. 파레토 법칙을 업무·학습·인간관계에 적용하는 실전 가이드.",
+    date: "2026-04-17",
+    tags: ["파레토", "생산성", "80/20", "시간관리"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          이탈리아 경제학자 빌프레도 파레토가 발견한 법칙:{" "}
+          <strong className="text-white">
+            결과의 80%는 원인의 20%에서 발생
+          </strong>
+          합니다. 당신의 수익 80%는 고객의 20%에서, 성과의 80%는 할 일의 20%에서
+          나옵니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          분야별 적용 사례
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "📋 업무",
+              "오늘 To-Do 중 딱 2개만 골라라 — 그 2개가 나머지 8개보다 중요",
+            ],
+            ["📚 공부", "시험 범위의 20% 핵심 개념이 문제의 80%를 커버"],
+            [
+              "👥 인간관계",
+              "에너지를 주는 20%의 관계에 집중, 80%의 소모적 관계는 자연스럽게 줄이기",
+            ],
+            ["💰 수익", "매출 상위 20% 제품/서비스에 자원 집중"],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          오늘 당장 적용하기
+        </h2>
+        <p>
+          할 일 목록을 보고 스스로에게 물으세요:{" "}
+          <strong>"이 중에서 딱 하나만 해야 한다면?"</strong> 그게 당신의
+          20%입니다. 나머지는 그 하나 이후에 해도 됩니다.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          결정이 어렵다면{" "}
+          <Link to="/" className="text-neon-primary hover:underline">
+            SpinFlow 룰렛
+          </Link>
+          으로 우선순위를 뽑아보세요. 나온 항목에 안도감이 드는지 — 그게 진짜
+          우선순위입니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "percentage-life-hacks",
+    title: "퍼센트 계산이 헷갈릴 때: 실생활 퍼센트 완전 정리",
+    description:
+      "할인율, 세금, 인상률, 증감률... 실생활에서 퍼센트를 틀리지 않는 3가지 공식과 빠른 암산법.",
+    date: "2026-04-18",
+    tags: ["퍼센트", "수학", "계산", "생활수학"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          "30% 할인이면 얼마지?" — 순간적으로 막히는 퍼센트 계산.{" "}
+          <Link
+            to="/tools/percentage-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 퍼센트 계산기
+          </Link>
+          로 즉시 해결하거나, 3가지 공식만 외워두세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          실생활 퍼센트 공식 3가지
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "A의 X%는?",
+              "A × X ÷ 100 → 10만원의 30% = 10만 × 30 ÷ 100 = 3만원",
+            ],
+            [
+              "A는 B의 몇%?",
+              "A ÷ B × 100 → 3만원은 10만원의 몇%? = 3 ÷ 10 × 100 = 30%",
+            ],
+            [
+              "X% 증가/감소 후 금액?",
+              "원래 × (1 ± X/100) → 10만원 30% 할인 = 10만 × 0.7 = 7만원",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-mono font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          퍼센트 암산 꿀팁
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>10% 먼저</strong> 구한 뒤 곱하기 — 30%는 10%의 3배
+          </li>
+          <li>
+            <strong>1% 단위</strong>로 쪼개기 — 15%는 10% + 5%(=10%의 절반)
+          </li>
+          <li>
+            퍼센트와 원래 수를 <strong>바꿔도 동일</strong> — 8의 25% = 25의 8%
+            = 2
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          복잡한 계산은{" "}
+          <Link
+            to="/tools/percentage-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 퍼센트 계산기
+          </Link>
+          에 맡기세요. 증가율·감소율·비율 계산을 한 번에.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "digital-minimalism",
+    title: "디지털 미니멀리즘: 앱 정리로 집중력 되찾기",
+    description:
+      "스마트폰 앱이 많을수록 집중력은 줄어듭니다. 디지털 미니멀리즘 실천으로 방해 없는 하루를 만드는 방법.",
+    date: "2026-04-19",
+    tags: ["디지털미니멀리즘", "집중력", "스마트폰", "생산성"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          평균 스마트폰 사용자는 하루{" "}
+          <strong className="text-white">96번 스마트폰을 확인</strong>합니다.
+          알림 하나당 집중력이 완전히 회복되는 데 <strong>23분</strong>이
+          걸린다는 연구 결과도 있습니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          디지털 미니멀리즘 3단계
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "1단계: 앱 감사(減)하기",
+              "30일간 필수 앱만 남기고 나머지 삭제. 3주 후에도 생각나지 않는 앱은 필요 없었던 것",
+            ],
+            [
+              "2단계: 알림 제로화",
+              "모든 앱 알림 끄기 → 내가 필요할 때만 확인하는 습관으로 전환",
+            ],
+            [
+              "3단계: 스크린 타임 설정",
+              "SNS·유튜브는 하루 30분 시간제한. 의지력 대신 시스템으로 해결",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          디지털 도구는 내 목적에 맞게 사용할 때 가장 강력합니다.{" "}
+          <Link to="/tools" className="text-neon-primary hover:underline">
+            SpinFlow 도구 모음
+          </Link>
+          처럼 필요한 순간에만 열고 닫을 수 있는 도구를 활용하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "unit-conversion-life",
+    title: "단위 변환 실전 가이드: cm·kg·°C를 자유자재로 다루는 법",
+    description:
+      "해외 직구, 여행, 요리 레시피... 일상 속 단위 변환이 필요한 순간과 자주 쓰이는 변환 공식 모음.",
+    date: "2026-04-20",
+    tags: ["단위변환", "cm", "kg", "온도"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          해외 쇼핑몰의 인치 사이즈, 미국 레시피의 oz(온스), 화씨 온도...{" "}
+          <Link
+            to="/tools/unit-converter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 단위 변환기
+          </Link>
+          로 즉시 해결하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          외워두면 유용한 변환 공식
+        </h2>
+        <div className="space-y-3">
+          {[
+            ["길이", "1인치 = 2.54cm | 1피트(ft) = 30.48cm | 1마일 = 1.609km"],
+            ["무게", "1파운드(lb) = 453.6g | 1온스(oz) = 28.35g"],
+            ["온도", "°C→°F: (°C×9/5)+32 | °F→°C: (°F-32)×5/9"],
+            [
+              "부피",
+              "1컵(cup) = 240ml | 1큰술(tbsp) = 15ml | 1작은술(tsp) = 5ml",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm font-mono text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/unit-converter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 단위 변환기
+          </Link>
+          에서 길이·무게·온도·속도·넓이 등 40가지 이상의 단위를 변환하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "pomodoro-technique",
+    title: "포모도로 기법 완벽 가이드: 25분의 기적",
+    description:
+      "1980년대 토마토 타이머에서 시작된 시간 관리 기법. 집중력과 생산성을 동시에 높이는 포모도로 실전 가이드.",
+    date: "2026-04-21",
+    tags: ["포모도로", "시간관리", "집중력", "생산성"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1508962914676-134849a727f0?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          프란체스코 시릴로가 1980년대 토마토(Pomodoro) 모양 주방 타이머로
+          개발한 기법. 핵심은 단순합니다:{" "}
+          <strong className="text-white">25분 집중 → 5분 휴식 → 반복</strong>.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          포모도로 4단계
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["1", "할 일 하나를 선택"],
+            ["2", "타이머 25분 설정 후 오직 그 일만"],
+            ["3", "타이머가 울리면 5분 휴식 (진짜 쉬기 — SNS 금지)"],
+            ["4", "4 포모도로 완료 후 15~30분 긴 휴식"],
+          ].map(([n, d], i) => (
+            <div
+              key={i}
+              className="flex gap-4 items-start bg-white/5 p-3 rounded-lg"
+            >
+              <span className="bg-neon-primary text-black font-bold rounded-full w-7 h-7 flex items-center justify-center text-sm flex-shrink-0">
+                {n}
+              </span>
+              <span className="text-sm text-gray-300">{d}</span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          왜 효과적인가?
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>파킨슨의 법칙</strong> 차단 — 시간 제한이 없으면 일이 가용
+            시간을 꽉 채움
+          </li>
+          <li>
+            <strong>강제 휴식</strong>으로 인지 피로 예방 — 마라톤이 아닌 인터벌
+            트레이닝
+          </li>
+          <li>
+            <strong>방해 차단</strong> 연습 — 25분간 다른 충동이 줄어드는 훈련
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/time-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 시간 계산기
+          </Link>
+          로 포모도로 세션의 총 시간을 계산해보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "qr-code-uses",
+    title: "QR코드 200% 활용법: 명함·와이파이·결제까지",
+    description:
+      "단순한 URL 공유를 넘어 명함, 와이파이 공유, 앱 다운로드, 결제까지. QR코드를 제대로 활용하는 방법.",
+    date: "2026-04-22",
+    tags: ["QR코드", "활용법", "명함", "와이파이"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          QR코드는 URL 링크만 담는 게 아닙니다. 텍스트·연락처·와이파이 설정·위치
+          정보까지 담을 수 있습니다.{" "}
+          <Link
+            to="/tools/qr-code-generator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 QR코드 생성기
+          </Link>
+          로 다양한 용도로 만들어보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          QR코드 활용 아이디어
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "📇 디지털 명함",
+              "이름·연락처·SNS를 QR 하나로 — 종이 명함 없이 스마트폰으로 바로 저장",
+            ],
+            [
+              "📶 와이파이 공유",
+              "SSID·비밀번호를 QR에 담아 부착 — 입력 없이 자동 연결",
+            ],
+            [
+              "📍 위치 공유",
+              "구글맵 URL을 QR로 — 행사 초대장에 삽입하면 길 찾기 바로 실행",
+            ],
+            [
+              "📱 앱 다운로드",
+              "앱스토어 링크 QR — 오프라인 행사에서 앱 설치 유도",
+            ],
+            [
+              "📋 메뉴판",
+              "레스토랑 메뉴 URL QR — 위생적이고 업데이트가 즉시 반영됨",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/qr-code-generator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow QR코드 생성기
+          </Link>
+          는 URL·텍스트·이메일·전화번호를 QR코드로 즉시 변환합니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "multitasking-myth",
+    title: "멀티태스킹은 없다: 단일 집중의 과학",
+    description:
+      "우리 뇌는 실제로 멀티태스킹을 못 합니다. 동시 작업의 신화를 깨고 단일 집중이 왜 더 효율적인지 알아봅니다.",
+    date: "2026-04-23",
+    tags: ["집중력", "멀티태스킹", "뇌과학", "생산성"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          스탠퍼드 연구에 따르면 멀티태스킹을 많이 하는 사람일수록{" "}
+          <strong className="text-white">
+            집중력·기억력·주의 전환 능력이 모두 낮았습니다
+          </strong>
+          . 뇌는 실제로 동시 처리가 아니라 고속 전환(Context Switching)을
+          합니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          Context Switching의 비용
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            작업 전환당 평균 <strong>15~20분</strong>의 워밍업 시간 낭비
+          </li>
+          <li>
+            실수 발생률 <strong>50% 증가</strong>
+          </li>
+          <li>
+            전체 처리 시간 <strong>40% 증가</strong> (MIT 연구)
+          </li>
+        </ul>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          단일 집중을 위한 환경 설계
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "타임 블로킹",
+              "하루를 업무 유형별 블록으로 나눔 — 이메일·개발·회의 시간을 분리",
+            ],
+            [
+              "물리적 격리",
+              "집중 시간엔 헤드폰 착용 + 도어 닫기 — 방해 차단 신호",
+            ],
+            [
+              "디지털 격리",
+              "집중 앱(Forest, Cold Turkey) 사용 — SNS·메신저 시간제 차단",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          지금 무엇부터 할지 모르겠다면{" "}
+          <Link to="/" className="text-neon-primary hover:underline">
+            SpinFlow 룰렛
+          </Link>
+          으로 하나를 뽑아 그것만 집중하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "markdown-writing",
+    title: "마크다운으로 글 쓰는 이유: 개발자·기획자의 노트 작성법",
+    description:
+      "서식 걱정 없이 내용에만 집중할 수 있는 마크다운. 기본 문법부터 실전 활용까지 10분 완성 가이드.",
+    date: "2026-04-24",
+    tags: ["마크다운", "글쓰기", "노트", "개발"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          마크다운은{" "}
+          <strong className="text-white">
+            일반 텍스트에 간단한 기호를 더해 서식을 표현
+          </strong>
+          하는 방법입니다. GitHub·Notion·Slack·Discord 모두 마크다운을
+          지원합니다.{" "}
+          <Link
+            to="/tools/markdown-previewer"
+            className="text-neon-primary hover:underline"
+          >
+            무료 마크다운 미리보기
+          </Link>
+          로 바로 연습해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          핵심 문법 10가지
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["# 제목 1 / ## 제목 2", "H1, H2 헤딩"],
+            ["**굵게** / *기울임*", "강조"],
+            ["- 항목 / 1. 순서", "목록"],
+            ["[링크](URL)", "하이퍼링크"],
+            ["![alt](이미지URL)", "이미지"],
+            ["```코드```", "코드 블록"],
+            ["---", "구분선"],
+            ["> 인용문", "인용"],
+            ["~~취소선~~", "취소선"],
+          ].map(([syntax, desc], i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-center bg-white/5 p-3 rounded-lg"
+            >
+              <code className="text-neon-primary font-mono text-sm min-w-[160px]">
+                {syntax}
+              </code>
+              <span className="text-gray-400 text-sm">{desc}</span>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/markdown-previewer"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 마크다운 미리보기
+          </Link>
+          에서 왼쪽에 입력하면 오른쪽에 실시간으로 렌더링됩니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "morning-routine",
+    title: "아침 루틴이 하루를 결정하는 이유",
+    description:
+      "성공한 사람들은 왜 아침에 특별한 루틴을 갖는가. 과학적으로 검증된 아침 루틴 설계 가이드.",
+    date: "2026-04-25",
+    tags: ["아침루틴", "습관", "생산성", "라이프스타일"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          팀 쿡(Apple CEO)은 새벽 4시에 일어나고, 오프라 윈프리는 명상으로
+          하루를 시작합니다. 아침 루틴은{" "}
+          <strong className="text-white">
+            의지력이 가장 충전된 시간대를 의도적으로 사용
+          </strong>
+          하는 전략입니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          아침 루틴이 효과적인 이유
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "의지력 피크",
+              "기상 후 1~3시간이 전두엽 활동이 가장 활발한 시간 — 중요한 일을 이때 처리",
+            ],
+            [
+              "프레이밍 효과",
+              "하루의 첫 경험이 감정의 기준점이 됨 — 긍정적 아침이 하루 전체 분위기를 결정",
+            ],
+            [
+              "자동화의 힘",
+              "루틴이 자리잡으면 의사결정 없이 실행 — 하루치 의지력을 아낄 수 있음",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          최소 아침 루틴 (15분)
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["5분", "물 한 잔 + 스트레칭"],
+            ["5분", "오늘 할 일 3가지 적기"],
+            ["5분", "산책 or 햇빛 쬐기"],
+          ].map(([t, d], i) => (
+            <div
+              key={i}
+              className="flex gap-4 items-center bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-neon-primary font-bold font-mono min-w-[40px]">
+                {t}
+              </span>
+              <span className="text-sm text-gray-300">{d}</span>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          오늘 할 일 3가지를{" "}
+          <Link
+            to="/tools/text-counter"
+            className="text-neon-primary hover:underline"
+          >
+            텍스트 도구
+          </Link>
+          에 적어두고, 결정이 어렵다면{" "}
+          <Link to="/" className="text-neon-primary hover:underline">
+            SpinFlow 룰렛
+          </Link>
+          으로 순서를 정하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "password-strength",
+    title: "비밀번호 강도 테스트: 내 비밀번호는 얼마나 안전한가",
+    description:
+      "해커가 비밀번호를 푸는 데 걸리는 시간, 강력한 비밀번호의 조건, 비밀번호 관리자를 써야 하는 이유.",
+    date: "2026-04-26",
+    tags: ["비밀번호", "보안", "해킹", "개인정보"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          <code className="bg-white/10 px-1 rounded">123456</code>는 해커가{" "}
+          <strong className="text-white">1초 이내</strong>에 뚫습니다.{" "}
+          <Link
+            to="/tools/password-generator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 비밀번호 생성기
+          </Link>
+          로 지금 당장 강력한 비밀번호를 만드세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          비밀번호 해독 예상 시간
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["password", "즉시", "red"],
+            ["P@ssw0rd", "3시간", "red"],
+            ["Tr0ub4dor&3", "수백 년", "green"],
+            ["correct-horse-battery", "수천 년 이상", "green"],
+          ].map(([pw, time, color], i) => (
+            <div
+              key={i}
+              className="flex justify-between items-center bg-white/5 p-3 rounded-lg"
+            >
+              <code className="font-mono text-sm text-white">{pw}</code>
+              <span
+                className={`text-sm font-bold ${color === "red" ? "text-red-400" : "text-green-400"}`}
+              >
+                {time}
+              </span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          강력한 비밀번호의 4가지 조건
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>길이 12자 이상</strong> — 길이가 강도의 핵심
+          </li>
+          <li>
+            <strong>대소문자 + 숫자 + 특수문자</strong> 혼합
+          </li>
+          <li>
+            <strong>사전 단어, 생일, 이름 사용 금지</strong>
+          </li>
+          <li>
+            <strong>서비스마다 다른 비밀번호</strong> — 1Password, Bitwarden 등
+            관리자 활용
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/password-generator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 비밀번호 생성기
+          </Link>
+          로 길이·복잡도를 설정해 즉시 생성하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "goal-setting-smart",
+    title: "목표 설정의 과학: SMART 목표 vs OKR — 무엇을 써야 하나",
+    description:
+      "새해 결심이 3주 만에 사라지는 이유. SMART 목표와 OKR의 차이, 상황에 맞는 목표 설정법을 알아봅니다.",
+    date: "2026-04-27",
+    tags: ["목표설정", "SMART", "OKR", "생산성"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          목표를 세우는 사람 중{" "}
+          <strong className="text-white">92%가 달성에 실패</strong>합니다.
+          이유는 대부분 목표 자체가 아닌 목표 설정 방식에 있습니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          SMART 목표란?
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["S — Specific", "구체적으로: '살 빼기' → '매주 3회 30분 달리기'"],
+            ["M — Measurable", "측정 가능하게: 숫자로 표현"],
+            ["A — Achievable", "달성 가능하게: 도전적이지만 현실적으로"],
+            ["R — Relevant", "관련성: 내 삶의 우선순위와 연결"],
+            ["T — Time-bound", "기한 있게: 'OO월 OO일까지'"],
+          ].map(([t, d], i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-start bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-neon-primary font-bold font-mono min-w-[130px] text-sm">
+                {t}
+              </span>
+              <span className="text-sm text-gray-400">{d}</span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">OKR은 언제?</h2>
+        <p>
+          OKR(Objectives & Key Results)은 구글·인텔이 사용하는 방식. SMART보다{" "}
+          <strong>야심 차고 영감적인 목표</strong>에 적합합니다. 개인보다는
+          팀·조직 단위에서 더 효과적입니다.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          목표 중 어디서 시작할지 모르겠다면{" "}
+          <Link to="/" className="text-neon-primary hover:underline">
+            SpinFlow 룰렛
+          </Link>
+          으로 첫 번째 행동을 뽑아보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "bmi-limitations",
+    title: "BMI 계산기의 한계: 숫자 너머의 건강 지표",
+    description:
+      "BMI가 과체중이라도 건강할 수 있고, 정상이라도 위험할 수 있습니다. BMI의 한계와 보완 지표를 알아봅니다.",
+    date: "2026-04-28",
+    tags: ["BMI", "건강", "체중", "운동"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          BMI(체질량지수)는{" "}
+          <strong className="text-white">1830년대에 개발된 공식</strong>입니다.
+          현대 의학은 BMI만으로 건강을 판단하는 것의 한계를 명확히 인지하고
+          있습니다.{" "}
+          <Link
+            to="/tools/bmi-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            BMI 계산기
+          </Link>
+          로 내 수치를 확인해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          BMI가 놓치는 것들
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "근육량 무시",
+              "보디빌더는 BMI상 비만이지만 체지방률은 낮음 — 근육이 지방보다 무겁기 때문",
+            ],
+            [
+              "체지방 분포 무시",
+              "복부 비만(내장지방)은 BMI 정상이어도 심혈관 질환 위험이 높음",
+            ],
+            [
+              "인종 차이",
+              "동아시아인은 같은 BMI에서 서구인보다 체지방률·당뇨 위험이 더 높음",
+            ],
+            [
+              "나이·성별 무시",
+              "같은 BMI라도 노인과 청년, 남성과 여성의 건강 리스크가 다름",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          BMI를 보완하는 지표
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>허리둘레</strong> — 남성 90cm, 여성 85cm 이상 시 복부비만
+          </li>
+          <li>
+            <strong>체지방률</strong> — 인바디 측정, 남성 15~25%, 여성 20~30%
+            정상
+          </li>
+          <li>
+            <strong>허리-키 비율</strong> — 허리둘레 ÷ 키, 0.5 이하가 건강
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/bmi-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow BMI 계산기
+          </Link>
+          로 수치를 확인하되, 하나의 참고 지표로만 활용하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "fewer-meetings",
+    title: "회의를 줄이면 생산성이 늘어나는 이유",
+    description:
+      "직장인 하루 평균 3.5시간이 회의로 낭비됩니다. 비효율적인 회의를 줄이고 생산성을 높이는 실전 전략.",
+    date: "2026-04-29",
+    tags: ["회의", "생산성", "업무효율", "시간관리"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          Atlassian 조사에 따르면 직장인의{" "}
+          <strong className="text-white">31시간이 매달 비생산적인 회의</strong>
+          에 낭비됩니다. 그러나 모든 회의가 나쁜 건 아닙니다 — 나쁜 회의가
+          문제입니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          이 회의는 필요한가? 체크리스트
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["목적이 명확한가?", "어젠다 없는 회의는 즉시 취소"],
+            ["이메일로 해결 가능한가?", "정보 공유 목적의 회의는 문서로 대체"],
+            ["의사결정자가 참석하는가?", "결정권자 없는 회의는 결론이 없음"],
+            [
+              "30분 안에 끝낼 수 있는가?",
+              "1시간 기본 설정 대신 25분 or 50분으로",
+            ],
+          ].map(([q, a], i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-start bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-neon-primary font-bold text-sm">Q</span>
+              <div>
+                <p className="text-sm text-white font-bold">{q}</p>
+                <p className="text-xs text-gray-400 mt-1">{a}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          회의 없는 날(No-Meeting Day) 도입
+        </h2>
+        <p>
+          Meta·Shopify는 특정 요일을 회의 금지 구역으로 설정합니다. 주 1~2일만
+          해도 집중 업무 시간이 눈에 띄게 늘어납니다.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          회의 시간 계산이 필요하다면{" "}
+          <Link
+            to="/tools/time-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 시간 계산기
+          </Link>
+          를 활용하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "age-calculation-trivia",
+    title: "나이 계산기로 알아보는 흥미로운 시간의 사실들",
+    description:
+      "당신이 살아온 날, 시간, 심장 박동 수. 나이를 다양한 단위로 환산하면 삶이 더 생생하게 느껴집니다.",
+    date: "2026-04-30",
+    tags: ["나이계산", "시간", "생일", "트리비아"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          "나 30살이야"보다 "나 10,950일을 살았어"가 훨씬 더 실감납니다.{" "}
+          <Link
+            to="/tools/age-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 나이 계산기
+          </Link>
+          로 당신의 나이를 다양한 단위로 확인해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          30세 기준 환산 수치
+        </h2>
+        <div className="space-y-3">
+          {[
+            ["📅 일(Day)", "약 10,950일"],
+            ["⏰ 시간(Hour)", "약 262,800시간"],
+            ["💓 심장 박동", "약 1,134,000,000회 (분당 72회 기준)"],
+            ["😴 수면", "약 87,600시간 (하루 8시간 기준)"],
+            ["🌍 지구 공전", "정확히 30번"],
+          ].map(([t, d], i) => (
+            <div
+              key={i}
+              className="flex justify-between items-center bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-sm text-gray-300">{t}</span>
+              <span className="font-bold text-neon-primary text-sm">{d}</span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          생일 관련 흥미로운 사실
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            365명 중 생일이 같은 사람이 존재할 확률: 23명만 모여도{" "}
+            <strong>50% 이상</strong>
+          </li>
+          <li>한국식 나이와 만 나이의 차이: 최대 2살까지 차이 가능</li>
+          <li>
+            2월 29일 생은 4년에 한 번 생일 — 법적으로는 2월 28일 또는 3월 1일
+            적용
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/age-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 나이 계산기
+          </Link>
+          로 생년월일을 입력하면 만 나이·날짜 수·다음 생일까지 남은 일수를
+          확인할 수 있습니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "sleep-optimization",
+    title: "잠 못 자는 현대인을 위한 수면 최적화 완벽 가이드",
+    description:
+      "수면 부채, 수면 사이클, 최적 취침 시간까지. 과학이 알려주는 수면의 질을 높이는 방법.",
+    date: "2026-05-01",
+    tags: ["수면", "건강", "생산성", "수면사이클"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          수면 부족은 단순한 피로가 아닙니다. 하루 6시간 수면이 2주 지속되면
+          인지 능력이{" "}
+          <strong className="text-white">24시간 수면 박탈과 동등한 수준</strong>
+          으로 떨어집니다 (펜실베이니아 대학 연구).
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          수면 사이클 이해하기
+        </h2>
+        <p>
+          수면은 90분 주기로 반복됩니다. 4~5사이클(6~7.5시간)이 이상적. 알람은
+          사이클이 끝나는 시점에 맞추세요.
+        </p>
+        <div className="bg-white/5 p-4 rounded-lg font-mono text-sm text-gray-300">
+          취침 11시 → 기상 6:30 (7.5시간 = 5 사이클) ✓<br />
+          취침 11시 → 기상 6:00 (7시간 = 90분×4+30분) ✗ 중간에 깸
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          수면 질을 높이는 5가지
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["일정한 기상 시간", "주말도 동일하게 — 수면 리듬의 핵심"],
+            ["취침 1시간 전 화면 차단", "블루라이트가 멜라토닌 분비 억제"],
+            ["침실 온도 18~20°C", "체온 하강이 수면 유도"],
+            [
+              "카페인 오후 2시 이후 금지",
+              "반감기 6시간 — 오후 2시 커피 = 자정에 절반이 남아있음",
+            ],
+            ["수면 전 루틴", "뇌에 '이제 잘 시간' 신호 보내기"],
+          ].map(([t, d], i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-start bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-neon-primary font-bold text-sm flex-shrink-0">
+                ✓
+              </span>
+              <div>
+                <p className="text-sm text-white font-bold">{t}</p>
+                <p className="text-xs text-gray-400 mt-0.5">{d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          취침·기상 시간 계산은{" "}
+          <Link
+            to="/tools/time-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 시간 계산기
+          </Link>
+          로 90분 단위로 역산해보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "color-psychology",
+    title: "색상 심리학: 색이 감정과 행동에 미치는 영향",
+    description:
+      "빨간색이 식욕을 자극하고 파란색이 집중력을 높이는 이유. 색상 심리학을 디자인·마케팅에 활용하는 방법.",
+    date: "2026-05-02",
+    tags: ["색상심리학", "디자인", "마케팅", "색"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          맥도날드는 왜 빨간색·노란색인가? 스타벅스는 왜 초록색인가? 색상은{" "}
+          <strong className="text-white">
+            무의식적으로 감정·행동·구매 결정
+          </strong>
+          에 영향을 줍니다.{" "}
+          <Link
+            to="/tools/color-converter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 색상 변환기
+          </Link>
+          로 원하는 색상 코드를 확인하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          주요 색상과 심리적 효과
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "🔴 빨강",
+              "긴박감·식욕 자극·에너지. 맥도날드·유튜브·넷플릭스. CTA 버튼에 효과적",
+            ],
+            [
+              "🔵 파랑",
+              "신뢰·안정·집중. 삼성·페이스북·PayPal. 금융·IT 브랜드에 선호",
+            ],
+            ["🟢 초록", "자연·건강·성장. 스타벅스·홀푸즈. 친환경·웰빙 브랜드"],
+            [
+              "🟡 노랑",
+              "낙관·주의·에너지. 카카오·IKEA. 주의 집중, 과도하면 불안 유발",
+            ],
+            [
+              "🟣 보라",
+              "고급·창의·신비. 할리데이비슨·캐드버리. 럭셔리·창작 분야",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-white mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/color-converter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 색상 변환기
+          </Link>
+          로 HEX·RGB·HSL을 자유롭게 변환하고{" "}
+          <Link
+            to="/tools/css-shadow-generator"
+            className="text-neon-primary hover:underline"
+          >
+            CSS 그림자 생성기
+          </Link>
+          로 원하는 색의 그림자를 만들어보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "exercise-brain",
+    title: "운동이 뇌를 바꾼다: 신체 활동과 인지 기능의 관계",
+    description:
+      "30분 걷기가 항우울제보다 효과적일 수 있습니다. 운동이 뇌에 미치는 과학적 효과와 실천 가이드.",
+    date: "2026-05-03",
+    tags: ["운동", "뇌과학", "인지기능", "정신건강"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          하버드 의대 존 레이티 교수는 운동을{" "}
+          <strong className="text-white">"뇌에 주는 최고의 선물"</strong>이라고
+          표현합니다. 신체 활동은 BDNF(뇌유래신경영양인자)를 증가시켜 새로운
+          뉴런 생성을 촉진합니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          운동이 뇌에 미치는 효과
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "기억력 향상",
+              "해마 부피 증가 — 운동하는 노인은 비운동 노인보다 기억력 40% 우수",
+            ],
+            [
+              "집중력 강화",
+              "운동 후 2~3시간 도파민·노르에피네프린 상승 — 학습·업무 골든타임",
+            ],
+            [
+              "우울·불안 감소",
+              "30분 유산소 운동이 항우울제와 동등한 효과 (Duke 대학 연구)",
+            ],
+            ["창의력 향상", "걷기 중 발산적 사고 81% 증가 (스탠퍼드 연구)"],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          최소 유효 용량
+        </h2>
+        <p>
+          주 3회, 30분 중강도 유산소(빠른 걷기, 자전거)만으로도 인지 기능 향상
+          효과가 나타납니다. 헬스장이 필요 없습니다.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          오늘 운동할지 쉴지 고민이라면{" "}
+          <Link
+            to="/tools/yes-no-oracle"
+            className="text-neon-primary hover:underline"
+          >
+            예스/노 신탁기
+          </Link>
+          에 물어보세요 — 단, 운동 쪽이 나왔을 때 안도감이 든다면 그게 답입니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "lorem-ipsum-history",
+    title: "Lorem Ipsum의 비밀: 500년간 디자이너가 써온 텍스트의 정체",
+    description:
+      "Lorem ipsum dolor sit amet... 이 이상한 라틴어의 출처, 키케로와의 연결고리, 현대 디자인에서 쓰이는 이유.",
+    date: "2026-05-04",
+    tags: ["LoremIpsum", "디자인", "역사", "타이포그래피"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          <em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit..."</em>{" "}
+          — 이 텍스트는{" "}
+          <strong className="text-white">
+            기원전 45년 키케로가 쓴 라틴어 철학서
+          </strong>
+          에서 변형된 것입니다. 무려 2,000년의 역사를 가지고 있습니다.{" "}
+          <Link
+            to="/tools/lorem-ipsum"
+            className="text-neon-primary hover:underline"
+          >
+            무료 Lorem Ipsum 생성기
+          </Link>
+          로 원하는 분량을 생성하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          Lorem Ipsum의 역사
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "기원전 45년",
+              "키케로의 『최고선악론(De Finibus Bonorum et Malorum)』 Section 1.10.32에 원문 존재",
+            ],
+            [
+              "1500년대",
+              "인쇄업자들이 활자 샘플용으로 키케로 텍스트를 뒤섞어 사용 시작",
+            ],
+            [
+              "1960년대",
+              "Letraset 회사가 프레스 타입 시트에 Lorem Ipsum 사용하며 디자인 업계 표준화",
+            ],
+            [
+              "1980년대~현재",
+              "PageMaker, InDesign, Figma 등 모든 디자인 도구에 기본 내장",
+            ],
+          ].map(([t, d], i) => (
+            <div
+              key={i}
+              className="flex gap-4 items-start bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-neon-primary font-bold font-mono text-sm min-w-[80px]">
+                {t}
+              </span>
+              <span className="text-sm text-gray-400">{d}</span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          왜 의미 없는 텍스트를 쓰는가?
+        </h2>
+        <p>
+          실제 텍스트를 넣으면 내용에 집중하게 되어{" "}
+          <strong>레이아웃·폰트·여백</strong>을 객관적으로 평가하기 어렵습니다.
+          의미 없는 라틴어는 시각 요소에만 집중하게 만드는 디자인 도구입니다.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/lorem-ipsum"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow Lorem Ipsum 생성기
+          </Link>
+          로 단락 수를 조절해 원하는 분량의 더미 텍스트를 즉시 생성하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "perfectionism-trap",
+    title: "완벽주의의 덫: 80점이 100점보다 나을 때",
+    description:
+      "완벽주의는 높은 기준이 아니라 실행을 막는 두려움입니다. 완벽주의를 극복하고 실행력을 높이는 방법.",
+    date: "2026-05-05",
+    tags: ["완벽주의", "심리학", "실행력", "생산성"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          완벽주의자는 높은 기준을 가진 사람이 아닙니다.{" "}
+          <strong className="text-white">
+            완벽하지 않을 것이 두려워 시작하지 못하는 사람
+          </strong>
+          입니다. 연구에 따르면 완벽주의자는 목표 달성률이 오히려 낮습니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          완벽주의의 실제 비용
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>시작 지연</strong> — 조건이 갖춰질 때를 기다리다 영원히 시작
+            못 함
+          </li>
+          <li>
+            <strong>과도한 수정</strong> — 이미 충분한 것을 계속 고침 (수확체감)
+          </li>
+          <li>
+            <strong>번아웃</strong> — 100%가 아니면 실패로 인식하는 이분법적
+            사고
+          </li>
+          <li>
+            <strong>기회 상실</strong> — 빠른 실행과 피드백이 더 좋은 결과를 냄
+          </li>
+        </ul>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          "Done is better than perfect"
+        </h2>
+        <p>
+          페이스북(현 Meta)의 초기 슬로건입니다. 출시된 제품은 개선할 수 있지만,
+          출시되지 않은 제품은 존재하지 않습니다.{" "}
+          <strong>80점짜리 완성본</strong>이 100점짜리 미완성보다 항상 낫습니다.
+        </p>
+        <div className="bg-white/5 p-4 rounded-lg border border-neon-primary/20">
+          <p className="text-neon-primary font-bold mb-2">
+            실천 방법: 타임박스 완벽주의
+          </p>
+          <p className="text-sm text-gray-400">
+            작업에 시간 제한을 설정하세요. "이 글은 30분 안에 쓴다" — 타이머가
+            울리면 그 상태로 제출합니다. 완벽함을 목표가 아닌 방향으로만 두세요.
+          </p>
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          지금 시작하지 못하고 있다면{" "}
+          <Link to="/" className="text-neon-primary hover:underline">
+            SpinFlow 룰렛
+          </Link>
+          으로 첫 번째 행동을 뽑아 그냥 시작해보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "css-shadow-design",
+    title: "CSS box-shadow 마스터하기: 디자이너처럼 그림자 만들기",
+    description:
+      "단순한 검은 그림자에서 뉴모피즘, 글로우 효과까지. CSS box-shadow의 모든 파라미터와 실전 활용법.",
+    date: "2026-05-06",
+    tags: ["CSS", "box-shadow", "디자인", "프론트엔드"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          CSS box-shadow 하나로 평범한 UI가 입체적으로 바뀝니다.{" "}
+          <Link
+            to="/tools/css-shadow-generator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 CSS 그림자 생성기
+          </Link>
+          로 슬라이더를 조작하며 실시간으로 확인해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          box-shadow 파라미터 해설
+        </h2>
+        <div className="bg-white/5 p-4 rounded-lg font-mono text-sm mb-4">
+          <span className="text-blue-400">box-shadow</span>:{" "}
+          <span className="text-yellow-400">X Y</span>{" "}
+          <span className="text-green-400">blur</span>{" "}
+          <span className="text-purple-400">spread</span>{" "}
+          <span className="text-red-400">color</span>;
+        </div>
+        <div className="space-y-2">
+          {[
+            [
+              "X / Y (오프셋)",
+              "그림자의 수평·수직 위치. 양수=오른쪽·아래, 음수=왼쪽·위",
+            ],
+            [
+              "blur (흐림)",
+              "값이 클수록 부드럽고 퍼진 그림자. 0이면 선명한 그림자",
+            ],
+            ["spread (확산)", "그림자 크기 조절. 양수=크게, 음수=작게"],
+            ["color", "rgba() 사용 권장 — 투명도로 자연스러운 그림자"],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-3 rounded-lg">
+              <p className="font-bold text-neon-primary text-sm mb-1">{t}</p>
+              <p className="text-xs text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          실전 그림자 레시피
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["자연스러운 카드", "0 4px 6px rgba(0,0,0,0.1)"],
+            ["강한 드롭섀도", "0 10px 25px rgba(0,0,0,0.3)"],
+            ["글로우 효과", "0 0 20px rgba(34,211,238,0.5)"],
+            ["뉴모피즘", "6px 6px 12px #b8b9be, -6px -6px 12px #fff"],
+          ].map(([t, v], i) => (
+            <div
+              key={i}
+              className="flex justify-between items-center bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-sm text-gray-300">{t}</span>
+              <code className="text-xs text-neon-primary font-mono">{v}</code>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/css-shadow-generator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow CSS 그림자 생성기
+          </Link>
+          로 슬라이더를 조절하면 CSS 코드가 자동 생성됩니다. 복사 버튼 한 번으로
+          바로 적용하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "gratitude-journal",
+    title: "감사 일기의 효과: 5분으로 바꾸는 하루의 질",
+    description:
+      "감사 일기가 우울감 감소, 수면 개선, 관계 향상에 미치는 과학적 효과와 올바른 작성법.",
+    date: "2026-05-07",
+    tags: ["감사일기", "심리학", "긍정심리학", "습관"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          UC 데이비스 심리학자 로버트 에먼스의 연구: 감사 일기를 쓴 그룹은
+          그렇지 않은 그룹보다{" "}
+          <strong className="text-white">
+            25% 더 행복했고, 수면이 개선되었으며, 운동을 더 많이 했습니다
+          </strong>
+          .
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          감사 일기가 효과적인 이유
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "주의 편향 교정",
+              "인간 뇌는 부정적 사건을 3~5배 강하게 기억 (부정 편향). 감사 일기는 긍정 경험에 의도적으로 주의를 돌림",
+            ],
+            [
+              "도파민 루프",
+              "감사함을 느끼면 도파민 분비 → 더 많은 감사거리를 찾는 긍정적 피드백 루프 형성",
+            ],
+            [
+              "관계 개선",
+              "타인의 기여를 인식하는 습관이 생겨 관계 만족도 향상",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          올바른 작성법
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>구체적으로</strong> — "좋은 하루였다" ✗ → "동료가 커피를
+            사줬고 그 따뜻함이 기억에 남는다" ✓
+          </li>
+          <li>
+            <strong>왜 감사한지</strong> 함께 적기 — 이유가 있어야 감정이
+            활성화됨
+          </li>
+          <li>
+            <strong>매일보다 주 3회</strong>가 더 효과적 — 매일 쓰면 형식적이
+            되기 쉬움
+          </li>
+          <li>
+            <strong>취침 전</strong>에 쓰면 수면 개선 효과 극대화
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          감사 일기를{" "}
+          <Link
+            to="/tools/markdown-previewer"
+            className="text-neon-primary hover:underline"
+          >
+            마크다운 에디터
+          </Link>
+          에 작성하거나{" "}
+          <Link
+            to="/tools/text-counter"
+            className="text-neon-primary hover:underline"
+          >
+            텍스트 카운터
+          </Link>
+          로 꾸준히 기록해보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "json-api-explained",
+    title: "API와 JSON: 앱들이 서로 대화하는 방법",
+    description:
+      "카카오 로그인, 날씨 앱, 지도 서비스... 모두 API와 JSON으로 작동합니다. 비개발자도 이해하는 완벽 가이드.",
+    date: "2026-05-08",
+    tags: ["API", "JSON", "웹개발", "비개발자"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          날씨 앱은 어떻게 실시간 날씨를 알까요? 카카오 로그인은 어떻게
+          작동할까요? 모두{" "}
+          <strong className="text-white">
+            API(Application Programming Interface)
+          </strong>
+          와 <strong className="text-white">JSON</strong> 덕분입니다.{" "}
+          <Link
+            to="/tools/json-formatter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 JSON 포매터
+          </Link>
+          로 직접 확인해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          API를 식당으로 이해하기
+        </h2>
+        <div className="bg-white/5 p-4 rounded-lg">
+          <p className="text-sm text-gray-300">
+            손님(앱) →{" "}
+            <span className="text-neon-primary font-bold">웨이터(API)</span> →
+            주방(서버/DB)
+            <br />
+            <br />
+            손님이 메뉴(요청)를 웨이터에게 전달하면 주방에서 음식(데이터)을
+            만들어 웨이터가 가져다 줍니다. 손님은 주방 안을 볼 필요가 없습니다.
+          </p>
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">JSON이란?</h2>
+        <p>
+          API가 데이터를 주고받는 <strong>형식(언어)</strong>입니다. 사람도 읽기
+          쉽고 컴퓨터도 파싱하기 쉬운 구조입니다.
+        </p>
+        <div className="bg-white/5 p-4 rounded-lg font-mono text-sm text-gray-300">
+          {`{`}
+          <br />
+          &nbsp;&nbsp;<span className="text-blue-400">"name"</span>:{" "}
+          <span className="text-green-400">"홍길동"</span>,<br />
+          &nbsp;&nbsp;<span className="text-blue-400">"age"</span>:{" "}
+          <span className="text-yellow-400">30</span>,<br />
+          &nbsp;&nbsp;<span className="text-blue-400">"skills"</span>: [
+          <span className="text-green-400">"React"</span>,{" "}
+          <span className="text-green-400">"Python"</span>]<br />
+          {`}`}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          일상에서 API가 쓰이는 곳
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            "🌤️ 날씨 앱 — 기상청 API",
+            "🗺️ 지도 — Google Maps API",
+            "💳 카카오/네이버 로그인 — OAuth API",
+            "💸 카드 결제 — PG사 API",
+            "📱 SNS 공유 — Facebook/Twitter API",
+            "🚀 배달 앱 — 지도+결제 API 복합",
+          ].map((item, i) => (
+            <div key={i} className="bg-white/5 p-3 rounded-lg text-sm">
+              {item}
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          API 응답 JSON이 한 줄로 압축되어 있다면{" "}
+          <Link
+            to="/tools/json-formatter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow JSON 포매터
+          </Link>
+          로 보기 좋게 펼쳐보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "success-habits",
+    title: "성공한 사람들의 공통 습관 5가지",
+    description:
+      "빌 게이츠, 워런 버핏, 오프라 윈프리... 그들의 공통점은 재능이 아닌 습관이었습니다.",
+    date: "2026-05-09",
+    tags: ["습관", "성공", "자기계발", "루틴"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          습관 연구의 권위자 찰스 두히그는 "성공은 재능의 산물이 아니라{" "}
+          <strong className="text-white">올바른 습관을 지속한 결과</strong>"라고
+          말합니다. 성공한 사람들의 공통 패턴을 분석했습니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          공통 습관 5가지
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "📚 매일 독서",
+              "워런 버핏은 하루 5~6시간 독서. 빌 게이츠는 연간 50권. '독서는 복리로 돌아온다'",
+            ],
+            [
+              "✍️ 글쓰기·저널링",
+              "오프라 윈프리, 리처드 브랜슨 모두 매일 노트를 씁니다. 생각을 정제하고 패턴을 발견하는 훈련",
+            ],
+            [
+              "🏃 규칙적인 운동",
+              "팀 쿡(새벽 4시 체육관), 버락 오바마(아침 운동 45분). 에너지 관리의 기반",
+            ],
+            [
+              "🎯 명확한 우선순위",
+              "하루를 시작하기 전 '오늘 가장 중요한 1가지'를 정함 — 분주함과 생산성은 다름",
+            ],
+            [
+              "🙏 명상·반성 시간",
+              "아리아나 허핑턴, 레이 달리오. 분기별·일별 반성을 통해 전략을 수정",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          5가지 중 오늘 하나만 고른다면? 어렵다면{" "}
+          <Link to="/" className="text-neon-primary hover:underline">
+            SpinFlow 룰렛
+          </Link>
+          에 5개를 입력하고 돌려보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "dday-life-management",
+    title: "D-Day 카운터로 인생 관리하기: 중요한 날을 카운트다운으로",
+    description:
+      "시험, 프로젝트 마감, 여행, 기념일... D-Day 카운터가 미루기를 방지하고 동기를 높이는 이유.",
+    date: "2026-05-10",
+    tags: ["D-Day", "시간관리", "목표", "마감"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          "시험이 100일 남았어"보다{" "}
+          <strong className="text-white">"오늘이 D-100"</strong>이라고 보는 순간
+          긴장감이 달라집니다.{" "}
+          <Link
+            to="/tools/d-day-counter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 D-Day 카운터
+          </Link>
+          로 중요한 날을 관리하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          D-Day 카운터가 효과적인 이유
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "시각적 긴박감",
+              "숫자가 줄어드는 것이 뇌에 실질적인 압박감을 주어 미루기 방지",
+            ],
+            [
+              "역산 계획",
+              "마감일로부터 역산해 오늘 해야 할 양을 계산 가능 — '100일 남았으니 하루 10페이지'",
+            ],
+            [
+              "기대감 증폭",
+              "여행·결혼·생일 등 기쁜 이벤트의 D-Day는 행복감과 기대감을 높임",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          D-Day 관리 추천 항목
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            "📝 자격증·시험 날짜",
+            "✈️ 해외여행 출발일",
+            "💼 프로젝트 마감일",
+            "💍 결혼기념일",
+            "🎂 가족 생일",
+            "🎯 개인 목표 달성일",
+          ].map((item, i) => (
+            <div key={i} className="bg-white/5 p-3 rounded-lg text-sm">
+              {item}
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/d-day-counter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow D-Day 카운터
+          </Link>
+          에서 날짜를 입력하면 남은 일수가 즉시 계산됩니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "boundaries-relationship",
+    title: "인간관계에서 경계선(Boundary) 긋기의 중요성",
+    description:
+      "거절 못 하는 사람이 더 힘든 이유. 건강한 경계선이 관계를 망치는 게 아니라 오히려 깊게 만드는 이유.",
+    date: "2026-05-11",
+    tags: ["인간관계", "심리학", "경계선", "자존감"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          경계선(Boundary)이란{" "}
+          <strong className="text-white">
+            내가 수용 가능한 것과 그렇지 않은 것의 한계
+          </strong>
+          를 명확히 하는 것입니다. 경계선은 이기적인 게 아닙니다 — 지속 가능한
+          관계의 기반입니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          경계선 없는 사람의 패턴
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>NO라고 말하지 못해 과부하 → 번아웃</li>
+          <li>속으로는 화가 나지만 겉으로는 괜찮은 척 → 관계에 분노 축적</li>
+          <li>타인의 문제를 자신의 문제로 끌어안음 → 과도한 감정 소모</li>
+          <li>자신의 필요보다 타인의 필요를 항상 우선 → 자존감 저하</li>
+        </ul>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          건강한 경계선 만들기
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "명확하게 표현하기",
+              '"미안한데..."가 아닌 "나는 ~할 수 없어" 직접적 표현',
+            ],
+            [
+              "일관성 유지하기",
+              "한 번 정한 경계는 지키기 — 예외를 두면 경계가 흐려짐",
+            ],
+            [
+              "죄책감 구분하기",
+              "경계를 지키는 것에 드는 죄책감은 건강한 신호가 아님 — 과거 패턴의 반응",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          어떤 부탁을 거절할지 고민이라면{" "}
+          <Link
+            to="/tools/yes-no-oracle"
+            className="text-neon-primary hover:underline"
+          >
+            예스/노 신탁기
+          </Link>
+          에 물어보세요. 결과에 대한 감정이 당신의 진짜 답입니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "text-analysis-basics",
+    title: "텍스트 분석의 기초: 글자수·단어수·문장수가 중요한 이유",
+    description:
+      "SNS 글자 제한, 독해 수준 측정, SEO 콘텐츠 최적화까지. 텍스트 분석이 필요한 모든 상황을 알아봅니다.",
+    date: "2026-05-12",
+    tags: ["텍스트분석", "글자수", "SEO", "글쓰기"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          트위터는 280자, 인스타그램 바이오는 150자, 구글 메타 디스크립션은
+          160자. <strong className="text-white">글자 수 제한</strong>은 생각보다
+          많은 곳에서 중요합니다.{" "}
+          <Link
+            to="/tools/text-counter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 텍스트 분석기
+          </Link>
+          로 즉시 확인하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          플랫폼별 글자 제한
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["트위터/X", "280자 (1회 트윗)"],
+            ["인스타그램 캡션", "2,200자 (단, 더보기 기준 125자)"],
+            ["인스타그램 바이오", "150자"],
+            ["구글 메타 타이틀", "60자 이내"],
+            ["구글 메타 설명", "160자 이내"],
+            ["카카오톡 프로필", "60자"],
+          ].map(([platform, limit], i) => (
+            <div
+              key={i}
+              className="flex justify-between items-center bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-sm text-gray-300">{platform}</span>
+              <span className="font-bold text-neon-primary text-sm">
+                {limit}
+              </span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          독해 수준과 문장 길이
+        </h2>
+        <p>
+          한 문장의 권장 길이는 <strong>15~20 단어</strong>입니다. 문장이 길수록
+          독자가 이해하는 데 더 많은 인지 에너지를 소모합니다. 비즈니스
+          글쓰기에서는 짧고 명확한 문장이 신뢰도를 높입니다.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/text-counter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 텍스트 분석기
+          </Link>
+          로 글자수·단어수·문장수·단락수를 한 번에 확인하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "focus-thieves",
+    title: "집중력 도둑 TOP 5와 차단 방법",
+    description:
+      "SNS 알림, 오픈 오피스, 멀티탭... 우리의 집중력을 훔치는 주범들과 환경 설계로 차단하는 방법.",
+    date: "2026-05-13",
+    tags: ["집중력", "생산성", "방해요소", "딥워크"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          칼 뉴포트의 『딥 워크』에 따르면{" "}
+          <strong className="text-white">
+            진짜 집중 상태(Deep Work)에 진입하는 데 평균 23분
+          </strong>
+          이 걸립니다. 그리고 방해 요소 하나가 이 사이클을 리셋시킵니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          집중력 도둑 TOP 5
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "🔔 스마트폰 알림",
+              "알림 확인 충동 자체가 집중을 끊음. 해결: 집중 시간엔 무음 + 화면 뒤집기",
+              "red",
+            ],
+            [
+              "💬 메신저 (슬랙·카카오)",
+              "즉각 응답 문화가 집중 업무 불가능하게 만듦. 해결: 응답 시간대 지정",
+              "orange",
+            ],
+            [
+              "🌐 브라우저 탭 과다",
+              "'나중에 볼게'로 열어둔 탭들이 인지 부하 유발. 해결: 탭 30개→5개 이하",
+              "yellow",
+            ],
+            [
+              "🏢 오픈 오피스",
+              "동료 대화 소음이 집중을 방해. 해결: 노이즈 캔슬링 헤드폰 신호 사용",
+              "blue",
+            ],
+            [
+              "📋 미결 작업 목록",
+              "완료되지 않은 일들이 머릿속에 머물며 자원 소모. 해결: 모든 할 일 외부화(메모)",
+              "purple",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-white mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          집중해야 할 일이 여러 개라면{" "}
+          <Link to="/" className="text-neon-primary hover:underline">
+            SpinFlow 룰렛
+          </Link>
+          으로 하나만 뽑아 그것만 집중하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "work-hours-calculator",
+    title: "근무시간 계산기 활용법: 야근 수당부터 프리랜서 정산까지",
+    description:
+      "정확한 근무시간 계산이 필요한 모든 상황. 야근 수당, 프리랜서 시급 정산, 프로젝트 일정 관리 방법.",
+    date: "2026-05-14",
+    tags: ["근무시간", "시간계산", "야근수당", "프리랜서"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          야근 수당 계산, 프리랜서 시급 정산, 프로젝트 소요 시간 추적... 정확한
+          시간 계산이 필요한 순간에{" "}
+          <Link
+            to="/tools/time-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 시간 계산기
+          </Link>
+          를 활용하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          야근 수당 계산 방법
+        </h2>
+        <div className="bg-white/5 p-4 rounded-lg">
+          <p className="text-sm text-gray-300 mb-2">근로기준법 기준 (한국)</p>
+          <ul className="space-y-1 text-sm text-gray-400">
+            <li>
+              • 연장근무 (주 40시간 초과): 통상임금의{" "}
+              <strong className="text-white">1.5배</strong>
+            </li>
+            <li>
+              • 야간근무 (22시~06시): 통상임금의{" "}
+              <strong className="text-white">1.5배</strong>
+            </li>
+            <li>
+              • 휴일근무: 통상임금의{" "}
+              <strong className="text-white">1.5배</strong> (8시간 초과 시 2배)
+            </li>
+            <li>• 중복 적용 가능 — 야간+연장 = 2배</li>
+          </ul>
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          프리랜서 시급 정산 공식
+        </h2>
+        <div className="bg-white/5 p-4 rounded-lg font-mono text-sm text-gray-300">
+          정산금액 = 시급 × 총 근무시간
+          <br />총 근무시간 = Σ(종료 시간 - 시작 시간 - 휴식)
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          시간 계산이 필요한 상황
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            "💼 야근 수당 계산",
+            "🧾 프리랜서 정산",
+            "✈️ 비행 시간 계산",
+            "⏰ 회의 총 소요시간",
+            "📅 프로젝트 일정 관리",
+            "🍳 요리 타이머 역산",
+          ].map((item, i) => (
+            <div key={i} className="bg-white/5 p-3 rounded-lg text-sm">
+              {item}
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/time-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 시간 계산기
+          </Link>
+          로 시작·종료 시간을 입력하면 경과 시간을 즉시 계산합니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "note-taking-art",
+    title: "메모의 기술: 두 번째 뇌 만들기",
+    description:
+      "좋은 아이디어는 기억에 의존하면 안 됩니다. 코넬 노트, 제텔카스텐, 디지털 노트 시스템 완벽 가이드.",
+    date: "2026-05-15",
+    tags: ["메모", "노트", "생산성", "지식관리"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          다빈치, 다윈, 에디슨의 공통점은 모두{" "}
+          <strong className="text-white">집요한 메모광</strong>이었다는
+          것입니다. 뛰어난 기억력이 아니라 뛰어난 메모 시스템이 그들의 창의성을
+          만들었습니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          대표적인 메모 시스템 3가지
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "코넬 노트법",
+              "페이지를 3구역으로 분할: 핵심 노트(오른쪽) / 질문·키워드(왼쪽) / 요약(하단). 학습·강의 메모에 최적",
+            ],
+            [
+              "제텔카스텐(Zettelkasten)",
+              "각 아이디어를 독립 카드로 작성 후 연결고리로 이음. Notion·Obsidian으로 디지털 구현 가능",
+            ],
+            [
+              "GTD 캡처 시스템",
+              "머릿속 모든 것을 즉시 외부화. 스마트폰 메모앱에 생각나는 즉시 던져 넣고 나중에 정리",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          좋은 메모의 3원칙
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>즉시 기록</strong> — "나중에 기억하겠지"는 없다. 생각난 순간
+            메모
+          </li>
+          <li>
+            <strong>자신의 언어로</strong> — 복사·붙여넣기 금지. 이해한 것만
+            기록
+          </li>
+          <li>
+            <strong>연결하기</strong> — 새 메모는 기존 메모와 어떻게 연결되는지
+            표시
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          빠른 텍스트 메모는{" "}
+          <Link
+            to="/tools/text-counter"
+            className="text-neon-primary hover:underline"
+          >
+            텍스트 도구
+          </Link>
+          에, 구조화된 문서는{" "}
+          <Link
+            to="/tools/markdown-previewer"
+            className="text-neon-primary hover:underline"
+          >
+            마크다운 에디터
+          </Link>
+          에 작성해보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "dice-probability",
+    title: "주사위와 확률: 보드게임 뒤에 숨겨진 수학",
+    description:
+      "주사위 2개를 굴렸을 때 7이 가장 많이 나오는 이유, 크리티컬 확률 계산, 보드게임 전략에 확률을 활용하는 법.",
+    date: "2026-05-16",
+    tags: ["주사위", "확률", "수학", "보드게임"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1611996575749-79a3a250f948?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          주사위 2개를 굴리면 합이{" "}
+          <strong className="text-white">
+            7이 나올 확률이 가장 높습니다(6/36 = 16.7%)
+          </strong>
+          . 이것이 보드게임 '카탄'이 7을 도둑 발동 숫자로 설정한 이유입니다.{" "}
+          <Link
+            to="/tools/dice-roller"
+            className="text-neon-primary hover:underline"
+          >
+            무료 주사위 굴리기
+          </Link>
+          로 직접 확인해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          주사위 2개 합 확률 분포
+        </h2>
+        <div className="space-y-1">
+          {[
+            ["2", "1/36", "2.8%"],
+            ["3", "2/36", "5.6%"],
+            ["4", "3/36", "8.3%"],
+            ["5", "4/36", "11.1%"],
+            ["6", "5/36", "13.9%"],
+            ["7", "6/36", "16.7% ← 최고"],
+            ["8", "5/36", "13.9%"],
+            ["9", "4/36", "11.1%"],
+            ["10", "3/36", "8.3%"],
+            ["11", "2/36", "5.6%"],
+            ["12", "1/36", "2.8%"],
+          ].map(([sum, frac, pct], i) => (
+            <div key={i} className="flex gap-3 items-center">
+              <span className="text-neon-primary font-bold font-mono w-6 text-sm">
+                {sum}
+              </span>
+              <div className="flex-1 bg-white/5 rounded-full h-4 overflow-hidden">
+                <div
+                  className="bg-neon-primary/60 h-full rounded-full"
+                  style={{ width: pct.replace(" ← 최고", "") }}
+                />
+              </div>
+              <span className="text-xs text-gray-400 w-28">
+                {frac} ({pct})
+              </span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          RPG 크리티컬 확률
+        </h2>
+        <p>
+          D20(20면 주사위)에서 20 나올 확률: <strong>5%</strong>. 어드밴티지(2번
+          굴려 높은 값): <strong>9.75%</strong> — 약 2배 증가.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/dice-roller"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 주사위 굴리기
+          </Link>
+          로 D4·D6·D8·D10·D12·D20 모두 온라인으로 굴려보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "five-second-rule",
+    title: "두려움을 행동으로 전환하는 5초의 법칙",
+    description:
+      "멜 로빈스의 5초 법칙: 하고 싶은 것이 생기면 5초 안에 시작하지 않으면 뇌가 방해합니다. 과학적 근거와 실천법.",
+    date: "2026-05-17",
+    tags: ["행동력", "습관", "동기부여", "심리학"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          멜 로빈스(Mel Robbins)의 발견:{" "}
+          <strong className="text-white">
+            행동 충동이 생긴 후 5초 안에 움직이지 않으면 뇌가 그 충동을 차단
+          </strong>
+          합니다. 5-4-3-2-1 카운트다운 후 즉시 행동하는 것이 핵심입니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">왜 5초인가?</h2>
+        <p>
+          인간의 뇌는 변화를 위협으로 인식합니다. 행동 충동이 생기면 전전두엽이
+          이유를 찾아 막으려 합니다. 5초 카운트다운은 이{" "}
+          <strong>인지적 방해</strong>가 개입하기 전에 신체를 먼저 움직이게 하는
+          전략입니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          5초 법칙 적용 상황
+        </h2>
+        <div className="space-y-3">
+          {[
+            ["운동 시작", "알람이 울릴 때 5-4-3-2-1 하고 이불을 걷어차기"],
+            ["어색한 대화 시작", "모임에서 말 걸고 싶을 때 5초 안에 첫 마디"],
+            [
+              "중요한 이메일 발송",
+              "완벽하게 쓰려다 미루는 이메일을 5초 후 전송",
+            ],
+            ["아이디어 기록", "떠오른 아이디어를 5초 안에 메모앱 열어 적기"],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          지금 무언가 해야 할 것이 있다면: 5 — 4 — 3 — 2 — 1 — 시작. 망설임이
+          느껴진다면{" "}
+          <Link
+            to="/tools/yes-no-oracle"
+            className="text-neon-primary hover:underline"
+          >
+            예스/노 신탁기
+          </Link>
+          로 결정하고 5초 안에 움직이세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "url-shortener-tech",
+    title: "URL 단축기의 원리: 짧은 링크 뒤에 숨겨진 기술",
+    description:
+      "bit.ly, tinyurl... 긴 URL이 짧아지는 원리, 리다이렉트 동작 방식, 단축 URL의 보안 위험까지 알아봅니다.",
+    date: "2026-05-18",
+    tags: ["URL단축", "웹기술", "리다이렉트", "보안"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          <code className="bg-white/10 px-1 rounded">
+            https://bit.ly/3xKpQm2
+          </code>
+          를 클릭하면 어떻게 긴 원본 URL로 이동할까요? 그 뒤에는{" "}
+          <strong className="text-white">HTTP 리다이렉트</strong>와 데이터베이스
+          조회가 숨어있습니다. SpinFlow의{" "}
+          <Link to="/tools" className="text-neon-primary hover:underline">
+            도구 모음
+          </Link>
+          에서 URL 관련 도구를 확인해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          URL 단축의 동작 원리
+        </h2>
+        <div className="space-y-2">
+          {[
+            [
+              "1. 원본 URL 저장",
+              "서버 DB에 긴 URL과 짧은 코드(예: 3xKpQm2)를 매핑하여 저장",
+            ],
+            [
+              "2. 짧은 URL 생성",
+              "Base62(A-Z,a-z,0-9) 인코딩으로 고유한 짧은 코드 생성",
+            ],
+            [
+              "3. 리다이렉트 처리",
+              "사용자가 짧은 URL 접속 → 서버가 DB 조회 → 301/302 응답으로 원본 URL로 전송",
+            ],
+            [
+              "4. 통계 수집",
+              "클릭 수·지역·기기 정보를 기록하여 링크 분석 제공",
+            ],
+          ].map(([t, d], i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-start bg-white/5 p-3 rounded-lg"
+            >
+              <span className="bg-neon-primary text-black font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs flex-shrink-0">
+                {i + 1}
+              </span>
+              <div>
+                <p className="text-sm text-white font-bold">{t}</p>
+                <p className="text-xs text-gray-400 mt-0.5">{d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          단축 URL 보안 주의사항
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>목적지를 알 수 없어 피싱·악성코드 링크로 악용될 수 있음</li>
+          <li>
+            클릭 전 <strong>URL 미리보기 서비스</strong>(예: CheckShortURL.com)
+            활용
+          </li>
+          <li>메일·문자로 받은 단축 URL은 발신자 확인 후 클릭</li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          긴 URL을 다루거나 인코딩이 필요하다면{" "}
+          <Link
+            to="/tools/uri-encoder"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow URL 인코더
+          </Link>
+          를 활용하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "google-calendar-tips",
+    title: "구글 캘린더 100% 활용법: 시간을 설계하는 방법",
+    description:
+      "단순한 일정 관리를 넘어 타임 블로킹, 색상 코딩, 반복 일정, 팀 캘린더까지. 구글 캘린더 고수의 사용법.",
+    date: "2026-05-19",
+    tags: ["구글캘린더", "시간관리", "생산성", "타임블로킹"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          대부분은 구글 캘린더를 <strong>회의 알림 도구</strong>로만 씁니다.
+          하지만 타임 블로킹과 색상 코딩을 활용하면{" "}
+          <strong className="text-white">하루를 미리 설계하는 도구</strong>가
+          됩니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          고수의 구글 캘린더 사용법
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "🎨 색상 코딩",
+              "업무=파랑, 개인=초록, 건강=빨강, 학습=보라 — 한눈에 시간 배분 파악",
+            ],
+            [
+              "⏱️ 타임 블로킹",
+              "빈 시간을 '집중 작업', '이메일 확인', '점심' 등으로 채워 하루를 설계",
+            ],
+            [
+              "🔁 반복 일정",
+              "매주 월요일 주간 계획, 매일 오전 9시 루틴 점검 — 자동화로 일관성 유지",
+            ],
+            [
+              "🔒 집중 시간 차단",
+              "'Deep Work' 블록으로 회의 요청 거절 신호 — 동료가 볼 수 있게 설정",
+            ],
+            [
+              "📅 D-Day 캘린더",
+              "프로젝트 마감·시험일을 별도 캘린더로 분리해 진행 상황 시각화",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          일정 중 D-Day 관리는{" "}
+          <Link
+            to="/tools/d-day-counter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow D-Day 카운터
+          </Link>
+          와 병행하면 마감 긴장감을 유지할 수 있습니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "image-format-guide",
+    title: "이미지 포맷 완벽 가이드: JPG vs PNG vs WebP vs AVIF",
+    description:
+      "언제 JPG를 쓰고 언제 PNG를 써야 하나? 웹 성능을 위한 최신 이미지 포맷 선택 기준 완벽 정리.",
+    date: "2026-05-20",
+    tags: ["이미지포맷", "WebP", "PNG", "웹성능"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1561736778-92e52a7769ef?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          이미지 포맷 선택 하나가 웹페이지 로딩 속도를{" "}
+          <strong className="text-white">2~3배</strong> 차이나게 만들 수
+          있습니다. 상황별 최적 포맷을 알아봅니다.{" "}
+          <Link
+            to="/tools/css-shadow-generator"
+            className="text-neon-primary hover:underline"
+          >
+            CSS 도구
+          </Link>
+          와 함께 UI를 최적화해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          포맷별 특성 비교
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "JPG/JPEG",
+              "손실 압축. 파일 크기 작음. 투명도 없음.",
+              "사진, 배경이미지, 썸네일",
+            ],
+            [
+              "PNG",
+              "무손실 압축. 투명도(Alpha) 지원. 파일 크기 큼.",
+              "로고, 아이콘, 스크린샷, 투명 배경",
+            ],
+            [
+              "WebP",
+              "JPG 대비 25~34% 작은 크기. 투명도 지원. 구형 브라우저 미지원.",
+              "모던 웹 전반 — Chrome·Firefox·Safari 지원",
+            ],
+            [
+              "AVIF",
+              "WebP 대비 추가 50% 압축. 최신 브라우저만 지원.",
+              "고화질 이미지가 많은 사이트 (지원 브라우저 확인 필수)",
+            ],
+            [
+              "SVG",
+              "벡터 — 확대해도 깨지지 않음. 코드로 구성됨.",
+              "로고, 아이콘, 일러스트레이션",
+            ],
+          ].map(([format, desc, use], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary font-mono mb-1">
+                {format}
+              </p>
+              <p className="text-sm text-gray-300 mb-1">{desc}</p>
+              <p className="text-xs text-gray-500">📌 {use}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          2025년 기준 신규 웹 프로젝트는 <strong>WebP를 기본</strong>으로
+          사용하고, 구형 브라우저 대응이 필요하면 JPG 폴백을 설정하는 것이
+          권장됩니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "ai-era-skills",
+    title: "AI 시대에 살아남는 스킬: 대체되지 않는 능력 5가지",
+    description:
+      "ChatGPT가 할 수 없는 것은 무엇인가. AI 시대에 오히려 더 가치가 높아지는 인간 고유의 능력.",
+    date: "2026-05-21",
+    tags: ["AI", "미래직업", "스킬", "자기계발"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          AI가 코드를 짜고, 글을 쓰고, 이미지를 생성하는 시대. 그렇다면{" "}
+          <strong className="text-white">인간만이 할 수 있는 것</strong>은
+          무엇일까요? 역설적으로 AI의 발전이 특정 인간 능력의 가치를 높이고
+          있습니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          AI가 대체하기 어려운 5가지 능력
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "🤝 관계 구축·공감",
+              "신뢰는 인간 대 인간 상호작용에서 형성됩니다. AI는 흉내 낼 수 있어도 진짜 관계를 만들지 못함",
+            ],
+            [
+              "🎯 질문하는 능력",
+              "AI는 좋은 답을 내지만 좋은 질문은 인간이 해야 합니다. 프롬프트 엔지니어링이 핵심 스킬이 된 이유",
+            ],
+            [
+              "⚖️ 윤리적 판단",
+              "맥락·이해관계·가치관을 고려한 복잡한 도덕적 결정은 AI가 대리할 수 없음",
+            ],
+            [
+              "🔗 도메인 간 연결",
+              "서로 다른 분야의 지식을 창의적으로 연결하는 것은 여전히 인간의 강점",
+            ],
+            [
+              "🗣️ 설득과 영향력",
+              "청중의 감정·문화·맥락을 읽고 메시지를 조율하는 능력 — 리더십의 핵심",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          AI 도구를 활용해 반복 업무를 줄이고, 위의 5가지 능력에 시간을
+          투자하세요.{" "}
+          <Link to="/tools" className="text-neon-primary hover:underline">
+            SpinFlow 도구 모음
+          </Link>
+          도 단순 반복 작업을 줄이는 데 도움이 됩니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "text-formatting-situations",
+    title: "텍스트 변환이 필요한 의외의 상황 7가지",
+    description:
+      "대소문자 변환, 특수문자 제거, 줄바꿈 정리... 텍스트를 정제하고 변환해야 하는 실무 상황 완벽 정리.",
+    date: "2026-05-22",
+    tags: ["텍스트변환", "텍스트처리", "개발", "문서"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          엑셀에서 복사한 데이터, 이메일로 받은 텍스트... 형식이 뒤죽박죽일 때{" "}
+          <Link
+            to="/tools/case-converter"
+            className="text-neon-primary hover:underline"
+          >
+            케이스 변환기
+          </Link>
+          와{" "}
+          <Link
+            to="/tools/text-counter"
+            className="text-neon-primary hover:underline"
+          >
+            텍스트 분석기
+          </Link>
+          가 즉시 해결해줍니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          텍스트 변환이 필요한 7가지 상황
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "데이터베이스 컬럼명 변환",
+              "기획서의 '사용자 이름' → DB 컬럼 user_name(snake_case)으로 일괄 변환",
+            ],
+            [
+              "API 응답 필드명 변환",
+              "백엔드 snake_case → 프론트엔드 camelCase 변환 작업",
+            ],
+            ["제목 통일", "혼재된 대소문자 제목을 Title Case로 일괄 정리"],
+            [
+              "코드 복사 후 정리",
+              "PDF에서 복사한 코드의 이상한 따옴표·하이픈을 정상 문자로 교체",
+            ],
+            [
+              "엑셀 데이터 정제",
+              "전화번호·이메일 주소의 공백·특수문자 일괄 제거",
+            ],
+            [
+              "URL 슬러그 생성",
+              "'블로그 포스트 제목' → 'blog-post-title' kebab-case 변환",
+            ],
+            [
+              "다국어 키값 생성",
+              "'환영합니다' → 'welcomeMessage' 키값으로 변환",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1 text-sm">{t}</p>
+              <p className="text-xs text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/case-converter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 케이스 변환기
+          </Link>
+          로 camelCase·snake_case·PascalCase·UPPER_CASE 간 변환을 클릭 한 번으로
+          해결하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "digital-nomad-tools",
+    title: "디지털 노마드의 생산성 도구 모음: 어디서든 일하는 법",
+    description:
+      "카페·공유오피스·해외 어디서든 최고의 생산성을 유지하는 디지털 노마드들의 필수 도구와 루틴.",
+    date: "2026-05-23",
+    tags: ["디지털노마드", "생산성", "원격근무", "도구"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          장소에 상관없이 일하는 디지털 노마드에게{" "}
+          <strong className="text-white">도구 선택이 곧 생산성</strong>입니다.
+          설치 없이 브라우저에서 쓰는 도구가 이동 중 특히 유용합니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          카테고리별 필수 도구
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "📡 통신·협업",
+              "Slack, Notion, Loom (비동기 영상 메시지), Google Meet",
+            ],
+            [
+              "⏰ 시간대 관리",
+              "World Time Buddy — 다른 나라 팀원과 미팅 시간 조율 필수",
+            ],
+            [
+              "🔐 보안",
+              "1Password (비밀번호 관리) + VPN — 공개 와이파이에서 보안 필수",
+            ],
+            [
+              "💻 브라우저 도구",
+              "SpinFlow 같은 설치 불필요 온라인 도구 모음 북마크",
+            ],
+            ["💰 정산·인보이스", "Wave (무료 회계), Notion 인보이스 템플릿"],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          장소 이동 시 필수 체크리스트
+        </h2>
+        <ul className="list-disc pl-6 space-y-1 text-sm">
+          <li>모든 작업 클라우드 저장 확인</li>
+          <li>VPN 활성화</li>
+          <li>다음 미팅 시간대 확인 (현지 시간 기준)</li>
+          <li>배터리·충전기 상태 점검</li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link to="/tools" className="text-neon-primary hover:underline">
+            SpinFlow 도구 모음
+          </Link>
+          을 북마크해두세요. JSON 포맷, Base64, URL 인코딩, 색상 변환 등 24개
+          도구를 설치 없이 어디서든 사용할 수 있습니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "calculator-vs-excel",
+    title: "온라인 계산기 vs 엑셀: 언제 무엇을 써야 하나",
+    description:
+      "간단한 계산에 엑셀을 여는 것은 낭비입니다. 상황별로 온라인 계산기와 스프레드시트를 현명하게 선택하는 기준.",
+    date: "2026-05-24",
+    tags: ["계산기", "엑셀", "생산성", "도구선택"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          퍼센트 계산 하나에 엑셀을 열고, BMI 계산하려고 앱을 설치하는 건
+          과잉입니다.{" "}
+          <strong className="text-white">도구는 작업 복잡도에 맞게</strong>{" "}
+          선택해야 합니다.{" "}
+          <Link to="/tools" className="text-neon-primary hover:underline">
+            SpinFlow 도구 모음
+          </Link>
+          이 빠른 계산에 최적입니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">선택 기준</h2>
+        <div className="space-y-3">
+          {[
+            [
+              "온라인 계산기가 나은 경우",
+              [
+                "단일 계산 (BMI, 나이, 퍼센트)",
+                "빠른 단위 변환",
+                "형식 변환 (Base64, URL인코딩)",
+                "반복 불필요한 1회성 계산",
+              ],
+            ],
+            [
+              "엑셀/스프레드시트가 나은 경우",
+              [
+                "100개 이상 데이터 일괄 처리",
+                "결과를 공유·저장해야 할 때",
+                "차트·그래프가 필요할 때",
+                "복잡한 조건부 수식이 필요할 때",
+              ],
+            ],
+          ].map(([title, items], i) => (
+            <div
+              key={i}
+              className={`p-4 rounded-lg border ${i === 0 ? "bg-neon-primary/5 border-neon-primary/20" : "bg-white/5 border-white/10"}`}
+            >
+              <p
+                className={`font-bold mb-2 text-sm ${i === 0 ? "text-neon-primary" : "text-white"}`}
+              >
+                {title}
+              </p>
+              <ul className="space-y-1">
+                {(items as string[]).map((item, j) => (
+                  <li key={j} className="text-xs text-gray-400 flex gap-2">
+                    <span>•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          SpinFlow로 빠르게 해결할 수 있는 계산
+        </h2>
+        <div className="grid grid-cols-2 gap-2 text-sm">
+          {[
+            ["🧮 퍼센트 계산", "/tools/percentage-calculator"],
+            ["⚖️ BMI 계산", "/tools/bmi-calculator"],
+            ["📅 나이 계산", "/tools/age-calculator"],
+            ["⏱️ 시간 계산", "/tools/time-calculator"],
+            ["📐 단위 변환", "/tools/unit-converter"],
+            ["🎂 D-Day", "/tools/d-day-counter"],
+          ].map(([label, path], i) => (
+            <Link
+              key={i}
+              to={path}
+              className="bg-white/5 hover:bg-white/10 p-3 rounded-lg transition-colors block"
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          도구는 목적에 맞게 사용할 때 가장 강력합니다.{" "}
+          <Link to="/tools" className="text-neon-primary hover:underline">
+            SpinFlow 전체 도구 목록
+          </Link>
+          을 북마크하고 필요할 때마다 꺼내 쓰세요.
         </p>
       </div>
     ),
