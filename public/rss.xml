@@ -5,8 +5,96 @@
     <link>https://www.spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙 등 일상에 도움이 되는 다양한 콘텐츠를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 18 Mar 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://www.spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Diff 비교 도구 활용법: 코드·문서 변경점을 한눈에 파악</title>
+      <link>https://www.spinkorea.kr/blog/diff-checker-guide</link>
+      <description>두 텍스트나 코드의 차이점을 시각적으로 확인하는 Diff 도구. 코드 리뷰, 문서 편집, 설정 파일 비교에 활용하는 방법을 알려드립니다.</description>
+      <pubDate>Tue, 18 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/diff-checker-guide</guid>
+    </item>
+
+    <item>
+      <title>Base64 인코딩 완벽 가이드: 이미지 URL·API 인증에 쓰이는 이유</title>
+      <link>https://www.spinkorea.kr/blog/base64-guide</link>
+      <description>Base64 인코딩이 무엇인지, 왜 사용하는지, 이미지 Data URL·HTTP Basic Auth에서 어떻게 활용하는지 완벽하게 알아봅니다.</description>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/base64-guide</guid>
+    </item>
+
+    <item>
+      <title>CSS Box Shadow 완벽 가이드: 버튼·카드에 입체감 주는 법</title>
+      <link>https://www.spinkorea.kr/blog/css-shadow-guide</link>
+      <description>CSS box-shadow 속성으로 버튼, 카드, 모달에 입체감을 주는 방법. 무료 CSS 그림자 생성기로 코드 없이 시각적으로 조작하세요.</description>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/css-shadow-guide</guid>
+    </item>
+
+    <item>
+      <title>마크다운 완벽 가이드: 깃허브·블로그·노션에서 쓰는 기본 문법</title>
+      <link>https://www.spinkorea.kr/blog/markdown-guide</link>
+      <description>마크다운(Markdown) 기본 문법 10가지와 실전 활용법. 무료 마크다운 미리보기로 바로 연습하세요.</description>
+      <pubDate>Sun, 08 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/markdown-guide</guid>
+    </item>
+
+    <item>
+      <title>로렘 입숨 완벽 가이드: UI 디자이너·개발자 필수 더미 텍스트</title>
+      <link>https://www.spinkorea.kr/blog/lorem-ipsum-guide</link>
+      <description>로렘 입숨(Lorem Ipsum)이 무엇인지, 왜 사용하는지, 무료 생성기로 디자인 작업 속도를 높이는 방법을 알아봅니다.</description>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/lorem-ipsum-guide</guid>
+    </item>
+
+    <item>
+      <title>시간 계산기 완벽 가이드: 근무시간·포모도로·시간대 계산</title>
+      <link>https://www.spinkorea.kr/blog/time-calculator-guide</link>
+      <description>근무 시간 계산, 포모도로 타이머 설정, 도착 예정 시간까지. 시간 계산기로 시간 관리를 더 스마트하게 하는 방법을 알려드립니다.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/time-calculator-guide</guid>
+    </item>
+
+    <item>
+      <title>동전 던지기로 결정 내리기: 심리학이 말하는 최고의 결정법</title>
+      <link>https://www.spinkorea.kr/blog/coin-flip-guide</link>
+      <description>결정이 어려울 때 동전을 던지면 왜 도움이 될까요? 심리학적 관점에서 동전 던지기의 효과와 온라인 동전 던지기 활용법을 알아봅니다.</description>
+      <pubDate>Wed, 25 Feb 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/coin-flip-guide</guid>
+    </item>
+
+    <item>
+      <title>D-Day 카운터 활용법: 목표·기념일·마감일 한 눈에 관리</title>
+      <link>https://www.spinkorea.kr/blog/d-day-counter-guide</link>
+      <description>수능, 결혼기념일, 프로젝트 마감일... D-Day 카운터 하나로 모든 중요한 날짜를 관리하는 스마트한 방법을 알려드립니다.</description>
+      <pubDate>Sun, 22 Feb 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/d-day-counter-guide</guid>
+    </item>
+
+    <item>
+      <title>BMI 계산기 완벽 활용: 정상 체중 범위와 건강 목표 설정법</title>
+      <link>https://www.spinkorea.kr/blog/bmi-calculator-guide</link>
+      <description>BMI(체질량지수)로 내 건강 상태를 확인하고 목표 체중을 설정하는 방법. BMI 계산기와 함께 건강 관리를 시작하세요.</description>
+      <pubDate>Wed, 18 Feb 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/bmi-calculator-guide</guid>
+    </item>
+
+    <item>
+      <title>색상 코드 변환기 사용법: HEX·RGB·HSL 색상을 1초 만에 변환</title>
+      <link>https://www.spinkorea.kr/blog/color-converter-guide</link>
+      <description>웹 디자인 필수! HEX, RGB, HSL 색상 코드의 차이와 변환 방법을 알아보고 무료 색상 변환기를 활용하세요.</description>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/color-converter-guide</guid>
+    </item>
+
+    <item>
+      <title>JSON 포맷터 완벽 가이드: 개발자라면 꼭 알아야 할 JSON 정리법</title>
+      <link>https://www.spinkorea.kr/blog/json-formatter-guide</link>
+      <description>복잡한 JSON 데이터를 읽기 좋게 정렬하고 오류를 찾는 방법. 무료 온라인 JSON 포맷터로 개발 생산성을 높이세요.</description>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/json-formatter-guide</guid>
+    </item>
 
     <item>
       <title>온라인 주사위·동전 던지기: 실제보다 더 공정한 디지털 랜덤</title>

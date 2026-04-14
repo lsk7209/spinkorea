@@ -1862,4 +1862,744 @@ export const BLOG_POSTS: BlogPost[] = [
       </div>
     ),
   },
+  {
+    slug: "json-formatter-guide",
+    title: "JSON 포맷터 완벽 가이드: 개발자라면 꼭 알아야 할 JSON 정리법",
+    description:
+      "복잡한 JSON 데이터를 읽기 좋게 정렬하고 오류를 찾는 방법. 무료 온라인 JSON 포맷터로 개발 생산성을 높이세요.",
+    date: "2026-02-12",
+    tags: ["JSON", "개발자도구", "포맷터", "가이드"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          API를 개발하거나 데이터를 다루다 보면 한 줄로 뭉쳐진 JSON을 마주치게
+          됩니다.{" "}
+          <Link
+            to="/tools/json-formatter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 JSON 포맷터
+          </Link>
+          로 복잡한 JSON을 정리하면 오류를 빠르게 찾고 데이터 구조를 한눈에
+          파악할 수 있습니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          JSON 포맷터가 필요한 이유
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "API 응답 분석",
+              "서버에서 받은 JSON을 보기 좋게 정렬하여 디버깅 시간 단축",
+            ],
+            ["문법 오류 감지", "잘못된 따옴표, 쉼표, 괄호를 즉시 감지"],
+            ["데이터 압축", "배포 전 JSON을 한 줄로 압축하여 파일 크기 최소화"],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-white">{t}</p>
+              <p className="text-sm text-gray-400 mt-1">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          JSON 자주 발생하는 오류
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>마지막 쉼표(Trailing Comma):</strong> 마지막 항목 뒤 쉼표 →
+            JSON 표준 오류
+          </li>
+          <li>
+            <strong>큰따옴표 누락:</strong> key는 반드시 큰따옴표로 감싸야 함
+          </li>
+          <li>
+            <strong>주석 불가:</strong> JSON은 주석을 지원하지 않음
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/json-formatter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow JSON 포맷터
+          </Link>
+          로 복잡한 JSON을 즉시 정렬하고, 문법 오류를 자동으로 검사하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "color-converter-guide",
+    title: "색상 코드 변환기 사용법: HEX·RGB·HSL 색상을 1초 만에 변환",
+    description:
+      "웹 디자인 필수! HEX, RGB, HSL 색상 코드의 차이와 변환 방법을 알아보고 무료 색상 변환기를 활용하세요.",
+    date: "2026-02-15",
+    tags: ["색상", "웹디자인", "HEX", "RGB", "CSS"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          Figma에서 작업한 색상을 CSS에 적용하려는데 HEX인지 RGB인지 헷갈리신 적
+          있나요?{" "}
+          <Link
+            to="/tools/color-converter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 색상 변환기
+          </Link>
+          로 1초 만에 변환하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          색상 코드 형식 비교
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["HEX", "#FF5733", "CSS, HTML, 디자인 툴"],
+            ["RGB", "rgb(255, 87, 51)", "CSS, 투명도 필요 시 rgba"],
+            ["HSL", "hsl(14, 100%, 60%)", "색상 팔레트 생성, 조절"],
+          ].map(([fmt, ex, use], i) => (
+            <div
+              key={i}
+              className="flex gap-4 bg-white/5 p-3 rounded-lg items-center"
+            >
+              <span className="font-bold text-white w-10">{fmt}</span>
+              <code className="text-neon-primary font-mono text-sm flex-1">
+                {ex}
+              </code>
+              <span className="text-gray-400 text-sm">{use}</span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          언제 어떤 형식을 사용하나요?
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>HEX</strong> — CSS 기본 색상 정의, 가장 짧고 직관적
+          </li>
+          <li>
+            <strong>RGBA</strong> — 투명도가 필요할 때 (overlay, 배경 효과)
+          </li>
+          <li>
+            <strong>HSL</strong> — 색상 팔레트를 코드로 생성할 때
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/color-converter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 색상 변환기
+          </Link>
+          에서 HEX, RGB, HSL을 실시간으로 변환하고 색상 미리보기도 확인하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "bmi-calculator-guide",
+    title: "BMI 계산기 완벽 활용: 정상 체중 범위와 건강 목표 설정법",
+    description:
+      "BMI(체질량지수)로 내 건강 상태를 확인하고 목표 체중을 설정하는 방법. BMI 계산기와 함께 건강 관리를 시작하세요.",
+    date: "2026-02-18",
+    tags: ["BMI", "건강", "체중", "다이어트"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          체중이 건강한지 판단하는 가장 간단한 방법이 BMI(체질량지수)입니다.{" "}
+          <Link
+            to="/tools/bmi-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 BMI 계산기
+          </Link>
+          로 키와 몸무게만 입력하면 즉시 건강 상태를 확인할 수 있습니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          BMI 기준표 (한국 기준)
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["18.5 미만", "저체중", "text-blue-400"],
+            ["18.5 ~ 22.9", "정상", "text-green-400"],
+            ["23.0 ~ 24.9", "과체중", "text-yellow-400"],
+            ["25.0 이상", "비만", "text-red-400"],
+          ].map(([range, label, color], i) => (
+            <div
+              key={i}
+              className="flex items-center justify-between bg-white/5 p-3 rounded-lg"
+            >
+              <span className="font-mono text-sm">{range}</span>
+              <span className={`font-bold ${color}`}>{label}</span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          BMI의 한계와 주의사항
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>근육량이 많은 운동선수는 BMI가 높아도 건강할 수 있습니다.</li>
+          <li>
+            노인은 같은 BMI라도 근육량이 적어 건강 위험이 높을 수 있습니다.
+          </li>
+          <li>BMI는 참고 지표일 뿐, 정확한 판단은 의사 상담이 필요합니다.</li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/bmi-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow BMI 계산기
+          </Link>
+          로 지금 바로 내 체질량지수를 확인하고 건강 목표를 세워보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "d-day-counter-guide",
+    title: "D-Day 카운터 활용법: 목표·기념일·마감일 한 눈에 관리",
+    description:
+      "수능, 결혼기념일, 프로젝트 마감일... D-Day 카운터 하나로 모든 중요한 날짜를 관리하는 스마트한 방법을 알려드립니다.",
+    date: "2026-02-22",
+    tags: ["D-Day", "날짜계산", "목표관리", "기념일"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          구체적인 마감일이 있을 때 목표 달성률이 42% 높아진다는 연구 결과가
+          있습니다.{" "}
+          <Link
+            to="/tools/d-day-counter"
+            className="text-neon-primary hover:underline"
+          >
+            무료 D-Day 카운터
+          </Link>
+          로 모든 중요한 날짜를 한 곳에서 관리하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          D-Day 카운터 활용 사례
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            "📚 수험생 — 수능·공무원·자격증",
+            "💑 커플 — 100일·1주년",
+            "💼 직장인 — 프로젝트 마감",
+            "🏃 운동 — 마라톤·대회일",
+            "✈️ 여행 — 휴가 출발일",
+            "🎓 학생 — 개강·졸업",
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-white/5 p-3 rounded-lg text-sm text-gray-300"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          D+ 계산도 가능합니다
+        </h2>
+        <p>
+          과거 날짜를 입력하면 'D+N'으로 며칠이 지났는지 표시됩니다. 커플
+          D+100일, 취업 D+365일 등 기념일을 축하하는 데 활용하세요.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/d-day-counter"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow D-Day 카운터
+          </Link>
+          로 오늘 당장 목표 날짜를 설정하고 카운트다운을 시작하세요!
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "coin-flip-guide",
+    title: "동전 던지기로 결정 내리기: 심리학이 말하는 최고의 결정법",
+    description:
+      "결정이 어려울 때 동전을 던지면 왜 도움이 될까요? 심리학적 관점에서 동전 던지기의 효과와 온라인 동전 던지기 활용법을 알아봅니다.",
+    date: "2026-02-25",
+    tags: ["동전던지기", "결정", "심리학", "랜덤"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          "동전으로 결정해?" 처음엔 우스워 보이지만, 사실 이것은 심리학적으로
+          매우 효과적인 결정 방법입니다.{" "}
+          <Link
+            to="/tools/coin-flip"
+            className="text-neon-primary hover:underline"
+          >
+            온라인 동전 던지기
+          </Link>
+          로 결정 피로를 줄이고 더 빠르게 선택하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          동전 던지기가 효과적인 심리학적 이유
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "내면의 욕구 발견",
+              "동전이 앞면이 나왔을 때 실망감을 느꼈다면, 그것이 진짜 원하는 선택입니다.",
+            ],
+            [
+              "결정 피로 해소",
+              "사소한 결정에 에너지를 소모하지 않고, 중요한 일에 집중력을 유지합니다.",
+            ],
+            [
+              "책임감 분산",
+              "결과에 대한 과도한 책임감을 줄여 더 편안하게 실행할 수 있습니다.",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          동전 던지기가 적합한 상황
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>두 선택지 모두 비슷하게 매력적일 때</li>
+          <li>점심 메뉴, 영화 선택 등 사소한 결정</li>
+          <li>이미 분석은 충분히 했지만 결정을 못 내릴 때</li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          지금 바로{" "}
+          <Link
+            to="/tools/coin-flip"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 동전 던지기
+          </Link>
+          로 결정하지 못했던 그것을 해결해보세요!
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "time-calculator-guide",
+    title: "시간 계산기 완벽 가이드: 근무시간·포모도로·시간대 계산",
+    description:
+      "근무 시간 계산, 포모도로 타이머 설정, 도착 예정 시간까지. 시간 계산기로 시간 관리를 더 스마트하게 하는 방법을 알려드립니다.",
+    date: "2026-03-01",
+    tags: ["시간계산기", "근무시간", "포모도로", "시간관리"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1508962914676-134849a727f0?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          하루에 실제로 몇 시간을 일하는지, 포모도로 세션이 몇 시에 끝나는지
+          정확하게 계산하고 싶다면{" "}
+          <Link
+            to="/tools/time-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 시간 계산기
+          </Link>
+          를 활용하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          시간 계산기 실전 활용법
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "근무시간 계산",
+              "09:00 출근 → 18:30 퇴근 → 점심 1시간 = 실근무 8시간 30분",
+            ],
+            ["포모도로 계산", "14:00 시작 → 25분 × 4세션 + 휴식 = 15:55 종료"],
+            ["요리·운동 시간", "15:30 시작 → 1시간 45분 후 = 17:15 종료"],
+          ].map(([t, d], i) => (
+            <div
+              key={i}
+              className="bg-white/5 border border-white/10 p-4 rounded-xl"
+            >
+              <p className="font-bold text-neon-primary mb-2">{t}</p>
+              <p className="text-sm text-gray-300 font-mono">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          시간 관리 꿀팁
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            하루 실제 근무 시간을 측정하면 자신의 생산성 패턴을 파악할 수
+            있습니다.
+          </li>
+          <li>포모도로 기법: 25분 집중 + 5분 휴식이 뇌 효율을 극대화합니다.</li>
+          <li>중요 업무는 집중력이 높은 오전 10~12시에 배치하세요.</li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/time-calculator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 시간 계산기
+          </Link>
+          로 오늘의 근무 시간과 일정을 정확하게 계산해보세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "lorem-ipsum-guide",
+    title: "로렘 입숨 완벽 가이드: UI 디자이너·개발자 필수 더미 텍스트",
+    description:
+      "로렘 입숨(Lorem Ipsum)이 무엇인지, 왜 사용하는지, 무료 생성기로 디자인 작업 속도를 높이는 방법을 알아봅니다.",
+    date: "2026-03-05",
+    tags: ["로렘입숨", "Lorem Ipsum", "디자인", "개발"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          웹사이트나 앱을 디자인할 때 실제 콘텐츠 없이도 레이아웃을 미리 볼 수
+          있게 해주는 것이 <strong className="text-white">로렘 입숨</strong>
+          입니다.{" "}
+          <Link
+            to="/tools/lorem-ipsum"
+            className="text-neon-primary hover:underline"
+          >
+            무료 로렘 입숨 생성기
+          </Link>
+          로 원하는 양의 더미 텍스트를 즉시 생성하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          로렘 입숨의 역사
+        </h2>
+        <p>
+          로렘 입숨은 키케로(Cicero)의 라틴어 철학 서적(기원전 45년)에서
+          유래했습니다. 1960년대 Letraset이 인쇄 업계에서 사용하면서 표준이
+          되었고, 이후 PageMaker 등 DTP 소프트웨어가 도입하며 디자인 업계 전반에
+          퍼졌습니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          로렘 입숨이 필요한 상황
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>웹 프로토타입:</strong> 실제 콘텐츠 없이 레이아웃 먼저 확인
+          </li>
+          <li>
+            <strong>디자인 시안:</strong> 클라이언트에게 디자인 방향 제시
+          </li>
+          <li>
+            <strong>개발 테스트:</strong> UI 컴포넌트가 긴 텍스트에서 어떻게
+            보이는지 확인
+          </li>
+          <li>
+            <strong>인쇄물 레이아웃:</strong> 잡지, 브로슈어 초안 작업
+          </li>
+        </ul>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/lorem-ipsum"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 로렘 입숨 생성기
+          </Link>
+          로 필요한 단락 수만큼 더미 텍스트를 즉시 생성하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "markdown-guide",
+    title: "마크다운 완벽 가이드: 깃허브·블로그·노션에서 쓰는 기본 문법",
+    description:
+      "마크다운(Markdown) 기본 문법 10가지와 실전 활용법. 무료 마크다운 미리보기로 바로 연습하세요.",
+    date: "2026-03-08",
+    tags: ["마크다운", "Markdown", "글쓰기", "개발"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          GitHub README, 기술 블로그, 노션 문서... 어디서나 마크다운을
+          사용합니다.{" "}
+          <Link
+            to="/tools/markdown-previewer"
+            className="text-neon-primary hover:underline"
+          >
+            무료 마크다운 미리보기
+          </Link>
+          로 실시간으로 연습하면서 빠르게 익혀보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          마크다운 기본 문법 10가지
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["# 제목", "h1~h6 제목 (# 개수로 레벨 조절)"],
+            ["**굵게**", "볼드체"],
+            ["*기울임*", "이탤릭체"],
+            ["- 항목", "순서 없는 목록"],
+            ["1. 항목", "순서 있는 목록"],
+            ["`코드`", "인라인 코드"],
+            ["```블록```", "여러 줄 코드 블록"],
+            ["[링크](URL)", "하이퍼링크"],
+            ["![이미지](URL)", "이미지 삽입"],
+            ["> 인용", "인용구 블록"],
+          ].map(([syntax, desc], i) => (
+            <div
+              key={i}
+              className="flex items-center gap-4 bg-white/5 p-3 rounded-lg"
+            >
+              <code className="text-neon-primary font-mono text-sm w-36 shrink-0">
+                {syntax}
+              </code>
+              <span className="text-gray-400 text-sm">{desc}</span>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/markdown-previewer"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow 마크다운 미리보기
+          </Link>
+          에서 위 문법을 직접 입력하면 실시간으로 결과를 확인할 수 있습니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "css-shadow-guide",
+    title: "CSS Box Shadow 완벽 가이드: 버튼·카드에 입체감 주는 법",
+    description:
+      "CSS box-shadow 속성으로 버튼, 카드, 모달에 입체감을 주는 방법. 무료 CSS 그림자 생성기로 코드 없이 시각적으로 조작하세요.",
+    date: "2026-03-12",
+    tags: ["CSS", "box-shadow", "웹디자인", "개발"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          평평한 UI에 깊이감을 주는 가장 쉬운 방법이{" "}
+          <strong className="text-white">CSS box-shadow</strong>입니다.{" "}
+          <Link
+            to="/tools/css-shadow-generator"
+            className="text-neon-primary hover:underline"
+          >
+            무료 CSS 그림자 생성기
+          </Link>
+          로 슬라이더를 조작하며 원하는 그림자를 만들고 코드를 복사하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          box-shadow 속성 해설
+        </h2>
+        <div className="bg-black/30 p-4 rounded-lg font-mono text-sm">
+          <p>
+            <span className="text-yellow-400">2px</span>{" "}
+            <span className="text-blue-400">4px</span>{" "}
+            <span className="text-green-400">8px</span>{" "}
+            <span className="text-purple-400">0px</span>{" "}
+            <span className="text-red-400">rgba(0,0,0,0.2)</span>
+          </p>
+          <div className="mt-3 space-y-1 text-xs text-gray-400">
+            <p>
+              <span className="text-yellow-400">2px</span> = 수평 오프셋 |{" "}
+              <span className="text-blue-400">4px</span> = 수직 오프셋 |{" "}
+              <span className="text-green-400">8px</span> = 흐림 |{" "}
+              <span className="text-purple-400">0px</span> = 퍼짐
+            </p>
+          </div>
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          인기 있는 그림자 스타일
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["부드러운 카드", "box-shadow: 0 2px 8px rgba(0,0,0,0.12)"],
+            ["눌린 효과(inset)", "box-shadow: inset 0 2px 4px rgba(0,0,0,0.2)"],
+            ["네온 글로우", "box-shadow: 0 0 20px rgba(0,217,255,0.5)"],
+          ].map(([name, code], i) => (
+            <div key={i} className="bg-white/5 p-3 rounded-lg">
+              <p className="text-white font-bold text-sm">{name}</p>
+              <p className="font-mono text-xs text-neon-primary mt-1">{code}</p>
+            </div>
+          ))}
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/css-shadow-generator"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow CSS 그림자 생성기
+          </Link>
+          로 코드 없이 그림자를 조작하고 CSS 코드를 즉시 복사하세요.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "base64-guide",
+    title: "Base64 인코딩 완벽 가이드: 이미지 URL·API 인증에 쓰이는 이유",
+    description:
+      "Base64 인코딩이 무엇인지, 왜 사용하는지, 이미지 Data URL·HTTP Basic Auth에서 어떻게 활용하는지 완벽하게 알아봅니다.",
+    date: "2026-03-15",
+    tags: ["Base64", "인코딩", "개발", "보안"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          API를 호출할 때 Authorization 헤더에 이상한 문자열을 본 적 있나요?
+          이것이 <strong className="text-white">Base64 인코딩</strong>입니다.{" "}
+          <Link
+            to="/tools/base64-encoder"
+            className="text-neon-primary hover:underline"
+          >
+            무료 Base64 변환기
+          </Link>
+          로 즉시 인코딩/디코딩해보세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          Base64가 필요한 실전 상황
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "HTTP Basic 인증",
+              'Authorization: Basic {Base64("user:password")} 형식으로 API 인증',
+            ],
+            [
+              "이미지 Data URL",
+              'src="data:image/png;base64,..." 형식으로 HTML에 이미지 삽입',
+            ],
+            [
+              "이메일 첨부파일",
+              "MIME 표준에서 첨부파일을 Base64로 인코딩하여 텍스트로 전송",
+            ],
+            [
+              "JWT 토큰",
+              "JSON Web Token의 헤더와 페이로드가 Base64url로 인코딩됨",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          Base64 vs 암호화 차이
+        </h2>
+        <p>
+          중요: Base64는 <strong>암호화가 아닙니다</strong>. 누구나 쉽게
+          디코딩할 수 있습니다. 민감한 정보는 반드시 별도의 암호화(AES, RSA
+          등)를 적용해야 합니다.
+        </p>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/base64-encoder"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow Base64 변환기
+          </Link>
+          로 텍스트와 Base64를 즉시 상호 변환하세요. 한글(UTF-8)도 완벽
+          지원합니다.
+        </p>
+      </div>
+    ),
+  },
+  {
+    slug: "diff-checker-guide",
+    title: "Diff 비교 도구 활용법: 코드·문서 변경점을 한눈에 파악",
+    description:
+      "두 텍스트나 코드의 차이점을 시각적으로 확인하는 Diff 도구. 코드 리뷰, 문서 편집, 설정 파일 비교에 활용하는 방법을 알려드립니다.",
+    date: "2026-03-18",
+    tags: ["Diff", "코드비교", "개발자도구", "텍스트비교"],
+    thumbnail:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2670&auto=format&fit=crop",
+    content: (
+      <div className="space-y-6 text-gray-300 leading-relaxed">
+        <p>
+          코드 리뷰, 계약서 수정, 설정 파일 변경 — 무엇이 바뀌었는지 한눈에 보고
+          싶다면{" "}
+          <Link
+            to="/tools/diff-checker"
+            className="text-neon-primary hover:underline"
+          >
+            무료 Diff 비교 도구
+          </Link>
+          를 사용하세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          Diff 도구 활용 상황
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["🖥️ 코드 리뷰", "PR 전 변경 사항을 직접 확인"],
+            ["📄 문서 편집", "초안 vs 최종본 차이 파악"],
+            ["⚙️ 설정 파일", "서버 설정 변경 전후 비교"],
+            ["🔧 디버깅", "작동하는 코드와 오류 코드 비교"],
+          ].map(([icon, desc], i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 bg-white/5 p-3 rounded-lg text-sm"
+            >
+              <span>{icon}</span>
+              <span className="text-gray-300">{desc}</span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          Diff 결과 읽는 법
+        </h2>
+        <div className="space-y-2">
+          <div className="bg-green-500/10 border border-green-500/30 p-3 rounded-lg">
+            <p className="text-green-400 font-mono text-sm">
+              + 추가된 줄 (초록색)
+            </p>
+          </div>
+          <div className="bg-red-500/10 border border-red-500/30 p-3 rounded-lg">
+            <p className="text-red-400 font-mono text-sm">
+              - 삭제된 줄 (빨간색)
+            </p>
+          </div>
+          <div className="bg-white/5 border border-white/10 p-3 rounded-lg">
+            <p className="text-gray-400 font-mono text-sm">
+              변경 없는 줄 (기본색)
+            </p>
+          </div>
+        </div>
+        <hr className="border-white/10 my-8" />
+        <p>
+          <Link
+            to="/tools/diff-checker"
+            className="text-neon-primary hover:underline"
+          >
+            SpinFlow Diff 비교 도구
+          </Link>
+          에 두 텍스트를 붙여넣으면 변경 사항이 즉시 색상으로 표시됩니다.
+        </p>
+      </div>
+    ),
+  },
 ];
