@@ -5,9 +5,25 @@
     <link>https://spinflow.vercel.app/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙 등 일상에 도움이 되는 다양한 콘텐츠를 제공합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://spinflow.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
-    
+
+    <item>
+      <title>강력한 비밀번호 만들기 완벽 가이드 - 해킹에서 내 계정 지키는 법</title>
+      <link>https://spinflow.vercel.app/blog/strong-password-guide</link>
+      <description>123456, qwerty... 아직도 이런 비밀번호를 쓰고 계신가요? 해커도 못 뚫는 강력한 비밀번호 만드는 법과 무료 비밀번호 생성기 활용법을 알려드립니다.</description>
+      <pubDate>Sun, 12 Jan 2026 00:00:00 +0900</pubDate>
+      <guid>https://spinflow.vercel.app/blog/strong-password-guide</guid>
+    </item>
+
+    <item>
+      <title>무료 QR코드 생성기 완벽 가이드 - 링크를 QR코드로 5초 만에 변환</title>
+      <link>https://spinflow.vercel.app/blog/qr-code-generator-guide</link>
+      <description>QR코드가 무엇인지, 어떻게 만드는지, 어디에 활용하는지 완벽하게 알아봅니다. 무료 온라인 QR코드 생성기로 명함, 포스터, 메뉴판까지 손쉽게 제작하세요.</description>
+      <pubDate>Sun, 05 Jan 2026 00:00:00 +0900</pubDate>
+      <guid>https://spinflow.vercel.app/blog/qr-code-generator-guide</guid>
+    </item>
+
     <item>
       <title>D-Day 계산기 200% 활용법: 목표 달성의 비밀 무기</title>
       <link>https://spinflow.vercel.app/blog/dday-calculator-life-hacks</link>

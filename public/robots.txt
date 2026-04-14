@@ -1,4 +1,31 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+
+# AI 검색 크롤러 명시 허용 (GEO 최적화)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
+# 스팸 봇 차단
+User-agent: Bytespider
+Disallow: /
 
 Sitemap: https://spinflow.vercel.app/sitemap.xml
