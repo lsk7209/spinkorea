@@ -2689,6 +2689,55 @@ export const BLOG_POSTS: BlogPost[] = [
             </p>
           </div>
         </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          URL 인코딩 실전 예제
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "한글 검색어",
+              "검색어: '서울 맛집' → ?q=%EC%84%9C%EC%9A%B8+%EB%A7%9B%EC%A7%91",
+            ],
+            ["이메일 주소", "user@example.com → user%40example.com (%40 = @)"],
+            [
+              "공백 처리",
+              "공백은 + 또는 %20으로 인코딩 (폼 데이터는 +, URL 경로는 %20)",
+            ],
+            ["슬래시 포함 값", "2024/01/15 → 2024%2F01%2F15 (%2F = /)"],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1 text-sm">{t}</p>
+              <p className="text-xs font-mono text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          언어별 URL 인코딩 함수
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["JavaScript", "encodeURIComponent(str) — 쿼리 파라미터 값"],
+            [
+              "Python",
+              "urllib.parse.quote(str) / urllib.parse.urlencode(dict)",
+            ],
+            ["Java", "URLEncoder.encode(str, StandardCharsets.UTF_8)"],
+            [
+              "PHP",
+              "urlencode($str) — 폼 데이터 / rawurlencode($str) — URL 경로",
+            ],
+          ].map(([lang, fn], i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-start bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-neon-primary font-bold text-sm min-w-[100px]">
+                {lang}
+              </span>
+              <code className="text-xs text-gray-400 font-mono">{fn}</code>
+            </div>
+          ))}
+        </div>
         <hr className="border-white/10 my-8" />
         <p>
           <Link
@@ -2782,6 +2831,60 @@ export const BLOG_POSTS: BlogPost[] = [
           발생합니다. 이미 대부분의 현대 시스템은 64비트로 전환했지만, 레거시
           시스템에서는 여전히 주의가 필요합니다.
         </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          언어별 타임스탬프 코드 예제
+        </h2>
+        <div className="space-y-2">
+          {[
+            [
+              "JavaScript",
+              "현재 시간(ms): Date.now()\n현재 시간(s): Math.floor(Date.now() / 1000)\n날짜 변환: new Date(timestamp * 1000)",
+            ],
+            [
+              "Python",
+              "현재 시간(s): import time; time.time()\n날짜 변환: datetime.fromtimestamp(ts)",
+            ],
+            [
+              "SQL",
+              "현재 시간: UNIX_TIMESTAMP() (MySQL) / extract(epoch from now()) (PostgreSQL)",
+            ],
+          ].map(([lang, code], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-2 text-sm">{lang}</p>
+              <pre className="text-xs text-gray-400 font-mono whitespace-pre-wrap">
+                {code}
+              </pre>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          타임스탬프 활용 실전 시나리오
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "API 응답 로그 분석",
+              "서버 로그의 숫자 타임스탬프를 날짜로 변환해 버그 발생 시점 특정",
+            ],
+            [
+              "쿠키·세션 만료 설정",
+              "현재 타임스탬프 + 만료 시간(초)으로 Expires 값 계산",
+            ],
+            [
+              "이벤트 순서 정렬",
+              "여러 서버의 로그를 타임스탬프 기준으로 정확히 시간순 정렬",
+            ],
+            [
+              "캐시 만료 시간 계산",
+              "cache-control max-age와 현재 타임스탬프로 캐시 유효 여부 확인",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1 text-sm">{t}</p>
+              <p className="text-xs text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
         <hr className="border-white/10 my-8" />
         <p>
           <Link
@@ -2791,6 +2894,7 @@ export const BLOG_POSTS: BlogPost[] = [
             SpinFlow Unix 타임스탬프 변환기
           </Link>
           로 현재 시간의 타임스탬프 확인, 날짜↔숫자 변환을 즉시 처리하세요.
+          초/밀리초 자동 감지 지원.
         </p>
       </div>
     ),
@@ -2886,6 +2990,54 @@ export const BLOG_POSTS: BlogPost[] = [
             </div>
           ))}
         </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          네이밍이 중요한 이유 — 코드는 사람이 읽는다
+        </h2>
+        <p>
+          마틴 파울러는{" "}
+          <strong className="text-white">
+            "코드는 컴퓨터보다 사람이 더 많이 읽는다"
+          </strong>
+          고 말합니다. 일관된 네이밍 컨벤션은 협업 속도를 높이고, 코드 리뷰
+          시간을 줄이며, 버그 발생률을 낮춥니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          좋은 이름 vs 나쁜 이름
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["❌ d", "✅ daysSinceLastLogin", "의미 없는 단일 문자"],
+            ["❌ data", "✅ userProfileList", "너무 포괄적인 이름"],
+            ["❌ flag", "✅ isEmailVerified", "불리언은 is/has/can 접두어"],
+            ["❌ temp", "✅ filteredProducts", "임시 변수도 목적을 명시"],
+            ["❌ handle", "✅ handleLoginSubmit", "이벤트 핸들러는 동작 명시"],
+          ].map(([bad, good, reason], i) => (
+            <div
+              key={i}
+              className="flex items-center gap-2 bg-white/5 p-3 rounded-lg"
+            >
+              <code className="text-red-400 font-mono text-xs min-w-[80px]">
+                {bad}
+              </code>
+              <span className="text-gray-500">→</span>
+              <code className="text-green-400 font-mono text-xs flex-1">
+                {good}
+              </code>
+              <span className="text-xs text-gray-500 hidden sm:block">
+                {reason}
+              </span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          팀 컨벤션 정하기
+        </h2>
+        <p>
+          가장 중요한 것은 <strong className="text-white">팀 내 일관성</strong>
+          입니다. 어떤 컨벤션을 쓰느냐보다 모두가 같은 규칙을 쓰는 것이
+          중요합니다. ESLint, Prettier 설정 파일로 자동 강제하는 것을
+          권장합니다.
+        </p>
         <hr className="border-white/10 my-8" />
         <p>
           <Link
@@ -3247,7 +3399,95 @@ export const BLOG_POSTS: BlogPost[] = [
           ))}
         </div>
         <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          예방을 위한 실천법
+          번아웃의 주요 원인
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "과도한 업무량",
+              "처리 가능한 범위를 넘는 일이 지속되면 회복이 불가능해짐",
+            ],
+            [
+              "통제감 부재",
+              "내가 결정할 수 있는 것이 없다는 무력감 — 가장 강력한 번아웃 유발 요인",
+            ],
+            [
+              "인정 부족",
+              "노력에 비해 피드백·보상이 없을 때 지속 동기가 사라짐",
+            ],
+            [
+              "가치 충돌",
+              "나의 가치관과 조직의 방향이 다를 때 만성 스트레스 발생",
+            ],
+            ["공동체 부재", "팀워크 없이 혼자 모든 것을 감당해야 하는 고립감"],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          번아웃 자가 진단 체크리스트
+        </h2>
+        <div className="space-y-2">
+          {[
+            "아침에 일어나는 것 자체가 힘들다",
+            "예전엔 즐거웠던 일이 지금은 의미없게 느껴진다",
+            "업무 실수가 늘었고 집중하기 어렵다",
+            "동료·가족에게 쉽게 짜증이 난다",
+            "몸이 자주 아프거나 두통·소화불량이 반복된다",
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-center bg-white/5 p-3 rounded-lg"
+            >
+              <div className="w-5 h-5 border border-neon-primary/50 rounded flex-shrink-0" />
+              <span className="text-sm text-gray-300">{item}</span>
+            </div>
+          ))}
+        </div>
+        <p className="text-sm text-gray-400 mt-2">
+          3개 이상 해당 시 번아웃 초기 단계 — 즉각적인 대응이 필요합니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          단계별 회복 전략
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "1단계: 즉각 멈추기",
+              "번아웃을 인정하는 것이 첫 번째입니다. 연차·휴가를 사용해 완전히 분리되는 시간 확보",
+            ],
+            [
+              "2단계: 신체 회복",
+              "수면 7~9시간, 가벼운 운동, 규칙적인 식사. 뇌는 신체가 회복되어야 작동합니다",
+            ],
+            [
+              "3단계: 원인 제거",
+              "번아웃의 근본 원인을 파악하고 구조적으로 해결 — 업무량 조정, 역할 재협상",
+            ],
+            [
+              "4단계: 경계선 설정",
+              "회복 후 재발 방지를 위해 명확한 업무 종료 시간·거절 기준을 정함",
+            ],
+          ].map(([t, d], i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-start bg-white/5 p-4 rounded-lg"
+            >
+              <span className="bg-neon-primary text-black font-bold rounded-full w-7 h-7 flex items-center justify-center text-sm flex-shrink-0">
+                {i + 1}
+              </span>
+              <div>
+                <p className="font-bold text-white mb-1">{t}</p>
+                <p className="text-sm text-gray-400">{d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          예방을 위한 일상 실천법
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -3261,6 +3501,14 @@ export const BLOG_POSTS: BlogPost[] = [
           <li>
             <strong>NO 말하기 연습</strong> — 과부하의 주원인은 거절 못 하는
             습관
+          </li>
+          <li>
+            <strong>작은 성취 기록</strong> — 오늘 완료한 일 3가지를 적는
+            것만으로도 효능감 회복
+          </li>
+          <li>
+            <strong>주 1회 '아무것도 안 하는 날'</strong> — 생산성 없는 시간도
+            삶의 일부
           </li>
         </ul>
         <hr className="border-white/10 my-8" />
@@ -3635,6 +3883,88 @@ export const BLOG_POSTS: BlogPost[] = [
             <strong>방해 차단</strong> 연습 — 25분간 다른 충동이 줄어드는 훈련
           </li>
         </ul>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          업무 유형별 포모도로 적용법
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "✍️ 글쓰기·보고서",
+              "25분: 초안 작성 (퇴고 금지) → 5분: 스트레칭 → 반복. 완벽함보다 흐름 유지가 핵심",
+            ],
+            [
+              "💻 코딩·개발",
+              "25분: 한 기능 구현 → 5분: 커밋 정리. 문제 해결 중 막히면 메모 후 다음 포모도로로",
+            ],
+            [
+              "📚 공부·학습",
+              "25분: 능동적 읽기(밑줄+메모) → 5분: 핵심 3가지 떠올리기. 수동적 읽기는 효과 반감",
+            ],
+            [
+              "📧 이메일·메신저",
+              "하루 2~3 포모도로만 배정. 이 시간 외에는 알림 완전 차단",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          포모도로 변형 버전
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["표준 포모도로", "25분 집중 / 5분 휴식", "일반 업무"],
+            ["딥 워크 포모도로", "50분 집중 / 10분 휴식", "복잡한 창작·개발"],
+            [
+              "짧은 포모도로",
+              "15분 집중 / 3분 휴식",
+              "집중이 어려울 때 시작용",
+            ],
+            [
+              "울트라 포모도로",
+              "90분 집중 / 20분 휴식",
+              "수면 사이클과 일치, 최고 집중 상태",
+            ],
+          ].map(([name, time, use], i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"
+            >
+              <div className="flex-1">
+                <p className="text-sm font-bold text-white">{name}</p>
+                <p className="text-xs text-neon-primary font-mono">{time}</p>
+              </div>
+              <span className="text-xs text-gray-500">{use}</span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          자주 묻는 질문
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "포모도로 중간에 방해를 받으면?",
+              "즉시 메모하고('나중에 처리') 포모도로를 계속 진행. 긴급한 경우엔 포모도로를 무효화하고 다시 시작",
+            ],
+            [
+              "25분이 너무 짧게 느껴진다면?",
+              "좋은 신호입니다. 집중이 잘 되고 있다는 뜻. 50분 버전으로 업그레이드할 때입니다",
+            ],
+            [
+              "휴식 5분에 뭘 해야 하나?",
+              "눈 감기, 스트레칭, 물 마시기, 창밖 보기. SNS·유튜브는 뇌를 더 피로하게 만들어 역효과",
+            ],
+          ].map(([q, a], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-white mb-2 text-sm">Q. {q}</p>
+              <p className="text-sm text-gray-400">A. {a}</p>
+            </div>
+          ))}
+        </div>
         <hr className="border-white/10 my-8" />
         <p>
           <Link
@@ -3710,7 +4040,8 @@ export const BLOG_POSTS: BlogPost[] = [
           >
             SpinFlow QR코드 생성기
           </Link>
-          는 URL·텍스트·이메일·전화번호를 QR코드로 즉시 변환합니다.
+          는 URL·텍스트·이메일·전화번호를 QR코드로 즉시 변환합니다. PNG로 저장해
+          명함·포스터·PPT에 바로 삽입하세요.
         </p>
       </div>
     ),
@@ -3769,6 +4100,76 @@ export const BLOG_POSTS: BlogPost[] = [
             <div key={i} className="bg-white/5 p-4 rounded-lg">
               <p className="font-bold text-neon-primary mb-1">{t}</p>
               <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          싱글태스킹 훈련법 — 4주 프로그램
+        </h2>
+        <div className="space-y-2">
+          {[
+            [
+              "1주차",
+              "하루 1시간 알림 완전 차단. 이메일·메신저 2회(오전·오후)만 확인",
+            ],
+            [
+              "2주차",
+              "오전 2시간을 가장 중요한 단일 업무에만 투자. 회의·메신저 불가",
+            ],
+            [
+              "3주차",
+              "포모도로 기법 병행. 25분 집중 중 다른 충동을 종이에 적어두고 무시",
+            ],
+            ["4주차", "하루 전체 타임 블로킹. 업무 유형별 시간대 완전 분리"],
+          ].map(([week, desc], i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-start bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-neon-primary font-bold font-mono text-sm min-w-[50px]">
+                {week}
+              </span>
+              <span className="text-sm text-gray-400">{desc}</span>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          멀티태스킹이 실제로 괜찮은 상황
+        </h2>
+        <p>
+          모든 멀티태스킹이 나쁜 건 아닙니다.{" "}
+          <strong className="text-white">인지 부하가 낮은 작업의 조합</strong>은
+          효율적일 수 있습니다.
+        </p>
+        <div className="grid grid-cols-2 gap-3 mt-4">
+          {[
+            [
+              "✅ 괜찮은 조합",
+              "걷기 + 팟캐스트 듣기",
+              "설거지 + 음악 감상",
+              "러닝머신 + 전화 통화",
+            ],
+            [
+              "❌ 나쁜 조합",
+              "코딩 + 영상 시청",
+              "글쓰기 + 음악 가사 듣기",
+              "공부 + 채팅",
+            ],
+          ].map(([label, ...items], i) => (
+            <div
+              key={i}
+              className={`p-3 rounded-lg ${i === 0 ? "bg-green-500/10 border border-green-500/20" : "bg-red-500/10 border border-red-500/20"}`}
+            >
+              <p
+                className={`font-bold text-sm mb-2 ${i === 0 ? "text-green-400" : "text-red-400"}`}
+              >
+                {label}
+              </p>
+              {items.map((item, j) => (
+                <p key={j} className="text-xs text-gray-400">
+                  {item}
+                </p>
+              ))}
             </div>
           ))}
         </div>
@@ -3911,6 +4312,51 @@ export const BLOG_POSTS: BlogPost[] = [
             </div>
           ))}
         </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          아침 루틴 수준별 업그레이드
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "🌱 입문 (15분)",
+              "기상 → 물 한 잔 → 오늘 할 일 3개 메모 → 세안. 완벽함보다 일관성이 중요",
+            ],
+            [
+              "🌿 중급 (45분)",
+              "기상 → 물 → 명상 10분 → 운동 20분 → 저널링 10분 → 샤워. 에너지 확실히 달라짐",
+            ],
+            [
+              "🌳 고급 (90분)",
+              "기상 → 찬물 샤워 → 운동 30분 → 독서 30분 → 저널링 + 감사 일기 → 하루 계획. 주 3~4회 권장",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          아침 루틴에서 피해야 할 것
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>스마트폰 확인</strong> — 기상 후 30분 이내 SNS·뉴스 확인은
+            하루를 타인의 의제로 시작하게 함
+          </li>
+          <li>
+            <strong>스누즈 버튼</strong> — 5분짜리 토막 수면은 뇌를 더
+            혼란스럽게 만듦. 첫 알람에 일어나는 훈련 필요
+          </li>
+          <li>
+            <strong>과도한 카페인</strong> — 기상 후 90분은 코르티솔이
+            자연스럽게 높음. 이 시간에 커피는 내성만 키움
+          </li>
+          <li>
+            <strong>너무 많은 루틴</strong> — 처음부터 복잡하게 시작하면
+            하루라도 빠지면 전체 포기. 작게 시작해 쌓아가기
+          </li>
+        </ul>
         <hr className="border-white/10 my-8" />
         <p>
           오늘 할 일 3가지를{" "}
@@ -3992,6 +4438,71 @@ export const BLOG_POSTS: BlogPost[] = [
             관리자 활용
           </li>
         </ul>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          주요 해킹 방법과 대응법
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "브루트 포스(Brute Force)",
+              "모든 경우의 수를 대입. 대응: 12자 이상 + 복잡도 증가 → 수억 년 필요",
+            ],
+            [
+              "딕셔너리 어택",
+              "사전 단어·흔한 비밀번호 목록 대입. 대응: 사전 단어 절대 사용 금지",
+            ],
+            [
+              "피싱(Phishing)",
+              "가짜 사이트로 속여 직접 입력 유도. 대응: URL 확인 + 이중 인증(2FA)",
+            ],
+            [
+              "크레덴셜 스터핑",
+              "다른 사이트에서 유출된 아이디/비번 재사용 시도. 대응: 서비스마다 다른 비밀번호",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          비밀번호 관리자 추천
+        </h2>
+        <div className="space-y-2">
+          {[
+            ["1Password", "유료(월 $3~)", "가족·팀 공유 기능 우수. UI 최고"],
+            [
+              "Bitwarden",
+              "무료 (오픈소스)",
+              "자체 서버 호스팅 가능. 개발자 선호",
+            ],
+            ["KeePass", "무료 (로컬 저장)", "클라우드 없이 로컬 DB. 보안 최강"],
+            ["네이버 패스워드", "무료", "한국 서비스 연동에 편리"],
+          ].map(([name, price, desc], i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"
+            >
+              <div className="flex-1">
+                <p className="text-sm font-bold text-white">{name}</p>
+                <p className="text-xs text-gray-400">{desc}</p>
+              </div>
+              <span className="text-xs text-neon-primary font-mono">
+                {price}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="bg-blue-500/10 border border-blue-500/30 p-4 rounded-lg mt-4">
+          <p className="font-bold text-blue-400 mb-1">
+            💡 이중 인증(2FA)도 필수
+          </p>
+          <p className="text-sm text-gray-400">
+            비밀번호가 유출되어도 2FA가 있으면 안전합니다. Google Authenticator,
+            Authy 앱을 모든 주요 서비스에 설정하세요.
+          </p>
+        </div>
         <hr className="border-white/10 my-8" />
         <p>
           <Link
@@ -4327,6 +4838,48 @@ export const BLOG_POSTS: BlogPost[] = [
               </div>
             </div>
           ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          수면 부채(Sleep Debt)란?
+        </h2>
+        <p>
+          하루 1시간씩 덜 자면 일주일 뒤{" "}
+          <strong className="text-white">7시간의 수면 부채</strong>가 쌓입니다.
+          주말에 몰아 자도 인지 기능은 완전히 회복되지 않습니다 (하버드 의대
+          연구). 수면 부채는 누적되고, 일시 보충은 임시방편에 불과합니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          낮잠 황금 시간 — 최적 낮잠 가이드
+        </h2>
+        <div className="space-y-3">
+          {[
+            [
+              "10~20분 (파워냅)",
+              "N1~N2 수면만. 깨어나면 즉시 각성. 집중력 34%·주의력 54% 향상 (NASA 연구)",
+            ],
+            [
+              "90분 (전체 사이클)",
+              "한 사이클 완성. 깊은 피로 회복에 효과적. 하지만 밤 수면에 영향 줄 수 있음",
+            ],
+            [
+              "피해야 할 낮잠",
+              "30~60분 — 깊은 수면(N3) 진입 후 중단되어 오히려 더 피곤함",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <div className="bg-yellow-500/10 border border-yellow-500/30 p-4 rounded-lg">
+          <p className="font-bold text-yellow-400 mb-1">
+            💡 커피냅(Coffee Nap) 꿀팁
+          </p>
+          <p className="text-sm text-gray-400">
+            낮잠 직전 커피 한 잔 → 20분 수면 → 카페인이 딱 이때 흡수되어
+            상쾌하게 기상. 카페인 효과 + 수면 효과 동시에.
+          </p>
         </div>
         <hr className="border-white/10 my-8" />
         <p>
@@ -5203,6 +5756,54 @@ export const BLOG_POSTS: BlogPost[] = [
             </div>
           ))}
         </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          딥 워크(Deep Work) 구현하기
+        </h2>
+        <p>
+          칼 뉴포트의 딥 워크는 방해 없는 집중 상태로 인지 능력의 한계까지
+          밀어붙이는 활동입니다. 4가지 실천 철학이 있습니다.
+        </p>
+        <div className="space-y-3 mt-4">
+          {[
+            [
+              "수도원식 (Monastic)",
+              "SNS 계정 삭제, 이메일 최소화. 극단적 집중. 작가·연구자에 적합",
+            ],
+            [
+              "이중적 (Bimodal)",
+              "일정 기간(최소 하루)을 완전한 딥 워크로 할당. 나머지는 일상 처리",
+            ],
+            [
+              "리드미컬 (Rhythmic)",
+              "매일 같은 시간에 딥 워크 블록 설정. 가장 현실적인 직장인 방식",
+            ],
+            [
+              "저널리스틱 (Journalistic)",
+              "빈 시간이 생길 때마다 즉시 딥 워크 전환. 훈련이 많이 필요",
+            ],
+          ].map(([t, d], i) => (
+            <div key={i} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{t}</p>
+              <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          집중력 측정 — 나는 얼마나 집중하고 있나?
+        </h2>
+        <p>
+          오늘 하루 <strong className="text-white">진짜 집중한 시간</strong>을
+          측정해보세요. 대부분 실제 집중 시간은 2~4시간에 불과합니다. 8시간 근무
+          중 6시간은 낮은 강도의 작업과 방해에 소비됩니다.
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mt-3">
+          <li>Toggl Track — 무료 시간 추적 앱. 작업별 집중 시간 기록</li>
+          <li>RescueTime — 자동으로 앱 사용 시간 분석. 집중도 점수 제공</li>
+          <li>
+            종이 방식 — 25분 포모도로 완료 시마다 체크 표시. 하루 몇 개 찍었는지
+            확인
+          </li>
+        </ul>
         <hr className="border-white/10 my-8" />
         <p>
           집중해야 할 일이 여러 개라면{" "}
@@ -5775,6 +6376,79 @@ export const BLOG_POSTS: BlogPost[] = [
             <div key={i} className="bg-white/5 p-4 rounded-lg">
               <p className="font-bold text-neon-primary mb-1">{t}</p>
               <p className="text-sm text-gray-400">{d}</p>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          AI가 빠르게 대체하는 직무 vs 강화하는 직무
+        </h2>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {[
+            {
+              title: "⚠️ 주의 필요",
+              color: "border-red-500/30 bg-red-500/5",
+              textColor: "text-red-400",
+              items: [
+                "단순 데이터 입력·정리",
+                "기본 번역·교정",
+                "표준 보고서 작성",
+                "반복적 코드 생성",
+                "이미지 편집·리터치",
+              ],
+            },
+            {
+              title: "💪 더 가치 상승",
+              color: "border-green-500/30 bg-green-500/5",
+              textColor: "text-green-400",
+              items: [
+                "AI 프롬프트 설계",
+                "전략적 의사결정",
+                "복잡한 협상·영업",
+                "창의적 방향 설정",
+                "인간 중심 서비스",
+              ],
+            },
+          ].map((card, i) => (
+            <div key={i} className={`border ${card.color} p-4 rounded-lg`}>
+              <p className={`font-bold ${card.textColor} mb-3`}>{card.title}</p>
+              <ul className="space-y-1">
+                {card.items.map((item, j) => (
+                  <li key={j} className="text-xs text-gray-400 flex gap-2">
+                    <span>•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
+          지금 당장 시작할 수 있는 AI 활용법
+        </h2>
+        <div className="space-y-2">
+          {[
+            [
+              "ChatGPT/Claude",
+              "초안 작성 → 본인이 편집·발전. AI를 조수로, 자신이 편집장으로",
+            ],
+            [
+              "GitHub Copilot",
+              "반복 코드 자동완성. 아낀 시간을 아키텍처 설계에 투자",
+            ],
+            ["Notion AI", "회의록 요약, 문서 구조화. 정보 관리 시간 70% 절감"],
+            [
+              "Midjourney/DALL-E",
+              "레퍼런스 이미지 빠른 생성. 디자이너와 협업 속도 향상",
+            ],
+          ].map(([tool, use], i) => (
+            <div
+              key={i}
+              className="flex gap-3 items-start bg-white/5 p-3 rounded-lg"
+            >
+              <span className="text-neon-primary font-bold font-mono text-sm min-w-[120px]">
+                {tool}
+              </span>
+              <span className="text-sm text-gray-400">{use}</span>
             </div>
           ))}
         </div>
