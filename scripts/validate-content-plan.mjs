@@ -4,10 +4,11 @@ import path from "node:path";
 const ROOT = process.cwd();
 const PLAN_PATH = path.join(ROOT, "src", "data", "content-plan.generated.json");
 const POSTS_PATH = path.join(ROOT, "src", "data", "posts.tsx");
+const EXPECTED_GENERATED_COUNT = 400;
 const MIN_QUALITY_SCORE = 85;
 const PUBLISH_INTERVAL_HOURS = 5;
-const MAX_REPEATED_TITLE_PATTERN = 5;
-const MAX_SIMILAR_TITLE_PAIRS = 20;
+const MAX_REPEATED_TITLE_PATTERN = 10;
+const MAX_SIMILAR_TITLE_PAIRS = 40;
 const TITLE_SIMILARITY_THRESHOLD = 0.55;
 const FORBIDDEN_TEXT_PATTERNS = [
   "정리을",
@@ -149,7 +150,7 @@ const slugs = new Set();
 const patternCounts = new Map();
 const generatedTitles = [];
 
-assert(plan.length === 200, `generated article count mismatch: ${plan.length}`);
+assert(plan.length === EXPECTED_GENERATED_COUNT, `generated article count mismatch: ${plan.length}`);
 assertGeneratedRenderer();
 
 for (const title of existingTitles) {
