@@ -1,9 +1,16 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { getPublishedPosts } from "@/data/posts";
+import { getPostPublishDate, getPublishedPosts } from "@/data/posts";
 import SEO from "@/components/SEO";
+
+const SITE_ORIGIN = "https://www.spinkorea.kr";
+const INITIAL_POST_COUNT = 12;
 
 export default function BlogIndex() {
   const posts = getPublishedPosts();
+  const [visibleCount, setVisibleCount] = useState(INITIAL_POST_COUNT);
+  const visiblePosts = posts.slice(0, visibleCount);
+  const hasMorePosts = visibleCount < posts.length;
 
   // Schema.org for Blog
   const structuredData = {
@@ -16,13 +23,13 @@ export default function BlogIndex() {
       "@type": "BlogPosting",
       headline: post.title,
       description: post.description,
-      datePublished: post.date,
-      url: `https://spinflow.kr/blog/${post.slug}`,
+      datePublished: post.publishAt ?? post.date,
+      url: `${SITE_ORIGIN}/blog/${post.slug}`,
     })),
   };
 
   return (
-    <div className="min-h-screen bg-neon-bg flex flex-col">
+    <div className="min-h-screen bg-slate-50 text-slate-950 flex flex-col">
       <SEO
         title="SpinFlow 블로그 - 결정의 기술 & 생산성 팁"
         description="더 나은 결정을 위한 인사이트. 심리학, 생산성, 그리고 룰렛 활용법에 대한 이야기를 나눕니다."
@@ -30,55 +37,59 @@ export default function BlogIndex() {
         structuredData={structuredData}
       />
 
-      <header className="w-full px-4 py-12 border-b border-neon-border/50 bg-neon-bg/50 backdrop-blur-sm">
+      <header className="w-full px-4 pt-28 pb-12 border-b border-slate-200 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gradient mb-4">
-            SpinFlow Blog
+          <p className="text-sm font-bold text-cyan-700 mb-3">
+            결정과 생산성을 돕는 실용 가이드
+          </p>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-950 mb-4">
+            SpinFlow 블로그
           </h1>
-          <p className="text-gray-400 text-lg">
-            결정의 순간을 더 가볍고 즐겁게 만드는 이야기
+          <p className="text-slate-600 text-lg leading-relaxed">
+            룰렛, 계산기, 변환 도구를 더 잘 쓰는 방법과 일상 생산성 팁을 정리합니다.
           </p>
         </div>
       </header>
 
       <main className="flex-1 max-w-4xl mx-auto w-full px-4 py-12">
         <div className="grid gap-8">
-          {posts.map((post) => (
+          {visiblePosts.map((post, index) => (
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
               className="block group"
             >
-              <article className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-neon-primary/50 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]">
+              <article className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg">
                 <div className="md:flex">
                   {post.thumbnail && (
                     <div className="md:w-1/3 h-48 md:h-auto relative overflow-hidden">
                       <img
                         src={post.thumbnail}
                         alt={post.title}
+                        loading={index < 2 ? "eager" : "lazy"}
+                        decoding="async"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                     </div>
                   )}
                   <div
                     className={`p-6 md:p-8 flex flex-col justify-center ${post.thumbnail ? "md:w-2/3" : "w-full"}`}
                   >
-                    <div className="flex items-center gap-3 text-sm text-neon-primary mb-3">
-                      <span>{post.date}</span>
+                    <div className="flex flex-wrap items-center gap-2 text-sm text-cyan-700 mb-3">
+                      <span>{getPostPublishDate(post)}</span>
                       {post.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2 py-0.5 rounded-full bg-neon-primary/10 border border-neon-primary/20 text-xs"
+                          className="px-2 py-0.5 rounded-full bg-cyan-50 border border-cyan-100 text-xs"
                         >
                           #{tag}
                         </span>
                       ))}
                     </div>
-                    <h2 className="text-2xl font-bold text-white mb-3 group-hover:text-neon-primary transition-colors">
+                    <h2 className="text-2xl font-bold text-slate-950 mb-3 group-hover:text-cyan-700 transition-colors">
                       {post.title}
                     </h2>
-                    <p className="text-gray-400 leading-relaxed line-clamp-2">
+                    <p className="text-slate-600 leading-relaxed line-clamp-2">
                       {post.description}
                     </p>
                   </div>
@@ -87,6 +98,18 @@ export default function BlogIndex() {
             </Link>
           ))}
         </div>
+
+        {hasMorePosts && (
+          <div className="mt-10 text-center">
+            <button
+              type="button"
+              onClick={() => setVisibleCount((count) => count + INITIAL_POST_COUNT)}
+              className="rounded-full border border-cyan-200 bg-white px-6 py-3 font-bold text-cyan-800 shadow-sm transition-colors hover:bg-cyan-50"
+            >
+              글 더 보기
+            </button>
+          </div>
+        )}
       </main>
     </div>
   );

@@ -1,13 +1,15 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { BLOG_POSTS } from "@/data/posts";
+import { BLOG_POSTS, getPostPublishDate, isPublishedPost } from "@/data/posts";
 import SEO from "@/components/SEO";
 import { ArrowLeft, Calendar, Share2 } from "lucide-react";
 import { toast } from "sonner";
+import { trackEvent } from "@/utils/analytics";
+
+const SITE_ORIGIN = "https://www.spinkorea.kr";
 
 export default function BlogPost() {
   const { slug } = useParams();
-  const today = new Date().toISOString().slice(0, 10);
-  const post = BLOG_POSTS.find((p) => p.slug === slug && p.date <= today);
+  const post = BLOG_POSTS.find((p) => p.slug === slug && isPublishedPost(p));
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -15,6 +17,10 @@ export default function BlogPost() {
 
   const handleShare = async () => {
     const url = window.location.href;
+    trackEvent("share_clicked", {
+      content_type: "blog_post",
+      slug: post.slug,
+    });
     if (navigator.share) {
       try {
         await navigator.share({
@@ -22,8 +28,8 @@ export default function BlogPost() {
           text: post.description,
           url: url,
         });
-      } catch (error) {
-        console.log("Error sharing:", error);
+      } catch {
+        return;
       }
     } else {
       await navigator.clipboard.writeText(url);
@@ -36,11 +42,11 @@ export default function BlogPost() {
     "@type": "BlogPosting",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://spinflow.kr/blog/${post.slug}`,
+      "@id": `${SITE_ORIGIN}/blog/${post.slug}`,
     },
     headline: post.title,
     description: post.description,
-    image: post.thumbnail || "https://spinflow.kr/og-image.png",
+    image: post.thumbnail || `${SITE_ORIGIN}/og-image.png`,
     author: {
       "@type": "Organization",
       name: "SpinFlow",
@@ -50,14 +56,17 @@ export default function BlogPost() {
       name: "SpinFlow",
       logo: {
         "@type": "ImageObject",
-        url: "https://spinflow.kr/icon-192.png",
+        url: `${SITE_ORIGIN}/og-image.png`,
       },
     },
-    datePublished: post.date,
+    datePublished: post.publishAt ?? post.date,
+    dateModified: post.publishAt ?? post.date,
+    url: `${SITE_ORIGIN}/blog/${post.slug}`,
+    inLanguage: "ko-KR",
   };
 
   return (
-    <div className="min-h-screen bg-neon-bg flex flex-col pb-20">
+    <div className="min-h-screen bg-slate-50 text-slate-950 flex flex-col pb-20">
       <SEO
         title={post.title}
         description={post.description}
@@ -65,18 +74,18 @@ export default function BlogPost() {
         structuredData={structuredData}
       />
 
-      <nav className="w-full px-4 py-6 border-b border-neon-border/30 bg-neon-bg/80 backdrop-blur-md sticky top-0 z-50">
+      <nav className="w-full px-4 py-6 border-b border-slate-200 bg-white/90 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link
             to="/blog"
-            className="flex items-center gap-2 text-gray-400 hover:text-neon-primary transition-colors"
+            className="flex items-center gap-2 text-slate-600 hover:text-cyan-700 transition-colors"
           >
             <ArrowLeft size={20} />
             <span>블로그 홈</span>
           </Link>
           <button
             onClick={handleShare}
-            className="p-2 text-gray-400 hover:text-white transition-colors"
+            className="p-2 text-slate-600 hover:text-cyan-700 transition-colors"
             aria-label="공유하기"
           >
             <Share2 size={20} />
@@ -84,75 +93,78 @@ export default function BlogPost() {
         </div>
       </nav>
 
-      <article className="flex-1 w-full max-w-4xl mx-auto px-4 mt-8">
-        <header className="mb-10 text-center">
-          <div className="flex items-center justify-center gap-4 text-sm text-gray-400 mb-6">
-            <span className="flex items-center gap-1">
-              <Calendar size={14} />
-              {post.date}
-            </span>
-            <span className="w-1 h-1 bg-gray-600 rounded-full"></span>
-            <div className="flex gap-2">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-neon-primary bg-neon-primary/10 px-2 py-0.5 rounded-full text-xs"
-                >
-                  #{tag}
-                </span>
-              ))}
+      <main>
+        <article className="flex-1 w-full max-w-4xl mx-auto px-4 mt-8">
+          <header className="mb-10 text-center">
+            <div className="flex items-center justify-center gap-4 text-sm text-slate-500 mb-6">
+              <span className="flex items-center gap-1">
+                <Calendar size={14} />
+                {getPostPublishDate(post)}
+              </span>
+              <span className="w-1 h-1 bg-gray-600 rounded-full"></span>
+              <div className="flex gap-2">
+                {post.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-cyan-700 bg-cyan-50 border border-cyan-100 px-2 py-0.5 rounded-full text-xs"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <h1 className="text-3xl md:text-5xl font-bold text-slate-950 leading-tight mb-6">
+              {post.title}
+            </h1>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
+              {post.description}
+            </p>
+          </header>
+
+          {post.thumbnail && (
+            <div className="mb-12 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+              <img
+                src={post.thumbnail}
+                alt={post.title}
+                loading="eager"
+                decoding="async"
+                className="w-full h-auto object-cover max-h-[500px]"
+              />
+            </div>
+          )}
+
+          <div className="article-content-light prose prose-slate prose-lg max-w-none prose-a:text-cyan-700 prose-headings:text-slate-950">
+            {post.content}
+          </div>
+        </article>
+
+        <section className="mt-20 px-4">
+          <div className="max-w-2xl mx-auto bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm">
+            <h3 className="text-2xl font-bold text-slate-950 mb-4">
+              관련 도구로 바로 확인해 보세요
+            </h3>
+            <p className="text-slate-600 mb-8">
+              글에서 정리한 기준을 실제 선택, 계산, 기록 도구에 바로 적용할 수 있습니다.
+              <br />
+              필요한 상황에 맞는 도구를 열어 결과를 확인해 보세요.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/"
+                className="bg-cyan-700 text-white font-bold px-8 py-3 rounded-full hover:bg-cyan-800 transition-all"
+              >
+                무료 룰렛 돌리기
+              </Link>
+              <Link
+                to="/lunch-menu"
+                className="bg-slate-100 text-slate-950 font-bold px-8 py-3 rounded-full hover:bg-slate-200 transition-all border border-slate-200"
+              >
+                점심 메뉴 추천받기
+              </Link>
             </div>
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-            {post.title}
-          </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light">
-            {post.description}
-          </p>
-        </header>
-
-        {post.thumbnail && (
-          <div className="mb-12 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-            <img
-              src={post.thumbnail}
-              alt={post.title}
-              className="w-full h-auto object-cover max-h-[500px]"
-            />
-          </div>
-        )}
-
-        <div className="prose prose-invert prose-lg max-w-none prose-a:text-neon-primary prose-headings:text-neon-primary">
-          {post.content}
-        </div>
-      </article>
-
-      {/* CTA Section */}
-      <section className="mt-20 px-4">
-        <div className="max-w-2xl mx-auto bg-gradient-to-br from-neon-primary/10 to-purple-500/10 border border-neon-primary/30 rounded-2xl p-8 text-center backdrop-blur-sm">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            지금 바로 결정의 순간을 즐겨보세요!
-          </h3>
-          <p className="text-gray-300 mb-8">
-            고민할 시간에 룰렛을 돌리세요. 운명이 당신을 기다립니다.
-            <br />
-            SpinFlow와 함께라면 결정이 놀이가 됩니다.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/"
-              className="bg-neon-primary text-black font-bold px-8 py-3 rounded-full hover:bg-neon-primary/90 transition-all transform hover:scale-105"
-            >
-              무료 룰렛 돌리기
-            </Link>
-            <Link
-              to="/lunch-menu"
-              className="bg-white/10 text-white font-bold px-8 py-3 rounded-full hover:bg-white/20 transition-all border border-white/10 border-white/20"
-            >
-              점심 메뉴 추천받기
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </div>
   );
 }

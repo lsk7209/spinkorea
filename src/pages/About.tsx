@@ -2,6 +2,8 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Target, Zap, Users, Heart } from "lucide-react";
 
+const SITE_ORIGIN = "https://www.spinkorea.kr";
+
 export default function About() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -9,7 +11,7 @@ export default function About() {
     name: "SpinFlow 소개",
     description:
       "SpinFlow는 일상의 결정을 돕는 무료 온라인 유틸리티 서비스입니다.",
-    url: "https://spinflow.kr/about",
+    url: `${SITE_ORIGIN}/about`,
   };
 
   return (

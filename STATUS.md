@@ -1,26 +1,31 @@
-# Status | 마지막: 2026-04-14
+# Status | 마지막: 2026-05-05
 
 ## 현재 작업
-Cloudflare → Vercel + Turso 마이그레이션 완료. 빌드 통과.
+200개 예약 글 생성/품질 보강/자동 발행 검증 완료. 라이브 배포 연결 대기.
 
-## 최근 변경 (최근 5개)
-- 04-14: Cloudflare(wrangler/D1/Workers) 제거 → Vercel + Turso 전환
-- 04-14: api/shorten.ts, api/stats.ts, api/s/[id].ts (Vercel 서버리스) 생성
-- 04-14: App.tsx — 12개 툴 라우트 추가, /spinflow 라우트, 404(NotFound) 추가
-- 04-14: MoreTools.tsx — 24개 툴 전체 표시 (기존 12개 → 24개)
-- 04-14: use-roulette.ts 타이밍 버그 수정 (3-7s 랜덤 → 5s 고정)
+## 최근 변경 (최근 5개만)
+- 05-05: GSC sitemap 제출 스크립트와 예약 발행 workflow Google 알림 단계 추가
+- 05-05: GSC notify 스크립트 비www/www/sc-domain 속성 후보 매칭으로 보정
+- 05-05: 서비스 계정 siteOwner 확인 후 `https://spinkorea.kr/sitemap.xml` GSC API 제출 성공
+- 05-05: 제목 카니발리제이션 위험 2건 조정, 생성 본문 조사/CTA 문구 보강
+- 05-05: 기존 제목 76개와 중복 없는 예약 글 200개 생성, 품질 점수 최소 91 검증
 
 ## TODO
-- [ ] Vercel 프로젝트 연결 (vercel.com → GitHub import)
-- [ ] Turso DB 생성 후 환경변수 설정 (TURSO_DATABASE_URL, TURSO_AUTH_TOKEN)
-- [ ] DB 마이그레이션 실행 (db/schema.sql → Turso)
-- [ ] GA4 측정 ID 설정 (src/main.tsx — G-XXXXXXXXXX 교체)
-- [ ] 번들 크기 최적화 (현재 901KB — dynamic import 적용 권장)
+- [ ] Vercel 프로젝트 링크 또는 `VERCEL_DEPLOY_HOOK_URL` 등록 후 라이브 sitemap 재확인
+- [ ] GitHub Secret `GOOGLE_SERVICE_ACCOUNT_JSON` 등록 후 scheduled-publish에서 GSC 제출 확인
+- [ ] Naver Search Advisor 사이트 등록/소유 확인 후 IndexNow 403 재확인
+- [ ] AdSense OAuth 승인 후 `npm run audit:adsense -- --code=...` 재실행
+- [ ] GSC sitemap `isPending` 해소 및 발견 URL 수 갱신 확인
 
 ## 결정사항
-- 단축 URL 경로: /{id} → /s/{id} (SPA 라우팅 충돌 방지)
-- Turso 미설정 시 URL 단축/통계 API graceful 비활성화
+- WordPress 아님: 플러그인/테마 정리는 대상 없음
+- 예약 발행: `publishAt` ISO KST 기준으로 공개 여부 판단
+- 사이트맵 날짜: 정적 페이지는 명시 lastmod, `/blog`는 최신 공개 글 날짜 사용
+- Google 알림: URL별 강제 색인 대신 Search Console sitemap submit/list API 사용
+- 예약 글: 2026-05-05 18:00 KST부터 5시간 간격, 마지막 2026-06-16 05:00 KST
 
 ## 주의
-- .env.example 참고하여 .env.local 생성 필요
-- Vercel 환경변수에 TURSO_DATABASE_URL, TURSO_AUTH_TOKEN 등록 필요
+- 현재 Vercel CLI에 프로젝트 링크가 없어 로컬 수정분을 직접 배포하지 못함
+- 라이브 sitemap은 아직 구버전 캐시일 수 있으므로 배포 후 재검증 필요
+- `npm run notify:google` 결과는 `google-audit-output/gsc-sitemap-submit.json`에 기록됨
+- `gh` 미로그인 상태라 GitHub Secrets 자동 등록은 못 함

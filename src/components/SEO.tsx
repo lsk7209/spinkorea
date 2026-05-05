@@ -1,12 +1,17 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import sitePages from "@/data/site-pages.json";
+
+const SITE_ORIGIN = "https://www.spinkorea.kr";
+const SITE_NAME = "SpinFlow";
+const JSON_LD_ID = "spinflow-json-ld";
 
 export interface SEOProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
   image?: string;
-  structuredData?: Record<string, any>;
+  structuredData?: Record<string, unknown>;
 }
 
 export default function SEO({
@@ -17,50 +22,45 @@ export default function SEO({
   structuredData,
 }: SEOProps) {
   const location = useLocation();
-  const canonicalUrl = `https://www.spinkorea.kr${location.pathname}`;
+  const canonicalUrl = `${SITE_ORIGIN}${location.pathname}`;
+  const routeMeta = sitePages.find((page) => page.path === location.pathname);
+  const pageTitle = title ?? routeMeta?.title ?? "SpinFlow - 무료 온라인 룰렛과 웹 유틸리티";
+  const pageDescription =
+    description ??
+    routeMeta?.description ??
+    "SpinFlow는 온라인 룰렛, 랜덤 추첨, 계산기, 변환기 등 다양한 무료 웹 유틸리티를 제공합니다.";
+  const imageUrl = image.startsWith("http") ? image : `${SITE_ORIGIN}${image}`;
 
   useEffect(() => {
-    // Title
-    document.title = title;
+    document.title = pageTitle;
 
-    // Helper to set meta tags
-    const setMetaTag = (
-      selector: string,
-      content: string,
-      attrName: string = "name",
-    ) => {
-      let element = document.querySelector(`meta[${selector}]`);
+    const setMetaTag = (attribute: "name" | "property", value: string, content: string) => {
+      let element = document.querySelector(`meta[${attribute}="${value}"]`);
       if (!element) {
         element = document.createElement("meta");
-        // Handle property vs name attributes
-        const [key, value] = selector.replace(/"/g, "").split("=");
-        element.setAttribute(key || attrName, value || "");
+        element.setAttribute(attribute, value);
         document.head.appendChild(element);
       }
       element.setAttribute("content", content);
     };
 
-    // Standard Meta Tags
-    setMetaTag('name="description"', description);
-    setMetaTag('name="keywords"', keywords);
+    setMetaTag("name", "description", pageDescription);
+    setMetaTag("name", "keywords", keywords);
 
-    // Open Graph
-    setMetaTag('property="og:title"', title);
-    setMetaTag('property="og:description"', description);
-    setMetaTag('property="og:image"', image);
-    setMetaTag('property="og:url"', canonicalUrl);
-    setMetaTag('property="og:type"', "website");
-    setMetaTag('property="og:locale"', "ko_KR");
-    setMetaTag('property="og:site_name"', "SpinFlow");
+    setMetaTag("property", "og:title", pageTitle);
+    setMetaTag("property", "og:description", pageDescription);
+    setMetaTag("property", "og:image", imageUrl);
+    setMetaTag("property", "og:url", canonicalUrl);
+    setMetaTag("property", "og:type", "website");
+    setMetaTag("property", "og:locale", "ko_KR");
+    setMetaTag("property", "og:site_name", SITE_NAME);
 
-    // Twitter Card
-    setMetaTag('name="twitter:card"', "summary_large_image");
-    setMetaTag('name="twitter:title"', title);
-    setMetaTag('name="twitter:description"', description);
-    setMetaTag('name="twitter:image"', image);
-    setMetaTag('name="twitter:url"', canonicalUrl);
+    setMetaTag("name", "twitter:card", "summary_large_image");
+    setMetaTag("name", "twitter:title", pageTitle);
+    setMetaTag("name", "twitter:description", pageDescription);
+    setMetaTag("name", "twitter:image", imageUrl);
+    setMetaTag("name", "twitter:url", canonicalUrl);
 
-    // Canonical Link
     let linkCanonical = document.querySelector('link[rel="canonical"]');
     if (!linkCanonical) {
       linkCanonical = document.createElement("link");
@@ -69,19 +69,24 @@ export default function SEO({
     }
     linkCanonical.setAttribute("href", canonicalUrl);
 
-    // Structured Data (JSON-LD)
+    const staleJsonLd = document.querySelector(
+      `script[type="application/ld+json"]:not(#${JSON_LD_ID})`,
+    );
+    staleJsonLd?.remove();
+
+    let scriptJSONLD = document.getElementById(JSON_LD_ID);
     if (structuredData) {
-      let scriptJSONLD = document.querySelector(
-        'script[type="application/ld+json"]',
-      );
       if (!scriptJSONLD) {
         scriptJSONLD = document.createElement("script");
+        scriptJSONLD.setAttribute("id", JSON_LD_ID);
         scriptJSONLD.setAttribute("type", "application/ld+json");
         document.head.appendChild(scriptJSONLD);
       }
       scriptJSONLD.textContent = JSON.stringify(structuredData);
+    } else {
+      scriptJSONLD?.remove();
     }
-  }, [title, description, keywords, image, canonicalUrl, structuredData]);
+  }, [pageTitle, pageDescription, keywords, imageUrl, canonicalUrl, structuredData]);
 
   return null;
 }

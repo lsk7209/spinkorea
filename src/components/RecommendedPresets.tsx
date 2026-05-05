@@ -48,8 +48,8 @@ export default function RecommendedPresets({ onSelect, fallbackItems }: Recommen
         <section className="w-full max-w-7xl mx-auto px-4 py-8">
             <div className="flex items-center justify-between mb-4">
                 <div>
-                    <p className="text-xs uppercase tracking-[0.24em] text-neon-primary">Recommended presets</p>
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mt-1">원하는 주제로 바로 세팅</h2>
+                    <p className="text-xs uppercase tracking-[0.24em] text-cyan-700 font-semibold">Recommended presets</p>
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-950 mt-1">원하는 주제로 바로 세팅</h2>
                 </div>
             </div>
 
@@ -63,14 +63,14 @@ export default function RecommendedPresets({ onSelect, fallbackItems }: Recommen
                             e.stopPropagation();
                             onSelect([...preset.items]);
                         }}
-                        className="group text-left bg-white/5 border border-white/10 hover:border-neon-primary/40 rounded-2xl p-4 transition-all hover:-translate-y-1 hover:shadow-neon-sm flex flex-col gap-2"
+                        className="group text-left bg-white border border-slate-200 hover:border-cyan-500 rounded-2xl p-4 transition-all hover:-translate-y-1 hover:shadow-lg flex flex-col gap-2"
                     >
                         <span className="text-2xl drop-shadow">{preset.icon}</span>
                         <div className="flex-1">
-                            <p className="text-sm font-bold text-gray-100 group-hover:text-white">{preset.title}</p>
-                            <p className="text-xs text-gray-400 mt-1 leading-snug">{preset.description}</p>
+                            <p className="text-sm font-bold text-slate-950">{preset.title}</p>
+                            <p className="text-xs text-slate-600 mt-1 leading-snug">{preset.description}</p>
                         </div>
-                        <span className="text-xs font-semibold text-neon-primary group-hover:text-white flex items-center gap-1">
+                        <span className="text-xs font-semibold text-cyan-700 flex items-center gap-1">
                             바로 적용
                             <span aria-hidden>✓</span>
                         </span>

@@ -69,4 +69,59 @@
     background-color: rgba(255, 255, 255, 0.03);
     border-color: rgba(255, 255, 255, 0.08);
   }
+
+  .prerender-shell {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 48px 20px;
+    color: #0f172a;
+    background: #ffffff;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.7;
+  }
+
+  .prerender-shell h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .prerender-shell h2 {
+    font-size: 1.375rem;
+    margin: 32px 0 12px;
+  }
+
+  .prerender-shell a {
+    color: #0e7490;
+    font-weight: 700;
+  }
+
+  .article-content-light .text-white,
+  .article-content-light .prose-headings\:text-neon-primary {
+    color: #0f172a;
+  }
+
+  .article-content-light .text-gray-300,
+  .article-content-light .text-gray-400,
+  .article-content-light .text-gray-500 {
+    color: #475569;
+  }
+
+  .article-content-light .text-neon-primary,
+  .article-content-light a {
+    color: #0e7490;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .article-content-light .bg-white\/5,
+  .article-content-light .bg-neon-primary\/5 {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+  }
+
+  .article-content-light .border-white\/10,
+  .article-content-light .border-white\/20 {
+    border-color: #e2e8f0;
+  }
 }

@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ToolLayout from "@/components/ToolLayout";
 
-const SAMPLE_MARKDOWN = `# Markdown Preview (예시)
+const SAMPLE_MARKDOWN = `## Markdown Preview (예시)
 
 ## 이것은 H2 제목입니다
 *이탤릭체*와 **볼드체**를 지원합니다.
@@ -15,7 +15,7 @@ const SAMPLE_MARKDOWN = `# Markdown Preview (예시)
 
 ### 코드 블록
 \`\`\`javascript
-console.log("Hello, SpinFlow!");
+const message = "Hello, SpinFlow!";
 \`\`\`
 
 ### 테이블

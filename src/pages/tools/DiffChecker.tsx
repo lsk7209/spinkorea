@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Change } from "diff";
 import { diffChars, diffLines, diffWords } from "diff";
 import { RefreshCcw } from "lucide-react";
@@ -16,12 +16,12 @@ export default function DiffChecker() {
   );
   const [diffs, setDiffs] = useState<Change[]>([]);
 
-  useState(() => {
+  useEffect(() => {
     calculateDiff();
-  });
+  }, [oldText, newText, diffType]);
 
   function calculateDiff() {
-    let changes;
+    let changes: Change[];
     if (diffType === "chars") changes = diffChars(oldText, newText);
     else if (diffType === "lines") changes = diffLines(oldText, newText);
     else changes = diffWords(oldText, newText);
@@ -79,8 +79,10 @@ export default function DiffChecker() {
             <select
               value={diffType}
               onChange={(e) => {
-                setDiffType(e.target.value as any);
-                setTimeout(handleDiff, 0);
+                const value = e.target.value;
+                if (value === "chars" || value === "words" || value === "lines") {
+                  setDiffType(value);
+                }
               }}
               className="bg-black/30 border border-white/20 rounded px-3 py-1 text-white focus:outline-none focus:border-neon-primary"
             >

@@ -45,7 +45,7 @@ const faqData: FAQItem[] = [
   {
     question: "문의나 제안은 어떻게 하나요?",
     answer:
-      "문의 페이지 또는 contact@spinflow.pages.dev로 이메일을 보내주시면 됩니다. 서비스 개선 제안, 버그 리포트, 협업 문의 등 모든 의견을 환영합니다.",
+      "문의 페이지의 GitHub Issues 링크로 보내주시면 됩니다. 서비스 개선 제안, 버그 리포트, 협업 문의 등 모든 의견을 확인합니다.",
   },
   {
     question: "어떤 유틸리티 도구들이 있나요?",

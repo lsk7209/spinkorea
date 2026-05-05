@@ -1,0 +1,46 @@
+name: Scheduled publish
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */5 * * *"
+
+jobs:
+  publish-window:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+      GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+      GSC_SITE_URL: https://spinkorea.kr/
+      GSC_SITEMAP_URL: https://spinkorea.kr/sitemap.xml
+      INDEXNOW_RECENT_HOURS: 6
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run content:validate
+
+      - run: npm run build
+
+      - name: Trigger Vercel deploy hook
+        if: ${{ env.VERCEL_DEPLOY_HOOK_URL != '' }}
+        run: curl -fsS -X POST "$VERCEL_DEPLOY_HOOK_URL"
+
+      - name: Wait for deployment propagation
+        if: ${{ env.VERCEL_DEPLOY_HOOK_URL != '' }}
+        run: sleep 180
+
+      - name: Notify Google Search Console sitemap
+        if: ${{ env.GOOGLE_SERVICE_ACCOUNT_JSON != '' }}
+        run: npm run notify:google
+        continue-on-error: true
+
+      - name: Notify IndexNow
+        run: npm run notify:indexnow
+        continue-on-error: true

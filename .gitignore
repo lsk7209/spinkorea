@@ -23,6 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+google-audit-output
+.omx
+*.token.json
 
 # Editor
 .vscode

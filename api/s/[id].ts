@@ -1,4 +1,4 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node";
+import type { VercelRequest, VercelResponse } from "../types";
 import { createClient } from "@libsql/client";
 
 function getDb() {

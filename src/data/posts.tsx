@@ -1,25 +1,40 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { GENERATED_BLOG_POSTS } from "./generatedContent";
 
 export interface BlogPost {
   slug: string;
   title: string;
   description: string;
   date: string;
+  publishAt?: string;
   content: ReactNode;
   tags: string[];
   thumbnail?: string;
+  qualityScore?: number;
 }
 
 // 오늘 날짜 기준으로 공개된 포스트만 반환 (워드프레스 예약글 방식)
-export function getPublishedPosts(): BlogPost[] {
-  const today = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
-  return BLOG_POSTS.filter((post) => post.date <= today).sort((a, b) =>
-    a.date > b.date ? -1 : 1,
+export function getPostPublishDate(post: BlogPost): string {
+  return post.publishAt?.slice(0, 10) ?? post.date;
+}
+
+export function getPostPublishTime(post: BlogPost): number {
+  return new Date(post.publishAt ?? `${post.date}T00:00:00+09:00`).getTime();
+}
+
+export function isPublishedPost(post: BlogPost, now = new Date()): boolean {
+  return getPostPublishTime(post) <= now.getTime();
+}
+
+// 현재 시각 기준으로 공개된 포스트만 반환한다.
+export function getPublishedPosts(now = new Date()): BlogPost[] {
+  return BLOG_POSTS.filter((post) => isPublishedPost(post, now)).sort(
+    (a, b) => getPostPublishTime(b) - getPostPublishTime(a),
   );
 }
 
-export const BLOG_POSTS: BlogPost[] = [
+const CURATED_BLOG_POSTS: BlogPost[] = [
   {
     slug: "overcome-decision-fatigue",
     title: "결정 장애(Decision Fatigue)를 극복하는 3가지 과학적인 방법",
@@ -6703,4 +6718,9 @@ export const BLOG_POSTS: BlogPost[] = [
       </div>
     ),
   },
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  ...CURATED_BLOG_POSTS,
+  ...GENERATED_BLOG_POSTS,
 ];

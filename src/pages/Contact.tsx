@@ -2,13 +2,15 @@ import SEO from "@/components/SEO";
 import { Mail, MessageSquare, Clock, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const SITE_ORIGIN = "https://www.spinkorea.kr";
+
 export default function Contact() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: "SpinFlow 문의하기",
     description: "SpinFlow 서비스에 대한 문의, 제안, 협업 요청을 받습니다.",
-    url: "https://spinflow.kr/contact",
+    url: `${SITE_ORIGIN}/contact`,
   };
 
   return (

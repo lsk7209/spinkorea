@@ -23,8 +23,8 @@ export default function JsonFormatter() {
       setOutput(JSON.stringify(parsed, null, space));
       setError(null);
       toast.success("포맷팅이 완료되었습니다.");
-    } catch (e: any) {
-      setError(e.message);
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "JSON 파싱 오류가 발생했습니다.");
       toast.error("유효하지 않은 JSON 형식입니다.");
     }
   };
@@ -36,8 +36,8 @@ export default function JsonFormatter() {
       setOutput(JSON.stringify(parsed));
       setError(null);
       toast.success("압축(Minify)이 완료되었습니다.");
-    } catch (e: any) {
-      setError(e.message);
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "JSON 파싱 오류가 발생했습니다.");
       toast.error("유효하지 않은 JSON 형식입니다.");
     }
   };
@@ -206,11 +206,11 @@ export default function JsonFormatter() {
         {/* Guide */}
         <div className="mt-6 border-t border-white/10 pt-6">
           <h3 className="text-lg font-semibold text-white mb-2">
-            📌 JSON 활용 가이이드
+            📌 JSON 활용 가이드
           </h3>
           <p className="text-gray-400 text-sm leading-relaxed">
             JSON(JavaScript Object Notation)은 데이터를 저장하거나 전송할 때
-            많이 사용되는 가벼운 형식입니다. 개발자 도구에서 API 읍답을
+            많이 사용되는 가벼운 형식입니다. 개발자 도구에서 API 응답을
             확인하거나, 설정 파일을 수정할 때 이 도구를 사용하여 가독성을 높일
             수 있습니다.
             <strong>Validate</strong> 기능을 통해 쉼표(,) 누락이나 괄호 짝이

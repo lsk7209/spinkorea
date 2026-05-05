@@ -17,6 +17,7 @@ import SEO from '@/components/SEO';
 
 import RecommendedPresets from '@/components/RecommendedPresets';
 import { TEMPLATES } from '@/data/templates';
+import { trackEvent } from '@/utils/analytics';
 
 const DEFAULT_ITEMS = [
     '한식',
@@ -35,7 +36,7 @@ interface HomeProps {
     description?: string;
     keywords?: string;
     ArticleComponent?: ComponentType;
-    structuredData?: Record<string, any>;
+    structuredData?: Record<string, unknown>;
     preferInitialOnFirstLoad?: boolean;
     /**
      * 프리셋 딥링크(/spinflow/lunch 등)를 감지하여 자동으로 적용/루트로 되돌리는 동작을 끌지 여부.
@@ -46,8 +47,8 @@ interface HomeProps {
 
 export default function Home({
     initialItems = DEFAULT_ITEMS,
-    title = "SpinFlow - 온라인 룰렛 돌리기 | 원판돌리기 | 랜덤 추첨기",
-    description = "무료 온라인 룰렛 돌리기 SpinFlow. 점심 메뉴 추천, 벌칙 정하기, 당첨자 추첨, 순서 정하기 등 다양한 결정을 쉽고 공정하게! 설치 없이 바로 사용하는 원판돌리기 게임.",
+    title = "무료 온라인 룰렛 돌리기 SpinFlow | 원판돌리기·랜덤 추첨기",
+    description = "점심 메뉴, 당첨자, 벌칙, 순서를 공정하게 정하는 무료 온라인 룰렛입니다. 설치 없이 모바일과 PC에서 바로 사용할 수 있습니다.",
     keywords = "룰렛, 룰렛돌리기, 원판돌리기, 룰렛게임, 랜덤추첨기, 제비뽑기, 사다리타기, 점심메뉴추천, 벌칙정하기, 당첨자추첨, SpinFlow, 스핀플로우, 온라인룰렛, 모바일룰렛",
     ArticleComponent = SEOArticle,
     structuredData,
@@ -88,6 +89,10 @@ export default function Home({
         if (items.length === 0) {
             return;
         }
+        trackEvent('tool_used', {
+            tool: 'roulette',
+            item_count: items.length,
+        });
         setShowResult(false);
         spin();
     }, [items.length, spin]);
@@ -147,34 +152,27 @@ export default function Home({
     }, [location.pathname, handleUpdateItems, navigate]);
 
     return (
-        <div className="min-h-[100dvh] bg-neon-bg flex flex-col">
+        <div className="min-h-[100dvh] bg-slate-50 text-slate-950 flex flex-col">
             <SEO title={title} description={description} keywords={keywords} structuredData={structuredData} />
             {/* Header / Hero Section */}
-            <header className="w-full relative overflow-hidden flex flex-col items-center justify-center pt-20 pb-12 px-4">
-                {/* Background Decor */}
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-                    <div className="absolute top-[-20%] left-[10%] w-[600px] h-[600px] bg-aurora-primary/20 rounded-full blur-[120px] animate-float-slow" />
-                    <div className="absolute bottom-[-20%] right-[10%] w-[600px] h-[600px] bg-aurora-purple/20 rounded-full blur-[120px] animate-float-slow" style={{ animationDelay: '2s' }} />
-                    <div className="absolute top-[40%] left-[50%] -translate-x-1/2 w-[400px] h-[400px] bg-aurora-accent/10 rounded-full blur-[100px] animate-pulse-soft" />
-                </div>
-
+            <header className="w-full relative overflow-hidden flex flex-col items-center justify-center pt-24 pb-10 px-4 bg-white border-b border-slate-200">
                 <div className="animate-slide-up flex flex-col items-center text-center z-10 max-w-4xl mx-auto">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 animate-fade-in hover:bg-white/10 transition-colors cursor-default group">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-50 border border-cyan-100 mb-6 animate-fade-in cursor-default group">
                         <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-aurora-secondary opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-aurora-secondary"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-500 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-600"></span>
                         </span>
-                        <span className="text-gray-300 text-sm font-medium tracking-wide group-hover:text-white transition-colors">Trendy Decision Maker</span>
+                        <span className="text-cyan-800 text-sm font-semibold tracking-wide">무료 결정 도구와 웹 유틸리티</span>
                     </div>
 
-                    <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tight leading-none text-white drop-shadow-2xl">
-                        <span className="bg-gradient-to-r from-aurora-primary via-aurora-secondary to-aurora-accent bg-clip-text text-transparent hover:opacity-90 transition-opacity cursor-default animate-shimmer bg-[length:200%_auto]">Spin</span>
-                        <span className="text-white">Flow</span>
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight text-slate-950 [word-break:keep-all]">
+                        무료 온라인 룰렛 돌리기
                     </h1>
 
-                    <p className="text-lg md:text-2xl text-gray-300 max-w-2xl leading-relaxed font-medium">
-                        결정이 망설여질 때, <br className="md:hidden" />
-                        <span className="text-aurora-secondary font-bold">SpinFlow</span>가 답을 드립니다.
+                    <p className="text-base md:text-xl text-slate-600 max-w-2xl leading-relaxed font-medium [word-break:keep-all]">
+                        점심 메뉴, 당첨자, 벌칙, 순서를 공정하게 정하세요.{" "}
+                        <br className="hidden md:block" />
+                        SpinFlow는 설치 없이 바로 쓰는 룰렛과 생활 유틸리티를 제공합니다.
                     </p>
                 </div>
             </header>
@@ -190,10 +188,10 @@ export default function Home({
             {/* 메인 콘텐츠 */}
             <main
                 ref={rouletteSectionRef}
-                className="flex-1 flex flex-col md:flex-row items-center justify-center gap-10 px-4 py-10 pb-32 max-w-7xl mx-auto w-full"
+                className="flex-1 flex flex-col md:flex-row items-center justify-center gap-10 px-4 py-10 pb-20 max-w-7xl mx-auto w-full"
             >
                 {/* 모바일: 룰렛 중앙, 데스크톱: 룰렛 좌측 */}
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 rounded-3xl bg-slate-950 p-4 shadow-xl">
                     <RouletteWheel
                         items={items}
                         winningIndex={winningIndex}
@@ -210,7 +208,7 @@ export default function Home({
 
                 {/* 데스크톱: 항목 편집 패널 (우측) */}
                 <div className="hidden md:block w-full max-w-md">
-                    <div className="card card-hover p-6">
+                    <div className="rounded-3xl bg-slate-950 border border-slate-800 p-6 shadow-xl">
                         <ItemEditor items={items} onUpdate={handleUpdateItems} />
                         {urlWarning && (
                             <div className="mt-4 p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-xl">
@@ -244,14 +242,14 @@ export default function Home({
                         <button
                             type="button"
                             onClick={() => setIsEditorModalOpen(true)}
-                            className="btn-secondary w-full backdrop-blur-md bg-white/5 border-white/10 hover:bg-white/10 group"
+                            className="btn-secondary w-full backdrop-blur-md bg-slate-900 border-slate-700 hover:bg-slate-800 group"
                         >
                             <span className="group-hover:scale-110 transition-transform">✏️</span> 항목 수정
                         </button>
                         <button
                             type="button"
                             onClick={() => setIsTemplateModalOpen(true)}
-                            className="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-2xl text-white font-bold hover:border-aurora-primary/50 transition-all flex items-center justify-center gap-2 hover:-translate-y-1 active:scale-95 shadow-lg shadow-black/20"
+                            className="bg-slate-900 border border-slate-700 rounded-2xl text-white font-bold hover:border-cyan-500 transition-all flex items-center justify-center gap-2 hover:-translate-y-1 active:scale-95 shadow-lg shadow-black/20"
                         >
                             <LayoutGrid size={20} className="text-aurora-secondary" />
                             템플릿

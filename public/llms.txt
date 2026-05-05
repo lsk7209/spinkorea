@@ -1,35 +1,35 @@
 # SpinFlow — 무료 온라인 룰렛 & 유틸리티 도구 모음
 
 ## 서비스 요약
-SpinFlow는 결정 피로(Decision Fatigue)를 줄여주는 무료 웹 서비스입니다.
-설치 없이 브라우저에서 바로 사용 가능하며, 모바일/PC 모두 지원합니다.
+SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라인 룰렛, 랜덤 추첨, 계산기, 변환기, 개발자 도구를 설치 없이 제공합니다.
 
-## 핵심 기능
-- **온라인 룰렛 돌리기**: 점심 메뉴 추천, 당첨자 추첨, 벌칙 정하기, 순서 정하기
-- **암호학적 난수**: crypto.getRandomValues() 사용으로 공정한 결과 보장
-- **URL 공유**: lz-string 압축으로 룰렛 설정을 URL로 공유
-- **24개 무료 유틸리티 도구**: 계산기, 변환기, 생성기, 개발자 도구
+## 주요 페이지
+- [무료 온라인 룰렛 돌리기](https://www.spinkorea.kr/) — SpinFlow는 결정이 필요한 순간에 룰렛, 추첨, 계산, 변환 도구를 바로 제공하는 무료 유틸리티 사이트입니다.
+- [SpinFlow 룰렛](https://www.spinkorea.kr/spinflow) — 항목을 직접 입력하거나 템플릿을 선택해 공정한 룰렛 결과를 만들 수 있습니다.
+- [점심 메뉴 추천 룰렛](https://www.spinkorea.kr/lunch-menu) — 직장인과 모임을 위한 점심 메뉴 선택 도구입니다.
+- [랜덤 숫자 뽑기](https://www.spinkorea.kr/random-number) — 추첨, 게임, 수업, 이벤트에 쓸 숫자를 공정하게 생성합니다.
+- [무료 웹 유틸리티 모음](https://www.spinkorea.kr/tools) — 랜덤 추첨, 텍스트, 개발, 디자인, 계산 도구를 한 곳에서 사용할 수 있습니다.
+- [SpinFlow 소개](https://www.spinkorea.kr/about) — 설치 없이 사용할 수 있는 결정 도구와 생활 유틸리티를 제공합니다.
+- [자주 묻는 질문](https://www.spinkorea.kr/faq) — 서비스 이용 전 확인할 수 있는 핵심 질문을 정리했습니다.
+- [문의하기](https://www.spinkorea.kr/contact) — 서비스 개선 제안과 오류 제보를 받습니다.
+- [개인정보처리방침](https://www.spinkorea.kr/privacy) — 사용자 개인정보와 브라우저 저장 데이터 처리 방침입니다.
+- [이용약관](https://www.spinkorea.kr/terms) — 서비스 이용에 필요한 기본 약관입니다.
+- [SpinFlow 블로그](https://www.spinkorea.kr/blog) — 결정과 생산성을 돕는 실용 가이드를 제공합니다.
+- [로또 번호 생성기](https://www.spinkorea.kr/tools/lotto-generator) — 버튼 한 번으로 로또 번호 조합을 생성합니다.
 
-## 유틸리티 도구 목록
-랜덤/추첨: 로또번호생성, 주사위던지기, 동전던지기, Yes/No오라클, 랜덤팀편성, 비밀번호생성
-텍스트/개발: 글자수세기, 대소문자변환, 로렘입숨, JSON포맷터, URL인코더, Base64변환, Diff비교, 마크다운미리보기
-색상/디자인: 색상변환기, CSS그림자생성, QR코드생성
-계산기: 만나이계산기, BMI계산기, 퍼센트계산기, 시간계산기, 단위변환기
-날짜: D-Day카운터, Unix타임스탬프
+## 최신 블로그
+- [완벽주의의 덫: 80점이 100점보다 나을 때](https://www.spinkorea.kr/blog/perfectionism-trap) — 완벽주의는 높은 기준이 아니라 실행을 막는 두려움입니다. 완벽주의를 극복하고 실행력을 높이는 방법.
+- [Lorem Ipsum의 비밀: 500년간 디자이너가 써온 텍스트의 정체](https://www.spinkorea.kr/blog/lorem-ipsum-history) — Lorem ipsum dolor sit amet... 이 이상한 라틴어의 출처, 키케로와의 연결고리, 현대 디자인에서 쓰이는 이유.
+- [운동이 뇌를 바꾼다: 신체 활동과 인지 기능의 관계](https://www.spinkorea.kr/blog/exercise-brain) — 30분 걷기가 항우울제보다 효과적일 수 있습니다. 운동이 뇌에 미치는 과학적 효과와 실천 가이드.
+- [색상 심리학: 색이 감정과 행동에 미치는 영향](https://www.spinkorea.kr/blog/color-psychology) — 빨간색이 식욕을 자극하고 파란색이 집중력을 높이는 이유. 색상 심리학을 디자인·마케팅에 활용하는 방법.
+- [잠 못 자는 현대인을 위한 수면 최적화 완벽 가이드](https://www.spinkorea.kr/blog/sleep-optimization) — 수면 부채, 수면 사이클, 최적 취침 시간까지. 과학이 알려주는 수면의 질을 높이는 방법.
+- [나이 계산기로 알아보는 흥미로운 시간의 사실들](https://www.spinkorea.kr/blog/age-calculation-trivia) — 당신이 살아온 날, 시간, 심장 박동 수. 나이를 다양한 단위로 환산하면 삶이 더 생생하게 느껴집니다.
+- [회의를 줄이면 생산성이 늘어나는 이유](https://www.spinkorea.kr/blog/fewer-meetings) — 직장인 하루 평균 3.5시간이 회의로 낭비됩니다. 비효율적인 회의를 줄이고 생산성을 높이는 실전 전략.
+- [BMI 계산기의 한계: 숫자 너머의 건강 지표](https://www.spinkorea.kr/blog/bmi-limitations) — BMI가 과체중이라도 건강할 수 있고, 정상이라도 위험할 수 있습니다. BMI의 한계와 보완 지표를 알아봅니다.
+- [목표 설정의 과학: SMART 목표 vs OKR — 무엇을 써야 하나](https://www.spinkorea.kr/blog/goal-setting-smart) — 새해 결심이 3주 만에 사라지는 이유. SMART 목표와 OKR의 차이, 상황에 맞는 목표 설정법을 알아봅니다.
+- [비밀번호 강도 테스트: 내 비밀번호는 얼마나 안전한가](https://www.spinkorea.kr/blog/password-strength) — 해커가 비밀번호를 푸는 데 걸리는 시간, 강력한 비밀번호의 조건, 비밀번호 관리자를 써야 하는 이유.
+- [아침 루틴이 하루를 결정하는 이유](https://www.spinkorea.kr/blog/morning-routine) — 성공한 사람들은 왜 아침에 특별한 루틴을 갖는가. 과학적으로 검증된 아침 루틴 설계 가이드.
+- [마크다운으로 글 쓰는 이유: 개발자·기획자의 노트 작성법](https://www.spinkorea.kr/blog/markdown-writing) — 서식 걱정 없이 내용에만 집중할 수 있는 마크다운. 기본 문법부터 실전 활용까지 10분 완성 가이드.
 
-## 블로그 주제
-결정 심리학, 생산성 팁, 디지털 웰빙, 개발자 도구 가이드, 보안/비밀번호, QR코드 활용
-
-## 기술 스택
-React 19, TypeScript, Vite, Tailwind CSS, Framer Motion, Cloudflare D1(→Turso), Vercel 배포
-
-## 대상 사용자
-- 점심 메뉴를 고르기 어려운 직장인
-- 공정한 추첨이 필요한 모임/이벤트 운영자
-- 업무에 필요한 간단한 계산/변환이 필요한 사용자
-- 개발자 (JSON 포맷, Base64, URL 인코딩 등)
-
-## 서비스 URL
-- 메인: https://www.spinkorea.kr
-- 유틸리티: https://www.spinkorea.kr/tools
-- 블로그: https://www.spinkorea.kr/blog
+## 기술 정보
+React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.xml, JSON-LD, AdSense 자동광고, GA4를 사용합니다.

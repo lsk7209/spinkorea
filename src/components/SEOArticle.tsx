@@ -6,13 +6,13 @@
 
 export default function SEOArticle() {
   return (
-    <article className="w-full max-w-4xl mx-auto px-4 py-16 pb-32 text-neon-primary/80">
-      <h1 className="text-3xl font-bold text-neon-primary mb-6">
+    <article className="w-full max-w-5xl mx-auto px-4 py-16 pb-32 text-slate-700">
+      <h2 className="text-3xl font-bold text-slate-950 mb-6">
         SpinFlow - 공정한 결정 룰렛
-      </h1>
+      </h2>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-neon-primary mb-4">
+        <h2 className="text-2xl font-semibold text-slate-950 mb-4">
           사용 방법
         </h2>
         <p className="mb-4">
@@ -31,7 +31,7 @@ export default function SEOArticle() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-neon-primary mb-4">
+        <h2 className="text-2xl font-semibold text-slate-950 mb-4">
           공정성 및 알고리즘
         </h2>
         <p className="mb-4">
@@ -50,7 +50,7 @@ export default function SEOArticle() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-neon-primary mb-4">
+        <h2 className="text-2xl font-semibold text-slate-950 mb-4">
           활용 사례
         </h2>
         <p className="mb-4">
@@ -69,12 +69,12 @@ export default function SEOArticle() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-neon-primary mb-4">
+        <h2 className="text-2xl font-semibold text-slate-950 mb-4">
           자주 묻는 질문 (FAQ)
         </h2>
         <div className="space-y-4">
           <div>
-            <h3 className="text-lg font-semibold text-neon-primary mb-2">
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">
               항목은 몇 개까지 입력할 수 있나요?
             </h3>
             <p>
@@ -82,7 +82,7 @@ export default function SEOArticle() {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-neon-primary mb-2">
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">
               결과는 어떻게 저장되나요?
             </h3>
             <p>
@@ -91,7 +91,7 @@ export default function SEOArticle() {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-neon-primary mb-2">
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">
               정말 공정한가요?
             </h3>
             <p>
@@ -101,7 +101,7 @@ export default function SEOArticle() {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-neon-primary mb-2">
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">
               모바일에서도 사용할 수 있나요?
             </h3>
             <p>
@@ -113,25 +113,25 @@ export default function SEOArticle() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-neon-primary mb-4">
+        <h2 className="text-2xl font-semibold text-slate-950 mb-4">
           왜 SpinFlow인가?
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white/5 p-4 rounded-lg border border-white/10">
-            <h3 className="font-bold text-white mb-2">🔒 100% 프라이버시</h3>
-            <p className="text-sm text-gray-400">
+          <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+            <h3 className="font-bold text-slate-950 mb-2">🔒 100% 프라이버시</h3>
+            <p className="text-sm text-slate-600">
               모든 데이터는 브라우저에서만 처리됩니다. 서버에 어떤 정보도 전송되지 않습니다.
             </p>
           </div>
-          <div className="bg-white/5 p-4 rounded-lg border border-white/10">
-            <h3 className="font-bold text-white mb-2">⚡ 설치 불필요</h3>
-            <p className="text-sm text-gray-400">
+          <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+            <h3 className="font-bold text-slate-950 mb-2">⚡ 설치 불필요</h3>
+            <p className="text-sm text-slate-600">
               앱 설치 없이 웹 브라우저에서 바로 사용하세요. 모든 기기에서 접속 가능합니다.
             </p>
           </div>
-          <div className="bg-white/5 p-4 rounded-lg border border-white/10">
-            <h3 className="font-bold text-white mb-2">🔗 쉬운 공유</h3>
-            <p className="text-sm text-gray-400">
+          <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+            <h3 className="font-bold text-slate-950 mb-2">🔗 쉬운 공유</h3>
+            <p className="text-sm text-slate-600">
               URL 하나로 룰렛 설정을 공유하세요. 그룹 결정에 완벽한 솔루션입니다.
             </p>
           </div>
@@ -139,7 +139,7 @@ export default function SEOArticle() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-neon-primary mb-4">
+        <h2 className="text-2xl font-semibold text-slate-950 mb-4">
           더 많은 유틸리티 도구
         </h2>
         <p className="mb-4">
@@ -148,32 +148,32 @@ export default function SEOArticle() {
           일상에서 자주 사용하는 도구들을 한 곳에서 이용하세요.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <a href="/tools/lotto-generator" className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors text-center">
+          <a href="/tools/lotto-generator" className="p-3 bg-white border border-slate-200 rounded-lg hover:border-cyan-500 transition-colors text-center shadow-sm">
             <span className="block text-lg mb-1">🎱</span>
             <span className="text-sm">로또 번호</span>
           </a>
-          <a href="/tools/random-password" className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors text-center">
+          <a href="/tools/random-password" className="p-3 bg-white border border-slate-200 rounded-lg hover:border-cyan-500 transition-colors text-center shadow-sm">
             <span className="block text-lg mb-1">🔐</span>
             <span className="text-sm">비밀번호 생성</span>
           </a>
-          <a href="/tools/text-counter" className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors text-center">
+          <a href="/tools/text-counter" className="p-3 bg-white border border-slate-200 rounded-lg hover:border-cyan-500 transition-colors text-center shadow-sm">
             <span className="block text-lg mb-1">📝</span>
             <span className="text-sm">글자수 세기</span>
           </a>
-          <a href="/tools/bmi-calculator" className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors text-center">
+          <a href="/tools/bmi-calculator" className="p-3 bg-white border border-slate-200 rounded-lg hover:border-cyan-500 transition-colors text-center shadow-sm">
             <span className="block text-lg mb-1">⚖️</span>
             <span className="text-sm">BMI 계산기</span>
           </a>
         </div>
         <p className="mt-4 text-center">
-          <a href="/tools" className="text-neon-primary hover:underline">
+          <a href="/tools" className="text-cyan-700 font-semibold hover:underline">
             전체 도구 보기 →
           </a>
         </p>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-neon-primary mb-4">
+        <h2 className="text-2xl font-semibold text-slate-950 mb-4">
           블로그에서 더 알아보기
         </h2>
         <p className="mb-4">
@@ -181,17 +181,17 @@ export default function SEOArticle() {
           일상에 도움이 되는 다양한 콘텐츠를 블로그에서 확인하세요.
         </p>
         <div className="space-y-3">
-          <a href="/blog/overcome-decision-fatigue" className="block p-4 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors">
-            <h3 className="font-bold text-white">결정 장애(Decision Fatigue)를 극복하는 3가지 과학적인 방법</h3>
-            <p className="text-sm text-gray-400 mt-1">뇌 과학이 알려주는 스트레스 없는 결정법</p>
+          <a href="/blog/overcome-decision-fatigue" className="block p-4 bg-white border border-slate-200 rounded-lg hover:border-cyan-500 transition-colors shadow-sm">
+            <h3 className="font-bold text-slate-950">결정 장애(Decision Fatigue)를 극복하는 3가지 과학적인 방법</h3>
+            <p className="text-sm text-slate-600 mt-1">뇌 과학이 알려주는 스트레스 없는 결정법</p>
           </a>
-          <a href="/blog/random-choice-psychology" className="block p-4 bg-white/5 border border-white/10 rounded-lg hover:border-neon-primary/50 transition-colors">
-            <h3 className="font-bold text-white">랜덤 선택의 심리학: 왜 우리는 결정을 위임하고 싶어하는가</h3>
-            <p className="text-sm text-gray-400 mt-1">심리학적 관점에서 랜덤 선택의 본질 탐구</p>
+          <a href="/blog/random-choice-psychology" className="block p-4 bg-white border border-slate-200 rounded-lg hover:border-cyan-500 transition-colors shadow-sm">
+            <h3 className="font-bold text-slate-950">랜덤 선택의 심리학: 왜 우리는 결정을 위임하고 싶어하는가</h3>
+            <p className="text-sm text-slate-600 mt-1">심리학적 관점에서 랜덤 선택의 본질 탐구</p>
           </a>
         </div>
         <p className="mt-4 text-center">
-          <a href="/blog" className="text-neon-primary hover:underline">
+          <a href="/blog" className="text-cyan-700 font-semibold hover:underline">
             블로그 전체 보기 →
           </a>
         </p>

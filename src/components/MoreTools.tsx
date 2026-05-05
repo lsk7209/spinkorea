@@ -208,11 +208,11 @@ export default function MoreTools() {
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-12 border-t border-white/10">
       <div className="text-center mb-8 space-y-2">
-        <p className="text-xs uppercase tracking-[0.25em] text-neon-primary">
-          More tools
+        <p className="text-xs font-bold tracking-[0.25em] text-neon-primary">
+          무료 도구
         </p>
         <h2 className="text-2xl md:text-3xl font-bold text-gradient">
-          🚀 유틸리티 모음
+          유틸리티 모음
         </h2>
         <p className="text-sm text-gray-400">
           빠른 결정, 변환, 생성까지 한 곳에서.

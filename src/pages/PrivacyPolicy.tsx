@@ -43,8 +43,7 @@ export default function PrivacyPolicy() {
 
                 <h2 className="text-xl font-semibold text-white mt-8 mb-4">4. 문의처</h2>
                 <p>
-                    개인정보 관련 문의사항은 아래 이메일로 연락 주시기 바랍니다.<br />
-                    Email: contact@spinflow.pages.dev
+                    개인정보 관련 문의사항은 문의하기 페이지의 GitHub Issues 링크로 연락 주시기 바랍니다.
                 </p>
             </div>
         </div>

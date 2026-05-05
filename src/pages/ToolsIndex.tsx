@@ -12,7 +12,7 @@ export default function ToolsIndex() {
 
             <div className="max-w-7xl mx-auto px-4 mb-8 text-center">
                 <h1 className="text-4xl md:text-5xl font-black mb-4 text-white drop-shadow-lg">
-                    <span className="text-gradient">Utilities</span> Collection
+                    <span className="text-gradient">무료 웹 유틸리티</span> 모음
                 </h1>
                 <p className="text-gray-400 max-w-2xl mx-auto">
                     일상을 더 편리하게 만드는 다양한 웹 도구들을 무료로 사용하세요.

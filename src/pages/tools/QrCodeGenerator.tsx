@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import ToolLayout from "@/components/ToolLayout";
 
 export default function QrCodeGenerator() {
-  const [value, setValue] = useState("https://spinflow.kr");
+  const [value, setValue] = useState("https://www.spinkorea.kr");
   const [size, setSize] = useState(256);
   const [bgColor, setBgColor] = useState("#ffffff");
   const [fgColor, setFgColor] = useState("#000000");
@@ -28,7 +28,7 @@ export default function QrCodeGenerator() {
   };
 
   const reset = () => {
-    setValue("https://spinflow.kr");
+    setValue("https://www.spinkorea.kr");
     setSize(256);
     setBgColor("#ffffff");
     setFgColor("#000000");

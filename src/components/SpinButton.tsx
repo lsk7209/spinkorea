@@ -32,7 +32,8 @@ function SpinButton({ onClick, disabled = false, isSpinning = false }: SpinButto
       onKeyDown={handleKeyDown}
       disabled={disabled || isSpinning}
       className={`
-        fixed bottom-8 left-1/2 -translate-x-1/2 z-50
+        hidden md:flex fixed bottom-8 right-8 z-50
+        items-center justify-center
         w-28 h-28 rounded-full
         bg-gradient-aurora text-white
         font-extrabold text-xl

@@ -3,16 +3,232 @@
   <channel>
     <title>SpinFlow 블로그</title>
     <link>https://www.spinkorea.kr/blog</link>
-    <description>결정 피로 극복, 생산성 향상, 디지털 웰빙 등 일상에 도움이 되는 다양한 콘텐츠를 제공합니다.</description>
+    <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 18 Mar 2026 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 15:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>완벽주의의 덫: 80점이 100점보다 나을 때</title>
+      <link>https://www.spinkorea.kr/blog/perfectionism-trap</link>
+      <description>완벽주의는 높은 기준이 아니라 실행을 막는 두려움입니다. 완벽주의를 극복하고 실행력을 높이는 방법.</description>
+      <pubDate>Mon, 04 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/perfectionism-trap</guid>
+    </item>
+
+    <item>
+      <title>Lorem Ipsum의 비밀: 500년간 디자이너가 써온 텍스트의 정체</title>
+      <link>https://www.spinkorea.kr/blog/lorem-ipsum-history</link>
+      <description>Lorem ipsum dolor sit amet... 이 이상한 라틴어의 출처, 키케로와의 연결고리, 현대 디자인에서 쓰이는 이유.</description>
+      <pubDate>Sun, 03 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/lorem-ipsum-history</guid>
+    </item>
+
+    <item>
+      <title>운동이 뇌를 바꾼다: 신체 활동과 인지 기능의 관계</title>
+      <link>https://www.spinkorea.kr/blog/exercise-brain</link>
+      <description>30분 걷기가 항우울제보다 효과적일 수 있습니다. 운동이 뇌에 미치는 과학적 효과와 실천 가이드.</description>
+      <pubDate>Sat, 02 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/exercise-brain</guid>
+    </item>
+
+    <item>
+      <title>색상 심리학: 색이 감정과 행동에 미치는 영향</title>
+      <link>https://www.spinkorea.kr/blog/color-psychology</link>
+      <description>빨간색이 식욕을 자극하고 파란색이 집중력을 높이는 이유. 색상 심리학을 디자인·마케팅에 활용하는 방법.</description>
+      <pubDate>Fri, 01 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/color-psychology</guid>
+    </item>
+
+    <item>
+      <title>잠 못 자는 현대인을 위한 수면 최적화 완벽 가이드</title>
+      <link>https://www.spinkorea.kr/blog/sleep-optimization</link>
+      <description>수면 부채, 수면 사이클, 최적 취침 시간까지. 과학이 알려주는 수면의 질을 높이는 방법.</description>
+      <pubDate>Thu, 30 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/sleep-optimization</guid>
+    </item>
+
+    <item>
+      <title>나이 계산기로 알아보는 흥미로운 시간의 사실들</title>
+      <link>https://www.spinkorea.kr/blog/age-calculation-trivia</link>
+      <description>당신이 살아온 날, 시간, 심장 박동 수. 나이를 다양한 단위로 환산하면 삶이 더 생생하게 느껴집니다.</description>
+      <pubDate>Wed, 29 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/age-calculation-trivia</guid>
+    </item>
+
+    <item>
+      <title>회의를 줄이면 생산성이 늘어나는 이유</title>
+      <link>https://www.spinkorea.kr/blog/fewer-meetings</link>
+      <description>직장인 하루 평균 3.5시간이 회의로 낭비됩니다. 비효율적인 회의를 줄이고 생산성을 높이는 실전 전략.</description>
+      <pubDate>Tue, 28 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/fewer-meetings</guid>
+    </item>
+
+    <item>
+      <title>BMI 계산기의 한계: 숫자 너머의 건강 지표</title>
+      <link>https://www.spinkorea.kr/blog/bmi-limitations</link>
+      <description>BMI가 과체중이라도 건강할 수 있고, 정상이라도 위험할 수 있습니다. BMI의 한계와 보완 지표를 알아봅니다.</description>
+      <pubDate>Mon, 27 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/bmi-limitations</guid>
+    </item>
+
+    <item>
+      <title>목표 설정의 과학: SMART 목표 vs OKR — 무엇을 써야 하나</title>
+      <link>https://www.spinkorea.kr/blog/goal-setting-smart</link>
+      <description>새해 결심이 3주 만에 사라지는 이유. SMART 목표와 OKR의 차이, 상황에 맞는 목표 설정법을 알아봅니다.</description>
+      <pubDate>Sun, 26 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/goal-setting-smart</guid>
+    </item>
+
+    <item>
+      <title>비밀번호 강도 테스트: 내 비밀번호는 얼마나 안전한가</title>
+      <link>https://www.spinkorea.kr/blog/password-strength</link>
+      <description>해커가 비밀번호를 푸는 데 걸리는 시간, 강력한 비밀번호의 조건, 비밀번호 관리자를 써야 하는 이유.</description>
+      <pubDate>Sat, 25 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/password-strength</guid>
+    </item>
+
+    <item>
+      <title>아침 루틴이 하루를 결정하는 이유</title>
+      <link>https://www.spinkorea.kr/blog/morning-routine</link>
+      <description>성공한 사람들은 왜 아침에 특별한 루틴을 갖는가. 과학적으로 검증된 아침 루틴 설계 가이드.</description>
+      <pubDate>Fri, 24 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/morning-routine</guid>
+    </item>
+
+    <item>
+      <title>마크다운으로 글 쓰는 이유: 개발자·기획자의 노트 작성법</title>
+      <link>https://www.spinkorea.kr/blog/markdown-writing</link>
+      <description>서식 걱정 없이 내용에만 집중할 수 있는 마크다운. 기본 문법부터 실전 활용까지 10분 완성 가이드.</description>
+      <pubDate>Thu, 23 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/markdown-writing</guid>
+    </item>
+
+    <item>
+      <title>멀티태스킹은 없다: 단일 집중의 과학</title>
+      <link>https://www.spinkorea.kr/blog/multitasking-myth</link>
+      <description>우리 뇌는 실제로 멀티태스킹을 못 합니다. 동시 작업의 신화를 깨고 단일 집중이 왜 더 효율적인지 알아봅니다.</description>
+      <pubDate>Wed, 22 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/multitasking-myth</guid>
+    </item>
+
+    <item>
+      <title>QR코드 200% 활용법: 명함·와이파이·결제까지</title>
+      <link>https://www.spinkorea.kr/blog/qr-code-uses</link>
+      <description>단순한 URL 공유를 넘어 명함, 와이파이 공유, 앱 다운로드, 결제까지. QR코드를 제대로 활용하는 방법.</description>
+      <pubDate>Tue, 21 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/qr-code-uses</guid>
+    </item>
+
+    <item>
+      <title>포모도로 기법 완벽 가이드: 25분의 기적</title>
+      <link>https://www.spinkorea.kr/blog/pomodoro-technique</link>
+      <description>1980년대 토마토 타이머에서 시작된 시간 관리 기법. 집중력과 생산성을 동시에 높이는 포모도로 실전 가이드.</description>
+      <pubDate>Mon, 20 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/pomodoro-technique</guid>
+    </item>
+
+    <item>
+      <title>단위 변환 실전 가이드: cm·kg·°C를 자유자재로 다루는 법</title>
+      <link>https://www.spinkorea.kr/blog/unit-conversion-life</link>
+      <description>해외 직구, 여행, 요리 레시피... 일상 속 단위 변환이 필요한 순간과 자주 쓰이는 변환 공식 모음.</description>
+      <pubDate>Sun, 19 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/unit-conversion-life</guid>
+    </item>
+
+    <item>
+      <title>디지털 미니멀리즘: 앱 정리로 집중력 되찾기</title>
+      <link>https://www.spinkorea.kr/blog/digital-minimalism</link>
+      <description>스마트폰 앱이 많을수록 집중력은 줄어듭니다. 디지털 미니멀리즘 실천으로 방해 없는 하루를 만드는 방법.</description>
+      <pubDate>Sat, 18 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/digital-minimalism</guid>
+    </item>
+
+    <item>
+      <title>퍼센트 계산이 헷갈릴 때: 실생활 퍼센트 완전 정리</title>
+      <link>https://www.spinkorea.kr/blog/percentage-life-hacks</link>
+      <description>할인율, 세금, 인상률, 증감률... 실생활에서 퍼센트를 틀리지 않는 3가지 공식과 빠른 암산법.</description>
+      <pubDate>Fri, 17 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/percentage-life-hacks</guid>
+    </item>
+
+    <item>
+      <title>파레토 법칙(80/20 법칙)으로 하루를 설계하는 법</title>
+      <link>https://www.spinkorea.kr/blog/pareto-principle</link>
+      <description>결과의 80%는 원인의 20%에서 나온다. 파레토 법칙을 업무·학습·인간관계에 적용하는 실전 가이드.</description>
+      <pubDate>Thu, 16 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/pareto-principle</guid>
+    </item>
+
+    <item>
+      <title>로또 번호 통계 분석: 자주 나오는 번호가 있을까?</title>
+      <link>https://www.spinkorea.kr/blog/lotto-statistics</link>
+      <description>로또 1~45번 중 정말 자주 나오는 번호가 있는지 통계로 알아봅니다. 도박사의 오류와 진짜 확률의 차이.</description>
+      <pubDate>Wed, 15 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/lotto-statistics</guid>
+    </item>
+
+    <item>
+      <title>번아웃 예방법: 쉬는 것도 기술이다</title>
+      <link>https://www.spinkorea.kr/blog/burnout-prevention</link>
+      <description>현대인 3명 중 1명이 겪는 번아웃. 예방법과 회복 전략을 과학적으로 알아봅니다.</description>
+      <pubDate>Tue, 14 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/burnout-prevention</guid>
+    </item>
+
+    <item>
+      <title>진짜 랜덤이란 무엇인가: 컴퓨터는 어떻게 랜덤 숫자를 만드는가</title>
+      <link>https://www.spinkorea.kr/blog/random-number-science</link>
+      <description>컴퓨터가 만드는 랜덤은 진짜 랜덤일까요? 의사 난수(PRNG)와 진성 난수(TRNG)의 차이, 로또·암호화·게임에서 랜덤이 쓰이는 방식을 설명합니다.</description>
+      <pubDate>Thu, 09 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/random-number-science</guid>
+    </item>
+
+    <item>
+      <title>개발자·기획자가 매일 쓰는 무료 온라인 도구 7선</title>
+      <link>https://www.spinkorea.kr/blog/developer-tools-collection</link>
+      <description>설치 없이 브라우저에서 바로 쓰는 무료 개발자 도구 모음. JSON 포매터, Base64, URL 인코더, Diff 비교, Unix 타임스탬프, 케이스 변환, CSS 그림자까지.</description>
+      <pubDate>Sat, 04 Apr 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/developer-tools-collection</guid>
+    </item>
+
+    <item>
+      <title>예스/노 신탁기: 결정을 못 내릴 때 랜덤이 도움이 되는 심리학적 이유</title>
+      <link>https://www.spinkorea.kr/blog/yes-no-oracle-guide</link>
+      <description>동전 던지기, 예스/노 신탁기... 왜 중요한 결정에 랜덤을 쓰면 오히려 더 좋은 결과가 나오는지 심리학 연구로 알아봅니다.</description>
+      <pubDate>Tue, 31 Mar 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/yes-no-oracle-guide</guid>
+    </item>
+
+    <item>
+      <title>카멜케이스·스네이크케이스·파스칼케이스: 개발자 네이밍 컨벤션 완벽 정리</title>
+      <link>https://www.spinkorea.kr/blog/case-converter-guide</link>
+      <description>camelCase, snake_case, PascalCase, kebab-case... 각 케이스가 어떤 상황에 쓰이는지, 언어별 표준 컨벤션까지 한 번에 정리합니다.</description>
+      <pubDate>Fri, 27 Mar 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/case-converter-guide</guid>
+    </item>
+
+    <item>
+      <title>Unix 타임스탬프 완벽 가이드: 개발자가 시간을 숫자로 다루는 법</title>
+      <link>https://www.spinkorea.kr/blog/unix-timestamp-guide</link>
+      <description>1970년 1월 1일부터 세는 Unix 타임스탬프가 무엇인지, 왜 개발자들이 사용하는지, 밀리초 vs 초 차이까지 완벽하게 정리했습니다.</description>
+      <pubDate>Tue, 24 Mar 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/unix-timestamp-guide</guid>
+    </item>
+
+    <item>
+      <title>URL 인코딩 완벽 가이드: 한글 주소가 %EC%95%88%EB%85%95이 되는 이유</title>
+      <link>https://www.spinkorea.kr/blog/uri-encoder-guide</link>
+      <description>URL에서 한글이 이상한 문자로 변하는 이유, 퍼센트 인코딩의 원리, 개발자가 꼭 알아야 할 URL 인코딩·디코딩 완벽 가이드입니다.</description>
+      <pubDate>Sat, 21 Mar 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/uri-encoder-guide</guid>
+    </item>
 
     <item>
       <title>Diff 비교 도구 활용법: 코드·문서 변경점을 한눈에 파악</title>
       <link>https://www.spinkorea.kr/blog/diff-checker-guide</link>
       <description>두 텍스트나 코드의 차이점을 시각적으로 확인하는 Diff 도구. 코드 리뷰, 문서 편집, 설정 파일 비교에 활용하는 방법을 알려드립니다.</description>
-      <pubDate>Tue, 18 Mar 2026 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 17 Mar 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/diff-checker-guide</guid>
     </item>
 
@@ -20,7 +236,7 @@
       <title>Base64 인코딩 완벽 가이드: 이미지 URL·API 인증에 쓰이는 이유</title>
       <link>https://www.spinkorea.kr/blog/base64-guide</link>
       <description>Base64 인코딩이 무엇인지, 왜 사용하는지, 이미지 Data URL·HTTP Basic Auth에서 어떻게 활용하는지 완벽하게 알아봅니다.</description>
-      <pubDate>Sun, 15 Mar 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 14 Mar 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/base64-guide</guid>
     </item>
 
@@ -28,7 +244,7 @@
       <title>CSS Box Shadow 완벽 가이드: 버튼·카드에 입체감 주는 법</title>
       <link>https://www.spinkorea.kr/blog/css-shadow-guide</link>
       <description>CSS box-shadow 속성으로 버튼, 카드, 모달에 입체감을 주는 방법. 무료 CSS 그림자 생성기로 코드 없이 시각적으로 조작하세요.</description>
-      <pubDate>Thu, 12 Mar 2026 00:00:00 +0900</pubDate>
+      <pubDate>Wed, 11 Mar 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/css-shadow-guide</guid>
     </item>
 
@@ -36,7 +252,7 @@
       <title>마크다운 완벽 가이드: 깃허브·블로그·노션에서 쓰는 기본 문법</title>
       <link>https://www.spinkorea.kr/blog/markdown-guide</link>
       <description>마크다운(Markdown) 기본 문법 10가지와 실전 활용법. 무료 마크다운 미리보기로 바로 연습하세요.</description>
-      <pubDate>Sun, 08 Mar 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 07 Mar 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/markdown-guide</guid>
     </item>
 
@@ -44,7 +260,7 @@
       <title>로렘 입숨 완벽 가이드: UI 디자이너·개발자 필수 더미 텍스트</title>
       <link>https://www.spinkorea.kr/blog/lorem-ipsum-guide</link>
       <description>로렘 입숨(Lorem Ipsum)이 무엇인지, 왜 사용하는지, 무료 생성기로 디자인 작업 속도를 높이는 방법을 알아봅니다.</description>
-      <pubDate>Thu, 05 Mar 2026 00:00:00 +0900</pubDate>
+      <pubDate>Wed, 04 Mar 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/lorem-ipsum-guide</guid>
     </item>
 
@@ -52,7 +268,7 @@
       <title>시간 계산기 완벽 가이드: 근무시간·포모도로·시간대 계산</title>
       <link>https://www.spinkorea.kr/blog/time-calculator-guide</link>
       <description>근무 시간 계산, 포모도로 타이머 설정, 도착 예정 시간까지. 시간 계산기로 시간 관리를 더 스마트하게 하는 방법을 알려드립니다.</description>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 28 Feb 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/time-calculator-guide</guid>
     </item>
 
@@ -60,7 +276,7 @@
       <title>동전 던지기로 결정 내리기: 심리학이 말하는 최고의 결정법</title>
       <link>https://www.spinkorea.kr/blog/coin-flip-guide</link>
       <description>결정이 어려울 때 동전을 던지면 왜 도움이 될까요? 심리학적 관점에서 동전 던지기의 효과와 온라인 동전 던지기 활용법을 알아봅니다.</description>
-      <pubDate>Wed, 25 Feb 2026 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 24 Feb 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/coin-flip-guide</guid>
     </item>
 
@@ -68,7 +284,7 @@
       <title>D-Day 카운터 활용법: 목표·기념일·마감일 한 눈에 관리</title>
       <link>https://www.spinkorea.kr/blog/d-day-counter-guide</link>
       <description>수능, 결혼기념일, 프로젝트 마감일... D-Day 카운터 하나로 모든 중요한 날짜를 관리하는 스마트한 방법을 알려드립니다.</description>
-      <pubDate>Sun, 22 Feb 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 21 Feb 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/d-day-counter-guide</guid>
     </item>
 
@@ -76,7 +292,7 @@
       <title>BMI 계산기 완벽 활용: 정상 체중 범위와 건강 목표 설정법</title>
       <link>https://www.spinkorea.kr/blog/bmi-calculator-guide</link>
       <description>BMI(체질량지수)로 내 건강 상태를 확인하고 목표 체중을 설정하는 방법. BMI 계산기와 함께 건강 관리를 시작하세요.</description>
-      <pubDate>Wed, 18 Feb 2026 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 17 Feb 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/bmi-calculator-guide</guid>
     </item>
 
@@ -84,7 +300,7 @@
       <title>색상 코드 변환기 사용법: HEX·RGB·HSL 색상을 1초 만에 변환</title>
       <link>https://www.spinkorea.kr/blog/color-converter-guide</link>
       <description>웹 디자인 필수! HEX, RGB, HSL 색상 코드의 차이와 변환 방법을 알아보고 무료 색상 변환기를 활용하세요.</description>
-      <pubDate>Sun, 15 Feb 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 14 Feb 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/color-converter-guide</guid>
     </item>
 
@@ -92,7 +308,7 @@
       <title>JSON 포맷터 완벽 가이드: 개발자라면 꼭 알아야 할 JSON 정리법</title>
       <link>https://www.spinkorea.kr/blog/json-formatter-guide</link>
       <description>복잡한 JSON 데이터를 읽기 좋게 정렬하고 오류를 찾는 방법. 무료 온라인 JSON 포맷터로 개발 생산성을 높이세요.</description>
-      <pubDate>Thu, 12 Feb 2026 00:00:00 +0900</pubDate>
+      <pubDate>Wed, 11 Feb 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/json-formatter-guide</guid>
     </item>
 
@@ -100,7 +316,7 @@
       <title>온라인 주사위·동전 던지기: 실제보다 더 공정한 디지털 랜덤</title>
       <link>https://www.spinkorea.kr/blog/dice-coin-online</link>
       <description>보드게임, 내기, 순서 정하기... 주사위나 동전이 없을 때 스마트폰으로 바로 사용하는 온라인 주사위·동전 던지기 활용법입니다.</description>
-      <pubDate>Sat, 08 Feb 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 07 Feb 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/dice-coin-online</guid>
     </item>
 
@@ -108,7 +324,7 @@
       <title>랜덤 팀 편성의 힘: 공정하고 빠른 팀 나누기 완벽 가이드</title>
       <link>https://www.spinkorea.kr/blog/random-team-building</link>
       <description>운동회, MT, 스터디 그룹... 팀 나누기가 어렵다면? 랜덤 팀 편성이 왜 가장 공정한지, 무료 랜덤 팀 편성기 활용법을 알려드립니다.</description>
-      <pubDate>Wed, 05 Feb 2026 00:00:00 +0900</pubDate>
+      <pubDate>Wed, 04 Feb 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/random-team-building</guid>
     </item>
 
@@ -116,7 +332,7 @@
       <title>단위 변환기 완벽 가이드: km↔mile, kg↔lb, °C↔°F 빠른 변환</title>
       <link>https://www.spinkorea.kr/blog/unit-converter-guide</link>
       <description>해외여행, 해외 직구, 영어 레시피에서 단위가 달라 헷갈릴 때! 자주 쓰는 단위 변환표와 무료 단위 변환기 활용법을 공유합니다.</description>
-      <pubDate>Sat, 01 Feb 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 31 Jan 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/unit-converter-guide</guid>
     </item>
 
@@ -124,7 +340,7 @@
       <title>퍼센트 계산기 완벽 가이드: 할인율·세금·인상률 빠르게 계산</title>
       <link>https://www.spinkorea.kr/blog/percentage-calculator-guide</link>
       <description>30% 할인이면 얼마? 세금 포함 가격은? 퍼센트 계산이 헷갈릴 때 무료 퍼센트 계산기로 즉시 해결하는 방법을 알려드립니다.</description>
-      <pubDate>Tue, 28 Jan 2026 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 27 Jan 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/percentage-calculator-guide</guid>
     </item>
 
@@ -132,7 +348,7 @@
       <title>글자수 세기 완벽 가이드: 자소서·SNS·유튜브 최적 글자수</title>
       <link>https://www.spinkorea.kr/blog/text-counter-guide</link>
       <description>자기소개서는 몇 글자? 인스타그램 캡션은? SNS·자소서·블로그별 최적 글자수와 무료 글자수 세기 도구 활용법을 알려드립니다.</description>
-      <pubDate>Sat, 25 Jan 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 24 Jan 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/text-counter-guide</guid>
     </item>
 
@@ -140,7 +356,7 @@
       <title>로또 번호 생성기 완벽 가이드: 랜덤이 최선인 이유</title>
       <link>https://www.spinkorea.kr/blog/lotto-number-strategy</link>
       <description>매주 로또 번호 고르기가 어렵다면? 번호 선택 전략과 확률 이야기, 무료 로또 번호 생성기 활용법을 알려드립니다.</description>
-      <pubDate>Wed, 22 Jan 2026 00:00:00 +0900</pubDate>
+      <pubDate>Wed, 21 Jan 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/lotto-number-strategy</guid>
     </item>
 
@@ -148,7 +364,7 @@
       <title>만 나이 계산기 완벽 가이드: 만 나이·세는 나이·연 나이 한 번에 정리</title>
       <link>https://www.spinkorea.kr/blog/age-calculator-guide</link>
       <description>2023년부터 한국도 만 나이가 공식 기준입니다. 만 나이·세는 나이·연 나이 차이와 계산법, 무료 만 나이 계산기 활용법을 알려드립니다.</description>
-      <pubDate>Mon, 20 Jan 2026 00:00:00 +0900</pubDate>
+      <pubDate>Mon, 19 Jan 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/age-calculator-guide</guid>
     </item>
 
@@ -156,7 +372,7 @@
       <title>강력한 비밀번호 만들기 완벽 가이드 - 해킹에서 내 계정 지키는 법</title>
       <link>https://www.spinkorea.kr/blog/strong-password-guide</link>
       <description>123456, qwerty... 아직도 이런 비밀번호를 쓰고 계신가요? 해커도 못 뚫는 강력한 비밀번호 만드는 법과 무료 비밀번호 생성기 활용법을 알려드립니다.</description>
-      <pubDate>Sun, 12 Jan 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sun, 11 Jan 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/strong-password-guide</guid>
     </item>
 
@@ -164,7 +380,7 @@
       <title>무료 QR코드 생성기 완벽 가이드 - 링크를 QR코드로 5초 만에 변환</title>
       <link>https://www.spinkorea.kr/blog/qr-code-generator-guide</link>
       <description>QR코드가 무엇인지, 어떻게 만드는지, 어디에 활용하는지 완벽하게 알아봅니다. 무료 온라인 QR코드 생성기로 명함, 포스터, 메뉴판까지 손쉽게 제작하세요.</description>
-      <pubDate>Sun, 05 Jan 2026 00:00:00 +0900</pubDate>
+      <pubDate>Sun, 04 Jan 2026 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/qr-code-generator-guide</guid>
     </item>
 
@@ -172,79 +388,79 @@
       <title>D-Day 계산기 200% 활용법: 목표 달성의 비밀 무기</title>
       <link>https://www.spinkorea.kr/blog/dday-calculator-life-hacks</link>
       <description>시험, 프로젝트 마감, 결혼식, 휴가까지. D-Day 계산기를 활용해 동기부여를 높이고 목표를 관리하는 방법을 알아봅니다.</description>
-      <pubDate>Thu, 19 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Thu, 18 Dec 2025 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/dday-calculator-life-hacks</guid>
     </item>
-    
+
     <item>
       <title>JSON 완벽 이해: 개발자가 아니어도 알아야 하는 데이터 형식</title>
       <link>https://www.spinkorea.kr/blog/json-for-beginners</link>
       <description>API, 설정 파일, 데이터 교환의 핵심 JSON. 비개발자도 쉽게 이해할 수 있도록 설명합니다.</description>
-      <pubDate>Wed, 18 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Wed, 17 Dec 2025 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/json-for-beginners</guid>
     </item>
-    
+
     <item>
       <title>QR 코드 완벽 가이드: 원리부터 활용까지</title>
       <link>https://www.spinkorea.kr/blog/qr-code-guide</link>
       <description>어디에나 있는 QR 코드. 어떻게 작동하는지, 어떻게 만들고 활용하는지 알아봅니다.</description>
-      <pubDate>Tue, 17 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 16 Dec 2025 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/qr-code-guide</guid>
     </item>
-    
+
     <item>
       <title>디지털 웰빙: 스마트폰과 건강하게 공존하는 7가지 방법</title>
       <link>https://www.spinkorea.kr/blog/digital-wellbeing-tips</link>
       <description>하루 평균 7시간을 스마트폰과 함께하는 현대인. 디지털 피로를 줄이고 건강한 기기 사용 습관을 만드는 실천 가이드입니다.</description>
-      <pubDate>Mon, 16 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Mon, 15 Dec 2025 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/digital-wellbeing-tips</guid>
     </item>
-    
+
     <item>
       <title>랜덤 선택의 심리학: 왜 우리는 결정을 위임하고 싶어하는가</title>
       <link>https://www.spinkorea.kr/blog/random-choice-psychology</link>
       <description>동전 던지기, 룰렛 돌리기... 우리는 왜 중요한 선택을 운에 맡기려 할까요? 심리학적 관점에서 랜덤 선택의 본질을 탐구합니다.</description>
-      <pubDate>Sun, 15 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Sun, 14 Dec 2025 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/random-choice-psychology</guid>
     </item>
-    
+
     <item>
       <title>시간 관리의 기술: 생산성을 2배로 높이는 실전 전략</title>
       <link>https://www.spinkorea.kr/blog/time-management-productivity</link>
       <description>바쁘게 움직이는데 왜 할 일은 줄지 않을까요? 시간 관리 전문가들이 추천하는 실천 가능한 생산성 향상 전략을 소개합니다.</description>
-      <pubDate>Sat, 14 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Sat, 13 Dec 2025 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/time-management-productivity</guid>
     </item>
-    
+
     <item>
       <title>색상 코드 완벽 가이드: HEX, RGB, HSL 이해하기</title>
       <link>https://www.spinkorea.kr/blog/color-code-complete-guide</link>
       <description>웹 디자인에서 색상을 표현하는 다양한 방법을 알아봅니다. HEX, RGB, HSL의 차이점과 활용법을 완벽 정리합니다.</description>
-      <pubDate>Fri, 13 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Fri, 12 Dec 2025 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/color-code-complete-guide</guid>
     </item>
-    
+
     <item>
       <title>강력한 비밀번호 만들기: 해킹으로부터 계정을 지키는 완벽 가이드</title>
       <link>https://www.spinkorea.kr/blog/password-security-guide</link>
       <description>매년 수백만 개의 계정이 해킹됩니다. 안전한 비밀번호를 만들고 관리하는 방법을 알아보세요.</description>
-      <pubDate>Thu, 12 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Thu, 11 Dec 2025 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/password-security-guide</guid>
     </item>
-    
+
     <item>
       <title>BMI 계산기로 알아보는 건강한 체중 관리의 모든 것</title>
       <link>https://www.spinkorea.kr/blog/bmi-healthy-weight-guide</link>
       <description>BMI(체질량지수)의 의미와 한계, 올바른 체중 관리 방법까지. 숫자에만 의존하지 않는 진정한 건강 관리 가이드입니다.</description>
-      <pubDate>Wed, 11 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Wed, 10 Dec 2025 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/bmi-healthy-weight-guide</guid>
     </item>
-    
+
     <item>
       <title>결정 장애(Decision Fatigue)를 극복하는 3가지 과학적인 방법</title>
       <link>https://www.spinkorea.kr/blog/overcome-decision-fatigue</link>
       <description>현대인의 고질병 결정 장애. 점심 메뉴 고르기부터 인생의 중요한 선택까지, 뇌 과학이 알려주는 스트레스 없는 결정법을 소개합니다.</description>
-      <pubDate>Tue, 10 Dec 2025 00:00:00 +0900</pubDate>
+      <pubDate>Tue, 09 Dec 2025 15:00:00 GMT</pubDate>
       <guid>https://www.spinkorea.kr/blog/overcome-decision-fatigue</guid>
     </item>
   </channel>
