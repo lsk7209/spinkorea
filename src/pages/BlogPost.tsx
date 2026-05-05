@@ -1,5 +1,11 @@
+import { useEffect, useState } from "react";
 import { useParams, Navigate, Link } from "react-router-dom";
-import { BLOG_POSTS, getPostPublishDate, isPublishedPost } from "@/data/posts";
+import type { BlogPost } from "@/data/posts";
+import {
+  findPublishedPostMetadata,
+  getPostPublishDate,
+  type BlogPostMeta,
+} from "@/data/postMetadata";
 import SEO from "@/components/SEO";
 import { ArrowLeft, Calendar, Share2 } from "lucide-react";
 import { toast } from "sonner";
@@ -7,9 +13,55 @@ import { trackEvent } from "@/utils/analytics";
 
 const SITE_ORIGIN = "https://www.spinkorea.kr";
 
+async function loadPostContent(meta: BlogPostMeta): Promise<BlogPost | undefined> {
+  if (meta.source === "generated") {
+    const { GENERATED_BLOG_POSTS } = await import("@/data/generatedContent");
+    return GENERATED_BLOG_POSTS.find((post) => post.slug === meta.slug);
+  }
+
+  const { CURATED_BLOG_POSTS } = await import("@/data/posts");
+  return CURATED_BLOG_POSTS.find((post) => post.slug === meta.slug);
+}
+
 export default function BlogPost() {
   const { slug } = useParams();
-  const post = BLOG_POSTS.find((p) => p.slug === slug && isPublishedPost(p));
+  const post = findPublishedPostMetadata(slug);
+  const [contentPost, setContentPost] = useState<BlogPost | null>(null);
+  const [loadFailed, setLoadFailed] = useState(false);
+
+  useEffect(() => {
+    let mounted = true;
+    setContentPost(null);
+    setLoadFailed(false);
+
+    if (!post) {
+      return () => {
+        mounted = false;
+      };
+    }
+
+    void loadPostContent(post)
+      .then((loadedPost) => {
+        if (!mounted) {
+          return;
+        }
+
+        if (loadedPost) {
+          setContentPost(loadedPost);
+        } else {
+          setLoadFailed(true);
+        }
+      })
+      .catch(() => {
+        if (mounted) {
+          setLoadFailed(true);
+        }
+      });
+
+    return () => {
+      mounted = false;
+    };
+  }, [post?.slug]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -134,7 +186,15 @@ export default function BlogPost() {
           )}
 
           <div className="article-content-light prose prose-slate prose-lg max-w-none prose-a:text-cyan-700 prose-headings:text-slate-950">
-            {post.content}
+            {contentPost ? (
+              contentPost.content
+            ) : (
+              <div className="rounded-2xl border border-slate-200 bg-white p-8 text-center text-slate-500">
+                {loadFailed
+                  ? "글 본문을 불러오지 못했습니다."
+                  : "글 본문을 불러오고 있습니다."}
+              </div>
+            )}
           </div>
         </article>
 

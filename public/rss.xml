@@ -5,8 +5,32 @@
     <link>https://www.spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 04 May 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 15:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>CSS box-shadow 마스터하기: 디자이너처럼 그림자 만들기</title>
+      <link>https://www.spinkorea.kr/blog/css-shadow-design</link>
+      <description>단순한 검은 그림자에서 뉴모피즘, 글로우 효과까지. CSS box-shadow의 모든 파라미터와 실전 활용법.</description>
+      <pubDate>Tue, 05 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/css-shadow-design</guid>
+    </item>
+
+    <item>
+      <title>온라인 룰렛 선택지 제한 체크리스트: 참가자 목록 먼저</title>
+      <link>https://www.spinkorea.kr/blog/wheel-option-limit</link>
+      <description>온라인 룰렛 선택지 제한은 중복 방지, 참가자 목록, 확률 설정 항목으로 바로 점검하는 가이드입니다.</description>
+      <pubDate>Tue, 05 May 2026 14:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/wheel-option-limit</guid>
+    </item>
+
+    <item>
+      <title>랜덤 추첨 공정성, 중복 방지부터 바로 점검</title>
+      <link>https://www.spinkorea.kr/blog/fair-random-draw</link>
+      <description>랜덤 추첨 공정성은 중복 방지, 참가자 목록, 확률 설정 항목으로 바로 점검하는 가이드입니다.</description>
+      <pubDate>Tue, 05 May 2026 09:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/fair-random-draw</guid>
+    </item>
 
     <item>
       <title>완벽주의의 덫: 80점이 100점보다 나을 때</title>

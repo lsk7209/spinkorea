@@ -8,6 +8,7 @@ const TODAY = formatKstDate(BUILD_NOW);
 const SITE_PAGES_PATH = path.join(ROOT, "src", "data", "site-pages.json");
 const POSTS_PATH = path.join(ROOT, "src", "data", "posts.tsx");
 const CONTENT_PLAN_PATH = path.join(ROOT, "src", "data", "content-plan.generated.json");
+const POST_METADATA_PATH = path.join(ROOT, "src", "data", "post-metadata.generated.json");
 
 const sitePages = JSON.parse(fs.readFileSync(SITE_PAGES_PATH, "utf8"));
 
@@ -64,13 +65,20 @@ function extractCuratedPosts() {
     const title = block.match(/title:\s*"([^"]+)"/)?.[1];
     const description = block.match(/description:\s*"([^"]+)"/)?.[1];
     const date = block.match(/date:\s*"([^"]+)"/)?.[1];
-    const tags = [...block.matchAll(/"([^"]+)"/g)]
-      .map((tagMatch) => tagMatch[1])
-      .filter((value) => value.length <= 20)
-      .slice(0, 5);
+    const tagBlock = block.match(/tags:\s*\[([\s\S]*?)\]/)?.[1] ?? "";
+    const tags = [...tagBlock.matchAll(/"([^"]+)"/g)].map((tagMatch) => tagMatch[1]);
+    const thumbnail = block.match(/thumbnail:\s*"([^"]+)"/)?.[1];
 
     if (title && description && date) {
-      posts.push({ slug, title, description, date, tags });
+      posts.push({
+        slug,
+        title,
+        description,
+        date,
+        tags,
+        thumbnail,
+        source: "curated",
+      });
     }
   }
 
@@ -91,11 +99,18 @@ function extractGeneratedPosts() {
       date: post.date,
       publishAt: post.publishAt,
       tags: post.tags,
+      thumbnail: post.thumbnail,
+      qualityScore: post.qualityScore,
+      source: "generated",
     }));
 }
 
+function extractAllPosts() {
+  return [...extractCuratedPosts(), ...extractGeneratedPosts()];
+}
+
 function extractPosts() {
-  return [...extractCuratedPosts(), ...extractGeneratedPosts()]
+  return extractAllPosts()
     .filter(isPublished)
     .sort((a, b) => getPublishTime(b) - getPublishTime(a));
 }
@@ -305,6 +320,14 @@ function writePublicAssets(posts) {
   fs.writeFileSync(path.join(publicDir, "sitemap.xml"), buildSitemap(posts));
   fs.writeFileSync(path.join(publicDir, "rss.xml"), buildRss(posts));
   fs.writeFileSync(path.join(publicDir, "llms.txt"), buildLlms(posts));
+  fs.writeFileSync(
+    POST_METADATA_PATH,
+    `${JSON.stringify(
+      extractAllPosts().sort((a, b) => getPublishTime(b) - getPublishTime(a)),
+      null,
+      2,
+    )}\n`,
+  );
 }
 
 function writeDistAssets(posts) {

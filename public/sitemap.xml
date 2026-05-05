@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://www.spinkorea.kr/blog</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -208,6 +208,24 @@
     <loc>https://www.spinkorea.kr/tools/unix-timestamp</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.spinkorea.kr/blog/css-shadow-design</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.spinkorea.kr/blog/wheel-option-limit</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.spinkorea.kr/blog/fair-random-draw</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>

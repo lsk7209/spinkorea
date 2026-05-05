@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { GENERATED_BLOG_POSTS } from "./generatedContent";
 
 export interface BlogPost {
   slug: string;
@@ -34,7 +33,7 @@ export function getPublishedPosts(now = new Date()): BlogPost[] {
   );
 }
 
-const CURATED_BLOG_POSTS: BlogPost[] = [
+export const CURATED_BLOG_POSTS: BlogPost[] = [
   {
     slug: "overcome-decision-fatigue",
     title: "결정 장애(Decision Fatigue)를 극복하는 3가지 과학적인 방법",
@@ -6722,5 +6721,4 @@ const CURATED_BLOG_POSTS: BlogPost[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   ...CURATED_BLOG_POSTS,
-  ...GENERATED_BLOG_POSTS,
 ];
