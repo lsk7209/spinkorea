@@ -63,7 +63,8 @@ function keywordAt(article: GeneratedArticlePlan, index: number): string {
 }
 
 function keywordText(article: GeneratedArticlePlan): string {
-  return [article.mainKeyword, ...article.expandedKeywords].join(", ");
+  const visibleKeywords = article.expandedKeywords.filter((keyword) => !article.mainKeyword.includes(keyword));
+  return [article.mainKeyword, ...visibleKeywords].join(", ");
 }
 
 function buildFaq(article: GeneratedArticlePlan) {

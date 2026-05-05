@@ -7,8 +7,8 @@ const KEY = process.env.INDEXNOW_KEY ?? "9f7cb8706d8f4f81ab98d9a2efb516a1";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const RECENT_HOURS = Number(process.env.INDEXNOW_RECENT_HOURS ?? "0");
 const ENDPOINTS = [
-  "https://www.bing.com/indexnow",
-  "https://searchadvisor.naver.com/indexnow",
+  { name: "bing", url: "https://www.bing.com/indexnow", required: false },
+  { name: "naver", url: "https://searchadvisor.naver.com/indexnow", required: true },
 ];
 
 function readSitemapUrls() {
@@ -44,7 +44,7 @@ function readUrls() {
 }
 
 async function submit(endpoint, urlList) {
-  const response = await fetch(endpoint, {
+  const response = await fetch(endpoint.url, {
     method: "POST",
     headers: { "content-type": "application/json; charset=utf-8" },
     body: JSON.stringify({
@@ -56,7 +56,9 @@ async function submit(endpoint, urlList) {
   });
 
   return {
-    endpoint,
+    endpoint: endpoint.url,
+    name: endpoint.name,
+    required: endpoint.required,
     status: response.status,
     body: await response.text(),
   };
@@ -75,7 +77,29 @@ async function main() {
     results.push(await submit(endpoint, urls));
   }
 
-  console.log(JSON.stringify({ submitted: urls.length, results }, null, 2));
+  const failedRequired = results.filter(
+    (result) => result.required && (result.status < 200 || result.status >= 300),
+  );
+  const warnings = results.filter(
+    (result) => !result.required && (result.status < 200 || result.status >= 300),
+  );
+
+  console.log(
+    JSON.stringify(
+      {
+        submitted: urls.length,
+        status: failedRequired.length > 0 ? "failed" : warnings.length > 0 ? "partial" : "ok",
+        results,
+        warnings,
+      },
+      null,
+      2,
+    ),
+  );
+
+  if (failedRequired.length > 0) {
+    process.exitCode = 1;
+  }
 }
 
 main().catch((error) => {

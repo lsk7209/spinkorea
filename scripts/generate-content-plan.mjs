@@ -11,8 +11,8 @@ const CATEGORY_META = {
     name: "룰렛·랜덤 결정",
     tags: ["룰렛", "랜덤", "선택"],
     thumbnail: "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    sourceName: "Nielsen Norman Group",
-    sourceUrl: "https://www.nngroup.com/articles/decision-fatigue/",
+    sourceName: "MDN Web Docs",
+    sourceUrl: "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     links: [
       ["온라인 룰렛 바로 쓰기", "/"],
       ["랜덤 숫자 추첨 도구", "/random-number"],
@@ -63,8 +63,8 @@ const CATEGORY_META = {
     name: "생산성·업무 방식",
     tags: ["생산성", "업무", "루틴"],
     thumbnail: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    sourceName: "Atlassian Team Playbook",
-    sourceUrl: "https://www.atlassian.com/team-playbook",
+    sourceName: "고용노동부",
+    sourceUrl: "https://www.moel.go.kr/",
     links: [
       ["랜덤 팀 나누기", "/tools/random-team"],
       ["D-Day 카운터", "/tools/d-day-counter"],
@@ -321,17 +321,39 @@ function andParticle(word) {
   return hasFinalConsonant(word) ? "과" : "와";
 }
 
+function safeExt(keyword, ext, preferredIndex) {
+  return ext.slice(preferredIndex).concat(ext.slice(0, preferredIndex)).find((word) => !keyword.includes(word)) ?? ext[preferredIndex];
+}
+
+function descriptionKeywords(keyword, ext) {
+  const filtered = ext.filter((word) => !keyword.includes(word));
+  return filtered.length >= 3 ? filtered.slice(0, 3) : ext.slice(0, 3);
+}
+
 const TITLE_TEMPLATES = [
-  (keyword, ext) => `${keyword}, ${ext[0]} 실수 줄이는 기준`,
-  (keyword, ext) => `${keyword} 체크리스트, ${ext[1]}부터 확인`,
-  (keyword, ext) => `${keyword} 실행법, ${ext[2]}까지 정리`,
-  (keyword, ext) => `${keyword} 비교 기준, ${ext[0]}${andParticle(ext[0])} ${ext[3]}`,
-  (keyword, ext) => `${keyword} FAQ, ${ext[1]} 질문 정리`,
-  (keyword, ext) => `${keyword}, ${ext[2]} 전 점검할 것`,
-  (keyword, ext) => `${keyword} 운영 기준, ${ext[3]} 남기는 법`,
-  (keyword, ext) => `${keyword} 빠른 판단법, ${ext[0]} 중심`,
-  (keyword, ext) => `${keyword} 상황별 기준, ${ext[1]} 체크`,
-  (keyword, ext) => `${keyword} 실전 정리, ${ext[2]}부터 시작`,
+  (keyword, ext) => `${keyword}, ${safeExt(keyword, ext, 0)} 실수 줄이는 기준`,
+  (keyword, ext) => `${keyword} 체크리스트, ${safeExt(keyword, ext, 1)}부터 확인`,
+  (keyword, ext) => `${keyword} 실행 순서, ${safeExt(keyword, ext, 2)}부터 보기`,
+  (keyword, ext) => {
+    const first = safeExt(keyword, ext, 0);
+    const second = safeExt(`${keyword} ${first}`, ext, 3);
+    return `${keyword} 비교 기준, ${first}${andParticle(first)} ${second}`;
+  },
+  (keyword, ext) => `${keyword} FAQ, ${safeExt(keyword, ext, 1)} 질문 정리`,
+  (keyword, ext) => `${keyword}, ${safeExt(keyword, ext, 2)} 전 확인할 것`,
+  (keyword, ext) => `${keyword} 운영 원칙, ${safeExt(keyword, ext, 3)} 남기기`,
+  (keyword, ext) => `${keyword} 빠른 판단법, ${safeExt(keyword, ext, 0)} 중심`,
+  (keyword, ext) => `${keyword} 상황별 점검, ${safeExt(keyword, ext, 1)} 기준`,
+  (keyword, ext) => `${keyword} 실전 정리, ${safeExt(keyword, ext, 2)}부터 시작`,
+  (keyword, ext) => `${keyword} 실패 방지, ${safeExt(keyword, ext, 0)} 먼저 보기`,
+  (keyword, ext) => `${keyword} 적용 기준, ${safeExt(keyword, ext, 3)}까지 확인`,
+  (keyword, ext) => `${keyword} 초보 점검표, ${safeExt(keyword, ext, 1)} 중심`,
+  (keyword, ext) => `${keyword} 개선 포인트, ${safeExt(keyword, ext, 2)} 활용법`,
+  (keyword, ext) => {
+    const first = safeExt(keyword, ext, 0);
+    const second = safeExt(`${keyword} ${first}`, ext, 1);
+    return `${keyword} 선택 기준, ${first}와 ${second}`;
+  },
 ];
 
 const CONTENT_TYPES = ["How-to", "Checklist", "Explainer", "Comparison", "FAQ"];
@@ -418,9 +440,10 @@ const plan = TOPICS.map(([category, slugBase, mainKeyword, readerProblem, practi
 
   const faq = buildFaq(mainKeyword, ext, readerProblem, practicalExample);
   const links = meta.links.map(([label, path]) => ({ label, path }));
+  const description = `${mainKeyword}을 ${descriptionKeywords(mainKeyword, ext).join(", ")} 기준으로 정리한 실행 가이드입니다.`;
   const qualityScore = scoreArticle({
     title,
-    description: `${mainKeyword}을 ${ext.slice(0, 3).join(", ")} 기준으로 정리한 실행 가이드입니다.`,
+    description,
     ext,
     faq,
     links,
@@ -432,7 +455,7 @@ const plan = TOPICS.map(([category, slugBase, mainKeyword, readerProblem, practi
     status: "scheduled",
     slug: slugBase,
     title,
-    description: `${mainKeyword}을 ${ext.slice(0, 3).join(", ")} 기준으로 정리한 실행 가이드입니다.`,
+    description,
     date: publishAt.slice(0, 10),
     publishAt,
     category: meta.name,

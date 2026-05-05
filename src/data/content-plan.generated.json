@@ -3,8 +3,8 @@
     "id": "generated-001",
     "status": "scheduled",
     "slug": "fair-random-draw",
-    "title": "랜덤 추첨 공정성, 공정성 실수 줄이는 기준",
-    "description": "랜덤 추첨 공정성을 공정성, 중복 방지, 참가자 목록 기준으로 정리한 실행 가이드입니다.",
+    "title": "랜덤 추첨 공정성, 중복 방지 실수 줄이는 기준",
+    "description": "랜덤 추첨 공정성을 중복 방지, 참가자 목록, 확률 설정 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-05",
     "publishAt": "2026-05-05T18:00:00+09:00",
     "category": "룰렛·랜덤 결정",
@@ -19,8 +19,8 @@
     ],
     "readerProblem": "추첨 결과를 두고 참가자가 납득하지 못하는 문제",
     "practicalExample": "이벤트 당첨자 명단을 공개하기 전",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -41,7 +41,7 @@
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -65,8 +65,8 @@
     ],
     "readerProblem": "선택지가 너무 많아 룰렛 결과가 산만해지는 문제",
     "practicalExample": "회의 안건을 빠르게 고를 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -95,7 +95,7 @@
     "id": "generated-003",
     "status": "scheduled",
     "slug": "duplicate-winner-prevention",
-    "title": "중복 당첨 방지 룰 실행법, 결과 기록까지 정리",
+    "title": "중복 당첨 방지 룰 실행 순서, 결과 기록부터 보기",
     "description": "중복 당첨 방지 룰을 참가자 목록, 확률 설정, 결과 기록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-06",
     "publishAt": "2026-05-06T04:00:00+09:00",
@@ -111,8 +111,8 @@
     ],
     "readerProblem": "같은 사람이 여러 번 뽑혀 공정성이 흔들리는 문제",
     "practicalExample": "사은품 추첨을 여러 차례 진행할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -133,7 +133,7 @@
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -157,8 +157,8 @@
     ],
     "readerProblem": "확률을 다르게 줘야 하는데 기준이 모호한 문제",
     "practicalExample": "팀별 참여도에 따라 기회를 나눌 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -203,8 +203,8 @@
     ],
     "readerProblem": "이름 표기가 달라 중복과 누락이 생기는 문제",
     "practicalExample": "구글폼 응답을 룰렛에 넣기 전",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -233,7 +233,7 @@
     "id": "generated-006",
     "status": "scheduled",
     "slug": "presentation-order-draw",
-    "title": "발표 순서 추첨, 참가자 목록 전 점검할 것",
+    "title": "발표 순서 추첨, 참가자 목록 전 확인할 것",
     "description": "발표 순서 추첨을 공정성, 중복 방지, 참가자 목록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-06",
     "publishAt": "2026-05-06T19:00:00+09:00",
@@ -249,8 +249,8 @@
     ],
     "readerProblem": "순서를 정하는 과정에서 불만이 생기는 문제",
     "practicalExample": "스터디 발표자를 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -279,7 +279,7 @@
     "id": "generated-007",
     "status": "scheduled",
     "slug": "cleaning-duty-draw",
-    "title": "청소 당번 뽑기 운영 기준, 결과 기록 남기는 법",
+    "title": "청소 당번 뽑기 운영 원칙, 결과 기록 남기기",
     "description": "청소 당번 뽑기을 중복 방지, 참가자 목록, 확률 설정 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-07",
     "publishAt": "2026-05-07T00:00:00+09:00",
@@ -295,8 +295,8 @@
     ],
     "readerProblem": "당번이 특정 사람에게 몰리는 문제",
     "practicalExample": "공용 공간 청소 순서를 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -317,7 +317,7 @@
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -341,8 +341,8 @@
     ],
     "readerProblem": "가벼운 내기가 부담으로 번지는 문제",
     "practicalExample": "팀 휴식 시간에 커피 담당을 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -371,7 +371,7 @@
     "id": "generated-009",
     "status": "scheduled",
     "slug": "seat-assignment-random",
-    "title": "자리 배치 랜덤 상황별 기준, 결과 기록 체크",
+    "title": "자리 배치 랜덤 상황별 점검, 결과 기록 기준",
     "description": "자리 배치 랜덤을 확률 설정, 결과 기록, 공정성 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-07",
     "publishAt": "2026-05-07T10:00:00+09:00",
@@ -387,8 +387,8 @@
     ],
     "readerProblem": "늘 같은 사람끼리 앉아 교류가 줄어드는 문제",
     "practicalExample": "워크숍 좌석을 배치할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -433,8 +433,8 @@
     ],
     "readerProblem": "장소 후보가 많아 결정이 늦어지는 문제",
     "practicalExample": "퇴근 전 회식 장소를 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -463,7 +463,7 @@
     "id": "generated-011",
     "status": "scheduled",
     "slug": "travel-destination-picker",
-    "title": "여행지 랜덤 선택, 공정성 실수 줄이는 기준",
+    "title": "여행지 랜덤 선택 실패 방지, 공정성 먼저 보기",
     "description": "여행지 랜덤 선택을 공정성, 중복 방지, 참가자 목록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-07",
     "publishAt": "2026-05-07T20:00:00+09:00",
@@ -479,8 +479,8 @@
     ],
     "readerProblem": "후보를 계속 비교하느라 일정이 밀리는 문제",
     "practicalExample": "주말 여행지를 고를 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -501,7 +501,7 @@
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -509,7 +509,7 @@
     "id": "generated-012",
     "status": "scheduled",
     "slug": "date-course-picker",
-    "title": "데이트 코스 룰렛 체크리스트, 참가자 목록부터 확인",
+    "title": "데이트 코스 룰렛 적용 기준, 결과 기록까지 확인",
     "description": "데이트 코스 룰렛을 중복 방지, 참가자 목록, 확률 설정 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-08",
     "publishAt": "2026-05-08T01:00:00+09:00",
@@ -525,8 +525,8 @@
     ],
     "readerProblem": "매번 비슷한 코스만 고르는 문제",
     "practicalExample": "저녁 약속 코스를 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -547,7 +547,7 @@
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -555,7 +555,7 @@
     "id": "generated-013",
     "status": "scheduled",
     "slug": "gift-exchange-draw",
-    "title": "선물 교환 추첨 실행법, 결과 기록까지 정리",
+    "title": "선물 교환 추첨 초보 점검표, 확률 설정 중심",
     "description": "선물 교환 추첨을 참가자 목록, 확률 설정, 결과 기록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-08",
     "publishAt": "2026-05-08T06:00:00+09:00",
@@ -571,146 +571,8 @@
     ],
     "readerProblem": "누가 누구에게 줄지 공개되면 재미가 줄어드는 문제",
     "practicalExample": "연말 선물 교환을 준비할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
-    "internalLinks": [
-      {
-        "label": "온라인 룰렛 바로 쓰기",
-        "path": "/"
-      },
-      {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
-      },
-      {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
-      }
-    ],
-    "tags": [
-      "룰렛",
-      "랜덤",
-      "선택"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-014",
-    "status": "scheduled",
-    "slug": "study-topic-picker",
-    "title": "스터디 주제 추첨 비교 기준, 확률 설정과 중복 방지",
-    "description": "스터디 주제 추첨을 확률 설정, 결과 기록, 공정성 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-05-08",
-    "publishAt": "2026-05-08T11:00:00+09:00",
-    "category": "룰렛·랜덤 결정",
-    "contentType": "Comparison",
-    "searchIntent": "비교",
-    "mainKeyword": "스터디 주제 추첨",
-    "expandedKeywords": [
-      "확률 설정",
-      "결과 기록",
-      "공정성",
-      "중복 방지"
-    ],
-    "readerProblem": "쉬운 주제만 선택되는 문제",
-    "practicalExample": "다음 발표 주제를 나눌 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
-    "internalLinks": [
-      {
-        "label": "온라인 룰렛 바로 쓰기",
-        "path": "/"
-      },
-      {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
-      },
-      {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
-      }
-    ],
-    "tags": [
-      "룰렛",
-      "랜덤",
-      "선택"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-015",
-    "status": "scheduled",
-    "slug": "game-turn-randomizer",
-    "title": "게임 순서 랜덤 FAQ, 공정성 질문 정리",
-    "description": "게임 순서 랜덤을 결과 기록, 공정성, 중복 방지 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-05-08",
-    "publishAt": "2026-05-08T16:00:00+09:00",
-    "category": "룰렛·랜덤 결정",
-    "contentType": "FAQ",
-    "searchIntent": "질문 답변",
-    "mainKeyword": "게임 순서 랜덤",
-    "expandedKeywords": [
-      "결과 기록",
-      "공정성",
-      "중복 방지",
-      "참가자 목록"
-    ],
-    "readerProblem": "첫 순서가 계속 유리하다는 불만",
-    "practicalExample": "보드게임 시작 순서를 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
-    "internalLinks": [
-      {
-        "label": "온라인 룰렛 바로 쓰기",
-        "path": "/"
-      },
-      {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
-      },
-      {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
-      }
-    ],
-    "tags": [
-      "룰렛",
-      "랜덤",
-      "선택"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-016",
-    "status": "scheduled",
-    "slug": "random-mission-maker",
-    "title": "랜덤 미션 만들기, 참가자 목록 전 점검할 것",
-    "description": "랜덤 미션 만들기을 공정성, 중복 방지, 참가자 목록 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-05-08",
-    "publishAt": "2026-05-08T21:00:00+09:00",
-    "category": "룰렛·랜덤 결정",
-    "contentType": "How-to",
-    "searchIntent": "문제 해결",
-    "mainKeyword": "랜덤 미션 만들기",
-    "expandedKeywords": [
-      "공정성",
-      "중복 방지",
-      "참가자 목록",
-      "확률 설정"
-    ],
-    "readerProblem": "활동이 단조로워 참여가 떨어지는 문제",
-    "practicalExample": "팀 빌딩 미션을 만들 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -736,10 +598,148 @@
     "cannibalizationStatus": "pass"
   },
   {
+    "id": "generated-014",
+    "status": "scheduled",
+    "slug": "study-topic-picker",
+    "title": "스터디 주제 추첨 개선 포인트, 공정성 활용법",
+    "description": "스터디 주제 추첨을 확률 설정, 결과 기록, 공정성 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-05-08",
+    "publishAt": "2026-05-08T11:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "스터디 주제 추첨",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "쉬운 주제만 선택되는 문제",
+    "practicalExample": "다음 발표 주제를 나눌 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-015",
+    "status": "scheduled",
+    "slug": "game-turn-randomizer",
+    "title": "게임 순서 랜덤 선택 기준, 결과 기록와 공정성",
+    "description": "게임 순서 랜덤을 결과 기록, 공정성, 중복 방지 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-05-08",
+    "publishAt": "2026-05-08T16:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "게임 순서 랜덤",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "첫 순서가 계속 유리하다는 불만",
+    "practicalExample": "보드게임 시작 순서를 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-016",
+    "status": "scheduled",
+    "slug": "random-mission-maker",
+    "title": "랜덤 미션 만들기, 공정성 실수 줄이는 기준",
+    "description": "랜덤 미션 만들기을 공정성, 중복 방지, 참가자 목록 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-05-08",
+    "publishAt": "2026-05-08T21:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "랜덤 미션 만들기",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "활동이 단조로워 참여가 떨어지는 문제",
+    "practicalExample": "팀 빌딩 미션을 만들 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
     "id": "generated-017",
     "status": "scheduled",
     "slug": "icebreaking-question-wheel",
-    "title": "아이스브레이킹 질문 운영 기준, 결과 기록 남기는 법",
+    "title": "아이스브레이킹 질문 체크리스트, 참가자 목록부터 확인",
     "description": "아이스브레이킹 질문을 중복 방지, 참가자 목록, 확률 설정 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-09",
     "publishAt": "2026-05-09T02:00:00+09:00",
@@ -755,8 +755,8 @@
     ],
     "readerProblem": "어색한 첫 대화를 풀기 어려운 문제",
     "practicalExample": "온라인 모임 시작 전",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -785,7 +785,7 @@
     "id": "generated-018",
     "status": "scheduled",
     "slug": "class-activity-draw",
-    "title": "수업 활동 추첨 빠른 판단법, 참가자 목록 중심",
+    "title": "수업 활동 추첨 실행 순서, 결과 기록부터 보기",
     "description": "수업 활동 추첨을 참가자 목록, 확률 설정, 결과 기록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-09",
     "publishAt": "2026-05-09T07:00:00+09:00",
@@ -801,8 +801,8 @@
     ],
     "readerProblem": "학생 참여가 일부에게만 몰리는 문제",
     "practicalExample": "발표자와 활동을 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -831,7 +831,7 @@
     "id": "generated-019",
     "status": "scheduled",
     "slug": "survey-option-picker",
-    "title": "설문 선택지 추첨 상황별 기준, 결과 기록 체크",
+    "title": "설문 선택지 추첨 비교 기준, 확률 설정과 중복 방지",
     "description": "설문 선택지 추첨을 확률 설정, 결과 기록, 공정성 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-09",
     "publishAt": "2026-05-09T12:00:00+09:00",
@@ -847,8 +847,8 @@
     ],
     "readerProblem": "테스트할 문항을 고르기 어려운 문제",
     "practicalExample": "A/B 설문 후보를 줄일 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -869,7 +869,7 @@
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -877,7 +877,7 @@
     "id": "generated-020",
     "status": "scheduled",
     "slug": "team-building-picker",
-    "title": "팀 빌딩 활동 선택 실전 정리, 중복 방지부터 시작",
+    "title": "팀 빌딩 활동 선택 FAQ, 공정성 질문 정리",
     "description": "팀 빌딩 활동 선택을 결과 기록, 공정성, 중복 방지 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-09",
     "publishAt": "2026-05-09T17:00:00+09:00",
@@ -893,8 +893,8 @@
     ],
     "readerProblem": "활동 선호가 갈려 결론이 늦어지는 문제",
     "practicalExample": "오프라인 워크숍을 준비할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -915,7 +915,7 @@
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -923,7 +923,7 @@
     "id": "generated-021",
     "status": "scheduled",
     "slug": "random-question-bank",
-    "title": "랜덤 질문 리스트, 아이스브레이킹 질문 설계 기준",
+    "title": "랜덤 질문 리스트, 참가자 목록 전 확인할 것",
     "description": "랜덤 질문 리스트을 공정성, 중복 방지, 참가자 목록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-09",
     "publishAt": "2026-05-09T22:00:00+09:00",
@@ -939,8 +939,8 @@
     ],
     "readerProblem": "질문이 반복되어 대화가 지루해지는 문제",
     "practicalExample": "커뮤니티 질문 카드를 만들 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -961,7 +961,7 @@
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -969,7 +969,7 @@
     "id": "generated-022",
     "status": "scheduled",
     "slug": "lunch-choice-rule",
-    "title": "점심 메뉴 결정 룰 체크리스트, 참가자 목록부터 확인",
+    "title": "점심 메뉴 결정 룰 운영 원칙, 결과 기록 남기기",
     "description": "점심 메뉴 결정 룰을 중복 방지, 참가자 목록, 확률 설정 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-10",
     "publishAt": "2026-05-10T03:00:00+09:00",
@@ -985,238 +985,8 @@
     ],
     "readerProblem": "매일 같은 메뉴 논쟁이 반복되는 문제",
     "practicalExample": "팀 점심 후보를 고를 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
-    "internalLinks": [
-      {
-        "label": "온라인 룰렛 바로 쓰기",
-        "path": "/"
-      },
-      {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
-      },
-      {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
-      }
-    ],
-    "tags": [
-      "룰렛",
-      "랜덤",
-      "선택"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-023",
-    "status": "scheduled",
-    "slug": "dinner-menu-wheel",
-    "title": "저녁 메뉴 룰렛 실행법, 결과 기록까지 정리",
-    "description": "저녁 메뉴 룰렛을 참가자 목록, 확률 설정, 결과 기록 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-05-10",
-    "publishAt": "2026-05-10T08:00:00+09:00",
-    "category": "룰렛·랜덤 결정",
-    "contentType": "Explainer",
-    "searchIntent": "실행",
-    "mainKeyword": "저녁 메뉴 룰렛",
-    "expandedKeywords": [
-      "참가자 목록",
-      "확률 설정",
-      "결과 기록",
-      "공정성"
-    ],
-    "readerProblem": "퇴근 후 메뉴 선택에 에너지를 쓰는 문제",
-    "practicalExample": "집에서 저녁 메뉴를 고를 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
-    "internalLinks": [
-      {
-        "label": "온라인 룰렛 바로 쓰기",
-        "path": "/"
-      },
-      {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
-      },
-      {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
-      }
-    ],
-    "tags": [
-      "룰렛",
-      "랜덤",
-      "선택"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-024",
-    "status": "scheduled",
-    "slug": "meeting-agenda-priority",
-    "title": "회의 안건 우선순위 비교 기준, 확률 설정과 중복 방지",
-    "description": "회의 안건 우선순위을 확률 설정, 결과 기록, 공정성 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-05-10",
-    "publishAt": "2026-05-10T13:00:00+09:00",
-    "category": "룰렛·랜덤 결정",
-    "contentType": "Comparison",
-    "searchIntent": "비교",
-    "mainKeyword": "회의 안건 우선순위",
-    "expandedKeywords": [
-      "확률 설정",
-      "결과 기록",
-      "공정성",
-      "중복 방지"
-    ],
-    "readerProblem": "중요도가 낮은 안건에 시간을 쓰는 문제",
-    "practicalExample": "짧은 회의 순서를 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
-    "internalLinks": [
-      {
-        "label": "온라인 룰렛 바로 쓰기",
-        "path": "/"
-      },
-      {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
-      },
-      {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
-      }
-    ],
-    "tags": [
-      "룰렛",
-      "랜덤",
-      "선택"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-025",
-    "status": "scheduled",
-    "slug": "random-number-audit",
-    "title": "랜덤 번호 검증 FAQ, 공정성 질문 정리",
-    "description": "랜덤 번호 검증을 결과 기록, 공정성, 중복 방지 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-05-10",
-    "publishAt": "2026-05-10T18:00:00+09:00",
-    "category": "룰렛·랜덤 결정",
-    "contentType": "FAQ",
-    "searchIntent": "질문 답변",
-    "mainKeyword": "랜덤 번호 검증",
-    "expandedKeywords": [
-      "결과 기록",
-      "공정성",
-      "중복 방지",
-      "참가자 목록"
-    ],
-    "readerProblem": "번호 추첨 과정이 불투명해 보이는 문제",
-    "practicalExample": "좌석 번호나 대기 번호를 뽑을 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
-    "internalLinks": [
-      {
-        "label": "온라인 룰렛 바로 쓰기",
-        "path": "/"
-      },
-      {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
-      },
-      {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
-      }
-    ],
-    "tags": [
-      "룰렛",
-      "랜덤",
-      "선택"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-026",
-    "status": "scheduled",
-    "slug": "live-stream-giveaway",
-    "title": "라이브 추첨 운영, 참가자 목록 전 점검할 것",
-    "description": "라이브 추첨 운영을 공정성, 중복 방지, 참가자 목록 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-05-10",
-    "publishAt": "2026-05-10T23:00:00+09:00",
-    "category": "룰렛·랜덤 결정",
-    "contentType": "How-to",
-    "searchIntent": "문제 해결",
-    "mainKeyword": "라이브 추첨 운영",
-    "expandedKeywords": [
-      "공정성",
-      "중복 방지",
-      "참가자 목록",
-      "확률 설정"
-    ],
-    "readerProblem": "실시간 추첨 중 오류가 나면 신뢰가 떨어지는 문제",
-    "practicalExample": "라이브 방송 이벤트를 진행할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
-    "internalLinks": [
-      {
-        "label": "온라인 룰렛 바로 쓰기",
-        "path": "/"
-      },
-      {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
-      },
-      {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
-      }
-    ],
-    "tags": [
-      "룰렛",
-      "랜덤",
-      "선택"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-027",
-    "status": "scheduled",
-    "slug": "name-draw-clean-rule",
-    "title": "이름 추첨 기준 운영 기준, 결과 기록 남기는 법",
-    "description": "이름 추첨 기준을 중복 방지, 참가자 목록, 확률 설정 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-05-11",
-    "publishAt": "2026-05-11T04:00:00+09:00",
-    "category": "룰렛·랜덤 결정",
-    "contentType": "Checklist",
-    "searchIntent": "정보 탐색",
-    "mainKeyword": "이름 추첨 기준",
-    "expandedKeywords": [
-      "중복 방지",
-      "참가자 목록",
-      "확률 설정",
-      "결과 기록"
-    ],
-    "readerProblem": "동명이인과 별명이 섞여 혼선이 생기는 문제",
-    "practicalExample": "참가자 이름을 룰렛에 넣을 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -1242,27 +1012,27 @@
     "cannibalizationStatus": "pass"
   },
   {
-    "id": "generated-028",
+    "id": "generated-023",
     "status": "scheduled",
-    "slug": "random-choice-log",
-    "title": "랜덤 결과 기록 빠른 판단법, 참가자 목록 중심",
-    "description": "랜덤 결과 기록을 참가자 목록, 확률 설정, 결과 기록 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-05-11",
-    "publishAt": "2026-05-11T09:00:00+09:00",
+    "slug": "dinner-menu-wheel",
+    "title": "저녁 메뉴 룰렛 빠른 판단법, 참가자 목록 중심",
+    "description": "저녁 메뉴 룰렛을 참가자 목록, 확률 설정, 결과 기록 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-05-10",
+    "publishAt": "2026-05-10T08:00:00+09:00",
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
     "searchIntent": "실행",
-    "mainKeyword": "랜덤 결과 기록",
+    "mainKeyword": "저녁 메뉴 룰렛",
     "expandedKeywords": [
       "참가자 목록",
       "확률 설정",
       "결과 기록",
       "공정성"
     ],
-    "readerProblem": "결과를 나중에 확인하기 어려운 문제",
-    "practicalExample": "추첨 내역을 공유해야 할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "readerProblem": "퇴근 후 메뉴 선택에 에너지를 쓰는 문제",
+    "practicalExample": "집에서 저녁 메뉴를 고를 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -1288,10 +1058,240 @@
     "cannibalizationStatus": "pass"
   },
   {
+    "id": "generated-024",
+    "status": "scheduled",
+    "slug": "meeting-agenda-priority",
+    "title": "회의 안건 우선순위 상황별 점검, 결과 기록 기준",
+    "description": "회의 안건 우선순위을 확률 설정, 결과 기록, 공정성 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-05-10",
+    "publishAt": "2026-05-10T13:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "회의 안건 우선순위",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "중요도가 낮은 안건에 시간을 쓰는 문제",
+    "practicalExample": "짧은 회의 순서를 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-025",
+    "status": "scheduled",
+    "slug": "random-number-audit",
+    "title": "랜덤 번호 검증 실전 정리, 중복 방지부터 시작",
+    "description": "랜덤 번호 검증을 결과 기록, 공정성, 중복 방지 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-05-10",
+    "publishAt": "2026-05-10T18:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "랜덤 번호 검증",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "번호 추첨 과정이 불투명해 보이는 문제",
+    "practicalExample": "좌석 번호나 대기 번호를 뽑을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-026",
+    "status": "scheduled",
+    "slug": "live-stream-giveaway",
+    "title": "라이브 추첨 운영 실패 방지, 공정성 먼저 보기",
+    "description": "라이브 추첨 운영을 공정성, 중복 방지, 참가자 목록 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-05-10",
+    "publishAt": "2026-05-10T23:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "라이브 추첨 운영",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "실시간 추첨 중 오류가 나면 신뢰가 떨어지는 문제",
+    "practicalExample": "라이브 방송 이벤트를 진행할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-027",
+    "status": "scheduled",
+    "slug": "name-draw-clean-rule",
+    "title": "이름 추첨 기준 적용 기준, 결과 기록까지 확인",
+    "description": "이름 추첨 기준을 중복 방지, 참가자 목록, 확률 설정 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-05-11",
+    "publishAt": "2026-05-11T04:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "이름 추첨 기준",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "동명이인과 별명이 섞여 혼선이 생기는 문제",
+    "practicalExample": "참가자 이름을 룰렛에 넣을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-028",
+    "status": "scheduled",
+    "slug": "random-choice-log",
+    "title": "랜덤 결과 기록 초보 점검표, 확률 설정 중심",
+    "description": "랜덤 결과 기록을 참가자 목록, 확률 설정, 공정성 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-05-11",
+    "publishAt": "2026-05-11T09:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "랜덤 결과 기록",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "결과를 나중에 확인하기 어려운 문제",
+    "practicalExample": "추첨 내역을 공유해야 할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
     "id": "generated-029",
     "status": "scheduled",
     "slug": "choice-fatigue-random",
-    "title": "선택 피로 줄이기 상황별 기준, 결과 기록 체크",
+    "title": "선택 피로 줄이기 개선 포인트, 공정성 활용법",
     "description": "선택 피로 줄이기을 확률 설정, 결과 기록, 공정성 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-11",
     "publishAt": "2026-05-11T14:00:00+09:00",
@@ -1307,8 +1307,8 @@
     ],
     "readerProblem": "작은 결정이 쌓여 집중력이 떨어지는 문제",
     "practicalExample": "하루 계획을 빠르게 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -1329,7 +1329,7 @@
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -1337,7 +1337,7 @@
     "id": "generated-030",
     "status": "scheduled",
     "slug": "penalty-wheel-rule",
-    "title": "벌칙 룰렛 기준 실전 정리, 중복 방지부터 시작",
+    "title": "벌칙 룰렛 기준 선택 기준, 결과 기록와 공정성",
     "description": "벌칙 룰렛 기준을 결과 기록, 공정성, 중복 방지 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-11",
     "publishAt": "2026-05-11T19:00:00+09:00",
@@ -1353,8 +1353,8 @@
     ],
     "readerProblem": "벌칙이 과하거나 불공정해지는 문제",
     "practicalExample": "가벼운 게임 벌칙을 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -1399,8 +1399,8 @@
     ],
     "readerProblem": "진행 역할이 한 사람에게만 몰리는 문제",
     "practicalExample": "주간 온라인 모임을 시작할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -1445,8 +1445,8 @@
     ],
     "readerProblem": "동률 상황에서 결정을 미루는 문제",
     "practicalExample": "투표 결과가 같은 수로 갈렸을 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -1475,7 +1475,7 @@
     "id": "generated-033",
     "status": "scheduled",
     "slug": "raffle-announcement-copy",
-    "title": "추첨 결과 안내문 실행법, 결과 기록까지 정리",
+    "title": "추첨 결과 안내문 실행 순서, 결과 기록부터 보기",
     "description": "추첨 결과 안내문을 참가자 목록, 확률 설정, 결과 기록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-12",
     "publishAt": "2026-05-12T10:00:00+09:00",
@@ -1491,8 +1491,8 @@
     ],
     "readerProblem": "결과 안내가 짧아 신뢰가 낮아지는 문제",
     "practicalExample": "이벤트 결과 페이지를 만들 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -1513,7 +1513,7 @@
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -1537,8 +1537,8 @@
     ],
     "readerProblem": "무작위 결과가 어떻게 나왔는지 설명하기 어려운 문제",
     "practicalExample": "개발자와 운영자가 추첨을 검토할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -1583,8 +1583,8 @@
     ],
     "readerProblem": "매번 새 기준을 만들다 시간이 낭비되는 문제",
     "practicalExample": "반복 이벤트 운영 규칙을 정할 때",
-    "primarySourceName": "Nielsen Norman Group",
-    "primarySourceUrl": "https://www.nngroup.com/articles/decision-fatigue/",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -1613,7 +1613,7 @@
     "id": "generated-036",
     "status": "scheduled",
     "slug": "discount-rate-check",
-    "title": "할인율 계산 실수, 결과 해석 전 점검할 것",
+    "title": "할인율 계산 실수, 결과 해석 전 확인할 것",
     "description": "할인율 계산 실수을 계산 기준, 입력값 확인, 결과 해석 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-13",
     "publishAt": "2026-05-13T01:00:00+09:00",
@@ -1659,7 +1659,7 @@
     "id": "generated-037",
     "status": "scheduled",
     "slug": "vat-inclusive-price",
-    "title": "부가세 포함 금액 운영 기준, 생활 적용 남기는 법",
+    "title": "부가세 포함 금액 운영 원칙, 생활 적용 남기기",
     "description": "부가세 포함 금액을 입력값 확인, 결과 해석, 실수 방지 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-13",
     "publishAt": "2026-05-13T06:00:00+09:00",
@@ -1697,7 +1697,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -1751,7 +1751,7 @@
     "id": "generated-039",
     "status": "scheduled",
     "slug": "work-hour-summary",
-    "title": "근무시간 합산 상황별 기준, 생활 적용 체크",
+    "title": "근무시간 합산 상황별 점검, 생활 적용 기준",
     "description": "근무시간 합산을 실수 방지, 생활 적용, 계산 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-13",
     "publishAt": "2026-05-13T16:00:00+09:00",
@@ -1843,7 +1843,7 @@
     "id": "generated-041",
     "status": "scheduled",
     "slug": "delivery-date-estimate",
-    "title": "배송 예정일 계산, 계산 기준 실수 줄이는 기준",
+    "title": "배송 예정일 계산 실패 방지, 계산 기준 먼저 보기",
     "description": "배송 예정일 계산을 계산 기준, 입력값 확인, 결과 해석 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-14",
     "publishAt": "2026-05-14T02:00:00+09:00",
@@ -1881,7 +1881,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -1889,7 +1889,7 @@
     "id": "generated-042",
     "status": "scheduled",
     "slug": "parking-fee-estimate",
-    "title": "주차비 예상 계산 체크리스트, 결과 해석부터 확인",
+    "title": "주차비 예상 계산 적용 기준, 생활 적용까지 확인",
     "description": "주차비 예상 계산을 입력값 확인, 결과 해석, 실수 방지 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-14",
     "publishAt": "2026-05-14T07:00:00+09:00",
@@ -1935,7 +1935,7 @@
     "id": "generated-043",
     "status": "scheduled",
     "slug": "electricity-use-note",
-    "title": "전기요금 사용량 메모 실행법, 생활 적용까지 정리",
+    "title": "전기요금 사용량 메모 초보 점검표, 실수 방지 중심",
     "description": "전기요금 사용량 메모을 결과 해석, 실수 방지, 생활 적용 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-14",
     "publishAt": "2026-05-14T12:00:00+09:00",
@@ -1973,7 +1973,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -1981,7 +1981,7 @@
     "id": "generated-044",
     "status": "scheduled",
     "slug": "compound-interest-memo",
-    "title": "복리 계산 메모 비교 기준, 실수 방지와 입력값 확인",
+    "title": "복리 계산 메모 개선 포인트, 계산 기준 활용법",
     "description": "복리 계산 메모을 실수 방지, 생활 적용, 계산 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-14",
     "publishAt": "2026-05-14T17:00:00+09:00",
@@ -2019,7 +2019,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2027,7 +2027,7 @@
     "id": "generated-045",
     "status": "scheduled",
     "slug": "loan-interest-rough",
-    "title": "대출 이자 간단 계산 FAQ, 계산 기준 질문 정리",
+    "title": "대출 이자 간단 계산 선택 기준, 생활 적용와 계산 기준",
     "description": "대출 이자 간단 계산을 생활 적용, 계산 기준, 입력값 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-14",
     "publishAt": "2026-05-14T22:00:00+09:00",
@@ -2065,7 +2065,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2073,7 +2073,7 @@
     "id": "generated-046",
     "status": "scheduled",
     "slug": "salary-net-estimate",
-    "title": "실수령액 추정 기준, 결과 해석 전 점검할 것",
+    "title": "실수령액 추정 기준, 계산 기준 실수 줄이는 기준",
     "description": "실수령액 추정 기준을 계산 기준, 입력값 확인, 결과 해석 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-15",
     "publishAt": "2026-05-15T03:00:00+09:00",
@@ -2111,7 +2111,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2119,7 +2119,7 @@
     "id": "generated-047",
     "status": "scheduled",
     "slug": "age-standard-check",
-    "title": "나이 기준 확인 운영 기준, 생활 적용 남기는 법",
+    "title": "나이 기준 확인 체크리스트, 결과 해석부터 확인",
     "description": "나이 기준 확인을 입력값 확인, 결과 해석, 실수 방지 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-15",
     "publishAt": "2026-05-15T08:00:00+09:00",
@@ -2157,7 +2157,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2165,7 +2165,7 @@
     "id": "generated-048",
     "status": "scheduled",
     "slug": "calendar-date-gap",
-    "title": "날짜 차이 계산 빠른 판단법, 결과 해석 중심",
+    "title": "날짜 차이 계산 실행 순서, 생활 적용부터 보기",
     "description": "날짜 차이 계산을 결과 해석, 실수 방지, 생활 적용 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-15",
     "publishAt": "2026-05-15T13:00:00+09:00",
@@ -2203,7 +2203,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2211,7 +2211,7 @@
     "id": "generated-049",
     "status": "scheduled",
     "slug": "time-zone-meeting",
-    "title": "시차 회의 시간 상황별 기준, 생활 적용 체크",
+    "title": "시차 회의 시간 비교 기준, 실수 방지와 입력값 확인",
     "description": "시차 회의 시간을 실수 방지, 생활 적용, 계산 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-15",
     "publishAt": "2026-05-15T18:00:00+09:00",
@@ -2249,7 +2249,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2257,7 +2257,7 @@
     "id": "generated-050",
     "status": "scheduled",
     "slug": "unit-note-recipe",
-    "title": "레시피 단위 변환 실전 정리, 입력값 확인부터 시작",
+    "title": "레시피 단위 변환 FAQ, 계산 기준 질문 정리",
     "description": "레시피 단위 변환을 생활 적용, 계산 기준, 입력값 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-15",
     "publishAt": "2026-05-15T23:00:00+09:00",
@@ -2295,7 +2295,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2303,7 +2303,7 @@
     "id": "generated-051",
     "status": "scheduled",
     "slug": "moving-check-cost",
-    "title": "이사 비용 체크, 계산 기준 실수 줄이는 기준",
+    "title": "이사 비용 체크, 결과 해석 전 확인할 것",
     "description": "이사 비용 체크을 계산 기준, 입력값 확인, 결과 해석 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-16",
     "publishAt": "2026-05-16T04:00:00+09:00",
@@ -2341,7 +2341,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2349,7 +2349,7 @@
     "id": "generated-052",
     "status": "scheduled",
     "slug": "subscription-total-cost",
-    "title": "구독료 월합계 체크리스트, 결과 해석부터 확인",
+    "title": "구독료 월합계 운영 원칙, 생활 적용 남기기",
     "description": "구독료 월합계을 입력값 확인, 결과 해석, 실수 방지 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-16",
     "publishAt": "2026-05-16T09:00:00+09:00",
@@ -2387,7 +2387,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2395,7 +2395,7 @@
     "id": "generated-053",
     "status": "scheduled",
     "slug": "household-category-rule",
-    "title": "가계부 분류 기준 실행법, 생활 적용까지 정리",
+    "title": "가계부 분류 기준 빠른 판단법, 결과 해석 중심",
     "description": "가계부 분류 기준을 결과 해석, 실수 방지, 생활 적용 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-16",
     "publishAt": "2026-05-16T14:00:00+09:00",
@@ -2433,7 +2433,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2441,7 +2441,7 @@
     "id": "generated-054",
     "status": "scheduled",
     "slug": "fuel-cost-split",
-    "title": "주유비 나누기 비교 기준, 실수 방지와 입력값 확인",
+    "title": "주유비 나누기 상황별 점검, 생활 적용 기준",
     "description": "주유비 나누기을 실수 방지, 생활 적용, 계산 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-16",
     "publishAt": "2026-05-16T19:00:00+09:00",
@@ -2479,7 +2479,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2487,7 +2487,7 @@
     "id": "generated-055",
     "status": "scheduled",
     "slug": "event-countdown-plan",
-    "title": "행사 남은 기간 FAQ, 계산 기준 질문 정리",
+    "title": "행사 남은 기간 실전 정리, 입력값 확인부터 시작",
     "description": "행사 남은 기간을 생활 적용, 계산 기준, 입력값 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-17",
     "publishAt": "2026-05-17T00:00:00+09:00",
@@ -2525,7 +2525,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2533,7 +2533,7 @@
     "id": "generated-056",
     "status": "scheduled",
     "slug": "school-supply-budget",
-    "title": "준비물 예산 정리, 결과 해석 전 점검할 것",
+    "title": "준비물 예산 정리 실패 방지, 계산 기준 먼저 보기",
     "description": "준비물 예산 정리을 계산 기준, 입력값 확인, 결과 해석 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-17",
     "publishAt": "2026-05-17T05:00:00+09:00",
@@ -2571,7 +2571,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2579,7 +2579,7 @@
     "id": "generated-057",
     "status": "scheduled",
     "slug": "exercise-time-record",
-    "title": "운동 시간 기록 운영 기준, 생활 적용 남기는 법",
+    "title": "운동 시간 기록 적용 기준, 생활 적용까지 확인",
     "description": "운동 시간 기록을 입력값 확인, 결과 해석, 실수 방지 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-17",
     "publishAt": "2026-05-17T10:00:00+09:00",
@@ -2617,7 +2617,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2625,7 +2625,7 @@
     "id": "generated-058",
     "status": "scheduled",
     "slug": "water-intake-routine",
-    "title": "물 마시기 기록 빠른 판단법, 결과 해석 중심",
+    "title": "물 마시기 기록 초보 점검표, 실수 방지 중심",
     "description": "물 마시기 기록을 결과 해석, 실수 방지, 생활 적용 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-17",
     "publishAt": "2026-05-17T15:00:00+09:00",
@@ -2671,7 +2671,7 @@
     "id": "generated-059",
     "status": "scheduled",
     "slug": "sleep-hour-note",
-    "title": "수면 시간 메모 상황별 기준, 생활 적용 체크",
+    "title": "수면 시간 메모 개선 포인트, 계산 기준 활용법",
     "description": "수면 시간 메모을 실수 방지, 생활 적용, 계산 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-17",
     "publishAt": "2026-05-17T20:00:00+09:00",
@@ -2709,7 +2709,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2717,7 +2717,7 @@
     "id": "generated-060",
     "status": "scheduled",
     "slug": "grocery-unit-price",
-    "title": "장보기 단가 비교 실전 정리, 입력값 확인부터 시작",
+    "title": "장보기 단가 비교 선택 기준, 생활 적용와 계산 기준",
     "description": "장보기 단가 비교을 생활 적용, 계산 기준, 입력값 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-18",
     "publishAt": "2026-05-18T01:00:00+09:00",
@@ -2755,7 +2755,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2855,7 +2855,7 @@
     "id": "generated-063",
     "status": "scheduled",
     "slug": "return-deadline-note",
-    "title": "반품 기한 계산 실행법, 생활 적용까지 정리",
+    "title": "반품 기한 계산 실행 순서, 생활 적용부터 보기",
     "description": "반품 기한 계산을 결과 해석, 실수 방지, 생활 적용 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-18",
     "publishAt": "2026-05-18T16:00:00+09:00",
@@ -2893,7 +2893,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -2993,7 +2993,7 @@
     "id": "generated-066",
     "status": "scheduled",
     "slug": "meeting-room-time",
-    "title": "회의실 사용 시간, 결과 해석 전 점검할 것",
+    "title": "회의실 사용 시간, 결과 해석 전 확인할 것",
     "description": "회의실 사용 시간을 계산 기준, 입력값 확인, 결과 해석 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-19",
     "publishAt": "2026-05-19T07:00:00+09:00",
@@ -3039,7 +3039,7 @@
     "id": "generated-067",
     "status": "scheduled",
     "slug": "rent-share-rule",
-    "title": "공동비 분담 기준 운영 기준, 생활 적용 남기는 법",
+    "title": "공동비 분담 기준 운영 원칙, 생활 적용 남기기",
     "description": "공동비 분담 기준을 입력값 확인, 결과 해석, 실수 방지 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-19",
     "publishAt": "2026-05-19T12:00:00+09:00",
@@ -3077,7 +3077,7 @@
       "도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3131,7 +3131,7 @@
     "id": "generated-069",
     "status": "scheduled",
     "slug": "gift-budget-limit",
-    "title": "선물 예산 상한 상황별 기준, 생활 적용 체크",
+    "title": "선물 예산 상한 상황별 점검, 생활 적용 기준",
     "description": "선물 예산 상한을 실수 방지, 생활 적용, 계산 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-19",
     "publishAt": "2026-05-19T22:00:00+09:00",
@@ -3223,7 +3223,7 @@
     "id": "generated-071",
     "status": "scheduled",
     "slug": "self-intro-length",
-    "title": "자기소개서 글자수, 문서 기준 실수 줄이는 기준",
+    "title": "자기소개서 글자수 실패 방지, 문서 기준 먼저 보기",
     "description": "자기소개서 글자수을 문서 기준, 가독성, 검토 순서 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-20",
     "publishAt": "2026-05-20T08:00:00+09:00",
@@ -3261,7 +3261,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3269,7 +3269,7 @@
     "id": "generated-072",
     "status": "scheduled",
     "slug": "email-subject-rule",
-    "title": "이메일 제목 작성 체크리스트, 검토 순서부터 확인",
+    "title": "이메일 제목 작성 적용 기준, 공유 전 확인까지 확인",
     "description": "이메일 제목 작성을 가독성, 검토 순서, 표현 정리 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-20",
     "publishAt": "2026-05-20T13:00:00+09:00",
@@ -3307,7 +3307,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3315,7 +3315,7 @@
     "id": "generated-073",
     "status": "scheduled",
     "slug": "proposal-summary-check",
-    "title": "제안서 요약 문장 실행법, 공유 전 확인까지 정리",
+    "title": "제안서 요약 문장 초보 점검표, 표현 정리 중심",
     "description": "제안서 요약 문장을 검토 순서, 표현 정리, 공유 전 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-20",
     "publishAt": "2026-05-20T18:00:00+09:00",
@@ -3353,7 +3353,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3361,7 +3361,7 @@
     "id": "generated-074",
     "status": "scheduled",
     "slug": "meeting-note-format",
-    "title": "회의록 정리 형식 비교 기준, 표현 정리와 가독성",
+    "title": "회의록 정리 형식 개선 포인트, 문서 기준 활용법",
     "description": "회의록 정리 형식을 표현 정리, 공유 전 확인, 문서 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-20",
     "publishAt": "2026-05-20T23:00:00+09:00",
@@ -3407,7 +3407,7 @@
     "id": "generated-075",
     "status": "scheduled",
     "slug": "notice-copy-cleanup",
-    "title": "공지문 표현 정리 FAQ, 문서 기준 질문 정리",
+    "title": "공지문 표현 정리 선택 기준, 공유 전 확인와 문서 기준",
     "description": "공지문 표현 정리을 공유 전 확인, 문서 기준, 가독성 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-21",
     "publishAt": "2026-05-21T04:00:00+09:00",
@@ -3453,7 +3453,7 @@
     "id": "generated-076",
     "status": "scheduled",
     "slug": "faq-answer-length",
-    "title": "FAQ 답변 길이, 검토 순서 전 점검할 것",
+    "title": "FAQ 답변 길이, 문서 기준 실수 줄이는 기준",
     "description": "FAQ 답변 길이을 문서 기준, 가독성, 검토 순서 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-21",
     "publishAt": "2026-05-21T09:00:00+09:00",
@@ -3491,7 +3491,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3499,7 +3499,7 @@
     "id": "generated-077",
     "status": "scheduled",
     "slug": "blog-intro-hook",
-    "title": "블로그 첫 문단 운영 기준, 공유 전 확인 남기는 법",
+    "title": "블로그 첫 문단 체크리스트, 검토 순서부터 확인",
     "description": "블로그 첫 문단을 가독성, 검토 순서, 표현 정리 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-21",
     "publishAt": "2026-05-21T14:00:00+09:00",
@@ -3537,7 +3537,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3545,7 +3545,7 @@
     "id": "generated-078",
     "status": "scheduled",
     "slug": "plain-language-rule",
-    "title": "쉬운 문장 기준 빠른 판단법, 검토 순서 중심",
+    "title": "쉬운 문장 기준 실행 순서, 공유 전 확인부터 보기",
     "description": "쉬운 문장 기준을 검토 순서, 표현 정리, 공유 전 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-21",
     "publishAt": "2026-05-21T19:00:00+09:00",
@@ -3583,7 +3583,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3591,7 +3591,7 @@
     "id": "generated-079",
     "status": "scheduled",
     "slug": "copy-before-share",
-    "title": "공유 전 문서 검토 상황별 기준, 공유 전 확인 체크",
+    "title": "공유 전 문서 검토 비교 기준, 표현 정리와 가독성",
     "description": "공유 전 문서 검토을 표현 정리, 공유 전 확인, 문서 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-22",
     "publishAt": "2026-05-22T00:00:00+09:00",
@@ -3629,7 +3629,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3637,7 +3637,7 @@
     "id": "generated-080",
     "status": "scheduled",
     "slug": "markdown-table-check",
-    "title": "마크다운 표 작성 실전 정리, 가독성부터 시작",
+    "title": "마크다운 표 작성 FAQ, 문서 기준 질문 정리",
     "description": "마크다운 표 작성을 공유 전 확인, 문서 기준, 가독성 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-22",
     "publishAt": "2026-05-22T05:00:00+09:00",
@@ -3675,7 +3675,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3683,7 +3683,7 @@
     "id": "generated-081",
     "status": "scheduled",
     "slug": "case-style-guide",
-    "title": "표기 스타일 통일, 문서 기준 실수 줄이는 기준",
+    "title": "표기 스타일 통일, 검토 순서 전 확인할 것",
     "description": "표기 스타일 통일을 문서 기준, 가독성, 검토 순서 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-22",
     "publishAt": "2026-05-22T10:00:00+09:00",
@@ -3721,7 +3721,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3729,7 +3729,7 @@
     "id": "generated-082",
     "status": "scheduled",
     "slug": "headline-trim-rule",
-    "title": "긴 제목 줄이기 체크리스트, 검토 순서부터 확인",
+    "title": "긴 제목 줄이기 운영 원칙, 공유 전 확인 남기기",
     "description": "긴 제목 줄이기을 가독성, 검토 순서, 표현 정리 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-22",
     "publishAt": "2026-05-22T15:00:00+09:00",
@@ -3767,7 +3767,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3775,7 +3775,7 @@
     "id": "generated-083",
     "status": "scheduled",
     "slug": "meta-description-draft",
-    "title": "메타 설명 초안 실행법, 공유 전 확인까지 정리",
+    "title": "메타 설명 초안 빠른 판단법, 검토 순서 중심",
     "description": "메타 설명 초안을 검토 순서, 표현 정리, 공유 전 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-22",
     "publishAt": "2026-05-22T20:00:00+09:00",
@@ -3813,7 +3813,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3821,7 +3821,7 @@
     "id": "generated-084",
     "status": "scheduled",
     "slug": "bullet-list-edit",
-    "title": "목록 문장 다듬기 비교 기준, 표현 정리와 가독성",
+    "title": "목록 문장 다듬기 상황별 점검, 공유 전 확인 기준",
     "description": "목록 문장 다듬기을 표현 정리, 공유 전 확인, 문서 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-23",
     "publishAt": "2026-05-23T01:00:00+09:00",
@@ -3859,7 +3859,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3867,7 +3867,7 @@
     "id": "generated-085",
     "status": "scheduled",
     "slug": "tone-of-voice-note",
-    "title": "문체 기준표 FAQ, 문서 기준 질문 정리",
+    "title": "문체 기준표 실전 정리, 가독성부터 시작",
     "description": "문체 기준표을 공유 전 확인, 문서 기준, 가독성 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-23",
     "publishAt": "2026-05-23T06:00:00+09:00",
@@ -3905,7 +3905,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3913,7 +3913,7 @@
     "id": "generated-086",
     "status": "scheduled",
     "slug": "quote-cleanup-rule",
-    "title": "인용문 정리, 검토 순서 전 점검할 것",
+    "title": "인용문 정리 실패 방지, 문서 기준 먼저 보기",
     "description": "인용문 정리을 문서 기준, 가독성, 검토 순서 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-23",
     "publishAt": "2026-05-23T11:00:00+09:00",
@@ -3951,7 +3951,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -3959,7 +3959,7 @@
     "id": "generated-087",
     "status": "scheduled",
     "slug": "social-share-copy",
-    "title": "공유 문구 작성 운영 기준, 공유 전 확인 남기는 법",
+    "title": "공유 문구 작성 적용 기준, 공유 전 확인까지 확인",
     "description": "공유 문구 작성을 가독성, 검토 순서, 표현 정리 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-23",
     "publishAt": "2026-05-23T16:00:00+09:00",
@@ -3997,7 +3997,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -4005,7 +4005,7 @@
     "id": "generated-088",
     "status": "scheduled",
     "slug": "landing-copy-order",
-    "title": "랜딩 문구 순서 빠른 판단법, 검토 순서 중심",
+    "title": "랜딩 문구 순서 초보 점검표, 표현 정리 중심",
     "description": "랜딩 문구 순서을 검토 순서, 표현 정리, 공유 전 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-23",
     "publishAt": "2026-05-23T21:00:00+09:00",
@@ -4051,7 +4051,7 @@
     "id": "generated-089",
     "status": "scheduled",
     "slug": "checklist-wording",
-    "title": "체크리스트 문장 상황별 기준, 공유 전 확인 체크",
+    "title": "체크리스트 문장 개선 포인트, 문서 기준 활용법",
     "description": "체크리스트 문장을 표현 정리, 공유 전 확인, 문서 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-24",
     "publishAt": "2026-05-24T02:00:00+09:00",
@@ -4089,7 +4089,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -4097,7 +4097,7 @@
     "id": "generated-090",
     "status": "scheduled",
     "slug": "summary-box-copy",
-    "title": "요약 박스 구성 실전 정리, 가독성부터 시작",
+    "title": "요약 박스 구성 선택 기준, 공유 전 확인와 문서 기준",
     "description": "요약 박스 구성을 공유 전 확인, 문서 기준, 가독성 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-24",
     "publishAt": "2026-05-24T07:00:00+09:00",
@@ -4135,7 +4135,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -4235,7 +4235,7 @@
     "id": "generated-093",
     "status": "scheduled",
     "slug": "question-heading-rule",
-    "title": "질문형 소제목 실행법, 공유 전 확인까지 정리",
+    "title": "질문형 소제목 실행 순서, 공유 전 확인부터 보기",
     "description": "질문형 소제목을 검토 순서, 표현 정리, 공유 전 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-24",
     "publishAt": "2026-05-24T22:00:00+09:00",
@@ -4273,7 +4273,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -4373,7 +4373,7 @@
     "id": "generated-096",
     "status": "scheduled",
     "slug": "privacy-copy-check",
-    "title": "개인정보 안내문, 검토 순서 전 점검할 것",
+    "title": "개인정보 안내문, 검토 순서 전 확인할 것",
     "description": "개인정보 안내문을 문서 기준, 가독성, 검토 순서 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-25",
     "publishAt": "2026-05-25T13:00:00+09:00",
@@ -4419,7 +4419,7 @@
     "id": "generated-097",
     "status": "scheduled",
     "slug": "terms-summary-copy",
-    "title": "약관 요약 문장 운영 기준, 공유 전 확인 남기는 법",
+    "title": "약관 요약 문장 운영 원칙, 공유 전 확인 남기기",
     "description": "약관 요약 문장을 가독성, 검토 순서, 표현 정리 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-25",
     "publishAt": "2026-05-25T18:00:00+09:00",
@@ -4457,7 +4457,7 @@
       "텍스트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -4511,7 +4511,7 @@
     "id": "generated-099",
     "status": "scheduled",
     "slug": "content-refresh-note",
-    "title": "글 업데이트 메모 상황별 기준, 공유 전 확인 체크",
+    "title": "글 업데이트 메모 상황별 점검, 공유 전 확인 기준",
     "description": "글 업데이트 메모을 표현 정리, 공유 전 확인, 문서 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-26",
     "publishAt": "2026-05-26T04:00:00+09:00",
@@ -4603,7 +4603,7 @@
     "id": "generated-101",
     "status": "scheduled",
     "slug": "api-request-check",
-    "title": "API 요청 검증, 검증 절차 실수 줄이는 기준",
+    "title": "API 요청 검증 실패 방지, 검증 절차 먼저 보기",
     "description": "API 요청 검증을 검증 절차, 디버깅, 자동화 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-26",
     "publishAt": "2026-05-26T14:00:00+09:00",
@@ -4641,7 +4641,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -4649,7 +4649,7 @@
     "id": "generated-102",
     "status": "scheduled",
     "slug": "webhook-signature-test",
-    "title": "웹훅 서명 확인 체크리스트, 자동화부터 확인",
+    "title": "웹훅 서명 확인 적용 기준, 배포 전 점검까지 확인",
     "description": "웹훅 서명 확인을 디버깅, 자동화, 보안 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-26",
     "publishAt": "2026-05-26T19:00:00+09:00",
@@ -4687,7 +4687,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -4695,7 +4695,7 @@
     "id": "generated-103",
     "status": "scheduled",
     "slug": "http-status-note",
-    "title": "HTTP 상태코드 정리 실행법, 배포 전 점검까지 정리",
+    "title": "HTTP 상태코드 정리 초보 점검표, 보안 확인 중심",
     "description": "HTTP 상태코드 정리을 자동화, 보안 확인, 배포 전 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-27",
     "publishAt": "2026-05-27T00:00:00+09:00",
@@ -4733,7 +4733,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -4741,7 +4741,7 @@
     "id": "generated-104",
     "status": "scheduled",
     "slug": "cache-header-check",
-    "title": "캐시 헤더 점검 비교 기준, 보안 확인과 디버깅",
+    "title": "캐시 헤더 점검 개선 포인트, 검증 절차 활용법",
     "description": "캐시 헤더 점검을 보안 확인, 배포 전 점검, 검증 절차 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-27",
     "publishAt": "2026-05-27T05:00:00+09:00",
@@ -4787,7 +4787,7 @@
     "id": "generated-105",
     "status": "scheduled",
     "slug": "canonical-url-audit",
-    "title": "캐노니컬 URL 검사 FAQ, 검증 절차 질문 정리",
+    "title": "캐노니컬 URL 검사 선택 기준, 배포 전 점검와 검증 절차",
     "description": "캐노니컬 URL 검사을 배포 전 점검, 검증 절차, 디버깅 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-27",
     "publishAt": "2026-05-27T10:00:00+09:00",
@@ -4833,7 +4833,7 @@
     "id": "generated-106",
     "status": "scheduled",
     "slug": "robots-rule-review",
-    "title": "robots.txt 규칙, 자동화 전 점검할 것",
+    "title": "robots.txt 규칙, 검증 절차 실수 줄이는 기준",
     "description": "robots.txt 규칙을 검증 절차, 디버깅, 자동화 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-27",
     "publishAt": "2026-05-27T15:00:00+09:00",
@@ -4871,7 +4871,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -4879,7 +4879,7 @@
     "id": "generated-107",
     "status": "scheduled",
     "slug": "sitemap-lastmod-check",
-    "title": "사이트맵 날짜 확인 운영 기준, 배포 전 점검 남기는 법",
+    "title": "사이트맵 날짜 확인 체크리스트, 자동화부터 확인",
     "description": "사이트맵 날짜 확인을 디버깅, 자동화, 보안 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-27",
     "publishAt": "2026-05-27T20:00:00+09:00",
@@ -4925,7 +4925,7 @@
     "id": "generated-108",
     "status": "scheduled",
     "slug": "json-parse-error",
-    "title": "JSON 파싱 오류 빠른 판단법, 자동화 중심",
+    "title": "JSON 파싱 오류 실행 순서, 배포 전 점검부터 보기",
     "description": "JSON 파싱 오류을 자동화, 보안 확인, 배포 전 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-28",
     "publishAt": "2026-05-28T01:00:00+09:00",
@@ -4971,7 +4971,7 @@
     "id": "generated-109",
     "status": "scheduled",
     "slug": "url-encoding-case",
-    "title": "URL 인코딩 기준 상황별 기준, 배포 전 점검 체크",
+    "title": "URL 인코딩 기준 비교 기준, 보안 확인과 디버깅",
     "description": "URL 인코딩 기준을 보안 확인, 배포 전 점검, 검증 절차 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-28",
     "publishAt": "2026-05-28T06:00:00+09:00",
@@ -5009,7 +5009,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5017,7 +5017,7 @@
     "id": "generated-110",
     "status": "scheduled",
     "slug": "base64-safe-use",
-    "title": "Base64 사용 기준 실전 정리, 디버깅부터 시작",
+    "title": "Base64 사용 기준 FAQ, 검증 절차 질문 정리",
     "description": "Base64 사용 기준을 배포 전 점검, 검증 절차, 디버깅 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-28",
     "publishAt": "2026-05-28T11:00:00+09:00",
@@ -5055,7 +5055,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5063,8 +5063,8 @@
     "id": "generated-111",
     "status": "scheduled",
     "slug": "timestamp-debug",
-    "title": "타임스탬프 디버깅, 검증 절차 실수 줄이는 기준",
-    "description": "타임스탬프 디버깅을 검증 절차, 디버깅, 자동화 기준으로 정리한 실행 가이드입니다.",
+    "title": "타임스탬프 디버깅, 자동화 전 확인할 것",
+    "description": "타임스탬프 디버깅을 검증 절차, 자동화, 보안 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-28",
     "publishAt": "2026-05-28T16:00:00+09:00",
     "category": "개발자 웹 도구",
@@ -5101,7 +5101,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5109,7 +5109,7 @@
     "id": "generated-112",
     "status": "scheduled",
     "slug": "regex-test-note",
-    "title": "정규식 테스트 기준 체크리스트, 자동화부터 확인",
+    "title": "정규식 테스트 기준 운영 원칙, 배포 전 점검 남기기",
     "description": "정규식 테스트 기준을 디버깅, 자동화, 보안 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-28",
     "publishAt": "2026-05-28T21:00:00+09:00",
@@ -5147,7 +5147,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5155,7 +5155,7 @@
     "id": "generated-113",
     "status": "scheduled",
     "slug": "form-validation-copy",
-    "title": "폼 검증 메시지 실행법, 배포 전 점검까지 정리",
+    "title": "폼 검증 메시지 빠른 판단법, 자동화 중심",
     "description": "폼 검증 메시지을 자동화, 보안 확인, 배포 전 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-29",
     "publishAt": "2026-05-29T02:00:00+09:00",
@@ -5193,7 +5193,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5201,7 +5201,7 @@
     "id": "generated-114",
     "status": "scheduled",
     "slug": "open-graph-preview",
-    "title": "OG 미리보기 점검 비교 기준, 보안 확인과 디버깅",
+    "title": "OG 미리보기 점검 상황별 점검, 배포 전 점검 기준",
     "description": "OG 미리보기 점검을 보안 확인, 배포 전 점검, 검증 절차 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-29",
     "publishAt": "2026-05-29T07:00:00+09:00",
@@ -5239,7 +5239,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5247,7 +5247,7 @@
     "id": "generated-115",
     "status": "scheduled",
     "slug": "structured-data-check",
-    "title": "구조화 데이터 확인 FAQ, 검증 절차 질문 정리",
+    "title": "구조화 데이터 확인 실전 정리, 디버깅부터 시작",
     "description": "구조화 데이터 확인을 배포 전 점검, 검증 절차, 디버깅 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-29",
     "publishAt": "2026-05-29T12:00:00+09:00",
@@ -5285,7 +5285,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5293,7 +5293,7 @@
     "id": "generated-116",
     "status": "scheduled",
     "slug": "image-alt-audit",
-    "title": "이미지 alt 점검, 자동화 전 점검할 것",
+    "title": "이미지 alt 점검 실패 방지, 검증 절차 먼저 보기",
     "description": "이미지 alt 점검을 검증 절차, 디버깅, 자동화 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-29",
     "publishAt": "2026-05-29T17:00:00+09:00",
@@ -5331,7 +5331,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5339,7 +5339,7 @@
     "id": "generated-117",
     "status": "scheduled",
     "slug": "bundle-size-review",
-    "title": "번들 크기 점검 운영 기준, 배포 전 점검 남기는 법",
+    "title": "번들 크기 점검 적용 기준, 배포 전 점검까지 확인",
     "description": "번들 크기 점검을 디버깅, 자동화, 보안 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-29",
     "publishAt": "2026-05-29T22:00:00+09:00",
@@ -5377,7 +5377,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5385,7 +5385,7 @@
     "id": "generated-118",
     "status": "scheduled",
     "slug": "lazy-load-route",
-    "title": "라우트 지연 로딩 빠른 판단법, 자동화 중심",
+    "title": "라우트 지연 로딩 초보 점검표, 보안 확인 중심",
     "description": "라우트 지연 로딩을 자동화, 보안 확인, 배포 전 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-30",
     "publishAt": "2026-05-30T03:00:00+09:00",
@@ -5423,7 +5423,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5431,7 +5431,7 @@
     "id": "generated-119",
     "status": "scheduled",
     "slug": "env-variable-check",
-    "title": "환경변수 점검 상황별 기준, 배포 전 점검 체크",
+    "title": "환경변수 점검 개선 포인트, 검증 절차 활용법",
     "description": "환경변수 점검을 보안 확인, 배포 전 점검, 검증 절차 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-30",
     "publishAt": "2026-05-30T08:00:00+09:00",
@@ -5469,7 +5469,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5477,7 +5477,7 @@
     "id": "generated-120",
     "status": "scheduled",
     "slug": "deploy-log-review",
-    "title": "배포 로그 읽기 실전 정리, 디버깅부터 시작",
+    "title": "배포 로그 읽기 선택 기준, 배포 전 점검와 검증 절차",
     "description": "배포 로그 읽기을 배포 전 점검, 검증 절차, 디버깅 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-30",
     "publishAt": "2026-05-30T13:00:00+09:00",
@@ -5515,7 +5515,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5615,7 +5615,7 @@
     "id": "generated-123",
     "status": "scheduled",
     "slug": "ga4-event-test",
-    "title": "GA4 이벤트 테스트 실행법, 배포 전 점검까지 정리",
+    "title": "GA4 이벤트 테스트 실행 순서, 배포 전 점검부터 보기",
     "description": "GA4 이벤트 테스트을 자동화, 보안 확인, 배포 전 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-31",
     "publishAt": "2026-05-31T04:00:00+09:00",
@@ -5653,7 +5653,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5753,7 +5753,7 @@
     "id": "generated-126",
     "status": "scheduled",
     "slug": "broken-link-scan",
-    "title": "깨진 링크 점검, 자동화 전 점검할 것",
+    "title": "깨진 링크 점검, 자동화 전 확인할 것",
     "description": "깨진 링크 점검을 검증 절차, 디버깅, 자동화 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-05-31",
     "publishAt": "2026-05-31T19:00:00+09:00",
@@ -5799,7 +5799,7 @@
     "id": "generated-127",
     "status": "scheduled",
     "slug": "internal-link-map",
-    "title": "내부 링크 맵 운영 기준, 배포 전 점검 남기는 법",
+    "title": "내부 링크 맵 운영 원칙, 배포 전 점검 남기기",
     "description": "내부 링크 맵을 디버깅, 자동화, 보안 확인 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-01",
     "publishAt": "2026-06-01T00:00:00+09:00",
@@ -5837,7 +5837,7 @@
       "검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -5891,7 +5891,7 @@
     "id": "generated-129",
     "status": "scheduled",
     "slug": "mobile-viewport-debug",
-    "title": "모바일 뷰포트 점검 상황별 기준, 배포 전 점검 체크",
+    "title": "모바일 뷰포트 점검 상황별 점검, 배포 전 점검 기준",
     "description": "모바일 뷰포트 점검을 보안 확인, 배포 전 점검, 검증 절차 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-01",
     "publishAt": "2026-06-01T10:00:00+09:00",
@@ -5983,8 +5983,8 @@
     "id": "generated-131",
     "status": "scheduled",
     "slug": "priority-rule-daily",
-    "title": "하루 우선순위 기준, 우선순위 실수 줄이는 기준",
-    "description": "하루 우선순위 기준을 우선순위, 반복 업무, 회의 운영 기준으로 정리한 실행 가이드입니다.",
+    "title": "하루 우선순위 기준 실패 방지, 반복 업무 먼저 보기",
+    "description": "하루 우선순위 기준을 반복 업무, 회의 운영, 집중 시간 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-01",
     "publishAt": "2026-06-01T20:00:00+09:00",
     "category": "생산성·업무 방식",
@@ -5999,8 +5999,8 @@
     ],
     "readerProblem": "할 일은 많은데 시작 순서가 보이지 않는 문제",
     "practicalExample": "아침 업무를 열기 전",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6021,7 +6021,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -6029,7 +6029,7 @@
     "id": "generated-132",
     "status": "scheduled",
     "slug": "meeting-agenda-template",
-    "title": "회의 안건 템플릿 체크리스트, 회의 운영부터 확인",
+    "title": "회의 안건 템플릿 적용 기준, 결과 기록까지 확인",
     "description": "회의 안건 템플릿을 반복 업무, 회의 운영, 집중 시간 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-02",
     "publishAt": "2026-06-02T01:00:00+09:00",
@@ -6045,8 +6045,8 @@
     ],
     "readerProblem": "회의가 주제 없이 길어지는 문제",
     "practicalExample": "주간 회의를 준비할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6075,7 +6075,7 @@
     "id": "generated-133",
     "status": "scheduled",
     "slug": "decision-log-habit",
-    "title": "결정 기록 습관 실행법, 결과 기록까지 정리",
+    "title": "결정 기록 습관 초보 점검표, 집중 시간 중심",
     "description": "결정 기록 습관을 회의 운영, 집중 시간, 결과 기록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-02",
     "publishAt": "2026-06-02T06:00:00+09:00",
@@ -6091,8 +6091,8 @@
     ],
     "readerProblem": "왜 그렇게 결정했는지 나중에 기억나지 않는 문제",
     "practicalExample": "프로젝트 방향을 바꿀 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6113,7 +6113,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -6121,7 +6121,7 @@
     "id": "generated-134",
     "status": "scheduled",
     "slug": "focus-block-plan",
-    "title": "집중 블록 설계 비교 기준, 집중 시간과 반복 업무",
+    "title": "집중 블록 설계 개선 포인트, 우선순위 활용법",
     "description": "집중 블록 설계을 집중 시간, 결과 기록, 우선순위 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-02",
     "publishAt": "2026-06-02T11:00:00+09:00",
@@ -6137,8 +6137,8 @@
     ],
     "readerProblem": "알림과 잡일 때문에 몰입 시간이 끊기는 문제",
     "practicalExample": "깊은 작업을 시작할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6159,7 +6159,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -6167,7 +6167,7 @@
     "id": "generated-135",
     "status": "scheduled",
     "slug": "small-task-batching",
-    "title": "작은 업무 묶기 FAQ, 우선순위 질문 정리",
+    "title": "작은 업무 묶기 선택 기준, 결과 기록와 우선순위",
     "description": "작은 업무 묶기을 결과 기록, 우선순위, 반복 업무 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-02",
     "publishAt": "2026-06-02T16:00:00+09:00",
@@ -6183,8 +6183,54 @@
     ],
     "readerProblem": "자잘한 일이 하루를 계속 쪼개는 문제",
     "practicalExample": "메일과 승인 업무를 처리할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-136",
+    "status": "scheduled",
+    "slug": "weekly-review-note",
+    "title": "주간 회고 노트, 우선순위 실수 줄이는 기준",
+    "description": "주간 회고 노트을 우선순위, 반복 업무, 회의 운영 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-06-02",
+    "publishAt": "2026-06-02T21:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "주간 회고 노트",
+    "expandedKeywords": [
+      "우선순위",
+      "반복 업무",
+      "회의 운영",
+      "집중 시간"
+    ],
+    "readerProblem": "한 주의 성과와 지연 원인이 흐릿한 문제",
+    "practicalExample": "금요일 오후에 정리할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6210,56 +6256,10 @@
     "cannibalizationStatus": "pass"
   },
   {
-    "id": "generated-136",
-    "status": "scheduled",
-    "slug": "weekly-review-note",
-    "title": "주간 회고 노트, 회의 운영 전 점검할 것",
-    "description": "주간 회고 노트을 우선순위, 반복 업무, 회의 운영 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-06-02",
-    "publishAt": "2026-06-02T21:00:00+09:00",
-    "category": "생산성·업무 방식",
-    "contentType": "How-to",
-    "searchIntent": "문제 해결",
-    "mainKeyword": "주간 회고 노트",
-    "expandedKeywords": [
-      "우선순위",
-      "반복 업무",
-      "회의 운영",
-      "집중 시간"
-    ],
-    "readerProblem": "한 주의 성과와 지연 원인이 흐릿한 문제",
-    "practicalExample": "금요일 오후에 정리할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
-    "internalLinks": [
-      {
-        "label": "랜덤 팀 나누기",
-        "path": "/tools/random-team"
-      },
-      {
-        "label": "D-Day 카운터",
-        "path": "/tools/d-day-counter"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      }
-    ],
-    "tags": [
-      "생산성",
-      "업무",
-      "루틴"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
     "id": "generated-137",
     "status": "scheduled",
     "slug": "work-request-format",
-    "title": "업무 요청 양식 운영 기준, 결과 기록 남기는 법",
+    "title": "업무 요청 양식 체크리스트, 회의 운영부터 확인",
     "description": "업무 요청 양식을 반복 업무, 회의 운영, 집중 시간 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-03",
     "publishAt": "2026-06-03T02:00:00+09:00",
@@ -6275,8 +6275,8 @@
     ],
     "readerProblem": "요청 배경과 마감이 빠지는 문제",
     "practicalExample": "동료에게 일을 부탁할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6297,7 +6297,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -6305,7 +6305,7 @@
     "id": "generated-138",
     "status": "scheduled",
     "slug": "task-estimate-rule",
-    "title": "작업 시간 예측 빠른 판단법, 회의 운영 중심",
+    "title": "작업 시간 예측 실행 순서, 결과 기록부터 보기",
     "description": "작업 시간 예측을 회의 운영, 집중 시간, 결과 기록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-03",
     "publishAt": "2026-06-03T07:00:00+09:00",
@@ -6321,8 +6321,8 @@
     ],
     "readerProblem": "짧게 본 일이 계속 밀리는 문제",
     "practicalExample": "스프린트 계획을 잡을 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6343,7 +6343,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -6351,7 +6351,7 @@
     "id": "generated-139",
     "status": "scheduled",
     "slug": "meeting-minutes-action",
-    "title": "회의록 액션아이템 상황별 기준, 결과 기록 체크",
+    "title": "회의록 액션아이템 비교 기준, 집중 시간과 반복 업무",
     "description": "회의록 액션아이템을 집중 시간, 결과 기록, 우선순위 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-03",
     "publishAt": "2026-06-03T12:00:00+09:00",
@@ -6367,8 +6367,8 @@
     ],
     "readerProblem": "회의 후 누가 무엇을 할지 흐려지는 문제",
     "practicalExample": "회의 직후 공유 문서를 만들 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6389,7 +6389,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -6397,7 +6397,7 @@
     "id": "generated-140",
     "status": "scheduled",
     "slug": "context-switch-reduce",
-    "title": "업무 전환 줄이기 실전 정리, 반복 업무부터 시작",
+    "title": "업무 전환 줄이기 FAQ, 우선순위 질문 정리",
     "description": "업무 전환 줄이기을 결과 기록, 우선순위, 반복 업무 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-03",
     "publishAt": "2026-06-03T17:00:00+09:00",
@@ -6413,8 +6413,8 @@
     ],
     "readerProblem": "도구와 채널을 오가며 집중이 깨지는 문제",
     "practicalExample": "여러 프로젝트를 동시에 맡을 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6435,7 +6435,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -6443,7 +6443,7 @@
     "id": "generated-141",
     "status": "scheduled",
     "slug": "inbox-zero-light",
-    "title": "메일함 정리 기준, 우선순위 실수 줄이는 기준",
+    "title": "메일함 정리 기준, 회의 운영 전 확인할 것",
     "description": "메일함 정리 기준을 우선순위, 반복 업무, 회의 운영 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-03",
     "publishAt": "2026-06-03T22:00:00+09:00",
@@ -6459,8 +6459,8 @@
     ],
     "readerProblem": "메일을 읽고도 처리 상태가 남는 문제",
     "practicalExample": "받은편지함을 정리할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6481,7 +6481,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -6489,7 +6489,7 @@
     "id": "generated-142",
     "status": "scheduled",
     "slug": "notification-rule",
-    "title": "알림 관리 기준 체크리스트, 회의 운영부터 확인",
+    "title": "알림 관리 기준 운영 원칙, 결과 기록 남기기",
     "description": "알림 관리 기준을 반복 업무, 회의 운영, 집중 시간 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-04",
     "publishAt": "2026-06-04T03:00:00+09:00",
@@ -6505,100 +6505,8 @@
     ],
     "readerProblem": "중요하지 않은 알림이 계속 끼어드는 문제",
     "practicalExample": "업무용 메신저를 쓸 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
-    "internalLinks": [
-      {
-        "label": "랜덤 팀 나누기",
-        "path": "/tools/random-team"
-      },
-      {
-        "label": "D-Day 카운터",
-        "path": "/tools/d-day-counter"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      }
-    ],
-    "tags": [
-      "생산성",
-      "업무",
-      "루틴"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-143",
-    "status": "scheduled",
-    "slug": "daily-close-routine",
-    "title": "퇴근 전 정리 루틴 실행법, 결과 기록까지 정리",
-    "description": "퇴근 전 정리 루틴을 회의 운영, 집중 시간, 결과 기록 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-06-04",
-    "publishAt": "2026-06-04T08:00:00+09:00",
-    "category": "생산성·업무 방식",
-    "contentType": "Explainer",
-    "searchIntent": "실행",
-    "mainKeyword": "퇴근 전 정리 루틴",
-    "expandedKeywords": [
-      "회의 운영",
-      "집중 시간",
-      "결과 기록",
-      "우선순위"
-    ],
-    "readerProblem": "다음 날 시작할 일을 잊는 문제",
-    "practicalExample": "하루 업무를 마무리할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
-    "internalLinks": [
-      {
-        "label": "랜덤 팀 나누기",
-        "path": "/tools/random-team"
-      },
-      {
-        "label": "D-Day 카운터",
-        "path": "/tools/d-day-counter"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      }
-    ],
-    "tags": [
-      "생산성",
-      "업무",
-      "루틴"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-144",
-    "status": "scheduled",
-    "slug": "project-name-rule",
-    "title": "프로젝트 이름 규칙 비교 기준, 집중 시간과 반복 업무",
-    "description": "프로젝트 이름 규칙을 집중 시간, 결과 기록, 우선순위 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-06-04",
-    "publishAt": "2026-06-04T13:00:00+09:00",
-    "category": "생산성·업무 방식",
-    "contentType": "Comparison",
-    "searchIntent": "비교",
-    "mainKeyword": "프로젝트 이름 규칙",
-    "expandedKeywords": [
-      "집중 시간",
-      "결과 기록",
-      "우선순위",
-      "반복 업무"
-    ],
-    "readerProblem": "파일과 문서 이름이 제각각인 문제",
-    "practicalExample": "공유 폴더를 정리할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6624,119 +6532,27 @@
     "cannibalizationStatus": "pass"
   },
   {
-    "id": "generated-145",
+    "id": "generated-143",
     "status": "scheduled",
-    "slug": "handoff-note-template",
-    "title": "인수인계 메모 FAQ, 우선순위 질문 정리",
-    "description": "인수인계 메모을 결과 기록, 우선순위, 반복 업무 기준으로 정리한 실행 가이드입니다.",
+    "slug": "daily-close-routine",
+    "title": "퇴근 전 정리 루틴 빠른 판단법, 회의 운영 중심",
+    "description": "퇴근 전 정리 루틴을 회의 운영, 집중 시간, 결과 기록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-04",
-    "publishAt": "2026-06-04T18:00:00+09:00",
+    "publishAt": "2026-06-04T08:00:00+09:00",
     "category": "생산성·업무 방식",
-    "contentType": "FAQ",
-    "searchIntent": "질문 답변",
-    "mainKeyword": "인수인계 메모",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "퇴근 전 정리 루틴",
     "expandedKeywords": [
-      "결과 기록",
-      "우선순위",
-      "반복 업무",
-      "회의 운영"
-    ],
-    "readerProblem": "중간 맥락이 빠져 재질문이 늘어나는 문제",
-    "practicalExample": "휴가 전 업무를 넘길 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
-    "internalLinks": [
-      {
-        "label": "랜덤 팀 나누기",
-        "path": "/tools/random-team"
-      },
-      {
-        "label": "D-Day 카운터",
-        "path": "/tools/d-day-counter"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      }
-    ],
-    "tags": [
-      "생산성",
-      "업무",
-      "루틴"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-146",
-    "status": "scheduled",
-    "slug": "remote-work-checkin",
-    "title": "원격근무 체크인, 회의 운영 전 점검할 것",
-    "description": "원격근무 체크인을 우선순위, 반복 업무, 회의 운영 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-06-04",
-    "publishAt": "2026-06-04T23:00:00+09:00",
-    "category": "생산성·업무 방식",
-    "contentType": "How-to",
-    "searchIntent": "문제 해결",
-    "mainKeyword": "원격근무 체크인",
-    "expandedKeywords": [
-      "우선순위",
-      "반복 업무",
-      "회의 운영",
-      "집중 시간"
-    ],
-    "readerProblem": "비동기 상황에서 진행이 안 보이는 문제",
-    "practicalExample": "재택근무 팀을 운영할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
-    "internalLinks": [
-      {
-        "label": "랜덤 팀 나누기",
-        "path": "/tools/random-team"
-      },
-      {
-        "label": "D-Day 카운터",
-        "path": "/tools/d-day-counter"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      }
-    ],
-    "tags": [
-      "생산성",
-      "업무",
-      "루틴"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
-    "duplicateStatus": "pass",
-    "cannibalizationStatus": "pass"
-  },
-  {
-    "id": "generated-147",
-    "status": "scheduled",
-    "slug": "personal-kanban-light",
-    "title": "개인 칸반 기준 운영 기준, 결과 기록 남기는 법",
-    "description": "개인 칸반 기준을 반복 업무, 회의 운영, 집중 시간 기준으로 정리한 실행 가이드입니다.",
-    "date": "2026-06-05",
-    "publishAt": "2026-06-05T04:00:00+09:00",
-    "category": "생산성·업무 방식",
-    "contentType": "Checklist",
-    "searchIntent": "정보 탐색",
-    "mainKeyword": "개인 칸반 기준",
-    "expandedKeywords": [
-      "반복 업무",
       "회의 운영",
       "집중 시간",
-      "결과 기록"
+      "결과 기록",
+      "우선순위"
     ],
-    "readerProblem": "해야 할 일과 진행 중인 일이 섞이는 문제",
-    "practicalExample": "개인 업무 보드를 만들 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "readerProblem": "다음 날 시작할 일을 잊는 문제",
+    "practicalExample": "하루 업무를 마무리할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6762,10 +6578,194 @@
     "cannibalizationStatus": "pass"
   },
   {
+    "id": "generated-144",
+    "status": "scheduled",
+    "slug": "project-name-rule",
+    "title": "프로젝트 이름 규칙 상황별 점검, 결과 기록 기준",
+    "description": "프로젝트 이름 규칙을 집중 시간, 결과 기록, 우선순위 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-06-04",
+    "publishAt": "2026-06-04T13:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "프로젝트 이름 규칙",
+    "expandedKeywords": [
+      "집중 시간",
+      "결과 기록",
+      "우선순위",
+      "반복 업무"
+    ],
+    "readerProblem": "파일과 문서 이름이 제각각인 문제",
+    "practicalExample": "공유 폴더를 정리할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-145",
+    "status": "scheduled",
+    "slug": "handoff-note-template",
+    "title": "인수인계 메모 실전 정리, 반복 업무부터 시작",
+    "description": "인수인계 메모을 결과 기록, 우선순위, 반복 업무 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-06-04",
+    "publishAt": "2026-06-04T18:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "인수인계 메모",
+    "expandedKeywords": [
+      "결과 기록",
+      "우선순위",
+      "반복 업무",
+      "회의 운영"
+    ],
+    "readerProblem": "중간 맥락이 빠져 재질문이 늘어나는 문제",
+    "practicalExample": "휴가 전 업무를 넘길 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-146",
+    "status": "scheduled",
+    "slug": "remote-work-checkin",
+    "title": "원격근무 체크인 실패 방지, 우선순위 먼저 보기",
+    "description": "원격근무 체크인을 우선순위, 반복 업무, 회의 운영 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-06-04",
+    "publishAt": "2026-06-04T23:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "원격근무 체크인",
+    "expandedKeywords": [
+      "우선순위",
+      "반복 업무",
+      "회의 운영",
+      "집중 시간"
+    ],
+    "readerProblem": "비동기 상황에서 진행이 안 보이는 문제",
+    "practicalExample": "재택근무 팀을 운영할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-147",
+    "status": "scheduled",
+    "slug": "personal-kanban-light",
+    "title": "개인 칸반 기준 적용 기준, 결과 기록까지 확인",
+    "description": "개인 칸반 기준을 반복 업무, 회의 운영, 집중 시간 기준으로 정리한 실행 가이드입니다.",
+    "date": "2026-06-05",
+    "publishAt": "2026-06-05T04:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "개인 칸반 기준",
+    "expandedKeywords": [
+      "반복 업무",
+      "회의 운영",
+      "집중 시간",
+      "결과 기록"
+    ],
+    "readerProblem": "해야 할 일과 진행 중인 일이 섞이는 문제",
+    "practicalExample": "개인 업무 보드를 만들 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
     "id": "generated-148",
     "status": "scheduled",
     "slug": "deadline-buffer-rule",
-    "title": "마감 버퍼 설정 빠른 판단법, 회의 운영 중심",
+    "title": "마감 버퍼 설정 초보 점검표, 집중 시간 중심",
     "description": "마감 버퍼 설정을 회의 운영, 집중 시간, 결과 기록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-05",
     "publishAt": "2026-06-05T09:00:00+09:00",
@@ -6781,8 +6781,8 @@
     ],
     "readerProblem": "예상 밖 수정에 대응할 시간이 없는 문제",
     "practicalExample": "납기 일정을 잡을 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6811,7 +6811,7 @@
     "id": "generated-149",
     "status": "scheduled",
     "slug": "routine-trigger-design",
-    "title": "루틴 트리거 설계 상황별 기준, 결과 기록 체크",
+    "title": "루틴 트리거 설계 개선 포인트, 우선순위 활용법",
     "description": "루틴 트리거 설계을 집중 시간, 결과 기록, 우선순위 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-05",
     "publishAt": "2026-06-05T14:00:00+09:00",
@@ -6827,8 +6827,8 @@
     ],
     "readerProblem": "좋은 습관이 일정에 붙지 않는 문제",
     "practicalExample": "반복 행동을 만들 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6857,7 +6857,7 @@
     "id": "generated-150",
     "status": "scheduled",
     "slug": "one-page-brief",
-    "title": "원페이지 브리프 실전 정리, 반복 업무부터 시작",
+    "title": "원페이지 브리프 선택 기준, 결과 기록와 우선순위",
     "description": "원페이지 브리프을 결과 기록, 우선순위, 반복 업무 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-05",
     "publishAt": "2026-06-05T19:00:00+09:00",
@@ -6873,8 +6873,8 @@
     ],
     "readerProblem": "설명이 길어 의사결정자가 핵심을 놓치는 문제",
     "practicalExample": "제안 전 요약을 만들 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6895,7 +6895,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -6919,8 +6919,8 @@
     ],
     "readerProblem": "회고가 불평이나 칭찬으로만 끝나는 문제",
     "practicalExample": "프로젝트 종료 후",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6965,8 +6965,8 @@
     ],
     "readerProblem": "팀 노하우가 개인 메모에만 남는 문제",
     "practicalExample": "반복 질문을 줄일 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -6995,7 +6995,7 @@
     "id": "generated-153",
     "status": "scheduled",
     "slug": "approval-flow-check",
-    "title": "승인 흐름 정리 실행법, 결과 기록까지 정리",
+    "title": "승인 흐름 정리 실행 순서, 결과 기록부터 보기",
     "description": "승인 흐름 정리을 회의 운영, 집중 시간, 결과 기록 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-06",
     "publishAt": "2026-06-06T10:00:00+09:00",
@@ -7011,8 +7011,8 @@
     ],
     "readerProblem": "누가 언제 승인해야 하는지 모르는 문제",
     "practicalExample": "콘텐츠 발행 전 검토할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -7033,7 +7033,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7057,8 +7057,8 @@
     ],
     "readerProblem": "초안을 끝내기 전에 계속 고치는 문제",
     "practicalExample": "블로그 글을 대량 작성할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -7103,8 +7103,8 @@
     ],
     "readerProblem": "필요한 도구를 찾느라 시간을 쓰는 문제",
     "practicalExample": "업무 시작 화면을 구성할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -7133,7 +7133,7 @@
     "id": "generated-156",
     "status": "scheduled",
     "slug": "daily-metric-note",
-    "title": "일일 지표 메모, 회의 운영 전 점검할 것",
+    "title": "일일 지표 메모, 회의 운영 전 확인할 것",
     "description": "일일 지표 메모을 우선순위, 반복 업무, 회의 운영 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-07",
     "publishAt": "2026-06-07T01:00:00+09:00",
@@ -7149,8 +7149,8 @@
     ],
     "readerProblem": "작은 변화가 쌓여도 보이지 않는 문제",
     "practicalExample": "사이트 운영 지표를 볼 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -7179,7 +7179,7 @@
     "id": "generated-157",
     "status": "scheduled",
     "slug": "batch-publish-board",
-    "title": "예약 발행 보드 운영 기준, 결과 기록 남기는 법",
+    "title": "예약 발행 보드 운영 원칙, 결과 기록 남기기",
     "description": "예약 발행 보드을 반복 업무, 회의 운영, 집중 시간 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-07",
     "publishAt": "2026-06-07T06:00:00+09:00",
@@ -7195,8 +7195,8 @@
     ],
     "readerProblem": "발행 일정이 머릿속에만 있는 문제",
     "practicalExample": "여러 글을 순차 공개할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -7217,7 +7217,7 @@
       "루틴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7241,8 +7241,8 @@
     ],
     "readerProblem": "마지막 단계에서 누락이 발견되는 문제",
     "practicalExample": "배포 전 품질을 확인할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -7271,7 +7271,7 @@
     "id": "generated-159",
     "status": "scheduled",
     "slug": "decision-owner-rule",
-    "title": "결정권자 표시 상황별 기준, 결과 기록 체크",
+    "title": "결정권자 표시 상황별 점검, 결과 기록 기준",
     "description": "결정권자 표시을 집중 시간, 결과 기록, 우선순위 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-07",
     "publishAt": "2026-06-07T16:00:00+09:00",
@@ -7287,8 +7287,8 @@
     ],
     "readerProblem": "결론을 낼 사람이 불분명한 문제",
     "practicalExample": "회의와 문서에 책임자를 남길 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -7317,8 +7317,8 @@
     "id": "generated-160",
     "status": "scheduled",
     "slug": "repeat-task-automation",
-    "title": "반복 업무 자동화 실전 정리, 반복 업무부터 시작",
-    "description": "반복 업무 자동화을 결과 기록, 우선순위, 반복 업무 기준으로 정리한 실행 가이드입니다.",
+    "title": "반복 업무 자동화 실전 정리, 회의 운영부터 시작",
+    "description": "반복 업무 자동화을 결과 기록, 우선순위, 회의 운영 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-07",
     "publishAt": "2026-06-07T21:00:00+09:00",
     "category": "생산성·업무 방식",
@@ -7333,8 +7333,8 @@
     ],
     "readerProblem": "매번 손으로 하는 일이 쌓이는 문제",
     "practicalExample": "정기 보고와 알림을 처리할 때",
-    "primarySourceName": "Atlassian Team Playbook",
-    "primarySourceUrl": "https://www.atlassian.com/team-playbook",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
     "internalLinks": [
       {
         "label": "랜덤 팀 나누기",
@@ -7363,7 +7363,7 @@
     "id": "generated-161",
     "status": "scheduled",
     "slug": "sleep-routine-note",
-    "title": "수면 루틴 기록, 루틴 설계 실수 줄이는 기준",
+    "title": "수면 루틴 기록 실패 방지, 루틴 설계 먼저 보기",
     "description": "수면 루틴 기록을 루틴 설계, 기록 습관, 무리 없는 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-08",
     "publishAt": "2026-06-08T02:00:00+09:00",
@@ -7401,7 +7401,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7409,7 +7409,7 @@
     "id": "generated-162",
     "status": "scheduled",
     "slug": "desk-stretch-break",
-    "title": "책상 스트레칭 휴식 체크리스트, 무리 없는 기준부터 확인",
+    "title": "책상 스트레칭 휴식 적용 기준, 자가 점검까지 확인",
     "description": "책상 스트레칭 휴식을 기록 습관, 무리 없는 기준, 생활 적용 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-08",
     "publishAt": "2026-06-08T07:00:00+09:00",
@@ -7447,7 +7447,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7455,7 +7455,7 @@
     "id": "generated-163",
     "status": "scheduled",
     "slug": "eye-rest-rule",
-    "title": "눈 피로 휴식 기준 실행법, 자가 점검까지 정리",
+    "title": "눈 피로 휴식 기준 초보 점검표, 생활 적용 중심",
     "description": "눈 피로 휴식 기준을 무리 없는 기준, 생활 적용, 자가 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-08",
     "publishAt": "2026-06-08T12:00:00+09:00",
@@ -7493,7 +7493,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7501,7 +7501,7 @@
     "id": "generated-164",
     "status": "scheduled",
     "slug": "walk-break-plan",
-    "title": "짧은 산책 루틴 비교 기준, 생활 적용과 기록 습관",
+    "title": "짧은 산책 루틴 개선 포인트, 루틴 설계 활용법",
     "description": "짧은 산책 루틴을 생활 적용, 자가 점검, 루틴 설계 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-08",
     "publishAt": "2026-06-08T17:00:00+09:00",
@@ -7539,7 +7539,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7547,7 +7547,7 @@
     "id": "generated-165",
     "status": "scheduled",
     "slug": "breathing-reset-note",
-    "title": "호흡 리셋 습관 FAQ, 루틴 설계 질문 정리",
+    "title": "호흡 리셋 습관 선택 기준, 자가 점검와 루틴 설계",
     "description": "호흡 리셋 습관을 자가 점검, 루틴 설계, 기록 습관 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-08",
     "publishAt": "2026-06-08T22:00:00+09:00",
@@ -7585,7 +7585,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7593,7 +7593,7 @@
     "id": "generated-166",
     "status": "scheduled",
     "slug": "water-reminder-rule",
-    "title": "물 마시기 알림, 무리 없는 기준 전 점검할 것",
+    "title": "물 마시기 알림, 루틴 설계 실수 줄이는 기준",
     "description": "물 마시기 알림을 루틴 설계, 기록 습관, 무리 없는 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-09",
     "publishAt": "2026-06-09T03:00:00+09:00",
@@ -7631,7 +7631,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7639,7 +7639,7 @@
     "id": "generated-167",
     "status": "scheduled",
     "slug": "screen-time-boundary",
-    "title": "화면 시간 경계 운영 기준, 자가 점검 남기는 법",
+    "title": "화면 시간 경계 체크리스트, 무리 없는 기준부터 확인",
     "description": "화면 시간 경계을 기록 습관, 무리 없는 기준, 생활 적용 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-09",
     "publishAt": "2026-06-09T08:00:00+09:00",
@@ -7677,7 +7677,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7685,7 +7685,7 @@
     "id": "generated-168",
     "status": "scheduled",
     "slug": "meal-choice-balance",
-    "title": "식사 선택 균형 빠른 판단법, 무리 없는 기준 중심",
+    "title": "식사 선택 균형 실행 순서, 자가 점검부터 보기",
     "description": "식사 선택 균형을 무리 없는 기준, 생활 적용, 자가 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-09",
     "publishAt": "2026-06-09T13:00:00+09:00",
@@ -7723,7 +7723,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7731,7 +7731,7 @@
     "id": "generated-169",
     "status": "scheduled",
     "slug": "mood-log-light",
-    "title": "기분 기록 가볍게 상황별 기준, 자가 점검 체크",
+    "title": "기분 기록 가볍게 비교 기준, 생활 적용과 기록 습관",
     "description": "기분 기록 가볍게을 생활 적용, 자가 점검, 루틴 설계 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-09",
     "publishAt": "2026-06-09T18:00:00+09:00",
@@ -7769,7 +7769,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7777,7 +7777,7 @@
     "id": "generated-170",
     "status": "scheduled",
     "slug": "habit-small-start",
-    "title": "작은 습관 시작 실전 정리, 기록 습관부터 시작",
+    "title": "작은 습관 시작 FAQ, 루틴 설계 질문 정리",
     "description": "작은 습관 시작을 자가 점검, 루틴 설계, 기록 습관 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-09",
     "publishAt": "2026-06-09T23:00:00+09:00",
@@ -7815,7 +7815,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7823,7 +7823,7 @@
     "id": "generated-171",
     "status": "scheduled",
     "slug": "weekend-recovery-plan",
-    "title": "주말 회복 계획, 루틴 설계 실수 줄이는 기준",
+    "title": "주말 회복 계획, 무리 없는 기준 전 확인할 것",
     "description": "주말 회복 계획을 루틴 설계, 기록 습관, 무리 없는 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-10",
     "publishAt": "2026-06-10T04:00:00+09:00",
@@ -7861,7 +7861,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7869,7 +7869,7 @@
     "id": "generated-172",
     "status": "scheduled",
     "slug": "morning-light-routine",
-    "title": "아침 빛 루틴 체크리스트, 무리 없는 기준부터 확인",
+    "title": "아침 빛 루틴 운영 원칙, 자가 점검 남기기",
     "description": "아침 빛 루틴을 기록 습관, 무리 없는 기준, 생활 적용 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-10",
     "publishAt": "2026-06-10T09:00:00+09:00",
@@ -7907,7 +7907,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7915,7 +7915,7 @@
     "id": "generated-173",
     "status": "scheduled",
     "slug": "evening-close-note",
-    "title": "저녁 마무리 메모 실행법, 자가 점검까지 정리",
+    "title": "저녁 마무리 메모 빠른 판단법, 무리 없는 기준 중심",
     "description": "저녁 마무리 메모을 무리 없는 기준, 생활 적용, 자가 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-10",
     "publishAt": "2026-06-10T14:00:00+09:00",
@@ -7953,7 +7953,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -7961,7 +7961,7 @@
     "id": "generated-174",
     "status": "scheduled",
     "slug": "posture-check-timer",
-    "title": "자세 점검 타이머 비교 기준, 생활 적용과 기록 습관",
+    "title": "자세 점검 타이머 상황별 점검, 자가 점검 기준",
     "description": "자세 점검 타이머을 생활 적용, 자가 점검, 루틴 설계 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-10",
     "publishAt": "2026-06-10T19:00:00+09:00",
@@ -7999,7 +7999,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8007,7 +8007,7 @@
     "id": "generated-175",
     "status": "scheduled",
     "slug": "caffeine-cutoff-rule",
-    "title": "카페인 마감 시간 FAQ, 루틴 설계 질문 정리",
+    "title": "카페인 마감 시간 실전 정리, 기록 습관부터 시작",
     "description": "카페인 마감 시간을 자가 점검, 루틴 설계, 기록 습관 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-11",
     "publishAt": "2026-06-11T00:00:00+09:00",
@@ -8045,7 +8045,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8053,7 +8053,7 @@
     "id": "generated-176",
     "status": "scheduled",
     "slug": "mindful-random-break",
-    "title": "랜덤 휴식 미션, 컨디션 회복 루틴 설계 기준",
+    "title": "랜덤 휴식 미션 실패 방지, 루틴 설계 먼저 보기",
     "description": "랜덤 휴식 미션을 루틴 설계, 기록 습관, 무리 없는 기준 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-11",
     "publishAt": "2026-06-11T05:00:00+09:00",
@@ -8091,7 +8091,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8099,7 +8099,7 @@
     "id": "generated-177",
     "status": "scheduled",
     "slug": "weekly-energy-review",
-    "title": "주간 에너지 회고 운영 기준, 자가 점검 남기는 법",
+    "title": "주간 에너지 회고 적용 기준, 자가 점검까지 확인",
     "description": "주간 에너지 회고을 기록 습관, 무리 없는 기준, 생활 적용 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-11",
     "publishAt": "2026-06-11T10:00:00+09:00",
@@ -8137,7 +8137,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8145,7 +8145,7 @@
     "id": "generated-178",
     "status": "scheduled",
     "slug": "home-work-boundary",
-    "title": "재택근무 경계 빠른 판단법, 무리 없는 기준 중심",
+    "title": "재택근무 경계 초보 점검표, 생활 적용 중심",
     "description": "재택근무 경계을 무리 없는 기준, 생활 적용, 자가 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-11",
     "publishAt": "2026-06-11T15:00:00+09:00",
@@ -8183,7 +8183,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8191,7 +8191,7 @@
     "id": "generated-179",
     "status": "scheduled",
     "slug": "digital-declutter-step",
-    "title": "디지털 정리 습관 상황별 기준, 자가 점검 체크",
+    "title": "디지털 정리 습관 개선 포인트, 루틴 설계 활용법",
     "description": "디지털 정리 습관을 생활 적용, 자가 점검, 루틴 설계 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-11",
     "publishAt": "2026-06-11T20:00:00+09:00",
@@ -8229,7 +8229,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8237,7 +8237,7 @@
     "id": "generated-180",
     "status": "scheduled",
     "slug": "gentle-goal-rule",
-    "title": "무리 없는 목표 설정 실전 정리, 기록 습관부터 시작",
+    "title": "무리 없는 목표 설정 선택 기준, 자가 점검와 루틴 설계",
     "description": "무리 없는 목표 설정을 자가 점검, 루틴 설계, 기록 습관 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-12",
     "publishAt": "2026-06-12T01:00:00+09:00",
@@ -8275,7 +8275,7 @@
       "일상"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8375,7 +8375,7 @@
     "id": "generated-183",
     "status": "scheduled",
     "slug": "search-intent-map",
-    "title": "검색 의도 맵 실행법, 품질 점검까지 정리",
+    "title": "검색 의도 맵 실행 순서, 품질 점검부터 보기",
     "description": "검색 의도 맵을 사이트맵, 메타 설명, 품질 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-12",
     "publishAt": "2026-06-12T16:00:00+09:00",
@@ -8413,7 +8413,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8421,7 +8421,7 @@
     "id": "generated-184",
     "status": "scheduled",
     "slug": "internal-link-rules",
-    "title": "내부 링크 규칙 비교 기준, 메타 설명과 내부 링크",
+    "title": "내부 링크 규칙 비교 기준, 메타 설명과 품질 점검",
     "description": "내부 링크 규칙을 메타 설명, 품질 점검, 검색 의도 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-12",
     "publishAt": "2026-06-12T21:00:00+09:00",
@@ -8513,7 +8513,7 @@
     "id": "generated-186",
     "status": "scheduled",
     "slug": "rss-submit-check",
-    "title": "RSS 제출 확인, 사이트맵 전 점검할 것",
+    "title": "RSS 제출 확인, 사이트맵 전 확인할 것",
     "description": "RSS 제출 확인을 검색 의도, 내부 링크, 사이트맵 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-13",
     "publishAt": "2026-06-13T07:00:00+09:00",
@@ -8559,7 +8559,7 @@
     "id": "generated-187",
     "status": "scheduled",
     "slug": "gsc-query-review",
-    "title": "GSC 검색어 점검 운영 기준, 품질 점검 남기는 법",
+    "title": "GSC 검색어 점검 운영 원칙, 품질 점검 남기기",
     "description": "GSC 검색어 점검을 내부 링크, 사이트맵, 메타 설명 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-13",
     "publishAt": "2026-06-13T12:00:00+09:00",
@@ -8597,7 +8597,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8651,7 +8651,7 @@
     "id": "generated-189",
     "status": "scheduled",
     "slug": "meta-title-refresh",
-    "title": "메타 제목 개선 상황별 기준, 품질 점검 체크",
+    "title": "메타 제목 개선 상황별 점검, 품질 점검 기준",
     "description": "메타 제목 개선을 메타 설명, 품질 점검, 검색 의도 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-13",
     "publishAt": "2026-06-13T22:00:00+09:00",
@@ -8743,7 +8743,7 @@
     "id": "generated-191",
     "status": "scheduled",
     "slug": "author-signal-page",
-    "title": "저자 신뢰 신호, 검색 의도 실수 줄이는 기준",
+    "title": "저자 신뢰 신호 실패 방지, 검색 의도 먼저 보기",
     "description": "저자 신뢰 신호을 검색 의도, 내부 링크, 사이트맵 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-14",
     "publishAt": "2026-06-14T08:00:00+09:00",
@@ -8781,7 +8781,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8789,7 +8789,7 @@
     "id": "generated-192",
     "status": "scheduled",
     "slug": "thin-content-audit",
-    "title": "얇은 콘텐츠 점검 체크리스트, 사이트맵부터 확인",
+    "title": "얇은 콘텐츠 점검 적용 기준, 품질 점검까지 확인",
     "description": "얇은 콘텐츠 점검을 내부 링크, 사이트맵, 메타 설명 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-14",
     "publishAt": "2026-06-14T13:00:00+09:00",
@@ -8827,7 +8827,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8835,7 +8835,7 @@
     "id": "generated-193",
     "status": "scheduled",
     "slug": "old-post-refresh",
-    "title": "오래된 글 업데이트 실행법, 품질 점검까지 정리",
+    "title": "오래된 글 업데이트 초보 점검표, 메타 설명 중심",
     "description": "오래된 글 업데이트을 사이트맵, 메타 설명, 품질 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-14",
     "publishAt": "2026-06-14T18:00:00+09:00",
@@ -8873,7 +8873,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 94,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8881,7 +8881,7 @@
     "id": "generated-194",
     "status": "scheduled",
     "slug": "crawl-budget-light",
-    "title": "크롤링 우선순위 비교 기준, 메타 설명과 내부 링크",
+    "title": "크롤링 우선순위 개선 포인트, 검색 의도 활용법",
     "description": "크롤링 우선순위을 메타 설명, 품질 점검, 검색 의도 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-14",
     "publishAt": "2026-06-14T23:00:00+09:00",
@@ -8919,7 +8919,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8927,7 +8927,7 @@
     "id": "generated-195",
     "status": "scheduled",
     "slug": "ads-layout-safe",
-    "title": "자동광고 UX 기준 FAQ, 검색 의도 질문 정리",
+    "title": "자동광고 UX 기준 선택 기준, 품질 점검와 검색 의도",
     "description": "자동광고 UX 기준을 품질 점검, 검색 의도, 내부 링크 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-15",
     "publishAt": "2026-06-15T04:00:00+09:00",
@@ -8965,7 +8965,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -8973,7 +8973,7 @@
     "id": "generated-196",
     "status": "scheduled",
     "slug": "naver-title-length",
-    "title": "네이버 제목 길이, 사이트맵 전 점검할 것",
+    "title": "네이버 제목 길이, 검색 의도 실수 줄이는 기준",
     "description": "네이버 제목 길이을 검색 의도, 내부 링크, 사이트맵 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-15",
     "publishAt": "2026-06-15T09:00:00+09:00",
@@ -9011,7 +9011,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 92,
+    "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -9019,7 +9019,7 @@
     "id": "generated-197",
     "status": "scheduled",
     "slug": "og-image-consistency",
-    "title": "OG 이미지 일관성 운영 기준, 품질 점검 남기는 법",
+    "title": "OG 이미지 일관성 체크리스트, 사이트맵부터 확인",
     "description": "OG 이미지 일관성을 내부 링크, 사이트맵, 메타 설명 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-15",
     "publishAt": "2026-06-15T14:00:00+09:00",
@@ -9057,7 +9057,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 91,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -9065,7 +9065,7 @@
     "id": "generated-198",
     "status": "scheduled",
     "slug": "ai-index-file",
-    "title": "AI 검색 인덱스 빠른 판단법, 사이트맵 중심",
+    "title": "AI 검색 인덱스 실행 순서, 품질 점검부터 보기",
     "description": "AI 검색 인덱스을 사이트맵, 메타 설명, 품질 점검 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-15",
     "publishAt": "2026-06-15T19:00:00+09:00",
@@ -9103,7 +9103,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -9111,7 +9111,7 @@
     "id": "generated-199",
     "status": "scheduled",
     "slug": "indexnow-retry-rule",
-    "title": "IndexNow 재시도 기준 상황별 기준, 품질 점검 체크",
+    "title": "IndexNow 재시도 기준 비교 기준, 메타 설명과 내부 링크",
     "description": "IndexNow 재시도 기준을 메타 설명, 품질 점검, 검색 의도 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-16",
     "publishAt": "2026-06-16T00:00:00+09:00",
@@ -9149,7 +9149,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 93,
+    "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   },
@@ -9157,7 +9157,7 @@
     "id": "generated-200",
     "status": "scheduled",
     "slug": "homepage-topic-cluster",
-    "title": "홈페이지 주제 클러스터 실전 정리, 내부 링크부터 시작",
+    "title": "홈페이지 주제 클러스터 FAQ, 검색 의도 질문 정리",
     "description": "홈페이지 주제 클러스터을 품질 점검, 검색 의도, 내부 링크 기준으로 정리한 실행 가이드입니다.",
     "date": "2026-06-16",
     "publishAt": "2026-06-16T05:00:00+09:00",
@@ -9195,7 +9195,7 @@
       "애드센스"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
-    "qualityScore": 95,
+    "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
   }
