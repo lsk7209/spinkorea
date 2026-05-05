@@ -1,14 +1,14 @@
 # Status | 마지막: 2026-05-05
 
 ## 현재 작업
-200개 예약 글 생성/품질 보강/자동 발행 검증 완료. 강화된 예약 발행 workflow 재검증 성공.
+200개 예약 글 생성/품질 보강/자동 발행 검증 완료. IndexNow 새 키 배포 후 Naver 성공, Bing은 BWT 소유권 확인 대기.
 
 ## 최근 변경 (최근 5개만)
+- 05-05: IndexNow 키를 `d805...9fb4`로 교체 후 배포, 새 키 파일 32바이트 접근 확인
 - 05-05: 보강 커밋 `d4dded0` 후 GitHub Actions 재실행 성공, GSC 오류 0/Naver 200 확인
 - 05-05: 생성 글 출처를 신뢰 가능한 공식/권위 문서로 보정하고 제목 반복 패턴 검증 강화
 - 05-05: IndexNow를 Naver 필수/Bing 경고로 분리하고 workflow 알림 실패 은폐 제거
 - 05-05: GitHub Actions `Scheduled publish` 수동 실행 성공, Vercel/GSC/Naver IndexNow 단계 통과
-- 05-05: IndexNow 키 파일을 BOM/개행 없는 32바이트 파일로 정규화, 커밋 `81b68ec` 배포
 
 ## TODO
 - [x] GitHub Secret `GOOGLE_SERVICE_ACCOUNT_JSON` 등록 후 scheduled-publish에서 GSC 제출 확인
@@ -25,6 +25,7 @@
 - Google 알림: URL별 강제 색인 대신 Search Console sitemap submit/list API 사용
 - 예약 글: 2026-05-05 18:00 KST부터 5시간 간격, 마지막 2026-06-16 05:00 KST
 - IndexNow: Naver는 200 성공, Bing은 키 파일 정상 접근에도 403으로 BWT 소유권 확인 필요
+- IndexNow 키: 현재 기본 키는 `d805fbad2191692bd79af72fc8b69fb4`
 - 품질 게이트: 제목/출처/렌더러 구조/반복 패턴까지 `content:validate`에서 차단
 
 ## 주의
