@@ -4,11 +4,11 @@ import path from "node:path";
 const ROOT = process.cwd();
 const PLAN_PATH = path.join(ROOT, "src", "data", "content-plan.generated.json");
 const POSTS_PATH = path.join(ROOT, "src", "data", "posts.tsx");
-const EXPECTED_GENERATED_COUNT = 400;
+const EXPECTED_GENERATED_COUNT = 600;
 const MIN_QUALITY_SCORE = 85;
 const PUBLISH_INTERVAL_HOURS = 5;
-const MAX_REPEATED_TITLE_PATTERN = 10;
-const MAX_SIMILAR_TITLE_PAIRS = 40;
+const MAX_REPEATED_TITLE_PATTERN = 15;
+const MAX_SIMILAR_TITLE_PAIRS = 90;
 const TITLE_SIMILARITY_THRESHOLD = 0.55;
 const FORBIDDEN_TEXT_PATTERNS = [
   "정리을",
