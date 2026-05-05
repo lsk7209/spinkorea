@@ -13,6 +13,28 @@ import { trackEvent } from "@/utils/analytics";
 
 const SITE_ORIGIN = "https://www.spinkorea.kr";
 
+function hasFinalConsonant(value: string): boolean {
+  const last = [...value.trim()].at(-1);
+  if (!last) {
+    return false;
+  }
+
+  const code = last.charCodeAt(0);
+  return code >= 0xac00 && code <= 0xd7a3 && (code - 0xac00) % 28 !== 0;
+}
+
+function particle(value: string, consonant: string, vowel: string): string {
+  return `${value}${hasFinalConsonant(value) ? consonant : vowel}`;
+}
+
+function withEulReul(value: string): string {
+  return particle(value, "을", "를");
+}
+
+function getGeneratedTopic(title: string): string {
+  return title.split(/[,，:：]/)[0]?.trim() || title;
+}
+
 async function loadPostContent(meta: BlogPostMeta): Promise<BlogPost | undefined> {
   if (meta.source === "generated") {
     const { GENERATED_BLOG_POSTS } = await import("@/data/generatedContent");
@@ -89,8 +111,7 @@ export default function BlogPost() {
     }
   };
 
-  const structuredData = {
-    "@context": "https://schema.org",
+  const blogPostingStructuredData = {
     "@type": "BlogPosting",
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -115,6 +136,51 @@ export default function BlogPost() {
     dateModified: post.publishAt ?? post.date,
     url: `${SITE_ORIGIN}/blog/${post.slug}`,
     inLanguage: "ko-KR",
+  };
+  const generatedTopic = getGeneratedTopic(post.title);
+  const faqStructuredData =
+    post.source === "generated"
+      ? {
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: `${withEulReul(generatedTopic)} 처음 적용할 때 가장 먼저 볼 것은 무엇인가요?`,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "목적, 제외 조건, 결과 기록 방식을 먼저 나누는 것이 좋습니다. 기준을 먼저 정하면 같은 결정을 반복해서 다시 논의하는 일을 줄일 수 있습니다.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: `${generatedTopic}에는 어떤 기준이 실용적인가요?`,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "바로 실행할 수 있는 선택지, 나중에 확인 가능한 기록, 공식 참고 자료를 함께 두는 기준이 실용적입니다.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: `${generatedTopic} 결과가 마음에 들지 않으면 다시 정해도 되나요?`,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "가능하지만 반복 횟수와 예외 조건을 미리 정해야 합니다. 기준 없는 재선택은 공정성과 신뢰도를 낮출 수 있습니다.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: `${withEulReul(generatedTopic)} 글이나 도구 페이지에 연결할 때 주의할 점은 무엇인가요?`,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "독자가 바로 실행할 수 있는 내부 링크와 공식 참고 자료를 함께 제시해야 합니다. 설명만 있고 실행 경로가 없으면 체류와 전환이 약해집니다.",
+              },
+            },
+          ],
+        }
+      : undefined;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [blogPostingStructuredData, faqStructuredData].filter(Boolean),
   };
 
   return (

@@ -731,6 +731,10 @@ function objectParticle(word) {
   return hasFinalConsonant(word) ? "을" : "를";
 }
 
+function objectPhrase(word) {
+  return word.endsWith("확인") || word.endsWith("점검") ? `${word} 항목을` : `${word}${objectParticle(word)}`;
+}
+
 function subjectParticle(word) {
   return hasFinalConsonant(word) ? "은" : "는";
 }
@@ -754,23 +758,23 @@ function descriptionKeywords(keyword, ext) {
 }
 
 const TITLE_TEMPLATES = [
-  (keyword, ext) => `${keyword}, ${safeExt(keyword, ext, 0)}부터 바로 점검`,
-  (keyword, ext) => `${keyword} 체크리스트: ${safeExt(keyword, ext, 1)} 먼저`,
-  (keyword, ext) => `${keyword} 순서 잡기, ${safeExt(keyword, ext, 2)}까지`,
+  (keyword, ext) => `${keyword}, ${safeExt(keyword, ext, 0)} 먼저 보기`,
+  (keyword, ext) => `${keyword} 체크리스트: ${safeExt(keyword, ext, 1)} 핵심`,
+  (keyword, ext) => `${keyword} 실행 순서, ${safeExt(keyword, ext, 2)}까지`,
   (keyword, ext) => {
     const first = safeExt(keyword, ext, 0);
     const second = safeExt(`${keyword} ${first}`, ext, 3);
     return `${keyword} 비교법, ${first}${andParticle(first)} ${second}`;
   },
   (keyword, ext) => `${keyword} FAQ: ${safeExt(keyword, ext, 1)} 답변`,
-  (keyword, ext) => `${keyword}, ${safeExt(keyword, ext, 2)} 전 확인할 점`,
+  (keyword, ext) => `${keyword}, ${safeExt(keyword, ext, 2)} 전에 볼 점`,
   (keyword, ext) => `${keyword} 운영법, ${safeExt(keyword, ext, 3)} 남기기`,
   (keyword, ext) => `${keyword} 판단법, ${safeExt(keyword, ext, 0)} 중심`,
-  (keyword, ext) => `${keyword} 상황별 점검표, ${safeExt(keyword, ext, 1)}`,
-  (keyword, ext) => `${keyword} 실전 흐름, ${safeExt(keyword, ext, 2)} 시작`,
+  (keyword, ext) => `${keyword} 상황별 표, ${safeExt(keyword, ext, 1)}`,
+  (keyword, ext) => `${keyword} 실전 흐름, ${safeExt(keyword, ext, 2)}부터`,
   (keyword, ext) => `${keyword} 실수 방지, ${safeExt(keyword, ext, 0)} 먼저`,
   (keyword, ext) => `${keyword} 적용 순서, ${safeExt(keyword, ext, 3)} 확인`,
-  (keyword, ext) => `${keyword} 초보 점검, ${safeExt(keyword, ext, 1)} 중심`,
+  (keyword, ext) => `${keyword} 초보 흐름, ${safeExt(keyword, ext, 1)} 중심`,
   (keyword, ext) => `${keyword} 개선 포인트, ${safeExt(keyword, ext, 2)}`,
   (keyword, ext) => {
     const first = safeExt(keyword, ext, 0);
@@ -778,10 +782,29 @@ const TITLE_TEMPLATES = [
     return `${keyword} 선택법, ${first}${andParticle(first)} ${second}`;
   },
   (keyword, ext) => `${keyword} 빠른 정리, ${safeExt(keyword, ext, 3)}까지`,
-  (keyword, ext) => `${keyword} 검토 순서, ${safeExt(keyword, ext, 0)} 기준`,
-  (keyword, ext) => `${keyword} 운영 체크, ${safeExt(keyword, ext, 1)} 포함`,
+  (keyword, ext) => `${keyword} 검토 순서, ${safeExt(keyword, ext, 0)} 활용`,
+  (keyword, ext) => `${keyword} 운영 체크, ${safeExt(keyword, ext, 1)} 반영`,
   (keyword, ext) => `${keyword} 사례별 정리, ${safeExt(keyword, ext, 2)} 중심`,
-  (keyword, ext) => `${keyword} 발행 전 점검, ${safeExt(keyword, ext, 3)}`,
+  (keyword, ext) => `${keyword} 발행 전 검토, ${safeExt(keyword, ext, 3)}`,
+];
+
+const DESCRIPTION_TEMPLATES = [
+  (keyword, ext) =>
+    `${keyword}${subjectParticle(keyword)} ${ext[0]}, ${ext[1]}, ${objectPhrase(ext[2])} 나눠 실제 실행 순서로 정리한 글입니다.`,
+  (keyword, ext) =>
+    `${objectPhrase(keyword)} 준비할 때 놓치기 쉬운 ${ext[0]}, ${ext[1]}, ${objectPhrase(ext[2])} 짧게 점검합니다.`,
+  (keyword, ext) =>
+    `${keyword} 상황에서 ${ext[0]}${andParticle(ext[0])} ${ext[1]}${subjectParticle(ext[1])} 헷갈릴 때 보는 실무형 정리입니다.`,
+  (keyword, ext) =>
+    `${keyword}${subjectParticle(keyword)} 필요한 순간부터 ${ext[2]}${andParticle(ext[2])} ${objectPhrase(ext[3])} 남기는 방법까지 안내합니다.`,
+  (keyword, ext) =>
+    `${objectPhrase(keyword)} 검색한 독자가 바로 따라 할 수 있도록 ${ext[0]}부터 ${ext[3]}까지 압축했습니다.`,
+  (keyword, ext) =>
+    `${keyword} 관련 결정을 반복하지 않도록 ${ext[1]}, ${ext[2]}, ${objectPhrase(ext[3])} 한 번에 비교합니다.`,
+  (keyword, ext) =>
+    `${keyword}${subjectParticle(keyword)} 애매할 때 ${objectPhrase(ext[0])} 먼저 보고 ${ext[2]}까지 확인하는 기준을 제시합니다.`,
+  (keyword, ext) =>
+    `${objectPhrase(keyword)} 글, 도구, 업무 흐름에 적용할 때 필요한 ${ext[1]}${andParticle(ext[1])} ${objectPhrase(ext[3])} 정리했습니다.`,
 ];
 
 function compactTitle(title, keyword, ext) {
@@ -800,8 +823,13 @@ function compactTitle(title, keyword, ext) {
 
 function polishTitle(title) {
   return title
+    .replace(/검토,\s*검토/g, "검토,")
+    .replace(/점검,\s*점검/g, "점검,")
+    .replace(/정리,\s*정리/g, "정리,")
+    .replace(/기준,\s*기준/g, "기준,")
     .replace(/\s+확인\s+확인/g, " 확인")
     .replace(/\s+점검\s+점검/g, " 점검")
+    .replace(/\s+점검\s+검토/g, " 점검")
     .replace(/\s+기준\s+기준/g, " 기준")
     .replace(/\s+정리\s+정리/g, " 정리")
     .replace(/\s+기록\s+기록/g, " 기록")
@@ -878,7 +906,6 @@ const ALL_TOPICS = [...TOPICS, ...EXTRA_TOPICS, ...THIRD_TOPICS];
 const plan = ALL_TOPICS.map(([category, slugBase, mainKeyword, readerProblem, practicalExample], index) => {
   const meta = CATEGORY_META[category];
   const ext = expandedKeywords(category, index);
-  const visibleDescriptionKeywords = descriptionKeywords(mainKeyword, ext);
   let title = polishTitle(compactTitle(TITLE_TEMPLATES[index % TITLE_TEMPLATES.length](mainKeyword, ext), mainKeyword, ext));
 
   const normalizedTitle = normalizeTitle(title);
@@ -892,7 +919,7 @@ const plan = ALL_TOPICS.map(([category, slugBase, mainKeyword, readerProblem, pr
 
   const faq = buildFaq(mainKeyword, ext, readerProblem, practicalExample);
   const links = meta.links.map(([label, path]) => ({ label, path }));
-  const description = `${mainKeyword}${subjectParticle(mainKeyword)} ${visibleDescriptionKeywords.join(", ")} 항목으로 바로 점검하는 가이드입니다.`;
+  const description = DESCRIPTION_TEMPLATES[index % DESCRIPTION_TEMPLATES.length](mainKeyword, ext);
   const qualityScore = scoreArticle({
     title,
     description,
