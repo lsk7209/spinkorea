@@ -321,8 +321,25 @@ function andParticle(word) {
   return hasFinalConsonant(word) ? "과" : "와";
 }
 
+function objectParticle(word) {
+  return hasFinalConsonant(word) ? "을" : "를";
+}
+
+function subjectParticle(word) {
+  return hasFinalConsonant(word) ? "은" : "는";
+}
+
 function safeExt(keyword, ext, preferredIndex) {
-  return ext.slice(preferredIndex).concat(ext.slice(0, preferredIndex)).find((word) => !keyword.includes(word)) ?? ext[preferredIndex];
+  const keywordTokens = new Set(keyword.match(/\p{Letter}+/gu) ?? []);
+  return (
+    ext
+      .slice(preferredIndex)
+      .concat(ext.slice(0, preferredIndex))
+      .find((word) => {
+        const wordTokens = word.match(/\p{Letter}+/gu) ?? [];
+        return !keyword.includes(word) && !wordTokens.some((token) => keywordTokens.has(token));
+      }) ?? ext.find((word) => !keyword.includes(word)) ?? ext[preferredIndex]
+  );
 }
 
 function descriptionKeywords(keyword, ext) {
@@ -331,30 +348,61 @@ function descriptionKeywords(keyword, ext) {
 }
 
 const TITLE_TEMPLATES = [
-  (keyword, ext) => `${keyword}, ${safeExt(keyword, ext, 0)} 실수 줄이는 기준`,
-  (keyword, ext) => `${keyword} 체크리스트, ${safeExt(keyword, ext, 1)}부터 확인`,
-  (keyword, ext) => `${keyword} 실행 순서, ${safeExt(keyword, ext, 2)}부터 보기`,
+  (keyword, ext) => `${keyword}, ${safeExt(keyword, ext, 0)}부터 바로 점검`,
+  (keyword, ext) => `${keyword} 체크리스트: ${safeExt(keyword, ext, 1)} 먼저`,
+  (keyword, ext) => `${keyword} 순서 잡기, ${safeExt(keyword, ext, 2)}까지`,
   (keyword, ext) => {
     const first = safeExt(keyword, ext, 0);
     const second = safeExt(`${keyword} ${first}`, ext, 3);
-    return `${keyword} 비교 기준, ${first}${andParticle(first)} ${second}`;
+    return `${keyword} 비교법, ${first}${andParticle(first)} ${second}`;
   },
-  (keyword, ext) => `${keyword} FAQ, ${safeExt(keyword, ext, 1)} 질문 정리`,
-  (keyword, ext) => `${keyword}, ${safeExt(keyword, ext, 2)} 전 확인할 것`,
-  (keyword, ext) => `${keyword} 운영 원칙, ${safeExt(keyword, ext, 3)} 남기기`,
-  (keyword, ext) => `${keyword} 빠른 판단법, ${safeExt(keyword, ext, 0)} 중심`,
-  (keyword, ext) => `${keyword} 상황별 점검, ${safeExt(keyword, ext, 1)} 기준`,
-  (keyword, ext) => `${keyword} 실전 정리, ${safeExt(keyword, ext, 2)}부터 시작`,
-  (keyword, ext) => `${keyword} 실패 방지, ${safeExt(keyword, ext, 0)} 먼저 보기`,
-  (keyword, ext) => `${keyword} 적용 기준, ${safeExt(keyword, ext, 3)}까지 확인`,
-  (keyword, ext) => `${keyword} 초보 점검표, ${safeExt(keyword, ext, 1)} 중심`,
-  (keyword, ext) => `${keyword} 개선 포인트, ${safeExt(keyword, ext, 2)} 활용법`,
+  (keyword, ext) => `${keyword} FAQ: ${safeExt(keyword, ext, 1)} 답변`,
+  (keyword, ext) => `${keyword}, ${safeExt(keyword, ext, 2)} 전 확인할 점`,
+  (keyword, ext) => `${keyword} 운영법, ${safeExt(keyword, ext, 3)} 남기기`,
+  (keyword, ext) => `${keyword} 판단법, ${safeExt(keyword, ext, 0)} 중심`,
+  (keyword, ext) => `${keyword} 상황별 점검표, ${safeExt(keyword, ext, 1)}`,
+  (keyword, ext) => `${keyword} 실전 흐름, ${safeExt(keyword, ext, 2)} 시작`,
+  (keyword, ext) => `${keyword} 실수 방지, ${safeExt(keyword, ext, 0)} 먼저`,
+  (keyword, ext) => `${keyword} 적용 순서, ${safeExt(keyword, ext, 3)} 확인`,
+  (keyword, ext) => `${keyword} 초보 점검, ${safeExt(keyword, ext, 1)} 중심`,
+  (keyword, ext) => `${keyword} 개선 포인트, ${safeExt(keyword, ext, 2)}`,
   (keyword, ext) => {
     const first = safeExt(keyword, ext, 0);
     const second = safeExt(`${keyword} ${first}`, ext, 1);
-    return `${keyword} 선택 기준, ${first}와 ${second}`;
+    return `${keyword} 선택법, ${first}${andParticle(first)} ${second}`;
   },
+  (keyword, ext) => `${keyword} 빠른 정리, ${safeExt(keyword, ext, 3)}까지`,
+  (keyword, ext) => `${keyword} 검토 순서, ${safeExt(keyword, ext, 0)} 기준`,
+  (keyword, ext) => `${keyword} 운영 체크, ${safeExt(keyword, ext, 1)} 포함`,
+  (keyword, ext) => `${keyword} 사례별 정리, ${safeExt(keyword, ext, 2)} 중심`,
+  (keyword, ext) => `${keyword} 발행 전 점검, ${safeExt(keyword, ext, 3)}`,
 ];
+
+function compactTitle(title, keyword, ext) {
+  if (title.length <= 40) {
+    return title;
+  }
+
+  const candidates = [
+    `${keyword}, ${safeExt(keyword, ext, 0)} 점검`,
+    `${keyword} 체크: ${safeExt(keyword, ext, 1)}`,
+    `${keyword} 기준과 ${safeExt(keyword, ext, 2)}`,
+  ];
+
+  return candidates.find((candidate) => candidate.length <= 40) ?? `${keyword}, ${safeExt(keyword, ext, 0)}`;
+}
+
+function polishTitle(title) {
+  return title
+    .replace(/\s+확인\s+확인/g, " 확인")
+    .replace(/\s+점검\s+점검/g, " 점검")
+    .replace(/\s+기준\s+기준/g, " 기준")
+    .replace(/\s+정리\s+정리/g, " 정리")
+    .replace(/\s+기록\s+기록/g, " 기록")
+    .replace(/\s+적용\s+적용/g, " 적용")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
 const CONTENT_TYPES = ["How-to", "Checklist", "Explainer", "Comparison", "FAQ"];
 const SEARCH_INTENTS = ["문제 해결", "정보 탐색", "실행", "비교", "질문 답변"];
@@ -378,7 +426,7 @@ function buildFaq(mainKeyword, ext, readerProblem, practicalExample) {
   return [
     {
       question: `${mainKeyword}을 처음 적용할 때 가장 먼저 볼 것은 무엇인가요?`,
-      answer: `${ext[0]}와 ${ext[1]}을 먼저 나누면 ${readerProblem}를 줄일 수 있습니다. 선택지를 늘리기보다 제외 조건을 먼저 적는 방식이 안정적입니다.`,
+      answer: `${ext[0]}${andParticle(ext[0])} ${ext[1]}을 먼저 나누면 ${readerProblem}${objectParticle(readerProblem)} 줄일 수 있습니다. 선택지를 늘리기보다 제외 조건을 먼저 적는 방식이 안정적입니다.`,
     },
     {
       question: `${practicalExample}에는 어떤 기준이 실용적인가요?`,
@@ -423,11 +471,8 @@ const seenSlugs = new Set();
 const plan = TOPICS.map(([category, slugBase, mainKeyword, readerProblem, practicalExample], index) => {
   const meta = CATEGORY_META[category];
   const ext = expandedKeywords(category, index);
-  let title = TITLE_TEMPLATES[index % TITLE_TEMPLATES.length](mainKeyword, ext);
-
-  if (title.length > 44) {
-    title = `${mainKeyword}, ${ext[0]} 기준`;
-  }
+  const visibleDescriptionKeywords = descriptionKeywords(mainKeyword, ext);
+  let title = polishTitle(compactTitle(TITLE_TEMPLATES[index % TITLE_TEMPLATES.length](mainKeyword, ext), mainKeyword, ext));
 
   const normalizedTitle = normalizeTitle(title);
   if (seenTitles.has(normalizedTitle) || seenSlugs.has(slugBase)) {
@@ -440,7 +485,7 @@ const plan = TOPICS.map(([category, slugBase, mainKeyword, readerProblem, practi
 
   const faq = buildFaq(mainKeyword, ext, readerProblem, practicalExample);
   const links = meta.links.map(([label, path]) => ({ label, path }));
-  const description = `${mainKeyword}을 ${descriptionKeywords(mainKeyword, ext).join(", ")} 기준으로 정리한 실행 가이드입니다.`;
+  const description = `${mainKeyword}${subjectParticle(mainKeyword)} ${visibleDescriptionKeywords.join(", ")} 항목으로 바로 점검하는 가이드입니다.`;
   const qualityScore = scoreArticle({
     title,
     description,

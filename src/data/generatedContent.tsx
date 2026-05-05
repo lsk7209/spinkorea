@@ -67,6 +67,11 @@ function keywordText(article: GeneratedArticlePlan): string {
   return [article.mainKeyword, ...visibleKeywords].join(", ");
 }
 
+function articleVariant(article: GeneratedArticlePlan): number {
+  const number = Number(article.id.replace(/\D/g, ""));
+  return Number.isFinite(number) ? number % 5 : 0;
+}
+
 function buildFaq(article: GeneratedArticlePlan) {
   return [
     {
@@ -182,6 +187,68 @@ function TypeSpecificSection({ article }: { article: GeneratedArticlePlan }) {
   );
 }
 
+function ContextSection({ article }: { article: GeneratedArticlePlan }) {
+  const variant = articleVariant(article);
+
+  if (variant === 1) {
+    return (
+      <>
+        <h2>{article.mainKeyword}을 실제 상황에 맞추는 방법</h2>
+        <p>
+          {article.practicalExample}에는 정답 하나보다 납득 가능한 절차가 더 중요합니다. 먼저 {keywordAt(article, 0)}를
+          확인하고, 이해관계자가 헷갈릴 수 있는 {keywordAt(article, 1)}을 짧게 적어두면 결과 설명이 쉬워집니다.
+        </p>
+      </>
+    );
+  }
+
+  if (variant === 2) {
+    return (
+      <>
+        <h2>{article.mainKeyword}을 문서로 남길 때 필요한 것</h2>
+        <p>
+          실행 후에는 결과만 저장하지 말고 왜 그 방식으로 정했는지 함께 남기는 편이 좋습니다. {keywordAt(article, 2)}와{" "}
+          {keywordAt(article, 3)}를 같이 적으면 나중에 같은 조건을 다시 확인할 때 설명 비용이 줄어듭니다.
+        </p>
+      </>
+    );
+  }
+
+  if (variant === 3) {
+    return (
+      <>
+        <h2>{article.mainKeyword}에서 먼저 버릴 조건</h2>
+        <p>
+          모든 조건을 한 번에 반영하려고 하면 오히려 판단이 느려집니다. 이번 결정에 직접 영향을 주지 않는 후보를
+          덜어내고 {keywordAt(article, 0)}와 {keywordAt(article, 2)}만 먼저 남기면 실행 속도가 빨라집니다.
+        </p>
+      </>
+    );
+  }
+
+  if (variant === 4) {
+    return (
+      <>
+        <h2>{article.mainKeyword}을 반복 운영할 때의 기준</h2>
+        <p>
+          한 번 쓰고 끝나는 기준과 매번 다시 쓰는 기준은 다르게 설계해야 합니다. 반복 운영에서는 {keywordAt(article, 1)}을
+          고정하고 {keywordAt(article, 3)}만 상황에 따라 바꾸는 방식이 관리하기 쉽습니다.
+        </p>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <h2>{article.mainKeyword}을 빠르게 점검하는 관점</h2>
+      <p>
+        가장 먼저 볼 것은 결과의 화려함이 아니라 독자가 바로 따라 할 수 있는지입니다. {withWaGwa(keywordAt(article, 0))}{" "}
+        {keywordAt(article, 1)}이 본문 안에서 자연스럽게 이어지면 검색 의도와 실행 흐름이 같이 살아납니다.
+      </p>
+    </>
+  );
+}
+
 function GeneratedArticle({ article }: { article: GeneratedArticlePlan }) {
   const faq = buildFaq(article);
   const checklist = [
@@ -219,6 +286,8 @@ function GeneratedArticle({ article }: { article: GeneratedArticlePlan }) {
       </p>
 
       <TypeSpecificSection article={article} />
+
+      <ContextSection article={article} />
 
       <h2>{article.mainKeyword} 기준은 어떻게 잡아야 하나요?</h2>
       <div className="overflow-x-auto">

@@ -7,6 +7,27 @@ const POSTS_PATH = path.join(ROOT, "src", "data", "posts.tsx");
 const MIN_QUALITY_SCORE = 85;
 const PUBLISH_INTERVAL_HOURS = 5;
 const MAX_REPEATED_TITLE_PATTERN = 5;
+const MAX_SIMILAR_TITLE_PAIRS = 20;
+const TITLE_SIMILARITY_THRESHOLD = 0.55;
+const FORBIDDEN_TEXT_PATTERNS = [
+  "정리을",
+  "확인을",
+  "보기를",
+  "기준을 기준",
+  "적용와",
+  "설정를",
+  "확인을",
+  "기록를",
+  "점검를",
+  "기록와",
+  "확인와",
+  "공유 전 확인와",
+  "기준 적용 기준",
+  "선택 기준, 기준",
+  "FAQ,",
+  "질문 정리",
+  "결과 기록부터 보기",
+];
 const TRUSTED_SOURCE_HOSTS = new Set([
   "developer.mozilla.org",
   "www.kca.go.kr",
@@ -68,6 +89,52 @@ function assertNaturalTitle(title) {
   }
 }
 
+function tokenizeTitle(title) {
+  const stopWords = new Set([
+    "기준",
+    "정리",
+    "질문",
+    "실수",
+    "줄이는",
+    "보기",
+    "확인",
+    "시작",
+    "비교",
+    "선택",
+    "실전",
+    "체크리스트",
+    "실행",
+    "순서",
+    "적용",
+    "가이드",
+    "부터",
+    "까지",
+    "중심",
+  ]);
+
+  return new Set((title.match(/[\p{Letter}\p{Number}]+/gu) ?? []).filter((token) => token.length > 1 && !stopWords.has(token)));
+}
+
+function titleSimilarity(left, right) {
+  const leftTokens = tokenizeTitle(left);
+  const rightTokens = tokenizeTitle(right);
+  const union = new Set([...leftTokens, ...rightTokens]);
+
+  if (union.size === 0) {
+    return 0;
+  }
+
+  const intersection = [...leftTokens].filter((token) => rightTokens.has(token)).length;
+  return intersection / union.size;
+}
+
+function assertNoForbiddenText(article) {
+  const text = `${article.title}\n${article.description}\n${article.mainKeyword}\n${article.expandedKeywords.join("\n")}`;
+  for (const pattern of FORBIDDEN_TEXT_PATTERNS) {
+    assert(!text.includes(pattern), `forbidden text pattern: ${article.slug} ${pattern}`);
+  }
+}
+
 function assertGeneratedRenderer() {
   const renderer = fs.readFileSync(path.join(ROOT, "src", "data", "generatedContent.tsx"), "utf8");
   for (const marker of REQUIRED_RENDER_MARKERS) {
@@ -80,6 +147,7 @@ const existingTitles = readExistingTitles();
 const allTitles = new Map();
 const slugs = new Set();
 const patternCounts = new Map();
+const generatedTitles = [];
 
 assert(plan.length === 200, `generated article count mismatch: ${plan.length}`);
 assertGeneratedRenderer();
@@ -96,6 +164,7 @@ for (const [index, article] of plan.entries()) {
   assert(!slugs.has(article.slug), `duplicate slug: ${article.slug}`);
   assert(article.title.includes(article.mainKeyword), `main keyword missing: ${article.title}`);
   assertNaturalTitle(article.title);
+  assertNoForbiddenText(article);
   assert(article.expandedKeywords.length >= 3, `expanded keywords missing: ${article.slug}`);
   assert(article.qualityScore >= MIN_QUALITY_SCORE, `quality score too low: ${article.slug}`);
   assert(article.qualityScore <= 95, `quality score out of range: ${article.slug}`);
@@ -123,7 +192,27 @@ for (const [index, article] of plan.entries()) {
 
   allTitles.set(normalizedTitle, article.title);
   slugs.add(article.slug);
+  generatedTitles.push({ slug: article.slug, title: article.title });
 }
+
+const similarTitlePairs = [];
+for (let leftIndex = 0; leftIndex < generatedTitles.length; leftIndex += 1) {
+  for (let rightIndex = leftIndex + 1; rightIndex < generatedTitles.length; rightIndex += 1) {
+    const similarity = titleSimilarity(generatedTitles[leftIndex].title, generatedTitles[rightIndex].title);
+    if (similarity >= TITLE_SIMILARITY_THRESHOLD) {
+      similarTitlePairs.push({
+        similarity,
+        left: generatedTitles[leftIndex],
+        right: generatedTitles[rightIndex],
+      });
+    }
+  }
+}
+
+assert(
+  similarTitlePairs.length <= MAX_SIMILAR_TITLE_PAIRS,
+  `too many similar title pairs: ${similarTitlePairs.length}`,
+);
 
 console.log(
   JSON.stringify(
