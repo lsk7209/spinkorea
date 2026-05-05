@@ -1,0 +1,2762 @@
+[
+  {
+    "id": "generated-301",
+    "status": "scheduled",
+    "slug": "robots-ai-bot-rule",
+    "title": "AI 봇 robots 규칙, 검증 절차 먼저 보기",
+    "description": "AI 봇 robots 규칙을 검색한 독자가 바로 따라 할 수 있도록 검증 절차부터 보안 확인까지 압축했습니다.",
+    "date": "2026-07-07",
+    "publishAt": "2026-07-07T06:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "AI 봇 robots 규칙",
+    "expandedKeywords": [
+      "검증 절차",
+      "디버깅",
+      "자동화",
+      "보안 확인"
+    ],
+    "readerProblem": "허용할 봇과 차단할 봇을 구분하기 어려운 문제",
+    "practicalExample": "robots.txt를 수정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-302",
+    "status": "scheduled",
+    "slug": "canonical-domain-check",
+    "title": "캐노니컬 도메인 확인 체크리스트: 자동화 핵심",
+    "description": "캐노니컬 도메인 확인 관련 결정을 반복하지 않도록 자동화, 보안 확인, 배포 전 점검 항목을 한 번에 비교합니다.",
+    "date": "2026-07-07",
+    "publishAt": "2026-07-07T11:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "캐노니컬 도메인 확인",
+    "expandedKeywords": [
+      "디버깅",
+      "자동화",
+      "보안 확인",
+      "배포 전 점검"
+    ],
+    "readerProblem": "www와 apex URL 신호가 섞이는 문제",
+    "practicalExample": "SEO 설정을 점검할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-303",
+    "status": "scheduled",
+    "slug": "og-meta-debug",
+    "title": "OG 메타 디버깅 실행 순서, 배포 전 점검까지",
+    "description": "OG 메타 디버깅은 애매할 때 자동화를 먼저 보고 배포 전 점검까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-07",
+    "publishAt": "2026-07-07T16:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "OG 메타 디버깅",
+    "expandedKeywords": [
+      "자동화",
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차"
+    ],
+    "readerProblem": "공유 이미지와 제목이 예상과 다르게 보이는 문제",
+    "practicalExample": "SNS 공유를 테스트할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-304",
+    "status": "scheduled",
+    "slug": "structured-data-leak",
+    "title": "스키마 노출 점검 비교법, 보안 확인과 디버깅",
+    "description": "스키마 노출 점검 항목을 글, 도구, 업무 흐름에 적용할 때 필요한 배포 전 점검과 디버깅을 정리했습니다.",
+    "date": "2026-07-07",
+    "publishAt": "2026-07-07T21:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "스키마 노출 점검",
+    "expandedKeywords": [
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅"
+    ],
+    "readerProblem": "JSON-LD 원문이 본문에 보일 위험이 있는 문제",
+    "practicalExample": "FAQ 스키마를 넣을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-305",
+    "status": "scheduled",
+    "slug": "client-bundle-check",
+    "title": "클라이언트 번들 점검 FAQ: 검증 절차 답변",
+    "description": "클라이언트 번들 점검은 배포 전 점검, 검증 절차, 디버깅을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-08",
+    "publishAt": "2026-07-08T02:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "클라이언트 번들 점검",
+    "expandedKeywords": [
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅",
+      "자동화"
+    ],
+    "readerProblem": "글 데이터가 커져 초기 로딩이 무거워지는 문제",
+    "practicalExample": "대량 콘텐츠를 추가할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-306",
+    "status": "scheduled",
+    "slug": "lazy-route-split",
+    "title": "라우트 분할 점검, 자동화 전에 볼 점",
+    "description": "라우트 분할 점검 항목을 준비할 때 놓치기 쉬운 검증 절차, 디버깅, 자동화를 짧게 점검합니다.",
+    "date": "2026-07-08",
+    "publishAt": "2026-07-08T07:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "라우트 분할 점검",
+    "expandedKeywords": [
+      "검증 절차",
+      "디버깅",
+      "자동화",
+      "보안 확인"
+    ],
+    "readerProblem": "사용하지 않는 페이지 코드가 같이 로드되는 문제",
+    "practicalExample": "도구 페이지를 늘릴 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-307",
+    "status": "scheduled",
+    "slug": "build-warning-review",
+    "title": "빌드 경고 해석 운영법, 배포 전 점검 남기기",
+    "description": "빌드 경고 해석 상황에서 디버깅과 자동화는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-08",
+    "publishAt": "2026-07-08T12:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "빌드 경고 해석",
+    "expandedKeywords": [
+      "디버깅",
+      "자동화",
+      "보안 확인",
+      "배포 전 점검"
+    ],
+    "readerProblem": "경고가 많아 실제 위험을 놓치는 문제",
+    "practicalExample": "CI 로그를 검토할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-308",
+    "status": "scheduled",
+    "slug": "vercel-cache-check",
+    "title": "Vercel 캐시 확인 판단법, 자동화 중심",
+    "description": "Vercel 캐시 확인은 필요한 순간부터 배포 전 점검과 검증 절차를 남기는 방법까지 안내합니다.",
+    "date": "2026-07-08",
+    "publishAt": "2026-07-08T17:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "Vercel 캐시 확인",
+    "expandedKeywords": [
+      "자동화",
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차"
+    ],
+    "readerProblem": "새 배포가 반영됐는지 판단하기 어려운 문제",
+    "practicalExample": "정적 파일을 갱신할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-309",
+    "status": "scheduled",
+    "slug": "rss-item-count",
+    "title": "RSS 글 수 점검 상황별 표, 검증 절차",
+    "description": "RSS 글 수 점검 항목을 검색한 독자가 바로 따라 할 수 있도록 보안 확인부터 디버깅까지 압축했습니다.",
+    "date": "2026-07-08",
+    "publishAt": "2026-07-08T22:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "RSS 글 수 점검",
+    "expandedKeywords": [
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅"
+    ],
+    "readerProblem": "피드에 최신 글이 빠지는 문제",
+    "practicalExample": "포털 RSS 제출 후",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-310",
+    "status": "scheduled",
+    "slug": "link-rel-audit",
+    "title": "링크 rel 점검 실전 흐름, 디버깅부터",
+    "description": "링크 rel 점검 관련 결정을 반복하지 않도록 검증 절차, 디버깅, 자동화를 한 번에 비교합니다.",
+    "date": "2026-07-09",
+    "publishAt": "2026-07-09T03:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "링크 rel 점검",
+    "expandedKeywords": [
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅",
+      "자동화"
+    ],
+    "readerProblem": "외부 링크 속성이 일관되지 않은 문제",
+    "practicalExample": "출처 링크를 추가할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-311",
+    "status": "scheduled",
+    "slug": "image-alt-scan",
+    "title": "이미지 alt 점검 실수 방지, 검증 절차 먼저",
+    "description": "이미지 alt 점검은 애매할 때 검증 절차를 먼저 보고 자동화까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-09",
+    "publishAt": "2026-07-09T08:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "이미지 alt 점검",
+    "expandedKeywords": [
+      "검증 절차",
+      "디버깅",
+      "자동화",
+      "보안 확인"
+    ],
+    "readerProblem": "대표 이미지 설명이 제목과 맞지 않는 문제",
+    "practicalExample": "블로그 카드를 검토할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-312",
+    "status": "scheduled",
+    "slug": "content-date-sync",
+    "title": "콘텐츠 날짜 동기화 적용 순서, 배포 전 점검 확인",
+    "description": "콘텐츠 날짜 동기화를 글, 도구, 업무 흐름에 적용할 때 필요한 자동화와 배포 전 점검 항목을 정리했습니다.",
+    "date": "2026-07-09",
+    "publishAt": "2026-07-09T13:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "콘텐츠 날짜 동기화",
+    "expandedKeywords": [
+      "디버깅",
+      "자동화",
+      "보안 확인",
+      "배포 전 점검"
+    ],
+    "readerProblem": "글 날짜와 사이트맵 lastmod가 달라지는 문제",
+    "practicalExample": "예약 글을 빌드할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-313",
+    "status": "scheduled",
+    "slug": "preview-date-mock",
+    "title": "미리보기 날짜 mock 초보 흐름, 보안 확인 중심",
+    "description": "미리보기 날짜 mock는 자동화, 보안 확인, 배포 전 점검 항목을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-09",
+    "publishAt": "2026-07-09T18:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "미리보기 날짜 mock",
+    "expandedKeywords": [
+      "자동화",
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차"
+    ],
+    "readerProblem": "미래 예약 글을 로컬에서 확인하기 어려운 문제",
+    "practicalExample": "예약 공개 로직을 테스트할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-314",
+    "status": "scheduled",
+    "slug": "ga-script-duplicate",
+    "title": "GA 스크립트 중복 개선 포인트, 검증 절차",
+    "description": "GA 스크립트 중복을 준비할 때 놓치기 쉬운 보안 확인, 배포 전 점검, 검증 절차를 짧게 점검합니다.",
+    "date": "2026-07-09",
+    "publishAt": "2026-07-09T23:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "GA 스크립트 중복",
+    "expandedKeywords": [
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅"
+    ],
+    "readerProblem": "분석 스크립트가 두 번 삽입되는 문제",
+    "practicalExample": "layout 설정을 볼 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-315",
+    "status": "scheduled",
+    "slug": "ads-script-duplicate",
+    "title": "광고 스크립트 중복 선택법, 배포 전 점검과 검증 절차",
+    "description": "광고 스크립트 중복 상황에서 배포 전 점검과 검증 절차는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-10",
+    "publishAt": "2026-07-10T04:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "광고 스크립트 중복",
+    "expandedKeywords": [
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅",
+      "자동화"
+    ],
+    "readerProblem": "AdSense 자동광고 스크립트가 중복되는 문제",
+    "practicalExample": "광고 검수 전",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-316",
+    "status": "scheduled",
+    "slug": "indexnow-key-file",
+    "title": "IndexNow 키 파일 빠른 정리, 보안 확인까지",
+    "description": "IndexNow 키 파일은 필요한 순간부터 자동화와 보안 확인 항목을 남기는 방법까지 안내합니다.",
+    "date": "2026-07-10",
+    "publishAt": "2026-07-10T09:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "IndexNow 키 파일",
+    "expandedKeywords": [
+      "검증 절차",
+      "디버깅",
+      "자동화",
+      "보안 확인"
+    ],
+    "readerProblem": "키 파일 형식이 맞는지 판단하기 어려운 문제",
+    "practicalExample": "Bing과 네이버 제출 전",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-317",
+    "status": "scheduled",
+    "slug": "gsc-service-account",
+    "title": "GSC 서비스 계정 검토 순서, 디버깅 활용",
+    "description": "GSC 서비스 계정을 검색한 독자가 바로 따라 할 수 있도록 디버깅부터 배포 전 점검까지 압축했습니다.",
+    "date": "2026-07-10",
+    "publishAt": "2026-07-10T14:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "GSC 서비스 계정",
+    "expandedKeywords": [
+      "디버깅",
+      "자동화",
+      "보안 확인",
+      "배포 전 점검"
+    ],
+    "readerProblem": "권한은 있는데 제출 결과를 확인하지 못하는 문제",
+    "practicalExample": "Search Console API를 쓸 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-318",
+    "status": "scheduled",
+    "slug": "http-status-scan",
+    "title": "HTTP 상태 점검 운영 체크, 보안 확인 반영",
+    "description": "HTTP 상태 점검 관련 결정을 반복하지 않도록 보안 확인, 배포 전 점검, 검증 절차를 한 번에 비교합니다.",
+    "date": "2026-07-10",
+    "publishAt": "2026-07-10T19:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "HTTP 상태 점검",
+    "expandedKeywords": [
+      "자동화",
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차"
+    ],
+    "readerProblem": "정적 라우트 중 일부가 404로 빠지는 문제",
+    "practicalExample": "배포 후 URL을 확인할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-319",
+    "status": "scheduled",
+    "slug": "redirect-loop-check",
+    "title": "리다이렉트 루프 사례별 정리, 검증 절차 중심",
+    "description": "리다이렉트 루프는 애매할 때 보안 확인 항목을 먼저 보고 검증 절차까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-11",
+    "publishAt": "2026-07-11T00:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "리다이렉트 루프",
+    "expandedKeywords": [
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅"
+    ],
+    "readerProblem": "도메인 이동 규칙이 반복되는 문제",
+    "practicalExample": "www 설정을 바꿀 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-320",
+    "status": "scheduled",
+    "slug": "third-party-script-budget",
+    "title": "서드파티 스크립트 예산 발행 전 검토, 자동화",
+    "description": "서드파티 스크립트 예산을 글, 도구, 업무 흐름에 적용할 때 필요한 검증 절차와 자동화를 정리했습니다.",
+    "date": "2026-07-11",
+    "publishAt": "2026-07-11T05:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "서드파티 스크립트 예산",
+    "expandedKeywords": [
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅",
+      "자동화"
+    ],
+    "readerProblem": "외부 스크립트가 로딩 속도를 늦추는 문제",
+    "practicalExample": "광고와 분석 코드를 넣을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-321",
+    "status": "scheduled",
+    "slug": "core-web-vitals-note",
+    "title": "코어 웹 바이탈 기록, 검증 절차 먼저 보기",
+    "description": "코어 웹 바이탈 기록은 검증 절차, 디버깅, 자동화를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-11",
+    "publishAt": "2026-07-11T10:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "코어 웹 바이탈 기록",
+    "expandedKeywords": [
+      "검증 절차",
+      "디버깅",
+      "자동화",
+      "보안 확인"
+    ],
+    "readerProblem": "성능 점수를 한 번만 보고 끝내는 문제",
+    "practicalExample": "배포 후 속도를 추적할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-322",
+    "status": "scheduled",
+    "slug": "broken-anchor-check",
+    "title": "앵커 링크 점검 체크리스트: 자동화 핵심",
+    "description": "앵커 링크 점검 항목을 준비할 때 놓치기 쉬운 디버깅, 자동화, 보안 확인 항목을 짧게 점검합니다.",
+    "date": "2026-07-11",
+    "publishAt": "2026-07-11T15:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "앵커 링크 점검",
+    "expandedKeywords": [
+      "디버깅",
+      "자동화",
+      "보안 확인",
+      "배포 전 점검"
+    ],
+    "readerProblem": "본문 내부 이동 링크가 깨지는 문제",
+    "practicalExample": "긴 가이드 글을 만들 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-323",
+    "status": "scheduled",
+    "slug": "public-file-cache",
+    "title": "public 파일 캐시 실행 순서, 배포 전 점검까지",
+    "description": "public 파일 캐시 상황에서 자동화와 보안 확인은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-11",
+    "publishAt": "2026-07-11T20:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "public 파일 캐시",
+    "expandedKeywords": [
+      "자동화",
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차"
+    ],
+    "readerProblem": "ads.txt와 키 파일이 오래된 캐시에 남는 문제",
+    "practicalExample": "광고 인증 파일을 바꿀 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-324",
+    "status": "scheduled",
+    "slug": "security-header-note",
+    "title": "보안 헤더 메모 비교법, 배포 전 점검과 디버깅",
+    "description": "보안 헤더 메모는 필요한 순간부터 검증 절차와 디버깅을 남기는 방법까지 안내합니다.",
+    "date": "2026-07-12",
+    "publishAt": "2026-07-12T01:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "보안 헤더 메모",
+    "expandedKeywords": [
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅"
+    ],
+    "readerProblem": "정적 사이트 헤더 기준이 문서화되지 않은 문제",
+    "practicalExample": "Vercel 설정을 검토할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-325",
+    "status": "scheduled",
+    "slug": "ci-log-summary",
+    "title": "CI 로그 요약 FAQ: 검증 절차 답변",
+    "description": "CI 로그 요약을 검색한 독자가 바로 따라 할 수 있도록 배포 전 점검부터 자동화까지 압축했습니다.",
+    "date": "2026-07-12",
+    "publishAt": "2026-07-12T06:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "CI 로그 요약",
+    "expandedKeywords": [
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅",
+      "자동화"
+    ],
+    "readerProblem": "긴 로그에서 실패 원인을 빨리 찾기 어려운 문제",
+    "practicalExample": "워크플로우 실패를 볼 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 90,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-326",
+    "status": "scheduled",
+    "slug": "content-calendar-review",
+    "title": "콘텐츠 캘린더 점검, 회의 운영 전에 볼 점",
+    "description": "콘텐츠 캘린더 점검 관련 결정을 반복하지 않도록 반복 업무, 회의 운영, 집중 시간을 한 번에 비교합니다.",
+    "date": "2026-07-12",
+    "publishAt": "2026-07-12T11:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "콘텐츠 캘린더 점검",
+    "expandedKeywords": [
+      "우선순위",
+      "반복 업무",
+      "회의 운영",
+      "집중 시간"
+    ],
+    "readerProblem": "발행 일정이 많아 누락을 찾기 어려운 문제",
+    "practicalExample": "월간 글 계획을 볼 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-327",
+    "status": "scheduled",
+    "slug": "editorial-queue-rule",
+    "title": "편집 대기열 기준 운영법, 결과 기록 남기기",
+    "description": "편집 대기열 기준은 애매할 때 반복 업무를 먼저 보고 집중 시간까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-12",
+    "publishAt": "2026-07-12T16:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "편집 대기열 기준",
+    "expandedKeywords": [
+      "반복 업무",
+      "회의 운영",
+      "집중 시간",
+      "결과 기록"
+    ],
+    "readerProblem": "검토할 글과 발행할 글이 섞이는 문제",
+    "practicalExample": "대량 초안을 관리할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-328",
+    "status": "scheduled",
+    "slug": "daily-writing-quota",
+    "title": "일일 글쓰기 분량 판단법, 회의 운영 중심",
+    "description": "일일 글쓰기 분량을 글, 도구, 업무 흐름에 적용할 때 필요한 집중 시간과 우선순위를 정리했습니다.",
+    "date": "2026-07-12",
+    "publishAt": "2026-07-12T21:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "일일 글쓰기 분량",
+    "expandedKeywords": [
+      "회의 운영",
+      "집중 시간",
+      "결과 기록",
+      "우선순위"
+    ],
+    "readerProblem": "작성 목표가 막연해 진척이 안 보이는 문제",
+    "practicalExample": "콘텐츠 생산량을 정할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-329",
+    "status": "scheduled",
+    "slug": "review-owner-map",
+    "title": "검토 담당자 표시 상황별 표, 결과 기록",
+    "description": "검토 담당자 표시는 집중 시간, 결과 기록, 우선순위를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-13",
+    "publishAt": "2026-07-13T02:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "검토 담당자 표시",
+    "expandedKeywords": [
+      "집중 시간",
+      "결과 기록",
+      "우선순위",
+      "반복 업무"
+    ],
+    "readerProblem": "누가 마지막 확인을 했는지 모르는 문제",
+    "practicalExample": "발행 승인 흐름을 만들 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-330",
+    "status": "scheduled",
+    "slug": "batch-task-window",
+    "title": "묶음 작업 시간대 실전 흐름, 반복 업무부터",
+    "description": "묶음 작업 시간대를 준비할 때 놓치기 쉬운 결과 기록, 우선순위, 반복 업무를 짧게 점검합니다.",
+    "date": "2026-07-13",
+    "publishAt": "2026-07-13T07:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "묶음 작업 시간대",
+    "expandedKeywords": [
+      "결과 기록",
+      "우선순위",
+      "반복 업무",
+      "회의 운영"
+    ],
+    "readerProblem": "작은 작업이 하루 전체를 끊는 문제",
+    "practicalExample": "반복 업무를 모아서 처리할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-331",
+    "status": "scheduled",
+    "slug": "decision-template-note",
+    "title": "결정 템플릿 노트 실수 방지, 우선순위 먼저",
+    "description": "결정 템플릿 노트 상황에서 우선순위와 반복 업무는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-13",
+    "publishAt": "2026-07-13T12:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "결정 템플릿 노트",
+    "expandedKeywords": [
+      "우선순위",
+      "반복 업무",
+      "회의 운영",
+      "집중 시간"
+    ],
+    "readerProblem": "결정 근거가 매번 다른 형식으로 남는 문제",
+    "practicalExample": "팀 의사결정을 기록할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-332",
+    "status": "scheduled",
+    "slug": "weekly-priority-board",
+    "title": "주간 우선순위 보드 적용 순서, 결과 기록 확인",
+    "description": "주간 우선순위 보드는 필요한 순간부터 집중 시간과 결과 기록을 남기는 방법까지 안내합니다.",
+    "date": "2026-07-13",
+    "publishAt": "2026-07-13T17:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "주간 우선순위 보드",
+    "expandedKeywords": [
+      "반복 업무",
+      "회의 운영",
+      "집중 시간",
+      "결과 기록"
+    ],
+    "readerProblem": "긴 목록에서 이번 주 핵심이 안 보이는 문제",
+    "practicalExample": "월요일 업무를 정리할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-333",
+    "status": "scheduled",
+    "slug": "meeting-prep-list",
+    "title": "회의 준비 목록 초보 흐름, 집중 시간 중심",
+    "description": "회의 준비 목록을 검색한 독자가 바로 따라 할 수 있도록 회의 운영부터 우선순위까지 압축했습니다.",
+    "date": "2026-07-13",
+    "publishAt": "2026-07-13T22:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "회의 준비 목록",
+    "expandedKeywords": [
+      "회의 운영",
+      "집중 시간",
+      "결과 기록",
+      "우선순위"
+    ],
+    "readerProblem": "회의 전에 필요한 자료가 빠지는 문제",
+    "practicalExample": "짧은 회의를 준비할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-334",
+    "status": "scheduled",
+    "slug": "async-update-rule",
+    "title": "비동기 업데이트 기준 개선 포인트, 우선순위",
+    "description": "비동기 업데이트 기준 관련 결정을 반복하지 않도록 결과 기록, 우선순위, 반복 업무를 한 번에 비교합니다.",
+    "date": "2026-07-14",
+    "publishAt": "2026-07-14T03:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "비동기 업데이트 기준",
+    "expandedKeywords": [
+      "집중 시간",
+      "결과 기록",
+      "우선순위",
+      "반복 업무"
+    ],
+    "readerProblem": "진행 상황 공유가 회의로만 몰리는 문제",
+    "practicalExample": "원격 팀 상태를 공유할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-335",
+    "status": "scheduled",
+    "slug": "task-done-definition",
+    "title": "완료 기준 정의 선택법, 결과 기록과 우선순위",
+    "description": "완료 기준 정의는 애매할 때 결과 기록을 먼저 보고 반복 업무까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-14",
+    "publishAt": "2026-07-14T08:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "완료 기준 정의",
+    "expandedKeywords": [
+      "결과 기록",
+      "우선순위",
+      "반복 업무",
+      "회의 운영"
+    ],
+    "readerProblem": "끝났다는 의미가 사람마다 다른 문제",
+    "practicalExample": "작업 티켓을 닫을 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-336",
+    "status": "scheduled",
+    "slug": "handover-risk-list",
+    "title": "인수인계 위험 목록 빠른 정리, 집중 시간까지",
+    "description": "인수인계 위험 목록을 글, 도구, 업무 흐름에 적용할 때 필요한 반복 업무와 집중 시간을 정리했습니다.",
+    "date": "2026-07-14",
+    "publishAt": "2026-07-14T13:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "인수인계 위험 목록",
+    "expandedKeywords": [
+      "우선순위",
+      "반복 업무",
+      "회의 운영",
+      "집중 시간"
+    ],
+    "readerProblem": "빠진 맥락 때문에 재작업이 생기는 문제",
+    "practicalExample": "휴가 전 업무를 넘길 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-337",
+    "status": "scheduled",
+    "slug": "focus-mode-trigger",
+    "title": "집중 모드 트리거 검토 순서, 반복 업무 활용",
+    "description": "집중 모드 트리거는 반복 업무, 회의 운영, 집중 시간을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-14",
+    "publishAt": "2026-07-14T18:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "집중 모드 트리거",
+    "expandedKeywords": [
+      "반복 업무",
+      "회의 운영",
+      "집중 시간",
+      "결과 기록"
+    ],
+    "readerProblem": "집중 시작 신호가 없어 계속 미루는 문제",
+    "practicalExample": "깊은 작업을 시작할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-338",
+    "status": "scheduled",
+    "slug": "small-win-log",
+    "title": "작은 성과 기록 운영 체크, 집중 시간 반영",
+    "description": "작은 성과 기록을 준비할 때 놓치기 쉬운 회의 운영, 집중 시간, 결과 기록을 짧게 점검합니다.",
+    "date": "2026-07-14",
+    "publishAt": "2026-07-14T23:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "작은 성과 기록",
+    "expandedKeywords": [
+      "회의 운영",
+      "집중 시간",
+      "결과 기록",
+      "우선순위"
+    ],
+    "readerProblem": "진척이 없다고 느껴 동기가 떨어지는 문제",
+    "practicalExample": "하루 업무를 마감할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-339",
+    "status": "scheduled",
+    "slug": "context-note-rule",
+    "title": "맥락 메모 기준 사례별 정리, 우선순위 중심",
+    "description": "맥락 메모 기준 상황에서 집중 시간과 결과 기록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-15",
+    "publishAt": "2026-07-15T04:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "맥락 메모 기준",
+    "expandedKeywords": [
+      "집중 시간",
+      "결과 기록",
+      "우선순위",
+      "반복 업무"
+    ],
+    "readerProblem": "왜 이 일을 하는지 중간에 잊는 문제",
+    "practicalExample": "긴 작업을 이어갈 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-340",
+    "status": "scheduled",
+    "slug": "tool-stack-inventory",
+    "title": "도구 목록 인벤토리 발행 전 검토, 회의 운영",
+    "description": "도구 목록 인벤토리는 필요한 순간부터 반복 업무와 회의 운영을 남기는 방법까지 안내합니다.",
+    "date": "2026-07-15",
+    "publishAt": "2026-07-15T09:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "도구 목록 인벤토리",
+    "expandedKeywords": [
+      "결과 기록",
+      "우선순위",
+      "반복 업무",
+      "회의 운영"
+    ],
+    "readerProblem": "비슷한 도구가 많아 선택이 늦어지는 문제",
+    "practicalExample": "업무 도구를 정리할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-341",
+    "status": "scheduled",
+    "slug": "automation-candidate-list",
+    "title": "자동화 후보 목록, 우선순위 먼저 보기",
+    "description": "자동화 후보 목록을 검색한 독자가 바로 따라 할 수 있도록 우선순위부터 집중 시간까지 압축했습니다.",
+    "date": "2026-07-15",
+    "publishAt": "2026-07-15T14:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "자동화 후보 목록",
+    "expandedKeywords": [
+      "우선순위",
+      "반복 업무",
+      "회의 운영",
+      "집중 시간"
+    ],
+    "readerProblem": "반복 업무를 자동화할지 판단하기 어려운 문제",
+    "practicalExample": "월간 업무를 점검할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-342",
+    "status": "scheduled",
+    "slug": "two-minute-rule-note",
+    "title": "2분 규칙 메모 체크리스트: 회의 운영 핵심",
+    "description": "2분 규칙 메모 관련 결정을 반복하지 않도록 회의 운영, 집중 시간, 결과 기록을 한 번에 비교합니다.",
+    "date": "2026-07-15",
+    "publishAt": "2026-07-15T19:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "2분 규칙 메모",
+    "expandedKeywords": [
+      "반복 업무",
+      "회의 운영",
+      "집중 시간",
+      "결과 기록"
+    ],
+    "readerProblem": "작은 일을 미루다 목록이 길어지는 문제",
+    "practicalExample": "받은 일을 바로 분류할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-343",
+    "status": "scheduled",
+    "slug": "calendar-block-review",
+    "title": "캘린더 블록 점검 실행 순서, 결과 기록까지",
+    "description": "캘린더 블록 점검은 애매할 때 회의 운영을 먼저 보고 결과 기록까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-16",
+    "publishAt": "2026-07-16T00:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "캘린더 블록 점검",
+    "expandedKeywords": [
+      "회의 운영",
+      "집중 시간",
+      "결과 기록",
+      "우선순위"
+    ],
+    "readerProblem": "일정은 많은데 실제 작업 시간이 없는 문제",
+    "practicalExample": "주간 캘린더를 볼 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-344",
+    "status": "scheduled",
+    "slug": "status-report-template",
+    "title": "상태 보고 템플릿 비교법, 집중 시간과 반복 업무",
+    "description": "상태 보고 템플릿을 글, 도구, 업무 흐름에 적용할 때 필요한 결과 기록과 반복 업무를 정리했습니다.",
+    "date": "2026-07-16",
+    "publishAt": "2026-07-16T05:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "상태 보고 템플릿",
+    "expandedKeywords": [
+      "집중 시간",
+      "결과 기록",
+      "우선순위",
+      "반복 업무"
+    ],
+    "readerProblem": "보고가 길어 핵심 위험이 묻히는 문제",
+    "practicalExample": "주간 보고를 작성할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-345",
+    "status": "scheduled",
+    "slug": "approval-delay-log",
+    "title": "승인 지연 기록 FAQ: 우선순위 답변",
+    "description": "승인 지연 기록은 결과 기록, 우선순위, 반복 업무를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-16",
+    "publishAt": "2026-07-16T10:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "승인 지연 기록",
+    "expandedKeywords": [
+      "결과 기록",
+      "우선순위",
+      "반복 업무",
+      "회의 운영"
+    ],
+    "readerProblem": "어디서 멈췄는지 알기 어려운 문제",
+    "practicalExample": "발행 대기 글을 추적할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-346",
+    "status": "scheduled",
+    "slug": "routine-reset-day",
+    "title": "루틴 재정비 날, 회의 운영 전에 볼 점",
+    "description": "루틴 재정비 날을 준비할 때 놓치기 쉬운 우선순위, 반복 업무, 회의 운영을 짧게 점검합니다.",
+    "date": "2026-07-16",
+    "publishAt": "2026-07-16T15:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "루틴 재정비 날",
+    "expandedKeywords": [
+      "우선순위",
+      "반복 업무",
+      "회의 운영",
+      "집중 시간"
+    ],
+    "readerProblem": "무너진 습관을 다시 시작하기 어려운 문제",
+    "practicalExample": "월초 계획을 세울 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-347",
+    "status": "scheduled",
+    "slug": "personal-dashboard-check",
+    "title": "개인 대시보드 점검 운영법, 결과 기록 남기기",
+    "description": "개인 대시보드 점검 상황에서 반복 업무와 회의 운영은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-16",
+    "publishAt": "2026-07-16T20:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "개인 대시보드 점검",
+    "expandedKeywords": [
+      "반복 업무",
+      "회의 운영",
+      "집중 시간",
+      "결과 기록"
+    ],
+    "readerProblem": "지표가 많아 행동으로 이어지지 않는 문제",
+    "practicalExample": "업무 시작 화면을 볼 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-348",
+    "status": "scheduled",
+    "slug": "workload-signal-note",
+    "title": "업무량 신호 메모 판단법, 회의 운영 중심",
+    "description": "업무량 신호 메모는 필요한 순간부터 결과 기록과 우선순위를 남기는 방법까지 안내합니다.",
+    "date": "2026-07-17",
+    "publishAt": "2026-07-17T01:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "업무량 신호 메모",
+    "expandedKeywords": [
+      "회의 운영",
+      "집중 시간",
+      "결과 기록",
+      "우선순위"
+    ],
+    "readerProblem": "바쁜 상태를 늦게 알아차리는 문제",
+    "practicalExample": "일정 과부하를 확인할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-349",
+    "status": "scheduled",
+    "slug": "meeting-free-block",
+    "title": "회의 없는 시간 상황별 표, 결과 기록",
+    "description": "회의 없는 시간을 검색한 독자가 바로 따라 할 수 있도록 집중 시간부터 반복 업무까지 압축했습니다.",
+    "date": "2026-07-17",
+    "publishAt": "2026-07-17T06:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "회의 없는 시간",
+    "expandedKeywords": [
+      "집중 시간",
+      "결과 기록",
+      "우선순위",
+      "반복 업무"
+    ],
+    "readerProblem": "집중 시간이 회의 사이에 잘리는 문제",
+    "practicalExample": "캘린더를 조정할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-350",
+    "status": "scheduled",
+    "slug": "project-retro-score",
+    "title": "프로젝트 회고 점수 실전 흐름, 반복 업무부터",
+    "description": "프로젝트 회고 점수 관련 결정을 반복하지 않도록 우선순위, 반복 업무, 회의 운영을 한 번에 비교합니다.",
+    "date": "2026-07-17",
+    "publishAt": "2026-07-17T11:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "프로젝트 회고 점수",
+    "expandedKeywords": [
+      "결과 기록",
+      "우선순위",
+      "반복 업무",
+      "회의 운영"
+    ],
+    "readerProblem": "회고가 감상으로 끝나는 문제",
+    "practicalExample": "프로젝트 종료 후 개선점을 찾을 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-351",
+    "status": "scheduled",
+    "slug": "idea-backlog-cleanup",
+    "title": "아이디어 백로그 정리 실수 방지, 우선순위 먼저",
+    "description": "아이디어 백로그 정리는 애매할 때 우선순위를 먼저 보고 회의 운영까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-17",
+    "publishAt": "2026-07-17T16:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "아이디어 백로그 정리",
+    "expandedKeywords": [
+      "우선순위",
+      "반복 업무",
+      "회의 운영",
+      "집중 시간"
+    ],
+    "readerProblem": "좋은 아이디어와 오래된 아이디어가 섞이는 문제",
+    "practicalExample": "다음 콘텐츠 후보를 고를 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-352",
+    "status": "scheduled",
+    "slug": "writing-review-loop",
+    "title": "글 검토 루프 적용 순서, 결과 기록 확인",
+    "description": "글 검토 루프를 글, 도구, 업무 흐름에 적용할 때 필요한 회의 운영과 결과 기록을 정리했습니다.",
+    "date": "2026-07-17",
+    "publishAt": "2026-07-17T21:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "글 검토 루프",
+    "expandedKeywords": [
+      "반복 업무",
+      "회의 운영",
+      "집중 시간",
+      "결과 기록"
+    ],
+    "readerProblem": "수정이 끝없이 이어지는 문제",
+    "practicalExample": "초안을 발행 가능한 상태로 만들 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-353",
+    "status": "scheduled",
+    "slug": "priority-conflict-note",
+    "title": "우선순위 충돌 메모 초보 흐름, 집중 시간 중심",
+    "description": "우선순위 충돌 메모는 회의 운영, 집중 시간, 결과 기록을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-18",
+    "publishAt": "2026-07-18T02:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "우선순위 충돌 메모",
+    "expandedKeywords": [
+      "회의 운영",
+      "집중 시간",
+      "결과 기록",
+      "우선순위"
+    ],
+    "readerProblem": "중요한 일이 서로 경쟁하는 문제",
+    "practicalExample": "동시에 여러 요청을 받을 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-354",
+    "status": "scheduled",
+    "slug": "manual-to-checklist",
+    "title": "매뉴얼 체크리스트화 개선 포인트, 우선순위",
+    "description": "매뉴얼 체크리스트화를 준비할 때 놓치기 쉬운 집중 시간, 결과 기록, 우선순위를 짧게 점검합니다.",
+    "date": "2026-07-18",
+    "publishAt": "2026-07-18T07:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "매뉴얼 체크리스트화",
+    "expandedKeywords": [
+      "집중 시간",
+      "결과 기록",
+      "우선순위",
+      "반복 업무"
+    ],
+    "readerProblem": "긴 설명이 실행 단계로 이어지지 않는 문제",
+    "practicalExample": "반복 작업 문서를 줄일 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-355",
+    "status": "scheduled",
+    "slug": "weekly-automation-review",
+    "title": "주간 자동화 점검 선택법, 결과 기록과 우선순위",
+    "description": "주간 자동화 점검 상황에서 결과 기록과 우선순위는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-18",
+    "publishAt": "2026-07-18T12:00:00+09:00",
+    "category": "생산성·업무 방식",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "주간 자동화 점검",
+    "expandedKeywords": [
+      "결과 기록",
+      "우선순위",
+      "반복 업무",
+      "회의 운영"
+    ],
+    "readerProblem": "자동화가 실패해도 늦게 알아차리는 문제",
+    "practicalExample": "정기 워크플로우를 볼 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "D-Day 카운터",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      }
+    ],
+    "tags": [
+      "생산성",
+      "업무",
+      "루틴"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-356",
+    "status": "scheduled",
+    "slug": "micro-break-schedule",
+    "title": "짧은 휴식 시간표 빠른 정리, 생활 적용까지",
+    "description": "짧은 휴식 시간표는 필요한 순간부터 무리 없는 기준과 생활 적용을 남기는 방법까지 안내합니다.",
+    "date": "2026-07-18",
+    "publishAt": "2026-07-18T17:00:00+09:00",
+    "category": "웰니스·습관",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "짧은 휴식 시간표",
+    "expandedKeywords": [
+      "루틴 설계",
+      "기록 습관",
+      "무리 없는 기준",
+      "생활 적용"
+    ],
+    "readerProblem": "쉬는 시간을 정하지 않아 계속 앉아 있는 문제",
+    "practicalExample": "오전 업무를 시작할 때",
+    "primarySourceName": "질병관리청",
+    "primarySourceUrl": "https://www.kdca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "BMI 계산기",
+        "path": "/tools/bmi-calculator"
+      },
+      {
+        "label": "나이 계산기",
+        "path": "/tools/age-calculator"
+      },
+      {
+        "label": "예/아니오 결정 도구",
+        "path": "/tools/yes-no-oracle"
+      }
+    ],
+    "tags": [
+      "습관",
+      "웰니스",
+      "일상"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-357",
+    "status": "scheduled",
+    "slug": "sleep-debt-note",
+    "title": "수면 부채 메모 검토 순서, 기록 습관 활용",
+    "description": "수면 부채 메모를 검색한 독자가 바로 따라 할 수 있도록 기록 습관부터 자가 점검까지 압축했습니다.",
+    "date": "2026-07-18",
+    "publishAt": "2026-07-18T22:00:00+09:00",
+    "category": "웰니스·습관",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "수면 부채 메모",
+    "expandedKeywords": [
+      "기록 습관",
+      "무리 없는 기준",
+      "생활 적용",
+      "자가 점검"
+    ],
+    "readerProblem": "며칠간 부족한 잠을 체감하지 못하는 문제",
+    "practicalExample": "주말 회복 계획을 세울 때",
+    "primarySourceName": "질병관리청",
+    "primarySourceUrl": "https://www.kdca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "BMI 계산기",
+        "path": "/tools/bmi-calculator"
+      },
+      {
+        "label": "나이 계산기",
+        "path": "/tools/age-calculator"
+      },
+      {
+        "label": "예/아니오 결정 도구",
+        "path": "/tools/yes-no-oracle"
+      }
+    ],
+    "tags": [
+      "습관",
+      "웰니스",
+      "일상"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-358",
+    "status": "scheduled",
+    "slug": "evening-screen-rule",
+    "title": "저녁 화면 규칙 운영 체크, 생활 적용 반영",
+    "description": "저녁 화면 규칙 관련 결정을 반복하지 않도록 생활 적용, 자가 점검, 루틴 설계를 한 번에 비교합니다.",
+    "date": "2026-07-19",
+    "publishAt": "2026-07-19T03:00:00+09:00",
+    "category": "웰니스·습관",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "저녁 화면 규칙",
+    "expandedKeywords": [
+      "무리 없는 기준",
+      "생활 적용",
+      "자가 점검",
+      "루틴 설계"
+    ],
+    "readerProblem": "잠들기 전 화면 사용이 길어지는 문제",
+    "practicalExample": "밤 루틴을 정리할 때",
+    "primarySourceName": "질병관리청",
+    "primarySourceUrl": "https://www.kdca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "BMI 계산기",
+        "path": "/tools/bmi-calculator"
+      },
+      {
+        "label": "나이 계산기",
+        "path": "/tools/age-calculator"
+      },
+      {
+        "label": "예/아니오 결정 도구",
+        "path": "/tools/yes-no-oracle"
+      }
+    ],
+    "tags": [
+      "습관",
+      "웰니스",
+      "일상"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-359",
+    "status": "scheduled",
+    "slug": "hydration-checklist",
+    "title": "수분 섭취 체크리스트 사례별 정리, 루틴 설계 중심",
+    "description": "수분 섭취 체크리스트는 애매할 때 생활 적용을 먼저 보고 루틴 설계까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-19",
+    "publishAt": "2026-07-19T08:00:00+09:00",
+    "category": "웰니스·습관",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "수분 섭취 체크리스트",
+    "expandedKeywords": [
+      "생활 적용",
+      "자가 점검",
+      "루틴 설계",
+      "기록 습관"
+    ],
+    "readerProblem": "바쁜 날 물 마시는 간격을 놓치는 문제",
+    "practicalExample": "업무 중 알림을 만들 때",
+    "primarySourceName": "질병관리청",
+    "primarySourceUrl": "https://www.kdca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "BMI 계산기",
+        "path": "/tools/bmi-calculator"
+      },
+      {
+        "label": "나이 계산기",
+        "path": "/tools/age-calculator"
+      },
+      {
+        "label": "예/아니오 결정 도구",
+        "path": "/tools/yes-no-oracle"
+      }
+    ],
+    "tags": [
+      "습관",
+      "웰니스",
+      "일상"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-360",
+    "status": "scheduled",
+    "slug": "stretch-trigger-note",
+    "title": "스트레칭 트리거 발행 전 검토, 무리 없는 기준",
+    "description": "스트레칭 트리거를 글, 도구, 업무 흐름에 적용할 때 필요한 루틴 설계와 무리 없는 기준을 정리했습니다.",
+    "date": "2026-07-19",
+    "publishAt": "2026-07-19T13:00:00+09:00",
+    "category": "웰니스·습관",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "스트레칭 트리거",
+    "expandedKeywords": [
+      "자가 점검",
+      "루틴 설계",
+      "기록 습관",
+      "무리 없는 기준"
+    ],
+    "readerProblem": "몸이 굳은 뒤에야 쉬는 문제",
+    "practicalExample": "책상 앞 루틴을 설계할 때",
+    "primarySourceName": "질병관리청",
+    "primarySourceUrl": "https://www.kdca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "BMI 계산기",
+        "path": "/tools/bmi-calculator"
+      },
+      {
+        "label": "나이 계산기",
+        "path": "/tools/age-calculator"
+      },
+      {
+        "label": "예/아니오 결정 도구",
+        "path": "/tools/yes-no-oracle"
+      }
+    ],
+    "tags": [
+      "습관",
+      "웰니스",
+      "일상"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  }
+]

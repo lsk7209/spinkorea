@@ -211,6 +211,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.spinkorea.kr/blog/duplicate-winner-prevention</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.spinkorea.kr/blog/css-shadow-design</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>yearly</changefreq>

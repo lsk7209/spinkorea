@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { BlogPost } from "./posts";
-import contentPlan from "./content-plan.generated.json";
+import contentManifest from "./generated-content-manifest.generated.json";
 
 export interface GeneratedArticlePlan {
   id: string;
@@ -24,7 +24,10 @@ export interface GeneratedArticlePlan {
   qualityScore: number;
 }
 
-const ARTICLES = contentPlan as GeneratedArticlePlan[];
+const ARTICLE_CHUNK_BY_SLUG = contentManifest as Record<string, string>;
+const ARTICLE_CHUNKS = import.meta.glob("./generated-content-chunks/*.json", {
+  import: "default",
+}) as Record<string, () => Promise<GeneratedArticlePlan[]>>;
 
 function hasFinalConsonant(value: string): boolean {
   const last = [...value.trim()].at(-1);
@@ -430,16 +433,32 @@ function GeneratedArticle({ article }: { article: GeneratedArticlePlan }) {
   );
 }
 
-export const GENERATED_BLOG_POSTS: BlogPost[] = ARTICLES.map((article) => ({
-  slug: article.slug,
-  title: article.title,
-  description: article.description,
-  date: article.date,
-  publishAt: article.publishAt,
-  tags: article.tags,
-  thumbnail: article.thumbnail,
-  qualityScore: article.qualityScore,
-  content: <GeneratedArticle article={article} />,
-}));
+function buildGeneratedBlogPost(article: GeneratedArticlePlan): BlogPost {
+  return {
+    slug: article.slug,
+    title: article.title,
+    description: article.description,
+    date: article.date,
+    publishAt: article.publishAt,
+    tags: article.tags,
+    thumbnail: article.thumbnail,
+    qualityScore: article.qualityScore,
+    content: <GeneratedArticle article={article} />,
+  };
+}
 
-export { ARTICLES as GENERATED_ARTICLE_PLANS };
+export async function loadGeneratedBlogPost(slug: string): Promise<BlogPost | undefined> {
+  const chunkFile = ARTICLE_CHUNK_BY_SLUG[slug];
+  if (!chunkFile) {
+    return undefined;
+  }
+
+  const loadChunk = ARTICLE_CHUNKS[`./generated-content-chunks/${chunkFile}`];
+  if (!loadChunk) {
+    return undefined;
+  }
+
+  const articles = await loadChunk();
+  const article = articles.find((item) => item.slug === slug);
+  return article ? buildGeneratedBlogPost(article) : undefined;
+}

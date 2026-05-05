@@ -37,8 +37,8 @@ function getGeneratedTopic(title: string): string {
 
 async function loadPostContent(meta: BlogPostMeta): Promise<BlogPost | undefined> {
   if (meta.source === "generated") {
-    const { GENERATED_BLOG_POSTS } = await import("@/data/generatedContent");
-    return GENERATED_BLOG_POSTS.find((post) => post.slug === meta.slug);
+    const { loadGeneratedBlogPost } = await import("@/data/generatedContent");
+    return loadGeneratedBlogPost(meta.slug);
   }
 
   const { CURATED_BLOG_POSTS } = await import("@/data/posts");

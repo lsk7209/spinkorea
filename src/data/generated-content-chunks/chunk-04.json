@@ -1,0 +1,2762 @@
+[
+  {
+    "id": "generated-181",
+    "status": "scheduled",
+    "slug": "adsense-review-home",
+    "title": "애드센스 검수 홈페이지, 검색 의도 먼저 보기",
+    "description": "애드센스 검수 홈페이지를 검색한 독자가 바로 따라 할 수 있도록 검색 의도부터 메타 설명까지 압축했습니다.",
+    "date": "2026-06-12",
+    "publishAt": "2026-06-12T06:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "애드센스 검수 홈페이지",
+    "expandedKeywords": [
+      "검색 의도",
+      "내부 링크",
+      "사이트맵",
+      "메타 설명"
+    ],
+    "readerProblem": "첫 화면이 사이트 주제를 충분히 설명하지 못하는 문제",
+    "practicalExample": "광고 검수 전 메인페이지를 볼 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-182",
+    "status": "scheduled",
+    "slug": "content-quality-score",
+    "title": "콘텐츠 품질 점수 체크리스트: 사이트맵 핵심",
+    "description": "콘텐츠 품질 점수 관련 결정을 반복하지 않도록 사이트맵, 메타 설명, 품질 점검 항목을 한 번에 비교합니다.",
+    "date": "2026-06-12",
+    "publishAt": "2026-06-12T11:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "콘텐츠 품질 점수",
+    "expandedKeywords": [
+      "내부 링크",
+      "사이트맵",
+      "메타 설명",
+      "품질 점검"
+    ],
+    "readerProblem": "글 수는 많은데 유용성이 낮아 보이는 문제",
+    "practicalExample": "새 글 발행 전",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-183",
+    "status": "scheduled",
+    "slug": "search-intent-map",
+    "title": "검색 의도 맵 실행 순서, 품질 점검까지",
+    "description": "검색 의도 맵은 애매할 때 사이트맵을 먼저 보고 품질 점검까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-12",
+    "publishAt": "2026-06-12T16:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "검색 의도 맵",
+    "expandedKeywords": [
+      "사이트맵",
+      "메타 설명",
+      "품질 점검",
+      "검색 의도"
+    ],
+    "readerProblem": "제목과 본문이 다른 질문을 겨냥하는 문제",
+    "practicalExample": "콘텐츠 플랜을 만들 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-184",
+    "status": "scheduled",
+    "slug": "internal-link-rules",
+    "title": "내부 링크 규칙 비교법, 메타 설명과 품질 점검",
+    "description": "내부 링크 규칙을 글, 도구, 업무 흐름에 적용할 때 필요한 품질 점검과 내부 링크를 정리했습니다.",
+    "date": "2026-06-12",
+    "publishAt": "2026-06-12T21:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "내부 링크 규칙",
+    "expandedKeywords": [
+      "메타 설명",
+      "품질 점검",
+      "검색 의도",
+      "내부 링크"
+    ],
+    "readerProblem": "새 글이 고립 페이지로 남는 문제",
+    "practicalExample": "블로그 글을 추가할 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-185",
+    "status": "scheduled",
+    "slug": "sitemap-freshness-check",
+    "title": "사이트맵 최신 날짜 FAQ: 검색 의도 답변",
+    "description": "사이트맵 최신 날짜는 품질 점검, 검색 의도, 내부 링크를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-13",
+    "publishAt": "2026-06-13T02:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "사이트맵 최신 날짜",
+    "expandedKeywords": [
+      "품질 점검",
+      "검색 의도",
+      "내부 링크",
+      "사이트맵"
+    ],
+    "readerProblem": "업데이트 글이 검색엔진에 늦게 반영되는 문제",
+    "practicalExample": "빌드 후 sitemap.xml을 볼 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 88,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-186",
+    "status": "scheduled",
+    "slug": "rss-submit-check",
+    "title": "RSS 제출 확인, 사이트맵 전에 볼 점",
+    "description": "RSS 제출 확인 항목을 준비할 때 놓치기 쉬운 검색 의도, 내부 링크, 사이트맵을 짧게 점검합니다.",
+    "date": "2026-06-13",
+    "publishAt": "2026-06-13T07:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "RSS 제출 확인",
+    "expandedKeywords": [
+      "검색 의도",
+      "내부 링크",
+      "사이트맵",
+      "메타 설명"
+    ],
+    "readerProblem": "신규 글을 포털이 빨리 발견하지 못하는 문제",
+    "practicalExample": "네이버와 다음 등록 후",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-187",
+    "status": "scheduled",
+    "slug": "gsc-query-review",
+    "title": "GSC 검색어 점검 운영법, 내부 링크 남기기",
+    "description": "GSC 검색어 점검 상황에서 내부 링크와 사이트맵은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-13",
+    "publishAt": "2026-06-13T12:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "GSC 검색어 점검",
+    "expandedKeywords": [
+      "내부 링크",
+      "사이트맵",
+      "메타 설명",
+      "품질 점검"
+    ],
+    "readerProblem": "노출은 있는데 클릭이 낮은 문제",
+    "practicalExample": "월간 검색 성과를 볼 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-188",
+    "status": "scheduled",
+    "slug": "ga4-event-map",
+    "title": "GA4 이벤트 맵 판단법, 사이트맵 중심",
+    "description": "GA4 이벤트 맵은 필요한 순간부터 품질 점검과 검색 의도를 남기는 방법까지 안내합니다.",
+    "date": "2026-06-13",
+    "publishAt": "2026-06-13T17:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "GA4 이벤트 맵",
+    "expandedKeywords": [
+      "사이트맵",
+      "메타 설명",
+      "품질 점검",
+      "검색 의도"
+    ],
+    "readerProblem": "사용자가 어떤 도구를 쓰는지 알기 어려운 문제",
+    "practicalExample": "핵심 이벤트를 설계할 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-189",
+    "status": "scheduled",
+    "slug": "meta-title-refresh",
+    "title": "메타 제목 개선 상황별 표, 품질 점검",
+    "description": "메타 제목 개선을 검색한 독자가 바로 따라 할 수 있도록 메타 설명부터 내부 링크까지 압축했습니다.",
+    "date": "2026-06-13",
+    "publishAt": "2026-06-13T22:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "메타 제목 개선",
+    "expandedKeywords": [
+      "메타 설명",
+      "품질 점검",
+      "검색 의도",
+      "내부 링크"
+    ],
+    "readerProblem": "검색 결과 제목이 밋밋한 문제",
+    "practicalExample": "CTR이 낮은 글을 고칠 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-190",
+    "status": "scheduled",
+    "slug": "faq-schema-plan",
+    "title": "FAQ 스키마 설계 실전 흐름, 내부 링크부터",
+    "description": "FAQ 스키마 설계 관련 결정을 반복하지 않도록 검색 의도, 내부 링크, 사이트맵을 한 번에 비교합니다.",
+    "date": "2026-06-14",
+    "publishAt": "2026-06-14T03:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "FAQ 스키마 설계",
+    "expandedKeywords": [
+      "품질 점검",
+      "검색 의도",
+      "내부 링크",
+      "사이트맵"
+    ],
+    "readerProblem": "질문형 검색에 답이 잘 드러나지 않는 문제",
+    "practicalExample": "가이드 글을 작성할 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-191",
+    "status": "scheduled",
+    "slug": "author-signal-page",
+    "title": "저자 신뢰 신호 실수 방지, 검색 의도 먼저",
+    "description": "저자 신뢰 신호는 애매할 때 검색 의도를 먼저 보고 사이트맵까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-14",
+    "publishAt": "2026-06-14T08:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "저자 신뢰 신호",
+    "expandedKeywords": [
+      "검색 의도",
+      "내부 링크",
+      "사이트맵",
+      "메타 설명"
+    ],
+    "readerProblem": "사이트 운영 주체가 모호해 보이는 문제",
+    "practicalExample": "About 페이지를 보강할 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-192",
+    "status": "scheduled",
+    "slug": "thin-content-audit",
+    "title": "얇은 콘텐츠 점검 적용 순서, 내부 링크 확인",
+    "description": "얇은 콘텐츠 점검 항목을 글, 도구, 업무 흐름에 적용할 때 필요한 사이트맵과 품질 점검 항목을 정리했습니다.",
+    "date": "2026-06-14",
+    "publishAt": "2026-06-14T13:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "얇은 콘텐츠 점검",
+    "expandedKeywords": [
+      "내부 링크",
+      "사이트맵",
+      "메타 설명",
+      "품질 점검"
+    ],
+    "readerProblem": "짧은 글이 많아 품질이 낮아 보이는 문제",
+    "practicalExample": "애드센스 재검토 전",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-193",
+    "status": "scheduled",
+    "slug": "old-post-refresh",
+    "title": "오래된 글 업데이트 초보 흐름, 메타 설명 중심",
+    "description": "오래된 글 업데이트는 사이트맵, 메타 설명, 품질 점검 항목을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-14",
+    "publishAt": "2026-06-14T18:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "오래된 글 업데이트",
+    "expandedKeywords": [
+      "사이트맵",
+      "메타 설명",
+      "품질 점검",
+      "검색 의도"
+    ],
+    "readerProblem": "날짜가 오래되어 정보 신뢰가 떨어지는 문제",
+    "practicalExample": "6개월 지난 글을 검토할 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-194",
+    "status": "scheduled",
+    "slug": "crawl-budget-light",
+    "title": "크롤링 우선순위 개선 포인트, 검색 의도",
+    "description": "크롤링 우선순위를 준비할 때 놓치기 쉬운 메타 설명, 품질 점검, 검색 의도를 짧게 점검합니다.",
+    "date": "2026-06-14",
+    "publishAt": "2026-06-14T23:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "크롤링 우선순위",
+    "expandedKeywords": [
+      "메타 설명",
+      "품질 점검",
+      "검색 의도",
+      "내부 링크"
+    ],
+    "readerProblem": "중요하지 않은 페이지가 먼저 수집되는 문제",
+    "practicalExample": "사이트맵 우선순위를 정할 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-195",
+    "status": "scheduled",
+    "slug": "ads-layout-safe",
+    "title": "자동광고 UX 기준 선택법, 품질 점검과 검색 의도",
+    "description": "자동광고 UX 기준 상황에서 품질 점검과 검색 의도는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-15",
+    "publishAt": "2026-06-15T04:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "자동광고 UX 기준",
+    "expandedKeywords": [
+      "품질 점검",
+      "검색 의도",
+      "내부 링크",
+      "사이트맵"
+    ],
+    "readerProblem": "광고가 본문 읽기를 방해하는 문제",
+    "practicalExample": "애드센스 자동광고를 켤 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-196",
+    "status": "scheduled",
+    "slug": "naver-title-length",
+    "title": "네이버 제목 길이 빠른 정리, 메타 설명까지",
+    "description": "네이버 제목 길이는 필요한 순간부터 사이트맵과 메타 설명을 남기는 방법까지 안내합니다.",
+    "date": "2026-06-15",
+    "publishAt": "2026-06-15T09:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "네이버 제목 길이",
+    "expandedKeywords": [
+      "검색 의도",
+      "내부 링크",
+      "사이트맵",
+      "메타 설명"
+    ],
+    "readerProblem": "검색 결과에서 제목이 잘리는 문제",
+    "practicalExample": "40자 안팎 제목을 만들 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-197",
+    "status": "scheduled",
+    "slug": "og-image-consistency",
+    "title": "OG 이미지 일관성 검토 순서, 내부 링크 활용",
+    "description": "OG 이미지 일관성을 검색한 독자가 바로 따라 할 수 있도록 내부 링크부터 품질 점검까지 압축했습니다.",
+    "date": "2026-06-15",
+    "publishAt": "2026-06-15T14:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "OG 이미지 일관성",
+    "expandedKeywords": [
+      "내부 링크",
+      "사이트맵",
+      "메타 설명",
+      "품질 점검"
+    ],
+    "readerProblem": "공유 이미지가 페이지 주제와 안 맞는 문제",
+    "practicalExample": "커뮤니티 공유를 준비할 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-198",
+    "status": "scheduled",
+    "slug": "ai-index-file",
+    "title": "AI 검색 인덱스 운영 체크, 메타 설명 반영",
+    "description": "AI 검색 인덱스 관련 결정을 반복하지 않도록 메타 설명, 품질 점검, 검색 의도를 한 번에 비교합니다.",
+    "date": "2026-06-15",
+    "publishAt": "2026-06-15T19:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "AI 검색 인덱스",
+    "expandedKeywords": [
+      "사이트맵",
+      "메타 설명",
+      "품질 점검",
+      "검색 의도"
+    ],
+    "readerProblem": "LLM이 사이트 구조를 파악하기 어려운 문제",
+    "practicalExample": "llms.txt와 ai-index를 만들 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-199",
+    "status": "scheduled",
+    "slug": "indexnow-retry-rule",
+    "title": "IndexNow 재시도 기준 사례별 정리, 검색 의도 중심",
+    "description": "IndexNow 재시도 기준은 애매할 때 메타 설명을 먼저 보고 검색 의도까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-16",
+    "publishAt": "2026-06-16T00:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "IndexNow 재시도 기준",
+    "expandedKeywords": [
+      "메타 설명",
+      "품질 점검",
+      "검색 의도",
+      "내부 링크"
+    ],
+    "readerProblem": "일부 엔드포인트가 403을 반환하는 문제",
+    "practicalExample": "URL 제출 자동화를 점검할 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-200",
+    "status": "scheduled",
+    "slug": "homepage-topic-cluster",
+    "title": "홈페이지 주제 클러스터 발행 전 검토, 사이트맵",
+    "description": "홈페이지 주제 클러스터를 글, 도구, 업무 흐름에 적용할 때 필요한 검색 의도와 사이트맵을 정리했습니다.",
+    "date": "2026-06-16",
+    "publishAt": "2026-06-16T05:00:00+09:00",
+    "category": "SEO·콘텐츠 운영",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "홈페이지 주제 클러스터",
+    "expandedKeywords": [
+      "품질 점검",
+      "검색 의도",
+      "내부 링크",
+      "사이트맵"
+    ],
+    "readerProblem": "메인페이지가 도구와 글을 연결하지 못하는 문제",
+    "practicalExample": "AdSense용 홈 구성을 기획할 때",
+    "primarySourceName": "Google Search Central",
+    "primarySourceUrl": "https://developers.google.com/search/docs",
+    "internalLinks": [
+      {
+        "label": "전체 도구 목록",
+        "path": "/tools"
+      },
+      {
+        "label": "SpinFlow 소개",
+        "path": "/about"
+      },
+      {
+        "label": "블로그 글 목록",
+        "path": "/blog"
+      }
+    ],
+    "tags": [
+      "SEO",
+      "콘텐츠",
+      "애드센스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-201",
+    "status": "scheduled",
+    "slug": "lottery-event-proof",
+    "title": "이벤트 추첨 증빙, 공정성 먼저 보기",
+    "description": "이벤트 추첨 증빙은 공정성, 중복 방지, 참가자 목록을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-16",
+    "publishAt": "2026-06-16T10:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "이벤트 추첨 증빙",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "추첨 과정 설명이 부족해 결과 신뢰가 낮아지는 문제",
+    "practicalExample": "소규모 경품 이벤트를 마감할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-202",
+    "status": "scheduled",
+    "slug": "anonymous-feedback-draw",
+    "title": "익명 피드백 추첨 체크리스트: 참가자 목록 핵심",
+    "description": "익명 피드백 추첨을 준비할 때 놓치기 쉬운 중복 방지, 참가자 목록, 확률 설정을 짧게 점검합니다.",
+    "date": "2026-06-16",
+    "publishAt": "2026-06-16T15:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "익명 피드백 추첨",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "익명 응답과 당첨 확인을 함께 처리하기 어려운 문제",
+    "practicalExample": "설문 참여 보상을 고를 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-203",
+    "status": "scheduled",
+    "slug": "workshop-group-random",
+    "title": "워크숍 조 편성 실행 순서, 결과 기록까지",
+    "description": "워크숍 조 편성 상황에서 참가자 목록과 확률 설정은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-16",
+    "publishAt": "2026-06-16T20:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "워크숍 조 편성",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "친한 사람끼리만 묶여 활동 균형이 깨지는 문제",
+    "practicalExample": "사내 워크숍 조를 나눌 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-204",
+    "status": "scheduled",
+    "slug": "book-club-topic-wheel",
+    "title": "독서모임 주제 룰렛 비교법, 확률 설정과 중복 방지",
+    "description": "독서모임 주제 룰렛은 필요한 순간부터 공정성과 중복 방지를 남기는 방법까지 안내합니다.",
+    "date": "2026-06-17",
+    "publishAt": "2026-06-17T01:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "독서모임 주제 룰렛",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "토론 주제가 매번 비슷해지는 문제",
+    "practicalExample": "다음 모임 질문을 고를 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-205",
+    "status": "scheduled",
+    "slug": "family-chore-wheel",
+    "title": "가족 집안일 룰렛 FAQ: 공정성 답변",
+    "description": "가족 집안일 룰렛을 검색한 독자가 바로 따라 할 수 있도록 결과 기록부터 참가자 목록까지 압축했습니다.",
+    "date": "2026-06-17",
+    "publishAt": "2026-06-17T06:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "가족 집안일 룰렛",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "집안일 분담이 한쪽으로 기우는 문제",
+    "practicalExample": "주말 집안일을 나눌 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-206",
+    "status": "scheduled",
+    "slug": "raffle-entry-cleaning",
+    "title": "응모자 명단 정리, 참가자 목록 전에 볼 점",
+    "description": "응모자 명단 정리 관련 결정을 반복하지 않도록 중복 방지, 참가자 목록, 확률 설정을 한 번에 비교합니다.",
+    "date": "2026-06-17",
+    "publishAt": "2026-06-17T11:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "응모자 명단 정리",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "응모 조건을 충족하지 않는 항목이 섞이는 문제",
+    "practicalExample": "추첨 전 참가 명단을 검토할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-207",
+    "status": "scheduled",
+    "slug": "random-pair-review",
+    "title": "랜덤 짝 리뷰 운영법, 결과 기록 남기기",
+    "description": "랜덤 짝 리뷰는 애매할 때 중복 방지를 먼저 보고 확률 설정까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-17",
+    "publishAt": "2026-06-17T16:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "랜덤 짝 리뷰",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "리뷰 상대가 반복되어 피드백이 좁아지는 문제",
+    "practicalExample": "스터디 과제 검토 짝을 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-208",
+    "status": "scheduled",
+    "slug": "mentor-match-random",
+    "title": "멘토 매칭 랜덤 판단법, 참가자 목록 중심",
+    "description": "멘토 매칭 랜덤을 글, 도구, 업무 흐름에 적용할 때 필요한 확률 설정과 공정성을 정리했습니다.",
+    "date": "2026-06-17",
+    "publishAt": "2026-06-17T21:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "멘토 매칭 랜덤",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "멘토와 멘티 배정 기준이 불투명해지는 문제",
+    "practicalExample": "단기 멘토링 조를 배정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-209",
+    "status": "scheduled",
+    "slug": "quiz-order-random",
+    "title": "퀴즈 순서 랜덤 상황별 표, 결과 기록",
+    "description": "퀴즈 순서 랜덤은 확률 설정, 결과 기록, 공정성을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-18",
+    "publishAt": "2026-06-18T02:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "퀴즈 순서 랜덤",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "문제 순서가 난이도에 영향을 주는 문제",
+    "practicalExample": "온라인 퀴즈 순서를 섞을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-210",
+    "status": "scheduled",
+    "slug": "random-break-activity",
+    "title": "휴식 활동 랜덤 실전 흐름, 중복 방지부터",
+    "description": "휴식 활동 랜덤을 준비할 때 놓치기 쉬운 결과 기록, 공정성, 중복 방지를 짧게 점검합니다.",
+    "date": "2026-06-18",
+    "publishAt": "2026-06-18T07:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "휴식 활동 랜덤",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "쉬는 시간에도 할 일을 고르다 지치는 문제",
+    "practicalExample": "짧은 휴식 미션을 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-211",
+    "status": "scheduled",
+    "slug": "team-lunch-rotation",
+    "title": "팀 점심 순번 실수 방지, 공정성 먼저",
+    "description": "팀 점심 순번 상황에서 공정성과 중복 방지는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-18",
+    "publishAt": "2026-06-18T12:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "팀 점심 순번",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "점심 제안자가 일부에게만 몰리는 문제",
+    "practicalExample": "주간 점심 담당을 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-212",
+    "status": "scheduled",
+    "slug": "prize-tier-draw",
+    "title": "경품 등급 추첨 적용 순서, 결과 기록 확인",
+    "description": "경품 등급 추첨은 필요한 순간부터 확률 설정과 결과 기록을 남기는 방법까지 안내합니다.",
+    "date": "2026-06-18",
+    "publishAt": "2026-06-18T17:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "경품 등급 추첨",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "경품 등급과 당첨자 순서가 헷갈리는 문제",
+    "practicalExample": "여러 등급 경품을 나눌 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-213",
+    "status": "scheduled",
+    "slug": "candidate-shortlist-wheel",
+    "title": "후보 목록 압축 초보 흐름, 확률 설정 중심",
+    "description": "후보 목록 압축을 검색한 독자가 바로 따라 할 수 있도록 참가자 목록부터 공정성까지 압축했습니다.",
+    "date": "2026-06-18",
+    "publishAt": "2026-06-18T22:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "후보 목록 압축",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "후보가 많아 결정 속도가 떨어지는 문제",
+    "practicalExample": "최종 후보 3개를 남길 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-214",
+    "status": "scheduled",
+    "slug": "random-topic-refresh",
+    "title": "랜덤 주제 갱신 개선 포인트, 공정성",
+    "description": "랜덤 주제 갱신 관련 결정을 반복하지 않도록 결과 기록, 공정성, 중복 방지를 한 번에 비교합니다.",
+    "date": "2026-06-19",
+    "publishAt": "2026-06-19T03:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "랜덤 주제 갱신",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "오래된 주제가 계속 반복되는 문제",
+    "practicalExample": "커뮤니티 질문 목록을 바꿀 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-215",
+    "status": "scheduled",
+    "slug": "fair-turn-rotation",
+    "title": "공정한 순번 회전 선택법, 결과 기록과 공정성",
+    "description": "공정한 순번 회전은 애매할 때 결과 기록을 먼저 보고 중복 방지까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-19",
+    "publishAt": "2026-06-19T08:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "공정한 순번 회전",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "앞 순서가 반복되어 불만이 생기는 문제",
+    "practicalExample": "진행 순서를 주기적으로 바꿀 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-216",
+    "status": "scheduled",
+    "slug": "draw-result-share",
+    "title": "추첨 결과 공유 빠른 정리, 확률 설정까지",
+    "description": "추첨 결과 공유를 글, 도구, 업무 흐름에 적용할 때 필요한 중복 방지와 확률 설정을 정리했습니다.",
+    "date": "2026-06-19",
+    "publishAt": "2026-06-19T13:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "추첨 결과 공유",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "결과만 올려 과정이 보이지 않는 문제",
+    "practicalExample": "당첨자 공지를 작성할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-217",
+    "status": "scheduled",
+    "slug": "random-rule-audit",
+    "title": "랜덤 규칙 점검 순서, 중복 방지 활용",
+    "description": "랜덤 규칙 점검은 중복 방지, 참가자 목록, 확률 설정을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-19",
+    "publishAt": "2026-06-19T18:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "랜덤 규칙 점검",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "규칙이 실행 중 바뀌어 신뢰가 낮아지는 문제",
+    "practicalExample": "공개 추첨 전 기준을 볼 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-218",
+    "status": "scheduled",
+    "slug": "event-seat-lottery",
+    "title": "행사 좌석 추첨 운영 체크, 확률 설정 반영",
+    "description": "행사 좌석 추첨을 준비할 때 놓치기 쉬운 참가자 목록, 확률 설정, 결과 기록을 짧게 점검합니다.",
+    "date": "2026-06-19",
+    "publishAt": "2026-06-19T23:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "행사 좌석 추첨",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "좋은 좌석 배정이 불공정해 보이는 문제",
+    "practicalExample": "선착순 대신 좌석을 뽑을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-219",
+    "status": "scheduled",
+    "slug": "random-order-script",
+    "title": "랜덤 순서 안내문 사례별 정리, 공정성 중심",
+    "description": "랜덤 순서 안내문 상황에서 확률 설정과 결과 기록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-20",
+    "publishAt": "2026-06-20T04:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "랜덤 순서 안내문",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "참가자가 순서 결정 방식을 이해하지 못하는 문제",
+    "practicalExample": "행사 시작 전 안내할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-220",
+    "status": "scheduled",
+    "slug": "lotto-number-note",
+    "title": "로또 번호 메모 발행 전 검토, 참가자 목록",
+    "description": "로또 번호 메모는 필요한 순간부터 중복 방지와 참가자 목록을 남기는 방법까지 안내합니다.",
+    "date": "2026-06-20",
+    "publishAt": "2026-06-20T09:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "로또 번호 메모",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "번호 생성 기준과 저장 방식이 섞이는 문제",
+    "practicalExample": "추천 번호를 기록할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-221",
+    "status": "scheduled",
+    "slug": "team-game-balance",
+    "title": "팀 게임 균형 배정, 공정성 먼저 보기",
+    "description": "팀 게임 균형 배정을 검색한 독자가 바로 따라 할 수 있도록 공정성부터 확률 설정까지 압축했습니다.",
+    "date": "2026-06-20",
+    "publishAt": "2026-06-20T14:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "팀 게임 균형 배정",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "한 팀에 실력이 몰리는 문제",
+    "practicalExample": "친목 게임 팀을 나눌 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-222",
+    "status": "scheduled",
+    "slug": "draw-retry-policy",
+    "title": "추첨 재시도 원칙 체크리스트: 참가자 목록 핵심",
+    "description": "추첨 재시도 원칙 관련 결정을 반복하지 않도록 참가자 목록, 확률 설정, 결과 기록을 한 번에 비교합니다.",
+    "date": "2026-06-20",
+    "publishAt": "2026-06-20T19:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "추첨 재시도 원칙",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "결과가 마음에 들지 않아 계속 다시 뽑는 문제",
+    "practicalExample": "참가자 앞에서 재추첨 기준을 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-223",
+    "status": "scheduled",
+    "slug": "daily-choice-capsule",
+    "title": "하루 선택 캡슐 실행 순서, 결과 기록까지",
+    "description": "하루 선택 캡슐은 애매할 때 참가자 목록을 먼저 보고 결과 기록까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-21",
+    "publishAt": "2026-06-21T00:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "하루 선택 캡슐",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "작은 선택이 많아 시작이 늦어지는 문제",
+    "practicalExample": "아침 루틴을 빠르게 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-224",
+    "status": "scheduled",
+    "slug": "menu-vote-tiebreak",
+    "title": "메뉴 투표 동률 비교법, 확률 설정과 중복 방지",
+    "description": "메뉴 투표 동률을 글, 도구, 업무 흐름에 적용할 때 필요한 결과 기록과 중복 방지를 정리했습니다.",
+    "date": "2026-06-21",
+    "publishAt": "2026-06-21T05:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "메뉴 투표 동률",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "동률 메뉴가 나왔을 때 결정을 미루는 문제",
+    "practicalExample": "점심 후보 투표가 갈릴 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-225",
+    "status": "scheduled",
+    "slug": "random-sample-check",
+    "title": "무작위 표본 확인 FAQ: 공정성 답변",
+    "description": "무작위 표본 확인은 결과 기록, 공정성, 중복 방지를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-21",
+    "publishAt": "2026-06-21T10:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "무작위 표본 확인",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "일부 항목만 골라도 되는지 판단하기 어려운 문제",
+    "practicalExample": "목록 검수 표본을 뽑을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-226",
+    "status": "scheduled",
+    "slug": "question-card-shuffle",
+    "title": "질문 카드 섞기, 참가자 목록 전에 볼 점",
+    "description": "질문 카드 섞기를 준비할 때 놓치기 쉬운 공정성, 중복 방지, 참가자 목록을 짧게 점검합니다.",
+    "date": "2026-06-21",
+    "publishAt": "2026-06-21T15:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "질문 카드 섞기",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "질문 순서가 고정되어 대화가 예측되는 문제",
+    "practicalExample": "아이스브레이킹 카드를 쓸 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-227",
+    "status": "scheduled",
+    "slug": "winner-backup-list",
+    "title": "예비 당첨자 목록 운영법, 결과 기록 남기기",
+    "description": "예비 당첨자 목록 상황에서 중복 방지와 참가자 목록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-21",
+    "publishAt": "2026-06-21T20:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "예비 당첨자 목록",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "당첨자가 응답하지 않을 때 다음 순서를 정하기 어려운 문제",
+    "practicalExample": "경품 예비 순번을 남길 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-228",
+    "status": "scheduled",
+    "slug": "random-choice-archive",
+    "title": "랜덤 선택 보관 판단법, 참가자 목록 중심",
+    "description": "랜덤 선택 보관은 필요한 순간부터 결과 기록과 공정성을 남기는 방법까지 안내합니다.",
+    "date": "2026-06-22",
+    "publishAt": "2026-06-22T01:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "랜덤 선택 보관",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "지난 선택을 찾지 못해 같은 결정을 반복하는 문제",
+    "practicalExample": "운영 기록을 남길 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-229",
+    "status": "scheduled",
+    "slug": "spin-result-explain",
+    "title": "룰렛 결과 설명 상황별 표, 공정성",
+    "description": "룰렛 결과 설명을 검색한 독자가 바로 따라 할 수 있도록 확률 설정부터 중복 방지까지 압축했습니다.",
+    "date": "2026-06-22",
+    "publishAt": "2026-06-22T06:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "룰렛 결과 설명",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "룰렛 결과가 우연인지 조작인지 의심받는 문제",
+    "practicalExample": "공개 화면을 공유할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-230",
+    "status": "scheduled",
+    "slug": "draw-participant-consent",
+    "title": "추첨 참여 동의 실전 흐름, 중복 방지부터",
+    "description": "추첨 참여 동의 관련 결정을 반복하지 않도록 공정성, 중복 방지, 참가자 목록을 한 번에 비교합니다.",
+    "date": "2026-06-22",
+    "publishAt": "2026-06-22T11:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "추첨 참여 동의",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "참가자가 추첨 조건을 뒤늦게 확인하는 문제",
+    "practicalExample": "응모 폼 안내문을 만들 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-231",
+    "status": "scheduled",
+    "slug": "monthly-budget-split",
+    "title": "월 예산 분배 실수 방지, 계산 기준 먼저",
+    "description": "월 예산 분배는 애매할 때 계산 기준을 먼저 보고 결과 해석까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-22",
+    "publishAt": "2026-06-22T16:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "월 예산 분배",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "고정비와 변동비가 섞여 남은 돈이 안 보이는 문제",
+    "practicalExample": "월초 생활비를 나눌 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-232",
+    "status": "scheduled",
+    "slug": "holiday-workday-count",
+    "title": "공휴일 근무일 계산 적용 순서, 생활 적용 확인",
+    "description": "공휴일 근무일 계산을 글, 도구, 업무 흐름에 적용할 때 필요한 결과 해석과 생활 적용을 정리했습니다.",
+    "date": "2026-06-22",
+    "publishAt": "2026-06-22T21:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "공휴일 근무일 계산",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "휴일 포함 여부로 일정 계산이 달라지는 문제",
+    "practicalExample": "마감일을 산정할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-233",
+    "status": "scheduled",
+    "slug": "installment-total-cost",
+    "title": "할부 총액 계산 초보 흐름, 실수 방지 중심",
+    "description": "할부 총액 계산은 결과 해석, 실수 방지, 생활 적용을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-23",
+    "publishAt": "2026-06-23T02:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "할부 총액 계산",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "월 납입액만 보고 총비용을 놓치는 문제",
+    "practicalExample": "가전제품 구매 전",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-234",
+    "status": "scheduled",
+    "slug": "tip-split-korea",
+    "title": "서비스 비용 나누기 개선 포인트, 계산 기준",
+    "description": "서비스 비용 나누기를 준비할 때 놓치기 쉬운 실수 방지, 생활 적용, 계산 기준을 짧게 점검합니다.",
+    "date": "2026-06-23",
+    "publishAt": "2026-06-23T07:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "서비스 비용 나누기",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "추가 비용을 누가 부담할지 애매한 문제",
+    "practicalExample": "단체 결제 후 비용을 나눌 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-235",
+    "status": "scheduled",
+    "slug": "monthly-subscription-cut",
+    "title": "구독 정리 우선순위 선택법, 생활 적용과 계산 기준",
+    "description": "구독 정리 우선순위 상황에서 생활 적용과 계산 기준은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-23",
+    "publishAt": "2026-06-23T12:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "구독 정리 우선순위",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "해지할 구독을 고르기 어려운 문제",
+    "practicalExample": "월 고정비를 줄일 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-236",
+    "status": "scheduled",
+    "slug": "commute-time-summary",
+    "title": "통근 시간 합계 빠른 정리, 실수 방지까지",
+    "description": "통근 시간 합계는 필요한 순간부터 결과 해석과 실수 방지를 남기는 방법까지 안내합니다.",
+    "date": "2026-06-23",
+    "publishAt": "2026-06-23T17:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "통근 시간 합계",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "왕복 시간과 대기 시간이 따로 계산되는 문제",
+    "practicalExample": "근무지 변경을 검토할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-237",
+    "status": "scheduled",
+    "slug": "meal-prep-quantity",
+    "title": "식재료 분량 계산 검토 순서, 입력값 확인 활용",
+    "description": "식재료 분량 계산을 검색한 독자가 바로 따라 할 수 있도록 입력값 확인부터 생활 적용까지 압축했습니다.",
+    "date": "2026-06-23",
+    "publishAt": "2026-06-23T22:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "식재료 분량 계산",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "인원수에 맞게 재료를 조절하기 어려운 문제",
+    "practicalExample": "단체 식사를 준비할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-238",
+    "status": "scheduled",
+    "slug": "child-allowance-rule",
+    "title": "용돈 기준 정리 운영 체크, 실수 방지 반영",
+    "description": "용돈 기준 정리 관련 결정을 반복하지 않도록 실수 방지, 생활 적용, 계산 기준을 한 번에 비교합니다.",
+    "date": "2026-06-24",
+    "publishAt": "2026-06-24T03:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "용돈 기준 정리",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "용돈 금액과 사용 범위가 매번 흔들리는 문제",
+    "practicalExample": "가족 규칙을 정할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-239",
+    "status": "scheduled",
+    "slug": "moving-box-count",
+    "title": "이사 박스 수량 사례별 정리, 계산 기준 중심",
+    "description": "이사 박스 수량은 애매할 때 실수 방지를 먼저 보고 계산 기준까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-24",
+    "publishAt": "2026-06-24T08:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "이사 박스 수량",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "짐 양을 감으로만 잡아 준비물이 부족한 문제",
+    "practicalExample": "포장 전에 박스 수를 볼 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-240",
+    "status": "scheduled",
+    "slug": "study-dday-schedule",
+    "title": "시험 D-Day 계획 발행 전 검토, 결과 해석",
+    "description": "시험 D-Day 계획을 글, 도구, 업무 흐름에 적용할 때 필요한 계산 기준과 결과 해석을 정리했습니다.",
+    "date": "2026-06-24",
+    "publishAt": "2026-06-24T13:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "시험 D-Day 계획",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "남은 기간에 맞는 학습량이 보이지 않는 문제",
+    "practicalExample": "시험 한 달 전 계획을 세울 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  }
+]

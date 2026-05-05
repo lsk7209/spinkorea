@@ -1,0 +1,2762 @@
+[
+  {
+    "id": "generated-061",
+    "status": "scheduled",
+    "slug": "calendar-color-rule",
+    "title": "캘린더 색상 기준, 입력값 확인 먼저 보기",
+    "description": "캘린더 색상 기준을 검색한 독자가 바로 따라 할 수 있도록 계산 기준부터 실수 방지까지 압축했습니다.",
+    "date": "2026-05-18",
+    "publishAt": "2026-05-18T06:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "캘린더 색상 기준",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "일정 종류가 한눈에 보이지 않는 문제",
+    "practicalExample": "가족 캘린더를 정리할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-062",
+    "status": "scheduled",
+    "slug": "warranty-period-check",
+    "title": "보증기간 확인 체크리스트: 결과 해석 핵심",
+    "description": "보증기간 확인 관련 결정을 반복하지 않도록 결과 해석, 실수 방지, 생활 적용을 한 번에 비교합니다.",
+    "date": "2026-05-18",
+    "publishAt": "2026-05-18T11:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "보증기간 확인",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "구매일과 접수 가능일을 놓치는 문제",
+    "practicalExample": "전자제품 수리를 맡기기 전",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-063",
+    "status": "scheduled",
+    "slug": "return-deadline-note",
+    "title": "반품 기한 계산 실행 순서, 생활 적용까지",
+    "description": "반품 기한 계산은 애매할 때 결과 해석을 먼저 보고 생활 적용까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-18",
+    "publishAt": "2026-05-18T16:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "반품 기한 계산",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "영업일 기준을 착각하는 문제",
+    "practicalExample": "온라인 쇼핑 반품을 준비할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-064",
+    "status": "scheduled",
+    "slug": "study-hour-tracker",
+    "title": "공부 시간 합계 비교법, 실수 방지와 입력값 확인",
+    "description": "공부 시간 합계를 글, 도구, 업무 흐름에 적용할 때 필요한 생활 적용과 입력값 확인 항목을 정리했습니다.",
+    "date": "2026-05-18",
+    "publishAt": "2026-05-18T21:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "공부 시간 합계",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "앉아 있던 시간과 실제 학습 시간을 섞는 문제",
+    "practicalExample": "시험 준비 루틴을 점검할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-065",
+    "status": "scheduled",
+    "slug": "project-buffer-time",
+    "title": "작업 버퍼 시간 FAQ: 계산 기준 답변",
+    "description": "작업 버퍼 시간은 생활 적용, 계산 기준, 입력값 확인 항목을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-19",
+    "publishAt": "2026-05-19T02:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "작업 버퍼 시간",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "예상보다 늦어지는 시간을 반영하지 못하는 문제",
+    "practicalExample": "마감 일정을 잡을 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 90,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-066",
+    "status": "scheduled",
+    "slug": "meeting-room-time",
+    "title": "회의실 사용 시간, 결과 해석 전에 볼 점",
+    "description": "회의실 사용 시간을 준비할 때 놓치기 쉬운 계산 기준, 입력값 확인, 결과 해석을 짧게 점검합니다.",
+    "date": "2026-05-19",
+    "publishAt": "2026-05-19T07:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "회의실 사용 시간",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "준비와 정리 시간을 빼먹는 문제",
+    "practicalExample": "공유 회의실을 예약할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-067",
+    "status": "scheduled",
+    "slug": "rent-share-rule",
+    "title": "공동비 분담 기준 운영법, 생활 적용 남기기",
+    "description": "공동비 분담 기준 상황에서 입력값 확인과 결과 해석은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-19",
+    "publishAt": "2026-05-19T12:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "공동비 분담 기준",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "사용량 차이를 반영하기 어려운 문제",
+    "practicalExample": "룸메이트와 비용을 나눌 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-068",
+    "status": "scheduled",
+    "slug": "ticket-price-compare",
+    "title": "티켓 가격 비교 판단법, 결과 해석 중심",
+    "description": "티켓 가격 비교는 필요한 순간부터 생활 적용과 계산 기준을 남기는 방법까지 안내합니다.",
+    "date": "2026-05-19",
+    "publishAt": "2026-05-19T17:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "티켓 가격 비교",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "수수료 포함 금액을 놓치는 문제",
+    "practicalExample": "공연 티켓을 고를 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-069",
+    "status": "scheduled",
+    "slug": "gift-budget-limit",
+    "title": "선물 예산 상한 상황별 표, 생활 적용",
+    "description": "선물 예산 상한을 검색한 독자가 바로 따라 할 수 있도록 실수 방지부터 입력값 확인까지 압축했습니다.",
+    "date": "2026-05-19",
+    "publishAt": "2026-05-19T22:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "선물 예산 상한",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "관계별 예산 기준이 흔들리는 문제",
+    "practicalExample": "기념일 선물을 고를 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-070",
+    "status": "scheduled",
+    "slug": "weekly-cost-review",
+    "title": "주간 지출 점검 실전 흐름, 입력값 확인부터",
+    "description": "주간 지출 점검 관련 결정을 반복하지 않도록 계산 기준, 입력값 확인, 결과 해석을 한 번에 비교합니다.",
+    "date": "2026-05-20",
+    "publishAt": "2026-05-20T03:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "주간 지출 점검",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "월말이 되어서야 과소비를 알게 되는 문제",
+    "practicalExample": "일요일에 지출을 돌아볼 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-071",
+    "status": "scheduled",
+    "slug": "self-intro-length",
+    "title": "자기소개서 글자수 실수 방지, 문서 기준 먼저",
+    "description": "자기소개서 글자수는 애매할 때 문서 기준을 먼저 보고 검토 순서까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-20",
+    "publishAt": "2026-05-20T08:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "자기소개서 글자수",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "문항별 분량을 맞추지 못하는 문제",
+    "practicalExample": "지원서 제출 전",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-072",
+    "status": "scheduled",
+    "slug": "email-subject-rule",
+    "title": "이메일 제목 작성 적용 순서, 공유 전 확인",
+    "description": "이메일 제목 작성을 글, 도구, 업무 흐름에 적용할 때 필요한 검토 순서와 공유 전 확인 항목을 정리했습니다.",
+    "date": "2026-05-20",
+    "publishAt": "2026-05-20T13:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "이메일 제목 작성",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "메일 목적이 제목에서 보이지 않는 문제",
+    "practicalExample": "업무 메일을 보내기 전",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-073",
+    "status": "scheduled",
+    "slug": "proposal-summary-check",
+    "title": "제안서 요약 문장 초보 흐름, 표현 정리 중심",
+    "description": "제안서 요약 문장은 검토 순서, 표현 정리, 공유 전 확인 항목을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-20",
+    "publishAt": "2026-05-20T18:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "제안서 요약 문장",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "핵심 제안이 앞부분에 드러나지 않는 문제",
+    "practicalExample": "제안서를 공유하기 전",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-074",
+    "status": "scheduled",
+    "slug": "meeting-note-format",
+    "title": "회의록 정리 형식 개선 포인트, 문서 기준",
+    "description": "회의록 정리 형식을 준비할 때 놓치기 쉬운 표현 정리, 공유 전 확인, 문서 기준을 짧게 점검합니다.",
+    "date": "2026-05-20",
+    "publishAt": "2026-05-20T23:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "회의록 정리 형식",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "결정사항과 논의사항이 섞이는 문제",
+    "practicalExample": "회의 직후 기록을 남길 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-075",
+    "status": "scheduled",
+    "slug": "notice-copy-cleanup",
+    "title": "공지문 표현 정리 선택법, 공유 전 확인과 문서 기준",
+    "description": "공지문 표현 정리 상황에서 공유 전 확인과 문서 기준은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-21",
+    "publishAt": "2026-05-21T04:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "공지문 표현 정리",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "공지 대상과 행동이 불분명한 문제",
+    "practicalExample": "사내 공지를 올릴 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-076",
+    "status": "scheduled",
+    "slug": "faq-answer-length",
+    "title": "FAQ 답변 길이 빠른 정리, 표현 정리까지",
+    "description": "FAQ 답변 길이는 필요한 순간부터 검토 순서와 표현 정리를 남기는 방법까지 안내합니다.",
+    "date": "2026-05-21",
+    "publishAt": "2026-05-21T09:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "FAQ 답변 길이",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "답변이 길어 핵심을 찾기 어려운 문제",
+    "practicalExample": "고객 안내 문서를 만들 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-077",
+    "status": "scheduled",
+    "slug": "blog-intro-hook",
+    "title": "블로그 첫 문단 검토 순서, 가독성 활용",
+    "description": "블로그 첫 문단을 검색한 독자가 바로 따라 할 수 있도록 가독성부터 공유 전 확인까지 압축했습니다.",
+    "date": "2026-05-21",
+    "publishAt": "2026-05-21T14:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "블로그 첫 문단",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "도입부가 길어 이탈이 늘어나는 문제",
+    "practicalExample": "정보성 글을 발행할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-078",
+    "status": "scheduled",
+    "slug": "plain-language-rule",
+    "title": "쉬운 문장 기준 운영 체크, 표현 정리 반영",
+    "description": "쉬운 문장 기준 관련 결정을 반복하지 않도록 표현 정리, 공유 전 확인, 문서 기준을 한 번에 비교합니다.",
+    "date": "2026-05-21",
+    "publishAt": "2026-05-21T19:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "쉬운 문장 기준",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "전문용어가 많아 독자가 멈추는 문제",
+    "practicalExample": "초보자 가이드를 쓸 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-079",
+    "status": "scheduled",
+    "slug": "copy-before-share",
+    "title": "공유 전 문서 검토 사례별 정리, 가독성 중심",
+    "description": "공유 전 문서 검토는 애매할 때 표현 정리를 먼저 보고 문서 기준까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-22",
+    "publishAt": "2026-05-22T00:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "공유 전 문서 검토",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "맞춤법보다 구조 오류가 더 크게 보이는 문제",
+    "practicalExample": "외부 링크를 보내기 전",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-080",
+    "status": "scheduled",
+    "slug": "markdown-table-check",
+    "title": "마크다운 표 작성 발행 전 검토, 순서",
+    "description": "마크다운 표 작성을 글, 도구, 업무 흐름에 적용할 때 필요한 문서 기준과 검토 순서를 정리했습니다.",
+    "date": "2026-05-22",
+    "publishAt": "2026-05-22T05:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "마크다운 표 작성",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "표가 깨져 모바일에서 읽기 어려운 문제",
+    "practicalExample": "README나 가이드를 작성할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-081",
+    "status": "scheduled",
+    "slug": "case-style-guide",
+    "title": "표기 스타일 통일, 문서 기준 먼저 보기",
+    "description": "표기 스타일 통일은 문서 기준, 가독성, 검토 순서를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-22",
+    "publishAt": "2026-05-22T10:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "표기 스타일 통일",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "같은 단어를 여러 방식으로 쓰는 문제",
+    "practicalExample": "브랜드 문서를 정리할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-082",
+    "status": "scheduled",
+    "slug": "headline-trim-rule",
+    "title": "긴 제목 줄이기 체크리스트: 검토 순서 핵심",
+    "description": "긴 제목 줄이기를 준비할 때 놓치기 쉬운 가독성, 검토 순서, 표현 정리를 짧게 점검합니다.",
+    "date": "2026-05-22",
+    "publishAt": "2026-05-22T15:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "긴 제목 줄이기",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "검색 결과에서 제목이 잘리는 문제",
+    "practicalExample": "블로그 제목을 다듬을 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-083",
+    "status": "scheduled",
+    "slug": "meta-description-draft",
+    "title": "메타 설명 초안 실행 순서, 공유 전 확인까지",
+    "description": "메타 설명 초안 상황에서 검토 순서와 표현 정리는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-22",
+    "publishAt": "2026-05-22T20:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "메타 설명 초안",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "요약이 본문과 따로 노는 문제",
+    "practicalExample": "글 발행 전 SEO 항목을 채울 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-084",
+    "status": "scheduled",
+    "slug": "bullet-list-edit",
+    "title": "목록 문장 다듬기 비교법, 표현 정리와 가독성",
+    "description": "목록 문장 다듬기는 필요한 순간부터 문서 기준과 가독성을 남기는 방법까지 안내합니다.",
+    "date": "2026-05-23",
+    "publishAt": "2026-05-23T01:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "목록 문장 다듬기",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "항목마다 길이와 문체가 다른 문제",
+    "practicalExample": "체크리스트를 만들 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-085",
+    "status": "scheduled",
+    "slug": "tone-of-voice-note",
+    "title": "문체 기준표 FAQ: 문서 기준 답변",
+    "description": "문체 기준표를 검색한 독자가 바로 따라 할 수 있도록 공유 전 확인부터 검토 순서까지 압축했습니다.",
+    "date": "2026-05-23",
+    "publishAt": "2026-05-23T06:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "문체 기준표",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "글마다 말투가 바뀌는 문제",
+    "practicalExample": "여러 글을 한 사이트에 올릴 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-086",
+    "status": "scheduled",
+    "slug": "quote-cleanup-rule",
+    "title": "인용문 정리, 검토 순서 전에 볼 점",
+    "description": "인용문 정리 관련 결정을 반복하지 않도록 가독성, 검토 순서, 표현 정리를 한 번에 비교합니다.",
+    "date": "2026-05-23",
+    "publishAt": "2026-05-23T11:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "인용문 정리",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "출처와 원문이 구분되지 않는 문제",
+    "practicalExample": "자료 기반 글을 쓸 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-087",
+    "status": "scheduled",
+    "slug": "social-share-copy",
+    "title": "공유 문구 작성 운영법, 가독성 남기기",
+    "description": "공유 문구 작성은 애매할 때 가독성을 먼저 보고 표현 정리까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-23",
+    "publishAt": "2026-05-23T16:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "공유 문구 작성",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "클릭 이유가 보이지 않는 문제",
+    "practicalExample": "커뮤니티에 글을 공유할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-088",
+    "status": "scheduled",
+    "slug": "landing-copy-order",
+    "title": "랜딩 문구 순서 판단법, 표현 정리 중심",
+    "description": "랜딩 문구 순서를 글, 도구, 업무 흐름에 적용할 때 필요한 표현 정리와 문서 기준을 정리했습니다.",
+    "date": "2026-05-23",
+    "publishAt": "2026-05-23T21:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "랜딩 문구 순서",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "기능 설명이 앞서고 독자 문제가 늦게 나오는 문제",
+    "practicalExample": "첫 화면 문구를 잡을 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-089",
+    "status": "scheduled",
+    "slug": "checklist-wording",
+    "title": "체크리스트 문장 상황별 표, 공유 전 확인",
+    "description": "체크리스트 문장은 표현 정리, 공유 전 확인, 문서 기준을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-24",
+    "publishAt": "2026-05-24T02:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "체크리스트 문장",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "행동으로 옮기기 어려운 항목이 많은 문제",
+    "practicalExample": "실행형 글을 작성할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-090",
+    "status": "scheduled",
+    "slug": "summary-box-copy",
+    "title": "요약 박스 구성 실전 흐름, 가독성부터",
+    "description": "요약 박스 구성을 준비할 때 놓치기 쉬운 공유 전 확인, 문서 기준, 가독성을 짧게 점검합니다.",
+    "date": "2026-05-24",
+    "publishAt": "2026-05-24T07:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "요약 박스 구성",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "본문을 읽기 전 핵심이 보이지 않는 문제",
+    "practicalExample": "긴 글의 도입부를 만들 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-091",
+    "status": "scheduled",
+    "slug": "document-version-note",
+    "title": "문서 버전 기록 실수 방지, 가독성 먼저",
+    "description": "문서 버전 기록 상황에서 문서 기준과 가독성은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-24",
+    "publishAt": "2026-05-24T12:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "문서 버전 기록",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "수정 이력을 찾기 어려운 문제",
+    "practicalExample": "팀 문서를 업데이트할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-092",
+    "status": "scheduled",
+    "slug": "mobile-reading-break",
+    "title": "모바일 문단 길이 적용 순서, 공유 전 확인",
+    "description": "모바일 문단 길이는 필요한 순간부터 표현 정리와 공유 전 확인 항목을 남기는 방법까지 안내합니다.",
+    "date": "2026-05-24",
+    "publishAt": "2026-05-24T17:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "모바일 문단 길이",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "한 문단이 화면을 가득 채우는 문제",
+    "practicalExample": "스마트폰 독자를 고려할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-093",
+    "status": "scheduled",
+    "slug": "question-heading-rule",
+    "title": "질문형 소제목 초보 흐름, 표현 정리 중심",
+    "description": "질문형 소제목을 검색한 독자가 바로 따라 할 수 있도록 검토 순서부터 문서 기준까지 압축했습니다.",
+    "date": "2026-05-24",
+    "publishAt": "2026-05-24T22:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "질문형 소제목",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "소제목만 봐서는 답을 예측하기 어려운 문제",
+    "practicalExample": "FAQ형 글을 쓸 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-094",
+    "status": "scheduled",
+    "slug": "before-after-copy",
+    "title": "전후 비교 문장 개선 포인트, 문서 기준",
+    "description": "전후 비교 문장 관련 결정을 반복하지 않도록 공유 전 확인, 문서 기준, 가독성을 한 번에 비교합니다.",
+    "date": "2026-05-25",
+    "publishAt": "2026-05-25T03:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "전후 비교 문장",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "개선 효과가 추상적으로 보이는 문제",
+    "practicalExample": "사례형 글을 작성할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-095",
+    "status": "scheduled",
+    "slug": "newsletter-preview",
+    "title": "뉴스레터 미리보기 선택법, 공유 전 확인과 문서 기준",
+    "description": "뉴스레터 미리보기는 애매할 때 공유 전 확인 항목을 먼저 보고 가독성까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-25",
+    "publishAt": "2026-05-25T08:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "뉴스레터 미리보기",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "메일을 열 이유가 약한 문제",
+    "practicalExample": "주간 요약 메일을 보낼 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-096",
+    "status": "scheduled",
+    "slug": "privacy-copy-check",
+    "title": "개인정보 안내문 빠른 정리, 표현 정리까지",
+    "description": "개인정보 안내문을 글, 도구, 업무 흐름에 적용할 때 필요한 가독성과 표현 정리를 정리했습니다.",
+    "date": "2026-05-25",
+    "publishAt": "2026-05-25T13:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "개인정보 안내문",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "수집 목적과 보관 기간이 흐릿한 문제",
+    "practicalExample": "문의 폼 안내문을 쓸 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-097",
+    "status": "scheduled",
+    "slug": "terms-summary-copy",
+    "title": "약관 요약 문장 검토 순서, 가독성 활용",
+    "description": "약관 요약 문장은 가독성, 검토 순서, 표현 정리를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-25",
+    "publishAt": "2026-05-25T18:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "약관 요약 문장",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "법적 문장이 너무 길어 이해가 어려운 문제",
+    "practicalExample": "서비스 안내 페이지를 만들 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-098",
+    "status": "scheduled",
+    "slug": "help-page-structure",
+    "title": "도움말 페이지 구조 운영 체크, 표현 정리 반영",
+    "description": "도움말 페이지 구조를 준비할 때 놓치기 쉬운 검토 순서, 표현 정리, 공유 전 확인 항목을 짧게 점검합니다.",
+    "date": "2026-05-25",
+    "publishAt": "2026-05-25T23:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "도움말 페이지 구조",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "사용자가 원하는 답을 찾기 어려운 문제",
+    "practicalExample": "도구 사용법을 설명할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-099",
+    "status": "scheduled",
+    "slug": "content-refresh-note",
+    "title": "글 업데이트 메모 사례별 정리, 문서 기준 중심",
+    "description": "글 업데이트 메모 상황에서 표현 정리와 공유 전 확인은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-26",
+    "publishAt": "2026-05-26T04:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "글 업데이트 메모",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "수정 이유가 기록되지 않는 문제",
+    "practicalExample": "오래된 글을 고칠 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-100",
+    "status": "scheduled",
+    "slug": "reader-question-bank",
+    "title": "독자 질문 모음 발행 전 검토, 순서",
+    "description": "독자 질문 모음은 필요한 순간부터 가독성과 검토 순서를 남기는 방법까지 안내합니다.",
+    "date": "2026-05-26",
+    "publishAt": "2026-05-26T09:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "독자 질문 모음",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "FAQ 아이디어가 흩어지는 문제",
+    "practicalExample": "새 글 주제를 모을 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-101",
+    "status": "scheduled",
+    "slug": "api-request-check",
+    "title": "API 요청 검증, 디버깅 먼저 보기",
+    "description": "API 요청 검증을 검색한 독자가 바로 따라 할 수 있도록 검증 절차부터 보안 확인까지 압축했습니다.",
+    "date": "2026-05-26",
+    "publishAt": "2026-05-26T14:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "API 요청 검증",
+    "expandedKeywords": [
+      "검증 절차",
+      "디버깅",
+      "자동화",
+      "보안 확인"
+    ],
+    "readerProblem": "요청값이 어디서 깨졌는지 찾기 어려운 문제",
+    "practicalExample": "외부 API 연동을 테스트할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-102",
+    "status": "scheduled",
+    "slug": "webhook-signature-test",
+    "title": "웹훅 서명 확인 체크리스트: 자동화 핵심",
+    "description": "웹훅 서명 확인 관련 결정을 반복하지 않도록 자동화, 보안 확인, 배포 전 점검 항목을 한 번에 비교합니다.",
+    "date": "2026-05-26",
+    "publishAt": "2026-05-26T19:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "웹훅 서명 확인",
+    "expandedKeywords": [
+      "디버깅",
+      "자동화",
+      "보안 확인",
+      "배포 전 점검"
+    ],
+    "readerProblem": "정상 요청과 위조 요청을 구분하기 어려운 문제",
+    "practicalExample": "결제나 알림 웹훅을 받을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-103",
+    "status": "scheduled",
+    "slug": "http-status-note",
+    "title": "HTTP 상태코드 정리 실행 순서, 배포 전 점검까지",
+    "description": "HTTP 상태코드 정리는 애매할 때 자동화를 먼저 보고 배포 전 점검까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-27",
+    "publishAt": "2026-05-27T00:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "HTTP 상태코드 정리",
+    "expandedKeywords": [
+      "자동화",
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차"
+    ],
+    "readerProblem": "오류 코드만 보고 원인을 오해하는 문제",
+    "practicalExample": "운영 로그를 확인할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-104",
+    "status": "scheduled",
+    "slug": "cache-header-check",
+    "title": "캐시 헤더 점검 비교법, 보안 확인과 디버깅",
+    "description": "캐시 헤더 점검 항목을 글, 도구, 업무 흐름에 적용할 때 필요한 배포 전 점검과 디버깅을 정리했습니다.",
+    "date": "2026-05-27",
+    "publishAt": "2026-05-27T05:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "캐시 헤더 점검",
+    "expandedKeywords": [
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅"
+    ],
+    "readerProblem": "수정한 파일이 바로 반영되지 않는 문제",
+    "practicalExample": "정적 사이트를 배포할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-105",
+    "status": "scheduled",
+    "slug": "canonical-url-audit",
+    "title": "캐노니컬 URL 검사 FAQ: 검증 절차 답변",
+    "description": "캐노니컬 URL 검사는 배포 전 점검, 검증 절차, 디버깅을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-27",
+    "publishAt": "2026-05-27T10:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "캐노니컬 URL 검사",
+    "expandedKeywords": [
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅",
+      "자동화"
+    ],
+    "readerProblem": "중복 URL이 검색엔진에 섞이는 문제",
+    "practicalExample": "SEO 점검을 할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-106",
+    "status": "scheduled",
+    "slug": "robots-rule-review",
+    "title": "robots.txt 규칙, 자동화 전에 볼 점",
+    "description": "robots.txt 규칙을 준비할 때 놓치기 쉬운 검증 절차, 디버깅, 자동화를 짧게 점검합니다.",
+    "date": "2026-05-27",
+    "publishAt": "2026-05-27T15:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "robots.txt 규칙",
+    "expandedKeywords": [
+      "검증 절차",
+      "디버깅",
+      "자동화",
+      "보안 확인"
+    ],
+    "readerProblem": "허용할 봇과 막을 봇을 구분하지 못하는 문제",
+    "practicalExample": "검색 수집 설정을 바꿀 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-107",
+    "status": "scheduled",
+    "slug": "sitemap-lastmod-check",
+    "title": "사이트맵 날짜 확인 운영법, 배포 전 점검 남기기",
+    "description": "사이트맵 날짜 확인 상황에서 디버깅과 자동화는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-27",
+    "publishAt": "2026-05-27T20:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "사이트맵 날짜 확인",
+    "expandedKeywords": [
+      "디버깅",
+      "자동화",
+      "보안 확인",
+      "배포 전 점검"
+    ],
+    "readerProblem": "수정된 페이지가 오래된 날짜로 남는 문제",
+    "practicalExample": "빌드 후 사이트맵을 검토할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-108",
+    "status": "scheduled",
+    "slug": "json-parse-error",
+    "title": "JSON 파싱 오류 판단법, 자동화 중심",
+    "description": "JSON 파싱 오류는 필요한 순간부터 배포 전 점검과 검증 절차를 남기는 방법까지 안내합니다.",
+    "date": "2026-05-28",
+    "publishAt": "2026-05-28T01:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "JSON 파싱 오류",
+    "expandedKeywords": [
+      "자동화",
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차"
+    ],
+    "readerProblem": "쉼표 하나 때문에 전체 응답이 실패하는 문제",
+    "practicalExample": "API 응답을 저장할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-109",
+    "status": "scheduled",
+    "slug": "url-encoding-case",
+    "title": "URL 인코딩 기준 상황별 표, 배포 전 점검",
+    "description": "URL 인코딩 기준을 검색한 독자가 바로 따라 할 수 있도록 보안 확인부터 디버깅까지 압축했습니다.",
+    "date": "2026-05-28",
+    "publishAt": "2026-05-28T06:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "URL 인코딩 기준",
+    "expandedKeywords": [
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅"
+    ],
+    "readerProblem": "한글과 공백이 섞인 URL이 깨지는 문제",
+    "practicalExample": "공유 링크를 만들 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-110",
+    "status": "scheduled",
+    "slug": "base64-safe-use",
+    "title": "Base64 사용 기준 실전 흐름, 디버깅부터",
+    "description": "Base64 사용 기준 관련 결정을 반복하지 않도록 검증 절차, 디버깅, 자동화를 한 번에 비교합니다.",
+    "date": "2026-05-28",
+    "publishAt": "2026-05-28T11:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "Base64 사용 기준",
+    "expandedKeywords": [
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅",
+      "자동화"
+    ],
+    "readerProblem": "인코딩을 암호화로 착각하는 문제",
+    "practicalExample": "간단한 데이터 전달을 검토할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-111",
+    "status": "scheduled",
+    "slug": "timestamp-debug",
+    "title": "타임스탬프 디버깅 실수 방지, 검증 절차 먼저",
+    "description": "타임스탬프 디버깅은 애매할 때 검증 절차를 먼저 보고 자동화까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-28",
+    "publishAt": "2026-05-28T16:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "타임스탬프 디버깅",
+    "expandedKeywords": [
+      "검증 절차",
+      "디버깅",
+      "자동화",
+      "보안 확인"
+    ],
+    "readerProblem": "UTC와 한국 시간을 혼동하는 문제",
+    "practicalExample": "예약 발행 시간을 확인할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-112",
+    "status": "scheduled",
+    "slug": "regex-test-note",
+    "title": "정규식 테스트 기준 적용 순서, 배포 전 점검 확인",
+    "description": "정규식 테스트 기준을 글, 도구, 업무 흐름에 적용할 때 필요한 자동화와 배포 전 점검 항목을 정리했습니다.",
+    "date": "2026-05-28",
+    "publishAt": "2026-05-28T21:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "정규식 테스트 기준",
+    "expandedKeywords": [
+      "디버깅",
+      "자동화",
+      "보안 확인",
+      "배포 전 점검"
+    ],
+    "readerProblem": "예외 입력에서 패턴이 깨지는 문제",
+    "practicalExample": "폼 검증을 만들 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-113",
+    "status": "scheduled",
+    "slug": "form-validation-copy",
+    "title": "폼 검증 메시지 초보 흐름, 보안 확인 중심",
+    "description": "폼 검증 메시지는 자동화, 보안 확인, 배포 전 점검 항목을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-29",
+    "publishAt": "2026-05-29T02:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "폼 검증 메시지",
+    "expandedKeywords": [
+      "자동화",
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차"
+    ],
+    "readerProblem": "사용자가 무엇을 고쳐야 할지 모르는 문제",
+    "practicalExample": "문의 폼 오류 문구를 쓸 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-114",
+    "status": "scheduled",
+    "slug": "open-graph-preview",
+    "title": "OG 미리보기 점검 개선 포인트, 검증 절차",
+    "description": "OG 미리보기 점검 항목을 준비할 때 놓치기 쉬운 보안 확인, 배포 전 점검, 검증 절차를 짧게 점검합니다.",
+    "date": "2026-05-29",
+    "publishAt": "2026-05-29T07:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "OG 미리보기 점검",
+    "expandedKeywords": [
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅"
+    ],
+    "readerProblem": "공유 화면에 제목이나 이미지가 빠지는 문제",
+    "practicalExample": "블로그 글을 배포할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-115",
+    "status": "scheduled",
+    "slug": "structured-data-check",
+    "title": "구조화 데이터 확인 선택법, 배포 전 점검과 검증 절차",
+    "description": "구조화 데이터 확인 상황에서 배포 전 점검과 검증 절차는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-29",
+    "publishAt": "2026-05-29T12:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "구조화 데이터 확인",
+    "expandedKeywords": [
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅",
+      "자동화"
+    ],
+    "readerProblem": "스키마가 있어도 검색엔진이 읽지 못하는 문제",
+    "practicalExample": "Article JSON-LD를 넣을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-116",
+    "status": "scheduled",
+    "slug": "image-alt-audit",
+    "title": "이미지 alt 점검 빠른 정리, 보안 확인까지",
+    "description": "이미지 alt 점검은 필요한 순간부터 자동화와 보안 확인 항목을 남기는 방법까지 안내합니다.",
+    "date": "2026-05-29",
+    "publishAt": "2026-05-29T17:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "이미지 alt 점검",
+    "expandedKeywords": [
+      "검증 절차",
+      "디버깅",
+      "자동화",
+      "보안 확인"
+    ],
+    "readerProblem": "이미지가 설명 없이 노출되는 문제",
+    "practicalExample": "콘텐츠 접근성을 확인할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-117",
+    "status": "scheduled",
+    "slug": "bundle-size-review",
+    "title": "번들 크기 점검 순서, 디버깅 활용",
+    "description": "번들 크기 점검 항목을 검색한 독자가 바로 따라 할 수 있도록 디버깅부터 배포 전 점검까지 압축했습니다.",
+    "date": "2026-05-29",
+    "publishAt": "2026-05-29T22:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "번들 크기 점검",
+    "expandedKeywords": [
+      "디버깅",
+      "자동화",
+      "보안 확인",
+      "배포 전 점검"
+    ],
+    "readerProblem": "사용하지 않는 코드가 초기 로딩을 늦추는 문제",
+    "practicalExample": "Vite 빌드 결과를 볼 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-118",
+    "status": "scheduled",
+    "slug": "lazy-load-route",
+    "title": "라우트 지연 로딩 운영 체크, 보안 확인 반영",
+    "description": "라우트 지연 로딩 관련 결정을 반복하지 않도록 보안 확인, 배포 전 점검, 검증 절차를 한 번에 비교합니다.",
+    "date": "2026-05-30",
+    "publishAt": "2026-05-30T03:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "라우트 지연 로딩",
+    "expandedKeywords": [
+      "자동화",
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차"
+    ],
+    "readerProblem": "첫 화면과 무관한 코드가 먼저 내려오는 문제",
+    "practicalExample": "도구 페이지가 늘어날 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-119",
+    "status": "scheduled",
+    "slug": "env-variable-check",
+    "title": "환경변수 점검 사례별 정리, 검증 절차 중심",
+    "description": "환경변수 점검은 애매할 때 보안 확인 항목을 먼저 보고 검증 절차까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-30",
+    "publishAt": "2026-05-30T08:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "환경변수 점검",
+    "expandedKeywords": [
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅"
+    ],
+    "readerProblem": "로컬과 배포 환경 값이 달라지는 문제",
+    "practicalExample": "API 키 설정을 확인할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-120",
+    "status": "scheduled",
+    "slug": "deploy-log-review",
+    "title": "배포 로그 읽기 발행 전 검토, 자동화",
+    "description": "배포 로그 읽기를 글, 도구, 업무 흐름에 적용할 때 필요한 검증 절차와 자동화를 정리했습니다.",
+    "date": "2026-05-30",
+    "publishAt": "2026-05-30T13:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "배포 로그 읽기",
+    "expandedKeywords": [
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅",
+      "자동화"
+    ],
+    "readerProblem": "실패 원인이 경고인지 오류인지 헷갈리는 문제",
+    "practicalExample": "Vercel 빌드가 멈췄을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  }
+]

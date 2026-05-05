@@ -3,8 +3,11 @@ import path from "node:path";
 
 const ROOT = process.cwd();
 const OUTPUT_PATH = path.join(ROOT, "src", "data", "content-plan.generated.json");
+const CHUNK_DIR = path.join(ROOT, "src", "data", "generated-content-chunks");
+const MANIFEST_PATH = path.join(ROOT, "src", "data", "generated-content-manifest.generated.json");
 const START_AT = Date.parse("2026-05-05T18:00:00+09:00");
 const PUBLISH_INTERVAL_HOURS = 5;
+const CHUNK_SIZE = 60;
 
 const CATEGORY_META = {
   random: {
@@ -960,4 +963,24 @@ if (plan.length !== 600) {
 }
 
 fs.writeFileSync(OUTPUT_PATH, `${JSON.stringify(plan, null, 2)}\n`, "utf8");
+
+fs.rmSync(CHUNK_DIR, { force: true, recursive: true });
+fs.mkdirSync(CHUNK_DIR, { recursive: true });
+
+const manifest = {};
+for (let index = 0; index < plan.length; index += CHUNK_SIZE) {
+  const chunk = plan.slice(index, index + CHUNK_SIZE);
+  const chunkName = `chunk-${String(index / CHUNK_SIZE + 1).padStart(2, "0")}`;
+  for (const article of chunk) {
+    manifest[article.slug] = `${chunkName}.json`;
+  }
+  fs.writeFileSync(
+    path.join(CHUNK_DIR, `${chunkName}.json`),
+    `${JSON.stringify(chunk, null, 2)}\n`,
+    "utf8",
+  );
+}
+
+fs.writeFileSync(MANIFEST_PATH, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
 console.log(`Generated ${plan.length} scheduled articles -> ${OUTPUT_PATH}`);
+console.log(`Generated ${Math.ceil(plan.length / CHUNK_SIZE)} article chunks -> ${CHUNK_DIR}`);

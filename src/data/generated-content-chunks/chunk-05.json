@@ -1,0 +1,2762 @@
+[
+  {
+    "id": "generated-241",
+    "status": "scheduled",
+    "slug": "monthly-savings-rate",
+    "title": "월 저축률 계산, 입력값 확인 먼저 보기",
+    "description": "월 저축률 계산은 계산 기준, 입력값 확인, 결과 해석을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-24",
+    "publishAt": "2026-06-24T18:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "월 저축률 계산",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "소득 대비 저축 비율을 체감하기 어려운 문제",
+    "practicalExample": "가계부를 점검할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-242",
+    "status": "scheduled",
+    "slug": "insurance-renewal-date",
+    "title": "보험 갱신일 메모 체크리스트: 결과 해석 핵심",
+    "description": "보험 갱신일 메모를 준비할 때 놓치기 쉬운 입력값 확인, 결과 해석, 실수 방지를 짧게 점검합니다.",
+    "date": "2026-06-24",
+    "publishAt": "2026-06-24T23:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "보험 갱신일 메모",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "갱신일과 납입일을 혼동하는 문제",
+    "practicalExample": "보험료 변경 전에 확인할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-243",
+    "status": "scheduled",
+    "slug": "pet-care-cost",
+    "title": "반려동물 비용 정리 실행 순서, 생활 적용까지",
+    "description": "반려동물 비용 정리 상황에서 결과 해석과 실수 방지는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-25",
+    "publishAt": "2026-06-25T04:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "반려동물 비용 정리",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "사료와 병원비가 따로 기록되어 총액이 안 보이는 문제",
+    "practicalExample": "월간 지출을 점검할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-244",
+    "status": "scheduled",
+    "slug": "car-maintenance-cycle",
+    "title": "차량 정비 주기 비교법, 실수 방지와 입력값 확인",
+    "description": "차량 정비 주기는 필요한 순간부터 계산 기준과 입력값 확인 항목을 남기는 방법까지 안내합니다.",
+    "date": "2026-06-25",
+    "publishAt": "2026-06-25T09:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "차량 정비 주기",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "주행거리와 날짜 기준이 섞이는 문제",
+    "practicalExample": "엔진오일 교체 시점을 볼 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-245",
+    "status": "scheduled",
+    "slug": "home-appliance-warranty",
+    "title": "가전 보증 메모 FAQ: 계산 기준 답변",
+    "description": "가전 보증 메모를 검색한 독자가 바로 따라 할 수 있도록 생활 적용부터 결과 해석까지 압축했습니다.",
+    "date": "2026-06-25",
+    "publishAt": "2026-06-25T14:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "가전 보증 메모",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "구매처와 보증기간을 나중에 찾기 어려운 문제",
+    "practicalExample": "수리 접수 전 자료를 모을 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 90,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-246",
+    "status": "scheduled",
+    "slug": "travel-day-budget",
+    "title": "하루 여행비 계산, 결과 해석 전에 볼 점",
+    "description": "하루 여행비 계산 관련 결정을 반복하지 않도록 입력값 확인, 결과 해석, 실수 방지를 한 번에 비교합니다.",
+    "date": "2026-06-25",
+    "publishAt": "2026-06-25T19:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "하루 여행비 계산",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "전체 예산만 보고 하루 지출 한도를 놓치는 문제",
+    "practicalExample": "여행 일정을 나눌 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-247",
+    "status": "scheduled",
+    "slug": "shared-grocery-list",
+    "title": "공동 장보기 목록 운영법, 생활 적용 남기기",
+    "description": "공동 장보기 목록은 애매할 때 입력값 확인 항목을 먼저 보고 실수 방지까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-26",
+    "publishAt": "2026-06-26T00:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "공동 장보기 목록",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "필요한 품목과 이미 산 품목이 섞이는 문제",
+    "practicalExample": "동거인이 장을 볼 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-248",
+    "status": "scheduled",
+    "slug": "gift-price-range",
+    "title": "선물 가격대 정리 판단법, 결과 해석 중심",
+    "description": "선물 가격대 정리를 글, 도구, 업무 흐름에 적용할 때 필요한 실수 방지와 계산 기준을 정리했습니다.",
+    "date": "2026-06-26",
+    "publishAt": "2026-06-26T05:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "선물 가격대 정리",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "상대와 상황에 맞는 예산을 정하기 어려운 문제",
+    "practicalExample": "선물 후보를 고를 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-249",
+    "status": "scheduled",
+    "slug": "meeting-cost-estimate",
+    "title": "회의 비용 계산 상황별 표, 생활 적용",
+    "description": "회의 비용 계산은 실수 방지, 생활 적용, 계산 기준을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-26",
+    "publishAt": "2026-06-26T10:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "회의 비용 계산",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "회의 시간이 실제 비용으로 보이지 않는 문제",
+    "practicalExample": "긴 회의를 줄일 근거를 볼 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-250",
+    "status": "scheduled",
+    "slug": "camping-gear-budget",
+    "title": "캠핑 준비 예산 실전 흐름, 입력값 확인부터",
+    "description": "캠핑 준비 예산을 준비할 때 놓치기 쉬운 생활 적용, 계산 기준, 입력값 확인 항목을 짧게 점검합니다.",
+    "date": "2026-06-26",
+    "publishAt": "2026-06-26T15:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "캠핑 준비 예산",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "장비와 소모품 비용이 뒤섞이는 문제",
+    "practicalExample": "첫 캠핑 준비물을 살 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-251",
+    "status": "scheduled",
+    "slug": "monthly-reading-count",
+    "title": "월 독서량 기록 실수 방지, 계산 기준 먼저",
+    "description": "월 독서량 기록 상황에서 계산 기준과 입력값 확인은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-26",
+    "publishAt": "2026-06-26T20:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "월 독서량 기록",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "읽은 책 수와 읽은 시간을 따로 보지 못하는 문제",
+    "practicalExample": "독서 습관을 점검할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-252",
+    "status": "scheduled",
+    "slug": "daily-step-average",
+    "title": "걸음 수 평균 적용 순서, 생활 적용 확인",
+    "description": "걸음 수 평균은 필요한 순간부터 실수 방지와 생활 적용을 남기는 방법까지 안내합니다.",
+    "date": "2026-06-27",
+    "publishAt": "2026-06-27T01:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "걸음 수 평균",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "하루 기록만 보고 활동량을 과대평가하는 문제",
+    "practicalExample": "주간 건강 루틴을 볼 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-253",
+    "status": "scheduled",
+    "slug": "water-bill-share",
+    "title": "수도요금 나누기 초보 흐름, 실수 방지 중심",
+    "description": "수도요금 나누기를 검색한 독자가 바로 따라 할 수 있도록 결과 해석부터 계산 기준까지 압축했습니다.",
+    "date": "2026-06-27",
+    "publishAt": "2026-06-27T06:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "수도요금 나누기",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "사용 인원과 기간이 달라 비용 배분이 애매한 문제",
+    "practicalExample": "공동 거주 비용을 정산할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-254",
+    "status": "scheduled",
+    "slug": "phone-plan-compare",
+    "title": "휴대폰 요금 비교 개선 포인트, 계산 기준",
+    "description": "휴대폰 요금 비교 관련 결정을 반복하지 않도록 생활 적용, 계산 기준, 입력값 확인 항목을 한 번에 비교합니다.",
+    "date": "2026-06-27",
+    "publishAt": "2026-06-27T11:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "휴대폰 요금 비교",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "월 요금과 약정 조건을 함께 보기 어려운 문제",
+    "practicalExample": "요금제를 바꾸기 전",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-255",
+    "status": "scheduled",
+    "slug": "return-shipping-cost",
+    "title": "반품 배송비 계산 선택법, 생활 적용과 입력값 확인",
+    "description": "반품 배송비 계산은 애매할 때 생활 적용을 먼저 보고 입력값 확인까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-27",
+    "publishAt": "2026-06-27T16:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "반품 배송비 계산",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "무료 반품 조건과 부담 금액을 혼동하는 문제",
+    "practicalExample": "온라인 주문을 취소할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-256",
+    "status": "scheduled",
+    "slug": "birthday-countdown-note",
+    "title": "생일 카운트다운 빠른 정리, 실수 방지까지",
+    "description": "생일 카운트다운을 글, 도구, 업무 흐름에 적용할 때 필요한 입력값 확인과 실수 방지를 정리했습니다.",
+    "date": "2026-06-27",
+    "publishAt": "2026-06-27T21:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "생일 카운트다운",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "준비 기간을 놓쳐 선물이 늦어지는 문제",
+    "practicalExample": "기념일 일정을 챙길 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-257",
+    "status": "scheduled",
+    "slug": "weekly-meal-budget",
+    "title": "주간 식비 계획 검토 순서, 입력값 확인 활용",
+    "description": "주간 식비 계획은 입력값 확인, 결과 해석, 실수 방지를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-28",
+    "publishAt": "2026-06-28T02:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "주간 식비 계획",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "외식과 장보기 비용이 한쪽으로 몰리는 문제",
+    "practicalExample": "일주일 식비를 정할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-258",
+    "status": "scheduled",
+    "slug": "office-supply-stock",
+    "title": "사무용품 재고 운영 체크, 실수 방지 반영",
+    "description": "사무용품 재고를 준비할 때 놓치기 쉬운 결과 해석, 실수 방지, 생활 적용을 짧게 점검합니다.",
+    "date": "2026-06-28",
+    "publishAt": "2026-06-28T07:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "사무용품 재고",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "필요한 물품을 늦게 알아채는 문제",
+    "practicalExample": "공용 비품을 점검할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-259",
+    "status": "scheduled",
+    "slug": "delivery-fee-threshold",
+    "title": "무료배송 기준 사례별 정리, 입력값 확인 중심",
+    "description": "무료배송 기준 상황에서 실수 방지와 생활 적용은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-28",
+    "publishAt": "2026-06-28T12:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "무료배송 기준",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "배송비를 아끼려다 불필요한 물건을 사는 문제",
+    "practicalExample": "장바구니 금액을 맞출 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-260",
+    "status": "scheduled",
+    "slug": "reservation-deposit-note",
+    "title": "예약금 기록 발행 전 검토, 결과 해석",
+    "description": "예약금 기록은 필요한 순간부터 입력값 확인과 결과 해석을 남기는 방법까지 안내합니다.",
+    "date": "2026-06-28",
+    "publishAt": "2026-06-28T17:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "예약금 기록",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "예약금과 잔금을 구분하지 못하는 문제",
+    "practicalExample": "모임 장소를 예약할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-261",
+    "status": "scheduled",
+    "slug": "class-time-table",
+    "title": "수업 시간표 계산, 입력값 확인 먼저 보기",
+    "description": "수업 시간표 계산을 검색한 독자가 바로 따라 할 수 있도록 계산 기준부터 실수 방지까지 압축했습니다.",
+    "date": "2026-06-28",
+    "publishAt": "2026-06-28T22:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "수업 시간표 계산",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "수업 간 쉬는 시간을 빠뜨리는 문제",
+    "practicalExample": "학기 시간표를 짤 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-262",
+    "status": "scheduled",
+    "slug": "home-repair-budget",
+    "title": "집수리 예산 체크리스트: 결과 해석 핵심",
+    "description": "집수리 예산 관련 결정을 반복하지 않도록 결과 해석, 실수 방지, 생활 적용을 한 번에 비교합니다.",
+    "date": "2026-06-29",
+    "publishAt": "2026-06-29T03:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "집수리 예산",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "재료비와 인건비를 따로 보지 못하는 문제",
+    "practicalExample": "수리 견적을 비교할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-263",
+    "status": "scheduled",
+    "slug": "medicine-time-note",
+    "title": "복용 시간 메모 실행 순서, 생활 적용까지",
+    "description": "복용 시간 메모는 애매할 때 결과 해석을 먼저 보고 생활 적용까지 확인하는 기준을 제시합니다.",
+    "date": "2026-06-29",
+    "publishAt": "2026-06-29T08:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "복용 시간 메모",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "복용 간격을 놓쳐 시간이 겹치는 문제",
+    "practicalExample": "일시적 약 복용을 관리할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-264",
+    "status": "scheduled",
+    "slug": "weekly-cleaning-time",
+    "title": "청소 시간 배분 비교법, 실수 방지와 입력값 확인",
+    "description": "청소 시간 배분을 글, 도구, 업무 흐름에 적용할 때 필요한 생활 적용과 입력값 확인 항목을 정리했습니다.",
+    "date": "2026-06-29",
+    "publishAt": "2026-06-29T13:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "청소 시간 배분",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "큰 집안일만 남아 주말이 부담되는 문제",
+    "practicalExample": "주간 청소 계획을 만들 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-265",
+    "status": "scheduled",
+    "slug": "used-item-price-check",
+    "title": "중고거래 가격 점검 FAQ: 계산 기준 답변",
+    "description": "중고거래 가격 점검은 생활 적용, 계산 기준, 입력값 확인 항목을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-06-29",
+    "publishAt": "2026-06-29T18:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "중고거래 가격 점검",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "시세와 희망 가격을 구분하기 어려운 문제",
+    "practicalExample": "중고 물품을 올리기 전",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 88,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-266",
+    "status": "scheduled",
+    "slug": "intro-sentence-hook",
+    "title": "도입 문장 훅, 검토 순서 전에 볼 점",
+    "description": "도입 문장 훅을 준비할 때 놓치기 쉬운 문서 기준, 가독성, 검토 순서를 짧게 점검합니다.",
+    "date": "2026-06-29",
+    "publishAt": "2026-06-29T23:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "도입 문장 훅",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "첫 문장이 평범해 글을 계속 읽을 이유가 약한 문제",
+    "practicalExample": "블로그 글 첫 줄을 고칠 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-267",
+    "status": "scheduled",
+    "slug": "short-form-script",
+    "title": "짧은 영상 대본 운영법, 공유 전 확인 남기기",
+    "description": "짧은 영상 대본 상황에서 가독성과 검토 순서는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-06-30",
+    "publishAt": "2026-06-30T04:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "짧은 영상 대본",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "핵심 메시지가 초반에 나오지 않는 문제",
+    "practicalExample": "숏폼 대본을 작성할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-268",
+    "status": "scheduled",
+    "slug": "product-description-trim",
+    "title": "상품 설명 줄이기 판단법, 검토 순서 중심",
+    "description": "상품 설명 줄이기는 필요한 순간부터 공유 전 확인과 문서 기준을 남기는 방법까지 안내합니다.",
+    "date": "2026-06-30",
+    "publishAt": "2026-06-30T09:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "상품 설명 줄이기",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "설명이 길어 장점이 묻히는 문제",
+    "practicalExample": "상품 카드 문구를 다듬을 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-269",
+    "status": "scheduled",
+    "slug": "faq-question-cluster",
+    "title": "FAQ 질문 묶기 상황별 표, 공유 전 확인",
+    "description": "FAQ 질문 묶기를 검색한 독자가 바로 따라 할 수 있도록 표현 정리부터 가독성까지 압축했습니다.",
+    "date": "2026-06-30",
+    "publishAt": "2026-06-30T14:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "FAQ 질문 묶기",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "비슷한 질문이 여러 페이지에 흩어지는 문제",
+    "practicalExample": "도움말 페이지를 정리할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-270",
+    "status": "scheduled",
+    "slug": "notice-title-rule",
+    "title": "공지 제목 규칙 실전 흐름, 가독성부터",
+    "description": "공지 제목 규칙 관련 결정을 반복하지 않도록 문서 기준, 가독성, 검토 순서를 한 번에 비교합니다.",
+    "date": "2026-06-30",
+    "publishAt": "2026-06-30T19:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "공지 제목 규칙",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "공지 목적이 제목에서 드러나지 않는 문제",
+    "practicalExample": "사용자 안내를 올릴 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-271",
+    "status": "scheduled",
+    "slug": "review-response-template",
+    "title": "리뷰 답변 템플릿 실수 방지, 문서 기준 먼저",
+    "description": "리뷰 답변 템플릿은 애매할 때 문서 기준을 먼저 보고 검토 순서까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-01",
+    "publishAt": "2026-07-01T00:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "리뷰 답변 템플릿",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "답변 말투가 매번 달라지는 문제",
+    "practicalExample": "고객 리뷰에 답할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-272",
+    "status": "scheduled",
+    "slug": "support-macro-cleanup",
+    "title": "고객지원 매크로 적용 순서, 공유 전 확인",
+    "description": "고객지원 매크로를 글, 도구, 업무 흐름에 적용할 때 필요한 검토 순서와 공유 전 확인 항목을 정리했습니다.",
+    "date": "2026-07-01",
+    "publishAt": "2026-07-01T05:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "고객지원 매크로",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "매크로 문장이 딱딱해 보이는 문제",
+    "practicalExample": "반복 답변을 정리할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-273",
+    "status": "scheduled",
+    "slug": "article-summary-card",
+    "title": "글 요약 카드 초보 흐름, 표현 정리 중심",
+    "description": "글 요약 카드는 검토 순서, 표현 정리, 공유 전 확인 항목을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-01",
+    "publishAt": "2026-07-01T10:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "글 요약 카드",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "본문 핵심을 공유 이미지에 담기 어려운 문제",
+    "practicalExample": "커뮤니티 공유문을 만들 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-274",
+    "status": "scheduled",
+    "slug": "comparison-copy-rule",
+    "title": "비교 문구 작성 개선 포인트, 문서 기준",
+    "description": "비교 문구 작성을 준비할 때 놓치기 쉬운 표현 정리, 공유 전 확인, 문서 기준을 짧게 점검합니다.",
+    "date": "2026-07-01",
+    "publishAt": "2026-07-01T15:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "비교 문구 작성",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "차이가 추상적으로만 보이는 문제",
+    "practicalExample": "두 도구를 비교할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-275",
+    "status": "scheduled",
+    "slug": "cta-button-wording",
+    "title": "CTA 버튼 문구 선택법, 공유 전 확인과 문서 기준",
+    "description": "CTA 버튼 문구 상황에서 공유 전 확인과 문서 기준은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-01",
+    "publishAt": "2026-07-01T20:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "CTA 버튼 문구",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "버튼을 눌러야 할 이유가 약한 문제",
+    "practicalExample": "도구 페이지 전환을 높일 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-276",
+    "status": "scheduled",
+    "slug": "email-preview-text",
+    "title": "메일 미리보기 문장 빠른 정리, 표현 정리까지",
+    "description": "메일 미리보기 문장은 필요한 순간부터 검토 순서와 표현 정리를 남기는 방법까지 안내합니다.",
+    "date": "2026-07-02",
+    "publishAt": "2026-07-02T01:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "메일 미리보기 문장",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "제목 다음 문장이 열람 이유를 만들지 못하는 문제",
+    "practicalExample": "뉴스레터를 보내기 전",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-277",
+    "status": "scheduled",
+    "slug": "onboarding-copy",
+    "title": "온보딩 문구 검토 순서, 가독성 활용",
+    "description": "온보딩 문구를 검색한 독자가 바로 따라 할 수 있도록 가독성부터 공유 전 확인까지 압축했습니다.",
+    "date": "2026-07-02",
+    "publishAt": "2026-07-02T06:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "온보딩 문구",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "처음 방문자가 다음 행동을 모르는 문제",
+    "practicalExample": "새 도구 첫 화면을 만들 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-278",
+    "status": "scheduled",
+    "slug": "error-message-copy",
+    "title": "오류 메시지 문장 운영 체크, 표현 정리 반영",
+    "description": "오류 메시지 문장 관련 결정을 반복하지 않도록 표현 정리, 공유 전 확인, 문서 기준을 한 번에 비교합니다.",
+    "date": "2026-07-02",
+    "publishAt": "2026-07-02T11:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "오류 메시지 문장",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "사용자가 무엇을 고쳐야 하는지 모르는 문제",
+    "practicalExample": "폼 검증 문구를 쓸 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-279",
+    "status": "scheduled",
+    "slug": "empty-state-copy",
+    "title": "빈 상태 문구 사례별 정리, 문서 기준 중심",
+    "description": "빈 상태 문구는 애매할 때 표현 정리를 먼저 보고 문서 기준까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-02",
+    "publishAt": "2026-07-02T16:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "빈 상태 문구",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "데이터가 없을 때 화면이 막힌 것처럼 보이는 문제",
+    "practicalExample": "목록 화면을 설계할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-280",
+    "status": "scheduled",
+    "slug": "tooltip-wording",
+    "title": "툴팁 문장 발행 전 검토, 순서",
+    "description": "툴팁 문장을 글, 도구, 업무 흐름에 적용할 때 필요한 문서 기준과 검토 순서를 정리했습니다.",
+    "date": "2026-07-02",
+    "publishAt": "2026-07-02T21:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "툴팁 문장",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "기능 설명이 길어 UI를 방해하는 문제",
+    "practicalExample": "아이콘 버튼 설명을 붙일 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-281",
+    "status": "scheduled",
+    "slug": "release-note-summary",
+    "title": "릴리즈 노트 요약, 문서 기준 먼저 보기",
+    "description": "릴리즈 노트 요약은 문서 기준, 가독성, 검토 순서를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-03",
+    "publishAt": "2026-07-03T02:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "릴리즈 노트 요약",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "변경점이 많아 사용자가 핵심을 놓치는 문제",
+    "practicalExample": "배포 후 공지를 쓸 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-282",
+    "status": "scheduled",
+    "slug": "case-study-outline",
+    "title": "사례 글 구성 체크리스트: 검토 순서 핵심",
+    "description": "사례 글 구성을 준비할 때 놓치기 쉬운 가독성, 검토 순서, 표현 정리를 짧게 점검합니다.",
+    "date": "2026-07-03",
+    "publishAt": "2026-07-03T07:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "사례 글 구성",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "사례가 자랑처럼 보여 실용성이 약한 문제",
+    "practicalExample": "성과 글을 작성할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-283",
+    "status": "scheduled",
+    "slug": "source-citation-copy",
+    "title": "출처 표기 문장 실행 순서, 공유 전 확인까지",
+    "description": "출처 표기 문장 상황에서 검토 순서와 표현 정리는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-03",
+    "publishAt": "2026-07-03T12:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "출처 표기 문장",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "참고 링크와 본문 해석이 분리되는 문제",
+    "practicalExample": "자료 기반 글을 쓸 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-284",
+    "status": "scheduled",
+    "slug": "definition-box-copy",
+    "title": "정의 박스 문구 비교법, 표현 정리와 가독성",
+    "description": "정의 박스 문구는 필요한 순간부터 문서 기준과 가독성을 남기는 방법까지 안내합니다.",
+    "date": "2026-07-03",
+    "publishAt": "2026-07-03T17:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "정의 박스 문구",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "개념 설명이 본문 중간에 묻히는 문제",
+    "practicalExample": "초보자용 문서를 만들 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-285",
+    "status": "scheduled",
+    "slug": "step-label-cleanup",
+    "title": "단계 라벨 정리 FAQ: 문서 기준 답변",
+    "description": "단계 라벨 정리를 검색한 독자가 바로 따라 할 수 있도록 공유 전 확인부터 검토 순서까지 압축했습니다.",
+    "date": "2026-07-03",
+    "publishAt": "2026-07-03T22:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "단계 라벨 정리",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "단계명이 길어 흐름을 보기 어려운 문제",
+    "practicalExample": "실행 절차 글을 쓸 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 90,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-286",
+    "status": "scheduled",
+    "slug": "mobile-card-title",
+    "title": "모바일 카드 제목, 검토 순서 전에 볼 점",
+    "description": "모바일 카드 제목 관련 결정을 반복하지 않도록 가독성, 검토 순서, 표현 정리를 한 번에 비교합니다.",
+    "date": "2026-07-04",
+    "publishAt": "2026-07-04T03:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "모바일 카드 제목",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "작은 화면에서 제목이 두 줄 이상 밀리는 문제",
+    "practicalExample": "콘텐츠 카드 목록을 만들 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-287",
+    "status": "scheduled",
+    "slug": "search-snippet-copy",
+    "title": "검색 스니펫 문장 운영법, 공유 전 확인 남기기",
+    "description": "검색 스니펫 문장은 애매할 때 가독성을 먼저 보고 표현 정리까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-04",
+    "publishAt": "2026-07-04T08:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "검색 스니펫 문장",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "검색 결과 설명이 클릭 이유를 주지 못하는 문제",
+    "practicalExample": "메타 설명을 고칠 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-288",
+    "status": "scheduled",
+    "slug": "author-bio-copy",
+    "title": "작성자 소개 문구 판단법, 검토 순서 중심",
+    "description": "작성자 소개 문구를 글, 도구, 업무 흐름에 적용할 때 필요한 표현 정리와 문서 기준을 정리했습니다.",
+    "date": "2026-07-04",
+    "publishAt": "2026-07-04T13:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "작성자 소개 문구",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "저자 신뢰가 짧은 소개에서 드러나지 않는 문제",
+    "practicalExample": "About 영역을 보강할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-289",
+    "status": "scheduled",
+    "slug": "form-helper-text",
+    "title": "폼 도움말 문구 상황별 표, 공유 전 확인",
+    "description": "폼 도움말 문구는 표현 정리, 공유 전 확인, 문서 기준을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-04",
+    "publishAt": "2026-07-04T18:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "폼 도움말 문구",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "입력 예시가 없어 오류가 반복되는 문제",
+    "practicalExample": "문의 폼을 개선할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-290",
+    "status": "scheduled",
+    "slug": "policy-summary-copy",
+    "title": "정책 요약 문장 실전 흐름, 가독성부터",
+    "description": "정책 요약 문장을 준비할 때 놓치기 쉬운 공유 전 확인, 문서 기준, 가독성을 짧게 점검합니다.",
+    "date": "2026-07-04",
+    "publishAt": "2026-07-04T23:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "정책 요약 문장",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "정책 페이지가 길어 핵심을 찾기 어려운 문제",
+    "practicalExample": "개인정보 안내를 줄일 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-291",
+    "status": "scheduled",
+    "slug": "table-caption-rule",
+    "title": "표 캡션 작성 실수 방지, 문서 기준 먼저",
+    "description": "표 캡션 작성 상황에서 문서 기준과 가독성은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-05",
+    "publishAt": "2026-07-05T04:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "표 캡션 작성",
+    "expandedKeywords": [
+      "문서 기준",
+      "가독성",
+      "검토 순서",
+      "표현 정리"
+    ],
+    "readerProblem": "표를 보기 전 의미를 알기 어려운 문제",
+    "practicalExample": "비교 표를 넣을 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-292",
+    "status": "scheduled",
+    "slug": "quote-to-action",
+    "title": "인용 뒤 해석 적용 순서, 공유 전 확인",
+    "description": "인용 뒤 해석은 필요한 순간부터 표현 정리와 공유 전 확인 항목을 남기는 방법까지 안내합니다.",
+    "date": "2026-07-05",
+    "publishAt": "2026-07-05T09:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "인용 뒤 해석",
+    "expandedKeywords": [
+      "가독성",
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인"
+    ],
+    "readerProblem": "인용문만 있고 독자 행동이 이어지지 않는 문제",
+    "practicalExample": "공식 문서를 인용할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-293",
+    "status": "scheduled",
+    "slug": "category-description",
+    "title": "카테고리 설명 초보 흐름, 표현 정리 중심",
+    "description": "카테고리 설명을 검색한 독자가 바로 따라 할 수 있도록 검토 순서부터 문서 기준까지 압축했습니다.",
+    "date": "2026-07-05",
+    "publishAt": "2026-07-05T14:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "카테고리 설명",
+    "expandedKeywords": [
+      "검토 순서",
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준"
+    ],
+    "readerProblem": "카테고리가 어떤 글을 담는지 모호한 문제",
+    "practicalExample": "블로그 분류를 정리할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-294",
+    "status": "scheduled",
+    "slug": "newsletter-section-title",
+    "title": "뉴스레터 섹션 제목 개선 포인트, 문서 기준",
+    "description": "뉴스레터 섹션 제목 관련 결정을 반복하지 않도록 공유 전 확인, 문서 기준, 가독성을 한 번에 비교합니다.",
+    "date": "2026-07-05",
+    "publishAt": "2026-07-05T19:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "뉴스레터 섹션 제목",
+    "expandedKeywords": [
+      "표현 정리",
+      "공유 전 확인",
+      "문서 기준",
+      "가독성"
+    ],
+    "readerProblem": "메일 안에서 정보 묶음이 한눈에 안 보이는 문제",
+    "practicalExample": "주간 요약을 보낼 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-295",
+    "status": "scheduled",
+    "slug": "microcopy-audit",
+    "title": "마이크로카피 점검 선택법, 공유 전 확인과 문서 기준",
+    "description": "마이크로카피 점검은 애매할 때 공유 전 확인 항목을 먼저 보고 가독성까지 확인하는 기준을 제시합니다.",
+    "date": "2026-07-06",
+    "publishAt": "2026-07-06T00:00:00+09:00",
+    "category": "텍스트·문서 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "마이크로카피 점검",
+    "expandedKeywords": [
+      "공유 전 확인",
+      "문서 기준",
+      "가독성",
+      "검토 순서"
+    ],
+    "readerProblem": "작은 문구가 서로 다른 톤으로 보이는 문제",
+    "practicalExample": "사이트 전체 문구를 검토할 때",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
+    "internalLinks": [
+      {
+        "label": "글자수 세기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "tags": [
+      "문서",
+      "글쓰기",
+      "텍스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-296",
+    "status": "scheduled",
+    "slug": "api-error-format",
+    "title": "API 오류 형식 빠른 정리, 보안 확인까지",
+    "description": "API 오류 형식을 글, 도구, 업무 흐름에 적용할 때 필요한 디버깅과 보안 확인 항목을 정리했습니다.",
+    "date": "2026-07-06",
+    "publishAt": "2026-07-06T05:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "API 오류 형식",
+    "expandedKeywords": [
+      "검증 절차",
+      "디버깅",
+      "자동화",
+      "보안 확인"
+    ],
+    "readerProblem": "오류 응답이 제각각이라 디버깅이 어려운 문제",
+    "practicalExample": "간단한 API를 정리할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-297",
+    "status": "scheduled",
+    "slug": "webhook-retry-log",
+    "title": "웹훅 재시도 로그 검토 순서, 디버깅 활용",
+    "description": "웹훅 재시도 로그는 디버깅, 자동화, 보안 확인 항목을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-07-06",
+    "publishAt": "2026-07-06T10:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "웹훅 재시도 로그",
+    "expandedKeywords": [
+      "디버깅",
+      "자동화",
+      "보안 확인",
+      "배포 전 점검"
+    ],
+    "readerProblem": "실패한 요청을 다시 보낼 기준이 없는 문제",
+    "practicalExample": "배포 훅 상태를 확인할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-298",
+    "status": "scheduled",
+    "slug": "env-secret-check",
+    "title": "환경변수 비밀 점검 운영 체크, 보안 확인 반영",
+    "description": "환경변수 비밀 점검 항목을 준비할 때 놓치기 쉬운 자동화, 보안 확인, 배포 전 점검 항목을 짧게 점검합니다.",
+    "date": "2026-07-06",
+    "publishAt": "2026-07-06T15:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "환경변수 비밀 점검",
+    "expandedKeywords": [
+      "자동화",
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차"
+    ],
+    "readerProblem": "키가 코드에 섞일 위험을 놓치는 문제",
+    "practicalExample": "배포 전 설정을 볼 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-299",
+    "status": "scheduled",
+    "slug": "static-route-audit",
+    "title": "정적 라우트 점검 사례별 정리, 검증 절차 중심",
+    "description": "정적 라우트 점검 상황에서 보안 확인과 배포 전 점검은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-07-06",
+    "publishAt": "2026-07-06T20:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "정적 라우트 점검",
+    "expandedKeywords": [
+      "보안 확인",
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅"
+    ],
+    "readerProblem": "빌드 결과에서 일부 경로가 빠지는 문제",
+    "practicalExample": "정적 사이트를 배포할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-300",
+    "status": "scheduled",
+    "slug": "sitemap-url-count",
+    "title": "사이트맵 URL 수 발행 전 검토, 자동화",
+    "description": "사이트맵 URL 수는 필요한 순간부터 디버깅과 자동화를 남기는 방법까지 안내합니다.",
+    "date": "2026-07-07",
+    "publishAt": "2026-07-07T01:00:00+09:00",
+    "category": "개발자 웹 도구",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "사이트맵 URL 수",
+    "expandedKeywords": [
+      "배포 전 점검",
+      "검증 절차",
+      "디버깅",
+      "자동화"
+    ],
+    "readerProblem": "발견 URL 수와 실제 페이지 수가 다른 문제",
+    "practicalExample": "검색엔진 제출 전",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "URI 인코더",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "tags": [
+      "개발",
+      "웹도구",
+      "검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  }
+]

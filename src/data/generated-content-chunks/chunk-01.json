@@ -1,0 +1,2762 @@
+[
+  {
+    "id": "generated-001",
+    "status": "scheduled",
+    "slug": "fair-random-draw",
+    "title": "랜덤 추첨 공정성, 중복 방지 먼저 보기",
+    "description": "랜덤 추첨 공정성은 공정성, 중복 방지, 참가자 목록을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-05",
+    "publishAt": "2026-05-05T18:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "랜덤 추첨 공정성",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "추첨 결과를 두고 참가자가 납득하지 못하는 문제",
+    "practicalExample": "이벤트 당첨자 명단을 공개하기 전",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-002",
+    "status": "scheduled",
+    "slug": "wheel-option-limit",
+    "title": "온라인 룰렛 선택지 제한 체크리스트: 참가자 목록 핵심",
+    "description": "온라인 룰렛 선택지 제한을 준비할 때 놓치기 쉬운 중복 방지, 참가자 목록, 확률 설정을 짧게 점검합니다.",
+    "date": "2026-05-05",
+    "publishAt": "2026-05-05T23:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "온라인 룰렛 선택지 제한",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "선택지가 너무 많아 룰렛 결과가 산만해지는 문제",
+    "practicalExample": "회의 안건을 빠르게 고를 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-003",
+    "status": "scheduled",
+    "slug": "duplicate-winner-prevention",
+    "title": "중복 당첨 방지 룰 실행 순서, 결과 기록까지",
+    "description": "중복 당첨 방지 룰 상황에서 참가자 목록과 확률 설정은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-06",
+    "publishAt": "2026-05-06T04:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "중복 당첨 방지 룰",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "같은 사람이 여러 번 뽑혀 공정성이 흔들리는 문제",
+    "practicalExample": "사은품 추첨을 여러 차례 진행할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-004",
+    "status": "scheduled",
+    "slug": "weighted-choice-rule",
+    "title": "가중치 랜덤 선택 비교법, 확률 설정과 중복 방지",
+    "description": "가중치 랜덤 선택은 필요한 순간부터 공정성과 중복 방지를 남기는 방법까지 안내합니다.",
+    "date": "2026-05-06",
+    "publishAt": "2026-05-06T09:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "가중치 랜덤 선택",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "확률을 다르게 줘야 하는데 기준이 모호한 문제",
+    "practicalExample": "팀별 참여도에 따라 기회를 나눌 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-005",
+    "status": "scheduled",
+    "slug": "participant-list-cleanup",
+    "title": "참가자 목록 정리 FAQ: 공정성 답변",
+    "description": "참가자 목록 정리를 검색한 독자가 바로 따라 할 수 있도록 결과 기록부터 참가자 목록까지 압축했습니다.",
+    "date": "2026-05-06",
+    "publishAt": "2026-05-06T14:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "참가자 목록 정리",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "이름 표기가 달라 중복과 누락이 생기는 문제",
+    "practicalExample": "구글폼 응답을 룰렛에 넣기 전",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-006",
+    "status": "scheduled",
+    "slug": "presentation-order-draw",
+    "title": "발표 순서 추첨, 참가자 목록 전에 볼 점",
+    "description": "발표 순서 추첨 관련 결정을 반복하지 않도록 중복 방지, 참가자 목록, 확률 설정을 한 번에 비교합니다.",
+    "date": "2026-05-06",
+    "publishAt": "2026-05-06T19:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "발표 순서 추첨",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "순서를 정하는 과정에서 불만이 생기는 문제",
+    "practicalExample": "스터디 발표자를 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-007",
+    "status": "scheduled",
+    "slug": "cleaning-duty-draw",
+    "title": "청소 당번 뽑기 운영법, 결과 기록 남기기",
+    "description": "청소 당번 뽑기는 애매할 때 중복 방지를 먼저 보고 확률 설정까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-07",
+    "publishAt": "2026-05-07T00:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "청소 당번 뽑기",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "당번이 특정 사람에게 몰리는 문제",
+    "practicalExample": "공용 공간 청소 순서를 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-008",
+    "status": "scheduled",
+    "slug": "coffee-bet-rule",
+    "title": "커피 내기 룰렛 판단법, 참가자 목록 중심",
+    "description": "커피 내기 룰렛을 글, 도구, 업무 흐름에 적용할 때 필요한 확률 설정과 공정성을 정리했습니다.",
+    "date": "2026-05-07",
+    "publishAt": "2026-05-07T05:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "커피 내기 룰렛",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "가벼운 내기가 부담으로 번지는 문제",
+    "practicalExample": "팀 휴식 시간에 커피 담당을 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-009",
+    "status": "scheduled",
+    "slug": "seat-assignment-random",
+    "title": "자리 배치 랜덤 상황별 표, 결과 기록",
+    "description": "자리 배치 랜덤은 확률 설정, 결과 기록, 공정성을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-07",
+    "publishAt": "2026-05-07T10:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "자리 배치 랜덤",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "늘 같은 사람끼리 앉아 교류가 줄어드는 문제",
+    "practicalExample": "워크숍 좌석을 배치할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-010",
+    "status": "scheduled",
+    "slug": "dinner-place-selection",
+    "title": "회식 장소 랜덤 선택 실전 흐름, 중복 방지부터",
+    "description": "회식 장소 랜덤 선택을 준비할 때 놓치기 쉬운 결과 기록, 공정성, 중복 방지를 짧게 점검합니다.",
+    "date": "2026-05-07",
+    "publishAt": "2026-05-07T15:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "회식 장소 랜덤 선택",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "장소 후보가 많아 결정이 늦어지는 문제",
+    "practicalExample": "퇴근 전 회식 장소를 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-011",
+    "status": "scheduled",
+    "slug": "travel-destination-picker",
+    "title": "여행지 랜덤 선택 실수 방지, 공정성 먼저",
+    "description": "여행지 랜덤 선택 상황에서 공정성과 중복 방지는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-07",
+    "publishAt": "2026-05-07T20:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "여행지 랜덤 선택",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "후보를 계속 비교하느라 일정이 밀리는 문제",
+    "practicalExample": "주말 여행지를 고를 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-012",
+    "status": "scheduled",
+    "slug": "date-course-picker",
+    "title": "데이트 코스 룰렛 적용 순서, 결과 기록 확인",
+    "description": "데이트 코스 룰렛은 필요한 순간부터 확률 설정과 결과 기록을 남기는 방법까지 안내합니다.",
+    "date": "2026-05-08",
+    "publishAt": "2026-05-08T01:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "데이트 코스 룰렛",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "매번 비슷한 코스만 고르는 문제",
+    "practicalExample": "저녁 약속 코스를 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-013",
+    "status": "scheduled",
+    "slug": "gift-exchange-draw",
+    "title": "선물 교환 추첨 초보 흐름, 확률 설정 중심",
+    "description": "선물 교환 추첨을 검색한 독자가 바로 따라 할 수 있도록 참가자 목록부터 공정성까지 압축했습니다.",
+    "date": "2026-05-08",
+    "publishAt": "2026-05-08T06:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "선물 교환 추첨",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "누가 누구에게 줄지 공개되면 재미가 줄어드는 문제",
+    "practicalExample": "연말 선물 교환을 준비할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-014",
+    "status": "scheduled",
+    "slug": "study-topic-picker",
+    "title": "스터디 주제 추첨 개선 포인트, 공정성",
+    "description": "스터디 주제 추첨 관련 결정을 반복하지 않도록 결과 기록, 공정성, 중복 방지를 한 번에 비교합니다.",
+    "date": "2026-05-08",
+    "publishAt": "2026-05-08T11:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "스터디 주제 추첨",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "쉬운 주제만 선택되는 문제",
+    "practicalExample": "다음 발표 주제를 나눌 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-015",
+    "status": "scheduled",
+    "slug": "game-turn-randomizer",
+    "title": "게임 순서 랜덤 선택법, 결과 기록과 공정성",
+    "description": "게임 순서 랜덤은 애매할 때 결과 기록을 먼저 보고 중복 방지까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-08",
+    "publishAt": "2026-05-08T16:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "게임 순서 랜덤",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "첫 순서가 계속 유리하다는 불만",
+    "practicalExample": "보드게임 시작 순서를 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-016",
+    "status": "scheduled",
+    "slug": "random-mission-maker",
+    "title": "랜덤 미션 만들기 빠른 정리, 확률 설정까지",
+    "description": "랜덤 미션 만들기를 글, 도구, 업무 흐름에 적용할 때 필요한 중복 방지와 확률 설정을 정리했습니다.",
+    "date": "2026-05-08",
+    "publishAt": "2026-05-08T21:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "랜덤 미션 만들기",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "활동이 단조로워 참여가 떨어지는 문제",
+    "practicalExample": "팀 빌딩 미션을 만들 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-017",
+    "status": "scheduled",
+    "slug": "icebreaking-question-wheel",
+    "title": "아이스브레이킹 질문 검토 순서, 중복 방지 활용",
+    "description": "아이스브레이킹 질문은 중복 방지, 참가자 목록, 확률 설정을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-09",
+    "publishAt": "2026-05-09T02:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "아이스브레이킹 질문",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "어색한 첫 대화를 풀기 어려운 문제",
+    "practicalExample": "온라인 모임 시작 전",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-018",
+    "status": "scheduled",
+    "slug": "class-activity-draw",
+    "title": "수업 활동 추첨 운영 체크, 확률 설정 반영",
+    "description": "수업 활동 추첨을 준비할 때 놓치기 쉬운 참가자 목록, 확률 설정, 결과 기록을 짧게 점검합니다.",
+    "date": "2026-05-09",
+    "publishAt": "2026-05-09T07:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "수업 활동 추첨",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "학생 참여가 일부에게만 몰리는 문제",
+    "practicalExample": "발표자와 활동을 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-019",
+    "status": "scheduled",
+    "slug": "survey-option-picker",
+    "title": "설문 선택지 추첨 사례별 정리, 공정성 중심",
+    "description": "설문 선택지 추첨 상황에서 확률 설정과 결과 기록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-09",
+    "publishAt": "2026-05-09T12:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "설문 선택지 추첨",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "테스트할 문항을 고르기 어려운 문제",
+    "practicalExample": "A/B 설문 후보를 줄일 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-020",
+    "status": "scheduled",
+    "slug": "team-building-picker",
+    "title": "팀 빌딩 활동 선택 발행 전 검토, 참가자 목록",
+    "description": "팀 빌딩 활동 선택은 필요한 순간부터 중복 방지와 참가자 목록을 남기는 방법까지 안내합니다.",
+    "date": "2026-05-09",
+    "publishAt": "2026-05-09T17:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "팀 빌딩 활동 선택",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "활동 선호가 갈려 결론이 늦어지는 문제",
+    "practicalExample": "오프라인 워크숍을 준비할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-021",
+    "status": "scheduled",
+    "slug": "random-question-bank",
+    "title": "랜덤 질문 리스트, 공정성 먼저 보기",
+    "description": "랜덤 질문 리스트를 검색한 독자가 바로 따라 할 수 있도록 공정성부터 확률 설정까지 압축했습니다.",
+    "date": "2026-05-09",
+    "publishAt": "2026-05-09T22:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "랜덤 질문 리스트",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "질문이 반복되어 대화가 지루해지는 문제",
+    "practicalExample": "커뮤니티 질문 카드를 만들 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-022",
+    "status": "scheduled",
+    "slug": "lunch-choice-rule",
+    "title": "점심 메뉴 결정 룰 체크리스트: 참가자 목록 핵심",
+    "description": "점심 메뉴 결정 룰 관련 결정을 반복하지 않도록 참가자 목록, 확률 설정, 결과 기록을 한 번에 비교합니다.",
+    "date": "2026-05-10",
+    "publishAt": "2026-05-10T03:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "점심 메뉴 결정 룰",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "매일 같은 메뉴 논쟁이 반복되는 문제",
+    "practicalExample": "팀 점심 후보를 고를 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-023",
+    "status": "scheduled",
+    "slug": "dinner-menu-wheel",
+    "title": "저녁 메뉴 룰렛 실행 순서, 결과 기록까지",
+    "description": "저녁 메뉴 룰렛은 애매할 때 참가자 목록을 먼저 보고 결과 기록까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-10",
+    "publishAt": "2026-05-10T08:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "저녁 메뉴 룰렛",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "퇴근 후 메뉴 선택에 에너지를 쓰는 문제",
+    "practicalExample": "집에서 저녁 메뉴를 고를 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-024",
+    "status": "scheduled",
+    "slug": "meeting-agenda-priority",
+    "title": "회의 안건 우선순위 비교법, 확률 설정과 중복 방지",
+    "description": "회의 안건 우선순위를 글, 도구, 업무 흐름에 적용할 때 필요한 결과 기록과 중복 방지를 정리했습니다.",
+    "date": "2026-05-10",
+    "publishAt": "2026-05-10T13:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "회의 안건 우선순위",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "중요도가 낮은 안건에 시간을 쓰는 문제",
+    "practicalExample": "짧은 회의 순서를 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-025",
+    "status": "scheduled",
+    "slug": "random-number-audit",
+    "title": "랜덤 번호 검증 FAQ: 공정성 답변",
+    "description": "랜덤 번호 검증은 결과 기록, 공정성, 중복 방지를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-10",
+    "publishAt": "2026-05-10T18:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "랜덤 번호 검증",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "번호 추첨 과정이 불투명해 보이는 문제",
+    "practicalExample": "좌석 번호나 대기 번호를 뽑을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-026",
+    "status": "scheduled",
+    "slug": "live-stream-giveaway",
+    "title": "라이브 추첨 운영, 참가자 목록 전에 볼 점",
+    "description": "라이브 추첨 운영을 준비할 때 놓치기 쉬운 공정성, 중복 방지, 참가자 목록을 짧게 점검합니다.",
+    "date": "2026-05-10",
+    "publishAt": "2026-05-10T23:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "라이브 추첨 운영",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "실시간 추첨 중 오류가 나면 신뢰가 떨어지는 문제",
+    "practicalExample": "라이브 방송 이벤트를 진행할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-027",
+    "status": "scheduled",
+    "slug": "name-draw-clean-rule",
+    "title": "이름 추첨 기준 운영법, 결과 기록 남기기",
+    "description": "이름 추첨 기준 상황에서 중복 방지와 참가자 목록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-11",
+    "publishAt": "2026-05-11T04:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "이름 추첨 기준",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "동명이인과 별명이 섞여 혼선이 생기는 문제",
+    "practicalExample": "참가자 이름을 룰렛에 넣을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-028",
+    "status": "scheduled",
+    "slug": "random-choice-log",
+    "title": "랜덤 결과 기록 판단법, 참가자 목록 중심",
+    "description": "랜덤 결과 기록은 필요한 순간부터 결과 기록과 공정성을 남기는 방법까지 안내합니다.",
+    "date": "2026-05-11",
+    "publishAt": "2026-05-11T09:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "랜덤 결과 기록",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "결과를 나중에 확인하기 어려운 문제",
+    "practicalExample": "추첨 내역을 공유해야 할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-029",
+    "status": "scheduled",
+    "slug": "choice-fatigue-random",
+    "title": "선택 피로 줄이기 상황별 표, 결과 기록",
+    "description": "선택 피로 줄이기를 검색한 독자가 바로 따라 할 수 있도록 확률 설정부터 중복 방지까지 압축했습니다.",
+    "date": "2026-05-11",
+    "publishAt": "2026-05-11T14:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "선택 피로 줄이기",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "작은 결정이 쌓여 집중력이 떨어지는 문제",
+    "practicalExample": "하루 계획을 빠르게 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-030",
+    "status": "scheduled",
+    "slug": "penalty-wheel-rule",
+    "title": "벌칙 룰렛 기준 실전 흐름, 중복 방지부터",
+    "description": "벌칙 룰렛 기준 관련 결정을 반복하지 않도록 공정성, 중복 방지, 참가자 목록을 한 번에 비교합니다.",
+    "date": "2026-05-11",
+    "publishAt": "2026-05-11T19:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "벌칙 룰렛 기준",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "벌칙이 과하거나 불공정해지는 문제",
+    "practicalExample": "가벼운 게임 벌칙을 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-031",
+    "status": "scheduled",
+    "slug": "online-meeting-picker",
+    "title": "온라인 모임 진행자 실수 방지, 공정성 먼저",
+    "description": "온라인 모임 진행자는 애매할 때 공정성을 먼저 보고 참가자 목록까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-12",
+    "publishAt": "2026-05-12T00:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "온라인 모임 진행자",
+    "expandedKeywords": [
+      "공정성",
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정"
+    ],
+    "readerProblem": "진행 역할이 한 사람에게만 몰리는 문제",
+    "practicalExample": "주간 온라인 모임을 시작할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-032",
+    "status": "scheduled",
+    "slug": "random-vote-tiebreaker",
+    "title": "동률 투표 랜덤 결정 적용 순서, 결과 기록 확인",
+    "description": "동률 투표 랜덤 결정을 글, 도구, 업무 흐름에 적용할 때 필요한 참가자 목록과 결과 기록을 정리했습니다.",
+    "date": "2026-05-12",
+    "publishAt": "2026-05-12T05:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "동률 투표 랜덤 결정",
+    "expandedKeywords": [
+      "중복 방지",
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록"
+    ],
+    "readerProblem": "동률 상황에서 결정을 미루는 문제",
+    "practicalExample": "투표 결과가 같은 수로 갈렸을 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-033",
+    "status": "scheduled",
+    "slug": "raffle-announcement-copy",
+    "title": "추첨 결과 안내문 초보 흐름, 확률 설정 중심",
+    "description": "추첨 결과 안내문은 참가자 목록, 확률 설정, 결과 기록을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-12",
+    "publishAt": "2026-05-12T10:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "추첨 결과 안내문",
+    "expandedKeywords": [
+      "참가자 목록",
+      "확률 설정",
+      "결과 기록",
+      "공정성"
+    ],
+    "readerProblem": "결과 안내가 짧아 신뢰가 낮아지는 문제",
+    "practicalExample": "이벤트 결과 페이지를 만들 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-034",
+    "status": "scheduled",
+    "slug": "random-seed-explainer",
+    "title": "랜덤 시드 이해 개선 포인트, 공정성",
+    "description": "랜덤 시드 이해를 준비할 때 놓치기 쉬운 확률 설정, 결과 기록, 공정성을 짧게 점검합니다.",
+    "date": "2026-05-12",
+    "publishAt": "2026-05-12T15:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "랜덤 시드 이해",
+    "expandedKeywords": [
+      "확률 설정",
+      "결과 기록",
+      "공정성",
+      "중복 방지"
+    ],
+    "readerProblem": "무작위 결과가 어떻게 나왔는지 설명하기 어려운 문제",
+    "practicalExample": "개발자와 운영자가 추첨을 검토할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-035",
+    "status": "scheduled",
+    "slug": "choice-rule-template",
+    "title": "랜덤 선택 규칙 템플릿 선택법, 결과 기록과 공정성",
+    "description": "랜덤 선택 규칙 템플릿 상황에서 결과 기록과 공정성은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-12",
+    "publishAt": "2026-05-12T20:00:00+09:00",
+    "category": "룰렛·랜덤 결정",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "랜덤 선택 규칙 템플릿",
+    "expandedKeywords": [
+      "결과 기록",
+      "공정성",
+      "중복 방지",
+      "참가자 목록"
+    ],
+    "readerProblem": "매번 새 기준을 만들다 시간이 낭비되는 문제",
+    "practicalExample": "반복 이벤트 운영 규칙을 정할 때",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "internalLinks": [
+      {
+        "label": "온라인 룰렛 바로 쓰기",
+        "path": "/"
+      },
+      {
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      }
+    ],
+    "tags": [
+      "룰렛",
+      "랜덤",
+      "선택"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-036",
+    "status": "scheduled",
+    "slug": "discount-rate-check",
+    "title": "할인율 계산 실수 빠른 정리, 입력값 확인까지",
+    "description": "할인율 계산 실수는 필요한 순간부터 결과 해석과 실수 방지를 남기는 방법까지 안내합니다.",
+    "date": "2026-05-13",
+    "publishAt": "2026-05-13T01:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "할인율 계산 실수",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "정가와 판매가를 헷갈려 할인 폭을 잘못 보는 문제",
+    "practicalExample": "쇼핑 전 실제 절감액을 확인할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-037",
+    "status": "scheduled",
+    "slug": "vat-inclusive-price",
+    "title": "부가세 포함 금액 검토 순서, 입력값 확인 활용",
+    "description": "부가세 포함 금액을 검색한 독자가 바로 따라 할 수 있도록 입력값 확인부터 생활 적용까지 압축했습니다.",
+    "date": "2026-05-13",
+    "publishAt": "2026-05-13T06:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "부가세 포함 금액",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "공급가와 최종 결제금액이 달라 보이는 문제",
+    "practicalExample": "견적서를 비교할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-038",
+    "status": "scheduled",
+    "slug": "split-bill-calculation",
+    "title": "더치페이 계산 기준 운영 체크, 실수 방지 반영",
+    "description": "더치페이 계산 기준 관련 결정을 반복하지 않도록 실수 방지, 생활 적용, 계산 기준을 한 번에 비교합니다.",
+    "date": "2026-05-13",
+    "publishAt": "2026-05-13T11:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "더치페이 계산 기준",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "인원별 부담액이 애매해지는 문제",
+    "practicalExample": "식사 후 비용을 나눌 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-039",
+    "status": "scheduled",
+    "slug": "work-hour-summary",
+    "title": "근무시간 합산 사례별 정리, 계산 기준 중심",
+    "description": "근무시간 합산은 애매할 때 실수 방지를 먼저 보고 계산 기준까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-13",
+    "publishAt": "2026-05-13T16:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "근무시간 합산",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "휴게시간과 실제 근무시간을 섞어 계산하는 문제",
+    "practicalExample": "아르바이트 시간을 정리할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-040",
+    "status": "scheduled",
+    "slug": "travel-budget-sheet",
+    "title": "여행 예산 나누기 발행 전 검토, 결과 해석",
+    "description": "여행 예산 나누기를 글, 도구, 업무 흐름에 적용할 때 필요한 계산 기준과 결과 해석을 정리했습니다.",
+    "date": "2026-05-13",
+    "publishAt": "2026-05-13T21:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "여행 예산 나누기",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "숙박비와 식비가 한쪽으로 몰리는 문제",
+    "practicalExample": "친구들과 여행비를 나눌 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-041",
+    "status": "scheduled",
+    "slug": "delivery-date-estimate",
+    "title": "배송 예정일 계산, 입력값 확인 먼저 보기",
+    "description": "배송 예정일 계산은 계산 기준, 입력값 확인, 결과 해석을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-14",
+    "publishAt": "2026-05-14T02:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "배송 예정일 계산",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "주말과 공휴일을 빼먹어 일정을 잘못 잡는 문제",
+    "practicalExample": "선물을 주문하기 전",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-042",
+    "status": "scheduled",
+    "slug": "parking-fee-estimate",
+    "title": "주차비 예상 계산 체크리스트: 결과 해석 핵심",
+    "description": "주차비 예상 계산을 준비할 때 놓치기 쉬운 입력값 확인, 결과 해석, 실수 방지를 짧게 점검합니다.",
+    "date": "2026-05-14",
+    "publishAt": "2026-05-14T07:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "주차비 예상 계산",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "시간 구간별 요금을 놓치는 문제",
+    "practicalExample": "공연장이나 병원 방문 전",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-043",
+    "status": "scheduled",
+    "slug": "electricity-use-note",
+    "title": "전기요금 사용량 메모 실행 순서, 생활 적용까지",
+    "description": "전기요금 사용량 메모 상황에서 결과 해석과 실수 방지는 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-14",
+    "publishAt": "2026-05-14T12:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "전기요금 사용량 메모",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "사용량 단위와 요금 구간을 헷갈리는 문제",
+    "practicalExample": "월별 사용량을 비교할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-044",
+    "status": "scheduled",
+    "slug": "compound-interest-memo",
+    "title": "복리 계산 메모 비교법, 실수 방지와 입력값 확인",
+    "description": "복리 계산 메모는 필요한 순간부터 계산 기준과 입력값 확인 항목을 남기는 방법까지 안내합니다.",
+    "date": "2026-05-14",
+    "publishAt": "2026-05-14T17:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "복리 계산 메모",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "기간과 이율을 섞어 결과를 과대평가하는 문제",
+    "practicalExample": "장기 저축 시뮬레이션을 볼 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-045",
+    "status": "scheduled",
+    "slug": "loan-interest-rough",
+    "title": "대출 이자 간단 계산 FAQ: 입력값 확인 답변",
+    "description": "대출 이자 간단 계산을 검색한 독자가 바로 따라 할 수 있도록 생활 적용부터 결과 해석까지 압축했습니다.",
+    "date": "2026-05-14",
+    "publishAt": "2026-05-14T22:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "대출 이자 간단 계산",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "월 상환액을 대략 잡기 어려운 문제",
+    "practicalExample": "여러 조건을 비교하기 전",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-046",
+    "status": "scheduled",
+    "slug": "salary-net-estimate",
+    "title": "실수령액 추정 기준, 결과 해석 전에 볼 점",
+    "description": "실수령액 추정 기준 관련 결정을 반복하지 않도록 입력값 확인, 결과 해석, 실수 방지를 한 번에 비교합니다.",
+    "date": "2026-05-15",
+    "publishAt": "2026-05-15T03:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "실수령액 추정 기준",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "세전과 세후 금액을 혼동하는 문제",
+    "practicalExample": "연봉 제안을 검토할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-047",
+    "status": "scheduled",
+    "slug": "age-standard-check",
+    "title": "나이 기준 확인 운영법, 생활 적용 남기기",
+    "description": "나이 기준 확인은 애매할 때 입력값 확인 항목을 먼저 보고 실수 방지까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-15",
+    "publishAt": "2026-05-15T08:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "나이 기준 확인",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "만 나이와 연 나이를 섞어 쓰는 문제",
+    "practicalExample": "신청 조건을 확인할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-048",
+    "status": "scheduled",
+    "slug": "calendar-date-gap",
+    "title": "날짜 차이 계산 판단법, 결과 해석 중심",
+    "description": "날짜 차이 계산을 글, 도구, 업무 흐름에 적용할 때 필요한 실수 방지와 계산 기준을 정리했습니다.",
+    "date": "2026-05-15",
+    "publishAt": "2026-05-15T13:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "날짜 차이 계산",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "시작일 포함 여부 때문에 결과가 달라지는 문제",
+    "practicalExample": "프로젝트 마감일을 계산할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-049",
+    "status": "scheduled",
+    "slug": "time-zone-meeting",
+    "title": "시차 회의 시간 상황별 표, 생활 적용",
+    "description": "시차 회의 시간은 실수 방지, 생활 적용, 계산 기준을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-15",
+    "publishAt": "2026-05-15T18:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "시차 회의 시간",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "한국 시간과 현지 시간을 착각하는 문제",
+    "practicalExample": "해외 팀과 회의를 잡을 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-050",
+    "status": "scheduled",
+    "slug": "unit-note-recipe",
+    "title": "레시피 단위 변환 실전 흐름, 입력값 확인부터",
+    "description": "레시피 단위 변환을 준비할 때 놓치기 쉬운 생활 적용, 계산 기준, 입력값 확인 항목을 짧게 점검합니다.",
+    "date": "2026-05-15",
+    "publishAt": "2026-05-15T23:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "레시피 단위 변환",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "컵과 그램을 섞어 맛이 달라지는 문제",
+    "practicalExample": "해외 레시피를 따라 할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-051",
+    "status": "scheduled",
+    "slug": "moving-check-cost",
+    "title": "이사 비용 체크 실수 방지, 계산 기준 먼저",
+    "description": "이사 비용 체크 상황에서 계산 기준과 입력값 확인은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-16",
+    "publishAt": "2026-05-16T04:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "이사 비용 체크",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "작은 비용이 빠져 예산이 넘는 문제",
+    "practicalExample": "이사 견적을 비교할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-052",
+    "status": "scheduled",
+    "slug": "subscription-total-cost",
+    "title": "구독료 월합계 적용 순서, 생활 적용 확인",
+    "description": "구독료 월합계는 필요한 순간부터 실수 방지와 생활 적용을 남기는 방법까지 안내합니다.",
+    "date": "2026-05-16",
+    "publishAt": "2026-05-16T09:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "구독료 월합계",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "작은 구독이 쌓여 지출이 커지는 문제",
+    "practicalExample": "월 고정비를 점검할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-053",
+    "status": "scheduled",
+    "slug": "household-category-rule",
+    "title": "가계부 분류 기준 초보 흐름, 실수 방지 중심",
+    "description": "가계부 분류 기준을 검색한 독자가 바로 따라 할 수 있도록 결과 해석부터 계산 기준까지 압축했습니다.",
+    "date": "2026-05-16",
+    "publishAt": "2026-05-16T14:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "가계부 분류 기준",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "지출 항목이 매번 달라지는 문제",
+    "practicalExample": "월말 지출을 정리할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-054",
+    "status": "scheduled",
+    "slug": "fuel-cost-split",
+    "title": "주유비 나누기 개선 포인트, 계산 기준",
+    "description": "주유비 나누기 관련 결정을 반복하지 않도록 생활 적용, 계산 기준, 입력값 확인 항목을 한 번에 비교합니다.",
+    "date": "2026-05-16",
+    "publishAt": "2026-05-16T19:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "주유비 나누기",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "운전자 부담이 커지는 문제",
+    "practicalExample": "차량 동승 비용을 나눌 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-055",
+    "status": "scheduled",
+    "slug": "event-countdown-plan",
+    "title": "행사 남은 기간 선택법, 생활 적용과 계산 기준",
+    "description": "행사 남은 기간은 애매할 때 생활 적용을 먼저 보고 입력값 확인까지 확인하는 기준을 제시합니다.",
+    "date": "2026-05-17",
+    "publishAt": "2026-05-17T00:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "행사 남은 기간",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "준비 단계가 뒤로 밀리는 문제",
+    "practicalExample": "오픈일이나 발표일을 준비할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-056",
+    "status": "scheduled",
+    "slug": "school-supply-budget",
+    "title": "준비물 예산 정리 빠른 정리, 실수 방지까지",
+    "description": "준비물 예산 정리를 글, 도구, 업무 흐름에 적용할 때 필요한 입력값 확인과 실수 방지를 정리했습니다.",
+    "date": "2026-05-17",
+    "publishAt": "2026-05-17T05:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "문제 해결",
+    "mainKeyword": "준비물 예산 정리",
+    "expandedKeywords": [
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지"
+    ],
+    "readerProblem": "품목이 많아 총액을 놓치는 문제",
+    "practicalExample": "학기 시작 전 구매 목록을 볼 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-057",
+    "status": "scheduled",
+    "slug": "exercise-time-record",
+    "title": "운동 시간 기록 검토 순서, 입력값 확인 활용",
+    "description": "운동 시간 기록은 입력값 확인, 결과 해석, 실수 방지를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "date": "2026-05-17",
+    "publishAt": "2026-05-17T10:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Checklist",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "운동 시간 기록",
+    "expandedKeywords": [
+      "입력값 확인",
+      "결과 해석",
+      "실수 방지",
+      "생활 적용"
+    ],
+    "readerProblem": "운동량을 감으로만 기억하는 문제",
+    "practicalExample": "주간 활동 시간을 정리할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-058",
+    "status": "scheduled",
+    "slug": "water-intake-routine",
+    "title": "물 마시기 기록 운영 체크, 실수 방지 반영",
+    "description": "물 마시기 기록을 준비할 때 놓치기 쉬운 결과 해석, 실수 방지, 생활 적용을 짧게 점검합니다.",
+    "date": "2026-05-17",
+    "publishAt": "2026-05-17T15:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Explainer",
+    "searchIntent": "실행",
+    "mainKeyword": "물 마시기 기록",
+    "expandedKeywords": [
+      "결과 해석",
+      "실수 방지",
+      "생활 적용",
+      "계산 기준"
+    ],
+    "readerProblem": "마신 양을 과대평가하는 문제",
+    "practicalExample": "하루 루틴을 점검할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-059",
+    "status": "scheduled",
+    "slug": "sleep-hour-note",
+    "title": "수면 시간 메모 사례별 정리, 계산 기준 중심",
+    "description": "수면 시간 메모 상황에서 실수 방지와 생활 적용은 헷갈릴 때 보는 실무형 정리입니다.",
+    "date": "2026-05-17",
+    "publishAt": "2026-05-17T20:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "비교",
+    "mainKeyword": "수면 시간 메모",
+    "expandedKeywords": [
+      "실수 방지",
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인"
+    ],
+    "readerProblem": "잠든 시간과 누운 시간을 섞는 문제",
+    "practicalExample": "주간 컨디션을 비교할 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  },
+  {
+    "id": "generated-060",
+    "status": "scheduled",
+    "slug": "grocery-unit-price",
+    "title": "장보기 단가 비교 발행 전 검토, 결과 해석",
+    "description": "장보기 단가 비교는 필요한 순간부터 입력값 확인과 결과 해석을 남기는 방법까지 안내합니다.",
+    "date": "2026-05-18",
+    "publishAt": "2026-05-18T01:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "FAQ",
+    "searchIntent": "질문 답변",
+    "mainKeyword": "장보기 단가 비교",
+    "expandedKeywords": [
+      "생활 적용",
+      "계산 기준",
+      "입력값 확인",
+      "결과 해석"
+    ],
+    "readerProblem": "묶음 상품이 실제로 싼지 모르는 문제",
+    "practicalExample": "마트에서 용량별 가격을 볼 때",
+    "primarySourceName": "한국소비자원",
+    "primarySourceUrl": "https://www.kca.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "시간 계산기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "단위 변환기",
+        "path": "/tools/unit-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass"
+  }
+]
