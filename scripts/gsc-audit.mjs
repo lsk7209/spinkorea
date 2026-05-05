@@ -7,7 +7,7 @@ const SERVICE_ACCOUNT_PATH =
   process.env.GOOGLE_APPLICATION_CREDENTIALS ??
   "D:\\env\\cursorai-451704-85a5abbe8eeb.json";
 const OUTPUT_DIR = path.join(ROOT, "google-audit-output");
-const DEFAULT_SITE = process.env.GSC_SITE_URL ?? "https://www.spinkorea.kr/";
+const DEFAULT_SITE = process.env.GSC_SITE_URL ?? "https://spinkorea.kr/";
 const SCOPE = "https://www.googleapis.com/auth/webmasters.readonly";
 
 function base64Url(input) {

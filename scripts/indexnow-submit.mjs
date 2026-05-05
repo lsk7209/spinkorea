@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const ROOT = process.cwd();
-const HOST = "www.spinkorea.kr";
+const HOST = process.env.INDEXNOW_HOST ?? "www.spinkorea.kr";
 const KEY = process.env.INDEXNOW_KEY ?? "d805fbad2191692bd79af72fc8b69fb4";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const RECENT_HOURS = Number(process.env.INDEXNOW_RECENT_HOURS ?? "0");

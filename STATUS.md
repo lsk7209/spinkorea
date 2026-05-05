@@ -1,14 +1,14 @@
 # Status | 마지막: 2026-05-06
 
 ## 현재 작업
-생성글 데이터 청크 분할 완료. 생성글 상세는 해당 slug가 들어있는 청크만 동적 로드.
+IndexNow/GSC 알림 점검 완료. 운영 도메인 리다이렉트 기준은 `https://www.spinkorea.kr`.
 
 ## 최근 변경 (최근 5개만)
+- 05-06: GSC sitemap API 재제출 성공, submitted URL 96 / warnings 0 / errors 0 확인
+- 05-06: IndexNow HOST를 env로 오버라이드 가능하게 변경, 기본값은 운영 canonical `www.spinkorea.kr`
+- 05-06: robots.txt Sitemap을 운영 canonical `https://www.spinkorea.kr/sitemap.xml`로 정렬
 - 05-06: `generatedContent` 732KB 단일 청크를 38KB 렌더러 + 10개 데이터 청크로 분할
 - 05-06: 생성글 slug별 매니페스트와 `generated-content-chunks/*.json` 생성
-- 05-06: 생성글 상세에서 필요한 데이터 청크만 동적 로드하도록 변경
-- 05-06: chunk-01/chunk-10 샘플 브라우저 QA 통과
-- 05-06: content validate/lint/build 통과, 500KB 청크 경고 제거
 
 ## TODO
 - [ ] Bing Webmaster Tools IndexNow 403 재확인
@@ -18,6 +18,7 @@
 
 ## 결정사항
 - WordPress 아님: 플러그인/테마 최적화 대상 없음
+- 운영 canonical은 현재 Vercel 리다이렉트 기준에 맞춰 `https://www.spinkorea.kr` 유지
 - 예약 발행: 2026-05-05 18:00 KST부터 5시간 간격 유지
 - 마지막 예약 글: 2026-09-07 13:00 KST
 - 생성 글 SEO: BlogPosting + FAQPage JSON-LD를 함께 출력
@@ -25,5 +26,5 @@
 
 ## 주의
 - 배포 hook URL 출력 금지, GitHub Secret으로만 사용
-- GSC URL-prefix 속성은 `https://spinkorea.kr/sitemap.xml` 제출만 API 처리 가능
-- Bing IndexNow 403은 optional warning으로 유지 중
+- GSC URL-prefix 속성은 `https://spinkorea.kr/sitemap.xml` 제출만 API 처리 가능하나 실제 운영 canonical은 www
+- Bing IndexNow 403은 optional warning으로 유지 중, Naver IndexNow는 200 확인
