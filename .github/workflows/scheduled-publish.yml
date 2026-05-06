@@ -15,9 +15,9 @@ jobs:
       GSC_SITEMAP_URL: https://spinkorea.kr/sitemap.xml
       INDEXNOW_RECENT_HOURS: 6
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: npm
