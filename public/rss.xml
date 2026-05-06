@@ -5,8 +5,16 @@
     <link>https://www.spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 05 May 2026 19:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>가중치 랜덤 선택 비교법, 확률 설정과 중복 방지</title>
+      <link>https://www.spinkorea.kr/blog/weighted-choice-rule</link>
+      <description>가중치 랜덤 선택은 필요한 순간부터 공정성과 중복 방지를 남기는 방법까지 안내합니다.</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/weighted-choice-rule</guid>
+    </item>
 
     <item>
       <title>중복 당첨 방지 룰 실행 순서, 결과 기록까지</title>

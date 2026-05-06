@@ -1,17 +1,17 @@
 # Status | 마지막: 2026-05-06
 
 ## 현재 작업
-IndexNow/GSC 알림 점검 완료. 운영 도메인 리다이렉트 기준은 `https://www.spinkorea.kr`.
+GSC 실제 노출 키워드 기준 메인 페이지 SEO 스니펫 개선 완료.
 
 ## 최근 변경 (최근 5개만)
+- 05-06: 메인 title/description/H1을 `온라인 룰렛`, `무료 룰렛`, `스핀 돌리기` 노출 쿼리 기준으로 개선
+- 05-06: 2026-05-06 09:00 KST 예약글 `weighted-choice-rule`이 sitemap/RSS/llms에 포함
 - 05-06: GSC sitemap API 재제출 성공, submitted URL 96 / warnings 0 / errors 0 확인
 - 05-06: IndexNow HOST를 env로 오버라이드 가능하게 변경, 기본값은 운영 canonical `www.spinkorea.kr`
 - 05-06: robots.txt Sitemap을 운영 canonical `https://www.spinkorea.kr/sitemap.xml`로 정렬
-- 05-06: `generatedContent` 732KB 단일 청크를 38KB 렌더러 + 10개 데이터 청크로 분할
-- 05-06: 생성글 slug별 매니페스트와 `generated-content-chunks/*.json` 생성
 
 ## TODO
-- [ ] Bing Webmaster Tools IndexNow 403 재확인
+- [ ] Bing Webmaster Tools IndexNow 403은 BWT IndexNow 탭에서 사이트 권한/수신 로그 재확인
 - [ ] AdSense OAuth 인증 후 `npm run audit:adsense -- --code=...` 재실행
 - [ ] GSC sitemap 발견 URL 갱신 상태 확인
 - [ ] GitHub Actions Node.js 20 deprecation 경고 대응

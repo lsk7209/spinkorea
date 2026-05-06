@@ -47,9 +47,9 @@ interface HomeProps {
 
 export default function Home({
     initialItems = DEFAULT_ITEMS,
-    title = "무료 온라인 룰렛 돌리기 SpinFlow | 원판돌리기·랜덤 추첨기",
-    description = "점심 메뉴, 당첨자, 벌칙, 순서를 공정하게 정하는 무료 온라인 룰렛입니다. 설치 없이 모바일과 PC에서 바로 사용할 수 있습니다.",
-    keywords = "룰렛, 룰렛돌리기, 원판돌리기, 룰렛게임, 랜덤추첨기, 제비뽑기, 사다리타기, 점심메뉴추천, 벌칙정하기, 당첨자추첨, SpinFlow, 스핀플로우, 온라인룰렛, 모바일룰렛",
+    title = "온라인 룰렛 돌리기 | 무료 원판돌리기·스핀 추첨",
+    description = "점심 메뉴, 당첨자, 벌칙을 바로 정하는 무료 온라인 룰렛입니다. 설치 없이 모바일·PC에서 공정하게 스핀 돌리기를 시작하세요.",
+    keywords = "온라인 룰렛, 무료 룰렛, 스핀 돌리기, 룰렛돌리기, 원판돌리기, 룰렛게임, 랜덤추첨기, 점심메뉴추천, 벌칙정하기, 당첨자추첨, SpinFlow",
     ArticleComponent = SEOArticle,
     structuredData,
     preferInitialOnFirstLoad = false,
@@ -166,13 +166,13 @@ export default function Home({
                     </div>
 
                     <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight text-slate-950 [word-break:keep-all]">
-                        무료 온라인 룰렛 돌리기
+                        온라인 룰렛 돌리기
                     </h1>
 
                     <p className="text-base md:text-xl text-slate-600 max-w-2xl leading-relaxed font-medium [word-break:keep-all]">
-                        점심 메뉴, 당첨자, 벌칙, 순서를 공정하게 정하세요.{" "}
+                        무료 룰렛으로 점심 메뉴, 당첨자, 벌칙, 순서를 공정하게 정하세요.{" "}
                         <br className="hidden md:block" />
-                        SpinFlow는 설치 없이 바로 쓰는 룰렛과 생활 유틸리티를 제공합니다.
+                        SpinFlow는 설치 없이 바로 쓰는 스핀 돌리기와 생활 유틸리티를 제공합니다.
                     </p>
                 </div>
             </header>
