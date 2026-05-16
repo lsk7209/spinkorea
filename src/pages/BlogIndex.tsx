@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   getPostPublishDate,
   getPublishedPostMetadata,
 } from "@/data/postMetadata";
 import SEO from "@/components/SEO";
+import AdBanner from "@/components/AdBanner";
 
 const SITE_ORIGIN = "https://www.spinkorea.kr";
 const INITIAL_POST_COUNT = 12;
@@ -57,8 +58,11 @@ export default function BlogIndex() {
       <main className="flex-1 max-w-4xl mx-auto w-full px-4 py-12">
         <div className="grid gap-8">
           {visiblePosts.map((post, index) => (
+            <Fragment key={post.slug}>
+            {index === 6 && (
+              <AdBanner slot="2917736562" format="auto" className="my-2" />
+            )}
             <Link
-              key={post.slug}
               to={`/blog/${post.slug}`}
               className="block group"
             >
@@ -99,6 +103,7 @@ export default function BlogIndex() {
                 </div>
               </article>
             </Link>
+            </Fragment>
           ))}
         </div>
 

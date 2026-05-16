@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Lightbulb, HelpCircle, Wrench } from 'lucide-react';
 import SEO, { type SEOProps } from '@/components/SEO';
+import AdBanner from '@/components/AdBanner';
 
 interface FAQItem {
     question: string;
@@ -179,6 +180,9 @@ export default function ToolLayout({
                         </div>
                     </div>
                 )}
+
+                {/* Ad Banner */}
+                <AdBanner slot="2917736562" format="auto" className="my-4" />
             </main>
         </div>
     );

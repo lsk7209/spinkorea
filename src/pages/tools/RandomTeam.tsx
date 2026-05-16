@@ -151,7 +151,7 @@ export default function RandomTeam() {
                   style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <div className="font-bold text-neon-secondary mb-2">
-                    User {idx + 1}팀 ({team.length}명)
+                    {idx + 1}팀 ({team.length}명)
                   </div>
                   <div className="text-gray-300 leading-relaxed">
                     {team.join(", ")}
