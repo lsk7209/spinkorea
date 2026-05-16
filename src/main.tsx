@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./styles/globals.css";
 import App from "./App.tsx";
 
-const gaMeasurementId = import.meta.env.VITE_GA_MEASUREMENT_ID || "G-8RCEVHDSK5";
+const gaMeasurementId = import.meta.env.VITE_GA_MEASUREMENT_ID || "G-KY5S8XFJFG";
 
 const initializeAnalytics = () => {
   void import("react-ga4").then(({ default: ReactGA }) => {
