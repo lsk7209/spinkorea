@@ -16,6 +16,7 @@ import SEOArticle from '@/components/SEOArticle';
 import SEO from '@/components/SEO';
 
 import RecommendedPresets from '@/components/RecommendedPresets';
+import SpinHistory from '@/components/SpinHistory';
 import { TEMPLATES } from '@/data/templates';
 import { trackEvent } from '@/utils/analytics';
 
@@ -60,6 +61,7 @@ export default function Home({
         updateItems,
         saveResult,
         lastResult,
+        history,
         urlWarning,
         urlUnsafe,
     } = useStatePersistence(initialItems, { preferInitialOnFirstLoad });
@@ -233,6 +235,7 @@ export default function Home({
                                 />
                             </div>
                         )}
+                        <SpinHistory history={history} />
                     </div>
                 </div>
 
@@ -278,6 +281,7 @@ export default function Home({
                             />
                         </div>
                     )}
+                    <SpinHistory history={history} />
                 </div>
             </main>
 

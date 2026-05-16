@@ -8,7 +8,9 @@ import { getStateFromUrl, updateUrlWithState } from '@/utils/url-state';
 
 const LAST_STATE_KEY = 'spinflow:lastState';
 const LAST_RESULT_KEY = 'spinflow:lastResult';
+const HISTORY_KEY = 'spinflow:history';
 const RESULT_EXPIRY_MINUTES = 5;
+const HISTORY_MAX = 10;
 
 interface StatePersistenceOptions {
   /**
@@ -30,6 +32,7 @@ export function useStatePersistence(initialItems: string[] = [], options: StateP
   const [urlWarning, setUrlWarning] = useState(false);
   const [urlUnsafe, setUrlUnsafe] = useState(false);
   const [lastResult, setLastResult] = useState<LastResult | null>(null);
+  const [history, setHistory] = useState<string[]>([]);
 
   // 초기 로드: URL 우선, 없으면 localStorage
   useEffect(() => {
@@ -48,6 +51,15 @@ export function useStatePersistence(initialItems: string[] = [], options: StateP
           console.error('Failed to load saved state:', error);
         }
       }
+    }
+
+    // 히스토리 로드
+    const savedHistory = localStorage.getItem(HISTORY_KEY);
+    if (savedHistory) {
+      try {
+        const h = JSON.parse(savedHistory) as string[];
+        if (Array.isArray(h)) setHistory(h);
+      } catch { /* ignore */ }
     }
 
     // 최근 결과 로드
@@ -106,6 +118,13 @@ export function useStatePersistence(initialItems: string[] = [], options: StateP
     } catch (error) {
       console.error('Failed to save result to localStorage:', error);
     }
+
+    // 히스토리 업데이트 (최신이 앞, max 10)
+    setHistory((prev) => {
+      const next = [result, ...prev].slice(0, HISTORY_MAX);
+      try { localStorage.setItem(HISTORY_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+      return next;
+    });
   }, []);
 
   return {
@@ -113,6 +132,7 @@ export function useStatePersistence(initialItems: string[] = [], options: StateP
     updateItems,
     saveResult,
     lastResult,
+    history,
     urlWarning,
     urlUnsafe,
   };
