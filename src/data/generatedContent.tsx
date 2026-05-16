@@ -29,88 +29,7 @@ const ARTICLE_CHUNKS = import.meta.glob("./generated-content-chunks/*.json", {
   import: "default",
 }) as Record<string, () => Promise<GeneratedArticlePlan[]>>;
 
-// ─── 카테고리 색상 테마 ────────────────────────────────────────────
-const CATEGORY_THEME: Record<string, {
-  badge: string;
-  summary: string;
-  summaryTitle: string;
-  summaryBullet: string;
-  accent: string;
-  icon: string;
-}> = {
-  "룰렛·랜덤 결정": {
-    badge: "bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300",
-    summary: "bg-gradient-to-br from-violet-50 to-purple-50 border-violet-200 dark:from-violet-950/40 dark:to-purple-950/40 dark:border-violet-800",
-    summaryTitle: "text-violet-900 dark:text-violet-200",
-    summaryBullet: "text-violet-600 dark:text-violet-400",
-    accent: "border-l-violet-400",
-    icon: "🎯",
-  },
-  "계산기·생활 유틸": {
-    badge: "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
-    summary: "bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200 dark:from-blue-950/40 dark:to-indigo-950/40 dark:border-blue-800",
-    summaryTitle: "text-blue-900 dark:text-blue-200",
-    summaryBullet: "text-blue-600 dark:text-blue-400",
-    accent: "border-l-blue-400",
-    icon: "🔢",
-  },
-  "텍스트·문서 도구": {
-    badge: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300",
-    summary: "bg-gradient-to-br from-emerald-50 to-green-50 border-emerald-200 dark:from-emerald-950/40 dark:to-green-950/40 dark:border-emerald-800",
-    summaryTitle: "text-emerald-900 dark:text-emerald-200",
-    summaryBullet: "text-emerald-600 dark:text-emerald-400",
-    accent: "border-l-emerald-400",
-    icon: "📝",
-  },
-  "개발자 웹 도구": {
-    badge: "bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300",
-    summary: "bg-gradient-to-br from-orange-50 to-amber-50 border-orange-200 dark:from-orange-950/40 dark:to-amber-950/40 dark:border-orange-800",
-    summaryTitle: "text-orange-900 dark:text-orange-200",
-    summaryBullet: "text-orange-600 dark:text-orange-400",
-    accent: "border-l-orange-400",
-    icon: "⚙️",
-  },
-  "생산성·업무 방식": {
-    badge: "bg-teal-100 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300",
-    summary: "bg-gradient-to-br from-teal-50 to-cyan-50 border-teal-200 dark:from-teal-950/40 dark:to-cyan-950/40 dark:border-teal-800",
-    summaryTitle: "text-teal-900 dark:text-teal-200",
-    summaryBullet: "text-teal-600 dark:text-teal-400",
-    accent: "border-l-teal-400",
-    icon: "📊",
-  },
-  "웰니스·습관": {
-    badge: "bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300",
-    summary: "bg-gradient-to-br from-rose-50 to-pink-50 border-rose-200 dark:from-rose-950/40 dark:to-pink-950/40 dark:border-rose-800",
-    summaryTitle: "text-rose-900 dark:text-rose-200",
-    summaryBullet: "text-rose-600 dark:text-rose-400",
-    accent: "border-l-rose-400",
-    icon: "🌿",
-  },
-  "SEO·콘텐츠 운영": {
-    badge: "bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
-    summary: "bg-gradient-to-br from-purple-50 to-fuchsia-50 border-purple-200 dark:from-purple-950/40 dark:to-fuchsia-950/40 dark:border-purple-800",
-    summaryTitle: "text-purple-900 dark:text-purple-200",
-    summaryBullet: "text-purple-600 dark:text-purple-400",
-    accent: "border-l-purple-400",
-    icon: "📈",
-  },
-};
-
-const DEFAULT_THEME = CATEGORY_THEME["생산성·업무 방식"];
-
-function getTheme(category: string) {
-  return CATEGORY_THEME[category] ?? DEFAULT_THEME;
-}
-
-const CONTENT_TYPE_ICONS: Record<string, string> = {
-  "How-to": "🛠️",
-  Checklist: "✅",
-  Explainer: "💡",
-  Comparison: "⚖️",
-  FAQ: "❓",
-};
-
-// ─── 언어 파티클 헬퍼 ────────────────────────────────────────────
+// ─── 언어 파티클 헬퍼 ──────────────────────────────────────────────
 function hasFinalConsonant(value: string): boolean {
   const last = [...value.trim()].at(-1);
   if (!last) return false;
@@ -196,20 +115,20 @@ function buildPracticalTips(a: GeneratedArticlePlan) {
   const tv = tipVariant(a);
   const sets = [
     [
-      { icon: "🚀", title: `${a.mainKeyword}은 짧게 시작할수록 지속됩니다`, body: `처음부터 완벽한 ${k0} 기준을 세우려 하면 실행이 미뤄집니다. 선택지 3개짜리 간단한 버전으로 먼저 돌려보고 피드백을 반영해 조금씩 확장하는 방식이 실제로 오래 씁니다.` },
-      { icon: "📌", title: `${k2} 결과는 공유 가능한 형태로 남기세요`, body: `결과를 자신만 알고 있으면 다음 회차에 같은 논의가 반복됩니다. URL 공유나 짧은 메모로 ${k3}까지 함께 남기면 팀 전체의 결정 속도가 빨라집니다.` },
+      { title: `${a.mainKeyword}은 짧게 시작할수록 지속됩니다`, body: `처음부터 완벽한 ${k0} 기준을 세우려 하면 실행이 미뤄집니다. 선택지 3개짜리 간단한 버전으로 먼저 돌려보고 피드백을 반영해 조금씩 확장하는 방식이 실제로 오래 씁니다.` },
+      { title: `${k2} 결과는 공유 가능한 형태로 남기세요`, body: `결과를 자신만 알고 있으면 다음 회차에 같은 논의가 반복됩니다. URL 공유나 짧은 메모로 ${k3}까지 함께 남기면 팀 전체의 결정 속도가 빨라집니다.` },
     ],
     [
-      { icon: "🔒", title: `${withObjectPhrase(k0)} 먼저 고정하면 실행이 빨라집니다`, body: `매번 ${k0} 기준을 다시 논의하면 정작 ${a.mainKeyword} 실행보다 기준 정하기에 시간이 더 걸립니다. 한 번 정한 기준은 명시적인 재검토 전까지 유지합니다.` },
-      { icon: "✂️", title: `${a.practicalExample}에서 ${k1}는 3개 이하로 유지`, body: `선택지가 많아질수록 결과 설명이 복잡해집니다. 7개 이상이라면 ${k2} 기준으로 먼저 걸러내고 나머지만 최종 결정에 사용하세요.` },
+      { title: `${withObjectPhrase(k0)} 먼저 고정하면 실행이 빨라집니다`, body: `매번 ${k0} 기준을 다시 논의하면 정작 ${a.mainKeyword} 실행보다 기준 정하기에 시간이 더 걸립니다. 한 번 정한 기준은 명시적인 재검토 전까지 유지합니다.` },
+      { title: `${a.practicalExample}에서 ${k1}는 3개 이하로 유지`, body: `선택지가 많아질수록 결과 설명이 복잡해집니다. 7개 이상이라면 ${k2} 기준으로 먼저 걸러내고 나머지만 최종 결정에 사용하세요.` },
     ],
     [
-      { icon: "⚡", title: `실행 전 5초 점검으로 실수 90%를 막을 수 있습니다`, body: `"선택지가 맞는가?", "${k0}는 현재 상황에 적합한가?" 이 두 가지만 빠르게 확인해도 대부분의 실행 오류를 방지할 수 있습니다.` },
-      { icon: "📝", title: `${k3}는 결과와 함께 한 줄로 기록하세요`, body: `나중에 같은 상황이 왔을 때 이전 결정의 이유를 설명해야 하는 경우가 생깁니다. "${k2} 기준, ${k3} 적용"처럼 짧게라도 남겨두면 다음 결정이 훨씬 빨라집니다.` },
+      { title: `실행 전 5초 점검으로 실수 90%를 막을 수 있습니다`, body: `"선택지가 맞는가?", "${k0}는 현재 상황에 적합한가?" 이 두 가지만 빠르게 확인해도 대부분의 실행 오류를 방지할 수 있습니다.` },
+      { title: `${k3}는 결과와 함께 한 줄로 기록하세요`, body: `나중에 같은 상황이 왔을 때 이전 결정의 이유를 설명해야 하는 경우가 생깁니다. "${k2} 기준, ${k3} 적용"처럼 짧게라도 남겨두면 다음 결정이 훨씬 빨라집니다.` },
     ],
     [
-      { icon: "🔄", title: `반복 사용이라면 ${withObjectPhrase(k1)} 템플릿화하세요`, body: `같은 ${a.mainKeyword} 상황이 자주 반복된다면 ${k1}과 ${k0}를 세트로 저장해두고 재사용합니다. 매번 처음부터 설정하는 시간을 줄이고 결과 일관성도 높아집니다.` },
-      { icon: "🔍", title: `결과 이의 제기는 절차 공개로 줄일 수 있습니다`, body: `${a.readerProblem} 상황에서 이의가 자주 생긴다면 ${k0} 기준을 참여자에게 미리 공개하세요. 결과보다 과정이 투명하면 납득도가 크게 올라갑니다.` },
+      { title: `반복 사용이라면 ${withObjectPhrase(k1)} 템플릿화하세요`, body: `같은 ${a.mainKeyword} 상황이 자주 반복된다면 ${k1}과 ${k0}를 세트로 저장해두고 재사용합니다. 매번 처음부터 설정하는 시간을 줄이고 결과 일관성도 높아집니다.` },
+      { title: `결과 이의 제기는 절차 공개로 줄일 수 있습니다`, body: `${a.readerProblem} 상황에서 이의가 자주 생긴다면 ${k0} 기준을 참여자에게 미리 공개하세요. 결과보다 과정이 투명하면 납득도가 크게 올라갑니다.` },
     ],
   ];
   return sets[tv];
@@ -222,21 +141,20 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
   if (a.contentType === "Checklist") {
     return (
       <>
-        <h2>✅ {a.mainKeyword} 체크리스트: 단계별로 나누면 빠집니다</h2>
+        <h2>{a.mainKeyword} 체크리스트: 단계별로 나누면 빠집니다</h2>
         <p>체크리스트를 한꺼번에 보면 빠뜨리기 쉽습니다. 준비·진행·공유 세 단계로 나눠 각 단계에서 하나씩 확인하면 누락이 줄어듭니다.</p>
         <div className="grid gap-3 md:grid-cols-3">
           {[
-            ["🟢 준비 단계", `${k0} 기준을 먼저 정하고, 선택지를 3~7개로 압축합니다. 예외 조건이 있다면 이 단계에서 명시합니다.`],
-            ["🟡 진행 단계", `${k1} 기준에 따라 실행하고, 예기치 못한 상황이 생기면 즉흥 수정보다 다음 회차 규칙 반영으로 처리합니다.`],
-            ["🔵 공유 단계", `${withObjectPhrase(k3)} 결과와 함께 짧게 남깁니다. 공유 URL이나 캡처 한 장으로도 충분합니다.`],
+            ["준비 단계", `${k0} 기준을 먼저 정하고, 선택지를 3~7개로 압축합니다. 예외 조건이 있다면 이 단계에서 명시합니다.`],
+            ["진행 단계", `${k1} 기준에 따라 실행하고, 예기치 못한 상황이 생기면 즉흥 수정보다 다음 회차 규칙 반영으로 처리합니다.`],
+            ["공유 단계", `${withObjectPhrase(k3)} 결과와 함께 짧게 남깁니다. 공유 URL이나 캡처 한 장으로도 충분합니다.`],
           ].map(([phase, text]) => (
-            <div key={phase as string} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-800">
-              <p className="font-bold text-slate-900 dark:text-slate-100">{phase}</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{text}</p>
+            <div key={phase as string} className="rounded-lg border border-gray-200 bg-white p-4">
+              <p className="font-semibold text-gray-900">{phase}</p>
+              <p className="mt-2 text-sm text-gray-800">{text}</p>
             </div>
           ))}
         </div>
-        <p className="text-sm text-slate-500 dark:text-slate-400">💡 세 단계 중 가장 자주 건너뛰는 것은 공유 단계입니다. {withObjectPhrase(k3)} 한 줄 남기는 것만으로도 다음 결정의 근거가 됩니다.</p>
       </>
     );
   }
@@ -244,34 +162,31 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
   if (a.contentType === "Comparison") {
     return (
       <>
-        <h2>⚖️ {withObjectPhrase(a.mainKeyword)} 감으로 고를 때 vs 기준으로 고를 때</h2>
+        <h2>{withObjectPhrase(a.mainKeyword)} 감으로 고를 때와 기준으로 고를 때 차이</h2>
         <p>두 방식의 결과 자체는 비슷하게 보일 수 있지만, 결과를 설명하는 비용과 재사용 가능성이 크게 다릅니다.</p>
-        <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
-          <table className="min-w-full">
-            <thead className="bg-slate-100 dark:bg-slate-800">
+        <div className="overflow-x-auto">
+          <table>
+            <thead>
               <tr>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700 dark:text-slate-300">방식</th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700 dark:text-slate-300">장점</th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700 dark:text-slate-300">주의점</th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700 dark:text-slate-300">적합한 상황</th>
+                <th>방식</th>
+                <th>장점</th>
+                <th>주의점</th>
+                <th>적합한 상황</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 dark:divide-slate-700">
+            <tbody>
               {[
                 ["즉흥 선택", "빠르게 끝납니다", `${a.readerProblem}이 반복될 수 있습니다`, "결과 설명이 불필요한 개인 결정"],
-                [`${k0} 기준`, `${withObjectPhrase(k1)} 설명하기 쉽습니다`, "처음 한 번 기준을 적어야 합니다", "여러 사람이 관여하는 결정"],
+                [`${k0} 기준 선택`, `${withObjectPhrase(k1)} 설명하기 쉽습니다`, "처음 한 번 기준을 적어야 합니다", "여러 사람이 관여하는 결정"],
                 ["도구 사용", `${k3}까지 자동으로 남기기 쉽습니다`, "입력값 정리가 먼저 필요합니다", "반복 실행·공정성이 중요한 결정"],
               ].map((row, i) => (
-                <tr key={i} className="bg-white dark:bg-slate-900">
-                  {row.map((cell, j) => (
-                    <td key={j} className="px-4 py-3 text-sm text-slate-700 dark:text-slate-300">{cell}</td>
-                  ))}
+                <tr key={i}>
+                  {row.map((cell, j) => <td key={j}>{cell}</td>)}
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-slate-500 dark:text-slate-400">💡 {a.practicalExample}에는 도구를 활용한 방식이 가장 효율적입니다. 한 번 입력해 두면 이후에는 버튼 하나로 같은 기준을 재현할 수 있습니다.</p>
       </>
     );
   }
@@ -279,17 +194,17 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
   if (a.contentType === "FAQ") {
     return (
       <>
-        <h2>❓ {a.mainKeyword}: 자주 생기는 의문 3가지</h2>
-        <p>FAQ형 접근은 결론을 먼저 보여주기보다 독자가 실제로 막히는 지점을 먼저 짚어주는 방식입니다.</p>
+        <h2>{a.mainKeyword}: 자주 생기는 의문 3가지</h2>
+        <p>{k0}, {k1}, {withObjectPhrase(k2)} 질문 단위로 나누면 검색 의도와 본문 구조가 자연스럽게 맞아집니다.</p>
         <div className="space-y-3">
           {[
             [`${withObjectPhrase(k0)} 언제 다시 검토해야 하나요?`, `상황이 바뀌거나 참여자 구성이 달라질 때마다 ${k0}를 재확인합니다. 기준이 오래되면 현실과 어긋나는 결과가 나올 수 있습니다.`],
             [`${withObjectPhrase(k1)} 팀 전체가 공유하는 방법은?`, `공유 URL이나 짧은 문서 링크로 동일한 ${k1}를 전달합니다. 버전이 달라지면 결과도 달라지므로 최신본 URL을 단일 링크로 관리합니다.`],
             [`${k2}와 ${k3} 중 먼저 정해야 하는 것은?`, `${k2}를 먼저 정하면 ${k3}를 좁히기 쉬워집니다. 반대 순서로 가면 기준이 흔들려 결과를 설명할 때 어려움이 생깁니다.`],
           ].map(([q, ans], idx) => (
-            <div key={q as string} className={`rounded-xl border p-4 ${idx % 2 === 0 ? "border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/50" : "border-blue-100 bg-blue-50/50 dark:border-blue-900/40 dark:bg-blue-950/20"}`}>
-              <p className="font-semibold text-slate-900 dark:text-slate-100">Q{idx + 1}. {q}</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-700 dark:text-slate-300">A. {ans}</p>
+            <div key={idx} className="rounded-lg border border-gray-200 bg-white p-4">
+              <p className="font-semibold text-gray-900">Q{idx + 1}. {q}</p>
+              <p className="mt-2 text-sm text-gray-800">A. {ans}</p>
             </div>
           ))}
         </div>
@@ -300,18 +215,18 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
   if (a.contentType === "Explainer") {
     return (
       <>
-        <h2>💡 {withObjectPhrase(a.mainKeyword)} 쉽게 이해하는 세 가지 기준</h2>
-        <p>{withEunNeun(a.mainKeyword)} 결과만 보면 단순해 보이지만 실제로는 {k0}, {k1}, {withEunNeun(k2)} 함께 움직입니다. 세 가지를 분리하면 같은 결과라도 왜 그렇게 판단했는지 설명하기 쉬워집니다.</p>
-        <div className="grid gap-4 md:grid-cols-3">
+        <h2>{withObjectPhrase(a.mainKeyword)} 쉽게 이해하는 세 가지 기준</h2>
+        <p>{withEunNeun(a.mainKeyword)} 결과만 보면 단순해 보이지만 실제로는 {k0}, {k1}, {withEunNeun(k2)} 함께 움직입니다. 이 세 가지를 분리해서 보면 같은 결과라도 왜 그렇게 판단했는지 설명하기 쉬워집니다.</p>
+        <div className="grid gap-3 md:grid-cols-3">
           {[
             [k0, "결정의 방향을 정합니다", `${withEunNeun(k0)} 바뀌면 선택지 구성 자체가 달라질 수 있습니다.`],
             [k1, "실행 범위를 정합니다", `${k1}이 넓으면 결과 해석이 어렵고, 좁으면 적용이 빠릅니다.`],
             [k2, "결과의 신뢰도를 높입니다", `${k2}가 명확할수록 참여자가 결과를 받아들이기 쉽습니다.`],
-          ].map(([label, role, desc], idx) => (
-            <div key={label as string} className={`rounded-xl border p-4 ${["border-violet-200 bg-violet-50 dark:border-violet-800 dark:bg-violet-950/30", "border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-950/30", "border-emerald-200 bg-emerald-50 dark:border-emerald-800 dark:bg-emerald-950/30"][idx]}`}>
-              <p className={`text-xs font-semibold uppercase tracking-wider ${["text-violet-500", "text-blue-500", "text-emerald-500"][idx]}`}>{role}</p>
-              <p className="mt-1 font-bold text-slate-900 dark:text-slate-100">{label}</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{desc}</p>
+          ].map(([label, role, desc]) => (
+            <div key={label as string} className="rounded-lg border border-gray-200 bg-white p-4">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">{role}</p>
+              <p className="mt-1 font-bold text-gray-900">{label}</p>
+              <p className="mt-2 text-sm text-gray-800">{desc}</p>
             </div>
           ))}
         </div>
@@ -322,11 +237,11 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
   // How-to (default)
   return (
     <>
-      <h2>🛠️ {a.mainKeyword} 실행 흐름: 단계마다 멈추지 않는 법</h2>
+      <h2>{a.mainKeyword} 실행 흐름: 단계마다 멈추지 않는 법</h2>
       <p>{withObjectPhrase(k0)} 정하고, {withObjectPhrase(k1)} 확인하고, {k2}로 실행한 뒤 {withObjectPhrase(k3)} 남기는 순서로 진행하면 어느 단계에서 막혀도 어디서 다시 시작할지 알 수 있습니다.</p>
-      <div className="rounded-xl border border-green-200 bg-green-50 p-5 dark:border-green-900/50 dark:bg-green-950/30">
-        <p className="font-semibold text-green-900 dark:text-green-300">⚡ 빠른 실행 요약</p>
-        <ol className="mt-3 space-y-2 pl-5 list-decimal text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+      <div className="rounded-lg border border-gray-200 bg-gray-50 p-5">
+        <p className="font-semibold text-gray-900">빠른 실행 요약</p>
+        <ol className="mt-3 space-y-2 pl-5 list-decimal text-sm text-gray-800">
           <li>{withObjectPhrase(k0)} 한 줄로 정합니다.</li>
           <li>선택지를 {k1} 기준으로 5개 이내로 줄입니다.</li>
           <li>{k2}로 최종 실행하고 결과를 확인합니다.</li>
@@ -342,18 +257,18 @@ function MistakesSection({ article: a }: { article: GeneratedArticlePlan }) {
   const mistakes = buildMistakes(a);
   return (
     <>
-      <h2>⚠️ {a.mainKeyword}에서 자주 하는 실수 3가지</h2>
+      <h2>{a.mainKeyword}에서 자주 하는 실수 3가지</h2>
       <p>같은 실수를 반복하지 않으려면 결과가 나쁜 이유를 먼저 알아야 합니다. 아래는 {a.practicalExample} 상황에서 실제로 자주 발생하는 패턴입니다.</p>
       <div className="space-y-3">
         {mistakes.map((m, i) => (
-          <div key={i} className="flex gap-4 rounded-xl border border-red-100 bg-red-50 p-4 dark:border-red-900/40 dark:bg-red-950/20">
+          <div key={i} className="flex gap-4 rounded-lg border border-gray-200 bg-white p-4">
             <div className="flex-shrink-0">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-red-500 text-sm font-bold text-white">{i + 1}</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">{i + 1}</span>
             </div>
             <div>
-              <p className="font-semibold text-red-800 dark:text-red-300">{m.title}</p>
-              <p className="mt-1 text-sm text-slate-600 dark:text-slate-400"><span className="font-medium text-slate-700 dark:text-slate-300">왜 문제인가:</span> {m.why}</p>
-              <p className="mt-1 text-sm text-slate-600 dark:text-slate-400"><span className="font-medium text-emerald-700 dark:text-emerald-400">✅ 해결:</span> {m.fix}</p>
+              <p className="font-semibold text-gray-900">{m.title}</p>
+              <p className="mt-1 text-sm text-gray-800"><span className="font-medium">왜 문제인가:</span> {m.why}</p>
+              <p className="mt-1 text-sm text-gray-800"><span className="font-medium">해결 방법:</span> {m.fix}</p>
             </div>
           </div>
         ))}
@@ -367,12 +282,12 @@ function PracticalTipsSection({ article: a }: { article: GeneratedArticlePlan })
   const tips = buildPracticalTips(a);
   return (
     <>
-      <h2>💡 실전 팁: {a.mainKeyword}를 더 잘 쓰는 방법</h2>
+      <h2>실전 팁: {a.mainKeyword}를 더 잘 쓰는 방법</h2>
       <div className="grid gap-4 md:grid-cols-2">
         {tips.map((tip) => (
-          <div key={tip.title} className="rounded-xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-800/50 dark:bg-amber-950/20">
-            <p className="font-semibold text-amber-900 dark:text-amber-300">{tip.icon} {tip.title}</p>
-            <p className="mt-2 text-sm leading-relaxed text-slate-700 dark:text-slate-300">{tip.body}</p>
+          <div key={tip.title} className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+            <p className="font-semibold text-gray-900">{tip.title}</p>
+            <p className="mt-2 text-sm text-gray-800">{tip.body}</p>
           </div>
         ))}
       </div>
@@ -384,13 +299,13 @@ function PracticalTipsSection({ article: a }: { article: GeneratedArticlePlan })
 function ContextSection({ article: a }: { article: GeneratedArticlePlan }) {
   const variant = articleVariant(a);
   const [k0, k1, k2, k3] = [0, 1, 2, 3].map(i => keywordAt(a, i));
-  const contents: [string, string, string][] = [
-    [`🔎 ${withObjectPhrase(a.mainKeyword)} 빠르게 점검하는 관점`, `가장 먼저 볼 것은 결과의 화려함이 아니라 독자가 바로 따라 할 수 있는지입니다. ${withWaGwa(k0)} ${withIga(k1)} 본문 안에서 자연스럽게 이어지면 검색 의도와 실행 흐름이 같이 살아납니다.`, "slate"],
-    [`📍 ${withObjectPhrase(a.mainKeyword)} 실제 상황에 맞추는 방법`, `${a.practicalExample}에는 정답 하나보다 납득 가능한 절차가 더 중요합니다. 먼저 ${withObjectPhrase(k0)} 확인하고, 이해관계자가 헷갈릴 수 있는 ${withObjectPhrase(k1)} 짧게 적어두면 결과 설명이 쉬워집니다.`, "slate"],
-    [`📂 ${withObjectPhrase(a.mainKeyword)} 문서로 남길 때 필요한 것`, `실행 후에는 결과만 저장하지 말고 왜 그 방식으로 정했는지 함께 남기는 편이 좋습니다. ${withWaGwa(k2)} ${withObjectPhrase(k3)} 같이 적으면 나중에 같은 조건을 다시 확인할 때 설명 비용이 줄어듭니다.`, "slate"],
-    [`✂️ ${a.mainKeyword}에서 먼저 버릴 조건`, `모든 조건을 한 번에 반영하려고 하면 오히려 판단이 느려집니다. 이번 결정에 직접 영향을 주지 않는 후보를 덜어내고 ${withWaGwa(k0)} ${k2}만 먼저 남기면 실행 속도가 빨라집니다.`, "slate"],
-    [`🔁 ${withObjectPhrase(a.mainKeyword)} 반복 운영할 때의 기준`, `한 번 쓰고 끝나는 기준과 매번 다시 쓰는 기준은 다르게 설계해야 합니다. 반복 운영에서는 ${withObjectPhrase(k1)} 고정하고 ${k3}만 상황에 따라 바꾸는 방식이 관리하기 쉽습니다.`, "slate"],
-    [`🤝 ${a.mainKeyword}를 처음 팀에 도입할 때 설득하는 방법`, `새로운 결정 방식을 팀에 도입할 때는 결과의 정확성보다 절차의 투명성을 먼저 강조합니다. "${k0} 기준으로 정했고, ${k2}는 이렇게 처리했다"는 식으로 ${withObjectPhrase(k3)} 공개하면 처음 쓰는 사람도 이해하고 따라올 수 있습니다.`, "slate"],
+  const contents: [string, string][] = [
+    [`${withObjectPhrase(a.mainKeyword)} 빠르게 점검하는 관점`, `가장 먼저 볼 것은 결과의 화려함이 아니라 독자가 바로 따라 할 수 있는지입니다. ${withWaGwa(k0)} ${withIga(k1)} 본문 안에서 자연스럽게 이어지면 검색 의도와 실행 흐름이 같이 살아납니다.`],
+    [`${withObjectPhrase(a.mainKeyword)} 실제 상황에 맞추는 방법`, `${a.practicalExample}에는 정답 하나보다 납득 가능한 절차가 더 중요합니다. 먼저 ${withObjectPhrase(k0)} 확인하고, 이해관계자가 헷갈릴 수 있는 ${withObjectPhrase(k1)} 짧게 적어두면 결과 설명이 쉬워집니다.`],
+    [`${withObjectPhrase(a.mainKeyword)} 문서로 남길 때 필요한 것`, `실행 후에는 결과만 저장하지 말고 왜 그 방식으로 정했는지 함께 남기는 편이 좋습니다. ${withWaGwa(k2)} ${withObjectPhrase(k3)} 같이 적으면 나중에 같은 조건을 다시 확인할 때 설명 비용이 줄어듭니다.`],
+    [`${a.mainKeyword}에서 먼저 버릴 조건`, `모든 조건을 한 번에 반영하려고 하면 오히려 판단이 느려집니다. 이번 결정에 직접 영향을 주지 않는 후보를 덜어내고 ${withWaGwa(k0)} ${k2}만 먼저 남기면 실행 속도가 빨라집니다.`],
+    [`${withObjectPhrase(a.mainKeyword)} 반복 운영할 때의 기준`, `한 번 쓰고 끝나는 기준과 매번 다시 쓰는 기준은 다르게 설계해야 합니다. 반복 운영에서는 ${withObjectPhrase(k1)} 고정하고 ${k3}만 상황에 따라 바꾸는 방식이 관리하기 쉽습니다.`],
+    [`${a.mainKeyword}를 처음 팀에 도입할 때`, `새로운 결정 방식을 팀에 도입할 때는 결과의 정확성보다 절차의 투명성을 먼저 강조합니다. "${k0} 기준으로 정했고, ${k2}는 이렇게 처리했다"는 식으로 ${withObjectPhrase(k3)} 공개하면 처음 쓰는 사람도 이해하고 따라올 수 있습니다.`],
   ];
   const [heading, body] = contents[variant];
   return (
@@ -405,7 +320,6 @@ function ContextSection({ article: a }: { article: GeneratedArticlePlan }) {
 function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
   const faq = buildFaq(a);
   const tone = toneVariant(a);
-  const theme = getTheme(a.category);
   const [k0, k1, k2, k3] = [0, 1, 2, 3].map(i => keywordAt(a, i));
 
   const opening = [
@@ -439,46 +353,38 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
   ];
 
   const steps = [
-    { icon: "①", text: `${a.mainKeyword}의 목표를 한 줄로 적습니다. 목적이 분명하면 이후 단계가 빠릅니다.` },
-    { icon: "②", text: `${withObjectPhrase(k0)} 확인하고, 이번 결정에 직접 영향을 주지 않는 선택지를 제거합니다.` },
-    { icon: "③", text: `${k1} 기준으로 남은 선택지에 우선순위를 표시합니다. 3~5개가 이상적입니다.` },
-    { icon: "④", text: `${withRo(k2)} 최종 실행하고 결과를 확인합니다. 예외가 생기면 즉흥 수정보다 다음 회차에 반영합니다.` },
-    { icon: "⑤", text: `결과와 함께 ${k3}를 한 줄로 남기고 공유합니다. 이 기록이 다음 결정의 출발점이 됩니다.` },
+    `${a.mainKeyword}의 목표를 한 줄로 적습니다. 목적이 분명하면 이후 단계가 빠릅니다.`,
+    `${withObjectPhrase(k0)} 확인하고, 이번 결정에 직접 영향을 주지 않는 선택지를 제거합니다.`,
+    `${k1} 기준으로 남은 선택지에 우선순위를 표시합니다. 3~5개가 이상적입니다.`,
+    `${withRo(k2)} 최종 실행하고 결과를 확인합니다. 예외가 생기면 즉흥 수정보다 다음 회차에 반영합니다.`,
+    `결과와 함께 ${k3}를 한 줄로 남기고 공유합니다. 이 기록이 다음 결정의 출발점이 됩니다.`,
   ];
 
   return (
     <div className="space-y-8">
       {/* 카테고리 + 콘텐츠 타입 배지 */}
-      <div className="flex flex-wrap gap-2">
-        <span className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium ${theme.badge}`}>
-          {theme.icon} {a.category}
-        </span>
-        <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300">
-          {CONTENT_TYPE_ICONS[a.contentType] ?? "📄"} {contentTypeLabel(a.contentType)}
-        </span>
-        <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500 dark:bg-slate-800 dark:text-slate-400">
-          🕐 약 5분 읽기
-        </span>
+      <div className="flex flex-wrap gap-2 text-xs">
+        <span className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-blue-700">{a.category}</span>
+        <span className="rounded-full border border-gray-300 bg-white px-3 py-1 text-gray-700">{contentTypeLabel(a.contentType)}</span>
+        <span className="rounded-full border border-gray-300 bg-white px-3 py-1 text-gray-500">약 5분 읽기</span>
       </div>
 
       {/* 도입부 */}
-      <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+      <p className="text-base leading-relaxed text-gray-900">
         {opening} 이 글은 {a.readerProblem} 상황에서 바로 적용할 수 있도록 절차, 확인 항목, 실수 방지법, 기록 방식을 함께 정리했습니다.
       </p>
 
-      {/* 핵심 요약 박스 */}
-      <div className={`rounded-2xl border p-6 ${theme.summary}`}>
-        <p className={`flex items-center gap-2 font-bold text-lg ${theme.summaryTitle}`}>
-          <span>⭐</span> 핵심 요약
-        </p>
-        <ul className="mt-4 space-y-3">
+      {/* 핵심 요약 */}
+      <div className="rounded-lg border border-blue-200 bg-blue-50 p-5">
+        <p className="font-bold text-gray-900">핵심 요약</p>
+        <ul className="mt-3 space-y-2">
           {[
             `${withEunNeun(a.mainKeyword)} 목적과 제외 조건을 먼저 정해야 실행 중 흔들리지 않습니다.`,
             `${a.expandedKeywords.slice(0, 2).join("과 ")}를 나눠 보면 실행 순서가 분명해집니다.`,
             summaryLast,
           ].map((item, i) => (
-            <li key={i} className="flex items-start gap-3 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-              <span className={`mt-0.5 flex-shrink-0 text-base ${theme.summaryBullet}`}>✓</span>
+            <li key={i} className="flex items-start gap-2 text-sm text-gray-900">
+              <span className="mt-0.5 flex-shrink-0 font-bold">·</span>
               <span>{item}</span>
             </li>
           ))}
@@ -487,7 +393,7 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* 언제 필요한가 */}
       <div>
-        <h2>🗓️ {withEunNeun(a.mainKeyword)} 언제 필요할까요?</h2>
+        <h2>{withEunNeun(a.mainKeyword)} 언제 필요할까요?</h2>
         <p>가장 흔한 장면은 {a.practicalExample}입니다. 이때 사람들은 빠른 결론을 원하지만, 기준이 없으면 같은 결정을 반복해서 다시 논의하게 됩니다. {withObjectPhrase(a.mainKeyword)} 별도 기준으로 분리하면 선택지, 제약, 결과를 나눠 볼 수 있어 실수가 줄어듭니다.</p>
         <p>특히 {withWaGwa(k0)} {withIga(k1)} 함께 걸린 상황에서는 단순 추천보다 재사용 가능한 규칙이 더 중요합니다. 한 번 정한 규칙은 회의, 문서, 개인 일정, 콘텐츠 운영에도 반복해서 적용할 수 있습니다.</p>
       </div>
@@ -500,51 +406,57 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* 기준 테이블 */}
       <div>
-        <h2>📋 {a.mainKeyword} 기준은 어떻게 잡아야 하나요?</h2>
-        <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
-          <table className="min-w-full">
-            <thead className="bg-slate-100 dark:bg-slate-800">
+        <h2>{a.mainKeyword} 기준은 어떻게 잡아야 하나요?</h2>
+        <div className="overflow-x-auto">
+          <table>
+            <thead>
               <tr>
-                {["구분", "확인할 질문", "권장 기준"].map(h => (
-                  <th key={h} className="px-4 py-3 text-left text-sm font-semibold text-slate-700 dark:text-slate-300">{h}</th>
-                ))}
+                <th>구분</th>
+                <th>확인할 질문</th>
+                <th>권장 기준</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 dark:divide-slate-700">
-              {[
-                ["🎯 목적", "왜 지금 이 판단이 필요한가?", `${a.searchIntent}에 맞는 결과만 남깁니다`],
-                ["📐 범위", "어디까지 단순화할 수 있나?", `${withObjectPhrase(k2)} 기준으로 제외 조건을 먼저 정합니다`],
-                ["✅ 검증", "결과가 실제로 쓸 만한가?", `${k3}와 함께 기록·비교·재사용 가능성을 함께 봅니다`],
-                ["⚡ 예외", "특수 케이스는 어떻게 처리하나?", "예외는 즉흥 처리보다 다음 회차 규칙으로 반영합니다"],
-              ].map(([label, q, rec], idx) => (
-                <tr key={idx} className={idx % 2 === 0 ? "bg-white dark:bg-slate-900" : "bg-slate-50 dark:bg-slate-800/50"}>
-                  <td className="px-4 py-3 text-sm font-medium text-slate-800 dark:text-slate-200">{label}</td>
-                  <td className="px-4 py-3 text-sm text-slate-600 dark:text-slate-400">{q}</td>
-                  <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-300">{rec}</td>
-                </tr>
-              ))}
+            <tbody>
+              <tr>
+                <td>목적</td>
+                <td>왜 지금 이 판단이 필요한가?</td>
+                <td>{a.searchIntent}에 맞는 결과만 남깁니다</td>
+              </tr>
+              <tr>
+                <td>범위</td>
+                <td>어디까지 단순화할 수 있나?</td>
+                <td>{withObjectPhrase(k2)} 기준으로 제외 조건을 먼저 정합니다</td>
+              </tr>
+              <tr>
+                <td>검증</td>
+                <td>결과가 실제로 쓸 만한가?</td>
+                <td>{k3}와 함께 기록·비교·재사용 가능성을 함께 봅니다</td>
+              </tr>
+              <tr>
+                <td>예외</td>
+                <td>특수 케이스는 어떻게 처리하나?</td>
+                <td>예외는 즉흥 처리보다 다음 회차 규칙으로 반영합니다</td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      {/* 실행 순서 - 스테퍼 UI */}
+      {/* 실행 순서 */}
       <div>
-        <h2>🪜 {a.mainKeyword} 실행 순서</h2>
+        <h2>{a.mainKeyword} 실행 순서</h2>
         <div className="space-y-3">
-          {steps.map((step, idx) => (
-            <div key={idx} className="flex items-start gap-4">
-              <div className={`flex-shrink-0 flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold text-white ${["bg-violet-500", "bg-blue-500", "bg-teal-500", "bg-amber-500", "bg-emerald-500"][idx]}`}>
+          {steps.map((text, idx) => (
+            <div key={idx} className="flex items-start gap-4 rounded-lg border border-gray-200 bg-white p-4">
+              <div className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
                 {idx + 1}
               </div>
-              <div className="pt-1.5">
-                <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">{step.text}</p>
-              </div>
+              <p className="pt-0.5 text-sm text-gray-900">{text}</p>
             </div>
           ))}
         </div>
-        <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
-          💬 이 방식은 결론을 억지로 밀어붙이기 위한 요령이 아닙니다. 같은 문제를 다시 만났을 때 처음부터 고민하지 않기 위한 운영 방식입니다.
+        <p className="mt-3 text-sm text-gray-700">
+          이 방식은 결론을 억지로 밀어붙이기 위한 요령이 아닙니다. 같은 문제를 다시 만났을 때 처음부터 고민하지 않기 위한 운영 방식입니다.
         </p>
       </div>
 
@@ -552,37 +464,24 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* 놓치기 쉬운 점 */}
       <div>
-        <h2>🔔 {a.mainKeyword} 운영에서 놓치기 쉬운 점</h2>
-        <div className={`rounded-xl border-l-4 ${theme.accent} border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800/40`}>
-          <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-            {contentTypeLabel(a.contentType)} 유형에서는 결과보다 과정 설명이 더 중요해질 때가 많습니다. 예를 들어 {a.practicalExample}에는 모두가 같은 기준으로 판단했다는 신호가 필요합니다.
-          </p>
-        </div>
-        <ul className="mt-4 space-y-2">
-          {[
-            `결과 화면이나 공유 문구에는 ${k3} 기준을 짧게 남깁니다.`,
-            "반복해서 쓰는 상황이라면 같은 입력 형식과 같은 순서를 유지합니다.",
-            "예외가 생기면 결과를 바꾸기보다 다음 회차 규칙에 반영합니다.",
-            `${k0}와 ${k2}는 한 번 정하면 쉽게 바꾸지 않는 것이 기록 신뢰도에 유리합니다.`,
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
-              <span className="mt-0.5 text-slate-400">•</span>
-              <span>{item}</span>
-            </li>
-          ))}
+        <h2>{a.mainKeyword} 운영에서 놓치기 쉬운 점</h2>
+        <p>{contentTypeLabel(a.contentType)} 유형에서는 결과보다 과정 설명이 더 중요해질 때가 많습니다. 예를 들어 {a.practicalExample}에는 모두가 같은 기준으로 판단했다는 신호가 필요합니다.</p>
+        <ul>
+          <li>결과 화면이나 공유 문구에는 {k3} 기준을 짧게 남깁니다.</li>
+          <li>반복해서 쓰는 상황이라면 같은 입력 형식과 같은 순서를 유지합니다.</li>
+          <li>예외가 생기면 결과를 바꾸기보다 다음 회차 규칙에 반영합니다.</li>
+          <li>{k0}와 {k2}는 한 번 정하면 쉽게 바꾸지 않는 것이 기록 신뢰도에 유리합니다.</li>
         </ul>
       </div>
 
       {/* 체크리스트 */}
       <div>
-        <h2>☑️ 실행 전 체크리스트</h2>
+        <h2>실행 전 체크리스트</h2>
         <div className="space-y-2">
           {checklist.map((item, i) => (
-            <div key={i} className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 dark:border-slate-700 dark:bg-slate-800">
-              <span className="flex-shrink-0 text-xl" aria-hidden="true">
-                {["🔲", "🔲", "🔲", "🔲", "🔲"][i]}
-              </span>
-              <span className="text-sm text-slate-700 dark:text-slate-300">{item}</span>
+            <div key={i} className="flex items-center gap-3 rounded-lg border border-gray-200 bg-white px-4 py-3">
+              <span className="flex-shrink-0 text-gray-400" aria-hidden="true">☐</span>
+              <span className="text-sm text-gray-900">{item}</span>
             </div>
           ))}
         </div>
@@ -590,37 +489,31 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* 내부 링크 */}
       <div>
-        <h2>🔗 함께 보면 좋은 SpinFlow 도구</h2>
-        <p className="text-sm text-slate-600 dark:text-slate-400">아래 도구는 {withWaGwa(a.mainKeyword)} 직접 연결되는 흐름입니다. 글을 읽은 뒤 바로 실행해 보세요.</p>
-        <div className="mt-3 flex flex-wrap gap-2">
+        <h2>함께 보면 좋은 SpinFlow 도구</h2>
+        <p>아래 도구는 {withWaGwa(a.mainKeyword)} 직접 연결되는 흐름입니다. 글을 읽은 뒤 바로 실행해 보세요.</p>
+        <ul>
           {a.internalLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition-colors hover:opacity-80 ${theme.badge}`}
-            >
-              → {link.label}
-            </Link>
+            <li key={link.path}>
+              <Link to={link.path}>{link.label}</Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       {/* 출처 */}
-      <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800/40">
-        <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">📚 참고 자료</p>
-        <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">
+      <div>
+        <h2>근거와 참고 자료</h2>
+        <p>
           공식 문서와 공개 자료를 확인할 때는 최신 날짜, 적용 범위, 예외 조건을 함께 봐야 합니다. 이 글은{" "}
-          <a href={a.primarySourceUrl} target="_blank" rel="noreferrer" className="font-medium underline decoration-dotted">
-            {a.primarySourceName}
-          </a>{" "}
+          <a href={a.primarySourceUrl} target="_blank" rel="noreferrer">{a.primarySourceName}</a>{" "}
           자료를 기본 참고 출처로 삼았습니다.
         </p>
       </div>
 
-      {/* 마무리 CTA */}
-      <div className={`rounded-2xl border p-6 ${theme.summary}`}>
-        <p className={`font-bold ${theme.summaryTitle}`}>🎯 마무리 한 줄 정리</p>
-        <p className="mt-2 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+      {/* 마무리 */}
+      <div className="rounded-lg border border-blue-200 bg-blue-50 p-5">
+        <p className="font-bold text-gray-900">마무리 한 줄 정리</p>
+        <p className="mt-2 text-sm text-gray-900">
           {withEunNeun(a.mainKeyword)} {k0}와 {k2}를 먼저 정하고, 결과와 함께 {withObjectPhrase(k3)} 남기면 다음 결정이 훨씬 빨라집니다.{" "}
           <Link to={a.internalLinks[0]?.path ?? "/"} className="font-semibold underline">
             {a.internalLinks[0]?.label ?? "SpinFlow 도구 바로 쓰기"}
@@ -631,26 +524,20 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* FAQ */}
       <div>
-        <h2>❓ 자주 묻는 질문</h2>
-        <div className="space-y-4">
+        <h2>자주 묻는 질문</h2>
+        <div className="space-y-3">
           {faq.map((item, index) => (
-            <div key={item.q} className={`rounded-xl border p-4 ${index % 2 === 0 ? "border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900" : "border-blue-100 bg-blue-50/60 dark:border-blue-900/40 dark:bg-blue-950/20"}`}>
-              <p className="font-semibold text-slate-900 dark:text-slate-100">
-                <span className="mr-2 text-blue-500 dark:text-blue-400">Q{index + 1}.</span>
-                {item.q}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                <span className="mr-1 font-medium text-emerald-600 dark:text-emerald-400">A.</span>
-                {item.a}
-              </p>
+            <div key={item.q} className="rounded-lg border border-gray-200 bg-white p-4">
+              <p className="font-semibold text-gray-900">Q{index + 1}. {item.q}</p>
+              <p className="mt-2 text-sm text-gray-900">A. {item.a}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* 키워드 */}
-      <div className="border-t border-slate-200 pt-4 dark:border-slate-700">
-        <p className="text-xs text-slate-400 dark:text-slate-500">
+      <div className="border-t border-gray-200 pt-4">
+        <p className="text-xs text-gray-500">
           <span className="font-medium">관련 키워드:</span> {keywordText(a)}
         </p>
       </div>
@@ -658,7 +545,7 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
   );
 }
 
-// ─── 빌더 & 로더 ──────────────────────────────────────────────────
+// ─── 빌더 & 로더 ─────────────────────────────────────────────────
 function buildGeneratedBlogPost(article: GeneratedArticlePlan): BlogPost {
   return {
     slug: article.slug,
