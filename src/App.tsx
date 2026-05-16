@@ -48,6 +48,7 @@ const QrCodeGenerator = lazy(() => import("@/pages/tools/QrCodeGenerator"));
 const TimeCalculator = lazy(() => import("@/pages/tools/TimeCalculator"));
 const UnitConverter = lazy(() => import("@/pages/tools/UnitConverter"));
 const UnixTimestamp = lazy(() => import("@/pages/tools/UnixTimestamp"));
+const Timer = lazy(() => import("@/pages/tools/Timer"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -109,6 +110,7 @@ function App() {
           <Route path="/tools/time-calculator" element={<TimeCalculator />} />
           <Route path="/tools/unit-converter" element={<UnitConverter />} />
           <Route path="/tools/unix-timestamp" element={<UnixTimestamp />} />
+          <Route path="/tools/timer" element={<Timer />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
