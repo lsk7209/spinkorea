@@ -144,14 +144,14 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
         <h2>{a.mainKeyword} 체크리스트: 단계별로 나누면 빠집니다</h2>
         <p>체크리스트를 한꺼번에 보면 빠뜨리기 쉽습니다. 준비·진행·공유 세 단계로 나눠 각 단계에서 하나씩 확인하면 누락이 줄어듭니다.</p>
         <div className="grid gap-3 md:grid-cols-3">
-          {[
-            ["준비 단계", `${k0} 기준을 먼저 정하고, 선택지를 3~7개로 압축합니다. 예외 조건이 있다면 이 단계에서 명시합니다.`],
-            ["진행 단계", `${k1} 기준에 따라 실행하고, 예기치 못한 상황이 생기면 즉흥 수정보다 다음 회차 규칙 반영으로 처리합니다.`],
-            ["공유 단계", `${withObjectPhrase(k3)} 결과와 함께 짧게 남깁니다. 공유 URL이나 캡처 한 장으로도 충분합니다.`],
-          ].map(([phase, text]) => (
-            <div key={phase as string} className="rounded-lg border border-gray-200 bg-white p-4">
+          {([
+            ["준비 단계", `${k0} 기준을 먼저 정하고, 선택지를 3~7개로 압축합니다. 예외 조건이 있다면 이 단계에서 명시합니다.`, "border-blue-200 bg-blue-50"],
+            ["진행 단계", `${k1} 기준에 따라 실행하고, 예기치 못한 상황이 생기면 즉흥 수정보다 다음 회차 규칙 반영으로 처리합니다.`, "border-amber-200 bg-amber-50"],
+            ["공유 단계", `${withObjectPhrase(k3)} 결과와 함께 짧게 남깁니다. 공유 URL이나 캡처 한 장으로도 충분합니다.`, "border-emerald-200 bg-emerald-50"],
+          ] as [string, string, string][]).map(([phase, text, cls]) => (
+            <div key={phase} className={`rounded-lg border p-4 ${cls}`}>
               <p className="font-semibold text-gray-900">{phase}</p>
-              <p className="mt-2 text-sm text-gray-800">{text}</p>
+              <p className="mt-2 text-sm text-gray-900">{text}</p>
             </div>
           ))}
         </div>
@@ -197,14 +197,14 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
         <h2>{a.mainKeyword}: 자주 생기는 의문 3가지</h2>
         <p>{k0}, {k1}, {withObjectPhrase(k2)} 질문 단위로 나누면 검색 의도와 본문 구조가 자연스럽게 맞아집니다.</p>
         <div className="space-y-3">
-          {[
-            [`${withObjectPhrase(k0)} 언제 다시 검토해야 하나요?`, `상황이 바뀌거나 참여자 구성이 달라질 때마다 ${k0}를 재확인합니다. 기준이 오래되면 현실과 어긋나는 결과가 나올 수 있습니다.`],
-            [`${withObjectPhrase(k1)} 팀 전체가 공유하는 방법은?`, `공유 URL이나 짧은 문서 링크로 동일한 ${k1}를 전달합니다. 버전이 달라지면 결과도 달라지므로 최신본 URL을 단일 링크로 관리합니다.`],
-            [`${k2}와 ${k3} 중 먼저 정해야 하는 것은?`, `${k2}를 먼저 정하면 ${k3}를 좁히기 쉬워집니다. 반대 순서로 가면 기준이 흔들려 결과를 설명할 때 어려움이 생깁니다.`],
-          ].map(([q, ans], idx) => (
-            <div key={idx} className="rounded-lg border border-gray-200 bg-white p-4">
+          {([
+            [`${withObjectPhrase(k0)} 언제 다시 검토해야 하나요?`, `상황이 바뀌거나 참여자 구성이 달라질 때마다 ${k0}를 재확인합니다. 기준이 오래되면 현실과 어긋나는 결과가 나올 수 있습니다.`, "border-blue-200 bg-blue-50"],
+            [`${withObjectPhrase(k1)} 팀 전체가 공유하는 방법은?`, `공유 URL이나 짧은 문서 링크로 동일한 ${k1}를 전달합니다. 버전이 달라지면 결과도 달라지므로 최신본 URL을 단일 링크로 관리합니다.`, "border-amber-200 bg-amber-50"],
+            [`${k2}와 ${k3} 중 먼저 정해야 하는 것은?`, `${k2}를 먼저 정하면 ${k3}를 좁히기 쉬워집니다. 반대 순서로 가면 기준이 흔들려 결과를 설명할 때 어려움이 생깁니다.`, "border-teal-200 bg-teal-50"],
+          ] as [string, string, string][]).map(([q, ans, cls], idx) => (
+            <div key={idx} className={`rounded-lg border p-4 ${cls}`}>
               <p className="font-semibold text-gray-900">Q{idx + 1}. {q}</p>
-              <p className="mt-2 text-sm text-gray-800">A. {ans}</p>
+              <p className="mt-2 text-sm text-gray-900">A. {ans}</p>
             </div>
           ))}
         </div>
@@ -218,15 +218,15 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
         <h2>{withObjectPhrase(a.mainKeyword)} 쉽게 이해하는 세 가지 기준</h2>
         <p>{withEunNeun(a.mainKeyword)} 결과만 보면 단순해 보이지만 실제로는 {k0}, {k1}, {withEunNeun(k2)} 함께 움직입니다. 이 세 가지를 분리해서 보면 같은 결과라도 왜 그렇게 판단했는지 설명하기 쉬워집니다.</p>
         <div className="grid gap-3 md:grid-cols-3">
-          {[
-            [k0, "결정의 방향을 정합니다", `${withEunNeun(k0)} 바뀌면 선택지 구성 자체가 달라질 수 있습니다.`],
-            [k1, "실행 범위를 정합니다", `${k1}이 넓으면 결과 해석이 어렵고, 좁으면 적용이 빠릅니다.`],
-            [k2, "결과의 신뢰도를 높입니다", `${k2}가 명확할수록 참여자가 결과를 받아들이기 쉽습니다.`],
-          ].map(([label, role, desc]) => (
-            <div key={label as string} className="rounded-lg border border-gray-200 bg-white p-4">
-              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">{role}</p>
+          {([
+            [k0, "결정의 방향을 정합니다", `${withEunNeun(k0)} 바뀌면 선택지 구성 자체가 달라질 수 있습니다.`, "border-blue-200 bg-blue-50"],
+            [k1, "실행 범위를 정합니다", `${k1}이 넓으면 결과 해석이 어렵고, 좁으면 적용이 빠릅니다.`, "border-amber-200 bg-amber-50"],
+            [k2, "결과의 신뢰도를 높입니다", `${k2}가 명확할수록 참여자가 결과를 받아들이기 쉽습니다.`, "border-teal-200 bg-teal-50"],
+          ] as [string, string, string, string][]).map(([label, role, desc, cls]) => (
+            <div key={label} className={`rounded-lg border p-4 ${cls}`}>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-600">{role}</p>
               <p className="mt-1 font-bold text-gray-900">{label}</p>
-              <p className="mt-2 text-sm text-gray-800">{desc}</p>
+              <p className="mt-2 text-sm text-gray-900">{desc}</p>
             </div>
           ))}
         </div>
@@ -261,14 +261,14 @@ function MistakesSection({ article: a }: { article: GeneratedArticlePlan }) {
       <p>같은 실수를 반복하지 않으려면 결과가 나쁜 이유를 먼저 알아야 합니다. 아래는 {a.practicalExample} 상황에서 실제로 자주 발생하는 패턴입니다.</p>
       <div className="space-y-3">
         {mistakes.map((m, i) => (
-          <div key={i} className="flex gap-4 rounded-lg border border-gray-200 bg-white p-4">
+          <div key={i} className="flex gap-4 rounded-lg border border-red-200 bg-red-50 p-4">
             <div className="flex-shrink-0">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">{i + 1}</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-red-500 text-sm font-bold text-white">{i + 1}</span>
             </div>
             <div>
               <p className="font-semibold text-gray-900">{m.title}</p>
-              <p className="mt-1 text-sm text-gray-800"><span className="font-medium">왜 문제인가:</span> {m.why}</p>
-              <p className="mt-1 text-sm text-gray-800"><span className="font-medium">해결 방법:</span> {m.fix}</p>
+              <p className="mt-1 text-sm text-gray-900"><span className="font-medium">왜 문제인가:</span> {m.why}</p>
+              <p className="mt-1 text-sm text-gray-900"><span className="font-medium">해결 방법:</span> {m.fix}</p>
             </div>
           </div>
         ))}
@@ -277,6 +277,11 @@ function MistakesSection({ article: a }: { article: GeneratedArticlePlan }) {
   );
 }
 
+const TIP_COLORS = [
+  "border-amber-200 bg-amber-50",
+  "border-teal-200 bg-teal-50",
+] as const;
+
 // ─── 실전 팁 섹션 ─────────────────────────────────────────────────
 function PracticalTipsSection({ article: a }: { article: GeneratedArticlePlan }) {
   const tips = buildPracticalTips(a);
@@ -284,10 +289,10 @@ function PracticalTipsSection({ article: a }: { article: GeneratedArticlePlan })
     <>
       <h2>실전 팁: {a.mainKeyword}를 더 잘 쓰는 방법</h2>
       <div className="grid gap-4 md:grid-cols-2">
-        {tips.map((tip) => (
-          <div key={tip.title} className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+        {tips.map((tip, i) => (
+          <div key={tip.title} className={`rounded-lg border p-4 ${TIP_COLORS[i % TIP_COLORS.length]}`}>
             <p className="font-semibold text-gray-900">{tip.title}</p>
-            <p className="mt-2 text-sm text-gray-800">{tip.body}</p>
+            <p className="mt-2 text-sm text-gray-900">{tip.body}</p>
           </div>
         ))}
       </div>
@@ -384,7 +389,7 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
             summaryLast,
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-gray-900">
-              <span className="mt-0.5 flex-shrink-0 font-bold">·</span>
+              <span className="mt-0.5 flex-shrink-0 font-bold text-blue-600">·</span>
               <span>{item}</span>
             </li>
           ))}
@@ -479,8 +484,8 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
         <h2>실행 전 체크리스트</h2>
         <div className="space-y-2">
           {checklist.map((item, i) => (
-            <div key={i} className="flex items-center gap-3 rounded-lg border border-gray-200 bg-white px-4 py-3">
-              <span className="flex-shrink-0 text-gray-400" aria-hidden="true">☐</span>
+            <div key={i} className="flex items-center gap-3 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3">
+              <span className="flex-shrink-0 font-bold text-emerald-600" aria-hidden="true">☐</span>
               <span className="text-sm text-gray-900">{item}</span>
             </div>
           ))}
@@ -511,7 +516,7 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
       </div>
 
       {/* 마무리 */}
-      <div className="rounded-lg border border-blue-200 bg-blue-50 p-5">
+      <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-5">
         <p className="font-bold text-gray-900">마무리 한 줄 정리</p>
         <p className="mt-2 text-sm text-gray-900">
           {withEunNeun(a.mainKeyword)} {k0}와 {k2}를 먼저 정하고, 결과와 함께 {withObjectPhrase(k3)} 남기면 다음 결정이 훨씬 빨라집니다.{" "}
@@ -527,7 +532,7 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
         <h2>자주 묻는 질문</h2>
         <div className="space-y-3">
           {faq.map((item, index) => (
-            <div key={item.q} className="rounded-lg border border-gray-200 bg-white p-4">
+            <div key={item.q} className={`rounded-lg border p-4 ${["border-blue-200 bg-blue-50", "border-amber-200 bg-amber-50", "border-teal-200 bg-teal-50", "border-violet-200 bg-violet-50"][index % 4]}`}>
               <p className="font-semibold text-gray-900">Q{index + 1}. {item.q}</p>
               <p className="mt-2 text-sm text-gray-900">A. {item.a}</p>
             </div>
