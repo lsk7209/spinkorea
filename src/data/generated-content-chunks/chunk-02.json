@@ -178,7 +178,7 @@
       "생활",
       "도구"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1576094789-94f08db0b4ce?q=80&w=1600&auto=format&fit=crop",
+    "thumbnail": "https://picsum.photos/seed/study-hour-tracker/1600/900",
     "qualityScore": 93,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
@@ -224,7 +224,7 @@
       "생활",
       "도구"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1607827448387-a67db1383b20?q=80&w=1600&auto=format&fit=crop",
+    "thumbnail": "https://picsum.photos/seed/project-buffer-time/1600/900",
     "qualityScore": 90,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
@@ -1006,7 +1006,7 @@
       "글쓰기",
       "텍스트"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1512238701873-2a5738a9d4ab?q=80&w=1600&auto=format&fit=crop",
+    "thumbnail": "https://picsum.photos/seed/headline-trim-rule/1600/900",
     "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
@@ -1144,7 +1144,7 @@
       "글쓰기",
       "텍스트"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1505664194779-8beaceb93edd?q=80&w=1600&auto=format&fit=crop",
+    "thumbnail": "https://picsum.photos/seed/tone-of-voice-note/1600/900",
     "qualityScore": 92,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
@@ -2662,7 +2662,7 @@
       "웹도구",
       "검증"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1624996379697-f13d9f0278ef?q=80&w=1600&auto=format&fit=crop",
+    "thumbnail": "https://picsum.photos/seed/lazy-load-route/1600/900",
     "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"

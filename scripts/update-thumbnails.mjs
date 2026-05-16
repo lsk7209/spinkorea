@@ -20,40 +20,27 @@ const CATEGORY_POOLS = {
     "photo-1553481187-be93c21490a9",    // roulette
     "photo-1596461404969-9ae70f2830c1", // game night
     "photo-1560419015-7c427e8ae5ba",    // dice closeup
-    "photo-1518546453174-5e1098a4b4af", // colorful board game
     "photo-1564053489984-317bbd824340", // decision arrow
-    "photo-1551958219-acbc3b5e6063",    // crossroads
     "photo-1516450360452-9312f5e86fc7", // neon lights
     "photo-1542826438-bd32f43d626f",    // lottery
-    "photo-1577741814755-571c6f0ee641", // playing cards
-    "photo-1534278854415-84f69f44d82d", // game controller
-    "photo-1611095973362-88e8e3d9e9af", // dice top view
     "photo-1563089145-599997674d42",    // spinning
-    "photo-1610395219791-21b0353e4b00", // random selection
     "photo-1586769852836-bc069f19e1b6", // lucky charm
-    "photo-1565043934-571fcfa4e72a",    // wheel spin
     "photo-1519708227418-c8fd9a32b7a2", // fun game
-    "photo-1504891772751-0e2e4e0a1f00", // choice fork
   ],
   "계산기·생활 유틸": [
-    "photo-1450101499163-c8848c66ca85", // calculator (current)
+    "photo-1450101499163-c8848c66ca85", // calculator
     "photo-1554224155-8d04cb21cd6c",    // finance numbers
     "photo-1567427017947-545c5f8d16ad", // bills money
     "photo-1460925895917-afdab827c52f", // business chart
-    "photo-1604594849809-dfedff668f8e", // expense tracking
     "photo-1586281380349-632531db7ed4", // financial planning
     "photo-1553729459-efe14ef6055d",    // financial analysis
     "photo-1576091160550-2173dba999ef", // medical calculator
-    "photo-1576094789-94f08db0b4ce",    // health BMI
-    "photo-1607827448387-a67db1383b20", // coin counting
     "photo-1580519542036-c47de6196ba5", // budget
     "photo-1515378791036-0648a3ef77b2", // spreadsheet
     "photo-1611532736597-de2d4265fba3", // money stack
     "photo-1559526324-4b87b5e36e44",    // percent discount
     "photo-1574958269340-fa927503f3dd", // number calculation
-    "photo-1523540451892-4b2e0fef9494", // tax document
     "photo-1618044619888-009e412ff12a", // utility bill
-    "photo-1579621970590-9d152b4c9dfd", // finance apps
     "photo-1586996292898-71f4036c4e07", // home budget
     "photo-1534951009808-766178b47a4f", // electricity meter
   ],
@@ -72,7 +59,6 @@ const CATEGORY_POOLS = {
     "photo-1512238701873-2a5738a9d4ab", // text editor
     "photo-1498049794561-7780e7231661", // creative workspace
     "photo-1532012197267-da84d127e765", // books library
-    "photo-1505664194779-8beaceb93edd", // document review
     "photo-1488190211105-8b0e65b80b4e", // writing draft
     "photo-1542435503-956c469947f6", // calligraphy
     "photo-1484480974693-6ca0a78fb36b", // note taking
@@ -97,7 +83,6 @@ const CATEGORY_POOLS = {
     "photo-1510915361894-db8b60106cb1", // API connections
     "photo-1555066931-4365d14bab8c", // code on screen
     "photo-1593720213428-28a5b9e94613", // json data
-    "photo-1624996379697-f13d9f0278ef", // base64 keys
     "photo-1629654297299-c8506221ca97", // URI web
     "photo-1542744173-8e7e53415bb0", // developer meeting
   ],
@@ -111,9 +96,7 @@ const CATEGORY_POOLS = {
     "photo-1552664730-d307ca884978", // team meeting
     "photo-1611532736597-de2d4265fba3", // to-do list
     "photo-1434030216411-0b793f4b4173", // planning
-    "photo-1586281380249-87d9e2a42428", // calendar planning
     "photo-1533750516457-a7f992034fec", // laptop notes
-    "photo-1609159618571-8e9e19a4f42a", // remote work
     "photo-1522202176988-66273c2fd55f", // teamwork
     "photo-1541746972996-4e0b0f43e02a", // productivity desk
     "photo-1600880292203-757bb62b4baf", // video call work
@@ -146,25 +129,18 @@ const CATEGORY_POOLS = {
     "photo-1461897104016-0b3b00cc81ee", // running shoes
   ],
   "SEO·콘텐츠 운영": [
-    "photo-1432888622747-4eb9a8f2c293", // writing SEO (current)
     "photo-1562577309-4932fdd64cd1", // analytics data
     "photo-1551288049-bebda4e38f71", // data dashboard
     "photo-1460925895917-afdab827c52f", // growth chart
     "photo-1504868584819-f8e8b4b6d7e3", // content creation
     "photo-1493612276216-ee3925520721", // blogging laptop
     "photo-1519389950473-47ba0277781c", // team content
-    "photo-1460925895917-afdab827c52f", // marketing analytics
     "photo-1533750516457-a7f992034fec", // content writing
-    "photo-1432888622747-4eb9a8f2c293", // SEO keyword research
     "photo-1432888498266-38ffec3eaf0a", // seo strategy
     "photo-1507003211169-0a1dd7228f2d", // content creator
-    "photo-1579767684229-5c0a5a785b5c", // google analytics
     "photo-1434030216411-0b793f4b4173", // content planning
-    "photo-1551288049-bebda4e38f71", // traffic dashboard
     "photo-1504711434969-e33886168f5c", // search engine
-    "photo-1586281380249-87d9e2a42428", // content calendar
     "photo-1594882645126-14020914d58d", // blog writing
-    "photo-1485988412941-77a8f3ba6b9e", // digital marketing
     "photo-1533750349088-cd871a92f312", // content strategy
   ],
 };

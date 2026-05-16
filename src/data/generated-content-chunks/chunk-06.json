@@ -132,7 +132,7 @@
       "웹도구",
       "검증"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1624996379697-f13d9f0278ef?q=80&w=1600&auto=format&fit=crop",
+    "thumbnail": "https://picsum.photos/seed/og-meta-debug/1600/900",
     "qualityScore": 94,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
@@ -1052,7 +1052,7 @@
       "웹도구",
       "검증"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1624996379697-f13d9f0278ef?q=80&w=1600&auto=format&fit=crop",
+    "thumbnail": "https://picsum.photos/seed/public-file-cache/1600/900",
     "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
@@ -1236,7 +1236,7 @@
       "업무",
       "루틴"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1609159618571-8e9e19a4f42a?q=80&w=1600&auto=format&fit=crop",
+    "thumbnail": "https://picsum.photos/seed/editorial-queue-rule/1600/900",
     "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
@@ -2064,7 +2064,7 @@
       "업무",
       "루틴"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1586281380249-87d9e2a42428?q=80&w=1600&auto=format&fit=crop",
+    "thumbnail": "https://picsum.photos/seed/approval-delay-log/1600/900",
     "qualityScore": 91,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
@@ -2156,7 +2156,7 @@
       "업무",
       "루틴"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1609159618571-8e9e19a4f42a?q=80&w=1600&auto=format&fit=crop",
+    "thumbnail": "https://picsum.photos/seed/personal-dashboard-check/1600/900",
     "qualityScore": 95,
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass"
