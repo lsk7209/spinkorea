@@ -19,7 +19,7 @@ export default function ToolsIndex() {
                 </p>
             </div>
 
-            <MoreTools />
+            <MoreTools showSearch />
         </div>
     );
 }
