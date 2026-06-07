@@ -5,8 +5,16 @@
     <link>https://www.spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 07 Jun 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 17:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>수면 루틴 기록, 무리 없는 기준 먼저 보기</title>
+      <link>https://www.spinkorea.kr/blog/sleep-routine-note</link>
+      <description>수면 루틴 기록은 루틴 설계, 기록 습관, 무리 없는 기준을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Sun, 07 Jun 2026 17:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/sleep-routine-note</guid>
+    </item>
 
     <item>
       <title>반복 업무 자동화 발행 전 검토, 회의 운영</title>

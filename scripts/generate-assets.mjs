@@ -257,9 +257,18 @@ function renderShell(page) {
     .slice(0, 6)
     .map((item) => `<li><a href="${item.path}">${escapeHtml(item.heading)}</a></li>`)
     .join("");
+  const homeBody =
+    page.path === "/"
+      ? [
+          "SpinFlow is a free decision-tool site for roulette wheels, random draws, number generators, date calculators, text utilities, and lightweight productivity helpers. The home page links directly to the site policy pages so visitors and crawlers can verify who operates the service, how to contact the publisher, how privacy is handled, and what usage terms apply.",
+          "The tools are provided for entertainment, education, and everyday decision support. Results are generated from user inputs or randomization logic and should be treated as reference information, not legal, medical, financial, or professional advice.",
+          "The site is maintained as a practical web utility collection with clear navigation, crawlable static pages, sitemap and RSS assets, AdSense disclosure, and no requirement to create an account before using the main tools.",
+        ]
+      : [];
   const trustBody = (trustPageBodies[page.path] ?? [])
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
     .join("\n");
+  const homeTrustBody = homeBody.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n");
 
   return `<main class="prerender-shell">
   <header>
@@ -270,8 +279,15 @@ function renderShell(page) {
   <section>
     <h2>페이지 요약</h2>
     <p>${escapeHtml(page.summary)}</p>
+    ${homeTrustBody}
     ${trustBody}
   </section>
+  <nav aria-label="Site policy links">
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+    <a href="/privacy/">Privacy Policy</a>
+    <a href="/terms/">Terms of Use</a>
+  </nav>
   <section>
     <h2>관련 무료 도구</h2>
     <ul>${related}</ul>
