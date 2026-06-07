@@ -37,3 +37,4 @@ google-audit-output
 # Wrangler
 .wrangler
 .dev.vars
+.vercel

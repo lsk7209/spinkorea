@@ -1,51 +1,77 @@
-import SEO from '@/components/SEO';
+import SEO from "@/components/SEO";
+import { Link } from "react-router-dom";
 
 export default function PrivacyPolicy() {
-    return (
-        <div className="min-h-[100dvh] bg-neon-bg text-gray-300 px-4 py-12">
-            <SEO
-                title="개인정보처리방침 - SpinFlow"
-                description="SpinFlow의 개인정보처리방침입니다. 이용자의 개인정보 보호를 위한 정책을 확인하세요."
-                keywords="개인정보처리방침, 개인정보보호, SpinFlow약관"
-            />
-            <div className="max-w-3xl mx-auto prose prose-invert">
-                <h1 className="text-3xl font-bold text-white mb-8">개인정보처리방침</h1>
+  return (
+    <div className="min-h-[100dvh] bg-neon-bg px-4 py-24 text-gray-300">
+      <SEO
+        title="개인정보처리방침 - SpinFlow"
+        description="SpinFlow의 개인정보 수집 항목, 이용 목적, 쿠키와 광고 서비스, Google Analytics 및 AdSense 사용 안내입니다."
+        keywords="SpinFlow 개인정보처리방침, 개인정보보호, Google Analytics, Google AdSense, 쿠키"
+      />
+      <main className="prose prose-invert mx-auto max-w-3xl">
+        <h1>개인정보처리방침</h1>
+        <p>최종 업데이트: 2026년 6월 8일</p>
+        <p>
+          SpinFlow는 회원가입 없이 사용할 수 있는 무료 웹 유틸리티 서비스입니다.
+          이용자의 개인정보를 최소한으로 처리하며, 서비스 운영과 품질 개선에
+          필요한 범위에서만 분석 및 광고 관련 기술을 사용할 수 있습니다.
+        </p>
 
-                <p className="mb-4">
-                    SpinFlow(이하 "서비스")는 이용자의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.
-                </p>
+        <h2>1. 수집될 수 있는 정보</h2>
+        <ul>
+          <li>방문 페이지, 유입 경로, 체류 시간, 브라우저 유형 등 비식별 분석 정보</li>
+          <li>기기 종류, 운영체제, 화면 크기 등 서비스 품질 점검에 필요한 기술 정보</li>
+          <li>문의 또는 오류 제보 시 사용자가 직접 제공한 연락 정보와 문의 내용</li>
+        </ul>
+        <p>
+          룰렛, 추첨, 텍스트 도구 등 대부분의 도구 입력값은 브라우저에서 처리되며
+          별도 서버 저장을 전제로 하지 않습니다. 단, 사용자가 직접 문의로 보낸
+          내용은 답변과 정정 처리를 위해 확인될 수 있습니다.
+        </p>
 
-                <h2 className="text-xl font-semibold text-white mt-8 mb-4">1. 수집하는 개인정보 항목</h2>
-                <p>
-                    본 서비스는 별도의 회원가입 없이 이용 가능하며, 서비스 이용 과정에서 다음과 같은 정보들이 자동으로 생성되어 수집될 수 있습니다.
-                </p>
-                <ul className="list-disc pl-5 mb-4">
-                    <li>IP Address, 쿠키, 방문 일시, 서비스 이용 기록, 불량 이용 기록</li>
-                    <li>Google Analytics를 통한 익명화된 이용 통계 데이터</li>
-                </ul>
+        <h2>2. 이용 목적</h2>
+        <ul>
+          <li>서비스 제공, 오류 진단, 보안 점검</li>
+          <li>도구 사용성 개선과 콘텐츠 품질 개선</li>
+          <li>광고 노출, 트래픽 분석, 악성 이용 방지</li>
+          <li>문의 대응과 정정 요청 처리</li>
+        </ul>
 
-                <h2 className="text-xl font-semibold text-white mt-8 mb-4">2. 개인정보의 수집 및 이용목적</h2>
-                <p>
-                    수집한 개인정보를 다음의 목적을 위해 활용합니다.
-                </p>
-                <ul className="list-disc pl-5 mb-4">
-                    <li>서비스 제공 및 운영</li>
-                    <li>접속 빈도 파악 및 서비스 이용에 대한 통계</li>
-                    <li>서비스 개선 및 신규 서비스 개발</li>
-                </ul>
+        <h2>3. 쿠키와 제3자 서비스</h2>
+        <p>
+          SpinFlow는 Google Analytics, Google AdSense 등 제3자 서비스를 사용할 수
+          있습니다. Google을 포함한 제3자 사업자는 쿠키 또는 유사 기술을 사용해
+          광고 노출, 광고 성과 측정, 방문 통계 분석을 수행할 수 있습니다.
+        </p>
+        <p>
+          Google의 개인정보 처리 방식은{" "}
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            Google 개인정보처리방침
+          </a>
+          에서 확인할 수 있습니다. 개인 맞춤 광고 설정은 Google 광고 설정 또는
+          브라우저 쿠키 설정에서 관리할 수 있습니다.
+        </p>
 
-                <h2 className="text-xl font-semibold text-white mt-8 mb-4">3. 쿠키(Cookie)의 운용 및 거부</h2>
-                <p>
-                    서비스는 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다.
-                    이용자는 쿠키 설치에 대한 선택권을 가지고 있으며, 웹브라우저의 옵션을 설정함으로써 모든 쿠키를 허용하거나,
-                    쿠키가 저장될 때마다 확인을 거치거나, 아니면 모든 쿠키의 저장을 거부할 수도 있습니다.
-                </p>
+        <h2>4. 보관과 파기</h2>
+        <p>
+          문의 기록은 답변과 분쟁 방지에 필요한 기간 동안 보관될 수 있으며,
+          목적이 달성되면 삭제하거나 식별이 어려운 형태로 관리합니다. 분석
+          데이터의 보관 기간은 각 제3자 서비스의 정책을 따릅니다.
+        </p>
 
-                <h2 className="text-xl font-semibold text-white mt-8 mb-4">4. 문의처</h2>
-                <p>
-                    개인정보 관련 문의사항은 문의하기 페이지의 GitHub Issues 링크로 연락 주시기 바랍니다.
-                </p>
-            </div>
-        </div>
-    );
+        <h2>5. 이용자의 권리</h2>
+        <p>
+          이용자는 개인정보 열람, 정정, 삭제, 처리 중지를 요청할 수 있습니다.
+          관련 요청은 <Link to="/contact">문의하기</Link> 페이지를 통해 보내주세요.
+        </p>
+
+        <h2>6. 방침 변경</h2>
+        <p>
+          법령, 서비스 구조, 광고 및 분석 도구 변경에 따라 본 방침이 수정될 수
+          있습니다. 중요한 변경 사항은 사이트 내에서 확인할 수 있도록 반영합니다.
+        </p>
+      </main>
+    </div>
+  );
 }

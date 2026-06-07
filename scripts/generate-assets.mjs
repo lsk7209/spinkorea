@@ -12,6 +12,29 @@ const POST_METADATA_PATH = path.join(ROOT, "src", "data", "post-metadata.generat
 
 const sitePages = JSON.parse(fs.readFileSync(SITE_PAGES_PATH, "utf8"));
 
+const trustPageBodies = {
+  "/about": [
+    "SpinFlow는 회원가입 없이 사용할 수 있는 무료 웹 유틸리티 서비스입니다. 점심 메뉴, 순서 정하기, 추첨, 숫자 생성, 텍스트 변환, 날짜 계산처럼 작지만 반복되는 결정을 빠르게 처리하도록 돕습니다.",
+    "운영 원칙은 단순합니다. 결과를 과장하지 않고, 도구 결과가 참고 정보임을 분명히 밝히며, 개인정보를 최소한으로 처리하고, 오류 제보와 개선 요청을 받을 수 있는 연락 경로를 유지합니다.",
+    "일부 페이지에는 광고가 표시될 수 있지만 도구와 콘텐츠의 목적은 이용자에게 실용적인 기능과 판단 기준을 제공하는 것입니다.",
+  ],
+  "/contact": [
+    "SpinFlow 도구 사용 중 발견한 오류, 콘텐츠 정정 요청, 개인정보 관련 문의, 광고 및 제휴 제안은 문의 경로를 통해 보낼 수 있습니다.",
+    "기능 오류나 계산 결과 이상을 제보할 때는 관련 URL, 입력 조건, 재현 방법을 함께 남겨 주세요. 개인정보 또는 광고 관련 문의는 요청 목적과 관련 페이지 주소를 포함하면 더 빠르게 검토할 수 있습니다.",
+    "개인정보 처리 방식은 개인정보처리방침, 서비스 이용 조건은 이용약관에 정리되어 있습니다.",
+  ],
+  "/privacy": [
+    "SpinFlow는 회원가입 없이 사용할 수 있는 무료 웹 서비스이며 이용자의 개인정보를 최소한으로 처리합니다. 방문 페이지, 유입 경로, 체류 시간, 브라우저 유형 등 비식별 분석 정보가 서비스 품질 개선을 위해 사용될 수 있습니다.",
+    "Google Analytics와 Google AdSense 등 제3자 서비스가 쿠키 또는 유사 기술을 사용해 방문 통계 분석, 광고 노출, 광고 성과 측정을 수행할 수 있습니다. Google의 개인정보 처리 방식은 Google 개인정보처리방침에서 확인할 수 있습니다.",
+    "문의 또는 오류 제보 시 사용자가 직접 제공한 연락 정보와 문의 내용은 답변과 정정 처리에 필요한 기간 동안 보관될 수 있습니다. 개인정보 열람, 정정, 삭제, 처리 중지 요청은 문의하기 페이지를 통해 보낼 수 있습니다.",
+  ],
+  "/terms": [
+    "본 약관은 SpinFlow가 제공하는 랜덤 결정 도구, 계산기, 텍스트 도구, 블로그 콘텐츠 등 웹 서비스의 이용 조건과 운영 기준을 안내합니다.",
+    "룰렛, 주사위, 추첨, 예/아니오 도구 등은 사용자의 선택을 돕기 위한 참고용 기능입니다. 결과는 무작위 또는 입력값 기반으로 생성되며 법적, 의학적, 금융적, 전문적 판단을 대신하지 않습니다.",
+    "일부 페이지에는 Google AdSense 등 광고가 표시될 수 있습니다. 콘텐츠와 도구의 기본 목적은 이용자에게 실용적인 정보와 기능을 제공하는 것이며, 오류를 발견하면 문의하기 페이지를 통해 정정 요청을 보낼 수 있습니다.",
+  ],
+};
+
 function formatKstDate(date) {
   const kst = new Date(date.getTime() + 9 * 60 * 60 * 1000);
   const pad = (value) => String(value).padStart(2, "0");
@@ -234,6 +257,9 @@ function renderShell(page) {
     .slice(0, 6)
     .map((item) => `<li><a href="${item.path}">${escapeHtml(item.heading)}</a></li>`)
     .join("");
+  const trustBody = (trustPageBodies[page.path] ?? [])
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join("\n");
 
   return `<main class="prerender-shell">
   <header>
@@ -244,6 +270,7 @@ function renderShell(page) {
   <section>
     <h2>페이지 요약</h2>
     <p>${escapeHtml(page.summary)}</p>
+    ${trustBody}
   </section>
   <section>
     <h2>관련 무료 도구</h2>
