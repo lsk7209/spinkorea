@@ -65,13 +65,13 @@ export default function ToolLayout({
             <header className="w-full px-4 py-4 border-b border-white/10 backdrop-blur-xl sticky top-0 z-50 bg-black/30">
                 <div className="max-w-4xl mx-auto flex items-center justify-between gap-3">
                     <Link
-                        to="/"
+                        to="/tools"
                         className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors group"
                     >
                         <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/5 border border-white/10 group-hover:border-neon-primary/50">
                             <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
                         </span>
-                        <span className="font-medium hidden sm:inline">메인으로</span>
+                        <span className="font-medium hidden sm:inline">도구 목록</span>
                     </Link>
                     <h1 className="text-lg md:text-xl font-bold text-gradient truncate text-center flex-1">
                         {title}
