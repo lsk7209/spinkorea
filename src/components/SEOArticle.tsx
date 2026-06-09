@@ -144,10 +144,14 @@ export default function SEOArticle() {
         </h2>
         <p className="mb-4">
           SpinFlow는 룰렛 외에도 다양한 무료 온라인 도구를 제공합니다.
-          시급·대출·복리 계산기, 로또 번호 생성기, 글자수 세기, BMI 계산기 등
+          연봉 실수령액·시급·대출·복리 계산기, 로또 번호 생성기, 글자수 세기 등
           일상에서 자주 사용하는 도구들을 한 곳에서 이용하세요.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <a href="/tools/net-salary" className="p-3 bg-white border border-slate-200 rounded-lg hover:border-cyan-500 transition-colors text-center shadow-sm">
+            <span className="block text-lg mb-1">💵</span>
+            <span className="text-sm">연봉 실수령액</span>
+          </a>
           <a href="/tools/hourly-wage" className="p-3 bg-white border border-slate-200 rounded-lg hover:border-cyan-500 transition-colors text-center shadow-sm">
             <span className="block text-lg mb-1">💰</span>
             <span className="text-sm">시급 계산기</span>
@@ -175,10 +179,6 @@ export default function SEOArticle() {
           <a href="/tools/bmi-calculator" className="p-3 bg-white border border-slate-200 rounded-lg hover:border-cyan-500 transition-colors text-center shadow-sm">
             <span className="block text-lg mb-1">⚖️</span>
             <span className="text-sm">BMI 계산기</span>
-          </a>
-          <a href="/tools/qr-code-generator" className="p-3 bg-white border border-slate-200 rounded-lg hover:border-cyan-500 transition-colors text-center shadow-sm">
-            <span className="block text-lg mb-1">📷</span>
-            <span className="text-sm">QR 코드</span>
           </a>
         </div>
         <p className="mt-4 text-center">

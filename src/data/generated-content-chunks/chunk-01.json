@@ -2093,16 +2093,16 @@
     "primarySourceUrl": "https://www.kca.go.kr/",
     "internalLinks": [
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
+        "label": "연봉 실수령액 계산기",
+        "path": "/tools/net-salary"
       },
       {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
+        "label": "시급 계산기",
+        "path": "/tools/hourly-wage"
       },
       {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
+        "label": "퇴직금 계산기",
+        "path": "/tools/severance-pay"
       }
     ],
     "tags": [
