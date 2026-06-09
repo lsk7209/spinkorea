@@ -64,15 +64,17 @@ const TOOLS = [
 
   // 계산기
   { path: "/tools/age-calculator", name: "나이 계산기", icon: Calendar, desc: "만 나이/생일 계산", color: "text-amber-400", cat: "계산기" },
-  { path: "/tools/bmi-calculator", name: "BMI 계산기", icon: Activity, desc: "체질량 지수 측정", color: "text-lime-300", cat: "계산기" },
-  { path: "/tools/calorie-calculator", name: "칼로리 계산기", icon: Flame, desc: "BMR·일일 권장 칼로리", color: "text-orange-400", cat: "계산기" },
-  { path: "/tools/body-fat", name: "체지방률 계산기", icon: Scale, desc: "Navy Method 체성분 분석", color: "text-purple-400", cat: "계산기" },
   { path: "/tools/percentage-calculator", name: "퍼센트 계산기", icon: Percent, desc: "할인율/증감률 계산", color: "text-orange-300", cat: "계산기" },
   { path: "/tools/time-calculator", name: "시간 계산기", icon: Clock, desc: "시간 더하기/빼기", color: "text-blue-300", cat: "계산기" },
   { path: "/tools/unit-converter", name: "단위 변환기", icon: ArrowLeftRight, desc: "길이/무게/온도 변환", color: "text-green-300", cat: "계산기" },
 
+  // 건강·피트니스
+  { path: "/tools/bmi-calculator", name: "BMI 계산기", icon: Activity, desc: "체질량 지수 측정", color: "text-lime-300", cat: "건강·피트니스" },
+  { path: "/tools/calorie-calculator", name: "칼로리 계산기", icon: Flame, desc: "BMR·일일 권장 칼로리", color: "text-orange-400", cat: "건강·피트니스" },
+  { path: "/tools/body-fat", name: "체지방률 계산기", icon: Scale, desc: "Navy Method 체성분 분석", color: "text-purple-400", cat: "건강·피트니스" },
+  { path: "/tools/sleep-calculator", name: "수면 계산기", icon: Moon, desc: "90분 사이클 최적 기상 시각", color: "text-indigo-400", cat: "건강·피트니스" },
+
   // 날짜·시간
-  { path: "/tools/sleep-calculator", name: "수면 계산기", icon: Moon, desc: "90분 사이클 최적 기상 시각", color: "text-indigo-400", cat: "날짜·시간" },
   { path: "/tools/timer", name: "타이머", icon: TimerIcon, desc: "카운트다운·스톱워치·뽀모도로", color: "text-cyan-400", cat: "날짜·시간" },
   { path: "/tools/d-day-counter", name: "D-Day 카운터", icon: CalendarDays, desc: "기념일/목표일 계산", color: "text-pink-300", cat: "날짜·시간" },
   { path: "/tools/unix-timestamp", name: "Unix 타임스탬프", icon: Hash, desc: "날짜 ↔ 타임스탬프", color: "text-gray-300", cat: "날짜·시간" },
@@ -87,7 +89,7 @@ const TOOLS = [
   { path: "/tools/net-salary", name: "실수령액 계산기", icon: BadgePercent, desc: "4대보험·세금 공제 후 월급", color: "text-cyan-300", cat: "생활 금융" },
 ];
 
-const CATS = ["전체", "랜덤", "텍스트·개발", "계산기", "날짜·시간", "생활 금융"] as const;
+const CATS = ["전체", "랜덤", "텍스트·개발", "계산기", "건강·피트니스", "날짜·시간", "생활 금융"] as const;
 
 interface MoreToolsProps {
   showSearch?: boolean;
