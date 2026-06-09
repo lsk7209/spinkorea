@@ -38,3 +38,7 @@ google-audit-output
 .wrangler
 .dev.vars
 .vercel
+
+# Temp audit files
+broken_thumbs.json
+thumb_urls.json
