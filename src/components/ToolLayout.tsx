@@ -1,7 +1,9 @@
-import type { ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Lightbulb, HelpCircle, Wrench } from 'lucide-react';
+import { type ReactNode, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowLeft, Lightbulb, HelpCircle, Wrench, Share2 } from 'lucide-react';
+import { toast, Toaster } from 'sonner';
 import SEO, { type SEOProps } from '@/components/SEO';
+import { recordRecentTool } from '@/hooks/useRecentTools';
 
 interface FAQItem {
     question: string;
@@ -38,6 +40,24 @@ export default function ToolLayout({
     relatedTools,
     ...seoProps
 }: ToolLayoutProps) {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        recordRecentTool(pathname);
+    }, [pathname]);
+
+    const handleShare = async () => {
+        const url = window.location.href;
+        if (navigator.share) {
+            try {
+                await navigator.share({ title, text: description, url });
+            } catch {}
+        } else {
+            await navigator.clipboard.writeText(url);
+            toast.success('링크가 복사되었습니다!');
+        }
+    };
+
     // Generate FAQ structured data
     const faqStructuredData = faqs && faqs.length > 0 ? {
         "@context": "https://schema.org",
@@ -54,6 +74,7 @@ export default function ToolLayout({
 
     return (
         <div className="min-h-screen bg-neon-bg flex flex-col">
+            <Toaster position="top-center" richColors />
             <SEO
                 title={title}
                 description={description}
@@ -76,7 +97,13 @@ export default function ToolLayout({
                     <h1 className="text-lg md:text-xl font-bold text-gradient truncate text-center flex-1">
                         {title}
                     </h1>
-                    <div className="w-12 sm:w-16" />
+                    <button
+                        onClick={() => { void handleShare(); }}
+                        className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/5 border border-white/10 hover:border-neon-primary/50 text-gray-400 hover:text-white transition-all"
+                        aria-label="공유하기"
+                    >
+                        <Share2 size={18} />
+                    </button>
                 </div>
             </header>
 

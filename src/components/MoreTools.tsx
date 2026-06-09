@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { getRecentTools } from "@/hooks/useRecentTools";
 import { Search } from "lucide-react";
 import {
   Dice5,
@@ -95,6 +96,11 @@ interface MoreToolsProps {
 export default function MoreTools({ showSearch = false }: MoreToolsProps) {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<string>("전체");
+  const [recentPaths, setRecentPaths] = useState<string[]>([]);
+
+  useEffect(() => {
+    setRecentPaths(getRecentTools());
+  }, []);
 
   const filtered = TOOLS.filter((t) => {
     const matchCat = cat === "전체" || t.cat === cat;
@@ -110,6 +116,28 @@ export default function MoreTools({ showSearch = false }: MoreToolsProps) {
         <h2 className="text-2xl md:text-3xl font-bold text-gradient">유틸리티 모음</h2>
         <p className="text-sm text-gray-400">빠른 결정, 변환, 생성까지 한 곳에서.</p>
       </div>
+
+      {showSearch && recentPaths.length > 0 && (
+        <div className="mb-6">
+          <p className="text-xs font-bold tracking-widest text-gray-500 mb-3 text-center">최근 사용</p>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {recentPaths.map((path) => {
+              const tool = TOOLS.find((t) => t.path === path);
+              if (!tool) return null;
+              return (
+                <Link
+                  key={path}
+                  to={path}
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:border-neon-primary/50 hover:text-white transition-all"
+                >
+                  <tool.icon size={13} className={tool.color} />
+                  {tool.name}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {showSearch && (
         <div className="mb-6 space-y-3">
