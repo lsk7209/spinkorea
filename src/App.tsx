@@ -61,6 +61,8 @@ const BodyFatCalculator = lazy(() => import("@/pages/tools/BodyFatCalculator"));
 const SleepCalculator = lazy(() => import("@/pages/tools/SleepCalculator"));
 const VatCalculator = lazy(() => import("@/pages/tools/VatCalculator"));
 const AreaConverter = lazy(() => import("@/pages/tools/AreaConverter"));
+const DateCalculator = lazy(() => import("@/pages/tools/DateCalculator"));
+const MarginCalculator = lazy(() => import("@/pages/tools/MarginCalculator"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -135,6 +137,8 @@ function App() {
           <Route path="/tools/sleep-calculator" element={<SleepCalculator />} />
           <Route path="/tools/vat-calculator" element={<VatCalculator />} />
           <Route path="/tools/area-converter" element={<AreaConverter />} />
+          <Route path="/tools/date-calculator" element={<DateCalculator />} />
+          <Route path="/tools/margin-calculator" element={<MarginCalculator />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />

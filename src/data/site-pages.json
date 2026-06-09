@@ -478,5 +478,25 @@
     "changefreq": "monthly",
     "priority": 0.8,
     "lastmod": "2026-06-10"
+  },
+  {
+    "path": "/tools/date-calculator",
+    "title": "날짜 계산기 | 두 날짜 사이 기간 일·주·개월·년 계산",
+    "description": "시작일과 종료일을 선택하면 두 날짜 사이의 기간을 일·주·개월·년 단위로 자동 계산합니다.",
+    "heading": "날짜 계산기",
+    "summary": "두 날짜 사이 일수·주·개월·년 기간 계산, 계약/근무 기간 확인.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-10"
+  },
+  {
+    "path": "/tools/margin-calculator",
+    "title": "마진율 계산기 | 원가·판매가·마진율 자동 계산",
+    "description": "원가와 판매가로 마진율을 계산하거나, 목표 마진율로 판매가·원가를 역산합니다.",
+    "heading": "마진율 계산기",
+    "summary": "원가·판매가·마진율 3방향 계산, 마크업률 동시 확인.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-10"
   }
 ]

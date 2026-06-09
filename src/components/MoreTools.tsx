@@ -40,6 +40,8 @@ import {
   Moon,
   Receipt,
   Maximize2,
+  CalendarRange,
+  PieChart,
 } from "lucide-react";
 
 const TOOLS = [
@@ -70,6 +72,7 @@ const TOOLS = [
   { path: "/tools/time-calculator", name: "시간 계산기", icon: Clock, desc: "시간 더하기/빼기", color: "text-blue-300", cat: "계산기" },
   { path: "/tools/unit-converter", name: "단위 변환기", icon: ArrowLeftRight, desc: "길이/무게/온도 변환", color: "text-green-300", cat: "계산기" },
   { path: "/tools/area-converter", name: "평수 계산기", icon: Maximize2, desc: "평↔m²↔ft² 면적 변환", color: "text-amber-300", cat: "계산기" },
+  { path: "/tools/margin-calculator", name: "마진율 계산기", icon: PieChart, desc: "원가·판매가·마진율 계산", color: "text-emerald-400", cat: "계산기" },
 
   // 건강·피트니스
   { path: "/tools/bmi-calculator", name: "BMI 계산기", icon: Activity, desc: "체질량 지수 측정", color: "text-lime-300", cat: "건강·피트니스" },
@@ -78,6 +81,7 @@ const TOOLS = [
   { path: "/tools/sleep-calculator", name: "수면 계산기", icon: Moon, desc: "90분 사이클 최적 기상 시각", color: "text-indigo-400", cat: "건강·피트니스" },
 
   // 날짜·시간
+  { path: "/tools/date-calculator", name: "날짜 계산기", icon: CalendarRange, desc: "두 날짜 사이 기간 계산", color: "text-violet-400", cat: "날짜·시간" },
   { path: "/tools/timer", name: "타이머", icon: TimerIcon, desc: "카운트다운·스톱워치·뽀모도로", color: "text-cyan-400", cat: "날짜·시간" },
   { path: "/tools/d-day-counter", name: "D-Day 카운터", icon: CalendarDays, desc: "기념일/목표일 계산", color: "text-pink-300", cat: "날짜·시간" },
   { path: "/tools/unix-timestamp", name: "Unix 타임스탬프", icon: Hash, desc: "날짜 ↔ 타임스탬프", color: "text-gray-300", cat: "날짜·시간" },
