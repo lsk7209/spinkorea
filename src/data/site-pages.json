@@ -348,5 +348,45 @@
     "changefreq": "monthly",
     "priority": 0.7,
     "lastmod": "2026-05-05"
+  },
+  {
+    "path": "/tools/timer",
+    "title": "타이머 | 카운트다운·스톱워치·뽀모도로",
+    "description": "카운트다운, 스톱워치, 뽀모도로 타이머를 한 곳에서 사용하는 무료 온라인 타이머입니다.",
+    "heading": "타이머",
+    "summary": "집중 작업, 휴식, 요리 등 다양한 상황에서 쓰는 타이머 도구입니다.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-09"
+  },
+  {
+    "path": "/tools/hourly-wage",
+    "title": "시급 계산기 | 일급·월급·연봉 자동 계산",
+    "description": "시급을 입력하면 일급, 월급, 연봉을 자동으로 계산합니다. 월급에서 시급 역산도 가능합니다.",
+    "heading": "시급 계산기",
+    "summary": "시급·월급·연봉을 빠르게 환산합니다.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-09"
+  },
+  {
+    "path": "/tools/loan-calculator",
+    "title": "대출 이자·상환금 계산기 | 원리금균등·원금균등",
+    "description": "대출 원금, 금리, 기간을 입력하면 월 상환금, 총 이자, 총 상환금을 자동 계산합니다.",
+    "heading": "대출 계산기",
+    "summary": "대출 이자와 월 상환금을 빠르게 계산합니다.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-09"
+  },
+  {
+    "path": "/tools/jeonse-converter",
+    "title": "전월세 전환 계산기 | 전세→월세 월세→전세 변환",
+    "description": "전세 보증금을 월세로 환산하거나 월세를 전세 보증금으로 역산합니다.",
+    "heading": "전월세 전환 계산기",
+    "summary": "전세와 월세 보증금을 빠르게 상호 환산합니다.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-09"
   }
 ]
