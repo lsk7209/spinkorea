@@ -26,7 +26,7 @@ export default function About() {
       <SEO
         title="SpinFlow 소개 | 무료 결정 도구·생활 유틸리티 32종"
         description="SpinFlow는 룰렛, 시급·대출·전월세·복리 계산기, 글자수 세기 등 일상 결정과 반복 작업을 돕는 무료 웹 유틸리티 서비스입니다."
-        keywords="SpinFlow 소개, 랜덤 결정 도구, 무료 웹 유틸리티, 시급계산기, 대출계산기, 전월세계산기, 복리계산기, 퇴직금계산기"
+        keywords="SpinFlow 소개, 랜덤 결정 도구, 무료 웹 유틸리티, 연봉실수령액계산기, 시급계산기, 대출계산기, 전월세계산기, 복리계산기, 퇴직금계산기, 연차계산기"
         structuredData={structuredData}
       />
 
