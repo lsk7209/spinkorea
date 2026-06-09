@@ -458,5 +458,15 @@
     "changefreq": "monthly",
     "priority": 0.9,
     "lastmod": "2026-06-09"
+  },
+  {
+    "path": "/tools/vat-calculator",
+    "title": "부가세 계산기 | 공급가액·부가세·공급대가 자동 계산",
+    "description": "공급가액에서 부가세를 더하거나, 세금포함 금액에서 부가세를 역산합니다. 견적서·세금계산서 작성에 바로 활용하세요.",
+    "heading": "부가세 계산기",
+    "summary": "공급가액↔세금포함 금액 환산, 부가세(10%) 자동 계산.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-10"
   }
 ]

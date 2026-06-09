@@ -38,6 +38,7 @@ import {
   Flame,
   Scale,
   Moon,
+  Receipt,
 } from "lucide-react";
 
 const TOOLS = [
@@ -87,6 +88,7 @@ const TOOLS = [
   { path: "/tools/severance-pay", name: "퇴직금 계산기", icon: Briefcase, desc: "법정 퇴직금 자동 계산", color: "text-blue-400", cat: "생활 금융" },
   { path: "/tools/annual-leave", name: "연차 계산기", icon: CalendarCheck2, desc: "연차일수·잔여·수당 계산", color: "text-teal-400", cat: "생활 금융" },
   { path: "/tools/net-salary", name: "실수령액 계산기", icon: BadgePercent, desc: "4대보험·세금 공제 후 월급", color: "text-cyan-300", cat: "생활 금융" },
+  { path: "/tools/vat-calculator", name: "부가세 계산기", icon: Receipt, desc: "공급가액·부가세·공급대가 계산", color: "text-rose-400", cat: "생활 금융" },
 ];
 
 const CATS = ["전체", "랜덤", "텍스트·개발", "계산기", "건강·피트니스", "날짜·시간", "생활 금융"] as const;
