@@ -54,6 +54,7 @@ const LoanCalculator = lazy(() => import("@/pages/tools/LoanCalculator"));
 const JeonseConverter = lazy(() => import("@/pages/tools/JeonseConverter"));
 const CompoundInterestCalculator = lazy(() => import("@/pages/tools/CompoundInterestCalculator"));
 const SeveranceCalculator = lazy(() => import("@/pages/tools/SeveranceCalculator"));
+const AnnualLeaveCalculator = lazy(() => import("@/pages/tools/AnnualLeaveCalculator"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -121,6 +122,7 @@ function App() {
           <Route path="/tools/jeonse-converter" element={<JeonseConverter />} />
           <Route path="/tools/compound-interest" element={<CompoundInterestCalculator />} />
           <Route path="/tools/severance-pay" element={<SeveranceCalculator />} />
+          <Route path="/tools/annual-leave" element={<AnnualLeaveCalculator />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />

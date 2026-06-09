@@ -57,6 +57,7 @@ const TOOL_LINKS: { match: string[]; label: string; path: string }[] = [
   { match: ["대출", "이자", "상환", "금리"], label: "대출 계산기", path: "/tools/loan-calculator" },
   { match: ["복리", "예금", "적금", "저축", "투자수익", "CAGR", "수익률"], label: "복리 계산기", path: "/tools/compound-interest" },
   { match: ["퇴직금", "퇴직", "근속", "퇴사"], label: "퇴직금 계산기", path: "/tools/severance-pay" },
+  { match: ["연차", "휴가", "연차수당", "잔여연차"], label: "연차 계산기", path: "/tools/annual-leave" },
   { match: ["전세", "월세", "보증금", "임대"], label: "전월세 전환 계산기", path: "/tools/jeonse-converter" },
   { match: ["퍼센트", "할인", "증감", "수익률"], label: "퍼센트 계산기", path: "/tools/percentage-calculator" },
   { match: ["BMI", "체질량", "체중", "비만"], label: "BMI 계산기", path: "/tools/bmi-calculator" },

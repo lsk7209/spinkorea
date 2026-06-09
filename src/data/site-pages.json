@@ -408,5 +408,15 @@
     "changefreq": "monthly",
     "priority": 0.8,
     "lastmod": "2026-06-09"
+  },
+  {
+    "path": "/tools/annual-leave",
+    "title": "연차 계산기 | 연차일수·잔여연차·연차수당 자동 계산",
+    "description": "입사일과 기준일을 입력하면 발생 연차, 잔여 연차, 미사용 연차수당을 근로기준법 기준으로 자동 계산합니다.",
+    "heading": "연차 계산기",
+    "summary": "발생 연차와 미사용 연차수당을 빠르게 계산합니다.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-09"
   }
 ]

@@ -24,9 +24,9 @@ export default function About() {
   return (
     <div className="min-h-[100dvh] bg-slate-50 text-slate-950 flex flex-col">
       <SEO
-        title="SpinFlow 소개 | 무료 결정 도구·생활 유틸리티 30종"
+        title="SpinFlow 소개 | 무료 결정 도구·생활 유틸리티 31종"
         description="SpinFlow는 룰렛, 시급·대출·전월세·복리 계산기, 글자수 세기 등 일상 결정과 반복 작업을 돕는 무료 웹 유틸리티 서비스입니다."
-        keywords="SpinFlow 소개, 랜덤 결정 도구, 무료 웹 유틸리티, 시급계산기, 대출계산기, 전월세계산기, 복리계산기"
+        keywords="SpinFlow 소개, 랜덤 결정 도구, 무료 웹 유틸리티, 시급계산기, 대출계산기, 전월세계산기, 복리계산기, 퇴직금계산기"
         structuredData={structuredData}
       />
 
@@ -56,7 +56,7 @@ export default function About() {
             {
               icon: <Wallet className="text-amber-600" size={24} />,
               title: "생활 금융·유틸리티",
-              desc: "시급·대출·전월세·복리 계산기, 글자수 세기, JSON 포맷, 날짜 계산 등 30가지 도구를 설치 없이 바로 이용합니다.",
+              desc: "시급·대출·전월세·복리 계산기, 글자수 세기, JSON 포맷, 날짜 계산 등 31가지 도구를 설치 없이 바로 이용합니다.",
             },
             {
               icon: <ShieldCheck className="text-green-600" size={24} />,
