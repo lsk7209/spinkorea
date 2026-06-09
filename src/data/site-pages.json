@@ -388,5 +388,15 @@
     "changefreq": "monthly",
     "priority": 0.8,
     "lastmod": "2026-06-09"
+  },
+  {
+    "path": "/tools/compound-interest",
+    "title": "복리 계산기 | 예금·적금 만기금액 이자 계산",
+    "description": "원금, 연 이자율, 투자 기간을 입력하면 만기 금액과 이자 수익을 복리로 계산합니다.",
+    "heading": "복리 계산기",
+    "summary": "예금·적금의 복리 만기금액과 이자 수익을 계산합니다.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-09"
   }
 ]

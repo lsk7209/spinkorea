@@ -52,6 +52,7 @@ const Timer = lazy(() => import("@/pages/tools/Timer"));
 const HourlyWageCalculator = lazy(() => import("@/pages/tools/HourlyWageCalculator"));
 const LoanCalculator = lazy(() => import("@/pages/tools/LoanCalculator"));
 const JeonseConverter = lazy(() => import("@/pages/tools/JeonseConverter"));
+const CompoundInterestCalculator = lazy(() => import("@/pages/tools/CompoundInterestCalculator"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -117,6 +118,7 @@ function App() {
           <Route path="/tools/hourly-wage" element={<HourlyWageCalculator />} />
           <Route path="/tools/loan-calculator" element={<LoanCalculator />} />
           <Route path="/tools/jeonse-converter" element={<JeonseConverter />} />
+          <Route path="/tools/compound-interest" element={<CompoundInterestCalculator />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
