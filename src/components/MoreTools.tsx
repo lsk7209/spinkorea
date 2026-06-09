@@ -39,6 +39,7 @@ import {
   Scale,
   Moon,
   Receipt,
+  Maximize2,
 } from "lucide-react";
 
 const TOOLS = [
@@ -68,6 +69,7 @@ const TOOLS = [
   { path: "/tools/percentage-calculator", name: "퍼센트 계산기", icon: Percent, desc: "할인율/증감률 계산", color: "text-orange-300", cat: "계산기" },
   { path: "/tools/time-calculator", name: "시간 계산기", icon: Clock, desc: "시간 더하기/빼기", color: "text-blue-300", cat: "계산기" },
   { path: "/tools/unit-converter", name: "단위 변환기", icon: ArrowLeftRight, desc: "길이/무게/온도 변환", color: "text-green-300", cat: "계산기" },
+  { path: "/tools/area-converter", name: "평수 계산기", icon: Maximize2, desc: "평↔m²↔ft² 면적 변환", color: "text-amber-300", cat: "계산기" },
 
   // 건강·피트니스
   { path: "/tools/bmi-calculator", name: "BMI 계산기", icon: Activity, desc: "체질량 지수 측정", color: "text-lime-300", cat: "건강·피트니스" },

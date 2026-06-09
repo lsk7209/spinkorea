@@ -9,6 +9,20 @@
     <atom:link href="https://www.spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>평수 계산법: 평↔m² 환산 공식과 아파트 평형별 면적 정리</title>
+      <link>https://www.spinkorea.kr/blog/pyeong-m2-guide</link>
+      <description>1평이 몇 m²인지, 전용면적과 공급면적 차이, 아파트 평형별 실제 면적을 정리했습니다.</description>
+      <pubDate>Tue, 10 Jun 2026 09:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/pyeong-m2-guide</guid>
+    </item>
+    <item>
+      <title>부가세 계산 방법: 공급가액·역산·세금계산서 실무 정리</title>
+      <link>https://www.spinkorea.kr/blog/vat-calculator-guide</link>
+      <description>공급가액에서 부가세를 더하고 세금포함 금액을 역산하는 공식, 세금계산서 기재 방법까지 실무 기준으로 정리했습니다.</description>
+      <pubDate>Tue, 10 Jun 2026 08:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/vat-calculator-guide</guid>
+    </item>
+    <item>
       <title>수면 사이클 계산: 90분 주기로 최적 기상·취침 시각 정하는 법</title>
       <link>https://www.spinkorea.kr/blog/sleep-cycle-guide</link>
       <description>수면이 왜 90분 단위로 순환되는지, 사이클 완료 시점에 일어나는 것이 덜 피곤한 이유와 최적 기상 시각을 계산하는 방법을 정리했습니다.</description>

@@ -468,5 +468,15 @@
     "changefreq": "monthly",
     "priority": 0.8,
     "lastmod": "2026-06-10"
+  },
+  {
+    "path": "/tools/area-converter",
+    "title": "평수 계산기 | 평↔m²↔ft² 면적 변환",
+    "description": "평, 제곱미터(m²), 제곱피트(ft²) 단위를 상호 변환합니다. 아파트 평형 확인, 해외 부동산 면적 비교에 활용하세요.",
+    "heading": "평수 계산기",
+    "summary": "평↔m²↔ft² 면적 상호 변환, 아파트 평형별 바로 보기 제공.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-10"
   }
 ]
