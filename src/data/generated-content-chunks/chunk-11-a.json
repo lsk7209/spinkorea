@@ -1194,5 +1194,53 @@
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass",
     "body": "<h2>단리와 복리의 차이</h2><p>단리는 원금에만 이자가 붙지만, 복리는 이자가 원금에 합산되어 다음 기간 이자의 기준이 됩니다. 같은 연 3%라도 10년 후 단리는 30%, 월복리는 약 34.9% 수익입니다.</p><h2>복리 계산 공식</h2><ul><li>원금 P, 연이자율 r, 기간 t년, 복리 주기 n회/년</li><li>만기금액 A = P × (1 + r/n)^(n×t)</li><li>월 추가 납입 m이 있으면: A += m × ((1+r/n)^(n×t) - 1) / (r/n)</li><li>연복리(n=1), 반기복리(n=2), 분기(n=4), 월복리(n=12)</li></ul><h2>복리 주기별 수익 비교 (연 3%, 10년)</h2><ul><li>연복리: 원금 대비 34.39% 수익</li><li>분기복리: 34.69% 수익</li><li>월복리: 34.94% 수익</li><li>일복리: 34.98% 수익</li></ul><h2>복리의 72 법칙</h2><p>원금이 2배가 되는 기간(년) = 72 / 연이자율(%). 연 6% 복리라면 72 ÷ 6 = 12년 후 원금이 2배. 투자 목표 기간을 설정할 때 빠른 추정값으로 활용하세요.</p><p>정확한 만기금액과 연도별 이자 수익을 계산하려면 <a href=\"/tools/compound-interest\">복리 계산기</a>에서 원금, 이자율, 기간을 입력해 확인하세요.</p>"
+  },
+  {
+    "id": "generated-11-a-29",
+    "status": "published",
+    "slug": "calorie-bmr-guide",
+    "title": "기초대사량(BMR) 계산법: 다이어트 칼로리 설정 가이드",
+    "description": "Mifflin-St Jeor 공식으로 기초대사량(BMR)을 계산하고 활동량에 따라 일일 권장 칼로리를 설정하는 방법을 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T06:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "기초대사량 계산",
+    "expandedKeywords": [
+      "BMR 계산법",
+      "다이어트 칼로리",
+      "TDEE",
+      "활동량 계수"
+    ],
+    "readerProblem": "얼마나 먹어야 살이 빠지는지 모르는 문제",
+    "practicalExample": "다이어트 시작 전 목표 칼로리를 설정할 때",
+    "primarySourceName": "보건복지부",
+    "primarySourceUrl": "https://www.mohw.go.kr/",
+    "internalLinks": [
+      {
+        "label": "칼로리 계산기",
+        "path": "/tools/calorie-calculator"
+      },
+      {
+        "label": "BMI 계산기",
+        "path": "/tools/bmi-calculator"
+      },
+      {
+        "label": "퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "건강",
+      "다이어트",
+      "기초대사량"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 90,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass",
+    "body": "<h2>기초대사량(BMR)이란</h2><p>아무것도 하지 않고 24시간 누워만 있어도 심장 박동, 체온 유지, 장기 기능을 위해 소비되는 최소 칼로리입니다. 전체 에너지 소비의 60~70%를 차지합니다.</p><h2>BMR 계산 공식 (Mifflin-St Jeor)</h2><ul><li>남성: BMR = 10×체중(kg) + 6.25×키(cm) - 5×나이 + 5</li><li>여성: BMR = 10×체중(kg) + 6.25×키(cm) - 5×나이 - 161</li><li>예: 남성 30세, 70kg, 175cm → BMR ≈ 1736 kcal</li></ul><h2>TDEE: 일일 총 소비 칼로리</h2><p>BMR × 활동 계수 = TDEE(Total Daily Energy Expenditure). 활동 계수는 ①거의 안 움직임 1.2 ②가벼운 운동 1.375 ③보통 운동 1.55 ④활발한 운동 1.725 ⑤매우 활발 1.9 순서입니다.</p><h2>목표별 칼로리 설정</h2><ul><li>체중 감량: TDEE - 300~500 kcal (주 0.3~0.5kg 감량)</li><li>체중 유지: TDEE와 동일</li><li>근육 증가: TDEE + 200~300 kcal</li><li>급격한 감량(-1000kcal 이상)은 근육 손실과 영양 부족 위험</li></ul><h2>실천 포인트</h2><p>칼로리 숫자보다 단백질 섭취(체중 1kg당 1.2~1.6g)와 식이섬유, 수면의 질이 체성분 변화에 더 큰 영향을 미칩니다. 칼로리는 방향을 잡는 나침반으로 활용하세요.</p><p>내 기초대사량과 목표별 칼로리를 바로 계산하려면 <a href=\"/tools/calorie-calculator\">칼로리 계산기</a>에서 성별·나이·키·몸무게와 활동 수준을 입력하세요.</p>"
   }
 ]

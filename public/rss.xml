@@ -9,6 +9,13 @@
     <atom:link href="https://www.spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>기초대사량(BMR) 계산법: 다이어트 칼로리 설정 가이드</title>
+      <link>https://www.spinkorea.kr/blog/calorie-bmr-guide</link>
+      <description>Mifflin-St Jeor 공식으로 기초대사량(BMR)을 계산하고 활동량에 따라 일일 권장 칼로리를 설정하는 방법을 정리했습니다.</description>
+      <pubDate>Mon, 09 Jun 2026 06:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/calorie-bmr-guide</guid>
+    </item>
+    <item>
       <title>복리 계산 방법: 예금·적금 만기금액과 이자 수익 계산하기</title>
       <link>https://www.spinkorea.kr/blog/compound-interest-calculation-guide</link>
       <description>연복리·월복리 차이, 만기금액 공식, 매월 추가 납입 반영까지 복리 계산의 핵심을 정리했습니다.</description>

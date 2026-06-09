@@ -10514,5 +10514,21 @@
     "thumbnail": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "source": "generated"
+  },
+  {
+    "slug": "calorie-bmr-guide",
+    "title": "기초대사량(BMR) 계산법: 다이어트 칼로리 설정 가이드",
+    "description": "Mifflin-St Jeor 공식으로 기초대사량(BMR)을 계산하고 활동량에 따라 일일 권장 칼로리를 설정하는 방법을 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T06:00:00+09:00",
+    "tags": [
+      "계산기",
+      "건강",
+      "다이어트",
+      "기초대사량"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 90,
+    "source": "generated"
   }
 ]

@@ -94,14 +94,14 @@ export default function BmiCalculator() {
       ]}
       relatedTools={[
         {
+          name: "칼로리 계산기",
+          path: "/tools/calorie-calculator",
+          description: "기초대사량·일일 권장 칼로리 계산",
+        },
+        {
           name: "만 나이 계산기",
           path: "/tools/age-calculator",
           description: "만 나이, 세는 나이 한번에 계산",
-        },
-        {
-          name: "퍼센트 계산기",
-          path: "/tools/percentage-calculator",
-          description: "할인율, 증감률 계산",
         },
         {
           name: "단위 변환기",
