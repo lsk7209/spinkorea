@@ -56,6 +56,7 @@ const CompoundInterestCalculator = lazy(() => import("@/pages/tools/CompoundInte
 const SeveranceCalculator = lazy(() => import("@/pages/tools/SeveranceCalculator"));
 const AnnualLeaveCalculator = lazy(() => import("@/pages/tools/AnnualLeaveCalculator"));
 const NetSalaryCalculator = lazy(() => import("@/pages/tools/NetSalaryCalculator"));
+const CalorieCalculator = lazy(() => import("@/pages/tools/CalorieCalculator"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -125,6 +126,7 @@ function App() {
           <Route path="/tools/severance-pay" element={<SeveranceCalculator />} />
           <Route path="/tools/annual-leave" element={<AnnualLeaveCalculator />} />
           <Route path="/tools/net-salary" element={<NetSalaryCalculator />} />
+          <Route path="/tools/calorie-calculator" element={<CalorieCalculator />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />

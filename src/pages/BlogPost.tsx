@@ -62,6 +62,7 @@ const TOOL_LINKS: { match: string[]; label: string; path: string }[] = [
   { match: ["전세", "월세", "보증금", "임대"], label: "전월세 전환 계산기", path: "/tools/jeonse-converter" },
   { match: ["퍼센트", "할인", "증감", "수익률"], label: "퍼센트 계산기", path: "/tools/percentage-calculator" },
   { match: ["BMI", "체질량", "체중", "비만"], label: "BMI 계산기", path: "/tools/bmi-calculator" },
+  { match: ["칼로리", "기초대사량", "BMR", "다이어트", "식단"], label: "칼로리 계산기", path: "/tools/calorie-calculator" },
   { match: ["점심", "메뉴", "식사", "음식"], label: "점심 메뉴 룰렛", path: "/lunch-menu" },
   { match: ["타이머", "시간", "뽀모도로", "집중"], label: "타이머", path: "/tools/timer" },
   { match: ["D-Day", "기념일", "날짜", "목표"], label: "D-Day 카운터", path: "/tools/d-day-counter" },

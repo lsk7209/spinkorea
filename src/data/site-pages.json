@@ -420,6 +420,16 @@
     "lastmod": "2026-06-09"
   },
   {
+    "path": "/tools/calorie-calculator",
+    "title": "칼로리 계산기 | 기초대사량(BMR)·일일 권장 칼로리",
+    "description": "성별·나이·키·몸무게와 활동량을 입력하면 기초대사량(BMR)과 목표별 일일 권장 칼로리를 자동 계산합니다.",
+    "heading": "칼로리 계산기",
+    "summary": "BMR과 TDEE로 다이어트·유지·증량 목표 칼로리를 계산합니다.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-09"
+  },
+  {
     "path": "/tools/net-salary",
     "title": "연봉 실수령액 계산기 | 4대보험·소득세 공제 후 월급",
     "description": "세전 연봉을 입력하면 국민연금·건강보험·고용보험·소득세를 공제한 실수령 월급과 연봉을 자동 계산합니다.",

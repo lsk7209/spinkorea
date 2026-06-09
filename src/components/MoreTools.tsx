@@ -34,6 +34,7 @@ import {
   Briefcase,
   CalendarCheck2,
   BadgePercent,
+  Flame,
 } from "lucide-react";
 
 const TOOLS = [
@@ -61,6 +62,7 @@ const TOOLS = [
   // 계산기
   { path: "/tools/age-calculator", name: "나이 계산기", icon: Calendar, desc: "만 나이/생일 계산", color: "text-amber-400", cat: "계산기" },
   { path: "/tools/bmi-calculator", name: "BMI 계산기", icon: Activity, desc: "체질량 지수 측정", color: "text-lime-300", cat: "계산기" },
+  { path: "/tools/calorie-calculator", name: "칼로리 계산기", icon: Flame, desc: "BMR·일일 권장 칼로리", color: "text-orange-400", cat: "계산기" },
   { path: "/tools/percentage-calculator", name: "퍼센트 계산기", icon: Percent, desc: "할인율/증감률 계산", color: "text-orange-300", cat: "계산기" },
   { path: "/tools/time-calculator", name: "시간 계산기", icon: Clock, desc: "시간 더하기/빼기", color: "text-blue-300", cat: "계산기" },
   { path: "/tools/unit-converter", name: "단위 변환기", icon: ArrowLeftRight, desc: "길이/무게/온도 변환", color: "text-green-300", cat: "계산기" },
