@@ -3,63 +3,85 @@ import { Link } from "react-router-dom";
 
 export default function Terms() {
   return (
-    <div className="min-h-screen bg-neon-bg px-4 py-24 text-gray-300">
+    <div className="min-h-screen bg-slate-50 text-slate-950 flex flex-col">
       <SEO
         title="이용약관 - SpinFlow"
         description="SpinFlow 서비스 이용 조건, 도구 결과의 한계, 광고 및 제휴 고지, 책임 제한과 문의 방법을 안내합니다."
         keywords="SpinFlow 이용약관, 서비스 이용 조건, 광고 고지, 책임 제한"
       />
-      <main className="prose prose-invert mx-auto max-w-3xl">
-        <h1>이용약관</h1>
-        <p>최종 업데이트: 2026년 6월 8일</p>
 
-        <h2>1. 목적</h2>
-        <p>
-          본 약관은 SpinFlow가 제공하는 랜덤 결정 도구, 계산기, 텍스트 도구,
-          블로그 콘텐츠 등 웹 서비스의 이용 조건과 운영 기준을 안내합니다.
-        </p>
+      <header className="w-full px-4 pt-28 pb-12 border-b border-slate-200 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-sm font-bold text-cyan-700 mb-3 uppercase tracking-widest">Terms of Service</p>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-950 mb-4">이용약관</h1>
+          <p className="text-slate-500 text-sm">최종 업데이트: 2026년 6월 8일</p>
+        </div>
+      </header>
 
-        <h2>2. 서비스 성격</h2>
-        <p>
-          SpinFlow의 룰렛, 주사위, 추첨, 예/아니오 도구 등은 사용자의 선택을
-          돕기 위한 참고용 기능입니다. 결과는 무작위 또는 입력값 기반으로
-          생성되며 법적, 의학적, 금융적, 전문적 판단을 대신하지 않습니다.
-        </p>
+      <main className="flex-1 max-w-3xl mx-auto w-full px-4 py-12">
+        <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-8 space-y-8 prose prose-slate max-w-none prose-headings:text-slate-950 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-cyan-700">
+          <section>
+            <h2>1. 목적</h2>
+            <p>
+              본 약관은 SpinFlow가 제공하는 랜덤 결정 도구, 계산기, 텍스트 도구,
+              블로그 콘텐츠 등 웹 서비스의 이용 조건과 운영 기준을 안내합니다.
+            </p>
+          </section>
 
-        <h2>3. 이용자의 책임</h2>
-        <ul>
-          <li>도구 결과를 최종 의사결정의 유일한 근거로 사용하지 않아야 합니다.</li>
-          <li>타인의 권리, 개인정보, 저작권을 침해하는 방식으로 서비스를 사용할 수 없습니다.</li>
-          <li>자동화된 과도한 요청, 보안 우회, 서비스 장애를 유발하는 행위는 제한됩니다.</li>
-        </ul>
+          <section>
+            <h2>2. 서비스 성격</h2>
+            <p>
+              SpinFlow의 룰렛, 주사위, 추첨, 예/아니오 도구 등은 사용자의 선택을
+              돕기 위한 참고용 기능입니다. 결과는 무작위 또는 입력값 기반으로
+              생성되며 법적, 의학적, 금융적, 전문적 판단을 대신하지 않습니다.
+            </p>
+          </section>
 
-        <h2>4. 광고 및 제휴</h2>
-        <p>
-          일부 페이지에는 Google AdSense 등 광고가 표시될 수 있습니다. 광고 또는
-          제휴 링크가 포함되어도 콘텐츠와 도구의 기본 목적은 이용자에게 실용적인
-          정보와 기능을 제공하는 것입니다.
-        </p>
+          <section>
+            <h2>3. 이용자의 책임</h2>
+            <ul>
+              <li>도구 결과를 최종 의사결정의 유일한 근거로 사용하지 않아야 합니다.</li>
+              <li>타인의 권리, 개인정보, 저작권을 침해하는 방식으로 서비스를 사용할 수 없습니다.</li>
+              <li>자동화된 과도한 요청, 보안 우회, 서비스 장애를 유발하는 행위는 제한됩니다.</li>
+            </ul>
+          </section>
 
-        <h2>5. 콘텐츠와 오류 정정</h2>
-        <p>
-          사이트의 정보는 정확성을 높이기 위해 관리하지만, 업데이트 시점이나
-          외부 서비스 변경에 따라 일부 내용이 달라질 수 있습니다. 오류를 발견하면
-          <Link to="/contact">문의하기</Link> 페이지를 통해 정정 요청을 보내주세요.
-        </p>
+          <section>
+            <h2>4. 광고 및 제휴</h2>
+            <p>
+              일부 페이지에는 Google AdSense 등 광고가 표시될 수 있습니다. 광고 또는
+              제휴 링크가 포함되어도 콘텐츠와 도구의 기본 목적은 이용자에게 실용적인
+              정보와 기능을 제공하는 것입니다.
+            </p>
+          </section>
 
-        <h2>6. 책임 제한</h2>
-        <p>
-          SpinFlow는 무료 정보 및 도구 제공 서비스입니다. 서비스 이용으로 인한
-          개별 결정과 그 결과는 이용자 본인의 판단과 책임에 따릅니다. 고의 또는
-          중대한 과실이 없는 한 간접 손해, 기대 이익 상실, 외부 서비스 장애로 인한
-          손해에 대해 책임을 지지 않습니다.
-        </p>
+          <section>
+            <h2>5. 콘텐츠와 오류 정정</h2>
+            <p>
+              사이트의 정보는 정확성을 높이기 위해 관리하지만, 업데이트 시점이나
+              외부 서비스 변경에 따라 일부 내용이 달라질 수 있습니다. 오류를 발견하면{" "}
+              <Link to="/contact">문의하기</Link> 페이지를 통해 정정 요청을 보내주세요.
+            </p>
+          </section>
 
-        <h2>7. 약관 변경</h2>
-        <p>
-          서비스 구조, 관련 법령, 광고 및 분석 도구 변경에 따라 본 약관은 수정될
-          수 있습니다. 변경된 약관은 사이트에 게시된 시점부터 적용됩니다.
-        </p>
+          <section>
+            <h2>6. 책임 제한</h2>
+            <p>
+              SpinFlow는 무료 정보 및 도구 제공 서비스입니다. 서비스 이용으로 인한
+              개별 결정과 그 결과는 이용자 본인의 판단과 책임에 따릅니다. 고의 또는
+              중대한 과실이 없는 한 간접 손해, 기대 이익 상실, 외부 서비스 장애로 인한
+              손해에 대해 책임을 지지 않습니다.
+            </p>
+          </section>
+
+          <section>
+            <h2>7. 약관 변경</h2>
+            <p>
+              서비스 구조, 관련 법령, 광고 및 분석 도구 변경에 따라 본 약관은 수정될
+              수 있습니다. 변경된 약관은 사이트에 게시된 시점부터 적용됩니다.
+            </p>
+          </section>
+        </div>
       </main>
     </div>
   );
