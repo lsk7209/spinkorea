@@ -2,7 +2,6 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Lightbulb, HelpCircle, Wrench } from 'lucide-react';
 import SEO, { type SEOProps } from '@/components/SEO';
-import AdBanner from '@/components/AdBanner';
 
 interface FAQItem {
     question: string;
@@ -90,7 +89,7 @@ export default function ToolLayout({
 
                 {/* About this tool */}
                 <div className="card border-white/10 p-6">
-                    <h2 className="text-xl font-semibold text-neon-primary mb-3">About this tool</h2>
+                    <h2 className="text-xl font-semibold text-neon-primary mb-3">도구 소개</h2>
                     <p className="text-gray-200 leading-relaxed whitespace-pre-line">
                         {description}
                     </p>
@@ -181,8 +180,6 @@ export default function ToolLayout({
                     </div>
                 )}
 
-                {/* Ad Banner */}
-                <AdBanner slot="2917736562" format="auto" className="my-4" />
             </main>
         </div>
     );

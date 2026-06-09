@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, Navigate, Link } from "react-router-dom";
 import type { BlogPost } from "@/data/posts";
 import {
@@ -7,9 +7,16 @@ import {
   type BlogPostMeta,
 } from "@/data/postMetadata";
 import SEO from "@/components/SEO";
-import { ArrowLeft, Calendar, Share2 } from "lucide-react";
+import { ArrowLeft, Calendar, Share2, List } from "lucide-react";
 import { toast } from "sonner";
 import { trackEvent } from "@/utils/analytics";
+
+interface TocItem {
+  id: string;
+  text: string;
+  level: 2 | 3;
+  h2Index?: number;
+}
 
 const SITE_ORIGIN = "https://www.spinkorea.kr";
 
@@ -50,6 +57,9 @@ export default function BlogPost() {
   const post = findPublishedPostMetadata(slug);
   const [contentPost, setContentPost] = useState<BlogPost | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
+  const [tocItems, setTocItems] = useState<TocItem[]>([]);
+  const [tocOpen, setTocOpen] = useState(true);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -84,6 +94,26 @@ export default function BlogPost() {
       mounted = false;
     };
   }, [post?.slug]);
+
+  useEffect(() => {
+    if (!contentPost || !contentRef.current) return;
+    const timer = setTimeout(() => {
+      const el = contentRef.current;
+      if (!el) return;
+      const headings = el.querySelectorAll("h2, h3");
+      const items: TocItem[] = [];
+      let h2Counter = 0;
+      headings.forEach((h, i) => {
+        const level = h.tagName === "H2" ? 2 : 3;
+        const id = h.id || `toc-heading-${i}`;
+        if (!h.id) h.id = id;
+        if (level === 2) h2Counter += 1;
+        items.push({ id, text: h.textContent ?? "", level, h2Index: level === 2 ? h2Counter : undefined });
+      });
+      setTocItems(items);
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [contentPost]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -251,7 +281,47 @@ export default function BlogPost() {
             </div>
           )}
 
-          <div className="article-content-light prose prose-slate prose-lg max-w-none prose-a:text-cyan-700 prose-headings:text-slate-950">
+          {tocItems.length >= 3 && (
+            <nav className="mb-8 rounded-2xl border border-cyan-100 bg-cyan-50/60 p-5">
+              <button
+                type="button"
+                onClick={() => setTocOpen((o) => !o)}
+                className="flex w-full items-center justify-between text-sm font-bold text-slate-800"
+              >
+                <span className="flex items-center gap-2">
+                  <List size={16} className="text-cyan-700" />
+                  목차
+                </span>
+                <span className="text-slate-400 text-xs">{tocOpen ? "접기 ▲" : "펼치기 ▼"}</span>
+              </button>
+              {tocOpen && (
+                <ol className="mt-3 space-y-1.5">
+                  {tocItems.map((item) => (
+                    <li
+                      key={item.id}
+                      className={item.level === 3 ? "ml-5" : ""}
+                    >
+                      <a
+                        href={`#${item.id}`}
+                        className={`text-sm leading-snug hover:text-cyan-700 hover:underline transition-colors ${
+                          item.level === 2 ? "text-slate-700 font-medium" : "text-slate-500"
+                        }`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }}
+                      >
+                        {item.level === 2 ? `${item.h2Index}. ` : "· "}
+                        {item.text}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              )}
+            </nav>
+          )}
+
+          <div ref={contentRef} className="article-content-light prose prose-slate prose-lg max-w-none prose-a:text-cyan-700 prose-headings:text-slate-950">
             {contentPost ? (
               contentPost.content
             ) : (
@@ -266,9 +336,9 @@ export default function BlogPost() {
 
         <section className="mt-20 px-4">
           <div className="max-w-2xl mx-auto bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm">
-            <h3 className="text-2xl font-bold text-slate-950 mb-4">
+            <h2 className="text-2xl font-bold text-slate-950 mb-4">
               관련 도구로 바로 확인해 보세요
-            </h3>
+            </h2>
             <p className="text-slate-600 mb-8">
               글에서 정리한 기준을 실제 선택, 계산, 기록 도구에 바로 적용할 수 있습니다.
               <br />

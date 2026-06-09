@@ -22,6 +22,7 @@ export interface GeneratedArticlePlan {
   tags: string[];
   thumbnail: string;
   qualityScore: number;
+  body?: string;
 }
 
 const ARTICLE_CHUNK_BY_SLUG = contentManifest as Record<string, string>;
@@ -234,9 +235,9 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
         <p>체크리스트를 한꺼번에 보면 빠뜨리기 쉽습니다. 준비·진행·공유 세 단계로 나눠 각 단계에서 하나씩 확인하면 누락이 줄어듭니다.</p>
         <div className="grid gap-3 md:grid-cols-3">
           {([
-            ["준비 단계", `${k0} 기준을 먼저 정하고, 선택지를 3~7개로 압축합니다. 예외 조건이 있다면 이 단계에서 명시합니다.`, "border-blue-200 bg-blue-50"],
+            ["준비 단계", `${k0} 기준을 먼저 정하고, 선택지를 3~7개로 압축합니다. 예외 조건이 있다면 이 단계에서 명시합니다.`, "border-cyan-200 bg-cyan-50"],
             ["진행 단계", `${k1} 기준에 따라 실행하고, 예기치 못한 상황이 생기면 즉흥 수정보다 다음 회차 규칙 반영으로 처리합니다.`, "border-amber-200 bg-amber-50"],
-            ["공유 단계", `${withObjectPhrase(k3)} 결과와 함께 짧게 남깁니다. 공유 URL이나 캡처 한 장으로도 충분합니다.`, "border-emerald-200 bg-emerald-50"],
+            ["공유 단계", `${withObjectPhrase(k3)} 결과와 함께 짧게 남깁니다. 공유 URL이나 캡처 한 장으로도 충분합니다.`, "border-cyan-200 bg-cyan-50"],
           ] as [string, string, string][]).map(([phase, text, cls]) => (
             <div key={phase} className={`rounded-lg border p-4 ${cls}`}>
               <p className="font-semibold text-gray-900">{phase}</p>
@@ -287,9 +288,9 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
         <p>{k0}, {k1}, {withObjectPhrase(k2)} 질문 단위로 나누면 검색 의도와 본문 구조가 자연스럽게 맞아집니다.</p>
         <div className="space-y-3">
           {([
-            [`${withObjectPhrase(k0)} 언제 다시 검토해야 하나요?`, `상황이 바뀌거나 참여자 구성이 달라질 때마다 ${k0}를 재확인합니다. 기준이 오래되면 현실과 어긋나는 결과가 나올 수 있습니다.`, "border-blue-200 bg-blue-50"],
+            [`${withObjectPhrase(k0)} 언제 다시 검토해야 하나요?`, `상황이 바뀌거나 참여자 구성이 달라질 때마다 ${k0}를 재확인합니다. 기준이 오래되면 현실과 어긋나는 결과가 나올 수 있습니다.`, "border-cyan-200 bg-cyan-50"],
             [`${withObjectPhrase(k1)} 팀 전체가 공유하는 방법은?`, `공유 URL이나 짧은 문서 링크로 동일한 ${k1}를 전달합니다. 버전이 달라지면 결과도 달라지므로 최신본 URL을 단일 링크로 관리합니다.`, "border-amber-200 bg-amber-50"],
-            [`${k2}와 ${k3} 중 먼저 정해야 하는 것은?`, `${k2}를 먼저 정하면 ${k3}를 좁히기 쉬워집니다. 반대 순서로 가면 기준이 흔들려 결과를 설명할 때 어려움이 생깁니다.`, "border-teal-200 bg-teal-50"],
+            [`${k2}와 ${k3} 중 먼저 정해야 하는 것은?`, `${k2}를 먼저 정하면 ${k3}를 좁히기 쉬워집니다. 반대 순서로 가면 기준이 흔들려 결과를 설명할 때 어려움이 생깁니다.`, "border-cyan-200 bg-cyan-50"],
           ] as [string, string, string][]).map(([q, ans, cls], idx) => (
             <div key={idx} className={`rounded-lg border p-4 ${cls}`}>
               <p className="font-semibold text-gray-900">Q{idx + 1}. {q}</p>
@@ -308,9 +309,9 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
         <p>{withEunNeun(a.mainKeyword)} 결과만 보면 단순해 보이지만 실제로는 {k0}, {k1}, {withEunNeun(k2)} 함께 움직입니다. 이 세 가지를 분리해서 보면 같은 결과라도 왜 그렇게 판단했는지 설명하기 쉬워집니다.</p>
         <div className="grid gap-3 md:grid-cols-3">
           {([
-            [k0, "결정의 방향을 정합니다", `${withEunNeun(k0)} 바뀌면 선택지 구성 자체가 달라질 수 있습니다.`, "border-blue-200 bg-blue-50"],
+            [k0, "결정의 방향을 정합니다", `${withEunNeun(k0)} 바뀌면 선택지 구성 자체가 달라질 수 있습니다.`, "border-cyan-200 bg-cyan-50"],
             [k1, "실행 범위를 정합니다", `${k1}이 넓으면 결과 해석이 어렵고, 좁으면 적용이 빠릅니다.`, "border-amber-200 bg-amber-50"],
-            [k2, "결과의 신뢰도를 높입니다", `${k2}가 명확할수록 참여자가 결과를 받아들이기 쉽습니다.`, "border-teal-200 bg-teal-50"],
+            [k2, "결과의 신뢰도를 높입니다", `${k2}가 명확할수록 참여자가 결과를 받아들이기 쉽습니다.`, "border-cyan-200 bg-cyan-50"],
           ] as [string, string, string, string][]).map(([label, role, desc, cls]) => (
             <div key={label} className={`rounded-lg border p-4 ${cls}`}>
               <p className="text-xs font-semibold uppercase tracking-wider text-gray-600">{role}</p>
@@ -328,8 +329,8 @@ function TypeSpecificSection({ article: a }: { article: GeneratedArticlePlan }) 
     <>
       <h2>{a.mainKeyword} 실행 흐름: 단계마다 멈추지 않는 법</h2>
       <p>{withObjectPhrase(k0)} 정하고, {withObjectPhrase(k1)} 확인하고, {k2}로 실행한 뒤 {withObjectPhrase(k3)} 남기는 순서로 진행하면 어느 단계에서 막혀도 어디서 다시 시작할지 알 수 있습니다.</p>
-      <div className="rounded-lg border border-gray-200 bg-gray-50 p-5">
-        <p className="font-semibold text-gray-900">빠른 실행 요약</p>
+      <div className="rounded-lg border border-cyan-200 bg-cyan-50 p-5">
+        <p className="font-semibold text-cyan-900">빠른 실행 요약</p>
         <ol className="mt-3 space-y-2 pl-5 list-decimal text-sm text-gray-800">
           <li>{withObjectPhrase(k0)} 한 줄로 정합니다.</li>
           <li>선택지를 {k1} 기준으로 5개 이내로 줄입니다.</li>
@@ -404,17 +405,17 @@ function PracticalExampleSection({ article: a }: { article: GeneratedArticlePlan
       <h2>{a.practicalExample}: 상황별 적용 방법</h2>
       <p>{a.practicalExample}은 {withEunNeun(a.mainKeyword)} 실제로 써야 하는 대표적인 상황입니다. 아래 세 가지 세부 상황에서 어떻게 적용할지 확인하세요.</p>
       <div className="grid gap-3 md:grid-cols-3">
-        <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
-          <p className="font-semibold text-gray-900">{title1}</p>
-          <p className="mt-2 text-sm text-gray-900">{body1}</p>
+        <div className="rounded-lg border border-cyan-200 bg-cyan-50 p-4">
+          <p className="font-semibold text-cyan-900">{title1}</p>
+          <p className="mt-2 text-sm text-gray-800">{body1}</p>
         </div>
         <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
-          <p className="font-semibold text-gray-900">{title2}</p>
-          <p className="mt-2 text-sm text-gray-900">{body2}</p>
+          <p className="font-semibold text-amber-900">{title2}</p>
+          <p className="mt-2 text-sm text-gray-800">{body2}</p>
         </div>
-        <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-4">
-          <p className="font-semibold text-gray-900">{title3}</p>
-          <p className="mt-2 text-sm text-gray-900">{body3}</p>
+        <div className="rounded-lg border border-cyan-200 bg-cyan-50 p-4">
+          <p className="font-semibold text-cyan-900">{title3}</p>
+          <p className="mt-2 text-sm text-gray-800">{body3}</p>
         </div>
       </div>
     </>
@@ -430,14 +431,14 @@ function MistakesSection({ article: a }: { article: GeneratedArticlePlan }) {
       <p>같은 실수를 반복하지 않으려면 결과가 나쁜 이유를 먼저 알아야 합니다. 아래는 {a.practicalExample} 상황에서 실제로 자주 발생하는 패턴입니다.</p>
       <div className="space-y-3">
         {mistakes.map((m, i) => (
-          <div key={i} className="flex gap-4 rounded-lg border border-red-200 bg-red-50 p-4">
+          <div key={i} className="flex gap-4 rounded-lg border border-amber-200 bg-amber-50 p-4">
             <div className="flex-shrink-0">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-red-500 text-sm font-bold text-white">{i + 1}</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-amber-500 text-sm font-bold text-white">{i + 1}</span>
             </div>
             <div>
               <p className="font-semibold text-gray-900">{m.title}</p>
-              <p className="mt-1 text-sm text-gray-900"><span className="font-medium">왜 문제인가:</span> {m.why}</p>
-              <p className="mt-1 text-sm text-gray-900"><span className="font-medium">해결 방법:</span> {m.fix}</p>
+              <p className="mt-1 text-sm text-gray-800"><span className="font-medium text-amber-700">왜 문제인가:</span> {m.why}</p>
+              <p className="mt-1 text-sm text-gray-800"><span className="font-medium text-cyan-700">해결 방법:</span> {m.fix}</p>
             </div>
           </div>
         ))}
@@ -447,8 +448,8 @@ function MistakesSection({ article: a }: { article: GeneratedArticlePlan }) {
 }
 
 const TIP_COLORS = [
+  "border-cyan-200 bg-cyan-50",
   "border-amber-200 bg-amber-50",
-  "border-teal-200 bg-teal-50",
 ] as const;
 
 // ─── 실전 팁 섹션 ─────────────────────────────────────────────────
@@ -490,22 +491,75 @@ function ContextSection({ article: a }: { article: GeneratedArticlePlan }) {
   );
 }
 
+// ─── H2 헤딩 변형 세트 (키워드 + 다양성) ─────────────────────────
+function h2When(a: GeneratedArticlePlan) {
+  const [k0] = [0].map(i => keywordAt(a, i));
+  const sets = [
+    `${a.mainKeyword}가 필요한 순간`,
+    `${a.mainKeyword}와 ${k0}: 언제 꺼내야 할까?`,
+    `${a.practicalExample}에서 ${a.mainKeyword}가 빛나는 이유`,
+    `${a.mainKeyword}를 쓰면 달라지는 것`,
+    `${k0}와 함께 보는 ${a.mainKeyword} 활용 시점`,
+    `${a.mainKeyword}가 해결하는 진짜 문제`,
+  ];
+  return sets[toneVariant(a) % sets.length];
+}
+
+function h2Criteria(a: GeneratedArticlePlan) {
+  const [k0, , k2] = [0, 1, 2].map(i => keywordAt(a, i));
+  const sets = [
+    `${a.mainKeyword}: ${k0}와 ${k2}로 기준 잡기`,
+    `${a.mainKeyword} 결정 기준 — 놓치면 안 되는 핵심`,
+    `${k0}부터 시작하는 ${a.mainKeyword} 기준 설계`,
+    `${a.mainKeyword}를 제대로 쓰기 위한 판단 기준`,
+    `${k2} 중심으로 보는 ${a.mainKeyword} 기준`,
+    `${a.mainKeyword} 기준, ${k0}와 ${k2} 두 가지만 기억하세요`,
+  ];
+  return sets[mistakeVariant(a) % sets.length];
+}
+
+function h2Steps(a: GeneratedArticlePlan) {
+  const [, k1] = [0, 1].map(i => keywordAt(a, i));
+  const sets = [
+    `${a.mainKeyword} 단계별 실행 방법`,
+    `${k1}부터 시작하는 ${a.mainKeyword} 실전 흐름`,
+    `${a.mainKeyword} 실행 — 막히지 않는 순서`,
+    `${a.practicalExample}: ${a.mainKeyword} 적용 절차`,
+    `${a.mainKeyword}를 빠르게 끝내는 5단계`,
+    `${k1} 기준으로 정리하는 ${a.mainKeyword} 실행순서`,
+  ];
+  return sets[tipVariant(a) % sets.length];
+}
+
+function h2Oversight(a: GeneratedArticlePlan) {
+  const [k0] = [0].map(i => keywordAt(a, i));
+  const sets = [
+    `${a.mainKeyword}에서 자주 빠뜨리는 것들`,
+    `${k0}를 놓치면 생기는 문제`,
+    `${a.mainKeyword} 운영 중 가장 흔한 실수`,
+    `${a.practicalExample}에서 꼭 챙겨야 할 체크포인트`,
+    `${a.mainKeyword}: 처음 쓸 때 빠뜨리기 쉬운 항목`,
+    `${k0}와 ${a.mainKeyword}, 함께 챙겨야 완성됩니다`,
+  ];
+  return sets[articleVariant(a) % sets.length];
+}
+
 // ─── 메인 아티클 컴포넌트 ─────────────────────────────────────────
 function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
   const faq = buildFaq(a);
   const tone = toneVariant(a);
   const [k0, k1, k2, k3] = [0, 1, 2, 3].map(i => keywordAt(a, i));
 
-  // 도입부: readerProblem 또는 practicalExample을 훅 문장으로 사용
+  // 도입부 8가지 변형 — readerProblem + practicalExample 기반
   const opening = [
-    `${a.readerProblem}. 이런 상황에서 ${withEunNeun(a.mainKeyword)} 가장 효과적인 해결 도구가 됩니다.`,
-    `${a.practicalExample}에서 "${a.readerProblem}"이 생긴다면, 기준이 아직 정리되지 않은 신호입니다. ${withObjectPhrase(a.mainKeyword)} 다룰 때는 빠른 결론보다 다시 설명할 수 있는 절차가 중요합니다.`,
-    `"${a.readerProblem}" — ${a.practicalExample} 상황에서 이 고민이 자꾸 반복된다면 ${k0}와 ${k1}만 먼저 정해도 실행 중 생기는 혼선의 대부분을 막을 수 있습니다.`,
-    `${a.practicalExample}에서 ${withEunNeun(a.mainKeyword)} 한 번 정리해 두면 다음 선택과 공유 과정이 훨씬 단순해집니다. "${a.readerProblem}"이 반복된다면 기준이 없어서입니다.`,
-    `"${a.readerProblem}"이 자꾸 반복된다면, ${withEunNeun(a.mainKeyword)} 아직 기준이 정리되지 않은 것입니다. ${k0}와 ${k1}을 한 번만 명확히 해두면 이후 결정은 훨씬 빨라집니다.`,
-    `${a.practicalExample} 상황에서 ${withEunNeun(a.mainKeyword)} 가장 자주 꺼내는 고민입니다. "${a.readerProblem}"을 해결하는 절차를 한 번 만들어 두면 매번 처음부터 시작하지 않아도 됩니다.`,
-    `${a.mainKeyword}를 잘 하는 사람과 못 하는 사람의 차이는 재능이 아닙니다. "${a.readerProblem}"을 미리 막는 기준이 있는지 없는지의 차이입니다. ${a.practicalExample}에서 한 줄짜리 기준만 있어도 실행 속도가 크게 달라집니다.`,
-    `${a.practicalExample}에서 ${withEunNeun(a.mainKeyword)} 어렵게 느껴지는 이유는 대부분 "${a.readerProblem}" 때문입니다. ${k0}와 ${k2}만 먼저 정하면 나머지는 자연스럽게 따라옵니다.`,
+    `${a.readerProblem}. 이런 상황에서 ${withEunNeun(a.mainKeyword)} 가장 효과적인 해결 도구입니다. ${k0}와 ${k1}을 먼저 정리하면 실행이 훨씬 단순해집니다.`,
+    `${a.practicalExample}에서 "${a.readerProblem}"이 반복된다면, 기준이 아직 없다는 신호입니다. ${withObjectPhrase(a.mainKeyword)} 다룰 때는 빠른 결론보다 나중에도 설명 가능한 절차가 훨씬 중요합니다.`,
+    `"${a.readerProblem}" — ${a.practicalExample} 상황에서 이 고민이 계속된다면, ${k0}와 ${k1} 두 가지만 먼저 확정해도 실행 중 혼선의 대부분을 막을 수 있습니다.`,
+    `${a.practicalExample}에서 ${withEunNeun(a.mainKeyword)} 한 번만 정리해 두면 이후 선택과 공유 과정이 훨씬 간단해집니다. "${a.readerProblem}"이 반복된다면 ${k0} 기준이 없어서입니다.`,
+    `"${a.readerProblem}"이 반복된다면 ${withEunNeun(a.mainKeyword)} 아직 구체적인 기준이 없는 겁니다. ${k0}와 ${k1}을 한 번만 명확히 해두면 이후 결정은 눈에 띄게 빨라집니다.`,
+    `${a.practicalExample} 상황에서 ${withEunNeun(a.mainKeyword)} 가장 자주 꺼내는 고민 중 하나입니다. "${a.readerProblem}"을 해결할 절차를 미리 만들어 두면, 매번 처음부터 다시 시작할 필요가 없어집니다.`,
+    `${a.mainKeyword}를 능숙하게 쓰는 사람과 그렇지 않은 사람의 차이는 재능이 아닙니다. "${a.readerProblem}"을 미리 막는 ${k0} 기준이 있는지 없는지의 차이입니다. ${a.practicalExample}에서 한 줄짜리 기준만 있어도 실행 속도가 크게 달라집니다.`,
+    `${a.practicalExample}에서 ${withEunNeun(a.mainKeyword)} 어렵게 느껴지는 이유는 대부분 "${a.readerProblem}" 때문입니다. ${k0}와 ${k2}만 먼저 정하면, 나머지는 자연스럽게 따라옵니다.`,
   ][tone];
 
   const summaryLast = [
@@ -519,49 +573,47 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
     `${k2}와 ${k3}을 함께 남기면 다음 결정의 출발점이 됩니다.`,
   ][tone];
 
-  // 체크리스트: item1은 readerProblem 참조, mainKeyword 특화
   const checklist = [
-    `"${a.readerProblem}"이 생기지 않도록 ${withObjectPhrase(a.mainKeyword)} 쓰는 목적을 한 문장으로 적기`,
-    `${k0} 기준과 예외 조건을 미리 분리하기`,
-    `${a.practicalExample}에서 결과를 나중에 확인할 수 있는 형태로 남기기`,
+    `"${a.readerProblem}"이 생기지 않도록 ${withObjectPhrase(a.mainKeyword)} 쓰는 목적을 한 문장으로 정리하기`,
+    `${k0} 기준과 예외 조건을 미리 분리해 두기`,
+    `${a.practicalExample}에서 결과를 나중에 확인할 수 있는 형태로 기록하기`,
     `${k2} 단계에서 필요한 링크와 자료 미리 확인하기`,
     `결과 공유 전 ${k3} 기준을 한 줄로 덧붙이기`,
   ];
 
-  // 실행 순서: step3, step4에 practicalExample / searchIntent 참조
   const steps = [
-    `${a.mainKeyword}의 목표를 한 줄로 적습니다. "${a.readerProblem}"을 방지하는 것이 목적임을 먼저 확인합니다.`,
+    `목표를 한 줄로 적습니다 — "${a.readerProblem}"을 방지하는 것이 이번 ${a.mainKeyword}의 핵심 목적입니다.`,
     `${withObjectPhrase(k0)} 확인하고, 이번 결정에 직접 영향을 주지 않는 선택지를 제거합니다.`,
-    `${a.practicalExample} 맥락에서 ${k1} 기준으로 남은 선택지에 우선순위를 표시합니다. 3~5개가 이상적입니다.`,
-    `${a.searchIntent}에 맞는지 확인한 뒤 ${withRo(k2)} 최종 실행합니다. 예외가 생기면 즉흥 수정보다 다음 회차에 반영합니다.`,
-    `결과와 함께 ${k3}를 한 줄로 남기고 공유합니다. 이 기록이 다음 결정의 출발점이 됩니다.`,
+    `${a.practicalExample} 맥락에서 ${k1} 기준으로 남은 선택지의 우선순위를 정합니다. 3~5개가 적당합니다.`,
+    `${a.searchIntent}에 맞는지 확인한 뒤 ${withRo(k2)} 최종 실행합니다. 예외가 생기면 즉흥 수정 대신 다음 회차에 반영합니다.`,
+    `결과와 함께 ${k3}를 한 줄로 기록하고 공유합니다. 이 기록이 다음 결정의 출발점이 됩니다.`,
   ];
 
   return (
     <div className="space-y-8">
-      {/* 카테고리 + 콘텐츠 타입 배지 */}
+      {/* 배지 행 */}
       <div className="flex flex-wrap gap-2 text-xs">
-        <span className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-blue-700">{a.category}</span>
-        <span className="rounded-full border border-gray-300 bg-white px-3 py-1 text-gray-700">{contentTypeLabel(a.contentType)}</span>
-        <span className="rounded-full border border-gray-300 bg-white px-3 py-1 text-gray-500">약 5분 읽기</span>
+        <span className="rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-cyan-700 font-medium">{a.category}</span>
+        <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600">{contentTypeLabel(a.contentType)}</span>
+        <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-slate-400">약 5분 읽기</span>
       </div>
 
       {/* 도입부 */}
-      <p className="text-base leading-relaxed text-gray-900">
-        {opening} 이 글은 {a.readerProblem} 상황에서 바로 적용할 수 있도록 절차, 확인 항목, 실수 방지법, 기록 방식을 함께 정리했습니다.
+      <p className="text-base leading-relaxed text-gray-900 border-l-4 border-cyan-400 pl-4">
+        {opening}
       </p>
 
-      {/* 핵심 요약 */}
-      <div className="rounded-lg border border-blue-200 bg-blue-50 p-5">
-        <p className="font-bold text-gray-900">핵심 요약</p>
-        <ul className="mt-3 space-y-2">
+      {/* 핵심 요약 — 사이트 시안 컬러 */}
+      <div className="rounded-xl border border-cyan-200 bg-cyan-50 p-5">
+        <p className="font-bold text-cyan-900 mb-3">이 글의 핵심</p>
+        <ul className="space-y-2">
           {[
             `"${a.readerProblem}"을 막으려면 ${withEunNeun(a.mainKeyword)} 목적과 제외 조건을 먼저 정해야 실행 중 흔들리지 않습니다.`,
-            `${a.practicalExample}에서 ${a.expandedKeywords.slice(0, 2).join("과 ")}를 나눠 보면 실행 순서가 분명해집니다.`,
+            `${a.practicalExample}에서 ${a.expandedKeywords.slice(0, 2).join("과 ")}를 나눠 보면 실행 순서가 명확해집니다.`,
             summaryLast,
           ].map((item, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-gray-900">
-              <span className="mt-0.5 flex-shrink-0 font-bold text-blue-600">·</span>
+            <li key={i} className="flex items-start gap-2 text-sm text-cyan-900">
+              <span className="mt-0.5 flex-shrink-0 font-bold text-cyan-500">✓</span>
               <span>{item}</span>
             </li>
           ))}
@@ -570,7 +622,7 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* 언제 필요한가 */}
       <div>
-        <h2>{withEunNeun(a.mainKeyword)} 언제 필요할까요?</h2>
+        <h2>{h2When(a)}</h2>
         <p>가장 흔한 장면은 {a.practicalExample}입니다. 이때 사람들은 빠른 결론을 원하지만, 기준이 없으면 같은 결정을 반복해서 다시 논의하게 됩니다. {withObjectPhrase(a.mainKeyword)} 별도 기준으로 분리하면 선택지, 제약, 결과를 나눠 볼 수 있어 실수가 줄어듭니다.</p>
         <p>{a.searchIntent}를 목표로 {a.practicalExample}에 접근할 때, {withWaGwa(k0)} {withIga(k1)} 함께 걸린 상황에서는 단순 추천보다 재사용 가능한 규칙이 더 중요합니다. 한 번 정한 규칙은 회의, 문서, 개인 일정, 콘텐츠 운영에도 반복해서 적용할 수 있습니다.</p>
       </div>
@@ -585,7 +637,7 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* 기준 테이블 */}
       <div>
-        <h2>{a.mainKeyword} 기준은 어떻게 잡아야 하나요?</h2>
+        <h2>{h2Criteria(a)}</h2>
         <div className="overflow-x-auto">
           <table>
             <thead>
@@ -623,18 +675,18 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* 실행 순서 */}
       <div>
-        <h2>{a.mainKeyword} 실행 순서</h2>
+        <h2>{h2Steps(a)}</h2>
         <div className="space-y-3">
           {steps.map((text, idx) => (
-            <div key={idx} className="flex items-start gap-4 rounded-lg border border-gray-200 bg-white p-4">
-              <div className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+            <div key={idx} className="flex items-start gap-4 rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
+              <div className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-cyan-600 text-sm font-bold text-white">
                 {idx + 1}
               </div>
               <p className="pt-0.5 text-sm text-gray-900">{text}</p>
             </div>
           ))}
         </div>
-        <p className="mt-3 text-sm text-gray-700">
+        <p className="mt-3 text-sm text-gray-600 italic">
           이 방식은 결론을 억지로 밀어붙이기 위한 요령이 아닙니다. 같은 문제를 다시 만났을 때 처음부터 고민하지 않기 위한 운영 방식입니다.
         </p>
       </div>
@@ -643,8 +695,8 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* 놓치기 쉬운 점 */}
       <div>
-        <h2>{a.mainKeyword} 운영에서 놓치기 쉬운 점</h2>
-        <p>{contentTypeLabel(a.contentType)} 유형에서는 결과보다 과정 설명이 더 중요해질 때가 많습니다. 예를 들어 {a.practicalExample}에는 모두가 같은 기준으로 판단했다는 신호가 필요합니다.</p>
+        <h2>{h2Oversight(a)}</h2>
+        <p>{contentTypeLabel(a.contentType)} 유형에서는 결과보다 과정 설명이 더 중요해질 때가 많습니다. {a.practicalExample}에는 모두가 같은 기준으로 판단했다는 신호가 필요합니다.</p>
         <ul>
           <li>결과 화면이나 공유 문구에는 {k3} 기준을 짧게 남깁니다.</li>
           <li>반복해서 쓰는 상황이라면 같은 입력 형식과 같은 순서를 유지합니다.</li>
@@ -653,13 +705,13 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
         </ul>
       </div>
 
-      {/* 체크리스트 */}
+      {/* 체크리스트 — 앰버(실행 전 점검) */}
       <div>
-        <h2>실행 전 체크리스트</h2>
+        <h2>실행 전 체크리스트: {a.mainKeyword}</h2>
         <div className="space-y-2">
           {checklist.map((item, i) => (
-            <div key={i} className="flex items-center gap-3 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3">
-              <span className="flex-shrink-0 font-bold text-emerald-600" aria-hidden="true">☐</span>
+            <div key={i} className="flex items-center gap-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3">
+              <span className="flex-shrink-0 text-lg text-amber-500" aria-hidden="true">□</span>
               <span className="text-sm text-gray-900">{item}</span>
             </div>
           ))}
@@ -668,7 +720,7 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* 내부 링크 */}
       <div>
-        <h2>함께 보면 좋은 SpinFlow 도구</h2>
+        <h2>{a.mainKeyword}와 함께 쓰는 SpinFlow 도구</h2>
         <p>아래 도구는 {withWaGwa(a.mainKeyword)} 직접 연결되는 흐름입니다. 글을 읽은 뒤 바로 실행해 보세요.</p>
         <ul>
           {a.internalLinks.map((link) => (
@@ -681,7 +733,7 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
 
       {/* 출처 */}
       <div>
-        <h2>근거와 참고 자료</h2>
+        <h2>{a.mainKeyword} 근거와 참고 자료</h2>
         <p>
           공식 문서와 공개 자료를 확인할 때는 최신 날짜, 적용 범위, 예외 조건을 함께 봐야 합니다. 이 글은{" "}
           <a href={a.primarySourceUrl} target="_blank" rel="noreferrer">{a.primarySourceName}</a>{" "}
@@ -689,35 +741,37 @@ function GeneratedArticle({ article: a }: { article: GeneratedArticlePlan }) {
         </p>
       </div>
 
-      {/* 마무리 */}
-      <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-5">
-        <p className="font-bold text-gray-900">마무리 한 줄 정리</p>
-        <p className="mt-2 text-sm text-gray-900">
-          {withEunNeun(a.mainKeyword)} {k0}와 {k2}를 먼저 정하고, 결과와 함께 {withObjectPhrase(k3)} 남기면 다음 결정이 훨씬 빨라집니다.{" "}
-          <Link to={a.internalLinks[0]?.path ?? "/"} className="font-semibold underline">
-            {a.internalLinks[0]?.label ?? "SpinFlow 도구 바로 쓰기"}
-          </Link>
-          로 지금 바로 시작해 보세요.
+      {/* 마무리 — 사이트 시안 컬러 CTA */}
+      <div className="rounded-xl border border-cyan-300 bg-gradient-to-br from-cyan-50 to-white p-6">
+        <p className="font-bold text-cyan-900 mb-2">핵심 한 줄 정리</p>
+        <p className="text-sm text-cyan-800 mb-4">
+          {withEunNeun(a.mainKeyword)} {k0}와 {k2}를 먼저 정하고, 결과와 함께 {withObjectPhrase(k3)} 남기면 다음 결정이 훨씬 빨라집니다.
         </p>
+        <Link
+          to={a.internalLinks[0]?.path ?? "/"}
+          className="inline-block rounded-full bg-cyan-600 px-5 py-2 text-sm font-bold text-white hover:bg-cyan-700 transition-colors"
+        >
+          {a.internalLinks[0]?.label ?? "SpinFlow 도구 바로 쓰기"} →
+        </Link>
       </div>
 
-      {/* FAQ */}
+      {/* FAQ — 2가지 컬러로 교대 */}
       <div>
-        <h2>자주 묻는 질문</h2>
+        <h2>{a.mainKeyword} 자주 묻는 질문</h2>
         <div className="space-y-3">
           {faq.map((item, index) => (
-            <div key={item.q} className={`rounded-lg border p-4 ${["border-blue-200 bg-blue-50", "border-amber-200 bg-amber-50", "border-teal-200 bg-teal-50", "border-violet-200 bg-violet-50"][index % 4]}`}>
+            <div key={item.q} className={`rounded-lg border p-4 ${index % 2 === 0 ? "border-cyan-200 bg-cyan-50" : "border-amber-200 bg-amber-50"}`}>
               <p className="font-semibold text-gray-900">Q{index + 1}. {item.q}</p>
-              <p className="mt-2 text-sm text-gray-900">A. {item.a}</p>
+              <p className="mt-2 text-sm text-gray-700">A. {item.a}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* 키워드 */}
+      {/* 키워드 푸터 */}
       <div className="border-t border-gray-200 pt-4">
-        <p className="text-xs text-gray-500">
-          <span className="font-medium">관련 키워드:</span> {keywordText(a)}
+        <p className="text-xs text-gray-400">
+          <span className="font-medium text-gray-500">관련 키워드:</span> {keywordText(a)}
         </p>
       </div>
     </div>
@@ -735,7 +789,9 @@ function buildGeneratedBlogPost(article: GeneratedArticlePlan): BlogPost {
     tags: article.tags,
     thumbnail: article.thumbnail,
     qualityScore: article.qualityScore,
-    content: <GeneratedArticle article={article} />,
+    content: article.body
+      ? <div className="written-article prose prose-slate prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: article.body }} />
+      : <GeneratedArticle article={article} />,
   };
 }
 

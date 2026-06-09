@@ -21,7 +21,7 @@ export default function Footer() {
                 {/* 메인 네비게이션 */}
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     <Link to="/" className="text-xl font-black text-gray-900">
-                        SpinKorea
+                        SpinFlow
                     </Link>
                     <nav className="flex flex-wrap gap-x-6 gap-y-2">
                         {mainNav.map((link) => (
@@ -42,7 +42,7 @@ export default function Footer() {
                 {/* 하단 서브 메뉴 + 카피라이트 */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-gray-500">
-                        © {new Date().getFullYear()} SpinKorea. All Rights Reserved.
+                        © {new Date().getFullYear()} SpinFlow. All Rights Reserved.
                     </p>
                     <nav className="flex flex-wrap gap-x-5 gap-y-2 justify-center">
                         {subNav.map((link) => (

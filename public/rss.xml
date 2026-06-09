@@ -5,8 +5,1456 @@
     <link>https://www.spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 06 May 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 23:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>화면 시간 경계 운영법, 자가 점검 남기기</title>
+      <link>https://www.spinkorea.kr/blog/screen-time-boundary</link>
+      <description>화면 시간 경계는 애매할 때 기록 습관을 먼저 보고 생활 적용까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Mon, 08 Jun 2026 23:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/screen-time-boundary</guid>
+    </item>
+
+    <item>
+      <title>물 마시기 알림, 무리 없는 기준 전에 볼 점</title>
+      <link>https://www.spinkorea.kr/blog/water-reminder-rule</link>
+      <description>물 마시기 알림 관련 결정을 반복하지 않도록 기록 습관, 무리 없는 기준, 생활 적용을 한 번에 비교합니다.</description>
+      <pubDate>Mon, 08 Jun 2026 18:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/water-reminder-rule</guid>
+    </item>
+
+    <item>
+      <title>호흡 리셋 습관 FAQ: 루틴 설계 답변</title>
+      <link>https://www.spinkorea.kr/blog/breathing-reset-note</link>
+      <description>호흡 리셋 습관을 검색한 독자가 바로 따라 할 수 있도록 자가 점검부터 무리 없는 기준까지 압축했습니다.</description>
+      <pubDate>Mon, 08 Jun 2026 13:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/breathing-reset-note</guid>
+    </item>
+
+    <item>
+      <title>짧은 산책 루틴 비교법, 생활 적용과 기록 습관</title>
+      <link>https://www.spinkorea.kr/blog/walk-break-plan</link>
+      <description>짧은 산책 루틴은 필요한 순간부터 루틴 설계와 기록 습관을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Mon, 08 Jun 2026 08:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/walk-break-plan</guid>
+    </item>
+
+    <item>
+      <title>눈 피로 휴식 기준 실행 순서, 자가 점검까지</title>
+      <link>https://www.spinkorea.kr/blog/eye-rest-rule</link>
+      <description>눈 피로 휴식 기준 상황에서 무리 없는 기준과 생활 적용은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Mon, 08 Jun 2026 03:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/eye-rest-rule</guid>
+    </item>
+
+    <item>
+      <title>책상 스트레칭 휴식 체크리스트: 무리 없는 기준 핵심</title>
+      <link>https://www.spinkorea.kr/blog/desk-stretch-break</link>
+      <description>책상 스트레칭 휴식을 준비할 때 놓치기 쉬운 기록 습관, 무리 없는 기준, 생활 적용을 짧게 점검합니다.</description>
+      <pubDate>Sun, 07 Jun 2026 22:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/desk-stretch-break</guid>
+    </item>
+
+    <item>
+      <title>수면 루틴 기록, 무리 없는 기준 먼저 보기</title>
+      <link>https://www.spinkorea.kr/blog/sleep-routine-note</link>
+      <description>수면 루틴 기록은 루틴 설계, 기록 습관, 무리 없는 기준을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Sun, 07 Jun 2026 17:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/sleep-routine-note</guid>
+    </item>
+
+    <item>
+      <title>반복 업무 자동화 발행 전 검토, 회의 운영</title>
+      <link>https://www.spinkorea.kr/blog/repeat-task-automation</link>
+      <description>반복 업무 자동화를 글, 도구, 업무 흐름에 적용할 때 필요한 우선순위와 회의 운영을 정리했습니다.</description>
+      <pubDate>Sun, 07 Jun 2026 12:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/repeat-task-automation</guid>
+    </item>
+
+    <item>
+      <title>결정권자 표시 사례별 정리, 우선순위 중심</title>
+      <link>https://www.spinkorea.kr/blog/decision-owner-rule</link>
+      <description>결정권자 표시는 애매할 때 집중 시간을 먼저 보고 우선순위까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Sun, 07 Jun 2026 07:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/decision-owner-rule</guid>
+    </item>
+
+    <item>
+      <title>검토 체크포인트 운영 체크, 집중 시간 반영</title>
+      <link>https://www.spinkorea.kr/blog/review-checkpoint</link>
+      <description>검토 체크포인트 관련 결정을 반복하지 않도록 집중 시간, 결과 기록, 우선순위를 한 번에 비교합니다.</description>
+      <pubDate>Sun, 07 Jun 2026 02:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/review-checkpoint</guid>
+    </item>
+
+    <item>
+      <title>예약 발행 보드 검토 순서, 반복 업무 활용</title>
+      <link>https://www.spinkorea.kr/blog/batch-publish-board</link>
+      <description>예약 발행 보드를 검색한 독자가 바로 따라 할 수 있도록 반복 업무부터 결과 기록까지 압축했습니다.</description>
+      <pubDate>Sat, 06 Jun 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/batch-publish-board</guid>
+    </item>
+
+    <item>
+      <title>일일 지표 메모 빠른 정리, 집중 시간까지</title>
+      <link>https://www.spinkorea.kr/blog/daily-metric-note</link>
+      <description>일일 지표 메모는 필요한 순간부터 회의 운영과 집중 시간을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Sat, 06 Jun 2026 16:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/daily-metric-note</guid>
+    </item>
+
+    <item>
+      <title>도구 바로가기 목록 선택법, 결과 기록과 우선순위</title>
+      <link>https://www.spinkorea.kr/blog/tool-shortcut-list</link>
+      <description>도구 바로가기 목록 상황에서 결과 기록과 우선순위는 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Sat, 06 Jun 2026 11:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/tool-shortcut-list</guid>
+    </item>
+
+    <item>
+      <title>글쓰기 스프린트 개선 포인트, 우선순위</title>
+      <link>https://www.spinkorea.kr/blog/writing-sprint-rule</link>
+      <description>글쓰기 스프린트를 준비할 때 놓치기 쉬운 집중 시간, 결과 기록, 우선순위를 짧게 점검합니다.</description>
+      <pubDate>Sat, 06 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/writing-sprint-rule</guid>
+    </item>
+
+    <item>
+      <title>승인 흐름 정리 초보 흐름, 집중 시간 중심</title>
+      <link>https://www.spinkorea.kr/blog/approval-flow-check</link>
+      <description>승인 흐름 정리는 회의 운영, 집중 시간, 결과 기록을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Sat, 06 Jun 2026 01:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/approval-flow-check</guid>
+    </item>
+
+    <item>
+      <title>지식베이스 시작 적용 순서, 결과 기록 확인</title>
+      <link>https://www.spinkorea.kr/blog/knowledge-base-seed</link>
+      <description>지식베이스 시작을 글, 도구, 업무 흐름에 적용할 때 필요한 회의 운영과 결과 기록을 정리했습니다.</description>
+      <pubDate>Fri, 05 Jun 2026 20:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/knowledge-base-seed</guid>
+    </item>
+
+    <item>
+      <title>회고 질문 리스트 실수 방지, 우선순위 먼저</title>
+      <link>https://www.spinkorea.kr/blog/retrospective-question</link>
+      <description>회고 질문 리스트는 애매할 때 우선순위를 먼저 보고 회의 운영까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Fri, 05 Jun 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/retrospective-question</guid>
+    </item>
+
+    <item>
+      <title>원페이지 브리프 실전 흐름, 반복 업무부터</title>
+      <link>https://www.spinkorea.kr/blog/one-page-brief</link>
+      <description>원페이지 브리프 관련 결정을 반복하지 않도록 우선순위, 반복 업무, 회의 운영을 한 번에 비교합니다.</description>
+      <pubDate>Fri, 05 Jun 2026 10:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/one-page-brief</guid>
+    </item>
+
+    <item>
+      <title>루틴 트리거 설계 상황별 표, 결과 기록</title>
+      <link>https://www.spinkorea.kr/blog/routine-trigger-design</link>
+      <description>루틴 트리거 설계를 검색한 독자가 바로 따라 할 수 있도록 집중 시간부터 반복 업무까지 압축했습니다.</description>
+      <pubDate>Fri, 05 Jun 2026 05:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/routine-trigger-design</guid>
+    </item>
+
+    <item>
+      <title>마감 버퍼 설정 판단법, 회의 운영 중심</title>
+      <link>https://www.spinkorea.kr/blog/deadline-buffer-rule</link>
+      <description>마감 버퍼 설정은 필요한 순간부터 결과 기록과 우선순위를 남기는 방법까지 안내합니다.</description>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/deadline-buffer-rule</guid>
+    </item>
+
+    <item>
+      <title>개인 칸반 기준 운영법, 결과 기록 남기기</title>
+      <link>https://www.spinkorea.kr/blog/personal-kanban-light</link>
+      <description>개인 칸반 기준 상황에서 반복 업무와 회의 운영은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Thu, 04 Jun 2026 19:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/personal-kanban-light</guid>
+    </item>
+
+    <item>
+      <title>원격근무 체크인, 회의 운영 전에 볼 점</title>
+      <link>https://www.spinkorea.kr/blog/remote-work-checkin</link>
+      <description>원격근무 체크인을 준비할 때 놓치기 쉬운 우선순위, 반복 업무, 회의 운영을 짧게 점검합니다.</description>
+      <pubDate>Thu, 04 Jun 2026 14:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/remote-work-checkin</guid>
+    </item>
+
+    <item>
+      <title>인수인계 메모 FAQ: 우선순위 답변</title>
+      <link>https://www.spinkorea.kr/blog/handoff-note-template</link>
+      <description>인수인계 메모는 결과 기록, 우선순위, 반복 업무를 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Thu, 04 Jun 2026 09:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/handoff-note-template</guid>
+    </item>
+
+    <item>
+      <title>프로젝트 이름 규칙 비교법, 집중 시간과 반복 업무</title>
+      <link>https://www.spinkorea.kr/blog/project-name-rule</link>
+      <description>프로젝트 이름 규칙을 글, 도구, 업무 흐름에 적용할 때 필요한 결과 기록과 반복 업무를 정리했습니다.</description>
+      <pubDate>Thu, 04 Jun 2026 04:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/project-name-rule</guid>
+    </item>
+
+    <item>
+      <title>퇴근 전 정리 루틴 실행 순서, 결과 기록까지</title>
+      <link>https://www.spinkorea.kr/blog/daily-close-routine</link>
+      <description>퇴근 전 정리 루틴은 애매할 때 회의 운영을 먼저 보고 결과 기록까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Wed, 03 Jun 2026 23:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/daily-close-routine</guid>
+    </item>
+
+    <item>
+      <title>알림 관리 기준 체크리스트: 회의 운영 핵심</title>
+      <link>https://www.spinkorea.kr/blog/notification-rule</link>
+      <description>알림 관리 기준 관련 결정을 반복하지 않도록 회의 운영, 집중 시간, 결과 기록을 한 번에 비교합니다.</description>
+      <pubDate>Wed, 03 Jun 2026 18:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/notification-rule</guid>
+    </item>
+
+    <item>
+      <title>메일함 정리 기준, 우선순위 먼저 보기</title>
+      <link>https://www.spinkorea.kr/blog/inbox-zero-light</link>
+      <description>메일함 정리 기준을 검색한 독자가 바로 따라 할 수 있도록 우선순위부터 집중 시간까지 압축했습니다.</description>
+      <pubDate>Wed, 03 Jun 2026 13:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/inbox-zero-light</guid>
+    </item>
+
+    <item>
+      <title>업무 전환 줄이기 발행 전 검토, 회의 운영</title>
+      <link>https://www.spinkorea.kr/blog/context-switch-reduce</link>
+      <description>업무 전환 줄이기는 필요한 순간부터 반복 업무와 회의 운영을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Wed, 03 Jun 2026 08:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/context-switch-reduce</guid>
+    </item>
+
+    <item>
+      <title>회의록 액션아이템 사례별 정리, 우선순위 중심</title>
+      <link>https://www.spinkorea.kr/blog/meeting-minutes-action</link>
+      <description>회의록 액션아이템 상황에서 집중 시간과 결과 기록은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Wed, 03 Jun 2026 03:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/meeting-minutes-action</guid>
+    </item>
+
+    <item>
+      <title>작업 시간 예측 운영 체크, 결과 기록 반영</title>
+      <link>https://www.spinkorea.kr/blog/task-estimate-rule</link>
+      <description>작업 시간 예측을 준비할 때 놓치기 쉬운 회의 운영, 집중 시간, 결과 기록을 짧게 점검합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 22:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/task-estimate-rule</guid>
+    </item>
+
+    <item>
+      <title>업무 요청 양식 검토 순서, 회의 운영 활용</title>
+      <link>https://www.spinkorea.kr/blog/work-request-format</link>
+      <description>업무 요청 양식은 반복 업무, 회의 운영, 집중 시간을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Tue, 02 Jun 2026 17:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/work-request-format</guid>
+    </item>
+
+    <item>
+      <title>주간 회고 노트 빠른 정리, 집중 시간까지</title>
+      <link>https://www.spinkorea.kr/blog/weekly-review-note</link>
+      <description>주간 회고 노트를 글, 도구, 업무 흐름에 적용할 때 필요한 반복 업무와 집중 시간을 정리했습니다.</description>
+      <pubDate>Tue, 02 Jun 2026 12:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/weekly-review-note</guid>
+    </item>
+
+    <item>
+      <title>작은 업무 묶기 선택법, 결과 기록과 우선순위</title>
+      <link>https://www.spinkorea.kr/blog/small-task-batching</link>
+      <description>작은 업무 묶기는 애매할 때 결과 기록을 먼저 보고 반복 업무까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 07:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/small-task-batching</guid>
+    </item>
+
+    <item>
+      <title>집중 블록 설계 개선 포인트, 우선순위</title>
+      <link>https://www.spinkorea.kr/blog/focus-block-plan</link>
+      <description>집중 블록 설계 관련 결정을 반복하지 않도록 결과 기록, 우선순위, 반복 업무를 한 번에 비교합니다.</description>
+      <pubDate>Tue, 02 Jun 2026 02:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/focus-block-plan</guid>
+    </item>
+
+    <item>
+      <title>결정 기록 습관 초보 흐름, 집중 시간 중심</title>
+      <link>https://www.spinkorea.kr/blog/decision-log-habit</link>
+      <description>결정 기록 습관을 검색한 독자가 바로 따라 할 수 있도록 회의 운영부터 우선순위까지 압축했습니다.</description>
+      <pubDate>Mon, 01 Jun 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/decision-log-habit</guid>
+    </item>
+
+    <item>
+      <title>회의 안건 템플릿 적용 순서, 결과 기록 확인</title>
+      <link>https://www.spinkorea.kr/blog/meeting-agenda-template</link>
+      <description>회의 안건 템플릿은 필요한 순간부터 집중 시간과 결과 기록을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Mon, 01 Jun 2026 16:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/meeting-agenda-template</guid>
+    </item>
+
+    <item>
+      <title>하루 우선순위 기준 실수 방지, 반복 업무 먼저</title>
+      <link>https://www.spinkorea.kr/blog/priority-rule-daily</link>
+      <description>하루 우선순위 기준 상황에서 우선순위와 반복 업무는 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Mon, 01 Jun 2026 11:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/priority-rule-daily</guid>
+    </item>
+
+    <item>
+      <title>예약 발행 빌드 테스트 실전 흐름, 디버깅부터</title>
+      <link>https://www.spinkorea.kr/blog/build-now-test</link>
+      <description>예약 발행 빌드 테스트를 준비할 때 놓치기 쉬운 배포 전 점검, 검증 절차, 디버깅을 짧게 점검합니다.</description>
+      <pubDate>Mon, 01 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/build-now-test</guid>
+    </item>
+
+    <item>
+      <title>모바일 뷰포트 점검 상황별 표, 검증 절차</title>
+      <link>https://www.spinkorea.kr/blog/mobile-viewport-debug</link>
+      <description>모바일 뷰포트 점검은 보안 확인, 배포 전 점검, 검증 절차를 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Mon, 01 Jun 2026 01:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/mobile-viewport-debug</guid>
+    </item>
+
+    <item>
+      <title>마크다운 렌더링 확인 판단법, 자동화 중심</title>
+      <link>https://www.spinkorea.kr/blog/markdown-render-check</link>
+      <description>마크다운 렌더링 확인 항목을 글, 도구, 업무 흐름에 적용할 때 필요한 보안 확인과 검증 절차를 정리했습니다.</description>
+      <pubDate>Sun, 31 May 2026 20:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/markdown-render-check</guid>
+    </item>
+
+    <item>
+      <title>내부 링크 맵 운영법, 배포 전 점검 남기기</title>
+      <link>https://www.spinkorea.kr/blog/internal-link-map</link>
+      <description>내부 링크 맵은 애매할 때 디버깅을 먼저 보고 보안 확인까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Sun, 31 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/internal-link-map</guid>
+    </item>
+
+    <item>
+      <title>깨진 링크 점검, 자동화 전에 볼 점</title>
+      <link>https://www.spinkorea.kr/blog/broken-link-scan</link>
+      <description>깨진 링크 점검 관련 결정을 반복하지 않도록 디버깅, 자동화, 보안 확인 항목을 한 번에 비교합니다.</description>
+      <pubDate>Sun, 31 May 2026 10:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/broken-link-scan</guid>
+    </item>
+
+    <item>
+      <title>보안 헤더 확인 FAQ: 검증 절차 답변</title>
+      <link>https://www.spinkorea.kr/blog/content-security-header</link>
+      <description>보안 헤더 확인 항목을 검색한 독자가 바로 따라 할 수 있도록 배포 전 점검부터 자동화까지 압축했습니다.</description>
+      <pubDate>Sun, 31 May 2026 05:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/content-security-header</guid>
+    </item>
+
+    <item>
+      <title>애드센스 스크립트 점검 비교법, 보안 확인과 디버깅</title>
+      <link>https://www.spinkorea.kr/blog/adsense-script-check</link>
+      <description>애드센스 스크립트 점검은 필요한 순간부터 검증 절차와 디버깅을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/adsense-script-check</guid>
+    </item>
+
+    <item>
+      <title>GA4 이벤트 테스트 실행 순서, 배포 전 점검까지</title>
+      <link>https://www.spinkorea.kr/blog/ga4-event-test</link>
+      <description>GA4 이벤트 테스트 상황에서 자동화와 보안 확인은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Sat, 30 May 2026 19:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/ga4-event-test</guid>
+    </item>
+
+    <item>
+      <title>IndexNow 응답 해석 체크리스트: 자동화 핵심</title>
+      <link>https://www.spinkorea.kr/blog/indexnow-response</link>
+      <description>IndexNow 응답 해석을 준비할 때 놓치기 쉬운 디버깅, 자동화, 보안 확인 항목을 짧게 점검합니다.</description>
+      <pubDate>Sat, 30 May 2026 14:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/indexnow-response</guid>
+    </item>
+
+    <item>
+      <title>RSS 피드 확인, 검증 절차 먼저 보기</title>
+      <link>https://www.spinkorea.kr/blog/rss-feed-check</link>
+      <description>RSS 피드 확인은 검증 절차, 디버깅, 자동화를 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Sat, 30 May 2026 09:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/rss-feed-check</guid>
+    </item>
+
+    <item>
+      <title>배포 로그 읽기 발행 전 검토, 자동화</title>
+      <link>https://www.spinkorea.kr/blog/deploy-log-review</link>
+      <description>배포 로그 읽기를 글, 도구, 업무 흐름에 적용할 때 필요한 검증 절차와 자동화를 정리했습니다.</description>
+      <pubDate>Sat, 30 May 2026 04:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/deploy-log-review</guid>
+    </item>
+
+    <item>
+      <title>환경변수 점검 사례별 정리, 검증 절차 중심</title>
+      <link>https://www.spinkorea.kr/blog/env-variable-check</link>
+      <description>환경변수 점검은 애매할 때 보안 확인 항목을 먼저 보고 검증 절차까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Fri, 29 May 2026 23:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/env-variable-check</guid>
+    </item>
+
+    <item>
+      <title>라우트 지연 로딩 운영 체크, 보안 확인 반영</title>
+      <link>https://www.spinkorea.kr/blog/lazy-load-route</link>
+      <description>라우트 지연 로딩 관련 결정을 반복하지 않도록 보안 확인, 배포 전 점검, 검증 절차를 한 번에 비교합니다.</description>
+      <pubDate>Fri, 29 May 2026 18:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/lazy-load-route</guid>
+    </item>
+
+    <item>
+      <title>번들 크기 점검 순서, 디버깅 활용</title>
+      <link>https://www.spinkorea.kr/blog/bundle-size-review</link>
+      <description>번들 크기 점검 항목을 검색한 독자가 바로 따라 할 수 있도록 디버깅부터 배포 전 점검까지 압축했습니다.</description>
+      <pubDate>Fri, 29 May 2026 13:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/bundle-size-review</guid>
+    </item>
+
+    <item>
+      <title>이미지 alt 점검 빠른 정리, 보안 확인까지</title>
+      <link>https://www.spinkorea.kr/blog/image-alt-audit</link>
+      <description>이미지 alt 점검은 필요한 순간부터 자동화와 보안 확인 항목을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Fri, 29 May 2026 08:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/image-alt-audit</guid>
+    </item>
+
+    <item>
+      <title>구조화 데이터 확인 선택법, 배포 전 점검과 검증 절차</title>
+      <link>https://www.spinkorea.kr/blog/structured-data-check</link>
+      <description>구조화 데이터 확인 상황에서 배포 전 점검과 검증 절차는 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Fri, 29 May 2026 03:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/structured-data-check</guid>
+    </item>
+
+    <item>
+      <title>OG 미리보기 점검 개선 포인트, 검증 절차</title>
+      <link>https://www.spinkorea.kr/blog/open-graph-preview</link>
+      <description>OG 미리보기 점검 항목을 준비할 때 놓치기 쉬운 보안 확인, 배포 전 점검, 검증 절차를 짧게 점검합니다.</description>
+      <pubDate>Thu, 28 May 2026 22:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/open-graph-preview</guid>
+    </item>
+
+    <item>
+      <title>폼 검증 메시지 초보 흐름, 보안 확인 중심</title>
+      <link>https://www.spinkorea.kr/blog/form-validation-copy</link>
+      <description>폼 검증 메시지는 자동화, 보안 확인, 배포 전 점검 항목을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Thu, 28 May 2026 17:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/form-validation-copy</guid>
+    </item>
+
+    <item>
+      <title>정규식 테스트 기준 적용 순서, 배포 전 점검 확인</title>
+      <link>https://www.spinkorea.kr/blog/regex-test-note</link>
+      <description>정규식 테스트 기준을 글, 도구, 업무 흐름에 적용할 때 필요한 자동화와 배포 전 점검 항목을 정리했습니다.</description>
+      <pubDate>Thu, 28 May 2026 12:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/regex-test-note</guid>
+    </item>
+
+    <item>
+      <title>타임스탬프 디버깅 실수 방지, 검증 절차 먼저</title>
+      <link>https://www.spinkorea.kr/blog/timestamp-debug</link>
+      <description>타임스탬프 디버깅은 애매할 때 검증 절차를 먼저 보고 자동화까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Thu, 28 May 2026 07:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/timestamp-debug</guid>
+    </item>
+
+    <item>
+      <title>Base64 사용 기준 실전 흐름, 디버깅부터</title>
+      <link>https://www.spinkorea.kr/blog/base64-safe-use</link>
+      <description>Base64 사용 기준 관련 결정을 반복하지 않도록 검증 절차, 디버깅, 자동화를 한 번에 비교합니다.</description>
+      <pubDate>Thu, 28 May 2026 02:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/base64-safe-use</guid>
+    </item>
+
+    <item>
+      <title>URL 인코딩 기준 상황별 표, 배포 전 점검</title>
+      <link>https://www.spinkorea.kr/blog/url-encoding-case</link>
+      <description>URL 인코딩 기준을 검색한 독자가 바로 따라 할 수 있도록 보안 확인부터 디버깅까지 압축했습니다.</description>
+      <pubDate>Wed, 27 May 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/url-encoding-case</guid>
+    </item>
+
+    <item>
+      <title>JSON 파싱 오류 판단법, 자동화 중심</title>
+      <link>https://www.spinkorea.kr/blog/json-parse-error</link>
+      <description>JSON 파싱 오류는 필요한 순간부터 배포 전 점검과 검증 절차를 남기는 방법까지 안내합니다.</description>
+      <pubDate>Wed, 27 May 2026 16:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/json-parse-error</guid>
+    </item>
+
+    <item>
+      <title>사이트맵 날짜 확인 운영법, 배포 전 점검 남기기</title>
+      <link>https://www.spinkorea.kr/blog/sitemap-lastmod-check</link>
+      <description>사이트맵 날짜 확인 상황에서 디버깅과 자동화는 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Wed, 27 May 2026 11:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/sitemap-lastmod-check</guid>
+    </item>
+
+    <item>
+      <title>robots.txt 규칙, 자동화 전에 볼 점</title>
+      <link>https://www.spinkorea.kr/blog/robots-rule-review</link>
+      <description>robots.txt 규칙을 준비할 때 놓치기 쉬운 검증 절차, 디버깅, 자동화를 짧게 점검합니다.</description>
+      <pubDate>Wed, 27 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/robots-rule-review</guid>
+    </item>
+
+    <item>
+      <title>캐노니컬 URL 검사 FAQ: 검증 절차 답변</title>
+      <link>https://www.spinkorea.kr/blog/canonical-url-audit</link>
+      <description>캐노니컬 URL 검사는 배포 전 점검, 검증 절차, 디버깅을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Wed, 27 May 2026 01:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/canonical-url-audit</guid>
+    </item>
+
+    <item>
+      <title>캐시 헤더 점검 비교법, 보안 확인과 디버깅</title>
+      <link>https://www.spinkorea.kr/blog/cache-header-check</link>
+      <description>캐시 헤더 점검 항목을 글, 도구, 업무 흐름에 적용할 때 필요한 배포 전 점검과 디버깅을 정리했습니다.</description>
+      <pubDate>Tue, 26 May 2026 20:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/cache-header-check</guid>
+    </item>
+
+    <item>
+      <title>HTTP 상태코드 정리 실행 순서, 배포 전 점검까지</title>
+      <link>https://www.spinkorea.kr/blog/http-status-note</link>
+      <description>HTTP 상태코드 정리는 애매할 때 자동화를 먼저 보고 배포 전 점검까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Tue, 26 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/http-status-note</guid>
+    </item>
+
+    <item>
+      <title>웹훅 서명 확인 체크리스트: 자동화 핵심</title>
+      <link>https://www.spinkorea.kr/blog/webhook-signature-test</link>
+      <description>웹훅 서명 확인 관련 결정을 반복하지 않도록 자동화, 보안 확인, 배포 전 점검 항목을 한 번에 비교합니다.</description>
+      <pubDate>Tue, 26 May 2026 10:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/webhook-signature-test</guid>
+    </item>
+
+    <item>
+      <title>API 요청 검증, 디버깅 먼저 보기</title>
+      <link>https://www.spinkorea.kr/blog/api-request-check</link>
+      <description>API 요청 검증을 검색한 독자가 바로 따라 할 수 있도록 검증 절차부터 보안 확인까지 압축했습니다.</description>
+      <pubDate>Tue, 26 May 2026 05:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/api-request-check</guid>
+    </item>
+
+    <item>
+      <title>독자 질문 모음 발행 전 검토, 순서</title>
+      <link>https://www.spinkorea.kr/blog/reader-question-bank</link>
+      <description>독자 질문 모음은 필요한 순간부터 가독성과 검토 순서를 남기는 방법까지 안내합니다.</description>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/reader-question-bank</guid>
+    </item>
+
+    <item>
+      <title>글 업데이트 메모 사례별 정리, 문서 기준 중심</title>
+      <link>https://www.spinkorea.kr/blog/content-refresh-note</link>
+      <description>글 업데이트 메모 상황에서 표현 정리와 공유 전 확인은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Mon, 25 May 2026 19:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/content-refresh-note</guid>
+    </item>
+
+    <item>
+      <title>도움말 페이지 구조 운영 체크, 표현 정리 반영</title>
+      <link>https://www.spinkorea.kr/blog/help-page-structure</link>
+      <description>도움말 페이지 구조를 준비할 때 놓치기 쉬운 검토 순서, 표현 정리, 공유 전 확인 항목을 짧게 점검합니다.</description>
+      <pubDate>Mon, 25 May 2026 14:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/help-page-structure</guid>
+    </item>
+
+    <item>
+      <title>약관 요약 문장 검토 순서, 가독성 활용</title>
+      <link>https://www.spinkorea.kr/blog/terms-summary-copy</link>
+      <description>약관 요약 문장은 가독성, 검토 순서, 표현 정리를 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Mon, 25 May 2026 09:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/terms-summary-copy</guid>
+    </item>
+
+    <item>
+      <title>개인정보 안내문 빠른 정리, 표현 정리까지</title>
+      <link>https://www.spinkorea.kr/blog/privacy-copy-check</link>
+      <description>개인정보 안내문을 글, 도구, 업무 흐름에 적용할 때 필요한 가독성과 표현 정리를 정리했습니다.</description>
+      <pubDate>Mon, 25 May 2026 04:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/privacy-copy-check</guid>
+    </item>
+
+    <item>
+      <title>뉴스레터 미리보기 선택법, 공유 전 확인과 문서 기준</title>
+      <link>https://www.spinkorea.kr/blog/newsletter-preview</link>
+      <description>뉴스레터 미리보기는 애매할 때 공유 전 확인 항목을 먼저 보고 가독성까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Sun, 24 May 2026 23:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/newsletter-preview</guid>
+    </item>
+
+    <item>
+      <title>전후 비교 문장 개선 포인트, 문서 기준</title>
+      <link>https://www.spinkorea.kr/blog/before-after-copy</link>
+      <description>전후 비교 문장 관련 결정을 반복하지 않도록 공유 전 확인, 문서 기준, 가독성을 한 번에 비교합니다.</description>
+      <pubDate>Sun, 24 May 2026 18:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/before-after-copy</guid>
+    </item>
+
+    <item>
+      <title>질문형 소제목 초보 흐름, 표현 정리 중심</title>
+      <link>https://www.spinkorea.kr/blog/question-heading-rule</link>
+      <description>질문형 소제목을 검색한 독자가 바로 따라 할 수 있도록 검토 순서부터 문서 기준까지 압축했습니다.</description>
+      <pubDate>Sun, 24 May 2026 13:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/question-heading-rule</guid>
+    </item>
+
+    <item>
+      <title>모바일 문단 길이 적용 순서, 공유 전 확인</title>
+      <link>https://www.spinkorea.kr/blog/mobile-reading-break</link>
+      <description>모바일 문단 길이는 필요한 순간부터 표현 정리와 공유 전 확인 항목을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Sun, 24 May 2026 08:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/mobile-reading-break</guid>
+    </item>
+
+    <item>
+      <title>문서 버전 기록 실수 방지, 가독성 먼저</title>
+      <link>https://www.spinkorea.kr/blog/document-version-note</link>
+      <description>문서 버전 기록 상황에서 문서 기준과 가독성은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Sun, 24 May 2026 03:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/document-version-note</guid>
+    </item>
+
+    <item>
+      <title>요약 박스 구성 실전 흐름, 가독성부터</title>
+      <link>https://www.spinkorea.kr/blog/summary-box-copy</link>
+      <description>요약 박스 구성을 준비할 때 놓치기 쉬운 공유 전 확인, 문서 기준, 가독성을 짧게 점검합니다.</description>
+      <pubDate>Sat, 23 May 2026 22:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/summary-box-copy</guid>
+    </item>
+
+    <item>
+      <title>체크리스트 문장 상황별 표, 공유 전 확인</title>
+      <link>https://www.spinkorea.kr/blog/checklist-wording</link>
+      <description>체크리스트 문장은 표현 정리, 공유 전 확인, 문서 기준을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Sat, 23 May 2026 17:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/checklist-wording</guid>
+    </item>
+
+    <item>
+      <title>온라인 계산기 vs 엑셀: 언제 무엇을 써야 하나</title>
+      <link>https://www.spinkorea.kr/blog/calculator-vs-excel</link>
+      <description>간단한 계산에 엑셀을 여는 것은 낭비입니다. 상황별로 온라인 계산기와 스프레드시트를 현명하게 선택하는 기준.</description>
+      <pubDate>Sat, 23 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/calculator-vs-excel</guid>
+    </item>
+
+    <item>
+      <title>랜딩 문구 순서 판단법, 표현 정리 중심</title>
+      <link>https://www.spinkorea.kr/blog/landing-copy-order</link>
+      <description>랜딩 문구 순서를 글, 도구, 업무 흐름에 적용할 때 필요한 표현 정리와 문서 기준을 정리했습니다.</description>
+      <pubDate>Sat, 23 May 2026 12:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/landing-copy-order</guid>
+    </item>
+
+    <item>
+      <title>공유 문구 작성 운영법, 가독성 남기기</title>
+      <link>https://www.spinkorea.kr/blog/social-share-copy</link>
+      <description>공유 문구 작성은 애매할 때 가독성을 먼저 보고 표현 정리까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Sat, 23 May 2026 07:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/social-share-copy</guid>
+    </item>
+
+    <item>
+      <title>인용문 정리, 검토 순서 전에 볼 점</title>
+      <link>https://www.spinkorea.kr/blog/quote-cleanup-rule</link>
+      <description>인용문 정리 관련 결정을 반복하지 않도록 가독성, 검토 순서, 표현 정리를 한 번에 비교합니다.</description>
+      <pubDate>Sat, 23 May 2026 02:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/quote-cleanup-rule</guid>
+    </item>
+
+    <item>
+      <title>문체 기준표 FAQ: 문서 기준 답변</title>
+      <link>https://www.spinkorea.kr/blog/tone-of-voice-note</link>
+      <description>문체 기준표를 검색한 독자가 바로 따라 할 수 있도록 공유 전 확인부터 검토 순서까지 압축했습니다.</description>
+      <pubDate>Fri, 22 May 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/tone-of-voice-note</guid>
+    </item>
+
+    <item>
+      <title>목록 문장 다듬기 비교법, 표현 정리와 가독성</title>
+      <link>https://www.spinkorea.kr/blog/bullet-list-edit</link>
+      <description>목록 문장 다듬기는 필요한 순간부터 문서 기준과 가독성을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Fri, 22 May 2026 16:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/bullet-list-edit</guid>
+    </item>
+
+    <item>
+      <title>디지털 노마드의 생산성 도구 모음: 어디서든 일하는 법</title>
+      <link>https://www.spinkorea.kr/blog/digital-nomad-tools</link>
+      <description>카페·공유오피스·해외 어디서든 최고의 생산성을 유지하는 디지털 노마드들의 필수 도구와 루틴.</description>
+      <pubDate>Fri, 22 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/digital-nomad-tools</guid>
+    </item>
+
+    <item>
+      <title>메타 설명 초안 실행 순서, 공유 전 확인까지</title>
+      <link>https://www.spinkorea.kr/blog/meta-description-draft</link>
+      <description>메타 설명 초안 상황에서 검토 순서와 표현 정리는 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Fri, 22 May 2026 11:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/meta-description-draft</guid>
+    </item>
+
+    <item>
+      <title>긴 제목 줄이기 체크리스트: 검토 순서 핵심</title>
+      <link>https://www.spinkorea.kr/blog/headline-trim-rule</link>
+      <description>긴 제목 줄이기를 준비할 때 놓치기 쉬운 가독성, 검토 순서, 표현 정리를 짧게 점검합니다.</description>
+      <pubDate>Fri, 22 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/headline-trim-rule</guid>
+    </item>
+
+    <item>
+      <title>표기 스타일 통일, 문서 기준 먼저 보기</title>
+      <link>https://www.spinkorea.kr/blog/case-style-guide</link>
+      <description>표기 스타일 통일은 문서 기준, 가독성, 검토 순서를 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Fri, 22 May 2026 01:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/case-style-guide</guid>
+    </item>
+
+    <item>
+      <title>마크다운 표 작성 발행 전 검토, 순서</title>
+      <link>https://www.spinkorea.kr/blog/markdown-table-check</link>
+      <description>마크다운 표 작성을 글, 도구, 업무 흐름에 적용할 때 필요한 문서 기준과 검토 순서를 정리했습니다.</description>
+      <pubDate>Thu, 21 May 2026 20:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/markdown-table-check</guid>
+    </item>
+
+    <item>
+      <title>텍스트 변환이 필요한 의외의 상황 7가지</title>
+      <link>https://www.spinkorea.kr/blog/text-formatting-situations</link>
+      <description>대소문자 변환, 특수문자 제거, 줄바꿈 정리... 텍스트를 정제하고 변환해야 하는 실무 상황 완벽 정리.</description>
+      <pubDate>Thu, 21 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/text-formatting-situations</guid>
+    </item>
+
+    <item>
+      <title>공유 전 문서 검토 사례별 정리, 가독성 중심</title>
+      <link>https://www.spinkorea.kr/blog/copy-before-share</link>
+      <description>공유 전 문서 검토는 애매할 때 표현 정리를 먼저 보고 문서 기준까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Thu, 21 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/copy-before-share</guid>
+    </item>
+
+    <item>
+      <title>쉬운 문장 기준 운영 체크, 표현 정리 반영</title>
+      <link>https://www.spinkorea.kr/blog/plain-language-rule</link>
+      <description>쉬운 문장 기준 관련 결정을 반복하지 않도록 표현 정리, 공유 전 확인, 문서 기준을 한 번에 비교합니다.</description>
+      <pubDate>Thu, 21 May 2026 10:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/plain-language-rule</guid>
+    </item>
+
+    <item>
+      <title>블로그 첫 문단 검토 순서, 가독성 활용</title>
+      <link>https://www.spinkorea.kr/blog/blog-intro-hook</link>
+      <description>블로그 첫 문단을 검색한 독자가 바로 따라 할 수 있도록 가독성부터 공유 전 확인까지 압축했습니다.</description>
+      <pubDate>Thu, 21 May 2026 05:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/blog-intro-hook</guid>
+    </item>
+
+    <item>
+      <title>FAQ 답변 길이 빠른 정리, 표현 정리까지</title>
+      <link>https://www.spinkorea.kr/blog/faq-answer-length</link>
+      <description>FAQ 답변 길이는 필요한 순간부터 검토 순서와 표현 정리를 남기는 방법까지 안내합니다.</description>
+      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/faq-answer-length</guid>
+    </item>
+
+    <item>
+      <title>공지문 표현 정리 선택법, 공유 전 확인과 문서 기준</title>
+      <link>https://www.spinkorea.kr/blog/notice-copy-cleanup</link>
+      <description>공지문 표현 정리 상황에서 공유 전 확인과 문서 기준은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Wed, 20 May 2026 19:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/notice-copy-cleanup</guid>
+    </item>
+
+    <item>
+      <title>AI 시대에 살아남는 스킬: 대체되지 않는 능력 5가지</title>
+      <link>https://www.spinkorea.kr/blog/ai-era-skills</link>
+      <description>ChatGPT가 할 수 없는 것은 무엇인가. AI 시대에 오히려 더 가치가 높아지는 인간 고유의 능력.</description>
+      <pubDate>Wed, 20 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/ai-era-skills</guid>
+    </item>
+
+    <item>
+      <title>회의록 정리 형식 개선 포인트, 문서 기준</title>
+      <link>https://www.spinkorea.kr/blog/meeting-note-format</link>
+      <description>회의록 정리 형식을 준비할 때 놓치기 쉬운 표현 정리, 공유 전 확인, 문서 기준을 짧게 점검합니다.</description>
+      <pubDate>Wed, 20 May 2026 14:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/meeting-note-format</guid>
+    </item>
+
+    <item>
+      <title>제안서 요약 문장 초보 흐름, 표현 정리 중심</title>
+      <link>https://www.spinkorea.kr/blog/proposal-summary-check</link>
+      <description>제안서 요약 문장은 검토 순서, 표현 정리, 공유 전 확인 항목을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Wed, 20 May 2026 09:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/proposal-summary-check</guid>
+    </item>
+
+    <item>
+      <title>이메일 제목 작성 적용 순서, 공유 전 확인</title>
+      <link>https://www.spinkorea.kr/blog/email-subject-rule</link>
+      <description>이메일 제목 작성을 글, 도구, 업무 흐름에 적용할 때 필요한 검토 순서와 공유 전 확인 항목을 정리했습니다.</description>
+      <pubDate>Wed, 20 May 2026 04:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/email-subject-rule</guid>
+    </item>
+
+    <item>
+      <title>자기소개서 글자수 실수 방지, 문서 기준 먼저</title>
+      <link>https://www.spinkorea.kr/blog/self-intro-length</link>
+      <description>자기소개서 글자수는 애매할 때 문서 기준을 먼저 보고 검토 순서까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Tue, 19 May 2026 23:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/self-intro-length</guid>
+    </item>
+
+    <item>
+      <title>주간 지출 점검 실전 흐름, 입력값 확인부터</title>
+      <link>https://www.spinkorea.kr/blog/weekly-cost-review</link>
+      <description>주간 지출 점검 관련 결정을 반복하지 않도록 계산 기준, 입력값 확인, 결과 해석을 한 번에 비교합니다.</description>
+      <pubDate>Tue, 19 May 2026 18:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/weekly-cost-review</guid>
+    </item>
+
+    <item>
+      <title>이미지 포맷 완벽 가이드: JPG vs PNG vs WebP vs AVIF</title>
+      <link>https://www.spinkorea.kr/blog/image-format-guide</link>
+      <description>언제 JPG를 쓰고 언제 PNG를 써야 하나? 웹 성능을 위한 최신 이미지 포맷 선택 기준 완벽 정리.</description>
+      <pubDate>Tue, 19 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/image-format-guide</guid>
+    </item>
+
+    <item>
+      <title>선물 예산 상한 상황별 표, 생활 적용</title>
+      <link>https://www.spinkorea.kr/blog/gift-budget-limit</link>
+      <description>선물 예산 상한을 검색한 독자가 바로 따라 할 수 있도록 실수 방지부터 입력값 확인까지 압축했습니다.</description>
+      <pubDate>Tue, 19 May 2026 13:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/gift-budget-limit</guid>
+    </item>
+
+    <item>
+      <title>티켓 가격 비교 판단법, 결과 해석 중심</title>
+      <link>https://www.spinkorea.kr/blog/ticket-price-compare</link>
+      <description>티켓 가격 비교는 필요한 순간부터 생활 적용과 계산 기준을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Tue, 19 May 2026 08:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/ticket-price-compare</guid>
+    </item>
+
+    <item>
+      <title>공동비 분담 기준 운영법, 생활 적용 남기기</title>
+      <link>https://www.spinkorea.kr/blog/rent-share-rule</link>
+      <description>공동비 분담 기준 상황에서 입력값 확인과 결과 해석은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Tue, 19 May 2026 03:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/rent-share-rule</guid>
+    </item>
+
+    <item>
+      <title>회의실 사용 시간, 결과 해석 전에 볼 점</title>
+      <link>https://www.spinkorea.kr/blog/meeting-room-time</link>
+      <description>회의실 사용 시간을 준비할 때 놓치기 쉬운 계산 기준, 입력값 확인, 결과 해석을 짧게 점검합니다.</description>
+      <pubDate>Mon, 18 May 2026 22:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/meeting-room-time</guid>
+    </item>
+
+    <item>
+      <title>작업 버퍼 시간 FAQ: 계산 기준 답변</title>
+      <link>https://www.spinkorea.kr/blog/project-buffer-time</link>
+      <description>작업 버퍼 시간은 생활 적용, 계산 기준, 입력값 확인 항목을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Mon, 18 May 2026 17:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/project-buffer-time</guid>
+    </item>
+
+    <item>
+      <title>구글 캘린더 100% 활용법: 시간을 설계하는 방법</title>
+      <link>https://www.spinkorea.kr/blog/google-calendar-tips</link>
+      <description>단순한 일정 관리를 넘어 타임 블로킹, 색상 코딩, 반복 일정, 팀 캘린더까지. 구글 캘린더 고수의 사용법.</description>
+      <pubDate>Mon, 18 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/google-calendar-tips</guid>
+    </item>
+
+    <item>
+      <title>공부 시간 합계 비교법, 실수 방지와 입력값 확인</title>
+      <link>https://www.spinkorea.kr/blog/study-hour-tracker</link>
+      <description>공부 시간 합계를 글, 도구, 업무 흐름에 적용할 때 필요한 생활 적용과 입력값 확인 항목을 정리했습니다.</description>
+      <pubDate>Mon, 18 May 2026 12:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/study-hour-tracker</guid>
+    </item>
+
+    <item>
+      <title>반품 기한 계산 실행 순서, 생활 적용까지</title>
+      <link>https://www.spinkorea.kr/blog/return-deadline-note</link>
+      <description>반품 기한 계산은 애매할 때 결과 해석을 먼저 보고 생활 적용까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Mon, 18 May 2026 07:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/return-deadline-note</guid>
+    </item>
+
+    <item>
+      <title>보증기간 확인 체크리스트: 결과 해석 핵심</title>
+      <link>https://www.spinkorea.kr/blog/warranty-period-check</link>
+      <description>보증기간 확인 관련 결정을 반복하지 않도록 결과 해석, 실수 방지, 생활 적용을 한 번에 비교합니다.</description>
+      <pubDate>Mon, 18 May 2026 02:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/warranty-period-check</guid>
+    </item>
+
+    <item>
+      <title>캘린더 색상 기준, 입력값 확인 먼저 보기</title>
+      <link>https://www.spinkorea.kr/blog/calendar-color-rule</link>
+      <description>캘린더 색상 기준을 검색한 독자가 바로 따라 할 수 있도록 계산 기준부터 실수 방지까지 압축했습니다.</description>
+      <pubDate>Sun, 17 May 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/calendar-color-rule</guid>
+    </item>
+
+    <item>
+      <title>장보기 단가 비교 발행 전 검토, 결과 해석</title>
+      <link>https://www.spinkorea.kr/blog/grocery-unit-price</link>
+      <description>장보기 단가 비교는 필요한 순간부터 입력값 확인과 결과 해석을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Sun, 17 May 2026 16:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/grocery-unit-price</guid>
+    </item>
+
+    <item>
+      <title>URL 단축기의 원리: 짧은 링크 뒤에 숨겨진 기술</title>
+      <link>https://www.spinkorea.kr/blog/url-shortener-tech</link>
+      <description>bit.ly, tinyurl... 긴 URL이 짧아지는 원리, 리다이렉트 동작 방식, 단축 URL의 보안 위험까지 알아봅니다.</description>
+      <pubDate>Sun, 17 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/url-shortener-tech</guid>
+    </item>
+
+    <item>
+      <title>수면 시간 메모 사례별 정리, 계산 기준 중심</title>
+      <link>https://www.spinkorea.kr/blog/sleep-hour-note</link>
+      <description>수면 시간 메모 상황에서 실수 방지와 생활 적용은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Sun, 17 May 2026 11:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/sleep-hour-note</guid>
+    </item>
+
+    <item>
+      <title>물 마시기 기록 운영 체크, 실수 방지 반영</title>
+      <link>https://www.spinkorea.kr/blog/water-intake-routine</link>
+      <description>물 마시기 기록을 준비할 때 놓치기 쉬운 결과 해석, 실수 방지, 생활 적용을 짧게 점검합니다.</description>
+      <pubDate>Sun, 17 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/water-intake-routine</guid>
+    </item>
+
+    <item>
+      <title>운동 시간 기록 검토 순서, 입력값 확인 활용</title>
+      <link>https://www.spinkorea.kr/blog/exercise-time-record</link>
+      <description>운동 시간 기록은 입력값 확인, 결과 해석, 실수 방지를 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Sun, 17 May 2026 01:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/exercise-time-record</guid>
+    </item>
+
+    <item>
+      <title>준비물 예산 정리 빠른 정리, 실수 방지까지</title>
+      <link>https://www.spinkorea.kr/blog/school-supply-budget</link>
+      <description>준비물 예산 정리를 글, 도구, 업무 흐름에 적용할 때 필요한 입력값 확인과 실수 방지를 정리했습니다.</description>
+      <pubDate>Sat, 16 May 2026 20:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/school-supply-budget</guid>
+    </item>
+
+    <item>
+      <title>두려움을 행동으로 전환하는 5초의 법칙</title>
+      <link>https://www.spinkorea.kr/blog/five-second-rule</link>
+      <description>멜 로빈스의 5초 법칙: 하고 싶은 것이 생기면 5초 안에 시작하지 않으면 뇌가 방해합니다. 과학적 근거와 실천법.</description>
+      <pubDate>Sat, 16 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/five-second-rule</guid>
+    </item>
+
+    <item>
+      <title>행사 남은 기간 선택법, 생활 적용과 계산 기준</title>
+      <link>https://www.spinkorea.kr/blog/event-countdown-plan</link>
+      <description>행사 남은 기간은 애매할 때 생활 적용을 먼저 보고 입력값 확인까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Sat, 16 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/event-countdown-plan</guid>
+    </item>
+
+    <item>
+      <title>주유비 나누기 개선 포인트, 계산 기준</title>
+      <link>https://www.spinkorea.kr/blog/fuel-cost-split</link>
+      <description>주유비 나누기 관련 결정을 반복하지 않도록 생활 적용, 계산 기준, 입력값 확인 항목을 한 번에 비교합니다.</description>
+      <pubDate>Sat, 16 May 2026 10:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/fuel-cost-split</guid>
+    </item>
+
+    <item>
+      <title>가계부 분류 기준 초보 흐름, 실수 방지 중심</title>
+      <link>https://www.spinkorea.kr/blog/household-category-rule</link>
+      <description>가계부 분류 기준을 검색한 독자가 바로 따라 할 수 있도록 결과 해석부터 계산 기준까지 압축했습니다.</description>
+      <pubDate>Sat, 16 May 2026 05:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/household-category-rule</guid>
+    </item>
+
+    <item>
+      <title>구독료 월합계 적용 순서, 생활 적용 확인</title>
+      <link>https://www.spinkorea.kr/blog/subscription-total-cost</link>
+      <description>구독료 월합계는 필요한 순간부터 실수 방지와 생활 적용을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/subscription-total-cost</guid>
+    </item>
+
+    <item>
+      <title>이사 비용 체크 실수 방지, 계산 기준 먼저</title>
+      <link>https://www.spinkorea.kr/blog/moving-check-cost</link>
+      <description>이사 비용 체크 상황에서 계산 기준과 입력값 확인은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Fri, 15 May 2026 19:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/moving-check-cost</guid>
+    </item>
+
+    <item>
+      <title>주사위와 확률: 보드게임 뒤에 숨겨진 수학</title>
+      <link>https://www.spinkorea.kr/blog/dice-probability</link>
+      <description>주사위 2개를 굴렸을 때 7이 가장 많이 나오는 이유, 크리티컬 확률 계산, 보드게임 전략에 확률을 활용하는 법.</description>
+      <pubDate>Fri, 15 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/dice-probability</guid>
+    </item>
+
+    <item>
+      <title>레시피 단위 변환 실전 흐름, 입력값 확인부터</title>
+      <link>https://www.spinkorea.kr/blog/unit-note-recipe</link>
+      <description>레시피 단위 변환을 준비할 때 놓치기 쉬운 생활 적용, 계산 기준, 입력값 확인 항목을 짧게 점검합니다.</description>
+      <pubDate>Fri, 15 May 2026 14:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/unit-note-recipe</guid>
+    </item>
+
+    <item>
+      <title>시차 회의 시간 상황별 표, 생활 적용</title>
+      <link>https://www.spinkorea.kr/blog/time-zone-meeting</link>
+      <description>시차 회의 시간은 실수 방지, 생활 적용, 계산 기준을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Fri, 15 May 2026 09:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/time-zone-meeting</guid>
+    </item>
+
+    <item>
+      <title>날짜 차이 계산 판단법, 결과 해석 중심</title>
+      <link>https://www.spinkorea.kr/blog/calendar-date-gap</link>
+      <description>날짜 차이 계산을 글, 도구, 업무 흐름에 적용할 때 필요한 실수 방지와 계산 기준을 정리했습니다.</description>
+      <pubDate>Fri, 15 May 2026 04:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/calendar-date-gap</guid>
+    </item>
+
+    <item>
+      <title>나이 기준 확인 운영법, 생활 적용 남기기</title>
+      <link>https://www.spinkorea.kr/blog/age-standard-check</link>
+      <description>나이 기준 확인은 애매할 때 입력값 확인 항목을 먼저 보고 실수 방지까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Thu, 14 May 2026 23:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/age-standard-check</guid>
+    </item>
+
+    <item>
+      <title>실수령액 추정 기준, 결과 해석 전에 볼 점</title>
+      <link>https://www.spinkorea.kr/blog/salary-net-estimate</link>
+      <description>실수령액 추정 기준 관련 결정을 반복하지 않도록 입력값 확인, 결과 해석, 실수 방지를 한 번에 비교합니다.</description>
+      <pubDate>Thu, 14 May 2026 18:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/salary-net-estimate</guid>
+    </item>
+
+    <item>
+      <title>메모의 기술: 두 번째 뇌 만들기</title>
+      <link>https://www.spinkorea.kr/blog/note-taking-art</link>
+      <description>좋은 아이디어는 기억에 의존하면 안 됩니다. 코넬 노트, 제텔카스텐, 디지털 노트 시스템 완벽 가이드.</description>
+      <pubDate>Thu, 14 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/note-taking-art</guid>
+    </item>
+
+    <item>
+      <title>대출 이자 간단 계산 FAQ: 입력값 확인 답변</title>
+      <link>https://www.spinkorea.kr/blog/loan-interest-rough</link>
+      <description>대출 이자 간단 계산을 검색한 독자가 바로 따라 할 수 있도록 생활 적용부터 결과 해석까지 압축했습니다.</description>
+      <pubDate>Thu, 14 May 2026 13:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/loan-interest-rough</guid>
+    </item>
+
+    <item>
+      <title>복리 계산 메모 비교법, 실수 방지와 입력값 확인</title>
+      <link>https://www.spinkorea.kr/blog/compound-interest-memo</link>
+      <description>복리 계산 메모는 필요한 순간부터 계산 기준과 입력값 확인 항목을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Thu, 14 May 2026 08:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/compound-interest-memo</guid>
+    </item>
+
+    <item>
+      <title>전기요금 사용량 메모 실행 순서, 생활 적용까지</title>
+      <link>https://www.spinkorea.kr/blog/electricity-use-note</link>
+      <description>전기요금 사용량 메모 상황에서 결과 해석과 실수 방지는 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Thu, 14 May 2026 03:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/electricity-use-note</guid>
+    </item>
+
+    <item>
+      <title>주차비 예상 계산 체크리스트: 결과 해석 핵심</title>
+      <link>https://www.spinkorea.kr/blog/parking-fee-estimate</link>
+      <description>주차비 예상 계산을 준비할 때 놓치기 쉬운 입력값 확인, 결과 해석, 실수 방지를 짧게 점검합니다.</description>
+      <pubDate>Wed, 13 May 2026 22:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/parking-fee-estimate</guid>
+    </item>
+
+    <item>
+      <title>배송 예정일 계산, 입력값 확인 먼저 보기</title>
+      <link>https://www.spinkorea.kr/blog/delivery-date-estimate</link>
+      <description>배송 예정일 계산은 계산 기준, 입력값 확인, 결과 해석을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Wed, 13 May 2026 17:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/delivery-date-estimate</guid>
+    </item>
+
+    <item>
+      <title>근무시간 계산기 활용법: 야근 수당부터 프리랜서 정산까지</title>
+      <link>https://www.spinkorea.kr/blog/work-hours-calculator</link>
+      <description>정확한 근무시간 계산이 필요한 모든 상황. 야근 수당, 프리랜서 시급 정산, 프로젝트 일정 관리 방법.</description>
+      <pubDate>Wed, 13 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/work-hours-calculator</guid>
+    </item>
+
+    <item>
+      <title>여행 예산 나누기 발행 전 검토, 결과 해석</title>
+      <link>https://www.spinkorea.kr/blog/travel-budget-sheet</link>
+      <description>여행 예산 나누기를 글, 도구, 업무 흐름에 적용할 때 필요한 계산 기준과 결과 해석을 정리했습니다.</description>
+      <pubDate>Wed, 13 May 2026 12:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/travel-budget-sheet</guid>
+    </item>
+
+    <item>
+      <title>근무시간 합산 사례별 정리, 계산 기준 중심</title>
+      <link>https://www.spinkorea.kr/blog/work-hour-summary</link>
+      <description>근무시간 합산은 애매할 때 실수 방지를 먼저 보고 계산 기준까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Wed, 13 May 2026 07:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/work-hour-summary</guid>
+    </item>
+
+    <item>
+      <title>더치페이 계산 기준 운영 체크, 실수 방지 반영</title>
+      <link>https://www.spinkorea.kr/blog/split-bill-calculation</link>
+      <description>더치페이 계산 기준 관련 결정을 반복하지 않도록 실수 방지, 생활 적용, 계산 기준을 한 번에 비교합니다.</description>
+      <pubDate>Wed, 13 May 2026 02:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/split-bill-calculation</guid>
+    </item>
+
+    <item>
+      <title>부가세 포함 금액 검토 순서, 입력값 확인 활용</title>
+      <link>https://www.spinkorea.kr/blog/vat-inclusive-price</link>
+      <description>부가세 포함 금액을 검색한 독자가 바로 따라 할 수 있도록 입력값 확인부터 생활 적용까지 압축했습니다.</description>
+      <pubDate>Tue, 12 May 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/vat-inclusive-price</guid>
+    </item>
+
+    <item>
+      <title>할인율 계산 실수 빠른 정리, 입력값 확인까지</title>
+      <link>https://www.spinkorea.kr/blog/discount-rate-check</link>
+      <description>할인율 계산 실수는 필요한 순간부터 결과 해석과 실수 방지를 남기는 방법까지 안내합니다.</description>
+      <pubDate>Tue, 12 May 2026 16:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/discount-rate-check</guid>
+    </item>
+
+    <item>
+      <title>집중력 도둑 TOP 5와 차단 방법</title>
+      <link>https://www.spinkorea.kr/blog/focus-thieves</link>
+      <description>SNS 알림, 오픈 오피스, 멀티탭... 우리의 집중력을 훔치는 주범들과 환경 설계로 차단하는 방법.</description>
+      <pubDate>Tue, 12 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/focus-thieves</guid>
+    </item>
+
+    <item>
+      <title>랜덤 선택 규칙 템플릿 선택법, 결과 기록과 공정성</title>
+      <link>https://www.spinkorea.kr/blog/choice-rule-template</link>
+      <description>랜덤 선택 규칙 템플릿 상황에서 결과 기록과 공정성은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Tue, 12 May 2026 11:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/choice-rule-template</guid>
+    </item>
+
+    <item>
+      <title>랜덤 시드 이해 개선 포인트, 공정성</title>
+      <link>https://www.spinkorea.kr/blog/random-seed-explainer</link>
+      <description>랜덤 시드 이해를 준비할 때 놓치기 쉬운 확률 설정, 결과 기록, 공정성을 짧게 점검합니다.</description>
+      <pubDate>Tue, 12 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/random-seed-explainer</guid>
+    </item>
+
+    <item>
+      <title>추첨 결과 안내문 초보 흐름, 확률 설정 중심</title>
+      <link>https://www.spinkorea.kr/blog/raffle-announcement-copy</link>
+      <description>추첨 결과 안내문은 참가자 목록, 확률 설정, 결과 기록을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Tue, 12 May 2026 01:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/raffle-announcement-copy</guid>
+    </item>
+
+    <item>
+      <title>동률 투표 랜덤 결정 적용 순서, 결과 기록 확인</title>
+      <link>https://www.spinkorea.kr/blog/random-vote-tiebreaker</link>
+      <description>동률 투표 랜덤 결정을 글, 도구, 업무 흐름에 적용할 때 필요한 참가자 목록과 결과 기록을 정리했습니다.</description>
+      <pubDate>Mon, 11 May 2026 20:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/random-vote-tiebreaker</guid>
+    </item>
+
+    <item>
+      <title>텍스트 분석의 기초: 글자수·단어수·문장수가 중요한 이유</title>
+      <link>https://www.spinkorea.kr/blog/text-analysis-basics</link>
+      <description>SNS 글자 제한, 독해 수준 측정, SEO 콘텐츠 최적화까지. 텍스트 분석이 필요한 모든 상황을 알아봅니다.</description>
+      <pubDate>Mon, 11 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/text-analysis-basics</guid>
+    </item>
+
+    <item>
+      <title>온라인 모임 진행자 실수 방지, 공정성 먼저</title>
+      <link>https://www.spinkorea.kr/blog/online-meeting-picker</link>
+      <description>온라인 모임 진행자는 애매할 때 공정성을 먼저 보고 참가자 목록까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Mon, 11 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/online-meeting-picker</guid>
+    </item>
+
+    <item>
+      <title>벌칙 룰렛 기준 실전 흐름, 중복 방지부터</title>
+      <link>https://www.spinkorea.kr/blog/penalty-wheel-rule</link>
+      <description>벌칙 룰렛 기준 관련 결정을 반복하지 않도록 공정성, 중복 방지, 참가자 목록을 한 번에 비교합니다.</description>
+      <pubDate>Mon, 11 May 2026 10:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/penalty-wheel-rule</guid>
+    </item>
+
+    <item>
+      <title>선택 피로 줄이기 상황별 표, 결과 기록</title>
+      <link>https://www.spinkorea.kr/blog/choice-fatigue-random</link>
+      <description>선택 피로 줄이기를 검색한 독자가 바로 따라 할 수 있도록 확률 설정부터 중복 방지까지 압축했습니다.</description>
+      <pubDate>Mon, 11 May 2026 05:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/choice-fatigue-random</guid>
+    </item>
+
+    <item>
+      <title>랜덤 결과 기록 판단법, 참가자 목록 중심</title>
+      <link>https://www.spinkorea.kr/blog/random-choice-log</link>
+      <description>랜덤 결과 기록은 필요한 순간부터 결과 기록과 공정성을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/random-choice-log</guid>
+    </item>
+
+    <item>
+      <title>이름 추첨 기준 운영법, 결과 기록 남기기</title>
+      <link>https://www.spinkorea.kr/blog/name-draw-clean-rule</link>
+      <description>이름 추첨 기준 상황에서 중복 방지와 참가자 목록은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Sun, 10 May 2026 19:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/name-draw-clean-rule</guid>
+    </item>
+
+    <item>
+      <title>인간관계에서 경계선(Boundary) 긋기의 중요성</title>
+      <link>https://www.spinkorea.kr/blog/boundaries-relationship</link>
+      <description>거절 못 하는 사람이 더 힘든 이유. 건강한 경계선이 관계를 망치는 게 아니라 오히려 깊게 만드는 이유.</description>
+      <pubDate>Sun, 10 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/boundaries-relationship</guid>
+    </item>
+
+    <item>
+      <title>라이브 추첨 운영, 참가자 목록 전에 볼 점</title>
+      <link>https://www.spinkorea.kr/blog/live-stream-giveaway</link>
+      <description>라이브 추첨 운영을 준비할 때 놓치기 쉬운 공정성, 중복 방지, 참가자 목록을 짧게 점검합니다.</description>
+      <pubDate>Sun, 10 May 2026 14:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/live-stream-giveaway</guid>
+    </item>
+
+    <item>
+      <title>랜덤 번호 검증 FAQ: 공정성 답변</title>
+      <link>https://www.spinkorea.kr/blog/random-number-audit</link>
+      <description>랜덤 번호 검증은 결과 기록, 공정성, 중복 방지를 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Sun, 10 May 2026 09:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/random-number-audit</guid>
+    </item>
+
+    <item>
+      <title>회의 안건 우선순위 비교법, 확률 설정과 중복 방지</title>
+      <link>https://www.spinkorea.kr/blog/meeting-agenda-priority</link>
+      <description>회의 안건 우선순위를 글, 도구, 업무 흐름에 적용할 때 필요한 결과 기록과 중복 방지를 정리했습니다.</description>
+      <pubDate>Sun, 10 May 2026 04:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/meeting-agenda-priority</guid>
+    </item>
+
+    <item>
+      <title>저녁 메뉴 룰렛 실행 순서, 결과 기록까지</title>
+      <link>https://www.spinkorea.kr/blog/dinner-menu-wheel</link>
+      <description>저녁 메뉴 룰렛은 애매할 때 참가자 목록을 먼저 보고 결과 기록까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Sat, 09 May 2026 23:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/dinner-menu-wheel</guid>
+    </item>
+
+    <item>
+      <title>점심 메뉴 결정 룰 체크리스트: 참가자 목록 핵심</title>
+      <link>https://www.spinkorea.kr/blog/lunch-choice-rule</link>
+      <description>점심 메뉴 결정 룰 관련 결정을 반복하지 않도록 참가자 목록, 확률 설정, 결과 기록을 한 번에 비교합니다.</description>
+      <pubDate>Sat, 09 May 2026 18:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/lunch-choice-rule</guid>
+    </item>
+
+    <item>
+      <title>D-Day 카운터로 인생 관리하기: 중요한 날을 카운트다운으로</title>
+      <link>https://www.spinkorea.kr/blog/dday-life-management</link>
+      <description>시험, 프로젝트 마감, 여행, 기념일... D-Day 카운터가 미루기를 방지하고 동기를 높이는 이유.</description>
+      <pubDate>Sat, 09 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/dday-life-management</guid>
+    </item>
+
+    <item>
+      <title>랜덤 질문 리스트, 공정성 먼저 보기</title>
+      <link>https://www.spinkorea.kr/blog/random-question-bank</link>
+      <description>랜덤 질문 리스트를 검색한 독자가 바로 따라 할 수 있도록 공정성부터 확률 설정까지 압축했습니다.</description>
+      <pubDate>Sat, 09 May 2026 13:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/random-question-bank</guid>
+    </item>
+
+    <item>
+      <title>팀 빌딩 활동 선택 발행 전 검토, 참가자 목록</title>
+      <link>https://www.spinkorea.kr/blog/team-building-picker</link>
+      <description>팀 빌딩 활동 선택은 필요한 순간부터 중복 방지와 참가자 목록을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/team-building-picker</guid>
+    </item>
+
+    <item>
+      <title>설문 선택지 추첨 사례별 정리, 공정성 중심</title>
+      <link>https://www.spinkorea.kr/blog/survey-option-picker</link>
+      <description>설문 선택지 추첨 상황에서 확률 설정과 결과 기록은 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Sat, 09 May 2026 03:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/survey-option-picker</guid>
+    </item>
+
+    <item>
+      <title>수업 활동 추첨 운영 체크, 확률 설정 반영</title>
+      <link>https://www.spinkorea.kr/blog/class-activity-draw</link>
+      <description>수업 활동 추첨을 준비할 때 놓치기 쉬운 참가자 목록, 확률 설정, 결과 기록을 짧게 점검합니다.</description>
+      <pubDate>Fri, 08 May 2026 22:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/class-activity-draw</guid>
+    </item>
+
+    <item>
+      <title>아이스브레이킹 질문 검토 순서, 중복 방지 활용</title>
+      <link>https://www.spinkorea.kr/blog/icebreaking-question-wheel</link>
+      <description>아이스브레이킹 질문은 중복 방지, 참가자 목록, 확률 설정을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Fri, 08 May 2026 17:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/icebreaking-question-wheel</guid>
+    </item>
+
+    <item>
+      <title>성공한 사람들의 공통 습관 5가지</title>
+      <link>https://www.spinkorea.kr/blog/success-habits</link>
+      <description>빌 게이츠, 워런 버핏, 오프라 윈프리... 그들의 공통점은 재능이 아닌 습관이었습니다.</description>
+      <pubDate>Fri, 08 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/success-habits</guid>
+    </item>
+
+    <item>
+      <title>랜덤 미션 만들기 빠른 정리, 확률 설정까지</title>
+      <link>https://www.spinkorea.kr/blog/random-mission-maker</link>
+      <description>랜덤 미션 만들기를 글, 도구, 업무 흐름에 적용할 때 필요한 중복 방지와 확률 설정을 정리했습니다.</description>
+      <pubDate>Fri, 08 May 2026 12:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/random-mission-maker</guid>
+    </item>
+
+    <item>
+      <title>게임 순서 랜덤 선택법, 결과 기록과 공정성</title>
+      <link>https://www.spinkorea.kr/blog/game-turn-randomizer</link>
+      <description>게임 순서 랜덤은 애매할 때 결과 기록을 먼저 보고 중복 방지까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Fri, 08 May 2026 07:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/game-turn-randomizer</guid>
+    </item>
+
+    <item>
+      <title>스터디 주제 추첨 개선 포인트, 공정성</title>
+      <link>https://www.spinkorea.kr/blog/study-topic-picker</link>
+      <description>스터디 주제 추첨 관련 결정을 반복하지 않도록 결과 기록, 공정성, 중복 방지를 한 번에 비교합니다.</description>
+      <pubDate>Fri, 08 May 2026 02:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/study-topic-picker</guid>
+    </item>
+
+    <item>
+      <title>선물 교환 추첨 초보 흐름, 확률 설정 중심</title>
+      <link>https://www.spinkorea.kr/blog/gift-exchange-draw</link>
+      <description>선물 교환 추첨을 검색한 독자가 바로 따라 할 수 있도록 참가자 목록부터 공정성까지 압축했습니다.</description>
+      <pubDate>Thu, 07 May 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/gift-exchange-draw</guid>
+    </item>
+
+    <item>
+      <title>데이트 코스 룰렛 적용 순서, 결과 기록 확인</title>
+      <link>https://www.spinkorea.kr/blog/date-course-picker</link>
+      <description>데이트 코스 룰렛은 필요한 순간부터 확률 설정과 결과 기록을 남기는 방법까지 안내합니다.</description>
+      <pubDate>Thu, 07 May 2026 16:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/date-course-picker</guid>
+    </item>
+
+    <item>
+      <title>API와 JSON: 앱들이 서로 대화하는 방법</title>
+      <link>https://www.spinkorea.kr/blog/json-api-explained</link>
+      <description>카카오 로그인, 날씨 앱, 지도 서비스... 모두 API와 JSON으로 작동합니다. 비개발자도 이해하는 완벽 가이드.</description>
+      <pubDate>Thu, 07 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/json-api-explained</guid>
+    </item>
+
+    <item>
+      <title>여행지 랜덤 선택 실수 방지, 공정성 먼저</title>
+      <link>https://www.spinkorea.kr/blog/travel-destination-picker</link>
+      <description>여행지 랜덤 선택 상황에서 공정성과 중복 방지는 헷갈릴 때 보는 실무형 정리입니다.</description>
+      <pubDate>Thu, 07 May 2026 11:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/travel-destination-picker</guid>
+    </item>
+
+    <item>
+      <title>회식 장소 랜덤 선택 실전 흐름, 중복 방지부터</title>
+      <link>https://www.spinkorea.kr/blog/dinner-place-selection</link>
+      <description>회식 장소 랜덤 선택을 준비할 때 놓치기 쉬운 결과 기록, 공정성, 중복 방지를 짧게 점검합니다.</description>
+      <pubDate>Thu, 07 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/dinner-place-selection</guid>
+    </item>
+
+    <item>
+      <title>자리 배치 랜덤 상황별 표, 결과 기록</title>
+      <link>https://www.spinkorea.kr/blog/seat-assignment-random</link>
+      <description>자리 배치 랜덤은 확률 설정, 결과 기록, 공정성을 나눠 실제 실행 순서로 정리한 글입니다.</description>
+      <pubDate>Thu, 07 May 2026 01:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/seat-assignment-random</guid>
+    </item>
+
+    <item>
+      <title>커피 내기 룰렛 판단법, 참가자 목록 중심</title>
+      <link>https://www.spinkorea.kr/blog/coffee-bet-rule</link>
+      <description>커피 내기 룰렛을 글, 도구, 업무 흐름에 적용할 때 필요한 확률 설정과 공정성을 정리했습니다.</description>
+      <pubDate>Wed, 06 May 2026 20:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/coffee-bet-rule</guid>
+    </item>
+
+    <item>
+      <title>감사 일기의 효과: 5분으로 바꾸는 하루의 질</title>
+      <link>https://www.spinkorea.kr/blog/gratitude-journal</link>
+      <description>감사 일기가 우울감 감소, 수면 개선, 관계 향상에 미치는 과학적 효과와 올바른 작성법.</description>
+      <pubDate>Wed, 06 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/gratitude-journal</guid>
+    </item>
+
+    <item>
+      <title>청소 당번 뽑기 운영법, 결과 기록 남기기</title>
+      <link>https://www.spinkorea.kr/blog/cleaning-duty-draw</link>
+      <description>청소 당번 뽑기는 애매할 때 중복 방지를 먼저 보고 확률 설정까지 확인하는 기준을 제시합니다.</description>
+      <pubDate>Wed, 06 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/cleaning-duty-draw</guid>
+    </item>
+
+    <item>
+      <title>발표 순서 추첨, 참가자 목록 전에 볼 점</title>
+      <link>https://www.spinkorea.kr/blog/presentation-order-draw</link>
+      <description>발표 순서 추첨 관련 결정을 반복하지 않도록 중복 방지, 참가자 목록, 확률 설정을 한 번에 비교합니다.</description>
+      <pubDate>Wed, 06 May 2026 10:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/presentation-order-draw</guid>
+    </item>
+
+    <item>
+      <title>참가자 목록 정리 FAQ: 공정성 답변</title>
+      <link>https://www.spinkorea.kr/blog/participant-list-cleanup</link>
+      <description>참가자 목록 정리를 검색한 독자가 바로 따라 할 수 있도록 결과 기록부터 참가자 목록까지 압축했습니다.</description>
+      <pubDate>Wed, 06 May 2026 05:00:00 GMT</pubDate>
+      <guid>https://www.spinkorea.kr/blog/participant-list-cleanup</guid>
+    </item>
 
     <item>
       <title>가중치 랜덤 선택 비교법, 확률 설정과 중복 방지</title>

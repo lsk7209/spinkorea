@@ -66,6 +66,19 @@ export default function Home({
         urlUnsafe,
     } = useStatePersistence(initialItems, { preferInitialOnFirstLoad });
 
+    const [wheelSize, setWheelSize] = useState(() => {
+        if (typeof window === 'undefined') return 320;
+        return window.innerWidth >= 768 ? 620 : Math.min(340, window.innerWidth - 48);
+    });
+
+    useEffect(() => {
+        const update = () => {
+            setWheelSize(window.innerWidth >= 768 ? 620 : Math.min(340, window.innerWidth - 48));
+        };
+        window.addEventListener('resize', update);
+        return () => window.removeEventListener('resize', update);
+    }, []);
+
     const [isEditorModalOpen, setIsEditorModalOpen] = useState(false);
     const [isTemplateModalOpen, setIsTemplateModalOpen] = useState(false);
     const [showResult, setShowResult] = useState(false);
@@ -198,12 +211,7 @@ export default function Home({
                         items={items}
                         winningIndex={winningIndex}
                         isSpinning={isSpinning}
-                        size={typeof window !== 'undefined'
-                            ? (window.innerWidth >= 768
-                                ? 620 // PC size (확대)
-                                : Math.min(340, window.innerWidth - 48)) // Mobile size
-                            : 320
-                        }
+                        size={wheelSize}
                         onSpin={handleSpin}
                     />
                 </div>
