@@ -10464,5 +10464,21 @@
     "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "source": "generated"
+  },
+  {
+    "slug": "salary-deduction-guide",
+    "title": "연봉 실수령액 계산 방법: 4대보험·소득세 공제 후 실제 월급",
+    "description": "세전 연봉에서 국민연금·건강보험·고용보험·소득세·지방소득세를 공제하면 얼마가 남는지 단계별로 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T03:00:00+09:00",
+    "tags": [
+      "계산기",
+      "생활",
+      "금융",
+      "연봉"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "source": "generated"
   }
 ]
