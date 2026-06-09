@@ -27,6 +27,9 @@ import {
   ArrowLeftRight,
   Hash,
   Timer as TimerIcon,
+  Wallet,
+  TrendingDown,
+  Home as HomeIcon,
 } from "lucide-react";
 
 const TOOLS = [
@@ -62,9 +65,14 @@ const TOOLS = [
   { path: "/tools/timer", name: "타이머", icon: TimerIcon, desc: "카운트다운·스톱워치·뽀모도로", color: "text-cyan-400", cat: "날짜·시간" },
   { path: "/tools/d-day-counter", name: "D-Day 카운터", icon: CalendarDays, desc: "기념일/목표일 계산", color: "text-pink-300", cat: "날짜·시간" },
   { path: "/tools/unix-timestamp", name: "Unix 타임스탬프", icon: Hash, desc: "날짜 ↔ 타임스탬프", color: "text-gray-300", cat: "날짜·시간" },
+
+  // 생활 금융
+  { path: "/tools/hourly-wage", name: "시급 계산기", icon: Wallet, desc: "일급·월급·연봉 자동 환산", color: "text-yellow-400", cat: "생활 금융" },
+  { path: "/tools/loan-calculator", name: "대출 계산기", icon: TrendingDown, desc: "월 상환금·총 이자 계산", color: "text-red-400", cat: "생활 금융" },
+  { path: "/tools/jeonse-converter", name: "전월세 전환기", icon: HomeIcon, desc: "전세↔월세 보증금 환산", color: "text-amber-400", cat: "생활 금융" },
 ];
 
-const CATS = ["전체", "랜덤", "텍스트·개발", "계산기", "날짜·시간"] as const;
+const CATS = ["전체", "랜덤", "텍스트·개발", "계산기", "날짜·시간", "생활 금융"] as const;
 
 interface MoreToolsProps {
   showSearch?: boolean;

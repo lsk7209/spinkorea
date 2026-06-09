@@ -49,6 +49,9 @@ const TimeCalculator = lazy(() => import("@/pages/tools/TimeCalculator"));
 const UnitConverter = lazy(() => import("@/pages/tools/UnitConverter"));
 const UnixTimestamp = lazy(() => import("@/pages/tools/UnixTimestamp"));
 const Timer = lazy(() => import("@/pages/tools/Timer"));
+const HourlyWageCalculator = lazy(() => import("@/pages/tools/HourlyWageCalculator"));
+const LoanCalculator = lazy(() => import("@/pages/tools/LoanCalculator"));
+const JeonseConverter = lazy(() => import("@/pages/tools/JeonseConverter"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -111,6 +114,9 @@ function App() {
           <Route path="/tools/unit-converter" element={<UnitConverter />} />
           <Route path="/tools/unix-timestamp" element={<UnixTimestamp />} />
           <Route path="/tools/timer" element={<Timer />} />
+          <Route path="/tools/hourly-wage" element={<HourlyWageCalculator />} />
+          <Route path="/tools/loan-calculator" element={<LoanCalculator />} />
+          <Route path="/tools/jeonse-converter" element={<JeonseConverter />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
