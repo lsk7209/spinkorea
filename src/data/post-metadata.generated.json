@@ -10480,5 +10480,22 @@
     "thumbnail": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "source": "generated"
+  },
+  {
+    "slug": "annual-leave-calculation-guide",
+    "title": "연차 계산법: 발생 기준·잔여 연차·연차수당 정리",
+    "description": "근로기준법 기준 연차 발생 방법, 1년 미만 월 1일 원칙, 미사용 연차수당 계산까지 실무 기준으로 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T04:00:00+09:00",
+    "tags": [
+      "계산기",
+      "생활",
+      "금융",
+      "연차",
+      "노동법"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "source": "generated"
   }
 ]
