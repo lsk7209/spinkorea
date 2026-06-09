@@ -9,6 +9,13 @@
     <atom:link href="https://www.spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>복리 계산 방법: 예금·적금 만기금액과 이자 수익 계산하기</title>
+      <link>https://www.spinkorea.kr/blog/compound-interest-calculation-guide</link>
+      <description>연복리·월복리 차이, 만기금액 공식, 매월 추가 납입 반영까지 복리 계산의 핵심을 정리했습니다.</description>
+      <pubDate>Mon, 09 Jun 2026 05:00:00 +0900</pubDate>
+      <guid>https://www.spinkorea.kr/blog/compound-interest-calculation-guide</guid>
+    </item>
+    <item>
       <title>연차 계산법: 발생 기준·잔여 연차·연차수당 정리</title>
       <link>https://www.spinkorea.kr/blog/annual-leave-calculation-guide</link>
       <description>근로기준법 기준 연차 발생 방법, 1년 미만 월 1일 원칙, 미사용 연차수당 계산까지 실무 기준으로 정리했습니다.</description>

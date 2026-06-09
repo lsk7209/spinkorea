@@ -10497,5 +10497,22 @@
     "thumbnail": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "source": "generated"
+  },
+  {
+    "slug": "compound-interest-calculation-guide",
+    "title": "복리 계산 방법: 예금·적금 만기금액과 이자 수익 계산하기",
+    "description": "연복리·월복리 차이, 만기금액 공식, 매월 추가 납입 반영까지 복리 계산의 핵심을 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T05:00:00+09:00",
+    "tags": [
+      "계산기",
+      "생활",
+      "금융",
+      "복리",
+      "예금"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "source": "generated"
   }
 ]
