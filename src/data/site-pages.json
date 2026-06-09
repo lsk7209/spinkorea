@@ -398,5 +398,15 @@
     "changefreq": "monthly",
     "priority": 0.8,
     "lastmod": "2026-06-09"
+  },
+  {
+    "path": "/tools/severance-pay",
+    "title": "퇴직금 계산기 | 법정 퇴직금 자동 계산",
+    "description": "입사일, 퇴사일, 평균임금을 입력하면 법정 퇴직금을 자동 계산합니다. 연차별 누적 퇴직금도 확인 가능합니다.",
+    "heading": "퇴직금 계산기",
+    "summary": "근속기간과 평균임금으로 법정 퇴직금을 계산합니다.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-09"
   }
 ]

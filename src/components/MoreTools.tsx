@@ -31,6 +31,7 @@ import {
   TrendingDown,
   Home as HomeIcon,
   TrendingUp,
+  Briefcase,
 } from "lucide-react";
 
 const TOOLS = [
@@ -72,6 +73,7 @@ const TOOLS = [
   { path: "/tools/loan-calculator", name: "대출 계산기", icon: TrendingDown, desc: "월 상환금·총 이자 계산", color: "text-red-400", cat: "생활 금융" },
   { path: "/tools/jeonse-converter", name: "전월세 전환기", icon: HomeIcon, desc: "전세↔월세 보증금 환산", color: "text-amber-400", cat: "생활 금융" },
   { path: "/tools/compound-interest", name: "복리 계산기", icon: TrendingUp, desc: "예금·적금 만기금액 계산", color: "text-green-400", cat: "생활 금융" },
+  { path: "/tools/severance-pay", name: "퇴직금 계산기", icon: Briefcase, desc: "법정 퇴직금 자동 계산", color: "text-blue-400", cat: "생활 금융" },
 ];
 
 const CATS = ["전체", "랜덤", "텍스트·개발", "계산기", "날짜·시간", "생활 금융"] as const;
