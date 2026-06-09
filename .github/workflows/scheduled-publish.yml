@@ -3,7 +3,9 @@ name: Scheduled publish
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */5 * * *"
+    # 하루 1회(UTC 0시 = KST 9시). 빌드 비용 절감: 기존 5시간마다 풀빌드 →
+    # 하루 1빌드로 그날 publishAt 도달분(약 5편)을 일괄 노출. 글별 publishAt(5h 간격)은 유지.
+    - cron: "0 0 * * *"
 
 jobs:
   publish-window:
@@ -22,23 +24,45 @@ jobs:
           node-version: 22
           cache: npm
 
-      - run: npm ci
+      # 게이트: 최근 26h 내 새로 publishAt 도달한 글이 없으면(=노출할 신규 글 없음) 빌드/배포 스킵.
+      # 수동 실행(workflow_dispatch)은 항상 빌드. 큐 소진 시 불필요한 풀빌드를 막아 비용 절감.
+      - name: Check publish window
+        id: gate
+        run: |
+          NEW=$(node -e "
+            const fs=require('fs');
+            const plan=JSON.parse(fs.readFileSync('src/data/content-plan.generated.json','utf8'));
+            const arr=Array.isArray(plan)?plan:(plan.articles||plan.posts||[]);
+            const now=Date.now(), W=26*3600000;
+            const n=arr.filter(a=>{const t=a.publishAt?new Date(a.publishAt).getTime():NaN; return t>now-W && t<=now;}).length;
+            console.log(n);
+          ")
+          RUN=true
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$NEW" = "0" ]; then RUN=false; fi
+          echo "run=$RUN" >> "$GITHUB_OUTPUT"
+          echo "최근 26h 신규 발행 도달: ${NEW}건 → 빌드 실행: ${RUN}"
 
-      - run: npm run content:validate
+      - if: steps.gate.outputs.run == 'true'
+        run: npm ci
 
-      - run: npm run build
+      - if: steps.gate.outputs.run == 'true'
+        run: npm run content:validate
+
+      - if: steps.gate.outputs.run == 'true'
+        run: npm run build
 
       - name: Trigger Vercel deploy hook
-        if: ${{ env.VERCEL_DEPLOY_HOOK_URL != '' }}
+        if: ${{ steps.gate.outputs.run == 'true' && env.VERCEL_DEPLOY_HOOK_URL != '' }}
         run: curl -fsS -X POST "$VERCEL_DEPLOY_HOOK_URL"
 
       - name: Wait for deployment propagation
-        if: ${{ env.VERCEL_DEPLOY_HOOK_URL != '' }}
+        if: ${{ steps.gate.outputs.run == 'true' && env.VERCEL_DEPLOY_HOOK_URL != '' }}
         run: sleep 180
 
       - name: Notify Google Search Console sitemap
-        if: ${{ env.GOOGLE_SERVICE_ACCOUNT_JSON != '' }}
+        if: ${{ steps.gate.outputs.run == 'true' && env.GOOGLE_SERVICE_ACCOUNT_JSON != '' }}
         run: npm run notify:google
 
       - name: Notify IndexNow
+        if: steps.gate.outputs.run == 'true'
         run: npm run notify:indexnow

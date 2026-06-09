@@ -1,6 +1,6 @@
 import SEO from "@/components/SEO";
-import { Mail, MessageSquare, Clock, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Clock, Github, Mail, MessageSquare } from "lucide-react";
 
 const SITE_ORIGIN = "https://www.spinkorea.kr";
 
@@ -9,166 +9,81 @@ export default function Contact() {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: "SpinFlow 문의하기",
-    description: "SpinFlow 서비스에 대한 문의, 제안, 협업 요청을 받습니다.",
+    description:
+      "SpinFlow 서비스 제안, 오류 제보, 개인정보 문의, 광고 및 제휴 문의를 받는 공식 연락 페이지입니다.",
     url: `${SITE_ORIGIN}/contact`,
   };
 
   return (
-    <div className="min-h-[100dvh] bg-neon-bg pt-20 pb-20">
+    <div className="min-h-[100dvh] bg-neon-bg px-4 py-24 text-gray-300">
       <SEO
         title="문의하기 - SpinFlow"
-        description="SpinFlow 서비스에 대한 문의, 제안, 버그 리포트, 협업 요청을 환영합니다. 이메일로 연락해 주세요."
-        keywords="문의하기, 연락처, SpinFlow연락처, 고객지원, 피드백"
+        description="SpinFlow의 오류 제보, 기능 제안, 개인정보 문의, 광고 및 제휴 문의를 위한 공식 연락 페이지입니다."
+        keywords="SpinFlow 문의, 오류 제보, 서비스 제안, 개인정보 문의, 제휴 문의"
         structuredData={structuredData}
       />
 
-      <div className="max-w-4xl mx-auto px-4">
-        {/* Header */}
-        <header className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-neon-primary/20 rounded-2xl mb-6">
+      <main className="mx-auto max-w-4xl">
+        <header className="mb-12 text-center">
+          <div className="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-neon-primary/20">
             <MessageSquare className="text-neon-primary" size={32} />
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            문의하기
-          </h1>
-          <p className="text-gray-400 max-w-xl mx-auto">
-            SpinFlow 서비스에 대한 문의, 제안, 협업 요청을 환영합니다.
-            <br />
-            아래 방법을 통해 연락해 주세요.
+          <h1 className="mb-4 text-4xl font-black text-white">문의하기</h1>
+          <p className="mx-auto max-w-2xl text-base leading-7 text-gray-400">
+            SpinFlow 도구 사용 중 발견한 오류, 콘텐츠 정정 요청, 개인정보 관련
+            문의, 광고 및 제휴 제안은 아래 연락 경로로 보내주세요.
           </p>
         </header>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Contact Methods */}
-          <div className="space-y-6">
-            <h2 className="text-xl font-bold text-white mb-4">연락 방법</h2>
-
-            {/* Email */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-neon-primary/50 transition-colors">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-neon-primary/20 rounded-xl flex items-center justify-center shrink-0">
-                  <Mail className="text-neon-primary" size={24} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-white mb-1">GitHub Issues</h3>
-                  <a
-                    href="https://github.com/lsk7209/spinkorea/issues"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-neon-primary hover:underline"
-                  >
-                    github.com/lsk7209/spinkorea
-                  </a>
-                  <p className="text-gray-500 text-sm mt-2">
-                    일반 문의, 협업 제안, 버그 리포트
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Response Time */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-neon-secondary/20 rounded-xl flex items-center justify-center shrink-0">
-                  <Clock className="text-neon-secondary" size={24} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-white mb-1">응답 시간</h3>
-                  <p className="text-gray-300">평일 기준 24~48시간 이내</p>
-                  <p className="text-gray-500 text-sm mt-2">
-                    주말 및 공휴일에는 답변이 지연될 수 있습니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Service Info */}
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-aurora-accent/20 rounded-xl flex items-center justify-center shrink-0">
-                  <MapPin className="text-aurora-accent" size={24} />
-                </div>
-                <div>
-                  <h3 className="font-bold text-white mb-1">서비스 정보</h3>
-                  <p className="text-gray-300">SpinFlow</p>
-                  <p className="text-gray-500 text-sm mt-2">
-                    대한민국에서 운영되는 온라인 서비스입니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Categories */}
-          <div>
-            <h2 className="text-xl font-bold text-white mb-4">문의 유형</h2>
-
-            <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-6">
-              <div className="pb-4 border-b border-white/10">
-                <h3 className="font-bold text-white mb-2">💡 서비스 제안</h3>
-                <p className="text-gray-400 text-sm">
-                  새로운 기능이나 도구에 대한 아이디어가 있으시면 알려주세요.
-                  여러분의 제안이 실제 서비스에 반영될 수 있습니다.
-                </p>
-              </div>
-
-              <div className="pb-4 border-b border-white/10">
-                <h3 className="font-bold text-white mb-2">🐛 버그 리포트</h3>
-                <p className="text-gray-400 text-sm">
-                  서비스 이용 중 오류를 발견하셨나요? 발생 상황과 스크린샷을
-                  함께 보내주시면 빠르게 해결해 드리겠습니다.
-                </p>
-              </div>
-
-              <div className="pb-4 border-b border-white/10">
-                <h3 className="font-bold text-white mb-2">🤝 협업 문의</h3>
-                <p className="text-gray-400 text-sm">
-                  비즈니스 협업, 제휴, 광고 문의 등을 환영합니다. 구체적인 제안
-                  내용과 함께 연락해 주세요.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-white mb-2">❓ 기타 문의</h3>
-                <p className="text-gray-400 text-sm">
-                  위에 해당하지 않는 기타 문의사항도 환영합니다. 편하게 연락해
-                  주세요.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Quick Links */}
-        <div className="mt-12 bg-gradient-to-br from-neon-primary/10 to-purple-500/10 border border-neon-primary/30 rounded-2xl p-8">
-          <h2 className="text-xl font-bold text-white mb-4 text-center">
-            빠른 도움
-          </h2>
-          <p className="text-gray-400 text-center mb-6">
-            문의하기 전에 아래 페이지에서 원하시는 답변을 찾아보세요.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/faq"
-              className="bg-white/10 text-white font-bold px-6 py-3 rounded-full hover:bg-white/20 transition-all border border-white/20 text-center"
+        <section className="grid gap-5 md:grid-cols-2">
+          <article className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <Github className="mb-4 text-neon-primary" />
+            <h2 className="mb-2 text-lg font-bold text-white">GitHub Issues</h2>
+            <a
+              href="https://github.com/lsk7209/spinkorea/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="break-all text-sm font-semibold text-neon-primary hover:underline"
             >
-              자주 묻는 질문
-            </Link>
-            <Link
-              to="/privacy"
-              className="bg-white/10 text-white font-bold px-6 py-3 rounded-full hover:bg-white/20 transition-all border border-white/20 text-center"
-            >
-              개인정보처리방침
-            </Link>
-            <Link
-              to="/terms"
-              className="bg-white/10 text-white font-bold px-6 py-3 rounded-full hover:bg-white/20 transition-all border border-white/20 text-center"
-            >
-              이용약관
-            </Link>
-          </div>
-        </div>
-      </div>
+              github.com/lsk7209/spinkorea/issues
+            </a>
+            <p className="mt-4 text-sm leading-6 text-gray-400">
+              기능 오류, 오타, 계산 결과 이상, 개선 제안은 가능한 한 관련 URL과
+              재현 방법을 함께 남겨주세요.
+            </p>
+          </article>
+
+          <article className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <Mail className="mb-4 text-neon-secondary" />
+            <h2 className="mb-2 text-lg font-bold text-white">운영 문의</h2>
+            <p className="text-sm leading-6 text-gray-400">
+              개인정보 처리, 광고 노출, 제휴 문의처럼 공개 이슈에 적기 어려운
+              내용은 사이트 운영자가 확인할 수 있는 연락 채널을 통해 검토합니다.
+              문의에는 관련 페이지 주소와 요청 목적을 포함해 주세요.
+            </p>
+          </article>
+
+          <article className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <Clock className="mb-4 text-aurora-accent" />
+            <h2 className="mb-2 text-lg font-bold text-white">응답 기준</h2>
+            <p className="text-sm leading-6 text-gray-400">
+              일반 문의는 평일 기준으로 순차 검토합니다. 서비스 장애, 명백한
+              개인정보 문제, 잘못된 광고 표시 등 이용자 보호와 관련된 문의는
+              우선 확인합니다.
+            </p>
+          </article>
+
+          <article className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <MessageSquare className="mb-4 text-white" />
+            <h2 className="mb-2 text-lg font-bold text-white">문의 전 확인</h2>
+            <p className="text-sm leading-6 text-gray-400">
+              개인정보 처리 방식은 <Link to="/privacy" className="text-neon-primary hover:underline">개인정보처리방침</Link>,
+              서비스 이용 조건은 <Link to="/terms" className="text-neon-primary hover:underline">이용약관</Link>에
+              정리되어 있습니다.
+            </p>
+          </article>
+        </section>
+      </main>
     </div>
   );
 }

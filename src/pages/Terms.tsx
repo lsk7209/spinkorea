@@ -1,38 +1,66 @@
-import SEO from '@/components/SEO';
+import SEO from "@/components/SEO";
+import { Link } from "react-router-dom";
 
 export default function Terms() {
-    return (
-        <div className="min-h-screen bg-neon-bg text-gray-300 px-4 py-12">
-            <SEO
-                title="이용약관 - SpinFlow"
-                description="SpinFlow 서비스 이용약관입니다. 서비스 이용에 관한 제반 사항을 확인하세요."
-                keywords="이용약관, 서비스이용약관, SpinFlow규정"
-            />
-            <div className="max-w-3xl mx-auto prose prose-invert">
-                <h1 className="text-3xl font-bold text-white mb-8">이용약관</h1>
+  return (
+    <div className="min-h-screen bg-neon-bg px-4 py-24 text-gray-300">
+      <SEO
+        title="이용약관 - SpinFlow"
+        description="SpinFlow 서비스 이용 조건, 도구 결과의 한계, 광고 및 제휴 고지, 책임 제한과 문의 방법을 안내합니다."
+        keywords="SpinFlow 이용약관, 서비스 이용 조건, 광고 고지, 책임 제한"
+      />
+      <main className="prose prose-invert mx-auto max-w-3xl">
+        <h1>이용약관</h1>
+        <p>최종 업데이트: 2026년 6월 8일</p>
 
-                <h2 className="text-xl font-semibold text-white mt-8 mb-4">제1조 (목적)</h2>
-                <p>
-                    본 약관은 SpinFlow(이하 "서비스")가 제공하는 모든 서비스의 이용조건 및 절차, 이용자와 서비스의 권리, 의무, 책임사항과 기타 필요한 사항을 규정함을 목적으로 합니다.
-                </p>
+        <h2>1. 목적</h2>
+        <p>
+          본 약관은 SpinFlow가 제공하는 랜덤 결정 도구, 계산기, 텍스트 도구,
+          블로그 콘텐츠 등 웹 서비스의 이용 조건과 운영 기준을 안내합니다.
+        </p>
 
-                <h2 className="text-xl font-semibold text-white mt-8 mb-4">제2조 (서비스의 제공)</h2>
-                <p>
-                    1. 서비스는 연중무휴, 1일 24시간 제공함을 원칙으로 합니다.<br />
-                    2. 서비스는 시스템 정기점검, 증설 및 교체 등 운영상 필요하다고 판단되는 경우 일정기간 동안 서비스를 일시 중지할 수 있습니다.
-                </p>
+        <h2>2. 서비스 성격</h2>
+        <p>
+          SpinFlow의 룰렛, 주사위, 추첨, 예/아니오 도구 등은 사용자의 선택을
+          돕기 위한 참고용 기능입니다. 결과는 무작위 또는 입력값 기반으로
+          생성되며 법적, 의학적, 금융적, 전문적 판단을 대신하지 않습니다.
+        </p>
 
-                <h2 className="text-xl font-semibold text-white mt-8 mb-4">제3조 (책임의 한계)</h2>
-                <p>
-                    1. 본 서비스가 제공하는 룰렛 결과는 무작위로 생성되며, 법적 효력이 없습니다.<br />
-                    2. 서비스는 이용자가 서비스를 이용하여 기대하는 수익을 상실한 것에 대하여 책임을 지지 않으며, 그 밖의 서비스를 통하여 얻은 자료로 인한 손해에 관하여 책임을 지지 않습니다.
-                </p>
+        <h2>3. 이용자의 책임</h2>
+        <ul>
+          <li>도구 결과를 최종 의사결정의 유일한 근거로 사용하지 않아야 합니다.</li>
+          <li>타인의 권리, 개인정보, 저작권을 침해하는 방식으로 서비스를 사용할 수 없습니다.</li>
+          <li>자동화된 과도한 요청, 보안 우회, 서비스 장애를 유발하는 행위는 제한됩니다.</li>
+        </ul>
 
-                <h2 className="text-xl font-semibold text-white mt-8 mb-4">제4조 (약관의 개정)</h2>
-                <p>
-                    서비스는 관련 법령에 위배되지 않는 범위에서 본 약관을 개정할 수 있습니다.
-                </p>
-            </div>
-        </div>
-    );
+        <h2>4. 광고 및 제휴</h2>
+        <p>
+          일부 페이지에는 Google AdSense 등 광고가 표시될 수 있습니다. 광고 또는
+          제휴 링크가 포함되어도 콘텐츠와 도구의 기본 목적은 이용자에게 실용적인
+          정보와 기능을 제공하는 것입니다.
+        </p>
+
+        <h2>5. 콘텐츠와 오류 정정</h2>
+        <p>
+          사이트의 정보는 정확성을 높이기 위해 관리하지만, 업데이트 시점이나
+          외부 서비스 변경에 따라 일부 내용이 달라질 수 있습니다. 오류를 발견하면
+          <Link to="/contact">문의하기</Link> 페이지를 통해 정정 요청을 보내주세요.
+        </p>
+
+        <h2>6. 책임 제한</h2>
+        <p>
+          SpinFlow는 무료 정보 및 도구 제공 서비스입니다. 서비스 이용으로 인한
+          개별 결정과 그 결과는 이용자 본인의 판단과 책임에 따릅니다. 고의 또는
+          중대한 과실이 없는 한 간접 손해, 기대 이익 상실, 외부 서비스 장애로 인한
+          손해에 대해 책임을 지지 않습니다.
+        </p>
+
+        <h2>7. 약관 변경</h2>
+        <p>
+          서비스 구조, 관련 법령, 광고 및 분석 도구 변경에 따라 본 약관은 수정될
+          수 있습니다. 변경된 약관은 사이트에 게시된 시점부터 적용됩니다.
+        </p>
+      </main>
+    </div>
+  );
 }
