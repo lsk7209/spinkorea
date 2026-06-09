@@ -52,6 +52,51 @@ async function loadPostContent(meta: BlogPostMeta): Promise<BlogPost | undefined
   return CURATED_BLOG_POSTS.find((post) => post.slug === meta.slug);
 }
 
+const TOOL_LINKS: { match: string[]; label: string; path: string }[] = [
+  { match: ["시급", "월급", "연봉", "임금", "급여"], label: "시급 계산기", path: "/tools/hourly-wage" },
+  { match: ["대출", "이자", "상환", "금리"], label: "대출 계산기", path: "/tools/loan-calculator" },
+  { match: ["전세", "월세", "보증금", "임대"], label: "전월세 전환 계산기", path: "/tools/jeonse-converter" },
+  { match: ["퍼센트", "할인", "증감", "수익률"], label: "퍼센트 계산기", path: "/tools/percentage-calculator" },
+  { match: ["BMI", "체질량", "체중", "비만"], label: "BMI 계산기", path: "/tools/bmi-calculator" },
+  { match: ["점심", "메뉴", "식사", "음식"], label: "점심 메뉴 룰렛", path: "/lunch-menu" },
+  { match: ["타이머", "시간", "뽀모도로", "집중"], label: "타이머", path: "/tools/timer" },
+  { match: ["D-Day", "기념일", "날짜", "목표"], label: "D-Day 카운터", path: "/tools/d-day-counter" },
+  { match: ["비밀번호", "보안", "암호"], label: "비밀번호 생성기", path: "/tools/random-password" },
+  { match: ["QR", "링크", "공유"], label: "QR 코드 생성기", path: "/tools/qr-code-generator" },
+  { match: ["글자수", "자소서", "텍스트"], label: "글자수 세기", path: "/tools/text-counter" },
+];
+
+function PostCTA({ tags }: { tags: string[] }) {
+  const tagStr = tags.join(" ");
+  const matched = TOOL_LINKS.filter(t => t.match.some(kw => tagStr.includes(kw)));
+  const primary = matched[0] ?? { label: "무료 룰렛 돌리기", path: "/" };
+  const secondary = matched[1] ?? { label: "유틸리티 모음", path: "/tools" };
+  return (
+    <section className="mt-20 px-4">
+      <div className="max-w-2xl mx-auto bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm">
+        <h2 className="text-2xl font-bold text-slate-950 mb-4">관련 도구로 바로 확인해 보세요</h2>
+        <p className="text-slate-600 mb-8">
+          글에서 정리한 기준을 실제 선택, 계산, 기록 도구에 바로 적용할 수 있습니다.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            to={primary.path}
+            className="bg-cyan-700 text-white font-bold px-8 py-3 rounded-full hover:bg-cyan-800 transition-all"
+          >
+            {primary.label}
+          </Link>
+          <Link
+            to={secondary.path}
+            className="bg-slate-100 text-slate-950 font-bold px-8 py-3 rounded-full hover:bg-slate-200 transition-all border border-slate-200"
+          >
+            {secondary.label}
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function BlogPost() {
   const { slug } = useParams();
   const post = findPublishedPostMetadata(slug);
@@ -334,32 +379,7 @@ export default function BlogPost() {
           </div>
         </article>
 
-        <section className="mt-20 px-4">
-          <div className="max-w-2xl mx-auto bg-white border border-slate-200 rounded-2xl p-8 text-center shadow-sm">
-            <h2 className="text-2xl font-bold text-slate-950 mb-4">
-              관련 도구로 바로 확인해 보세요
-            </h2>
-            <p className="text-slate-600 mb-8">
-              글에서 정리한 기준을 실제 선택, 계산, 기록 도구에 바로 적용할 수 있습니다.
-              <br />
-              필요한 상황에 맞는 도구를 열어 결과를 확인해 보세요.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/"
-                className="bg-cyan-700 text-white font-bold px-8 py-3 rounded-full hover:bg-cyan-800 transition-all"
-              >
-                무료 룰렛 돌리기
-              </Link>
-              <Link
-                to="/lunch-menu"
-                className="bg-slate-100 text-slate-950 font-bold px-8 py-3 rounded-full hover:bg-slate-200 transition-all border border-slate-200"
-              >
-                점심 메뉴 추천받기
-              </Link>
-            </div>
-          </div>
-        </section>
+        <PostCTA tags={post.tags} />
       </main>
     </div>
   );

@@ -5,9 +5,9 @@ export default function ToolsIndex() {
     return (
         <div className="min-h-[100dvh] bg-aurora-bg pt-20 pb-20">
             <SEO
-                title="유틸리티 모음 - SpinFlow | 로또, 주사위, 글자수 세기 등"
-                description="다양한 무료 웹 유틸리티를 만나보세요. 로또 번호 생성, 주사위, 코인 던지기, 글자수 세기, JSON 포맷터 등 편리한 도구 모음."
-                keywords="웹도구, 유틸리티, 온라인툴, 개발자도구, 랜덤생성기, 계산기, 변환기"
+                title="무료 유틸리티 모음 28종 | SpinFlow — 계산기·변환·랜덤 도구"
+                description="시급·대출·전월세 계산기, 로또, QR 코드, 글자수, JSON 포맷터 등 28가지 무료 웹 도구를 한 곳에서 사용하세요. 설치 없이 바로 이용 가능."
+                keywords="무료웹도구, 시급계산기, 대출계산기, 전월세계산기, 로또번호생성, QR코드생성, 글자수세기, 유틸리티모음"
             />
 
             <div className="max-w-7xl mx-auto px-4 mb-8 text-center">
