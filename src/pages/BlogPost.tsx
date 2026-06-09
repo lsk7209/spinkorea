@@ -64,6 +64,7 @@ const TOOL_LINKS: { match: string[]; label: string; path: string }[] = [
   { match: ["BMI", "체질량", "체중", "비만"], label: "BMI 계산기", path: "/tools/bmi-calculator" },
   { match: ["칼로리", "기초대사량", "BMR", "다이어트", "식단"], label: "칼로리 계산기", path: "/tools/calorie-calculator" },
   { match: ["체지방", "체성분", "제지방", "체지방률"], label: "체지방률 계산기", path: "/tools/body-fat" },
+  { match: ["수면", "기상", "취침", "수면사이클", "잠"], label: "수면 계산기", path: "/tools/sleep-calculator" },
   { match: ["점심", "메뉴", "식사", "음식"], label: "점심 메뉴 룰렛", path: "/lunch-menu" },
   { match: ["타이머", "시간", "뽀모도로", "집중"], label: "타이머", path: "/tools/timer" },
   { match: ["D-Day", "기념일", "날짜", "목표"], label: "D-Day 카운터", path: "/tools/d-day-counter" },

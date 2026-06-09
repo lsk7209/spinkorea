@@ -1242,5 +1242,152 @@
     "duplicateStatus": "pass",
     "cannibalizationStatus": "pass",
     "body": "<h2>기초대사량(BMR)이란</h2><p>아무것도 하지 않고 24시간 누워만 있어도 심장 박동, 체온 유지, 장기 기능을 위해 소비되는 최소 칼로리입니다. 전체 에너지 소비의 60~70%를 차지합니다.</p><h2>BMR 계산 공식 (Mifflin-St Jeor)</h2><ul><li>남성: BMR = 10×체중(kg) + 6.25×키(cm) - 5×나이 + 5</li><li>여성: BMR = 10×체중(kg) + 6.25×키(cm) - 5×나이 - 161</li><li>예: 남성 30세, 70kg, 175cm → BMR ≈ 1736 kcal</li></ul><h2>TDEE: 일일 총 소비 칼로리</h2><p>BMR × 활동 계수 = TDEE(Total Daily Energy Expenditure). 활동 계수는 ①거의 안 움직임 1.2 ②가벼운 운동 1.375 ③보통 운동 1.55 ④활발한 운동 1.725 ⑤매우 활발 1.9 순서입니다.</p><h2>목표별 칼로리 설정</h2><ul><li>체중 감량: TDEE - 300~500 kcal (주 0.3~0.5kg 감량)</li><li>체중 유지: TDEE와 동일</li><li>근육 증가: TDEE + 200~300 kcal</li><li>급격한 감량(-1000kcal 이상)은 근육 손실과 영양 부족 위험</li></ul><h2>실천 포인트</h2><p>칼로리 숫자보다 단백질 섭취(체중 1kg당 1.2~1.6g)와 식이섬유, 수면의 질이 체성분 변화에 더 큰 영향을 미칩니다. 칼로리는 방향을 잡는 나침반으로 활용하세요.</p><p>내 기초대사량과 목표별 칼로리를 바로 계산하려면 <a href=\"/tools/calorie-calculator\">칼로리 계산기</a>에서 성별·나이·키·몸무게와 활동 수준을 입력하세요.</p>"
+  },
+  {
+    "id": "generated-11-a-30",
+    "status": "published",
+    "slug": "severance-pay-guide",
+    "title": "퇴직금 계산 방법: 평균임금 산정과 법정 퇴직금 완전 정리",
+    "description": "퇴직금 계산 공식, 평균임금 산정 방법, 상여금·연차수당 포함 기준을 근로기준법 기준으로 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T07:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "퇴직금 계산 방법",
+    "expandedKeywords": [
+      "평균임금 산정",
+      "퇴직금 공식",
+      "법정 퇴직금",
+      "1년 미만 퇴직금"
+    ],
+    "readerProblem": "퇴직금이 얼마인지 정확히 모르는 문제",
+    "practicalExample": "퇴사 전 퇴직금을 미리 계산할 때",
+    "primarySourceName": "고용노동부",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "퇴직금 계산기",
+        "path": "/tools/severance-pay"
+      },
+      {
+        "label": "연차 계산기",
+        "path": "/tools/annual-leave"
+      },
+      {
+        "label": "연봉 실수령액 계산기",
+        "path": "/tools/net-salary"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "금융",
+      "퇴직금",
+      "노동법"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass",
+    "body": "<h2>퇴직금 지급 요건</h2><p>근로기준법상 1년 이상 계속 근무하고 주 15시간 이상 근무한 근로자에게 지급됩니다. 계약직·아르바이트도 요건 충족 시 동일하게 적용됩니다.</p><h2>퇴직금 계산 공식</h2><ul><li>평균임금 = 퇴직 전 3개월 총 지급액 ÷ 3개월 일수(91일)</li><li>상여금은 3개월 환산액(연간 상여금 ÷ 4)을 포함</li><li>퇴직금 = 1일 평균임금 × 30일 × (총 근무일수 ÷ 365)</li><li>예: 월급 300만원, 근속 3년 → 약 900만원</li></ul><h2>평균임금 포함 항목</h2><ul><li>포함: 기본급, 각종 수당(식대 포함 시), 상여금, 연차수당</li><li>제외: 복리후생비(경조금, 피복비 등), 실비변상적 항목</li></ul><h2>퇴직금과 퇴직연금(IRP)</h2><p>2012년부터 퇴직연금(DC·DB형)이 의무화됐습니다. DC형은 운용 성과에 따라 퇴직금이 달라질 수 있습니다. IRP 계좌로 수령 시 세금 혜택이 있으니 퇴직 전 반드시 확인하세요.</p><p>퇴직 예정 일자와 평균임금으로 정확한 퇴직금을 계산하려면 <a href=\"/tools/severance-pay\">퇴직금 계산기</a>를 이용하세요.</p>"
+  },
+  {
+    "id": "generated-11-a-31",
+    "status": "published",
+    "slug": "jeonse-monthly-guide",
+    "title": "전월세 전환 계산: 전세→월세, 월세→전세 환산 방법",
+    "description": "전세 보증금을 월세로, 월세를 전세 보증금으로 환산하는 공식과 전월세 전환율 적용 방법을 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T08:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "How-to",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "전월세 전환 계산",
+    "expandedKeywords": [
+      "전세 월세 환산",
+      "전월세 전환율",
+      "보증금 계산",
+      "전세 대출"
+    ],
+    "readerProblem": "전세와 월세 중 어느 게 유리한지 비교 못 하는 문제",
+    "practicalExample": "이사할 때 전세와 월세를 비교할 때",
+    "primarySourceName": "한국부동산원",
+    "primarySourceUrl": "https://www.reb.or.kr/",
+    "internalLinks": [
+      {
+        "label": "전월세 전환 계산기",
+        "path": "/tools/jeonse-converter"
+      },
+      {
+        "label": "대출 계산기",
+        "path": "/tools/loan-calculator"
+      },
+      {
+        "label": "복리 계산기",
+        "path": "/tools/compound-interest"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "금융",
+      "부동산",
+      "전월세"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass",
+    "body": "<h2>전월세 전환율이란</h2><p>전세 보증금을 월세로 바꿀 때 적용하는 연간 이율입니다. 법정 상한은 한국은행 기준금리 + 2%p이며, 실거래에서는 4~6% 수준이 많습니다.</p><h2>전세 → 월세 계산 공식</h2><ul><li>월세 = (전세금 - 월세 보증금) × 전환율 ÷ 12</li><li>예: 전세 3억, 보증금 5천만원, 전환율 5% → 월세 ≈ 104만원</li></ul><h2>월세 → 전세 환산 공식</h2><ul><li>전세 = 월세 보증금 + (월세 × 12 ÷ 전환율)</li><li>예: 보증금 5천만원, 월세 70만원, 전환율 5% → 전세 ≈ 2억 1800만원</li></ul><h2>어느 쪽이 유리할까?</h2><p>전세자금대출 금리가 전월세 전환율보다 낮으면 전세가 유리합니다. 반대로 대출 부담이 크거나 목돈이 없다면 월세가 현실적입니다. 전환율 4~5% 기준으로 대출 금리와 비교해보세요.</p><p>보증금과 월세를 자동으로 환산하려면 <a href=\"/tools/jeonse-converter\">전월세 전환 계산기</a>를 이용하세요.</p>"
+  },
+  {
+    "id": "generated-11-a-32",
+    "status": "published",
+    "slug": "loan-repayment-guide",
+    "title": "대출 상환 방법 비교: 원리금균등 vs 원금균등 차이",
+    "description": "원리금균등상환과 원금균등상환의 차이, 총 이자 부담 비교, 어떤 방식이 유리한지 기준을 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T09:00:00+09:00",
+    "category": "계산기·생활 유틸",
+    "contentType": "Comparison",
+    "searchIntent": "정보 탐색",
+    "mainKeyword": "원리금균등 원금균등 차이",
+    "expandedKeywords": [
+      "대출 상환 방법",
+      "원리금균등상환",
+      "원금균등상환",
+      "이자 부담 비교"
+    ],
+    "readerProblem": "어떤 대출 상환 방식이 더 유리한지 모르는 문제",
+    "practicalExample": "주택담보대출 신청 시 상환 방식을 고를 때",
+    "primarySourceName": "금융감독원",
+    "primarySourceUrl": "https://www.fss.or.kr/",
+    "internalLinks": [
+      {
+        "label": "대출 계산기",
+        "path": "/tools/loan-calculator"
+      },
+      {
+        "label": "복리 계산기",
+        "path": "/tools/compound-interest"
+      },
+      {
+        "label": "전월세 전환 계산기",
+        "path": "/tools/jeonse-converter"
+      }
+    ],
+    "tags": [
+      "계산기",
+      "생활",
+      "금융",
+      "대출",
+      "부동산"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "duplicateStatus": "pass",
+    "cannibalizationStatus": "pass",
+    "body": "<h2>두 방식의 핵심 차이</h2><ul><li>원리금균등: 매달 동일 금액 납부. 초기에 이자 비중이 높고 후반에 원금 비중 증가</li><li>원금균등: 매달 동일 원금 + 감소하는 이자. 초기 납부액이 높지만 총 이자 부담 적음</li></ul><h2>총 이자 비교 (1억, 연 4%, 20년)</h2><ul><li>원리금균등: 월 약 60.6만원, 총 이자 약 4,540만원</li><li>원금균등: 첫 달 약 75만원, 마지막 달 약 42만원, 총 이자 약 4,025만원</li><li>원금균등이 약 515만원 적게 납부</li></ul><h2>어떤 방식을 선택할까?</h2><ul><li>원리금균등: 매달 고정 지출 예산이 필요한 경우, 초기 여유 자금이 부족한 경우</li><li>원금균등: 초기 여유 자금이 있거나 이자 총액을 줄이고 싶은 경우, 장기 대출일수록 효과적</li></ul><h2>중도 상환의 효과</h2><p>어떤 방식이든 원금을 일찍 갚으면 이자가 빠르게 줄어듭니다. 중도상환수수료를 확인하고 원금 감소 효과와 비교해 결정하세요.</p><p>두 방식의 월 납부금과 총 이자를 직접 비교하려면 <a href=\"/tools/loan-calculator\">대출 계산기</a>를 이용하세요.</p>"
   }
 ]

@@ -58,6 +58,7 @@ const AnnualLeaveCalculator = lazy(() => import("@/pages/tools/AnnualLeaveCalcul
 const NetSalaryCalculator = lazy(() => import("@/pages/tools/NetSalaryCalculator"));
 const CalorieCalculator = lazy(() => import("@/pages/tools/CalorieCalculator"));
 const BodyFatCalculator = lazy(() => import("@/pages/tools/BodyFatCalculator"));
+const SleepCalculator = lazy(() => import("@/pages/tools/SleepCalculator"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -129,6 +130,7 @@ function App() {
           <Route path="/tools/net-salary" element={<NetSalaryCalculator />} />
           <Route path="/tools/calorie-calculator" element={<CalorieCalculator />} />
           <Route path="/tools/body-fat" element={<BodyFatCalculator />} />
+          <Route path="/tools/sleep-calculator" element={<SleepCalculator />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />

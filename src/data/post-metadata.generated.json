@@ -10530,5 +10530,56 @@
     "thumbnail": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 90,
     "source": "generated"
+  },
+  {
+    "slug": "severance-pay-guide",
+    "title": "퇴직금 계산 방법: 평균임금 산정과 법정 퇴직금 완전 정리",
+    "description": "퇴직금 계산 공식, 평균임금 산정 방법, 상여금·연차수당 포함 기준을 근로기준법 기준으로 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T07:00:00+09:00",
+    "tags": [
+      "계산기",
+      "생활",
+      "금융",
+      "퇴직금",
+      "노동법"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "source": "generated"
+  },
+  {
+    "slug": "jeonse-monthly-guide",
+    "title": "전월세 전환 계산: 전세→월세, 월세→전세 환산 방법",
+    "description": "전세 보증금을 월세로, 월세를 전세 보증금으로 환산하는 공식과 전월세 전환율 적용 방법을 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T08:00:00+09:00",
+    "tags": [
+      "계산기",
+      "생활",
+      "금융",
+      "부동산",
+      "전월세"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "source": "generated"
+  },
+  {
+    "slug": "loan-repayment-guide",
+    "title": "대출 상환 방법 비교: 원리금균등 vs 원금균등 차이",
+    "description": "원리금균등상환과 원금균등상환의 차이, 총 이자 부담 비교, 어떤 방식이 유리한지 기준을 정리했습니다.",
+    "date": "2026-06-09",
+    "publishAt": "2026-06-09T09:00:00+09:00",
+    "tags": [
+      "계산기",
+      "생활",
+      "금융",
+      "대출",
+      "부동산"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "source": "generated"
   }
 ]

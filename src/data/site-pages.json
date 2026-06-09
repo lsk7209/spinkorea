@@ -420,6 +420,16 @@
     "lastmod": "2026-06-09"
   },
   {
+    "path": "/tools/sleep-calculator",
+    "title": "수면 계산기 | 90분 사이클 최적 기상·취침 시각",
+    "description": "취침 시각 또는 기상 시각을 입력하면 90분 수면 사이클 기준으로 최적 기상·취침 시각을 자동 계산합니다.",
+    "heading": "수면 계산기",
+    "summary": "90분 수면 사이클 기준 최적 기상·취침 시각을 계산합니다.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-09"
+  },
+  {
     "path": "/tools/body-fat",
     "title": "체지방률 계산기 | Navy Method 체성분 분석",
     "description": "허리·목·엉덩이 둘레와 키를 입력하면 U.S. Navy Method로 체지방률과 체지방 질량을 계산합니다.",
