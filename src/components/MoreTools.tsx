@@ -42,6 +42,8 @@ import {
   Maximize2,
   CalendarRange,
   PieChart,
+  Tag,
+  Dumbbell,
 } from "lucide-react";
 
 const TOOLS = [
@@ -73,12 +75,14 @@ const TOOLS = [
   { path: "/tools/unit-converter", name: "단위 변환기", icon: ArrowLeftRight, desc: "길이/무게/온도 변환", color: "text-green-300", cat: "계산기" },
   { path: "/tools/area-converter", name: "평수 계산기", icon: Maximize2, desc: "평↔m²↔ft² 면적 변환", color: "text-amber-300", cat: "계산기" },
   { path: "/tools/margin-calculator", name: "마진율 계산기", icon: PieChart, desc: "원가·판매가·마진율 계산", color: "text-emerald-400", cat: "계산기" },
+  { path: "/tools/discount-calculator", name: "할인율 계산기", icon: Tag, desc: "정가·할인율·할인가 계산", color: "text-pink-400", cat: "계산기" },
 
   // 건강·피트니스
   { path: "/tools/bmi-calculator", name: "BMI 계산기", icon: Activity, desc: "체질량 지수 측정", color: "text-lime-300", cat: "건강·피트니스" },
   { path: "/tools/calorie-calculator", name: "칼로리 계산기", icon: Flame, desc: "BMR·일일 권장 칼로리", color: "text-orange-400", cat: "건강·피트니스" },
   { path: "/tools/body-fat", name: "체지방률 계산기", icon: Scale, desc: "Navy Method 체성분 분석", color: "text-purple-400", cat: "건강·피트니스" },
   { path: "/tools/sleep-calculator", name: "수면 계산기", icon: Moon, desc: "90분 사이클 최적 기상 시각", color: "text-indigo-400", cat: "건강·피트니스" },
+  { path: "/tools/calorie-burn", name: "칼로리 소모 계산기", icon: Dumbbell, desc: "운동별 소모 칼로리·지방 연소량", color: "text-orange-300", cat: "건강·피트니스" },
 
   // 날짜·시간
   { path: "/tools/date-calculator", name: "날짜 계산기", icon: CalendarRange, desc: "두 날짜 사이 기간 계산", color: "text-violet-400", cat: "날짜·시간" },

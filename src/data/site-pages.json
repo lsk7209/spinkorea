@@ -498,5 +498,25 @@
     "changefreq": "monthly",
     "priority": 0.8,
     "lastmod": "2026-06-10"
+  },
+  {
+    "path": "/tools/discount-calculator",
+    "title": "할인율 계산기 | 정가·할인율·할인가·절약 금액 계산",
+    "description": "정가와 할인율로 할인가를 계산하거나, 정가와 할인가로 할인율을 역산합니다. 쇼핑·세일 가격 비교에 활용하세요.",
+    "heading": "할인율 계산기",
+    "summary": "정가·할인율·할인가 3방향 계산, 절약 금액 자동 표시.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-10"
+  },
+  {
+    "path": "/tools/calorie-burn",
+    "title": "칼로리 소모 계산기 | 운동별 소모 칼로리·지방 연소량",
+    "description": "운동 종류·체중·시간으로 소모 칼로리와 지방 연소량을 MET 공식으로 계산합니다. 걷기·달리기·수영 등 14가지 활동을 지원합니다.",
+    "heading": "칼로리 소모 계산기",
+    "summary": "MET 기반 운동별 소모 칼로리와 지방 연소량 계산.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-10"
   }
 ]

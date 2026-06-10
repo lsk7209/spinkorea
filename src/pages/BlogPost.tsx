@@ -69,6 +69,8 @@ const TOOL_LINKS: { match: string[]; label: string; path: string }[] = [
   { match: ["평수", "평형", "m²", "제곱미터", "면적", "아파트"], label: "평수 계산기", path: "/tools/area-converter" },
   { match: ["마진", "원가", "판매가", "이익률", "마크업", "수익성"], label: "마진율 계산기", path: "/tools/margin-calculator" },
   { match: ["날짜 계산", "기간 계산", "일수 계산", "계약기간"], label: "날짜 계산기", path: "/tools/date-calculator" },
+  { match: ["할인율", "할인가", "세일", "정가", "할인 계산"], label: "할인율 계산기", path: "/tools/discount-calculator" },
+  { match: ["칼로리 소모", "운동 칼로리", "MET", "지방 연소", "운동 효과"], label: "칼로리 소모 계산기", path: "/tools/calorie-burn" },
   { match: ["점심", "메뉴", "식사", "음식"], label: "점심 메뉴 룰렛", path: "/lunch-menu" },
   { match: ["타이머", "시간", "뽀모도로", "집중"], label: "타이머", path: "/tools/timer" },
   { match: ["D-Day", "기념일", "날짜", "목표"], label: "D-Day 카운터", path: "/tools/d-day-counter" },

@@ -63,6 +63,8 @@ const VatCalculator = lazy(() => import("@/pages/tools/VatCalculator"));
 const AreaConverter = lazy(() => import("@/pages/tools/AreaConverter"));
 const DateCalculator = lazy(() => import("@/pages/tools/DateCalculator"));
 const MarginCalculator = lazy(() => import("@/pages/tools/MarginCalculator"));
+const DiscountCalculator = lazy(() => import("@/pages/tools/DiscountCalculator"));
+const CalorieBurnCalculator = lazy(() => import("@/pages/tools/CalorieBurnCalculator"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -139,6 +141,8 @@ function App() {
           <Route path="/tools/area-converter" element={<AreaConverter />} />
           <Route path="/tools/date-calculator" element={<DateCalculator />} />
           <Route path="/tools/margin-calculator" element={<MarginCalculator />} />
+          <Route path="/tools/discount-calculator" element={<DiscountCalculator />} />
+          <Route path="/tools/calorie-burn" element={<CalorieBurnCalculator />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
