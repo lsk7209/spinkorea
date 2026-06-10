@@ -641,5 +641,7 @@
   "base-converter-guide": "chunk-11-a.json",
   "water-intake-guide": "chunk-11-a.json",
   "fuel-economy-guide": "chunk-11-a.json",
-  "statistics-basics-guide": "chunk-11-a.json"
+  "statistics-basics-guide": "chunk-11-a.json",
+  "uuid-guide": "chunk-11-a.json",
+  "ideal-weight-guide": "chunk-11-a.json"
 }

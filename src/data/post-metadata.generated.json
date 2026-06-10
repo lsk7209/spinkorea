@@ -10739,5 +10739,39 @@
     "thumbnail": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 90,
     "source": "generated"
+  },
+  {
+    "slug": "uuid-guide",
+    "title": "UUID란? v4 생성 원리와 활용법 완벽 정리",
+    "description": "UUID의 개념, v1·v4 차이, 충돌 확률, 데이터베이스 기본 키로 사용할 때의 장단점을 실무 관점에서 정리했습니다.",
+    "date": "2026-06-10",
+    "publishAt": "2026-06-28T13:00:00+09:00",
+    "tags": [
+      "UUID",
+      "GUID",
+      "식별자",
+      "개발",
+      "데이터베이스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 88,
+    "source": "generated"
+  },
+  {
+    "slug": "ideal-weight-guide",
+    "title": "이상 체중 계산법 비교: BMI·Broca·Hamwi 공식의 차이",
+    "description": "BMI 기준, Broca 공식, Hamwi 공식으로 이상 체중을 구하는 방법과 각 공식의 한계점을 실용적으로 정리했습니다.",
+    "date": "2026-06-10",
+    "publishAt": "2026-06-30T13:00:00+09:00",
+    "tags": [
+      "이상체중",
+      "BMI",
+      "Broca",
+      "Hamwi",
+      "다이어트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 88,
+    "source": "generated"
   }
 ]

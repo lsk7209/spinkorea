@@ -83,6 +83,8 @@ const TOOL_LINKS: { match: string[]; label: string; path: string }[] = [
   { match: ["비밀번호", "보안", "암호"], label: "비밀번호 생성기", path: "/tools/random-password" },
   { match: ["QR", "링크", "공유"], label: "QR 코드 생성기", path: "/tools/qr-code-generator" },
   { match: ["글자수", "자소서", "텍스트"], label: "글자수 세기", path: "/tools/text-counter" },
+  { match: ["UUID", "GUID", "고유 식별자", "식별자 생성", "랜덤 ID"], label: "UUID 생성기", path: "/tools/uuid-generator" },
+  { match: ["이상 체중", "적정 체중", "표준 체중", "Broca", "Hamwi", "체중 계산"], label: "이상 체중 계산기", path: "/tools/ideal-weight" },
 ];
 
 function PostCTA({ tags }: { tags: string[] }) {

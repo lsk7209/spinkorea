@@ -71,6 +71,8 @@ const BaseConverter = lazy(() => import("@/pages/tools/BaseConverter"));
 const WaterIntakeCalculator = lazy(() => import("@/pages/tools/WaterIntakeCalculator"));
 const FuelEconomyCalculator = lazy(() => import("@/pages/tools/FuelEconomyCalculator"));
 const StatisticsCalculator = lazy(() => import("@/pages/tools/StatisticsCalculator"));
+const UuidGenerator = lazy(() => import("@/pages/tools/UuidGenerator"));
+const IdealWeightCalculator = lazy(() => import("@/pages/tools/IdealWeightCalculator"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -155,6 +157,8 @@ function App() {
           <Route path="/tools/water-intake" element={<WaterIntakeCalculator />} />
           <Route path="/tools/fuel-economy" element={<FuelEconomyCalculator />} />
           <Route path="/tools/statistics-calculator" element={<StatisticsCalculator />} />
+          <Route path="/tools/uuid-generator" element={<UuidGenerator />} />
+          <Route path="/tools/ideal-weight" element={<IdealWeightCalculator />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
