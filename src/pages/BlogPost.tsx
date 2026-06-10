@@ -71,6 +71,8 @@ const TOOL_LINKS: { match: string[]; label: string; path: string }[] = [
   { match: ["날짜 계산", "기간 계산", "일수 계산", "계약기간"], label: "날짜 계산기", path: "/tools/date-calculator" },
   { match: ["할인율", "할인가", "세일", "정가", "할인 계산"], label: "할인율 계산기", path: "/tools/discount-calculator" },
   { match: ["칼로리 소모", "운동 칼로리", "MET", "지방 연소", "운동 효과"], label: "칼로리 소모 계산기", path: "/tools/calorie-burn" },
+  { match: ["더치페이", "n분의 1", "분할 계산", "회식 정산", "식비 나누기"], label: "더치페이 계산기", path: "/tools/dutch-pay" },
+  { match: ["속도 계산", "거리 계산", "소요 시간", "km/h", "이동 시간"], label: "속도 계산기", path: "/tools/speed-calculator" },
   { match: ["점심", "메뉴", "식사", "음식"], label: "점심 메뉴 룰렛", path: "/lunch-menu" },
   { match: ["타이머", "시간", "뽀모도로", "집중"], label: "타이머", path: "/tools/timer" },
   { match: ["D-Day", "기념일", "날짜", "목표"], label: "D-Day 카운터", path: "/tools/d-day-counter" },

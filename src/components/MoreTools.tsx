@@ -44,6 +44,8 @@ import {
   PieChart,
   Tag,
   Dumbbell,
+  SplitSquareHorizontal,
+  Gauge,
 } from "lucide-react";
 
 const TOOLS = [
@@ -76,6 +78,7 @@ const TOOLS = [
   { path: "/tools/area-converter", name: "평수 계산기", icon: Maximize2, desc: "평↔m²↔ft² 면적 변환", color: "text-amber-300", cat: "계산기" },
   { path: "/tools/margin-calculator", name: "마진율 계산기", icon: PieChart, desc: "원가·판매가·마진율 계산", color: "text-emerald-400", cat: "계산기" },
   { path: "/tools/discount-calculator", name: "할인율 계산기", icon: Tag, desc: "정가·할인율·할인가 계산", color: "text-pink-400", cat: "계산기" },
+  { path: "/tools/speed-calculator", name: "속도 계산기", icon: Gauge, desc: "거리·시간·속도 3방향 계산", color: "text-sky-400", cat: "계산기" },
 
   // 건강·피트니스
   { path: "/tools/bmi-calculator", name: "BMI 계산기", icon: Activity, desc: "체질량 지수 측정", color: "text-lime-300", cat: "건강·피트니스" },
@@ -99,6 +102,7 @@ const TOOLS = [
   { path: "/tools/annual-leave", name: "연차 계산기", icon: CalendarCheck2, desc: "연차일수·잔여·수당 계산", color: "text-teal-400", cat: "생활 금융" },
   { path: "/tools/net-salary", name: "실수령액 계산기", icon: BadgePercent, desc: "4대보험·세금 공제 후 월급", color: "text-cyan-300", cat: "생활 금융" },
   { path: "/tools/vat-calculator", name: "부가세 계산기", icon: Receipt, desc: "공급가액·부가세·공급대가 계산", color: "text-rose-400", cat: "생활 금융" },
+  { path: "/tools/dutch-pay", name: "더치페이 계산기", icon: SplitSquareHorizontal, desc: "총 금액을 n명으로 나누기", color: "text-lime-400", cat: "생활 금융" },
 ];
 
 const CATS = ["전체", "랜덤", "텍스트·개발", "계산기", "건강·피트니스", "날짜·시간", "생활 금융"] as const;
