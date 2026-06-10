@@ -73,6 +73,8 @@ const FuelEconomyCalculator = lazy(() => import("@/pages/tools/FuelEconomyCalcul
 const StatisticsCalculator = lazy(() => import("@/pages/tools/StatisticsCalculator"));
 const UuidGenerator = lazy(() => import("@/pages/tools/UuidGenerator"));
 const IdealWeightCalculator = lazy(() => import("@/pages/tools/IdealWeightCalculator"));
+const RoiCalculator = lazy(() => import("@/pages/tools/RoiCalculator"));
+const WordFrequency = lazy(() => import("@/pages/tools/WordFrequency"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -159,6 +161,8 @@ function App() {
           <Route path="/tools/statistics-calculator" element={<StatisticsCalculator />} />
           <Route path="/tools/uuid-generator" element={<UuidGenerator />} />
           <Route path="/tools/ideal-weight" element={<IdealWeightCalculator />} />
+          <Route path="/tools/roi-calculator" element={<RoiCalculator />} />
+          <Route path="/tools/word-frequency" element={<WordFrequency />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />

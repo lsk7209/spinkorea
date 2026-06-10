@@ -52,6 +52,7 @@ import {
   BarChart2,
   Fingerprint,
   PersonStanding,
+  BarChart3,
 } from "lucide-react";
 
 const TOOLS = [
@@ -115,6 +116,10 @@ const TOOLS = [
   { path: "/tools/net-salary", name: "실수령액 계산기", icon: BadgePercent, desc: "4대보험·세금 공제 후 월급", color: "text-cyan-300", cat: "생활 금융" },
   { path: "/tools/vat-calculator", name: "부가세 계산기", icon: Receipt, desc: "공급가액·부가세·공급대가 계산", color: "text-rose-400", cat: "생활 금융" },
   { path: "/tools/dutch-pay", name: "더치페이 계산기", icon: SplitSquareHorizontal, desc: "총 금액을 n명으로 나누기", color: "text-lime-400", cat: "생활 금융" },
+  { path: "/tools/roi-calculator", name: "투자 수익률 계산기", icon: TrendingUp, desc: "ROI·CAGR·목표 금액 계산", color: "text-emerald-400", cat: "생활 금융" },
+
+  // 텍스트·개발 (추가)
+  { path: "/tools/word-frequency", name: "단어 빈도 분석기", icon: BarChart3, desc: "텍스트에서 단어 빈도 TOP N 분석", color: "text-violet-300", cat: "텍스트·개발" },
 ];
 
 const CATS = ["전체", "랜덤", "텍스트·개발", "계산기", "건강·피트니스", "날짜·시간", "생활 금융"] as const;

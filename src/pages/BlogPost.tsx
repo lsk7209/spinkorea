@@ -85,6 +85,8 @@ const TOOL_LINKS: { match: string[]; label: string; path: string }[] = [
   { match: ["글자수", "자소서", "텍스트"], label: "글자수 세기", path: "/tools/text-counter" },
   { match: ["UUID", "GUID", "고유 식별자", "식별자 생성", "랜덤 ID"], label: "UUID 생성기", path: "/tools/uuid-generator" },
   { match: ["이상 체중", "적정 체중", "표준 체중", "Broca", "Hamwi", "체중 계산"], label: "이상 체중 계산기", path: "/tools/ideal-weight" },
+  { match: ["ROI", "수익률", "CAGR", "투자 수익", "연평균 복리", "투자 성과"], label: "투자 수익률 계산기", path: "/tools/roi-calculator" },
+  { match: ["단어 빈도", "워드 카운트", "키워드 분석", "텍스트 분석", "불용어"], label: "단어 빈도 분석기", path: "/tools/word-frequency" },
 ];
 
 function PostCTA({ tags }: { tags: string[] }) {

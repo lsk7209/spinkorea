@@ -598,5 +598,25 @@
     "changefreq": "monthly",
     "priority": 0.8,
     "lastmod": "2026-06-10"
+  },
+  {
+    "path": "/tools/roi-calculator",
+    "title": "투자 수익률 계산기 | ROI·CAGR·목표 금액 계산",
+    "description": "투자 원금과 현재 가치로 ROI(수익률), CAGR(연평균 복리 수익률), 목표 달성 금액을 계산합니다.",
+    "heading": "투자 수익률 계산기",
+    "summary": "ROI·CAGR·목표 금액 세 가지 모드 투자 수익 계산.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-10"
+  },
+  {
+    "path": "/tools/word-frequency",
+    "title": "단어 빈도 분석기 | 텍스트 키워드 빈도 분석",
+    "description": "텍스트를 입력하면 단어별 빈도를 분석해 TOP N 순위를 보여줍니다. 불용어 제거와 최소 글자수 필터를 지원합니다.",
+    "heading": "단어 빈도 분석기",
+    "summary": "텍스트에서 단어 빈도 TOP N 분석, 불용어 제거 지원.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-10"
   }
 ]
