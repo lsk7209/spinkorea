@@ -558,5 +558,25 @@
     "changefreq": "monthly",
     "priority": 0.8,
     "lastmod": "2026-06-10"
+  },
+  {
+    "path": "/tools/fuel-economy",
+    "title": "연비 계산기 | 주행거리·연비·연료비 자동 계산",
+    "description": "주행거리와 주유량으로 연비(km/L)를 계산하거나, 연비와 거리로 연료비·주유량을 계산합니다. 휘발유·경유·LPG 유가 프리셋을 제공합니다.",
+    "heading": "연비 계산기",
+    "summary": "연비·연료비·주유량 3방향 계산, 유가 프리셋 지원.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-10"
+  },
+  {
+    "path": "/tools/statistics-calculator",
+    "title": "통계 계산기 | 평균·중앙값·표준편차·분산 한번에 계산",
+    "description": "숫자 목록을 입력하면 평균·중앙값·최빈값·분산·표준편차·최솟값·최댓값·범위를 한 번에 계산합니다.",
+    "heading": "통계 계산기",
+    "summary": "개수·합계·평균·중앙값·표준편차 등 10가지 통계량 동시 계산.",
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "lastmod": "2026-06-10"
   }
 ]

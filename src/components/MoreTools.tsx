@@ -48,6 +48,8 @@ import {
   Gauge,
   Code2,
   Droplets,
+  Car,
+  BarChart2,
 } from "lucide-react";
 
 const TOOLS = [
@@ -82,6 +84,8 @@ const TOOLS = [
   { path: "/tools/margin-calculator", name: "마진율 계산기", icon: PieChart, desc: "원가·판매가·마진율 계산", color: "text-emerald-400", cat: "계산기" },
   { path: "/tools/discount-calculator", name: "할인율 계산기", icon: Tag, desc: "정가·할인율·할인가 계산", color: "text-pink-400", cat: "계산기" },
   { path: "/tools/speed-calculator", name: "속도 계산기", icon: Gauge, desc: "거리·시간·속도 3방향 계산", color: "text-sky-400", cat: "계산기" },
+  { path: "/tools/fuel-economy", name: "연비 계산기", icon: Car, desc: "주행거리·연비·연료비 계산", color: "text-yellow-300", cat: "계산기" },
+  { path: "/tools/statistics-calculator", name: "통계 계산기", icon: BarChart2, desc: "평균·중앙값·표준편차 한번에", color: "text-indigo-300", cat: "계산기" },
 
   // 건강·피트니스
   { path: "/tools/bmi-calculator", name: "BMI 계산기", icon: Activity, desc: "체질량 지수 측정", color: "text-lime-300", cat: "건강·피트니스" },
