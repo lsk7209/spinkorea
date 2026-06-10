@@ -67,6 +67,8 @@ const DiscountCalculator = lazy(() => import("@/pages/tools/DiscountCalculator")
 const CalorieBurnCalculator = lazy(() => import("@/pages/tools/CalorieBurnCalculator"));
 const DutchPayCalculator = lazy(() => import("@/pages/tools/DutchPayCalculator"));
 const SpeedCalculator = lazy(() => import("@/pages/tools/SpeedCalculator"));
+const BaseConverter = lazy(() => import("@/pages/tools/BaseConverter"));
+const WaterIntakeCalculator = lazy(() => import("@/pages/tools/WaterIntakeCalculator"));
 
 const PageLoader = () => (
   <div className="min-h-[100dvh] bg-neon-bg flex items-center justify-center">
@@ -147,6 +149,8 @@ function App() {
           <Route path="/tools/calorie-burn" element={<CalorieBurnCalculator />} />
           <Route path="/tools/dutch-pay" element={<DutchPayCalculator />} />
           <Route path="/tools/speed-calculator" element={<SpeedCalculator />} />
+          <Route path="/tools/base-converter" element={<BaseConverter />} />
+          <Route path="/tools/water-intake" element={<WaterIntakeCalculator />} />
 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />

@@ -46,6 +46,8 @@ import {
   Dumbbell,
   SplitSquareHorizontal,
   Gauge,
+  Code2,
+  Droplets,
 } from "lucide-react";
 
 const TOOLS = [
@@ -69,6 +71,7 @@ const TOOLS = [
   { path: "/tools/color-converter", name: "색상 변환기", icon: Palette, desc: "HEX/RGB/HSL 변환", color: "text-fuchsia-400", cat: "텍스트·개발" },
   { path: "/tools/css-shadow-generator", name: "CSS 그림자 생성", icon: Sparkles, desc: "Box shadow 시각화", color: "text-rose-400", cat: "텍스트·개발" },
   { path: "/tools/qr-code-generator", name: "QR 코드 생성", icon: QrCode, desc: "링크를 QR로 변환", color: "text-teal-400", cat: "텍스트·개발" },
+  { path: "/tools/base-converter", name: "진법 변환기", icon: Code2, desc: "2진수·8진수·10진수·16진수 변환", color: "text-violet-400", cat: "텍스트·개발" },
 
   // 계산기
   { path: "/tools/age-calculator", name: "나이 계산기", icon: Calendar, desc: "만 나이/생일 계산", color: "text-amber-400", cat: "계산기" },
@@ -86,6 +89,7 @@ const TOOLS = [
   { path: "/tools/body-fat", name: "체지방률 계산기", icon: Scale, desc: "Navy Method 체성분 분석", color: "text-purple-400", cat: "건강·피트니스" },
   { path: "/tools/sleep-calculator", name: "수면 계산기", icon: Moon, desc: "90분 사이클 최적 기상 시각", color: "text-indigo-400", cat: "건강·피트니스" },
   { path: "/tools/calorie-burn", name: "칼로리 소모 계산기", icon: Dumbbell, desc: "운동별 소모 칼로리·지방 연소량", color: "text-orange-300", cat: "건강·피트니스" },
+  { path: "/tools/water-intake", name: "수분 섭취량 계산기", icon: Droplets, desc: "체중·활동량별 하루 권장 물 섭취량", color: "text-cyan-400", cat: "건강·피트니스" },
 
   // 날짜·시간
   { path: "/tools/date-calculator", name: "날짜 계산기", icon: CalendarRange, desc: "두 날짜 사이 기간 계산", color: "text-violet-400", cat: "날짜·시간" },
