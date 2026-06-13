@@ -2,7 +2,7 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Clock, Github, Mail, MessageSquare } from "lucide-react";
 
-const SITE_ORIGIN = "https://www.spinkorea.kr";
+const SITE_ORIGIN = "https://spinkorea.kr";
 
 export default function Contact() {
   const structuredData = {

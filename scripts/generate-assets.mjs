@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const ROOT = process.cwd();
-const SITE_ORIGIN = "https://www.spinkorea.kr";
+const SITE_ORIGIN = "https://spinkorea.kr";
 const BUILD_NOW = new Date(process.env.BUILD_NOW ?? process.env.PUBLISH_NOW ?? Date.now());
 const TODAY = formatKstDate(BUILD_NOW);
 const SITE_PAGES_PATH = path.join(ROOT, "src", "data", "site-pages.json");

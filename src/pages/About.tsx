@@ -2,7 +2,7 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Shuffle, ShieldCheck, Wallet } from "lucide-react";
 
-const SITE_ORIGIN = "https://www.spinkorea.kr";
+const SITE_ORIGIN = "https://spinkorea.kr";
 
 const principles = [
   "무료로 사용할 수 있는 생활형 결정 도구와 계산 도구를 제공합니다.",

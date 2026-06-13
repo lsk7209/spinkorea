@@ -4,80 +4,32 @@
 SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라인 룰렛, 랜덤 추첨, 계산기, 변환기, 개발자 도구를 설치 없이 제공합니다.
 
 ## 주요 페이지
-- [온라인 룰렛 돌리기](https://www.spinkorea.kr/) — SpinFlow는 결정이 필요한 순간에 룰렛, 추첨, 계산, 변환 도구를 바로 제공하는 무료 유틸리티 사이트입니다.
-- [SpinFlow 룰렛](https://www.spinkorea.kr/spinflow) — 항목을 직접 입력하거나 템플릿을 선택해 공정한 룰렛 결과를 만들 수 있습니다.
-- [점심 메뉴 추천 룰렛](https://www.spinkorea.kr/lunch-menu) — 직장인과 모임을 위한 점심 메뉴 선택 도구입니다.
-- [랜덤 숫자 뽑기](https://www.spinkorea.kr/random-number) — 추첨, 게임, 수업, 이벤트에 쓸 숫자를 공정하게 생성합니다.
-- [무료 웹 유틸리티 모음](https://www.spinkorea.kr/tools) — 랜덤 추첨, 텍스트, 개발, 디자인, 계산 도구를 한 곳에서 사용할 수 있습니다.
-- [SpinFlow 소개](https://www.spinkorea.kr/about) — 설치 없이 사용할 수 있는 결정 도구와 생활 유틸리티를 제공합니다.
-- [자주 묻는 질문](https://www.spinkorea.kr/faq) — 서비스 이용 전 확인할 수 있는 핵심 질문을 정리했습니다.
-- [문의하기](https://www.spinkorea.kr/contact) — 서비스 개선 제안과 오류 제보를 받습니다.
-- [개인정보처리방침](https://www.spinkorea.kr/privacy) — 사용자 개인정보와 브라우저 저장 데이터 처리 방침입니다.
-- [이용약관](https://www.spinkorea.kr/terms) — 서비스 이용에 필요한 기본 약관입니다.
-- [SpinFlow 블로그](https://www.spinkorea.kr/blog) — 결정과 생산성을 돕는 실용 가이드를 제공합니다.
-- [로또 번호 생성기](https://www.spinkorea.kr/tools/lotto-generator) — 버튼 한 번으로 로또 번호 조합을 생성합니다.
-- [시급 계산기](https://www.spinkorea.kr/tools/hourly-wage) — 시급을 입력하면 일급·월급·연봉을 자동 계산하고, 월급에서 시급 역산도 가능합니다.
-- [대출 계산기](https://www.spinkorea.kr/tools/loan-calculator) — 대출 원금·금리·기간을 입력하면 월 상환금과 총 이자를 원리금균등·원금균등 방식으로 계산합니다.
-- [전월세 전환 계산기](https://www.spinkorea.kr/tools/jeonse-converter) — 전세 보증금을 월세로 환산하거나 월세를 전세 보증금으로 역산합니다.
-- [복리 계산기](https://www.spinkorea.kr/tools/compound-interest) — 원금·이자율·기간·복리주기를 입력하면 만기 금액과 연도별 이자 수익을 계산합니다.
-- [퇴직금 계산기](https://www.spinkorea.kr/tools/severance-pay) — 입사일·퇴사일·평균임금을 입력하면 법정 퇴직금과 연도별 누적 금액을 계산합니다.
-- [연차 계산기](https://www.spinkorea.kr/tools/annual-leave) — 입사일과 기준일로 발생 연차, 잔여 연차, 미사용 연차수당을 근로기준법 기준으로 계산합니다.
-- [체지방률 계산기](https://www.spinkorea.kr/tools/body-fat) — Navy Method로 허리·목·엉덩이 둘레를 입력해 체지방률과 체성분을 계산합니다.
-- [칼로리 계산기](https://www.spinkorea.kr/tools/calorie-calculator) — 성별·나이·키·몸무게와 활동량으로 기초대사량(BMR)과 목표별 일일 권장 칼로리를 계산합니다.
-- [연봉 실수령액 계산기](https://www.spinkorea.kr/tools/net-salary) — 세전 연봉을 입력하면 국민연금·건강보험·고용보험·소득세·지방소득세를 공제한 실수령 월급과 연봉을 계산합니다.
-- [수면 계산기](https://www.spinkorea.kr/tools/sleep-calculator) — 취침 시각 또는 기상 시각을 입력하면 90분 수면 사이클 기준으로 최적 기상·취침 시각을 계산합니다.
-- [부가세 계산기](https://www.spinkorea.kr/tools/vat-calculator) — 공급가액에서 부가세(10%)를 계산하거나, 세금포함 금액에서 공급가액과 부가세를 역산합니다.
-- [평수 계산기](https://www.spinkorea.kr/tools/area-converter) — 평, 제곱미터(m²), 제곱피트(ft²) 면적을 상호 변환하며 아파트 주요 평형별 면적을 바로 확인할 수 있습니다.
-- [날짜 계산기](https://www.spinkorea.kr/tools/date-calculator) — 두 날짜 사이의 기간을 일·주·개월·년 단위로 계산합니다. 계약기간·근무기간 확인에 활용하세요.
-- [마진율 계산기](https://www.spinkorea.kr/tools/margin-calculator) — 원가와 판매가로 마진율을 계산하거나, 목표 마진율로 판매가·원가를 역산합니다.
-- [할인율 계산기](https://www.spinkorea.kr/tools/discount-calculator) — 정가와 할인율로 할인가를 계산하거나, 정가와 할인가로 할인율을 역산합니다. 절약 금액도 자동으로 표시됩니다.
-- [칼로리 소모 계산기](https://www.spinkorea.kr/tools/calorie-burn) — 운동 종류·체중·시간으로 소모 칼로리와 지방 연소량을 MET 공식으로 계산합니다. 14가지 활동을 지원합니다.
-- [더치페이 계산기](https://www.spinkorea.kr/tools/dutch-pay) — 총 금액과 인원수로 1인당 부담 금액을 계산합니다. 할인 차감과 올림·내림·반올림 원 단위 처리를 지원합니다.
-- [진법 변환기](https://www.spinkorea.kr/tools/base-converter) — 2진수·8진수·10진수·16진수를 상호 변환합니다. 입력 진법을 선택하고 숫자를 입력하면 나머지 세 진법이 동시에 표시됩니다.
-- [수분 섭취량 계산기](https://www.spinkorea.kr/tools/water-intake) — 체중과 활동 수준으로 하루 권장 수분 섭취량을 계산합니다. 운동·더운 날씨 보정과 물 잔 수·페트병 수 표시를 지원합니다.
-- [연비 계산기](https://www.spinkorea.kr/tools/fuel-economy) — 주행거리와 주유량으로 연비(km/L)를 계산하거나, 연비와 거리로 연료비·필요 주유량을 계산합니다.
-- [통계 계산기](https://www.spinkorea.kr/tools/statistics-calculator) — 숫자 목록을 입력하면 평균·중앙값·최빈값·분산·표준편차 등 10가지 통계량을 한 번에 계산합니다.
-- [UUID 생성기](https://www.spinkorea.kr/tools/uuid-generator) — UUID v4를 최대 10개까지 즉시 생성합니다. 개별·전체 복사, 대소문자 전환을 지원하며 Web Crypto API를 사용합니다.
-- [이상 체중 계산기](https://www.spinkorea.kr/tools/ideal-weight) — 키와 성별을 입력하면 BMI 기준·Broca 공식·Hamwi 공식으로 이상 체중 범위를 비교합니다.
-- [투자 수익률 계산기](https://www.spinkorea.kr/tools/roi-calculator) — 투자 원금과 현재 가치로 ROI·CAGR·목표 금액을 계산합니다. 기간별 연평균 복리 수익률 비교를 지원합니다.
-- [단어 빈도 분석기](https://www.spinkorea.kr/tools/word-frequency) — 텍스트에서 단어 빈도를 분석해 TOP N 순위를 보여줍니다. 불용어 제거와 최소 글자수 필터를 지원합니다.
-- [속도 계산기](https://www.spinkorea.kr/tools/speed-calculator) — 거리·시간·속도 3방향 계산과 km/h·m/s·mph 단위 변환을 지원합니다.
+- [온라인 룰렛 돌리기](https://spinkorea.kr/) — SpinFlow는 결정이 필요한 순간에 룰렛, 추첨, 계산, 변환 도구를 바로 제공하는 무료 유틸리티 사이트입니다.
+- [SpinFlow 룰렛](https://spinkorea.kr/spinflow) — 항목을 직접 입력하거나 템플릿을 선택해 공정한 룰렛 결과를 만들 수 있습니다.
+- [점심 메뉴 추천 룰렛](https://spinkorea.kr/lunch-menu) — 직장인과 모임을 위한 점심 메뉴 선택 도구입니다.
+- [랜덤 숫자 뽑기](https://spinkorea.kr/random-number) — 추첨, 게임, 수업, 이벤트에 쓸 숫자를 공정하게 생성합니다.
+- [무료 웹 유틸리티 모음](https://spinkorea.kr/tools) — 랜덤 추첨, 텍스트, 개발, 디자인, 계산 도구를 한 곳에서 사용할 수 있습니다.
+- [SpinFlow 소개](https://spinkorea.kr/about) — 설치 없이 사용할 수 있는 결정 도구와 생활 유틸리티를 제공합니다.
+- [자주 묻는 질문](https://spinkorea.kr/faq) — 서비스 이용 전 확인할 수 있는 핵심 질문을 정리했습니다.
+- [문의하기](https://spinkorea.kr/contact) — 서비스 개선 제안과 오류 제보를 받습니다.
+- [개인정보처리방침](https://spinkorea.kr/privacy) — 사용자 개인정보와 브라우저 저장 데이터 처리 방침입니다.
+- [이용약관](https://spinkorea.kr/terms) — 서비스 이용에 필요한 기본 약관입니다.
+- [SpinFlow 블로그](https://spinkorea.kr/blog) — 결정과 생산성을 돕는 실용 가이드를 제공합니다.
+- [로또 번호 생성기](https://spinkorea.kr/tools/lotto-generator) — 버튼 한 번으로 로또 번호 조합을 생성합니다.
 
 ## 최신 블로그
-- [연비 계산 방법: 주행거리·주유량으로 km/L와 연료비 계산하기](https://www.spinkorea.kr/blog/fuel-economy-guide) — 연비 계산 공식, 연료비 예측, 에코 드라이빙으로 연비를 높이는 방법을 정리했습니다.
-- [통계 기초: 평균·중앙값·표준편차 쉽게 계산하는 방법](https://www.spinkorea.kr/blog/statistics-basics-guide) — 평균·중앙값·최빈값·표준편차·분산의 의미와 계산 방법, 언제 어떤 통계량을 써야 하는지 정리했습니다.
-- [UUID란? v4 생성 원리와 활용법 완벽 정리](https://www.spinkorea.kr/blog/uuid-guide) — UUID의 개념, v1·v4 차이, 충돌 확률, 데이터베이스 기본 키로 사용할 때의 장단점을 실무 관점에서 정리했습니다.
-- [이상 체중 계산법 비교: BMI·Broca·Hamwi 공식의 차이](https://www.spinkorea.kr/blog/ideal-weight-guide) — BMI 기준, Broca 공식, Hamwi 공식으로 이상 체중을 구하는 방법과 각 공식의 한계점을 정리했습니다.
-- [ROI·CAGR 계산법: 투자 수익률을 정확히 비교하는 방법](https://www.spinkorea.kr/blog/roi-guide) — ROI와 CAGR의 공식, 차이점, 실전 투자 성과 비교 방법을 정리했습니다.
-- [단어 빈도 분석 활용법: 자기소개서·블로그·보고서 점검하기](https://www.spinkorea.kr/blog/word-frequency-guide) — 단어 빈도 분석으로 자기소개서 반복 단어 찾기, SEO 키워드 분석하는 방법을 정리했습니다.
-- [진법 변환 완전 정리: 2진수·8진수·10진수·16진수 상호 변환](https://www.spinkorea.kr/blog/base-converter-guide) — 진법의 의미와 상호 변환 방법, HEX 색상 코드·Unix 파일 권한 실무 활용법을 정리했습니다.
-- [하루 물 권장량 계산법: 체중별 수분 섭취 기준과 올바른 물 마시기](https://www.spinkorea.kr/blog/water-intake-guide) — 체중과 활동량에 따른 하루 권장 수분 섭취량과 효과적으로 물 마시는 방법을 정리했습니다.
-- [더치페이 계산법: n분의 1 정산, 원 단위 처리 방법 정리](https://www.spinkorea.kr/blog/dutch-pay-guide) — 회식·모임에서 총 금액을 n명으로 나눌 때 올림·내림·반올림 처리 방법과 할인 쿠폰 적용법을 정리했습니다.
-- [속도·거리·시간 계산 공식: 이동 시간과 km/h 변환 방법](https://www.spinkorea.kr/blog/speed-distance-time-guide) — 속도·거리·시간 관계 공식과 km/h·m/s·mph 단위 변환, 실생활 이동 시간 계산 예시를 정리했습니다.
-- [할인율 계산법: 할인가·할인율 역산·정가 역산 공식 정리](https://www.spinkorea.kr/blog/discount-calculator-guide) — 정가에서 할인율을 적용한 최종 가격, 정가와 할인가로 할인율 역산, 할인가에서 정가 역산 공식을 정리했습니다.
-- [운동별 칼로리 소모량: MET 공식으로 걷기·달리기·수영 계산하기](https://www.spinkorea.kr/blog/calorie-burn-guide) — MET(대사당량) 공식으로 걷기·달리기·수영 등 운동별 소모 칼로리와 지방 연소량을 계산하는 방법을 정리했습니다.
-- [평수 계산법: 평↔m² 환산 공식과 아파트 평형별 면적 정리](https://www.spinkorea.kr/blog/pyeong-m2-guide) — 1평이 몇 m²인지, 전용면적과 공급면적 차이, 아파트 평형별 실제 면적을 정리했습니다.
-- [부가세 계산 방법: 공급가액·역산·세금계산서 실무 정리](https://www.spinkorea.kr/blog/vat-calculator-guide) — 공급가액에서 부가세를 더하고 세금포함 금액을 역산하는 공식을 정리했습니다.
-- [수면 사이클 계산: 90분 주기로 최적 기상·취침 시각 정하는 법](https://www.spinkorea.kr/blog/sleep-cycle-guide) — 수면 사이클이 90분인 이유와 사이클 완료 시점에 일어나는 것이 덜 피곤한 이유를 정리했습니다.
-- [대출 상환 방법 비교: 원리금균등 vs 원금균등 차이](https://www.spinkorea.kr/blog/loan-repayment-guide) — 원리금균등상환과 원금균등상환의 차이, 총 이자 부담 비교, 어떤 방식이 유리한지 기준을 정리했습니다.
-- [전월세 전환 계산: 전세→월세, 월세→전세 환산 방법](https://www.spinkorea.kr/blog/jeonse-monthly-guide) — 전세 보증금을 월세로, 월세를 전세 보증금으로 환산하는 공식과 전월세 전환율 적용 방법을 정리했습니다.
-- [퇴직금 계산 방법: 평균임금 산정과 법정 퇴직금 완전 정리](https://www.spinkorea.kr/blog/severance-pay-guide) — 퇴직금 계산 공식, 평균임금 산정 방법, 상여금·연차수당 포함 기준을 근로기준법 기준으로 정리했습니다.
-- [기초대사량(BMR) 계산법: 다이어트 칼로리 설정 가이드](https://www.spinkorea.kr/blog/calorie-bmr-guide) — Mifflin-St Jeor 공식으로 BMR·TDEE를 계산하고 목표 칼로리를 설정합니다.
-- [복리 계산 방법: 예금·적금 만기금액과 이자 수익 계산하기](https://www.spinkorea.kr/blog/compound-interest-calculation-guide) — 단리·복리 차이, 만기금액 공식, 72 법칙으로 복리의 핵심을 설명합니다.
-- [연차 계산법: 발생 기준·잔여 연차·연차수당 정리](https://www.spinkorea.kr/blog/annual-leave-calculation-guide) — 근로기준법 기준 연차 발생·잔여 연차·미사용 연차수당 계산 방법을 정리합니다.
-- [연봉 실수령액 계산 방법: 4대보험·소득세 공제 후 실제 월급](https://www.spinkorea.kr/blog/salary-deduction-guide) — 국민연금·건강보험·고용보험·소득세 공제 후 실수령액을 단계별로 설명합니다.
-- [작은 습관 시작 실전 흐름, 무리 없는 기준부터](https://www.spinkorea.kr/blog/habit-small-start) — 작은 습관 시작을 준비할 때 놓치기 쉬운 자가 점검, 루틴 설계, 기록 습관을 짧게 점검합니다.
-- [기분 기록 가볍게 상황별 표, 자가 점검](https://www.spinkorea.kr/blog/mood-log-light) — 기분 기록 가볍게는 생활 적용, 자가 점검, 루틴 설계를 나눠 실제 실행 순서로 정리한 글입니다.
-- [식사 선택 균형 판단법, 무리 없는 기준 중심](https://www.spinkorea.kr/blog/meal-choice-balance) — 식사 선택 균형을 글, 도구, 업무 흐름에 적용할 때 필요한 생활 적용과 루틴 설계를 정리했습니다.
-- [화면 시간 경계 운영법, 자가 점검 남기기](https://www.spinkorea.kr/blog/screen-time-boundary) — 화면 시간 경계는 애매할 때 기록 습관을 먼저 보고 생활 적용까지 확인하는 기준을 제시합니다.
-- [물 마시기 알림, 무리 없는 기준 전에 볼 점](https://www.spinkorea.kr/blog/water-reminder-rule) — 물 마시기 알림 관련 결정을 반복하지 않도록 기록 습관, 무리 없는 기준, 생활 적용을 한 번에 비교합니다.
-- [호흡 리셋 습관 FAQ: 루틴 설계 답변](https://www.spinkorea.kr/blog/breathing-reset-note) — 호흡 리셋 습관을 검색한 독자가 바로 따라 할 수 있도록 자가 점검부터 무리 없는 기준까지 압축했습니다.
-- [짧은 산책 루틴 비교법, 생활 적용과 기록 습관](https://www.spinkorea.kr/blog/walk-break-plan) — 짧은 산책 루틴은 필요한 순간부터 루틴 설계와 기록 습관을 남기는 방법까지 안내합니다.
-- [눈 피로 휴식 기준 실행 순서, 자가 점검까지](https://www.spinkorea.kr/blog/eye-rest-rule) — 눈 피로 휴식 기준 상황에서 무리 없는 기준과 생활 적용은 헷갈릴 때 보는 실무형 정리입니다.
-- [책상 스트레칭 휴식 체크리스트: 무리 없는 기준 핵심](https://www.spinkorea.kr/blog/desk-stretch-break) — 책상 스트레칭 휴식을 준비할 때 놓치기 쉬운 기록 습관, 무리 없는 기준, 생활 적용을 짧게 점검합니다.
-- [수면 루틴 기록, 무리 없는 기준 먼저 보기](https://www.spinkorea.kr/blog/sleep-routine-note) — 수면 루틴 기록은 루틴 설계, 기록 습관, 무리 없는 기준을 나눠 실제 실행 순서로 정리한 글입니다.
-- [반복 업무 자동화 발행 전 검토, 회의 운영](https://www.spinkorea.kr/blog/repeat-task-automation) — 반복 업무 자동화를 글, 도구, 업무 흐름에 적용할 때 필요한 우선순위와 회의 운영을 정리했습니다.
-- [결정권자 표시 사례별 정리, 우선순위 중심](https://www.spinkorea.kr/blog/decision-owner-rule) — 결정권자 표시는 애매할 때 집중 시간을 먼저 보고 우선순위까지 확인하는 기준을 제시합니다.
+- [RSS 제출 확인, 사이트맵 전에 볼 점](https://spinkorea.kr/blog/rss-submit-check) — RSS 제출 확인 항목을 준비할 때 놓치기 쉬운 검색 의도, 내부 링크, 사이트맵을 짧게 점검합니다.
+- [사이트맵 최신 날짜 FAQ: 검색 의도 답변](https://spinkorea.kr/blog/sitemap-freshness-check) — 사이트맵 최신 날짜는 품질 점검, 검색 의도, 내부 링크를 나눠 실제 실행 순서로 정리한 글입니다.
+- [내부 링크 규칙 비교법, 메타 설명과 품질 점검](https://spinkorea.kr/blog/internal-link-rules) — 내부 링크 규칙을 글, 도구, 업무 흐름에 적용할 때 필요한 품질 점검과 내부 링크를 정리했습니다.
+- [검색 의도 맵 실행 순서, 품질 점검까지](https://spinkorea.kr/blog/search-intent-map) — 검색 의도 맵은 애매할 때 사이트맵을 먼저 보고 품질 점검까지 확인하는 기준을 제시합니다.
+- [콘텐츠 품질 점수 체크리스트: 사이트맵 핵심](https://spinkorea.kr/blog/content-quality-score) — 콘텐츠 품질 점수 관련 결정을 반복하지 않도록 사이트맵, 메타 설명, 품질 점검 항목을 한 번에 비교합니다.
+- [애드센스 검수 홈페이지, 검색 의도 먼저 보기](https://spinkorea.kr/blog/adsense-review-home) — 애드센스 검수 홈페이지를 검색한 독자가 바로 따라 할 수 있도록 검색 의도부터 메타 설명까지 압축했습니다.
+- [무리 없는 목표 설정 발행 전 검토, 자가 점검](https://spinkorea.kr/blog/gentle-goal-rule) — 무리 없는 목표 설정은 필요한 순간부터 기록 습관과 무리 없는 기준을 남기는 방법까지 안내합니다.
+- [디지털 정리 습관 사례별 정리, 루틴 설계 중심](https://spinkorea.kr/blog/digital-declutter-step) — 디지털 정리 습관 상황에서 생활 적용과 자가 점검은 헷갈릴 때 보는 실무형 정리입니다.
+- [재택근무 경계 운영 체크, 생활 적용 반영](https://spinkorea.kr/blog/home-work-boundary) — 재택근무 경계를 준비할 때 놓치기 쉬운 무리 없는 기준, 생활 적용, 자가 점검 항목을 짧게 점검합니다.
+- [주간 에너지 회고 검토 순서, 기록 습관 활용](https://spinkorea.kr/blog/weekly-energy-review) — 주간 에너지 회고는 기록 습관, 무리 없는 기준, 생활 적용을 나눠 실제 실행 순서로 정리한 글입니다.
+- [랜덤 휴식 미션 빠른 정리, 생활 적용까지](https://spinkorea.kr/blog/mindful-random-break) — 랜덤 휴식 미션을 글, 도구, 업무 흐름에 적용할 때 필요한 기록 습관과 생활 적용을 정리했습니다.
+- [카페인 마감 시간 선택법, 자가 점검과 루틴 설계](https://spinkorea.kr/blog/caffeine-cutoff-rule) — 카페인 마감 시간은 애매할 때 자가 점검 항목을 먼저 보고 기록 습관까지 확인하는 기준을 제시합니다.
 
 ## 기술 정보
 React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.xml, JSON-LD, AdSense 자동광고, GA4를 사용합니다.

@@ -18,7 +18,7 @@ interface TocItem {
   h2Index?: number;
 }
 
-const SITE_ORIGIN = "https://www.spinkorea.kr";
+const SITE_ORIGIN = "https://spinkorea.kr";
 
 function hasFinalConsonant(value: string): boolean {
   const last = [...value.trim()].at(-1);

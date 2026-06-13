@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import sitePages from "@/data/site-pages.json";
 
-const SITE_ORIGIN = "https://www.spinkorea.kr";
+const SITE_ORIGIN = "https://spinkorea.kr";
 const SITE_NAME = "SpinFlow";
 const JSON_LD_ID = "spinflow-json-ld";
 

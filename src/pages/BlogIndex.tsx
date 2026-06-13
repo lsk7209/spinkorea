@@ -6,7 +6,7 @@ import {
 } from "@/data/postMetadata";
 import SEO from "@/components/SEO";
 
-const SITE_ORIGIN = "https://www.spinkorea.kr";
+const SITE_ORIGIN = "https://spinkorea.kr";
 const INITIAL_POST_COUNT = 12;
 
 export default function BlogIndex() {
