@@ -42,7 +42,7 @@ const REQUIRED_RENDER_MARKERS = [
   "자주 묻는 질문",
   "근거와 참고 자료",
   "<table>",
-  "함께 보면 좋은 SpinFlow 도구",
+  "함께 쓰는 SpinFlow 도구",
 ];
 
 function normalize(value) {
