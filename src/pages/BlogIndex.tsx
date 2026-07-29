@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   getPostPublishDate,
-  getPublishedPostMetadata,
+  getIndexablePostMetadata,
 } from "@/data/postMetadata";
 import SEO from "@/components/SEO";
 
@@ -10,7 +10,7 @@ const SITE_ORIGIN = "https://spinkorea.kr";
 const INITIAL_POST_COUNT = 12;
 
 export default function BlogIndex() {
-  const posts = getPublishedPostMetadata();
+  const posts = getIndexablePostMetadata();
   const [visibleCount, setVisibleCount] = useState(INITIAL_POST_COUNT);
   const visiblePosts = posts.slice(0, visibleCount);
   const hasMorePosts = visibleCount < posts.length;

@@ -14,6 +14,15 @@ export interface BlogPostMeta {
 
 export const BLOG_POST_METADATA = postMetadata as BlogPostMeta[];
 
+/**
+ * Search listings are intentionally limited to editorial posts that have been
+ * reviewed as part of the public SpinFlow guide. Generated posts can remain
+ * reachable by their existing URLs while they await an editorial review.
+ */
+export function isIndexablePost(post: BlogPostMeta): boolean {
+  return post.source === "curated";
+}
+
 export function getPostPublishDate(post: BlogPostMeta): string {
   return post.publishAt?.slice(0, 10) ?? post.date;
 }
@@ -30,6 +39,10 @@ export function getPublishedPostMetadata(now = new Date()): BlogPostMeta[] {
   return BLOG_POST_METADATA.filter((post) => isPublishedPost(post, now)).sort(
     (a, b) => getPostPublishTime(b) - getPostPublishTime(a),
   );
+}
+
+export function getIndexablePostMetadata(now = new Date()): BlogPostMeta[] {
+  return getPublishedPostMetadata(now).filter(isIndexablePost);
 }
 
 export function findPublishedPostMetadata(

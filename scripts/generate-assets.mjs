@@ -179,10 +179,27 @@ function extractAllPosts() {
   return [...extractCuratedPosts(), ...extractGeneratedPosts()];
 }
 
+function mergeWithExistingMetadata(posts) {
+  if (!fs.existsSync(POST_METADATA_PATH)) return posts;
+
+  try {
+    const existing = JSON.parse(fs.readFileSync(POST_METADATA_PATH, "utf8"));
+    if (!Array.isArray(existing)) return posts;
+    const existingSlugs = new Set(existing.map((post) => post.slug));
+    return [...existing, ...posts.filter((post) => !existingSlugs.has(post.slug))];
+  } catch {
+    return posts;
+  }
+}
+
 function extractPosts() {
-  return extractAllPosts()
+  return mergeWithExistingMetadata(extractAllPosts())
     .filter(isPublished)
     .sort((a, b) => getPublishTime(b) - getPublishTime(a));
+}
+
+function isIndexablePost(post) {
+  return post.source === "curated";
 }
 
 function buildSitemap(posts) {
@@ -353,6 +370,9 @@ function injectHtml(template, route) {
   const canonical = `${SITE_ORIGIN}${route.path}`;
   const meta = approvalMetaOverrides[route.path] ?? route;
   const jsonLd = JSON.stringify(route.structuredData);
+  const robots = route.robots
+    ? `\n  <meta name="robots" content="${route.robots}" />`
+    : "";
   const headTags = `
   <title>${escapeHtml(meta.title)}</title>
   <meta name="description" content="${escapeHtml(meta.description)}" />
@@ -366,11 +386,12 @@ function injectHtml(template, route) {
   <meta name="twitter:title" content="${escapeHtml(meta.title)}" />
   <meta name="twitter:description" content="${escapeHtml(meta.description)}" />
   <meta name="twitter:image" content="${SITE_ORIGIN}/og-image.png" />
-  <script id="spinflow-json-ld" type="application/ld+json">${jsonLd}</script>`;
+  <script id="spinflow-json-ld" type="application/ld+json">${jsonLd}</script>${robots}`;
 
   const cleanedTemplate = template
     .replace(/<title>[\s\S]*?<\/title>/gi, "")
     .replace(/<meta\s+name=["']description["'][\s\S]*?>/gi, "")
+    .replace(/<meta\s+name=["']robots["'][\s\S]*?>/gi, "")
     .replace(/<link\s+rel=["']canonical["'][\s\S]*?>/gi, "")
     .replace(/<meta\s+property=["']og:url["'][\s\S]*?>/gi, "")
     .replace(/<meta\s+property=["']og:title["'][\s\S]*?>/gi, "")
@@ -401,20 +422,19 @@ function writeRouteHtml(distDir, template, route) {
 
 function writePublicAssets(posts) {
   const publicDir = path.join(ROOT, "public");
-  fs.writeFileSync(path.join(publicDir, "sitemap.xml"), buildSitemap(posts));
-  fs.writeFileSync(path.join(publicDir, "rss.xml"), buildRss(posts));
-  fs.writeFileSync(path.join(publicDir, "llms.txt"), buildLlms(posts));
+  const allMetadata = mergeWithExistingMetadata(extractAllPosts());
+  const indexablePosts = posts.filter(isIndexablePost);
+  fs.writeFileSync(path.join(publicDir, "sitemap.xml"), buildSitemap(indexablePosts));
+  fs.writeFileSync(path.join(publicDir, "rss.xml"), buildRss(indexablePosts));
+  fs.writeFileSync(path.join(publicDir, "llms.txt"), buildLlms(indexablePosts));
   fs.writeFileSync(
     POST_METADATA_PATH,
-    `${JSON.stringify(
-      extractAllPosts().sort((a, b) => getPublishTime(b) - getPublishTime(a)),
-      null,
-      2,
-    )}\n`,
+    JSON.stringify(allMetadata, null, 2),
   );
 }
 
 function writeDistAssets(posts) {
+  const indexablePosts = posts.filter(isIndexablePost);
   const distDir = path.join(ROOT, "dist");
   const templatePath = path.join(distDir, "index.html");
   if (!fs.existsSync(templatePath)) {
@@ -440,6 +460,7 @@ function writeDistAssets(posts) {
       url: `${SITE_ORIGIN}/blog/${post.slug}`,
       inLanguage: "ko-KR",
     },
+    robots: isIndexablePost(post) ? undefined : "noindex,follow",
     body: renderPostShell(post),
   }));
 
@@ -447,9 +468,9 @@ function writeDistAssets(posts) {
     writeRouteHtml(distDir, template, route);
   }
 
-  fs.writeFileSync(path.join(distDir, "sitemap.xml"), buildSitemap(posts));
-  fs.writeFileSync(path.join(distDir, "rss.xml"), buildRss(posts));
-  fs.writeFileSync(path.join(distDir, "llms.txt"), buildLlms(posts));
+  fs.writeFileSync(path.join(distDir, "sitemap.xml"), buildSitemap(indexablePosts));
+  fs.writeFileSync(path.join(distDir, "rss.xml"), buildRss(indexablePosts));
+  fs.writeFileSync(path.join(distDir, "llms.txt"), buildLlms(indexablePosts));
 }
 
 const posts = extractPosts();

@@ -12,6 +12,7 @@ export interface SEOProps {
   keywords?: string;
   image?: string;
   structuredData?: Record<string, unknown>;
+  robots?: "index,follow" | "noindex,follow";
 }
 
 export default function SEO({
@@ -20,6 +21,7 @@ export default function SEO({
   keywords = "룰렛, 원판돌리기, 랜덤추첨기, SpinFlow",
   image = "/og-image.png",
   structuredData,
+  robots = "index,follow",
 }: SEOProps) {
   const location = useLocation();
   const canonicalUrl = `${SITE_ORIGIN}${location.pathname}`;
@@ -46,6 +48,7 @@ export default function SEO({
 
     setMetaTag("name", "description", pageDescription);
     setMetaTag("name", "keywords", keywords);
+    setMetaTag("name", "robots", robots);
 
     setMetaTag("property", "og:title", pageTitle);
     setMetaTag("property", "og:description", pageDescription);
@@ -86,7 +89,7 @@ export default function SEO({
     } else {
       scriptJSONLD?.remove();
     }
-  }, [pageTitle, pageDescription, keywords, imageUrl, canonicalUrl, structuredData]);
+  }, [pageTitle, pageDescription, keywords, imageUrl, canonicalUrl, structuredData, robots]);
 
   return null;
 }

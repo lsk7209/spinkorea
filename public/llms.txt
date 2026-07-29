@@ -18,18 +18,18 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [로또 번호 생성기](https://spinkorea.kr/tools/lotto-generator) — 버튼 한 번으로 로또 번호 조합을 생성합니다.
 
 ## 최신 블로그
-- [RSS 제출 확인, 사이트맵 전에 볼 점](https://spinkorea.kr/blog/rss-submit-check) — RSS 제출 확인 항목을 준비할 때 놓치기 쉬운 검색 의도, 내부 링크, 사이트맵을 짧게 점검합니다.
-- [사이트맵 최신 날짜 FAQ: 검색 의도 답변](https://spinkorea.kr/blog/sitemap-freshness-check) — 사이트맵 최신 날짜는 품질 점검, 검색 의도, 내부 링크를 나눠 실제 실행 순서로 정리한 글입니다.
-- [내부 링크 규칙 비교법, 메타 설명과 품질 점검](https://spinkorea.kr/blog/internal-link-rules) — 내부 링크 규칙을 글, 도구, 업무 흐름에 적용할 때 필요한 품질 점검과 내부 링크를 정리했습니다.
-- [검색 의도 맵 실행 순서, 품질 점검까지](https://spinkorea.kr/blog/search-intent-map) — 검색 의도 맵은 애매할 때 사이트맵을 먼저 보고 품질 점검까지 확인하는 기준을 제시합니다.
-- [콘텐츠 품질 점수 체크리스트: 사이트맵 핵심](https://spinkorea.kr/blog/content-quality-score) — 콘텐츠 품질 점수 관련 결정을 반복하지 않도록 사이트맵, 메타 설명, 품질 점검 항목을 한 번에 비교합니다.
-- [애드센스 검수 홈페이지, 검색 의도 먼저 보기](https://spinkorea.kr/blog/adsense-review-home) — 애드센스 검수 홈페이지를 검색한 독자가 바로 따라 할 수 있도록 검색 의도부터 메타 설명까지 압축했습니다.
-- [무리 없는 목표 설정 발행 전 검토, 자가 점검](https://spinkorea.kr/blog/gentle-goal-rule) — 무리 없는 목표 설정은 필요한 순간부터 기록 습관과 무리 없는 기준을 남기는 방법까지 안내합니다.
-- [디지털 정리 습관 사례별 정리, 루틴 설계 중심](https://spinkorea.kr/blog/digital-declutter-step) — 디지털 정리 습관 상황에서 생활 적용과 자가 점검은 헷갈릴 때 보는 실무형 정리입니다.
-- [재택근무 경계 운영 체크, 생활 적용 반영](https://spinkorea.kr/blog/home-work-boundary) — 재택근무 경계를 준비할 때 놓치기 쉬운 무리 없는 기준, 생활 적용, 자가 점검 항목을 짧게 점검합니다.
-- [주간 에너지 회고 검토 순서, 기록 습관 활용](https://spinkorea.kr/blog/weekly-energy-review) — 주간 에너지 회고는 기록 습관, 무리 없는 기준, 생활 적용을 나눠 실제 실행 순서로 정리한 글입니다.
-- [랜덤 휴식 미션 빠른 정리, 생활 적용까지](https://spinkorea.kr/blog/mindful-random-break) — 랜덤 휴식 미션을 글, 도구, 업무 흐름에 적용할 때 필요한 기록 습관과 생활 적용을 정리했습니다.
-- [카페인 마감 시간 선택법, 자가 점검과 루틴 설계](https://spinkorea.kr/blog/caffeine-cutoff-rule) — 카페인 마감 시간은 애매할 때 자가 점검 항목을 먼저 보고 기록 습관까지 확인하는 기준을 제시합니다.
+- [온라인 계산기 vs 엑셀: 언제 무엇을 써야 하나](https://spinkorea.kr/blog/calculator-vs-excel) — 간단한 계산에 엑셀을 여는 것은 낭비입니다. 상황별로 온라인 계산기와 스프레드시트를 현명하게 선택하는 기준.
+- [디지털 노마드의 생산성 도구 모음: 어디서든 일하는 법](https://spinkorea.kr/blog/digital-nomad-tools) — 카페·공유오피스·해외 어디서든 최고의 생산성을 유지하는 디지털 노마드들의 필수 도구와 루틴.
+- [텍스트 변환이 필요한 의외의 상황 7가지](https://spinkorea.kr/blog/text-formatting-situations) — 대소문자 변환, 특수문자 제거, 줄바꿈 정리... 텍스트를 정제하고 변환해야 하는 실무 상황 완벽 정리.
+- [AI 시대에 살아남는 스킬: 대체되지 않는 능력 5가지](https://spinkorea.kr/blog/ai-era-skills) — ChatGPT가 할 수 없는 것은 무엇인가. AI 시대에 오히려 더 가치가 높아지는 인간 고유의 능력.
+- [이미지 포맷 완벽 가이드: JPG vs PNG vs WebP vs AVIF](https://spinkorea.kr/blog/image-format-guide) — 언제 JPG를 쓰고 언제 PNG를 써야 하나? 웹 성능을 위한 최신 이미지 포맷 선택 기준 완벽 정리.
+- [구글 캘린더 100% 활용법: 시간을 설계하는 방법](https://spinkorea.kr/blog/google-calendar-tips) — 단순한 일정 관리를 넘어 타임 블로킹, 색상 코딩, 반복 일정, 팀 캘린더까지. 구글 캘린더 고수의 사용법.
+- [URL 단축기의 원리: 짧은 링크 뒤에 숨겨진 기술](https://spinkorea.kr/blog/url-shortener-tech) — bit.ly, tinyurl... 긴 URL이 짧아지는 원리, 리다이렉트 동작 방식, 단축 URL의 보안 위험까지 알아봅니다.
+- [두려움을 행동으로 전환하는 5초의 법칙](https://spinkorea.kr/blog/five-second-rule) — 멜 로빈스의 5초 법칙: 하고 싶은 것이 생기면 5초 안에 시작하지 않으면 뇌가 방해합니다. 과학적 근거와 실천법.
+- [주사위와 확률: 보드게임 뒤에 숨겨진 수학](https://spinkorea.kr/blog/dice-probability) — 주사위 2개를 굴렸을 때 7이 가장 많이 나오는 이유, 크리티컬 확률 계산, 보드게임 전략에 확률을 활용하는 법.
+- [메모의 기술: 두 번째 뇌 만들기](https://spinkorea.kr/blog/note-taking-art) — 좋은 아이디어는 기억에 의존하면 안 됩니다. 코넬 노트, 제텔카스텐, 디지털 노트 시스템 완벽 가이드.
+- [근무시간 계산기 활용법: 야근 수당부터 프리랜서 정산까지](https://spinkorea.kr/blog/work-hours-calculator) — 정확한 근무시간 계산이 필요한 모든 상황. 야근 수당, 프리랜서 시급 정산, 프로젝트 일정 관리 방법.
+- [집중력 도둑 TOP 5와 차단 방법](https://spinkorea.kr/blog/focus-thieves) — SNS 알림, 오픈 오피스, 멀티탭... 우리의 집중력을 훔치는 주범들과 환경 설계로 차단하는 방법.
 
 ## 기술 정보
 React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.xml, JSON-LD, AdSense 자동광고, GA4를 사용합니다.

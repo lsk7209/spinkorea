@@ -288,6 +288,7 @@ export default function BlogPost() {
         description={post.description}
         image={post.thumbnail}
         structuredData={structuredData}
+        robots={post.source === "generated" ? "noindex,follow" : "index,follow"}
       />
 
       <nav className="w-full px-4 py-6 border-b border-slate-200 bg-white/90 backdrop-blur-md sticky top-0 z-50">
