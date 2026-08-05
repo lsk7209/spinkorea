@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { RefreshCw, Copy, ChevronUp, ChevronDown } from 'lucide-react';
 import { toast } from 'sonner';
 import ToolLayout from '@/components/ToolLayout';
+import { getSecureRandomInt } from '@/utils/random';
 
 function generateSet(): number[] {
     const set = new Set<number>();
-    while (set.size < 6) set.add(Math.floor(Math.random() * 45) + 1);
+    while (set.size < 6) set.add(getSecureRandomInt(45) + 1);
     return Array.from(set).sort((a, b) => a - b);
 }
 
@@ -59,7 +60,7 @@ export default function LottoGenerator() {
     return (
         <ToolLayout
             title="로또 번호 생성기"
-            description="암호학적으로 안전한 랜덤 알고리즘으로 로또 번호를 무료로 생성하세요. 1~5게임을 한 번에 생성하고, 전체 복사까지 가능합니다."
+            description="브라우저의 보안 난수 기능으로 로또 번호를 무료로 생성하세요. 1~5게임을 한 번에 생성하고, 전체 복사까지 가능합니다. 당첨을 보장하지 않는 번호 조합 도구입니다."
             keywords="로또번호생성기, 로또추첨기, 무료로또번호, 로또자동생성, 로또5게임, 로또예상번호"
             howToUse={[
                 '게임 수(1~5)를 선택하세요',
@@ -71,7 +72,7 @@ export default function LottoGenerator() {
                 '5게임 한 번에 생성하면 용지 한 장 분량을 바로 완성할 수 있습니다',
             ]}
             faqs={[
-                { question: '생성된 번호가 정말 무작위인가요?', answer: '네, JavaScript의 Math.random()으로 완전히 무작위 번호를 생성합니다. 모든 조합이 동일한 확률입니다.' },
+                { question: '생성된 번호가 정말 무작위인가요?', answer: '브라우저의 Web Crypto 난수 기능으로 각 번호를 선택하며, 이 도구가 특정 번호의 당첨 가능성을 높이거나 당첨을 예측해 주는 것은 아닙니다.' },
                 { question: '5게임 동시 생성 시 번호가 겹치나요?', answer: '각 게임 내에서는 중복이 없습니다. 게임 간 같은 번호가 나올 수는 있으나 실제 로또에서도 마찬가지입니다.' },
             ]}
             relatedTools={[

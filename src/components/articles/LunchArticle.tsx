@@ -11,7 +11,7 @@ export default function LunchArticle() {
                 <h2 className="text-xl font-semibold text-white mb-3">⚡ 3줄 요약</h2>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
                     <li><strong>결정 피로 감소:</strong> 룰렛을 사용하여 메뉴 선정에 소모되는 시간을 획기적으로 줄일 수 있습니다.</li>
-                    <li><strong>공정한 선택:</strong> 모든 메뉴가 동일한 확률로 선택되어 회사 동료들과의 의견 충돌을 방지합니다.</li>
+                    <li><strong>기준 있는 선택:</strong> 후보를 같은 단위로 입력하고 재추첨 기준을 합의하면 메뉴 결정 과정을 설명하기 쉬워집니다.</li>
                     <li><strong>다양한 옵션:</strong> 한식, 중식, 일식 등 카테고리별 템플릿을 통해 매일 새로운 메뉴를 즐기세요.</li>
                 </ul>
             </div>
@@ -27,7 +27,7 @@ export default function LunchArticle() {
                 </p>
                 <p className="mb-4 leading-relaxed">
                     한식, 중식, 일식, 양식, 분식 등 다양한 카테고리 중에서
-                    여러분의 취향에 맞는 메뉴를 무작위로, 하지만 공정하게 선택해 드립니다.
+                    입력한 후보 중 하나를 브라우저에서 무작위로 선택해 드립니다. 결과의 적용 기준은 참여자들이 먼저 합의해 주세요.
                     더 이상 동료들에게 "아무거나요"라고 말하지 말고, 룰렛이 정해주는 운명의 메뉴를 즐겨보세요!
                 </p>
             </section>

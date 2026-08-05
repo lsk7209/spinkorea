@@ -58,7 +58,7 @@ import {
 const TOOLS = [
   // 랜덤
   { path: "/tools/lotto-generator", name: "로또 번호 생성", icon: Dices, desc: "나만의 행운 번호 추첨", color: "text-yellow-400", cat: "랜덤" },
-  { path: "/tools/dice-roller", name: "주사위 던지기", icon: Dice5, desc: "3D 주사위 시뮬레이션", color: "text-red-400", cat: "랜덤" },
+  { path: "/tools/dice-roller", name: "주사위 던지기", icon: Dice5, desc: "1~5개 6면 주사위", color: "text-red-400", cat: "랜덤" },
   { path: "/tools/coin-flip", name: "동전 던지기", icon: Coins, desc: "앞면 vs 뒷면 승부", color: "text-orange-400", cat: "랜덤" },
   { path: "/tools/yes-no-oracle", name: "Yes or No", icon: Wand2, desc: "결정 장애 해결사", color: "text-purple-400", cat: "랜덤" },
   { path: "/tools/random-team", name: "랜덤 팀 편성", icon: Users, desc: "공정한 팀 나누기", color: "text-blue-400", cat: "랜덤" },

@@ -4,23 +4,24 @@
  */
 
 /**
- * 0 이상 max 미만의 난수 생성 (모듈로 편향 제거)
+ * 0 이상 max 미만의 난수 생성 (Uint32 rejection sampling으로 모듈로 편향 제거)
  * @param max - 최대값 (제외)
  * @returns 0 이상 max 미만의 정수
  */
 export function getSecureRandomInt(max: number): number {
-  if (max <= 0) {
+  if (!Number.isSafeInteger(max) || max <= 0 || max > 0x1_0000_0000) {
     throw new Error('max must be greater than 0');
   }
 
-  // rejection sampling으로 모듈로 편향 제거
-  const maxSafe = Math.floor(256 / max) * max; // 256의 배수 중 max의 배수인 최대값
+  // Uint32 범위에서 rejection sampling을 사용해 모든 결과의 확률을 같게 만든다.
+  const range = 0x1_0000_0000;
+  const maxSafe = Math.floor(range / max) * max;
+  const randomValues = new Uint32Array(1);
   let randomValue: number;
 
   do {
-    const randomBytes = new Uint8Array(1);
-    crypto.getRandomValues(randomBytes);
-    randomValue = randomBytes[0];
+    crypto.getRandomValues(randomValues);
+    randomValue = randomValues[0];
   } while (randomValue >= maxSafe);
 
   return randomValue % max;
@@ -32,7 +33,7 @@ export function getSecureRandomInt(max: number): number {
  * @returns 랜덤 인덱스
  */
 export function getRandomIndex(arrayLength: number): number {
-  if (arrayLength === 0) {
+  if (!Number.isSafeInteger(arrayLength) || arrayLength <= 0) {
     throw new Error('Array length must be greater than 0');
   }
   return getSecureRandomInt(arrayLength);

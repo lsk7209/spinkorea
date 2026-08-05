@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Users, Check, Share2, Copy } from "lucide-react";
 import { toast } from "sonner";
 import ToolLayout from "@/components/ToolLayout";
+import { getSecureRandomInt } from "@/utils/random";
 
 export default function RandomTeam() {
   const [names, setNames] = useState("");
@@ -21,8 +22,15 @@ export default function RandomTeam() {
 
     // Simple shuffle animation/delay
     setTimeout(() => {
-      // Shuffle names
-      const shuffled = [...nameList].sort(() => Math.random() - 0.5);
+      // Fisher-Yates shuffle with browser-provided secure random values.
+      const shuffled = [...nameList];
+      for (let index = shuffled.length - 1; index > 0; index -= 1) {
+        const swapIndex = getSecureRandomInt(index + 1);
+        [shuffled[index], shuffled[swapIndex]] = [
+          shuffled[swapIndex],
+          shuffled[index],
+        ];
+      }
 
       // Distribute
       const newTeams: string[][] = Array.from({ length: teamCount }, () => []);
@@ -47,7 +55,7 @@ export default function RandomTeam() {
   return (
     <ToolLayout
       title="랜덤 팀 편성기"
-      description="이름만 입력하면 공정하게 팀을 나눠드립니다. 스터디, 워크샵, 게임 대결 팀 짜기에 최적화된 무료 도구입니다."
+      description="이름을 한 줄씩 입력하면 무작위로 팀을 나눠드립니다. 스터디, 워크숍, 게임 대결에서 팀을 정하는 무료 도구입니다."
       keywords="팀짜기, 조짜기, 랜덤팀, 팀편성, 조편성, 제비뽑기, 팀나누기"
       howToUse={[
         "참여자 이름을 한 줄씩 입력하세요.",

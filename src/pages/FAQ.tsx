@@ -17,7 +17,7 @@ const faqData: FAQItem[] = [
   {
     category: "룰렛·추첨",
     question: "룰렛 결과는 정말 랜덤인가요?",
-    answer: "네, SpinFlow 룰렛은 암호학적으로 안전한 난수 생성기(Web Crypto API)를 사용해 완전히 무작위 결과를 보장합니다. 결과를 조작할 수 있는 방법이 없습니다.",
+    answer: "SpinFlow 룰렛은 브라우저의 Web Crypto API를 사용해 입력된 항목 중 하나를 선택합니다. 일반적인 일상 선택에 적합하지만 공식 추첨이나 금전 분쟁을 위한 독립 감사 시스템은 아닙니다.",
   },
   {
     category: "룰렛·추첨",

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Sparkles } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
+import { getSecureRandomInt } from "@/utils/random";
 
 const ANSWERS = [
   {
@@ -41,7 +42,7 @@ export default function YesNoOracle() {
 
     // Mystical delay
     setTimeout(() => {
-      const randomIdx = Math.floor(Math.random() * ANSWERS.length);
+      const randomIdx = getSecureRandomInt(ANSWERS.length);
       setAnswer(ANSWERS[randomIdx]);
       setIsThinking(false);
     }, 1500);
@@ -50,18 +51,18 @@ export default function YesNoOracle() {
   return (
     <ToolLayout
       title="Yes or No 결정 신탁"
-      description="선택의 갈림길에서 망설여진다면 우주의 기운에 물어보세요. 질문을 입력하면 YES, NO로 답해드립니다."
+      description="선택의 갈림길에서 망설여진다면 가볍게 질문해 보세요. 질문을 입력하면 YES, NO, MAYBE, TRY AGAIN 중 하나를 보여주는 결정 보조 도구입니다."
       keywords="yes or no, 예아니요, 결정장애, 타로, 운세, 랜덤결정, YesNo, Oracle"
       howToUse={[
         "결정하기 어려운 질문을 떠올리세요.",
         "'물어보기' 버튼을 클릭하세요.",
-        "YES 또는 NO 답변을 확인하세요.",
+        "YES, NO, MAYBE, TRY AGAIN 중 하나의 답변을 확인하세요.",
       ]}
       faqs={[
         {
           question: "결과는 완전히 랜덤인가요?",
           answer:
-            "네, 암호학적 난수를 사용해 완전 무작위로 YES/NO를 결정합니다. 어떤 패턴도 없습니다.",
+            "브라우저의 보안 난수 기능으로 네 가지 답변 중 하나를 선택합니다. 이 결과는 질문의 사실이나 미래를 판정하는 예언이 아니며, 특정 결과를 보장하지 않습니다.",
         },
         {
           question: "중요한 결정에 사용해도 되나요?",

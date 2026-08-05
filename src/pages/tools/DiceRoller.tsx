@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Dices, RefreshCw } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
+import { getSecureRandomInt } from "@/utils/random";
 
 // Dice faces (1-6) using grid layout
 const DiceFace = ({ value, rolling }: { value: number; rolling: boolean }) => {
@@ -51,7 +52,7 @@ export default function DiceRoller() {
       setResults(
         Array.from(
           { length: diceCount },
-          () => Math.floor(Math.random() * 6) + 1,
+          () => getSecureRandomInt(6) + 1,
         ),
       );
       count++;
@@ -67,11 +68,11 @@ export default function DiceRoller() {
   return (
     <ToolLayout
       title="온라인 주사위 던지기"
-      description="설치 없이 바로 사용하는 3D 온라인 주사위. 보드게임, 내기, 순서 정하기에 필요한 주사위를 최대 10개까지 동시에 던질 수 있습니다."
+      description="설치 없이 바로 사용하는 온라인 주사위입니다. 1~5개의 6면 주사위를 동시에 굴려 보드게임, 순서 정하기, 수업 활동에 활용할 수 있습니다."
       keywords="주사위, 온라인주사위, 주사위던지기, 주사위게임, 랜덤주사위, Dice Roller"
       howToUse={[
-        "주사위 면 수를 선택하세요 (4면, 6면, 8면, 10면, 12면, 20면).",
-        "굴릴 주사위 개수를 설정하세요.",
+        "굴릴 6면 주사위 개수를 선택하세요 (1~5개).",
+        "주사위 개수와 결과 표시를 확인하세요.",
         "'굴리기' 버튼을 클릭하세요.",
         "결과와 합계를 확인하세요.",
       ]}
@@ -79,12 +80,12 @@ export default function DiceRoller() {
         {
           question: "어떤 종류의 주사위를 지원하나요?",
           answer:
-            "D4(4면), D6(6면), D8(8면), D10(10면), D12(12면), D20(20면) 주사위를 지원합니다. 보드게임과 RPG 게임에 모두 활용 가능합니다.",
+            "현재 화면에서는 6면 주사위를 1~5개까지 동시에 굴립니다. 다른 면 수가 필요한 RPG나 보드게임에서는 규칙에 맞는 별도 주사위를 사용해야 합니다.",
         },
         {
           question: "실제 주사위와 확률이 같나요?",
           answer:
-            "네, 암호학적 난수 생성기를 사용하여 물리적 주사위보다 오히려 더 공정한 확률을 보장합니다.",
+            "각 주사위 결과는 브라우저의 보안 난수 기능으로 선택됩니다. 다만 이 페이지는 공식 추첨이나 금전 분쟁을 위한 감사 시스템이 아니므로 중요한 결과는 별도 절차를 사용하세요.",
         },
       ]}
       relatedTools={[

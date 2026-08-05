@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Coins, RotateCw } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
+import { getSecureRandomInt } from "@/utils/random";
 
 export default function CoinFlip() {
   const [isFlipping, setIsFlipping] = useState(false);
@@ -12,7 +13,7 @@ export default function CoinFlip() {
     setResult(null);
 
     // Random outcome
-    const outcome = Math.random() < 0.5 ? "heads" : "tails";
+    const outcome = getSecureRandomInt(2) === 0 ? "heads" : "tails";
 
     setTimeout(() => {
       setResult(outcome);
@@ -27,7 +28,7 @@ export default function CoinFlip() {
   return (
     <ToolLayout
       title="동전 던지기 (앞면/뒷면)"
-      description="결정이 힘들 땐 동전을 던져보세요! 웹에서 간편하게 즐기는 3D 동전 뒤집기 게임. 앞면(숫자)과 뒷면(그림) 확률 반반!"
+      description="두 후보 중 하나를 정할 때 사용하는 온라인 동전 던지기입니다. 브라우저의 난수로 앞면 또는 뒷면을 보여주며 공식 추첨용은 아닙니다."
       keywords="동전던지기, 동전뒤집기, 코인토스, Coin Flip, 앞면뒷면, 의사결정"
       howToUse={[
         "'던지기' 버튼을 클릭하세요.",
@@ -38,12 +39,12 @@ export default function CoinFlip() {
         {
           question: "앞면과 뒷면의 확률이 정확히 50%인가요?",
           answer:
-            "네, 디지털 동전은 수학적으로 완벽한 50:50 확률을 보장합니다. 실제 동전은 제조 과정의 미세한 무게 차이로 완벽하지 않을 수 있습니다.",
+            "각 실행은 앞면과 뒷면 중 하나를 같은 선택 공간에서 고릅니다. 여러 번 연속으로 같은 면이 나와도 다음 실행의 결과가 바뀌지는 않으며, 공식 추첨이나 금전 분쟁의 증빙 도구는 아닙니다.",
         },
         {
           question: "연속으로 같은 면이 나올 수 있나요?",
           answer:
-            "물론입니다. 각 던지기는 완전히 독립적인 이벤트이므로 이전 결과와 관계없이 항상 50:50입니다.",
+            "가능합니다. 각 실행은 이전 결과를 보정하지 않고 앞면과 뒷면 중 하나를 다시 선택하므로 같은 면이 연속으로 나올 수 있습니다.",
         },
       ]}
       relatedTools={[

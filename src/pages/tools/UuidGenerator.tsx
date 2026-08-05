@@ -3,14 +3,20 @@ import { toast } from "sonner";
 import ToolLayout from "@/components/ToolLayout";
 
 function makeUUID(): string {
-  if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
-    return crypto.randomUUID();
+  const cryptoApi = globalThis.crypto;
+  if (typeof cryptoApi.randomUUID === "function") {
+    return cryptoApi.randomUUID();
   }
-  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
-    const r = (Math.random() * 16) | 0;
-    const v = c === "x" ? r : (r & 0x3) | 0x8;
-    return v.toString(16);
-  });
+
+  const bytes = new Uint8Array(16);
+  cryptoApi.getRandomValues(bytes);
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+
+  const hex = Array.from(bytes, (value) =>
+    value.toString(16).padStart(2, "0"),
+  ).join("");
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
 }
 
 const COUNT_OPTIONS = [1, 3, 5, 10];
@@ -49,7 +55,7 @@ export default function UuidGenerator() {
         },
         {
           question: "UUID v4는 어떻게 생성되나요?",
-          answer: "UUID v4는 암호학적으로 안전한 난수 생성기(CSPRNG)를 사용해 만들어집니다. 이론적으로 중복이 발생할 확률은 극히 낮아(1조분의 1 이하) 전역적으로 고유하다고 볼 수 있습니다. 이 도구는 브라우저의 Web Crypto API를 사용합니다.",
+          answer: "UUID v4는 브라우저의 Web Crypto API에서 난수 바이트를 받아 생성합니다. 올바른 구현에서 우연한 충돌 가능성은 매우 낮지만, 어떤 시스템에서도 절대적인 고유성을 보장하는 표현으로 사용해서는 안 됩니다.",
         },
         {
           question: "GUID와 UUID의 차이는?",

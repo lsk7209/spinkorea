@@ -35,17 +35,17 @@ export default function SEOArticle() {
           공정성 및 알고리즘
         </h2>
         <p className="mb-4">
-          SpinFlow는 암호학적으로 안전한 난수 생성기를 사용합니다.
-          브라우저의 crypto.getRandomValues() API를 활용하여 예측 불가능한 진정한 난수를 생성하며,
+          SpinFlow는 브라우저가 제공하는 보안 난수 생성 기능을 사용합니다.
+          crypto.getRandomValues() API를 활용해 결과를 선택하며,
           모듈로 연산으로 인한 편향을 제거하기 위해 rejection sampling 방식을 사용합니다.
         </p>
         <p className="mb-4">
-          각 항목은 동일한 확률로 선택되며, 룰렛의 각 섹터는 정확히 동일한 크기로 구성됩니다.
-          스핀 애니메이션은 최소 3바퀴 이상 회전하며, 물리 기반 감속을 통해 자연스러운 멈춤 효과를 제공합니다.
+          동일한 항목을 중복 입력하지 않았고 각 항목이 같은 크기의 섹터로 표시되는 경우 항목별 선택 기회가 같도록 계산됩니다.
+          스핀 애니메이션은 결과를 보여주는 시각적 과정이며, 중요한 추첨에는 별도의 운영 기준과 기록이 필요합니다.
         </p>
         <p>
-          모든 난수 생성 과정은 서버 없이 클라이언트에서만 처리되므로,
-          개인정보나 데이터가 외부로 전송되지 않습니다.
+          룰렛의 항목 선택과 결과 계산은 브라우저에서 처리됩니다.
+          다만 방문 분석, 광고, 사용자가 직접 공유한 URL과 같은 별도 데이터 흐름은 개인정보처리방침을 확인해야 합니다.
         </p>
       </section>
 
@@ -95,9 +95,9 @@ export default function SEOArticle() {
               정말 공정한가요?
             </h3>
             <p>
-              네, crypto.getRandomValues()를 사용하여 암호학적으로 안전한 난수를 생성하며,
-              모듈로 편향을 제거하기 위한 알고리즘을 적용합니다.
-              각 항목은 정확히 동일한 확률로 선택됩니다.
+              crypto.getRandomValues()를 사용하여 결과를 선택하며,
+              모듈로 편향을 줄이는 알고리즘을 적용합니다.
+              입력 항목을 동일한 단위로 구성하면 각 항목을 같은 선택 공간에서 다룰 수 있습니다.
             </p>
           </div>
           <div>
@@ -120,7 +120,7 @@ export default function SEOArticle() {
           <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
             <h3 className="font-bold text-slate-950 mb-2">🔒 100% 프라이버시</h3>
             <p className="text-sm text-slate-600">
-              모든 데이터는 브라우저에서만 처리됩니다. 서버에 어떤 정보도 전송되지 않습니다.
+              룰렛 항목과 결과 선택은 브라우저에서 처리됩니다. 분석·광고 설정과 사용자가 직접 공유하는 정보는 별도로 확인해야 합니다.
             </p>
           </div>
           <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
