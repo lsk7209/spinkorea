@@ -9,6 +9,7 @@ const SITE_PAGES_PATH = path.join(ROOT, "src", "data", "site-pages.json");
 const POSTS_PATH = path.join(ROOT, "src", "data", "posts.tsx");
 const CONTENT_PLAN_PATH = path.join(ROOT, "src", "data", "content-plan.generated.json");
 const POST_METADATA_PATH = path.join(ROOT, "src", "data", "post-metadata.generated.json");
+const STATIC_CONTENT_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-generated-content-html.json");
 
 const sitePages = JSON.parse(fs.readFileSync(SITE_PAGES_PATH, "utf8"));
 
@@ -57,7 +58,48 @@ const approvalBodies = {
     "AdSense approval depends on useful content, clear ownership, and policy compliance. This route supports that by explaining the tool, identifying limitations, keeping manual ad slots out of the app surface, providing internal links, and maintaining canonical metadata. The goal is to make the page valuable as a free decision guide as well as an interactive roulette.",
     "When users need a more suitable random method, they should choose the related tool instead of forcing every decision into a wheel. Dice are better for board-game style outcomes, a coin flip is better for two equal options, a random team tool is better for grouping people, and a number generator is better when only a numeric range matters.",
   ],
+  "/lunch-menu": [
+    "점심 메뉴 추천 룰렛은 식사 후보가 많아 결정을 미루는 상황에서 사용할 수 있는 가벼운 선택 도구입니다. 한식, 중식, 일식, 양식, 분식처럼 큰 범주를 먼저 정하거나, 실제 주변 식당 이름을 직접 입력해 모임 구성원이 받아들이기 쉬운 방식으로 결과를 만들 수 있습니다.",
+    "좋은 점심 추첨은 룰렛을 돌리기 전에 조건을 정하는 데서 시작합니다. 예산, 이동 가능 시간, 대기 시간, 알레르기, 채식 여부, 전날 먹은 메뉴, 배달 가능 여부를 먼저 걸러내면 결과가 나와도 다시 논쟁하는 일을 줄일 수 있습니다.",
+    "SpinFlow는 식당 품질이나 영업 시간을 보장하지 않습니다. 결과가 나온 뒤에는 지도, 식당 공지, 배달 앱, 매장 전화 등 실제 운영 정보를 확인해야 합니다. 특히 단체 식사나 예약이 필요한 경우에는 무작위 결과보다 좌석 가능 여부가 우선입니다.",
+    "이 페이지의 목적은 점심 결정을 대신하는 것이 아니라 선택 과정을 짧게 만드는 것입니다. 후보 목록을 공개하고 중복을 제거한 뒤 한 번의 룰렛 결과를 수용하는 방식은 직장, 학교, 가족 모임에서 결정 피로를 줄이는 데 도움이 됩니다.",
+    "광고가 표시되더라도 룰렛 후보, 결과, 저장 기록에는 영향을 주지 않습니다. 중요한 행사는 결과 화면을 캡처하거나 참가자와 함께 확인해 투명성을 남기는 것이 좋습니다.",
+  ],
+  "/random-number": [
+    "랜덤 숫자 뽑기는 번호표, 발표 순서, 간단한 게임, 수업 활동, 이벤트 준비처럼 숫자 하나 또는 여러 개가 필요한 순간에 쓰는 무료 도구입니다. 숫자 범위와 중복 허용 여부를 미리 정하면 결과를 더 쉽게 설명할 수 있습니다.",
+    "이 도구는 브라우저의 난수 기능을 활용해 일반적인 무작위 숫자 선택을 돕습니다. 다만 금전이 걸린 추첨, 법적 증빙이 필요한 복권형 이벤트, 보안 토큰 생성, 암호 키 생성처럼 높은 신뢰성이 필요한 용도에는 별도의 공식 절차나 전문 시스템을 사용해야 합니다.",
+    "공정하게 사용하려면 참가자 수, 번호 범위, 제외 번호, 재추첨 조건을 먼저 합의하세요. 결과가 나온 뒤 조건을 바꾸면 참가자가 결과를 신뢰하기 어렵습니다. 필요한 경우 결과와 시간을 별도로 기록해 두는 것이 좋습니다.",
+    "SpinFlow의 숫자 결과는 사용자의 의사결정을 돕는 참고용입니다. 학교 활동, 소규모 모임, 회의 순서 정하기처럼 저위험 상황에 가장 적합하며, 개인정보나 민감한 식별번호를 입력하지 않는 것이 안전합니다.",
+    "관련 도구로는 주사위, 동전 던지기, 랜덤 팀 편성, 룰렛, 로또 번호 생성기가 있습니다. 숫자가 아니라 사람이나 선택지를 고르는 상황이라면 해당 도구를 쓰는 편이 더 명확합니다.",
+  ],
+  "/tools": [
+    "무료 웹 유틸리티 모음은 SpinFlow의 전체 도구를 한 곳에서 찾기 위한 허브입니다. 랜덤 추첨, 텍스트 처리, 개발자 도구, 날짜·시간 계산, 생활 금융 계산, 건강 관련 계산처럼 서로 다른 작업을 분류해 사용자가 필요한 도구로 바로 이동할 수 있게 합니다.",
+    "도구 허브는 검색용 목록만 늘리는 페이지가 아니라 실제 작업 경로를 연결하는 안내 페이지입니다. 사용자는 글자수 세기에서 문서 길이를 확인하고, JSON 포맷터에서 API 응답을 정리하고, 더치페이 계산기에서 모임 비용을 나누고, D-Day 카운터에서 일정까지 남은 시간을 확인할 수 있습니다.",
+    "각 계산기는 입력값을 바탕으로 브라우저에서 결과를 보여주는 참고용 도구입니다. 세금, 급여, 대출, 건강, 투자처럼 현실의 조건이 복잡한 분야에서는 최종 결정 전에 공식 기관, 계약서, 전문가 안내를 함께 확인해야 합니다.",
+    "개인정보가 필요한 작업은 최소한의 값만 입력하는 것이 좋습니다. 비밀번호 생성기, UUID 생성기, 인코더, QR 코드 도구처럼 복사와 공유가 쉬운 기능은 결과를 어디에 붙여 넣는지 사용자가 직접 관리해야 합니다.",
+    "이 허브는 내부 링크 품질을 높이기 위해 각 도구의 목적을 구분하고, 관련 블로그와 정책 페이지로 이어지는 경로를 유지합니다. AdSense 검토자는 이 페이지에서 사이트가 단일 위젯이 아니라 여러 실용 도구를 제공하는 서비스임을 확인할 수 있습니다.",
+  ],
+  "/faq": [
+    "자주 묻는 질문 페이지는 룰렛, 랜덤 추첨, 계산기, 개인정보, 광고, 오류 제보에 대한 기본 답변을 정리합니다. 새 방문자가 도구를 쓰기 전에 서비스 범위와 한계를 빠르게 확인할 수 있게 하는 신뢰 페이지입니다.",
+    "SpinFlow의 핵심 원칙은 회원가입 없이 바로 쓰는 것입니다. 사용자가 입력한 룰렛 항목이나 계산값은 주로 브라우저에서 처리되며, 서비스 개선을 위한 익명 분석과 광고 관련 쿠키는 개인정보처리방침에서 확인할 수 있습니다.",
+    "FAQ 답변은 도구 결과가 전문 판단을 대체하지 않는다는 점을 반복해 안내합니다. 급여, 대출, 건강, 투자, 법적 절차에 가까운 계산은 편의를 위한 예비 계산이며 최종 판단에는 공식 자료나 전문가 확인이 필요합니다.",
+    "오류 제보는 서비스 품질을 높이는 중요한 경로입니다. 사용자는 문제가 생긴 URL, 입력값, 브라우저, 재현 순서를 함께 보내면 운영자가 더 빠르게 확인할 수 있습니다. 새 도구 제안도 같은 문의 경로로 받을 수 있습니다.",
+    "광고는 도구 결과를 바꾸지 않습니다. Google AdSense 자동 광고가 표시될 수 있지만 룰렛 결과, 계산 결과, 저장된 항목, 공유 URL에 영향을 주지 않는다는 점을 명확히 안내합니다.",
+  ],
+  "/blog": [
+    "SpinFlow 블로그는 룰렛 활용법, 결정 피로 줄이기, 생산성 습관, 텍스트·개발 도구 사용법, 생활 계산 예시를 설명하는 가이드 모음입니다. 단순히 글 제목을 나열하는 곳이 아니라 도구 사용 맥락을 독자에게 연결하는 허브입니다.",
+    "블로그 글은 사용자가 어떤 상황에서 어떤 도구를 선택해야 하는지 설명합니다. 예를 들어 랜덤 팀 편성은 참가자 목록과 재추첨 기준을 먼저 정해야 하고, 글자수 세기는 제출 규칙의 공백 포함 여부를 확인해야 하며, 계산기는 입력 단위와 반올림 기준을 이해해야 합니다.",
+    "이 페이지는 최신 글을 카드로 보여주고 개별 글로 이동하는 내부 링크를 제공합니다. 사이트맵, RSS, llms.txt와 함께 작동해 검색 시스템이 새 글과 오래된 글의 관계를 이해하도록 돕습니다.",
+    "콘텐츠 품질 기준은 반복 문장보다 실제 사용 상황입니다. 좋은 글은 문제 상황, 입력값, 확인 순서, 주의점, 관련 도구를 구분해야 합니다. 단순 키워드 반복이나 짧은 소개만 있는 글은 확장 대상입니다.",
+    "광고가 표시되더라도 블로그의 목적은 도구 사용법과 결정 기준을 설명하는 것입니다. 사용자가 오류나 오래된 설명을 발견하면 문의 페이지로 정정 요청을 보낼 수 있습니다.",
+  ],
 };
+
+const officialReferenceLinks = [
+  ["Google AdSense 정책", "https://support.google.com/adsense/"],
+  ["Google Search Central", "https://developers.google.com/search"],
+  ["개인정보보호위원회", "https://www.pipc.go.kr/"],
+];
 
 const trustPageBodies = {
   "/about": [
@@ -171,6 +213,11 @@ function extractGeneratedPosts() {
       tags: post.tags,
       thumbnail: post.thumbnail,
       qualityScore: post.qualityScore,
+      category: post.category,
+      contentType: post.contentType,
+      primarySourceName: post.primarySourceName,
+      primarySourceUrl: post.primarySourceUrl,
+      internalLinks: post.internalLinks,
       source: "generated",
     }));
 }
@@ -326,6 +373,7 @@ function renderShell(page) {
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
     .join("\n");
   const homeTrustBody = homeBody.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n");
+  const toolGuide = renderToolGuide(page);
 
   return `<main class="prerender-shell">
   <header>
@@ -338,6 +386,7 @@ function renderShell(page) {
     <p>${escapeHtml(page.summary)}</p>
     ${homeTrustBody}
     ${trustBody}
+    ${toolGuide}
   </section>
   <nav aria-label="Site policy links">
     <a href="/about/">About</a>
@@ -349,10 +398,85 @@ function renderShell(page) {
     <h2>관련 무료 도구</h2>
     <ul>${related}</ul>
   </section>
+  <section>
+    <h2>운영 기준 참고 링크</h2>
+    <ul>${officialReferenceLinks
+      .map(([label, href]) => `<li><a href="${href}" rel="noopener noreferrer">${escapeHtml(label)}</a></li>`)
+      .join("")}</ul>
+  </section>
 </main>`;
 }
 
-function renderPostShell(post) {
+function renderToolGuide(page) {
+  if (!page.path.startsWith("/tools/")) return "";
+
+  const pathName = page.path.toLowerCase();
+  const isRandom = ["lotto", "dice", "coin", "random", "team", "yes-no"].some((key) => pathName.includes(key));
+  const isCalculator = ["calculator", "converter", "d-day", "timestamp", "timer", "wage", "salary", "pay", "leave", "interest"].some((key) => pathName.includes(key));
+  const isDeveloper = ["json", "base64", "uri", "case", "diff", "markdown", "css", "color", "qr", "uuid", "lorem", "base-converter"].some((key) => pathName.includes(key));
+  const isText = ["text", "word"].some((key) => pathName.includes(key));
+
+  const category = isRandom
+    ? "무작위 선택 도구"
+    : isDeveloper
+      ? "개발·디자인 보조 도구"
+      : isText
+        ? "텍스트 처리 도구"
+        : isCalculator
+          ? "계산·변환 도구"
+          : "생활·생산성 도구";
+
+  const resultGuide = isRandom
+    ? "무작위 결과는 입력한 선택지와 설정을 기준으로 만들어집니다. 중복 항목을 허용할지 먼저 정하고, 결과가 나온 뒤에는 입력 목록을 바꾸지 않는 것이 기록과 공유에 유리합니다. 금전·법률·안전과 관련된 공식 추첨은 이 도구 대신 해당 기관의 절차를 사용하세요."
+    : isDeveloper
+      ? "변환·생성 결과는 복사하기 전에 원문과 결과를 함께 확인하세요. 특히 인코딩, JSON, Markdown, CSS, QR 결과는 사용하는 서비스의 형식과 길이 제한이 다를 수 있으므로 실제 적용 환경에서 한 번 더 테스트하는 것이 안전합니다."
+      : isText
+        ? "글자 수나 단어 빈도 결과는 공백, 줄바꿈, 기호를 어떻게 계산하는지에 따라 달라질 수 있습니다. 제출처의 글자 수 기준이 따로 있다면 그 기준과 이 도구의 결과를 함께 비교한 뒤 최종 문서를 확인하세요."
+        : isCalculator
+          ? "계산 결과는 사용자가 입력한 값과 선택한 단위·기준을 바탕으로 한 참고값입니다. 급여, 세금, 대출, 임대차, 건강처럼 실제 조건과 최신 기준이 중요한 경우에는 공식 기관 자료와 계약서 또는 전문가 안내를 최종 기준으로 삼으세요."
+          : "도구 결과는 입력값과 브라우저에서 실행된 규칙을 바탕으로 한 참고값입니다. 결과를 공유하거나 실제 행동으로 옮기기 전에는 입력값이 맞는지, 현재 상황에 적용할 수 있는지 확인하세요.";
+
+  const privacyGuide = isDeveloper
+    ? "API 키, 비밀번호, 고객 정보, 내부 문서처럼 공개되면 안 되는 자료는 입력하지 마세요. 필요한 경우에도 작업이 끝난 뒤 입력 내용과 결과를 브라우저 기록이나 공유 문서에 남길지 직접 확인하세요."
+    : "주민등록번호, 연락처, 주소, 건강 기록, 계정 정보처럼 민감한 개인정보는 입력하지 않는 것을 권장합니다. 예시가 필요하면 실제 값 대신 가상의 값으로 테스트하세요.";
+
+  const related = sitePages
+    .filter((item) => item.path !== page.path && item.path.startsWith("/tools/"))
+    .slice(0, 5)
+    .map((item) => `<li><a href="${item.path}">${escapeHtml(item.heading)}</a> — ${escapeHtml(item.summary)}</li>`)
+    .join("");
+
+  return `<div class="tool-guide">
+    <h2>${escapeHtml(page.heading)} 사용 안내</h2>
+    <p>${escapeHtml(page.description)} 이 페이지는 ${escapeHtml(category)}를 찾는 방문자가 기능을 이해하고 결과를 확인할 수 있도록 설명을 함께 제공합니다. 입력값을 넣은 뒤 실행 버튼을 누르고, 표시된 결과를 원래 목적과 비교하는 흐름으로 사용하세요.</p>
+    <p>${escapeHtml(page.summary)} 도구가 바로 필요한 경우에는 위의 인터랙티브 영역을 사용하고, 사용법이나 선택 기준이 더 필요하면 SpinFlow의 관련 도구와 블로그 안내를 함께 확인하세요.</p>
+    <h2>${escapeHtml(page.heading)} 사용 순서</h2>
+    <ol>
+      <li>무엇을 확인하거나 결정하려는지 먼저 정하고 필요한 입력값만 준비합니다.</li>
+      <li>화면의 입력란과 단위, 범위, 옵션을 실제 상황에 맞게 선택합니다.</li>
+      <li>실행 또는 계산 버튼을 누르고 결과가 예상한 형식으로 표시되는지 확인합니다.</li>
+      <li>결과를 복사하거나 공유하기 전에 원자료와 비교하고, 중요한 경우 별도로 기록합니다.</li>
+    </ol>
+    <h2>결과 해석과 주의사항</h2>
+    <p>${escapeHtml(resultGuide)}</p>
+    <h2>입력 정보와 개인정보</h2>
+    <p>${escapeHtml(privacyGuide)}</p>
+    <h2>관련 도구로 이어가기</h2>
+    <ul>${related}</ul>
+  </div>`;
+}
+
+function renderPostShell(post, staticContent = "") {
+  const internalLinks = (post.internalLinks ?? [])
+    .map((link) => `<li><a href="${escapeHtml(link.path)}">${escapeHtml(link.label)}</a></li>`)
+    .join("");
+  const reference = post.primarySourceUrl
+    ? `<li><a href="${escapeHtml(post.primarySourceUrl)}" rel="noopener noreferrer">${escapeHtml(post.primarySourceName ?? "공식 참고 자료")}</a></li>`
+    : "";
+  const articleContent = staticContent
+    ? `<section class="article-content-light" aria-label="${escapeHtml(post.title)} 본문">${staticContent}</section>`
+    : `<section><h2>글 요약</h2><p>${escapeHtml(post.description)} 본문은 브라우저에서도 전체 내용과 함께 표시됩니다.</p></section>`;
+
   return `<article class="prerender-shell">
   <header>
     <p>SpinFlow 블로그 · ${getPublishDate(post)}</p>
@@ -363,7 +487,12 @@ function renderPostShell(post) {
     <h2>글 요약</h2>
     <p>${escapeHtml(post.description)} 본문은 브라우저에서 전체 내용과 함께 표시됩니다.</p>
   </section>
-</article>`;
+  ${articleContent}
+  <section>
+    <h2>관련 도구와 참고 자료</h2>
+    <ul>${internalLinks}${reference}</ul>
+  </section>
+ </article>`;
 }
 
 function injectHtml(template, route) {
@@ -442,6 +571,9 @@ function writeDistAssets(posts) {
   }
 
   const template = fs.readFileSync(templatePath, "utf8");
+  const staticContentBySlug = fs.existsSync(STATIC_CONTENT_PATH)
+    ? JSON.parse(fs.readFileSync(STATIC_CONTENT_PATH, "utf8"))
+    : {};
   const pageRoutes = sitePages.map((page) => ({
     ...page,
     structuredData: structuredDataForPage(page),
@@ -461,7 +593,7 @@ function writeDistAssets(posts) {
       inLanguage: "ko-KR",
     },
     robots: isIndexablePost(post) ? undefined : "noindex,follow",
-    body: renderPostShell(post),
+    body: renderPostShell(post, staticContentBySlug[post.slug]),
   }));
 
   for (const route of [...pageRoutes, ...postRoutes]) {

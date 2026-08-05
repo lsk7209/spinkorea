@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-assets.mjs --public && tsc && vite build && node scripts/generate-assets.mjs --dist",
+    "build": "node scripts/generate-assets.mjs --public && tsc && vite build && node scripts/render-generated-content.mjs && node scripts/generate-assets.mjs --dist",
     "type-check": "tsc --noEmit",
     "lint": "tsc --noEmit",
     "content:generate": "node scripts/generate-content-plan.mjs",
