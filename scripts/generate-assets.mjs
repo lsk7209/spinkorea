@@ -673,6 +673,12 @@ function renderShell(page) {
     .join("\n");
   const homeTrustBody = homeBody.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n");
   const toolGuide = renderToolGuide(page);
+  const guideToc = approvalHeading
+    ? `<li><a href="#page-guide">${escapeHtml(approvalHeading)}</a></li>`
+    : "";
+  const toolToc = toolGuide
+    ? `<li><a href="#tool-guide">${escapeHtml(page.heading)} 사용 안내</a></li>`
+    : "";
 
   return `<main class="prerender-shell">
   <header>
@@ -680,10 +686,20 @@ function renderShell(page) {
     <h1>${escapeHtml(page.heading)}</h1>
     <p>${escapeHtml(page.description)}</p>
   </header>
+  <nav class="toc" aria-label="페이지 목차">
+    <strong>페이지 목차</strong>
+    <ul>
+      <li><a href="#page-summary">페이지 요약</a></li>
+      ${guideToc}
+      ${toolToc}
+      <li><a href="#related-tools">관련 무료 도구</a></li>
+      <li><a href="#reference-links">운영 기준 참고 링크</a></li>
+    </ul>
+  </nav>
   <section>
-    <h2>페이지 요약</h2>
+    <h2 id="page-summary">페이지 요약</h2>
     <p>${escapeHtml(page.summary)}</p>
-    ${approvalHeading ? `<h2>${escapeHtml(approvalHeading)}</h2>` : ""}
+    ${approvalHeading ? `<h2 id="page-guide">${escapeHtml(approvalHeading)}</h2>` : ""}
     ${homeTrustBody}
     ${trustBody}
     ${toolGuide}
@@ -694,11 +710,11 @@ function renderShell(page) {
     <a href="/privacy/">Privacy Policy</a>
     <a href="/terms/">Terms of Use</a>
   </nav>
-  <section>
+  <section id="related-tools">
     <h2>관련 무료 도구</h2>
     <ul>${related}</ul>
   </section>
-  <section>
+  <section id="reference-links">
     <h2>운영 기준 참고 링크</h2>
     <ul>${officialReferenceLinks
       .map(([label, href]) => `<li><a href="${href}" rel="noopener noreferrer">${escapeHtml(label)}</a></li>`)
@@ -751,7 +767,7 @@ function renderToolGuide(page) {
     ${details.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n")}`
     : "";
 
-  return `<div class="tool-guide">
+  return `<div id="tool-guide" class="tool-guide">
     <h2>${escapeHtml(page.heading)} 사용 안내</h2>
     <p>${escapeHtml(page.description)} 이 페이지는 ${escapeHtml(category)}를 찾는 방문자가 기능을 이해하고 결과를 확인할 수 있도록 설명을 함께 제공합니다. 입력값을 넣은 뒤 실행 버튼을 누르고, 표시된 결과를 원래 목적과 비교하는 흐름으로 사용하세요.</p>
     <p>${escapeHtml(page.summary)} 도구가 바로 필요한 경우에는 위의 인터랙티브 영역을 사용하고, 사용법이나 선택 기준이 더 필요하면 SpinFlow의 관련 도구와 블로그 안내를 함께 확인하세요.</p>
@@ -780,8 +796,8 @@ function renderPostShell(post, staticContent = "") {
     ? `<li><a href="${escapeHtml(post.primarySourceUrl)}" rel="noopener noreferrer">${escapeHtml(post.primarySourceName ?? "공식 참고 자료")}</a></li>`
     : "";
   const articleContent = staticContent
-    ? `<section class="article-content-light" aria-label="${escapeHtml(post.title)} 본문">${staticContent}</section>`
-    : `<section><h2>글 요약</h2><p>${escapeHtml(post.description)} 본문은 브라우저에서도 전체 내용과 함께 표시됩니다.</p></section>`;
+    ? `<section id="post-content" class="article-content-light" aria-label="${escapeHtml(post.title)} 본문">${staticContent}</section>`
+    : `<section id="post-content"><h2>글 본문</h2><p>${escapeHtml(post.description)} 본문은 브라우저에서도 전체 내용과 함께 표시됩니다.</p></section>`;
 
   return `<article class="prerender-shell">
   <header>
@@ -789,12 +805,20 @@ function renderPostShell(post, staticContent = "") {
     <h1>${escapeHtml(post.title)}</h1>
     <p>${escapeHtml(post.description)}</p>
   </header>
-  <section>
+  <nav class="toc" aria-label="글 목차">
+    <strong>글 목차</strong>
+    <ul>
+      <li><a href="#post-summary">글 요약</a></li>
+      <li><a href="#post-content">본문</a></li>
+      <li><a href="#post-related">관련 도구와 참고 자료</a></li>
+    </ul>
+  </nav>
+  <section id="post-summary">
     <h2>글 요약</h2>
     <p>${escapeHtml(post.description)} 본문은 브라우저에서 전체 내용과 함께 표시됩니다.</p>
   </section>
   ${articleContent}
-  <section>
+  <section id="post-related">
     <h2>관련 도구와 참고 자료</h2>
     <ul>${internalLinks}${reference}</ul>
   </section>
