@@ -107,6 +107,7 @@ const approvalBodies = {
     "The static guidance also helps accessibility and resilience. A visitor can read the page purpose, warnings, policy links, and related routes even before the animated wheel is available. This is important for slow devices, text-only crawlers, and review systems that evaluate the HTML response rather than completing every interactive action.",
     "AdSense approval depends on useful content, clear ownership, and policy compliance. This route supports that by explaining the tool, identifying limitations, keeping manual ad slots out of the app surface, providing internal links, and maintaining canonical metadata. The goal is to make the page valuable as a free decision guide as well as an interactive roulette.",
     "When users need a more suitable random method, they should choose the related tool instead of forcing every decision into a wheel. Dice are better for board-game style outcomes, a coin flip is better for two equal options, a random team tool is better for grouping people, and a number generator is better when only a numeric range matters.",
+    "If a list contains the same label more than once, those entries can occupy separate positions and change the practical weight of that label. Decide whether repeated entries are intentional before spinning, show the final list to participants, and record the exact list if the result needs to be explained later. The page can help with the selection step, but it does not independently inspect whether the organizer's list is complete or unbiased.",
   ],
   "/lunch-menu": [
     "점심 메뉴 추천 룰렛은 식사 후보가 많아 결정을 미루는 상황에서 사용할 수 있는 가벼운 선택 도구입니다. 한식, 중식, 일식, 양식, 분식처럼 큰 범주를 먼저 정하거나, 실제 주변 식당 이름을 직접 입력해 모임 구성원이 받아들이기 쉬운 방식으로 결과를 만들 수 있습니다.",
@@ -134,6 +135,7 @@ const approvalBodies = {
     "점심 모임의 만족도는 음식뿐 아니라 대화 시간과 이동 부담에도 영향을 받습니다. 선택 전에 이동 가능한 거리와 식사 종료 시각을 정하고, 결과가 그 범위를 벗어나면 룰렛보다 현실적인 조건을 우선하세요.",
     "친구나 동료에게 링크를 공유할 때는 후보 목록에 공개하면 안 되는 정보가 들어 있지 않은지 확인하세요. 메뉴와 식당 이름만 공유해도 충분하며, 개인의 건강·식단 사유를 후보 이름에 직접 적을 필요는 없습니다.",
     "이 페이지의 콘텐츠는 메뉴 선택 과정을 돕기 위한 안내입니다. 특정 음식이 건강에 좋다거나 특정 식당을 추천한다는 의학적·상업적 판단을 제공하지 않으므로, 알레르기와 건강 관련 선택은 전문 안내와 실제 성분표를 기준으로 결정하세요.",
+    "점심 후보를 정할 때는 후보 수보다 실제로 방문할 수 있는 선택지만 남기는 것이 중요합니다. 영업 여부, 이동 거리, 대기 시간, 예산을 확인한 뒤 목록을 확정하고, 결과가 나온 다음 다시 조건을 바꾸지 않도록 재추첨 허용 사유를 짧게 기록해 두면 모임 구성원에게 과정을 설명하기 쉽습니다.",
   ],
   "/random-number": [
     "랜덤 숫자 뽑기는 번호표, 발표 순서, 간단한 게임, 수업 활동, 이벤트 준비처럼 숫자 하나 또는 여러 개가 필요한 순간에 쓰는 무료 도구입니다. 숫자 범위와 중복 허용 여부를 미리 정하면 결과를 더 쉽게 설명할 수 있습니다.",
@@ -249,6 +251,7 @@ const approvalBodies = {
     "콘텐츠를 읽는 중 페이지가 이동하거나 기능이 바뀌었다면 게시일만으로 최신성을 판단하지 말고 현재 화면을 기준으로 확인하세요. 특히 금융 기준, 건강 정보, 브라우저 지원, 개인정보 정책은 변경 가능성이 높아 공식 안내를 함께 봐야 합니다.",
     "블로그의 관련 링크는 독자에게 다음 확인 경로를 제공하기 위한 것입니다. 글에서 제시한 원칙을 실제 입력에 적용하고 결과를 검토한 뒤, 더 전문적인 판단이 필요한 경우 해당 기관이나 전문가에게 질문할 수 있도록 연결합니다.",
     "좋은 사용 기록은 거창한 감사 보고서가 아니어도 됩니다. 실행 날짜, 입력 조건, 결과, 재실행 여부를 짧게 적어 두면 모임과 업무에서 결과를 다시 확인할 수 있고, 오류가 생겼을 때 문제를 재현하기도 쉽습니다.",
+    "FAQ의 답변은 모든 화면과 개인 환경의 결과를 대신 판정하지 않습니다. 브라우저 확장 프로그램, 입력 방식, 광고·분석 설정, 외부 서비스의 최신 정책에 따라 보이는 내용이나 처리 방식이 달라질 수 있으므로, 중요한 작업에서는 현재 페이지의 안내와 연결된 정책 문서를 함께 확인하세요.",
   ],
 };
 
@@ -317,6 +320,7 @@ const toolGuideDetails = {
       "주사위의 개별 결과를 팀이나 순서에 연결할 때는 참가자 목록의 범위가 주사위 결과와 맞는지 확인하세요. 여섯 명이 아닌데 1부터 6까지를 쓰면 일부 숫자의 의미가 달라질 수 있으므로 대응 규칙을 먼저 정해야 합니다.",
       "같은 화면을 여러 명이 보는 상황에서는 한 사람만 버튼을 누르고 결과를 읽어 주는 방식이 좋습니다. 여러 기기에서 동시에 실행하면 서로 다른 결과가 생길 수 있으므로, 실행 주체와 확정 결과를 미리 정하세요.",
       "이 페이지의 결과는 화면에서 빠르게 확인하는 용도입니다. 장시간 보관해야 하는 게임 기록이나 공식 경기 결과는 게임의 기록지, 주최자의 기록 시스템, 참가자 확인 절차를 함께 사용하세요.",
+      "주사위 결과를 순서나 점수에 연결할 때는 낮은 숫자와 높은 숫자의 의미를 먼저 정하세요. 예를 들어 1이 선공인지 6이 선공인지에 따라 같은 화면 결과의 적용이 달라질 수 있습니다. 실행 전에 대응표를 공개하고, 재굴림이 필요한 조건과 최종 결과를 기록하면 참가자가 결과를 다시 확인하기 쉽습니다.",
     ],
   },
   "/tools/coin-flip": {
@@ -343,6 +347,7 @@ const toolGuideDetails = {
       "앞면과 뒷면에 연결할 후보는 실행 버튼을 누르기 전에 화면이나 메모에 적어 두세요. 결과가 나온 뒤 의미를 정하면 선택자에게 유리한 방식으로 규칙을 바꾼 것처럼 보일 수 있습니다.",
       "동전 결과의 통계를 화면에서 보더라도 기록은 현재 브라우저 화면의 실행 횟수에 한정됩니다. 다른 기기나 새로고침 뒤의 결과가 자동으로 합쳐지지 않을 수 있으므로 장기 통계처럼 사용하지 마세요.",
       "공식 행사의 선공을 정하는 경우에는 행사 규정과 참가자 합의를 우선하세요. 이 도구를 사용했다는 사실보다 실행 전 공개한 규칙, 결과 확인, 이의 제기 방법이 더 중요할 수 있습니다.",
+      "두 후보 중 한쪽을 선택할 수 없는 사람이 있다면 동전 결과를 억지로 적용하지 마세요. 먼저 예산, 거리, 건강, 일정 같은 현실 조건을 확인하고 실제로 남은 후보만 비교해야 합니다. 동전은 조건을 검토한 뒤에도 선택이 남아 있을 때 결정을 짧게 끝내는 보조 도구로 사용하는 편이 적절합니다.",
     ],
   },
   "/tools/yes-no-oracle": {
