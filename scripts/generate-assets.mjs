@@ -8,6 +8,7 @@ const TODAY = formatKstDate(BUILD_NOW);
 const SITE_PAGES_PATH = path.join(ROOT, "src", "data", "site-pages.json");
 const POSTS_PATH = path.join(ROOT, "src", "data", "posts.tsx");
 const CONTENT_PLAN_PATH = path.join(ROOT, "src", "data", "content-plan.generated.json");
+const LEGACY_POST_METADATA_PATH = path.join(ROOT, "src", "data", "legacy-post-metadata.json");
 const POST_METADATA_PATH = path.join(ROOT, "src", "data", "post-metadata.generated.json");
 const STATIC_CONTENT_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-generated-content-html.json");
 
@@ -531,8 +532,21 @@ function extractGeneratedPosts() {
     }));
 }
 
+function extractLegacyPosts() {
+  if (!fs.existsSync(LEGACY_POST_METADATA_PATH)) {
+    return [];
+  }
+
+  const posts = JSON.parse(fs.readFileSync(LEGACY_POST_METADATA_PATH, "utf8"));
+  if (!Array.isArray(posts)) {
+    throw new Error("legacy-post-metadata.json must contain an array.");
+  }
+
+  return posts;
+}
+
 function extractAllPosts() {
-  return [...extractCuratedPosts(), ...extractGeneratedPosts()];
+  return [...extractCuratedPosts(), ...extractGeneratedPosts(), ...extractLegacyPosts()];
 }
 
 function mergeWithExistingMetadata(posts) {
