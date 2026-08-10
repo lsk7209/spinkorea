@@ -10,21 +10,22 @@ Improve the next AdSense-readiness candidate without changing any Google account
 - Public discovery on 2026-08-11 found one legacy route, `/blog/fuel-economy-guide`, returning the homepage with HTTP 200 and an apex canonical. The slug was retained as generated content but had no emitted static route.
 - The local repair restores that exact legacy route as an intentional, self-canonical `noindex,follow` page. It remains excluded from sitemap, RSS, llms, blog discovery, and IndexNow inputs.
 
-## Completed work awaiting deployment
+## Completed and deployed work
 
 - Added `src/data/legacy-post-metadata.json` with only `fuel-economy-guide`.
 - Updated `scripts/generate-assets.mjs` and regenerated `src/data/post-metadata.generated.json` so the one legacy record is emitted safely.
 - Expanded `scripts/verify-search-scope.mjs` with exact route, canonical, robots, and discovery-exclusion checks.
 - Fresh local validation passed: `npm run type-check`, `npm run build`, `node scripts/verify-search-scope.mjs` (9 assertions), `git diff --check`, and independent 13-assertion build-output verification.
+- Focused commit `b60022b` was pushed to `origin/main`. After the Git-connected deployment propagated, a public fetch confirmed HTTP 200, self-canonical `https://spinkorea.kr/blog/fuel-economy-guide`, and `noindex,follow`. The live sitemap, RSS, and llms feed each return HTTP 200 and do not contain the legacy slug.
 
 ## Side effects and rollback
 
 - No CMS, SSH, AdSense, GSC, or index-submission action has been made.
-- The pending source change affects one legacy URL only. Roll back by reverting its focused Git commit and allowing the Git-connected deployment to finish; then rerun the scope verifier.
+- The source change affects one legacy URL only. Roll back by reverting focused commit `b60022b`, then wait for the Git-connected deployment and rerun the scope verifier.
 
 ## Single next step
 
-Commit and push only the focused repair files on `main`, wait for the Git-connected production deployment, then verify the public legacy route, its canonical/robots directives, and its continued discovery exclusion.
+Treat this priority repair as complete. Choose the next additional-ten site only from fresh, site-specific evidence; do not change any AdSense review or account state.
 
 # Prior handoff — 2026-07-29 KST
 
