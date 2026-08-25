@@ -92,6 +92,29 @@ export default function About() {
             </Link>
           </div>
         </section>
+
+        <section className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-950 mb-4">콘텐츠 편집·검토 기준</h2>
+          <div className="space-y-4 text-sm leading-7 text-slate-600">
+            <p>
+              SpinFlow 편집팀은 공개 글과 도구 설명을 작성할 때 실제 사용 목적, 계산 또는 선택 과정의 한계,
+              사용자가 결과를 다시 확인해야 하는 상황을 함께 안내합니다. 공식 기준이 있는 내용은 정부기관이나
+              서비스 제공자의 최신 안내를 우선 확인합니다.
+            </p>
+            <p>
+              검토되지 않은 자동 생성 초안은 검색 결과와 블로그 목록에 노출하지 않습니다. 공개된 설명에서 오류나
+              오래된 정보를 발견하면 해당 페이지 주소와 수정 근거를 보내 주세요. 확인 후 내용과 수정일을 갱신합니다.
+            </p>
+            <div className="flex flex-wrap gap-3 pt-2">
+              <Link to="/blog" className="rounded-full border border-slate-200 px-5 py-3 font-bold text-slate-700 hover:bg-slate-100 transition-all">
+                검토된 글 보기
+              </Link>
+              <Link to="/contact" className="rounded-full border border-slate-200 px-5 py-3 font-bold text-slate-700 hover:bg-slate-100 transition-all">
+                오류·수정 요청
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );

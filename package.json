@@ -13,6 +13,7 @@
     "preview": "vite preview",
     "audit:gsc": "node scripts/gsc-audit.mjs",
     "audit:adsense": "node scripts/adsense-audit.mjs",
+    "audit:adsense-readiness": "node scripts/audit-adsense-readiness.mjs",
     "notify:google": "node scripts/gsc-sitemap-submit.mjs",
     "notify:indexnow": "node scripts/indexnow-submit.mjs"
   },

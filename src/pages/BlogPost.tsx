@@ -336,6 +336,19 @@ export default function BlogPost() {
             <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light">
               {post.description}
             </p>
+            {post.source === "curated" && (
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm text-slate-500">
+                <span>작성·검토: SpinFlow 편집팀</span>
+                <span aria-hidden="true">·</span>
+                <Link to="/about" className="font-medium text-cyan-700 hover:underline">
+                  편집 원칙
+                </Link>
+                <span aria-hidden="true">·</span>
+                <Link to="/contact" className="font-medium text-cyan-700 hover:underline">
+                  오류·수정 요청
+                </Link>
+              </div>
+            )}
           </header>
 
           {post.thumbnail && (
