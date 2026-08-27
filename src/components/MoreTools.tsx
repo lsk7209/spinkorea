@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getRecentTools } from "@/hooks/useRecentTools";
 import { Search } from "lucide-react";
+import { trackEvent } from "@/utils/analytics";
 import {
   Dice5,
   Coins,
@@ -55,7 +56,7 @@ import {
   BarChart3,
 } from "lucide-react";
 
-const TOOLS = [
+export const TOOLS = [
   // 랜덤
   { path: "/tools/lotto-generator", name: "로또 번호 생성", icon: Dices, desc: "나만의 행운 번호 추첨", color: "text-yellow-400", cat: "랜덤" },
   { path: "/tools/dice-roller", name: "주사위 던지기", icon: Dice5, desc: "1~5개 6면 주사위", color: "text-red-400", cat: "랜덤" },
@@ -163,6 +164,11 @@ export default function MoreTools({ showSearch = false }: MoreToolsProps) {
                 <Link
                   key={path}
                   to={path}
+                  onClick={() => trackEvent('internal_tool_clicked', {
+                    source_path: '/tools',
+                    destination_path: path,
+                    placement: 'recent_tools',
+                  })}
                   className="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:border-neon-primary/50 hover:text-white transition-all"
                 >
                   <tool.icon size={13} className={tool.color} />
@@ -184,6 +190,14 @@ export default function MoreTools({ showSearch = false }: MoreToolsProps) {
               placeholder="도구 검색..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
+              onBlur={() => {
+                if (query.trim()) {
+                  trackEvent('tool_search_used', {
+                    result_count: filtered.length,
+                    category: cat,
+                  });
+                }
+              }}
               className="w-full bg-white/5 border border-white/10 rounded-xl pl-9 pr-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-neon-primary/50 transition-colors"
             />
           </div>
@@ -193,7 +207,10 @@ export default function MoreTools({ showSearch = false }: MoreToolsProps) {
               <button
                 key={c}
                 type="button"
-                onClick={() => setCat(c)}
+                onClick={() => {
+                  setCat(c);
+                  trackEvent('tool_category_selected', { category: c });
+                }}
                 className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${cat === c ? "bg-neon-primary text-black" : "bg-white/5 text-gray-400 hover:bg-white/10 border border-white/10"}`}
               >
                 {c}
@@ -211,6 +228,11 @@ export default function MoreTools({ showSearch = false }: MoreToolsProps) {
             <Link
               key={tool.path}
               to={tool.path}
+              onClick={() => trackEvent('internal_tool_clicked', {
+                source_path: showSearch ? '/tools' : 'embedded_tools',
+                destination_path: tool.path,
+                placement: 'tool_grid',
+              })}
               className="group relative overflow-hidden card card-hover p-4 flex flex-col items-start gap-3"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-neon-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />

@@ -3,6 +3,7 @@ import { Users, Check, Share2, Copy } from "lucide-react";
 import { toast } from "sonner";
 import ToolLayout from "@/components/ToolLayout";
 import { getSecureRandomInt } from "@/utils/random";
+import { trackToolCompleted } from "@/utils/analytics";
 
 export default function RandomTeam() {
   const [names, setNames] = useState("");
@@ -40,6 +41,7 @@ export default function RandomTeam() {
 
       setTeams(newTeams);
       setIsGenerating(false);
+      trackToolCompleted("/tools/random-team", "team_assignment");
       toast.success("팀 구성이 완료되었습니다!");
     }, 800);
   };

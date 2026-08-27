@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Dices, RefreshCw } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
 import { getSecureRandomInt } from "@/utils/random";
+import { trackToolCompleted } from "@/utils/analytics";
 
 // Dice faces (1-6) using grid layout
 const DiceFace = ({ value, rolling }: { value: number; rolling: boolean }) => {
@@ -59,6 +60,7 @@ export default function DiceRoller() {
       if (count > 10) {
         clearInterval(interval);
         setIsRolling(false);
+        trackToolCompleted("/tools/dice-roller", "dice_roll");
       }
     }, 80);
   };

@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import ToolLayout from "@/components/ToolLayout";
+import { trackToolCompleted } from "@/utils/analytics";
 
 export default function JsonFormatter() {
   const [input, setInput] = useState("");
@@ -22,6 +23,7 @@ export default function JsonFormatter() {
       const parsed = JSON.parse(input);
       setOutput(JSON.stringify(parsed, null, space));
       setError(null);
+      trackToolCompleted("/tools/json-formatter", "formatted_json");
       toast.success("포맷팅이 완료되었습니다.");
     } catch (error) {
       setError(error instanceof Error ? error.message : "JSON 파싱 오류가 발생했습니다.");
@@ -35,6 +37,7 @@ export default function JsonFormatter() {
       const parsed = JSON.parse(input);
       setOutput(JSON.stringify(parsed));
       setError(null);
+      trackToolCompleted("/tools/json-formatter", "minified_json");
       toast.success("압축(Minify)이 완료되었습니다.");
     } catch (error) {
       setError(error instanceof Error ? error.message : "JSON 파싱 오류가 발생했습니다.");

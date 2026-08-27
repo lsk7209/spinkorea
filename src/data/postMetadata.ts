@@ -1,4 +1,4 @@
-import postMetadata from "./post-metadata.generated.json";
+import postMetadata from "./post-metadata.runtime.generated.json";
 
 export interface BlogPostMeta {
   slug: string;

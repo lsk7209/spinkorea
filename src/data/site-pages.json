@@ -7,7 +7,7 @@
     "summary": "SpinFlow는 결정이 필요한 순간에 룰렛, 추첨, 계산, 변환 도구를 바로 제공하는 무료 유틸리티 사이트입니다.",
     "changefreq": "weekly",
     "priority": 1,
-    "lastmod": "2026-05-05"
+    "lastmod": "2026-08-28"
   },
   {
     "path": "/spinflow",
@@ -17,7 +17,7 @@
     "summary": "항목을 직접 입력하거나 템플릿을 선택해 공정한 룰렛 결과를 만들 수 있습니다.",
     "changefreq": "weekly",
     "priority": 0.9,
-    "lastmod": "2026-05-05"
+    "lastmod": "2026-08-28"
   },
   {
     "path": "/lunch-menu",
@@ -27,7 +27,7 @@
     "summary": "직장인과 모임을 위한 점심 메뉴 선택 도구입니다.",
     "changefreq": "weekly",
     "priority": 0.8,
-    "lastmod": "2026-05-05"
+    "lastmod": "2026-08-28"
   },
   {
     "path": "/random-number",
@@ -41,28 +41,28 @@
   },
   {
     "path": "/tools",
-    "title": "무료 웹 유틸리티 모음 | SpinFlow 도구",
-    "description": "로또 번호 생성, 주사위, 글자수 세기, JSON 포맷터, QR 코드 등 자주 쓰는 무료 웹 도구 모음입니다.",
+    "title": "무료 유틸리티 모음 51종 | SpinFlow — 계산기·변환·랜덤 도구",
+    "description": "연봉 실수령액·할인율·더치페이·투자수익률 계산기, 시급·대출·복리·퇴직금 계산기, 단어 빈도 분석기, UUID 생성기, 이상 체중 계산기 등 51가지 무료 웹 도구를 한 곳에서 사용하세요.",
     "heading": "무료 웹 유틸리티 모음",
     "summary": "랜덤 추첨, 텍스트, 개발, 디자인, 계산 도구를 한 곳에서 사용할 수 있습니다.",
     "changefreq": "weekly",
     "priority": 0.9,
-    "lastmod": "2026-05-05"
+    "lastmod": "2026-08-28"
   },
   {
     "path": "/about",
-    "title": "SpinFlow 소개 | 무료 결정 도구와 유틸리티",
-    "description": "SpinFlow는 일상의 결정과 반복 작업을 줄여주는 무료 온라인 룰렛 및 유틸리티 서비스입니다.",
+    "title": "SpinFlow 소개 | 무료 결정 도구·생활 유틸리티 51종",
+    "description": "SpinFlow는 룰렛, 시급·대출·전월세·복리 계산기, 글자수 세기 등 일상 결정과 반복 작업을 돕는 무료 웹 유틸리티 서비스입니다.",
     "heading": "SpinFlow 소개",
     "summary": "설치 없이 사용할 수 있는 결정 도구와 생활 유틸리티를 제공합니다.",
     "changefreq": "monthly",
     "priority": 0.7,
-    "lastmod": "2026-05-05"
+    "lastmod": "2026-08-28"
   },
   {
     "path": "/faq",
-    "title": "자주 묻는 질문 | SpinFlow",
-    "description": "SpinFlow 룰렛, 유틸리티, 개인정보, 사용법에 대한 자주 묻는 질문과 답변입니다.",
+    "title": "자주 묻는 질문 (FAQ) | SpinFlow",
+    "description": "SpinFlow 룰렛, 시급·대출·전월세 계산기, 유틸리티 도구 이용에 관한 자주 묻는 질문과 답변입니다.",
     "heading": "자주 묻는 질문",
     "summary": "서비스 이용 전 확인할 수 있는 핵심 질문을 정리했습니다.",
     "changefreq": "monthly",
@@ -101,8 +101,8 @@
   },
   {
     "path": "/blog",
-    "title": "SpinFlow 블로그 | 결정·생산성·유틸리티 가이드",
-    "description": "결정 피로, 생산성, 보안, 개발자 도구, 생활 유틸리티 활용법을 다루는 SpinFlow 블로그입니다.",
+    "title": "블로그 - 룰렛·생산성·도구 활용 가이드 | SpinFlow",
+    "description": "룰렛 활용법, 결정 심리학, 생산성 팁, 온라인 도구 가이드를 정리한 SpinFlow 블로그입니다.",
     "heading": "SpinFlow 블로그",
     "summary": "결정과 생산성을 돕는 실용 가이드를 제공합니다.",
     "changefreq": "weekly",

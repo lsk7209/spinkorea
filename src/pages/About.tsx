@@ -19,6 +19,7 @@ export default function About() {
     description:
       "SpinFlow는 선택을 빠르게 정리하는 랜덤 결정 도구와 일상 계산 유틸리티를 제공하는 무료 웹 서비스입니다.",
     url: `${SITE_ORIGIN}/about`,
+    mainEntity: { "@id": `${SITE_ORIGIN}/#organization` },
   };
 
   return (
@@ -37,7 +38,7 @@ export default function About() {
             선택을 줄이고 실행을 빠르게 만드는 SpinFlow
           </h1>
           <p className="max-w-3xl text-lg leading-8 text-slate-600">
-            SpinFlow는 점심 메뉴, 순서 정하기, 추첨, 시급·대출·전월세 계산처럼
+            SpinFlow(스핀코리아)는 점심 메뉴, 순서 정하기, 추첨, 시급·대출·전월세 계산처럼
             작지만 반복되는 결정을 빠르게 처리하도록 만든 무료 웹 서비스입니다.
             회원가입 없이 도구를 열고 바로 사용할 수 있습니다.
           </p>

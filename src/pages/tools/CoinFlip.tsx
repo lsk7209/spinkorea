@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Coins, RotateCw } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
 import { getSecureRandomInt } from "@/utils/random";
+import { trackToolCompleted } from "@/utils/analytics";
 
 export default function CoinFlip() {
   const [isFlipping, setIsFlipping] = useState(false);
@@ -22,6 +23,7 @@ export default function CoinFlip() {
         [outcome]: prev[outcome] + 1,
       }));
       setIsFlipping(false);
+      trackToolCompleted("/tools/coin-flip", "coin_flip");
     }, 1000); // 1s animation
   };
 

@@ -7,7 +7,7 @@ function fmt(n: number) {
 }
 
 export default function HourlyWageCalculator() {
-  const [hourlyWage, setHourlyWage] = useState("10030");
+  const [hourlyWage, setHourlyWage] = useState("10320");
   const [hoursPerDay, setHoursPerDay] = useState("8");
   const [daysPerMonth, setDaysPerMonth] = useState("22");
 
@@ -18,6 +18,7 @@ export default function HourlyWageCalculator() {
   const daily = hourly * hpd;
   const monthly = daily * dpm;
   const annual = monthly * 12;
+  const standardMonthly = hourly * 209;
 
   // Reverse: monthly salary → hourly
   const [monthlySalary, setMonthlySalary] = useState("");
@@ -30,15 +31,18 @@ export default function HourlyWageCalculator() {
   return (
     <ToolLayout
       title="시급 계산기 | 일급·월급·연봉 자동 계산"
-      description="시급을 입력하면 일급, 월급, 연봉을 자동으로 계산합니다. 월급에서 시급도 역산할 수 있습니다. 2024년 최저시급(10,030원) 기준 예시 포함."
+      description="시급을 입력하면 일급, 월급, 연봉을 자동으로 계산합니다. 월급에서 시급도 역산할 수 있습니다. 2026년 최저시급 10,320원 기준 예시를 포함합니다."
       keywords="시급계산기, 일급계산기, 월급계산기, 최저임금계산기, 시급월급변환, 연봉계산기"
+      sources={[{ name: "최저임금위원회 연도별 최저임금 결정 현황", url: "https://www.minimumwage.go.kr/minWage/policy/decisionMain.do" }]}
+      reviewedAt="2026-08-28"
+      disclaimer="계산 결과는 단순 환산 참고값입니다. 실제 임금은 주휴수당, 휴게시간, 근로계약과 적용 연도의 공식 기준을 함께 확인하세요."
       howToUse={[
         "시급, 하루 근무시간, 한 달 근무일수를 입력하세요.",
         "일급·월급·연봉이 자동으로 계산됩니다.",
         "월급 → 시급 역산은 아래 섹션에서 계산하세요.",
       ]}
       tips={[
-        "2024년 최저시급은 9,860원, 2025년은 10,030원입니다.",
+        "2026년 적용 최저시급은 10,320원입니다. 적용 연도가 달라지면 공식 기준을 다시 확인하세요.",
         "주 40시간제 기준 월 근무시간은 209시간(주휴 포함)입니다.",
         "주 5일 근무 기준 한 달 근무일수는 약 21~22일입니다.",
       ]}
@@ -49,7 +53,7 @@ export default function HourlyWageCalculator() {
         },
         {
           question: "최저시급보다 낮은 금액이 나왔는데 괜찮은가요?",
-          answer: "2025년 최저시급은 10,030원입니다. 법적으로 최저시급 미만 지급은 근로기준법 위반입니다. 고용노동부(국번 없이 1350)에 신고할 수 있습니다.",
+          answer: "2026년 적용 최저시급은 10,320원입니다. 적용 대상과 산입 범위는 근로 조건에 따라 달라질 수 있으므로 최저임금위원회와 고용노동부 안내를 확인하세요.",
         },
         {
           question: "연봉에서 실수령액은 어떻게 계산하나요?",
@@ -97,11 +101,12 @@ export default function HourlyWageCalculator() {
               />
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { label: "일급", value: daily, color: "text-yellow-400" },
-              { label: "월급 (세전)", value: monthly, color: "text-cyan-400" },
-              { label: "연봉 (세전)", value: annual, color: "text-green-400" },
+              { label: "월 근무일 단순 환산 (주휴 제외)", value: monthly, color: "text-cyan-400" },
+              { label: "209시간 월 환산 (주휴 포함 기준)", value: standardMonthly, color: "text-blue-300" },
+              { label: "단순 연 환산 (주휴 제외)", value: annual, color: "text-green-400" },
             ].map(({ label, value, color }) => (
               <div key={label} className="bg-black/30 rounded-xl p-4 text-center">
                 <p className="text-xs text-gray-400 mb-1">{label}</p>
@@ -144,8 +149,8 @@ export default function HourlyWageCalculator() {
                 ? `${Math.round(reverseHourly).toLocaleString("ko-KR")}원`
                 : "-"}
             </p>
-            {reverseHourly !== null && reverseHourly < 10030 && (
-              <p className="text-xs text-red-400 mt-2">⚠️ 2025년 최저시급(10,030원) 미만입니다.</p>
+            {reverseHourly !== null && reverseHourly < 10320 && (
+              <p className="text-xs text-red-400 mt-2">⚠️ 2026년 적용 최저시급(10,320원) 미만입니다.</p>
             )}
           </div>
         </div>

@@ -69,6 +69,9 @@ export default function BmiCalculator() {
       title="BMI 비만도 계산기"
       description="키와 몸무게만 입력하면 비만도(BMI)를 즉시 알려드립니다. 나의 체질량지수와 건강 상태를 확인해보세요."
       keywords="BMI계산기, 비만도계산기, 체질량지수, 다이어트계산기, 비만도측정, bmi calculator"
+      sources={[{ name: "질병관리청 국가건강정보포털 BMI 분류 안내", url: "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6774" }]}
+      reviewedAt="2026-08-28"
+      disclaimer="화면의 23 이상 비만 전 단계, 25 이상 비만 분류는 국내 성인 기준입니다. BMI는 선별 지표이며 진단이 아니므로 건강 판단은 의료 전문가와 상담하세요."
       howToUse={[
         "키(cm)를 입력하세요 (예: 170).",
         "몸무게(kg)를 입력하세요 (예: 65).",

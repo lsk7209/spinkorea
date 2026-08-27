@@ -8,6 +8,7 @@ export default function NotFound() {
         title="404 - 페이지를 찾을 수 없음 | SpinFlow"
         description="요청한 페이지를 찾을 수 없습니다."
         keywords=""
+        robots="noindex,follow"
       />
       <div className="text-center space-y-6 max-w-md">
         <p className="text-8xl font-black text-cyan-600">404</p>

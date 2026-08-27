@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import AnalyticsRouteTracker from "@/components/AnalyticsRouteTracker";
 
 // 페이지 lazy loading — 초기 번들 분할
 const Home = lazy(() => import("@/pages/Home"));
@@ -86,6 +87,7 @@ function App() {
   return (
     <>
       <ScrollToTop />
+      <AnalyticsRouteTracker />
       <Header />
       <Suspense fallback={<PageLoader />}>
         <Routes>

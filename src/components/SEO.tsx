@@ -6,6 +6,54 @@ const SITE_ORIGIN = "https://spinkorea.kr";
 const SITE_NAME = "SpinFlow";
 const JSON_LD_ID = "spinflow-json-ld";
 
+function buildStructuredData(
+  pageTitle: string,
+  pageDescription: string,
+  canonicalUrl: string,
+  structuredData?: Record<string, unknown>,
+) {
+  const organization = {
+    "@type": "Organization",
+    "@id": `${SITE_ORIGIN}/#organization`,
+    name: SITE_NAME,
+    alternateName: "SpinKorea",
+    url: SITE_ORIGIN,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_ORIGIN}/og-image.png`,
+    },
+  };
+  const website = {
+    "@type": "WebSite",
+    "@id": `${SITE_ORIGIN}/#website`,
+    name: SITE_NAME,
+    alternateName: "SpinKorea",
+    url: SITE_ORIGIN,
+    inLanguage: "ko-KR",
+    publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+  };
+  const defaultPage = {
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    inLanguage: "ko-KR",
+    isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
+    about: { "@id": `${SITE_ORIGIN}/#organization` },
+  };
+  const suppliedGraph = Array.isArray(structuredData?.["@graph"])
+    ? structuredData["@graph"]
+    : structuredData
+      ? [{ ...structuredData, "@context": undefined }]
+      : [defaultPage];
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [organization, website, ...suppliedGraph],
+  };
+}
+
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -78,17 +126,15 @@ export default function SEO({
     staleJsonLd?.remove();
 
     let scriptJSONLD = document.getElementById(JSON_LD_ID);
-    if (structuredData) {
-      if (!scriptJSONLD) {
-        scriptJSONLD = document.createElement("script");
-        scriptJSONLD.setAttribute("id", JSON_LD_ID);
-        scriptJSONLD.setAttribute("type", "application/ld+json");
-        document.head.appendChild(scriptJSONLD);
-      }
-      scriptJSONLD.textContent = JSON.stringify(structuredData);
-    } else {
-      scriptJSONLD?.remove();
+    if (!scriptJSONLD) {
+      scriptJSONLD = document.createElement("script");
+      scriptJSONLD.setAttribute("id", JSON_LD_ID);
+      scriptJSONLD.setAttribute("type", "application/ld+json");
+      document.head.appendChild(scriptJSONLD);
     }
+    scriptJSONLD.textContent = JSON.stringify(
+      buildStructuredData(pageTitle, pageDescription, canonicalUrl, structuredData),
+    );
   }, [pageTitle, pageDescription, keywords, imageUrl, canonicalUrl, structuredData, robots]);
 
   return null;

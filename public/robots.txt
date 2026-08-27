@@ -5,24 +5,31 @@ Disallow: /api/
 # AI 검색 크롤러 명시 허용 (GEO 최적화)
 User-agent: GPTBot
 Allow: /
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /api/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /api/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /api/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /api/
 
 User-agent: Yeti
 Allow: /
+Disallow: /api/
 
 User-agent: Daumoa
 Allow: /
+Disallow: /api/
 
 # 스팸 봇 차단
 User-agent: Bytespider

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Sparkles } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
 import { getSecureRandomInt } from "@/utils/random";
+import { trackToolCompleted } from "@/utils/analytics";
 
 const ANSWERS = [
   {
@@ -45,6 +46,7 @@ export default function YesNoOracle() {
       const randomIdx = getSecureRandomInt(ANSWERS.length);
       setAnswer(ANSWERS[randomIdx]);
       setIsThinking(false);
+      trackToolCompleted("/tools/yes-no-oracle", "oracle_answer");
     }, 1500);
   };
 

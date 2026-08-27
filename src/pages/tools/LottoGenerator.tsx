@@ -3,6 +3,7 @@ import { RefreshCw, Copy, ChevronUp, ChevronDown } from 'lucide-react';
 import { toast } from 'sonner';
 import ToolLayout from '@/components/ToolLayout';
 import { getSecureRandomInt } from '@/utils/random';
+import { trackToolCompleted } from '@/utils/analytics';
 
 function generateSet(): number[] {
     const set = new Set<number>();
@@ -41,6 +42,7 @@ export default function LottoGenerator() {
                 clearInterval(interval);
                 setGames(Array.from({ length: gameCount }, generateSet));
                 setIsGenerating(false);
+                trackToolCompleted('/tools/lotto-generator', 'number_sets');
             }
         }, 50);
     };

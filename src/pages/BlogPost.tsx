@@ -104,12 +104,20 @@ function PostCTA({ tags }: { tags: string[] }) {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to={primary.path}
+            onClick={() => trackEvent('content_to_tool_clicked', {
+              destination_path: primary.path,
+              placement: 'post_cta_primary',
+            })}
             className="bg-cyan-700 text-white font-bold px-8 py-3 rounded-full hover:bg-cyan-800 transition-all"
           >
             {primary.label}
           </Link>
           <Link
             to={secondary.path}
+            onClick={() => trackEvent('content_to_tool_clicked', {
+              destination_path: secondary.path,
+              placement: 'post_cta_secondary',
+            })}
             className="bg-slate-100 text-slate-950 font-bold px-8 py-3 rounded-full hover:bg-slate-200 transition-all border border-slate-200"
           >
             {secondary.label}

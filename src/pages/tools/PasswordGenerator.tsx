@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { Copy, RefreshCw, KeyRound, ShieldCheck, ShieldAlert, Shield, Check } from 'lucide-react';
 import { toast } from 'sonner';
 import ToolLayout from '@/components/ToolLayout';
+import { trackToolCompleted } from '@/utils/analytics';
 
 const CHARS = {
     upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -65,6 +66,11 @@ export default function PasswordGenerator() {
     const copyToClipboard = () => {
         navigator.clipboard.writeText(password);
         toast.success('비밀번호가 복사되었습니다!');
+    };
+
+    const regeneratePassword = () => {
+        generatePassword();
+        trackToolCompleted('/tools/random-password', 'password_generated');
     };
 
     const getStrengthLabel = () => {
@@ -189,7 +195,7 @@ export default function PasswordGenerator() {
                     </div>
 
                     <button
-                        onClick={generatePassword}
+                        onClick={regeneratePassword}
                         className="w-full btn-primary py-4 text-lg flex items-center justify-center gap-2 shadow-neon mt-4"
                     >
                         <RefreshCw size={20} />

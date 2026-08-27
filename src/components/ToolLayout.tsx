@@ -1,9 +1,12 @@
-import { type ReactNode, useEffect } from 'react';
+import { type ReactNode, type SyntheticEvent, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowLeft, Lightbulb, HelpCircle, Wrench, Share2 } from 'lucide-react';
 import { toast, Toaster } from 'sonner';
 import SEO, { type SEOProps } from '@/components/SEO';
 import { recordRecentTool } from '@/hooks/useRecentTools';
+import { trackEvent } from '@/utils/analytics';
+
+const SITE_ORIGIN = 'https://spinkorea.kr';
 
 interface FAQItem {
     question: string;
@@ -14,6 +17,11 @@ interface RelatedTool {
     name: string;
     path: string;
     description: string;
+}
+
+interface SourceReference {
+    name: string;
+    url: string;
 }
 
 interface ToolLayoutProps extends SEOProps {
@@ -28,6 +36,10 @@ interface ToolLayoutProps extends SEOProps {
     faqs?: FAQItem[];
     /** 관련 도구들 */
     relatedTools?: RelatedTool[];
+    /** Official references for calculations whose standards can change. */
+    sources?: SourceReference[];
+    reviewedAt?: string;
+    disclaimer?: string;
 }
 
 export default function ToolLayout({
@@ -38,9 +50,13 @@ export default function ToolLayout({
     tips,
     faqs,
     relatedTools,
+    sources,
+    reviewedAt,
+    disclaimer,
     ...seoProps
 }: ToolLayoutProps) {
     const { pathname } = useLocation();
+    const hasTrackedEngagement = useRef(false);
 
     useEffect(() => {
         recordRecentTool(pathname);
@@ -48,6 +64,10 @@ export default function ToolLayout({
 
     const handleShare = async () => {
         const url = window.location.href;
+        trackEvent('share_clicked', {
+            content_type: 'tool',
+            tool_path: pathname,
+        });
         if (navigator.share) {
             try {
                 await navigator.share({ title, text: description, url });
@@ -58,9 +78,19 @@ export default function ToolLayout({
         }
     };
 
+    const handleToolInteraction = (event: SyntheticEvent<HTMLElement>) => {
+        if (hasTrackedEngagement.current) return;
+        hasTrackedEngagement.current = true;
+        const target = event.target instanceof Element ? event.target : null;
+        trackEvent('tool_engaged', {
+            tool_path: pathname,
+            interaction_type: event.type,
+            element_type: target?.tagName.toLowerCase() ?? 'unknown',
+        });
+    };
+
     // Generate FAQ structured data
     const faqStructuredData = faqs && faqs.length > 0 ? {
-        "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": faqs.map(faq => ({
             "@type": "Question",
@@ -71,6 +101,54 @@ export default function ToolLayout({
             }
         }))
     } : undefined;
+    const howToStructuredData = howToUse && howToUse.length > 0 ? {
+        "@type": "HowTo",
+        name: `${title} 사용 방법`,
+        step: howToUse.map((step, index) => ({
+            "@type": "HowToStep",
+            position: index + 1,
+            text: step,
+        })),
+    } : undefined;
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebApplication",
+                "@id": `${SITE_ORIGIN}${pathname}#app`,
+                name: title,
+                description,
+                url: `${SITE_ORIGIN}${pathname}`,
+                applicationCategory: "UtilitiesApplication",
+                operatingSystem: "Any",
+                browserRequirements: "Requires JavaScript",
+                offers: {
+                    "@type": "Offer",
+                    price: "0",
+                    priceCurrency: "KRW",
+                },
+            },
+            {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                    {
+                        "@type": "ListItem",
+                        position: 1,
+                        name: "무료 도구",
+                        item: `${SITE_ORIGIN}/tools`,
+                    },
+                    {
+                        "@type": "ListItem",
+                        position: 2,
+                        name: title,
+                        item: `${SITE_ORIGIN}${pathname}`,
+                    },
+                ],
+            },
+            howToStructuredData,
+            faqStructuredData,
+        ].filter(Boolean),
+    };
 
     return (
         <div className="min-h-screen bg-neon-bg flex flex-col">
@@ -78,8 +156,8 @@ export default function ToolLayout({
             <SEO
                 title={title}
                 description={description}
-                structuredData={faqStructuredData}
                 {...seoProps}
+                structuredData={structuredData}
             />
 
             {/* Header */}
@@ -110,7 +188,12 @@ export default function ToolLayout({
             {/* Main Content */}
             <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-8 md:py-12 space-y-8">
                 {/* Tool Container */}
-                <div className="card card-hover p-6 md:p-8 shadow-2xl shadow-neon-primary/10">
+                <div
+                    className="card card-hover p-6 md:p-8 shadow-2xl shadow-neon-primary/10"
+                    onClickCapture={handleToolInteraction}
+                    onInputCapture={handleToolInteraction}
+                    onChangeCapture={handleToolInteraction}
+                >
                     {children}
                 </div>
 
@@ -161,6 +244,24 @@ export default function ToolLayout({
                 )}
 
                 {/* FAQ */}
+                {sources && sources.length > 0 && (
+                    <aside className="card border-cyan-400/20 p-6 bg-cyan-500/5" aria-labelledby="source-heading">
+                        <h2 id="source-heading" className="text-xl font-semibold text-cyan-300 mb-3">기준·출처</h2>
+                        <ul className="space-y-2 text-sm">
+                            {sources.map((source) => (
+                                <li key={source.url}>
+                                    <a className="text-cyan-200 underline underline-offset-4 hover:text-white" href={source.url} target="_blank" rel="noreferrer">
+                                        {source.name}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                        {reviewedAt && <p className="mt-3 text-xs text-gray-400">최종 기준 검토일: {reviewedAt}</p>}
+                        {disclaimer && <p className="mt-3 text-sm leading-relaxed text-gray-300">{disclaimer}</p>}
+                    </aside>
+                )}
+
+                {/* FAQ */}
                 {faqs && faqs.length > 0 && (
                     <div className="card border-white/10 p-6">
                         <h2 className="text-xl font-semibold text-neon-primary mb-4 flex items-center gap-2">
@@ -195,6 +296,11 @@ export default function ToolLayout({
                                 <Link
                                     key={index}
                                     to={tool.path}
+                                    onClick={() => trackEvent('internal_tool_clicked', {
+                                        source_path: pathname,
+                                        destination_path: tool.path,
+                                        placement: 'related_tools',
+                                    })}
                                     className="block p-4 bg-white/5 rounded-xl border border-white/10 hover:border-neon-primary/50 hover:bg-white/10 transition-all group"
                                 >
                                     <h3 className="font-bold text-white group-hover:text-neon-primary transition-colors">

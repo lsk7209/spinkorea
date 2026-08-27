@@ -10,6 +10,7 @@
     "lint": "tsc --noEmit",
     "content:generate": "node scripts/generate-content-plan.mjs",
     "content:validate": "node scripts/validate-content-plan.mjs",
+    "verify:growth": "node scripts/verify-growth-optimization.mjs",
     "preview": "vite preview",
     "audit:gsc": "node scripts/gsc-audit.mjs",
     "audit:adsense": "node scripts/adsense-audit.mjs",

@@ -3,6 +3,7 @@ import { QRCodeCanvas } from "qrcode.react";
 import { Download, RefreshCw } from "lucide-react";
 import { toast } from "sonner";
 import ToolLayout from "@/components/ToolLayout";
+import { trackToolCompleted } from "@/utils/analytics";
 
 export default function QrCodeGenerator() {
   const [value, setValue] = useState("https://spinkorea.kr");
@@ -21,6 +22,7 @@ export default function QrCodeGenerator() {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      trackToolCompleted("/tools/qr-code-generator", "qr_download");
       toast.success("QR 코드가 저장되었습니다.");
     } else {
       toast.error("QR 코드 생성 중 오류가 발생했습니다.");

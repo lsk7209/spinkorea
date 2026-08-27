@@ -5,6 +5,7 @@ import {
   getIndexablePostMetadata,
 } from "@/data/postMetadata";
 import SEO from "@/components/SEO";
+import { trackEvent } from "@/utils/analytics";
 
 const SITE_ORIGIN = "https://spinkorea.kr";
 const INITIAL_POST_COUNT = 12;
@@ -60,6 +61,11 @@ export default function BlogIndex() {
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
+              onClick={() => trackEvent('content_selected', {
+                content_type: 'blog_post',
+                slug: post.slug,
+                position: index + 1,
+              })}
               className="block group"
             >
               <article className="h-full bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg flex flex-col">
@@ -105,7 +111,13 @@ export default function BlogIndex() {
           <div className="mt-10 text-center">
             <button
               type="button"
-              onClick={() => setVisibleCount((count) => count + INITIAL_POST_COUNT)}
+              onClick={() => {
+                setVisibleCount((count) => count + INITIAL_POST_COUNT);
+                trackEvent('content_list_expanded', {
+                  content_type: 'blog_post',
+                  visible_count: Math.min(visibleCount + INITIAL_POST_COUNT, posts.length),
+                });
+              }}
               className="rounded-full border border-cyan-200 bg-white px-8 py-3 font-bold text-cyan-800 shadow-sm transition-colors hover:bg-cyan-50"
             >
               글 더 보기 ({posts.length - visibleCount}개 남음)

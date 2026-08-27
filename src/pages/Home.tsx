@@ -1,7 +1,7 @@
 import { useState, useCallback, useRef, useEffect, type ComponentType } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
-import { LayoutGrid } from 'lucide-react';
+import { ArrowDown, CheckCircle2, LayoutGrid } from 'lucide-react';
 import { useStatePersistence } from '@/hooks/use-state-persistence';
 import { useRoulette } from '@/hooks/use-roulette';
 import RouletteWheel from '@/components/RouletteWheel';
@@ -91,8 +91,12 @@ export default function Home({
         (result: string) => {
             saveResult(result);
             setShowResult(true);
+            trackEvent('tool_result_viewed', {
+                tool: 'roulette',
+                item_count: items.length,
+            });
         },
-        [saveResult]
+        [items.length, saveResult]
     );
 
     const { isSpinning, result, winningIndex, spin } = useRoulette({
@@ -127,6 +131,14 @@ export default function Home({
         },
         [handleUpdateItems]
     );
+
+    const handlePrimaryCta = useCallback(() => {
+        trackEvent('primary_cta_clicked', {
+            placement: 'home_hero',
+            destination: 'roulette',
+        });
+        rouletteSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, []);
 
     // Intercept deep links like /spinflow/lunch or /spinflow/lotto and apply presets in-place without leaving /spinflow
     useEffect(() => {
@@ -189,6 +201,22 @@ export default function Home({
                         <br className="hidden md:block" />
                         SpinFlow는 설치 없이 바로 쓰는 스핀 돌리기와 생활 유틸리티를 제공합니다.
                     </p>
+                    <button
+                        type="button"
+                        onClick={handlePrimaryCta}
+                        className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-cyan-700 px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-cyan-700/20 transition-all hover:-translate-y-0.5 hover:bg-cyan-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
+                    >
+                        무료 룰렛 바로 돌리기
+                        <ArrowDown size={18} aria-hidden="true" />
+                    </button>
+                    <ul className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-500" aria-label="서비스 특징">
+                        {['회원가입 없음', '입력값은 브라우저에서 처리', '모바일·PC 지원'].map((item) => (
+                            <li key={item} className="inline-flex items-center gap-1.5">
+                                <CheckCircle2 size={15} className="text-cyan-700" aria-hidden="true" />
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </header>
 

@@ -10,6 +10,7 @@ const POSTS_PATH = path.join(ROOT, "src", "data", "posts.tsx");
 const CONTENT_PLAN_PATH = path.join(ROOT, "src", "data", "content-plan.generated.json");
 const LEGACY_POST_METADATA_PATH = path.join(ROOT, "src", "data", "legacy-post-metadata.json");
 const POST_METADATA_PATH = path.join(ROOT, "src", "data", "post-metadata.generated.json");
+const RUNTIME_POST_METADATA_PATH = path.join(ROOT, "src", "data", "post-metadata.runtime.generated.json");
 const STATIC_CONTENT_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-generated-content-html.json");
 
 const sitePages = JSON.parse(fs.readFileSync(SITE_PAGES_PATH, "utf8"));
@@ -663,41 +664,143 @@ React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.
 `;
 }
 
-function structuredDataForPage(page) {
-  if (page.path === "/") {
-    return {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "SpinFlow",
-      url: SITE_ORIGIN,
-      description: page.description,
-      inLanguage: "ko-KR",
-    };
-  }
+const localizedApprovalBodies = {
+  "/": [
+    "SpinFlow(스핀코리아)는 점심 메뉴, 발표 순서, 당첨자와 벌칙처럼 가벼운 결정을 빠르게 정하는 온라인 룰렛과 생활형 계산·변환 도구를 제공합니다. 회원가입이나 앱 설치 없이 원하는 도구를 열어 바로 사용할 수 있습니다.",
+    "룰렛을 사용할 때는 먼저 실제로 선택 가능한 후보만 남기고 중복 항목과 제외 조건을 확인하세요. 참가자가 함께 목록을 확인한 뒤 실행 횟수와 재추첨 조건을 정하면 결과를 설명하고 공유하기 쉽습니다.",
+    "룰렛 항목과 계산기 입력값은 기본적으로 브라우저에서 처리됩니다. 다만 방문 분석, 광고, 사용자가 직접 만든 공유 URL에는 별도의 데이터 흐름이 있을 수 있으므로 민감한 개인정보나 계정 정보는 입력하지 않는 것이 안전합니다.",
+    "도구 결과는 입력값과 선택한 조건을 바탕으로 한 참고 정보입니다. 급여, 세금, 대출, 임대차, 건강처럼 최신 기준과 개인 조건이 중요한 경우에는 공식 기관 자료, 계약서 또는 전문가 안내를 최종 기준으로 확인하세요.",
+    "처음 방문했다면 온라인 룰렛을 바로 실행하거나 무료 도구 모음에서 목적에 맞는 계산기·텍스트 도구·랜덤 도구를 선택할 수 있습니다. 각 도구 페이지에는 사용 방법, 결과 해석, 주의사항과 관련 도구를 함께 안내합니다.",
+    "SpinFlow는 검토된 가이드만 블로그와 검색용 목록에 공개하고, 오류 제보와 수정 요청을 받을 수 있는 문의 경로를 운영합니다. 서비스 운영 원칙과 개인정보 처리 범위는 소개, 개인정보처리방침, 이용약관에서 확인할 수 있습니다.",
+  ],
+  "/spinflow": [
+    "SpinFlow 룰렛은 사용자가 입력한 후보 중 하나를 브라우저의 보안 난수 기능으로 선택하는 무료 결정 도구입니다. 점심 메뉴, 발표 순서, 수업 활동, 소규모 게임처럼 무작위 선택이 적절한 상황에 사용할 수 있습니다.",
+    "사용 전에는 후보 목록, 중복 허용 여부, 실행 횟수와 재추첨 조건을 참가자끼리 먼저 합의하세요. 결과가 중요한 경우에는 최종 목록과 결과를 별도로 기록해야 하며 브라우저 기록만을 공식 증빙으로 사용하면 안 됩니다.",
+    "금전, 채용, 의료, 법률 또는 공식 경품 추첨처럼 책임과 감사 절차가 필요한 결정에는 이 도구만 사용하지 마세요. 해당 기관의 공식 규정과 기록 절차를 따라야 합니다.",
+    "후보가 두 개뿐이면 동전 던지기, 숫자 범위가 필요하면 랜덤 숫자 뽑기, 참가자를 여러 그룹으로 나누려면 랜덤 팀 편성기가 더 적합할 수 있습니다. 목적에 맞는 도구를 선택하면 입력과 결과를 더 쉽게 이해할 수 있습니다.",
+    "전화번호, 주소, 계정 정보, 건강 기록이나 내부 업무 정보처럼 민감한 내용은 후보에 입력하지 마세요. 공유 링크를 만들기 전에도 URL에 포함된 항목이 외부에 공개되어도 되는지 확인해야 합니다.",
+  ],
+};
 
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
+function structuredDataForPage(page) {
+  const canonical = `${SITE_ORIGIN}${page.path}`;
+  const organization = {
+    "@type": "Organization",
+    "@id": `${SITE_ORIGIN}/#organization`,
+    name: "SpinFlow",
+    alternateName: "SpinKorea",
+    url: SITE_ORIGIN,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_ORIGIN}/og-image.png`,
+    },
+  };
+  const website = {
+    "@type": "WebSite",
+    "@id": `${SITE_ORIGIN}/#website`,
+    name: "SpinFlow",
+    alternateName: "SpinKorea",
+    url: SITE_ORIGIN,
+    inLanguage: "ko-KR",
+    publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+  };
+  const pageType = page.path === "/tools" ? "CollectionPage" : "WebPage";
+  const pageNode = {
+    "@type": pageType,
+    "@id": `${canonical}#webpage`,
     name: page.title,
-    url: `${SITE_ORIGIN}${page.path}`,
+    url: canonical,
     description: page.description,
     inLanguage: "ko-KR",
+    isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
+    about: { "@id": `${SITE_ORIGIN}/#organization` },
+  };
+  const toolNodes = page.path.startsWith("/tools/")
+    ? [
+        {
+          "@type": "WebApplication",
+          "@id": `${canonical}#app`,
+          name: page.heading,
+          description: page.description,
+          url: canonical,
+          applicationCategory: "UtilitiesApplication",
+          operatingSystem: "Any",
+          browserRequirements: "Requires JavaScript",
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "KRW",
+          },
+        },
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "무료 도구",
+              item: `${SITE_ORIGIN}/tools`,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: page.heading,
+              item: canonical,
+            },
+          ],
+        },
+      ]
+    : [];
+  return {
+    "@context": "https://schema.org",
+    "@graph": [organization, website, pageNode, ...toolNodes],
   };
 }
 
-function renderShell(page) {
+function toRuntimePostMetadata(posts) {
+  return posts.map(({ slug, title, description, date, publishAt, tags, thumbnail, qualityScore, source }) => ({
+    slug,
+    title,
+    description,
+    date,
+    ...(publishAt ? { publishAt } : {}),
+    tags,
+    ...(thumbnail ? { thumbnail } : {}),
+    ...(qualityScore !== undefined ? { qualityScore } : {}),
+    source,
+  }));
+}
+
+function renderShell(page, posts = []) {
   const related = sitePages
     .filter((item) => item.path !== page.path)
     .slice(0, 6)
     .map((item) => `<li><a href="${item.path}">${escapeHtml(item.heading)}</a></li>`)
     .join("");
-  const homeBody = approvalBodies[page.path] ?? [];
+  const homeBody = localizedApprovalBodies[page.path] ?? approvalBodies[page.path] ?? [];
   const approvalHeading = approvalSectionHeadings[page.path];
   const trustBody = (trustPageBodies[page.path] ?? [])
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
     .join("\n");
   const homeTrustBody = homeBody.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n");
   const toolGuide = renderToolGuide(page);
+  const directoryItems = page.path === "/blog"
+    ? posts
+        .filter(isIndexablePost)
+        .map((post) => `<li><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a> — ${escapeHtml(post.description)}</li>`)
+        .join("")
+    : page.path === "/tools"
+      ? sitePages
+          .filter((item) => item.path.startsWith("/tools/"))
+          .map((item) => `<li><a href="${item.path}">${escapeHtml(item.heading)}</a> — ${escapeHtml(item.summary)}</li>`)
+          .join("")
+      : "";
+  const directoryToc = directoryItems
+    ? `<li><a href="#page-directory">${page.path === "/blog" ? "검토된 글 목록" : "전체 도구 목록"}</a></li>`
+    : "";
+  const directorySection = directoryItems
+    ? `<section id="page-directory"><h2>${page.path === "/blog" ? "검토된 글 목록" : "전체 무료 도구"}</h2><ul>${directoryItems}</ul></section>`
+    : "";
   const guideToc = approvalHeading
     ? `<li><a href="#page-guide">${escapeHtml(approvalHeading)}</a></li>`
     : "";
@@ -717,6 +820,7 @@ function renderShell(page) {
       <li><a href="#page-summary">페이지 요약</a></li>
       ${guideToc}
       ${toolToc}
+      ${directoryToc}
       <li><a href="#related-tools">관련 무료 도구</a></li>
       <li><a href="#reference-links">운영 기준 참고 링크</a></li>
     </ul>
@@ -729,6 +833,7 @@ function renderShell(page) {
     ${trustBody}
     ${toolGuide}
   </section>
+  ${directorySection}
   <nav aria-label="Site policy links">
     <a href="/about/">About</a>
     <a href="/contact/">Contact</a>
@@ -747,6 +852,24 @@ function renderShell(page) {
   </section>
 </main>`;
 }
+
+const trustedToolReferences = {
+  "/tools/hourly-wage": {
+    name: "최저임금위원회 연도별 최저임금 결정 현황",
+    url: "https://www.minimumwage.go.kr/minWage/policy/decisionMain.do",
+    note: "단순 환산 참고값이며 실제 임금은 적용 연도와 근로 조건의 공식 기준을 확인해야 합니다.",
+  },
+  "/tools/bmi-calculator": {
+    name: "질병관리청 국가건강정보포털 BMI 분류 안내",
+    url: "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6774",
+    note: "화면의 분류는 국내 성인 기준입니다. BMI는 선별 지표이며 진단이 아니므로 건강 판단은 의료 전문가와 상담하세요.",
+  },
+  "/tools/vat-calculator": {
+    name: "국세청 부가가치세 안내",
+    url: "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7703&mi=2271",
+    note: "일반적인 10% 세율의 참고 계산이며 영세율·면세·업종별 처리는 공식 안내를 확인해야 합니다.",
+  },
+};
 
 function renderToolGuide(page) {
   if (!page.path.startsWith("/tools/")) return "";
@@ -791,12 +914,17 @@ function renderToolGuide(page) {
     ? `<h2>${escapeHtml(details.heading)}</h2>
     ${details.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n")}`
     : "";
+  const trustedReference = trustedToolReferences[page.path];
+  const referenceBody = trustedReference
+    ? `<h2>기준·출처</h2><p><a href="${escapeHtml(trustedReference.url)}" rel="noopener noreferrer">${escapeHtml(trustedReference.name)}</a></p><p>${escapeHtml(trustedReference.note)} 최종 기준 검토일: 2026-08-28.</p>`
+    : "";
 
   return `<div id="tool-guide" class="tool-guide">
     <h2>${escapeHtml(page.heading)} 사용 안내</h2>
     <p>${escapeHtml(page.description)} 이 페이지는 ${escapeHtml(category)}를 찾는 방문자가 기능을 이해하고 결과를 확인할 수 있도록 설명을 함께 제공합니다. 입력값을 넣은 뒤 실행 버튼을 누르고, 표시된 결과를 원래 목적과 비교하는 흐름으로 사용하세요.</p>
     <p>${escapeHtml(page.summary)} 도구가 바로 필요한 경우에는 위의 인터랙티브 영역을 사용하고, 사용법이나 선택 기준이 더 필요하면 SpinFlow의 관련 도구와 블로그 안내를 함께 확인하세요.</p>
     ${detailBody}
+    ${referenceBody}
     <h2>${escapeHtml(page.heading)} 사용 순서</h2>
     <ol>
       <li>무엇을 확인하거나 결정하려는지 먼저 정하고 필요한 입력값만 준비합니다.</li>
@@ -852,7 +980,7 @@ function renderPostShell(post, staticContent = "") {
 
 function injectHtml(template, route) {
   const canonical = `${SITE_ORIGIN}${route.path}`;
-  const meta = approvalMetaOverrides[route.path] ?? route;
+  const meta = route;
   const jsonLd = JSON.stringify(route.structuredData);
   const robots = route.robots
     ? `\n  <meta name="robots" content="${route.robots}" />`
@@ -915,6 +1043,10 @@ function writePublicAssets(posts) {
     POST_METADATA_PATH,
     JSON.stringify(allMetadata, null, 2),
   );
+  fs.writeFileSync(
+    RUNTIME_POST_METADATA_PATH,
+    JSON.stringify(toRuntimePostMetadata(allMetadata), null, 2),
+  );
 }
 
 function writeDistAssets(posts) {
@@ -932,7 +1064,7 @@ function writeDistAssets(posts) {
   const pageRoutes = sitePages.map((page) => ({
     ...page,
     structuredData: structuredDataForPage(page),
-    body: renderShell(page),
+    body: renderShell(page, indexablePosts),
   }));
   const postRoutes = posts.map((post) => ({
     path: `/blog/${post.slug}`,
@@ -940,12 +1072,26 @@ function writeDistAssets(posts) {
     description: post.description,
     structuredData: {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      headline: post.title,
-      description: post.description,
-      datePublished: getPublishAt(post),
-      url: `${SITE_ORIGIN}/blog/${post.slug}`,
-      inLanguage: "ko-KR",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": `${SITE_ORIGIN}/#organization`,
+          name: "SpinFlow",
+          alternateName: "SpinKorea",
+          url: SITE_ORIGIN,
+        },
+        {
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.description,
+          datePublished: getPublishAt(post),
+          dateModified: getPublishAt(post),
+          url: `${SITE_ORIGIN}/blog/${post.slug}`,
+          inLanguage: "ko-KR",
+          author: { "@id": `${SITE_ORIGIN}/#organization` },
+          publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+        },
+      ],
     },
     robots: isIndexablePost(post) ? undefined : "noindex,follow",
     body: renderPostShell(post, staticContentBySlug[post.slug]),
