@@ -61,6 +61,11 @@ export interface SEOProps {
   image?: string;
   structuredData?: Record<string, unknown>;
   robots?: "index,follow" | "noindex,follow";
+  /** Open Graph object type. Blog posts should use "article". */
+  ogType?: "website" | "article";
+  /** ISO 8601 timestamp, only emitted when ogType === "article". */
+  articlePublishedTime?: string;
+  articleModifiedTime?: string;
 }
 
 export default function SEO({
@@ -70,6 +75,9 @@ export default function SEO({
   image = "/og-image.png",
   structuredData,
   robots = "index,follow",
+  ogType = "website",
+  articlePublishedTime,
+  articleModifiedTime,
 }: SEOProps) {
   const location = useLocation();
   const canonicalUrl = `${SITE_ORIGIN}${location.pathname}`;
@@ -102,9 +110,28 @@ export default function SEO({
     setMetaTag("property", "og:description", pageDescription);
     setMetaTag("property", "og:image", imageUrl);
     setMetaTag("property", "og:url", canonicalUrl);
-    setMetaTag("property", "og:type", "website");
+    setMetaTag("property", "og:type", ogType);
     setMetaTag("property", "og:locale", "ko_KR");
     setMetaTag("property", "og:site_name", SITE_NAME);
+
+    const removeMetaTag = (attribute: "name" | "property", value: string) => {
+      document.querySelector(`meta[${attribute}="${value}"]`)?.remove();
+    };
+    if (ogType === "article") {
+      if (articlePublishedTime) {
+        setMetaTag("property", "article:published_time", articlePublishedTime);
+      }
+      setMetaTag(
+        "property",
+        "article:modified_time",
+        articleModifiedTime ?? articlePublishedTime ?? "",
+      );
+      setMetaTag("property", "article:author", SITE_NAME);
+    } else {
+      removeMetaTag("property", "article:published_time");
+      removeMetaTag("property", "article:modified_time");
+      removeMetaTag("property", "article:author");
+    }
 
     setMetaTag("name", "twitter:card", "summary_large_image");
     setMetaTag("name", "twitter:title", pageTitle);
@@ -135,7 +162,18 @@ export default function SEO({
     scriptJSONLD.textContent = JSON.stringify(
       buildStructuredData(pageTitle, pageDescription, canonicalUrl, structuredData),
     );
-  }, [pageTitle, pageDescription, keywords, imageUrl, canonicalUrl, structuredData, robots]);
+  }, [
+    pageTitle,
+    pageDescription,
+    keywords,
+    imageUrl,
+    canonicalUrl,
+    structuredData,
+    robots,
+    ogType,
+    articlePublishedTime,
+    articleModifiedTime,
+  ]);
 
   return null;
 }

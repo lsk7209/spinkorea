@@ -3,8 +3,12 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/og-image.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
   <meta name="description"
     content="점심 메뉴, 당첨자, 벌칙을 바로 정하는 무료 온라인 룰렛입니다. 설치 없이 모바일·PC에서 공정하게 스핀 돌리기를 시작하세요." />
   <meta name="mobile-web-app-capable" content="yes" />
@@ -23,6 +27,9 @@
   <meta property="og:description"
     content="점심 메뉴, 당첨자, 벌칙을 바로 정하는 무료 온라인 룰렛입니다. 설치 없이 모바일·PC에서 공정하게 스핀 돌리기를 시작하세요." />
   <meta property="og:image" content="https://spinkorea.kr/og-image.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:image:alt" content="SpinFlow — 무료 결정 룰렛과 웹 유틸리티" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -35,8 +42,26 @@
   <link rel="canonical" href="https://spinkorea.kr/" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#00d9ff" />
-  <link rel="apple-touch-icon" href="/og-image.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <title>온라인 룰렛 돌리기 | 무료 원판돌리기·스핀 추첨</title>
+
+  <!-- Speculation Rules: prefetch same-origin documents on hover/pointerdown -->
+  <script type="speculationrules">
+  {
+    "prefetch": [
+      {
+        "source": "document",
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/api/*" } }
+          ]
+        },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3050601904412736"

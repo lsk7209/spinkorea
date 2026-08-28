@@ -5,6 +5,7 @@ import { toast, Toaster } from 'sonner';
 import SEO, { type SEOProps } from '@/components/SEO';
 import { recordRecentTool } from '@/hooks/useRecentTools';
 import { trackEvent } from '@/utils/analytics';
+import sitePages from '@/data/site-pages.json';
 
 const SITE_ORIGIN = 'https://spinkorea.kr';
 
@@ -57,6 +58,10 @@ export default function ToolLayout({
 }: ToolLayoutProps) {
     const { pathname } = useLocation();
     const hasTrackedEngagement = useRef(false);
+    const pageMeta = (sitePages as { path: string; lastmod?: string }[]).find(
+        (page) => page.path === pathname,
+    );
+    const lastUpdated = pageMeta?.lastmod;
 
     useEffect(() => {
         recordRecentTool(pathname);
@@ -122,6 +127,7 @@ export default function ToolLayout({
                 applicationCategory: "UtilitiesApplication",
                 operatingSystem: "Any",
                 browserRequirements: "Requires JavaScript",
+                ...(lastUpdated ? { dateModified: lastUpdated } : {}),
                 offers: {
                     "@type": "Offer",
                     price: "0",
@@ -311,6 +317,12 @@ export default function ToolLayout({
                             ))}
                         </div>
                     </div>
+                )}
+
+                {lastUpdated && (
+                    <p className="text-xs text-gray-500 text-center">
+                        페이지 업데이트: <time dateTime={lastUpdated}>{lastUpdated}</time>
+                    </p>
                 )}
 
             </main>

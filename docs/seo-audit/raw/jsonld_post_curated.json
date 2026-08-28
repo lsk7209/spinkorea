@@ -1,0 +1,74 @@
+{
+  "block_count": 1,
+  "processed_count": 1,
+  "total_bytes": 1245,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 1245,
+      "valid": true,
+      "types": [
+        "BlogPosting",
+        "ImageObject",
+        "Organization",
+        "WebPage",
+        "WebSite"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://spinkorea.kr/#organization",
+            "name": "SpinFlow",
+            "alternateName": "SpinKorea",
+            "url": "https://spinkorea.kr",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://spinkorea.kr/og-image.png"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://spinkorea.kr/#website",
+            "name": "SpinFlow",
+            "alternateName": "SpinKorea",
+            "url": "https://spinkorea.kr",
+            "inLanguage": "ko-KR",
+            "publisher": {
+              "@id": "https://spinkorea.kr/#organization"
+            }
+          },
+          {
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://spinkorea.kr/blog/calculator-vs-excel"
+            },
+            "headline": "온라인 계산기 vs 엑셀: 언제 무엇을 써야 하나",
+            "description": "간단한 계산에 엑셀을 여는 것은 낭비입니다. 상황별로 온라인 계산기와 스프레드시트를 현명하게 선택하는 기준.",
+            "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2670&auto=format&fit=crop",
+            "author": {
+              "@type": "Organization",
+              "name": "SpinFlow"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "SpinFlow",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://spinkorea.kr/og-image.png"
+              }
+            },
+            "datePublished": "2026-05-24",
+            "dateModified": "2026-05-24",
+            "url": "https://spinkorea.kr/blog/calculator-vs-excel",
+            "inLanguage": "ko-KR"
+          }
+        ]
+      }
+    }
+  ]
+}

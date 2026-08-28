@@ -1,0 +1,370 @@
+{
+  "block_count": 1,
+  "processed_count": 1,
+  "total_bytes": 6606,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 6606,
+      "valid": true,
+      "types": [
+        "CollectionPage",
+        "ImageObject",
+        "ItemList",
+        "ListItem",
+        "Organization",
+        "WebSite"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://spinkorea.kr/#organization",
+            "name": "SpinFlow",
+            "alternateName": "SpinKorea",
+            "url": "https://spinkorea.kr",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://spinkorea.kr/og-image.png"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://spinkorea.kr/#website",
+            "name": "SpinFlow",
+            "alternateName": "SpinKorea",
+            "url": "https://spinkorea.kr",
+            "inLanguage": "ko-KR",
+            "publisher": {
+              "@id": "https://spinkorea.kr/#organization"
+            }
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://spinkorea.kr/tools#collection",
+            "name": "SpinFlow 무료 웹 도구 모음",
+            "description": "계산기, 랜덤 추첨, 텍스트 변환, 개발 및 생활 도구를 회원가입 없이 이용할 수 있는 모음입니다.",
+            "url": "https://spinkorea.kr/tools",
+            "inLanguage": "ko-KR"
+          },
+          {
+            "@type": "ItemList",
+            "name": "무료 웹 도구 목록",
+            "numberOfItems": 51,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "로또 번호 생성",
+                "url": "https://spinkorea.kr/tools/lotto-generator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "주사위 던지기",
+                "url": "https://spinkorea.kr/tools/dice-roller"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "동전 던지기",
+                "url": "https://spinkorea.kr/tools/coin-flip"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Yes or No",
+                "url": "https://spinkorea.kr/tools/yes-no-oracle"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "랜덤 팀 편성",
+                "url": "https://spinkorea.kr/tools/random-team"
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "비밀번호 생성",
+                "url": "https://spinkorea.kr/tools/random-password"
+              },
+              {
+                "@type": "ListItem",
+                "position": 7,
+                "name": "글자수 세기",
+                "url": "https://spinkorea.kr/tools/text-counter"
+              },
+              {
+                "@type": "ListItem",
+                "position": 8,
+                "name": "대소문자 변환",
+                "url": "https://spinkorea.kr/tools/case-converter"
+              },
+              {
+                "@type": "ListItem",
+                "position": 9,
+                "name": "로렘 입숨",
+                "url": "https://spinkorea.kr/tools/lorem-ipsum"
+              },
+              {
+                "@type": "ListItem",
+                "position": 10,
+                "name": "JSON 포맷터",
+                "url": "https://spinkorea.kr/tools/json-formatter"
+              },
+              {
+                "@type": "ListItem",
+                "position": 11,
+                "name": "URL 인코더",
+                "url": "https://spinkorea.kr/tools/uri-encoder"
+              },
+              {
+                "@type": "ListItem",
+                "position": 12,
+                "name": "Base64 변환",
+                "url": "https://spinkorea.kr/tools/base64-encoder"
+              },
+              {
+                "@type": "ListItem",
+                "position": 13,
+                "name": "Diff 비교",
+                "url": "https://spinkorea.kr/tools/diff-checker"
+              },
+              {
+                "@type": "ListItem",
+                "position": 14,
+                "name": "마크다운 미리보기",
+                "url": "https://spinkorea.kr/tools/markdown-previewer"
+              },
+              {
+                "@type": "ListItem",
+                "position": 15,
+                "name": "색상 변환기",
+                "url": "https://spinkorea.kr/tools/color-converter"
+              },
+              {
+                "@type": "ListItem",
+                "position": 16,
+                "name": "CSS 그림자 생성",
+                "url": "https://spinkorea.kr/tools/css-shadow-generator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 17,
+                "name": "QR 코드 생성",
+                "url": "https://spinkorea.kr/tools/qr-code-generator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 18,
+                "name": "진법 변환기",
+                "url": "https://spinkorea.kr/tools/base-converter"
+              },
+              {
+                "@type": "ListItem",
+                "position": 19,
+                "name": "UUID 생성기",
+                "url": "https://spinkorea.kr/tools/uuid-generator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 20,
+                "name": "나이 계산기",
+                "url": "https://spinkorea.kr/tools/age-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 21,
+                "name": "퍼센트 계산기",
+                "url": "https://spinkorea.kr/tools/percentage-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 22,
+                "name": "시간 계산기",
+                "url": "https://spinkorea.kr/tools/time-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 23,
+                "name": "단위 변환기",
+                "url": "https://spinkorea.kr/tools/unit-converter"
+              },
+              {
+                "@type": "ListItem",
+                "position": 24,
+                "name": "평수 계산기",
+                "url": "https://spinkorea.kr/tools/area-converter"
+              },
+              {
+                "@type": "ListItem",
+                "position": 25,
+                "name": "마진율 계산기",
+                "url": "https://spinkorea.kr/tools/margin-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 26,
+                "name": "할인율 계산기",
+                "url": "https://spinkorea.kr/tools/discount-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 27,
+                "name": "속도 계산기",
+                "url": "https://spinkorea.kr/tools/speed-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 28,
+                "name": "연비 계산기",
+                "url": "https://spinkorea.kr/tools/fuel-economy"
+              },
+              {
+                "@type": "ListItem",
+                "position": 29,
+                "name": "통계 계산기",
+                "url": "https://spinkorea.kr/tools/statistics-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 30,
+                "name": "BMI 계산기",
+                "url": "https://spinkorea.kr/tools/bmi-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 31,
+                "name": "칼로리 계산기",
+                "url": "https://spinkorea.kr/tools/calorie-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 32,
+                "name": "체지방률 계산기",
+                "url": "https://spinkorea.kr/tools/body-fat"
+              },
+              {
+                "@type": "ListItem",
+                "position": 33,
+                "name": "수면 계산기",
+                "url": "https://spinkorea.kr/tools/sleep-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 34,
+                "name": "칼로리 소모 계산기",
+                "url": "https://spinkorea.kr/tools/calorie-burn"
+              },
+              {
+                "@type": "ListItem",
+                "position": 35,
+                "name": "수분 섭취량 계산기",
+                "url": "https://spinkorea.kr/tools/water-intake"
+              },
+              {
+                "@type": "ListItem",
+                "position": 36,
+                "name": "이상 체중 계산기",
+                "url": "https://spinkorea.kr/tools/ideal-weight"
+              },
+              {
+                "@type": "ListItem",
+                "position": 37,
+                "name": "날짜 계산기",
+                "url": "https://spinkorea.kr/tools/date-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 38,
+                "name": "타이머",
+                "url": "https://spinkorea.kr/tools/timer"
+              },
+              {
+                "@type": "ListItem",
+                "position": 39,
+                "name": "D-Day 카운터",
+                "url": "https://spinkorea.kr/tools/d-day-counter"
+              },
+              {
+                "@type": "ListItem",
+                "position": 40,
+                "name": "Unix 타임스탬프",
+                "url": "https://spinkorea.kr/tools/unix-timestamp"
+              },
+              {
+                "@type": "ListItem",
+                "position": 41,
+                "name": "시급 계산기",
+                "url": "https://spinkorea.kr/tools/hourly-wage"
+              },
+              {
+                "@type": "ListItem",
+                "position": 42,
+                "name": "대출 계산기",
+                "url": "https://spinkorea.kr/tools/loan-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 43,
+                "name": "전월세 전환기",
+                "url": "https://spinkorea.kr/tools/jeonse-converter"
+              },
+              {
+                "@type": "ListItem",
+                "position": 44,
+                "name": "복리 계산기",
+                "url": "https://spinkorea.kr/tools/compound-interest"
+              },
+              {
+                "@type": "ListItem",
+                "position": 45,
+                "name": "퇴직금 계산기",
+                "url": "https://spinkorea.kr/tools/severance-pay"
+              },
+              {
+                "@type": "ListItem",
+                "position": 46,
+                "name": "연차 계산기",
+                "url": "https://spinkorea.kr/tools/annual-leave"
+              },
+              {
+                "@type": "ListItem",
+                "position": 47,
+                "name": "실수령액 계산기",
+                "url": "https://spinkorea.kr/tools/net-salary"
+              },
+              {
+                "@type": "ListItem",
+                "position": 48,
+                "name": "부가세 계산기",
+                "url": "https://spinkorea.kr/tools/vat-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 49,
+                "name": "더치페이 계산기",
+                "url": "https://spinkorea.kr/tools/dutch-pay"
+              },
+              {
+                "@type": "ListItem",
+                "position": 50,
+                "name": "투자 수익률 계산기",
+                "url": "https://spinkorea.kr/tools/roi-calculator"
+              },
+              {
+                "@type": "ListItem",
+                "position": 51,
+                "name": "단어 빈도 분석기",
+                "url": "https://spinkorea.kr/tools/word-frequency"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

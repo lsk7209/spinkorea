@@ -1,0 +1,27 @@
+{
+  "url": "https://spinkorea.kr/tools/hourly-wage",
+  "status_code": 200,
+  "render_error": null,
+  "html_findings": {
+    "real_buttons": 2,
+    "real_anchors": 19,
+    "div_onclick_widgets": 0,
+    "semantic_landmarks": 9,
+    "inputs_without_aria": 5,
+    "inputs_without_label": 0
+  },
+  "a11y_findings": {
+    "tree_present": true,
+    "total_nodes": 336,
+    "interactive_nodes": 20,
+    "role_button": 1,
+    "role_link": 19,
+    "role_generic": 12,
+    "unnamed_interactive": 0
+  },
+  "score": 100,
+  "score_status": "complete",
+  "partial": false,
+  "partial_reasons": [],
+  "issues": []
+}

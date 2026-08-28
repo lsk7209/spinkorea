@@ -1,0 +1,29 @@
+{
+  "url": "https://spinkorea.kr/tools/lotto-generator",
+  "status_code": 200,
+  "render_error": null,
+  "html_findings": {
+    "real_buttons": 10,
+    "real_anchors": 18,
+    "div_onclick_widgets": 0,
+    "semantic_landmarks": 8,
+    "inputs_without_aria": 0,
+    "inputs_without_label": 0
+  },
+  "a11y_findings": {
+    "tree_present": true,
+    "total_nodes": 217,
+    "interactive_nodes": 27,
+    "role_button": 9,
+    "role_link": 18,
+    "role_generic": 7,
+    "unnamed_interactive": 2
+  },
+  "score": 94,
+  "score_status": "complete",
+  "partial": false,
+  "partial_reasons": [],
+  "issues": [
+    "2 interactive node(s) without accessible name (-6)"
+  ]
+}

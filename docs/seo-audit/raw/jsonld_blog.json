@@ -1,0 +1,215 @@
+{
+  "block_count": 1,
+  "processed_count": 1,
+  "total_bytes": 9294,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 9294,
+      "valid": true,
+      "types": [
+        "Blog",
+        "BlogPosting",
+        "ImageObject",
+        "Organization",
+        "WebSite"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://spinkorea.kr/#organization",
+            "name": "SpinFlow",
+            "alternateName": "SpinKorea",
+            "url": "https://spinkorea.kr",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://spinkorea.kr/og-image.png"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://spinkorea.kr/#website",
+            "name": "SpinFlow",
+            "alternateName": "SpinKorea",
+            "url": "https://spinkorea.kr",
+            "inLanguage": "ko-KR",
+            "publisher": {
+              "@id": "https://spinkorea.kr/#organization"
+            }
+          },
+          {
+            "@type": "Blog",
+            "name": "SpinFlow 블로그",
+            "description": "결정 장애 해결, 생산성 향상, 온라인 도구 활용 가이드.",
+            "blogPost": [
+              {
+                "@type": "BlogPosting",
+                "headline": "온라인 계산기 vs 엑셀: 언제 무엇을 써야 하나",
+                "description": "간단한 계산에 엑셀을 여는 것은 낭비입니다. 상황별로 온라인 계산기와 스프레드시트를 현명하게 선택하는 기준.",
+                "datePublished": "2026-05-24",
+                "url": "https://spinkorea.kr/blog/calculator-vs-excel",
+                "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "디지털 노마드의 생산성 도구 모음: 어디서든 일하는 법",
+                "description": "카페·공유오피스·해외 어디서든 최고의 생산성을 유지하는 디지털 노마드들의 필수 도구와 루틴.",
+                "datePublished": "2026-05-23",
+                "url": "https://spinkorea.kr/blog/digital-nomad-tools",
+                "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "텍스트 변환이 필요한 의외의 상황 7가지",
+                "description": "대소문자 변환, 특수문자 제거, 줄바꿈 정리... 텍스트를 정제하고 변환해야 하는 실무 상황 완벽 정리.",
+                "datePublished": "2026-05-22",
+                "url": "https://spinkorea.kr/blog/text-formatting-situations",
+                "image": "https://images.unsplash.com/photo-1516131206008-dd041a9764fd?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "AI 시대에 살아남는 스킬: 대체되지 않는 능력 5가지",
+                "description": "ChatGPT가 할 수 없는 것은 무엇인가. AI 시대에 오히려 더 가치가 높아지는 인간 고유의 능력.",
+                "datePublished": "2026-05-21",
+                "url": "https://spinkorea.kr/blog/ai-era-skills",
+                "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "이미지 포맷 완벽 가이드: JPG vs PNG vs WebP vs AVIF",
+                "description": "언제 JPG를 쓰고 언제 PNG를 써야 하나? 웹 성능을 위한 최신 이미지 포맷 선택 기준 완벽 정리.",
+                "datePublished": "2026-05-20",
+                "url": "https://spinkorea.kr/blog/image-format-guide",
+                "image": "https://images.unsplash.com/photo-1561736778-92e52a7769ef?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "구글 캘린더 100% 활용법: 시간을 설계하는 방법",
+                "description": "단순한 일정 관리를 넘어 타임 블로킹, 색상 코딩, 반복 일정, 팀 캘린더까지. 구글 캘린더 고수의 사용법.",
+                "datePublished": "2026-05-19",
+                "url": "https://spinkorea.kr/blog/google-calendar-tips",
+                "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "URL 단축기의 원리: 짧은 링크 뒤에 숨겨진 기술",
+                "description": "bit.ly, tinyurl... 긴 URL이 짧아지는 원리, 리다이렉트 동작 방식, 단축 URL의 보안 위험까지 알아봅니다.",
+                "datePublished": "2026-05-18",
+                "url": "https://spinkorea.kr/blog/url-shortener-tech",
+                "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "두려움을 행동으로 전환하는 5초의 법칙",
+                "description": "멜 로빈스의 5초 법칙: 하고 싶은 것이 생기면 5초 안에 시작하지 않으면 뇌가 방해합니다. 과학적 근거와 실천법.",
+                "datePublished": "2026-05-17",
+                "url": "https://spinkorea.kr/blog/five-second-rule",
+                "image": "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "주사위와 확률: 보드게임 뒤에 숨겨진 수학",
+                "description": "주사위 2개를 굴렸을 때 7이 가장 많이 나오는 이유, 크리티컬 확률 계산, 보드게임 전략에 확률을 활용하는 법.",
+                "datePublished": "2026-05-16",
+                "url": "https://spinkorea.kr/blog/dice-probability",
+                "image": "https://images.unsplash.com/photo-1611996575749-79a3a250f948?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "메모의 기술: 두 번째 뇌 만들기",
+                "description": "좋은 아이디어는 기억에 의존하면 안 됩니다. 코넬 노트, 제텔카스텐, 디지털 노트 시스템 완벽 가이드.",
+                "datePublished": "2026-05-15",
+                "url": "https://spinkorea.kr/blog/note-taking-art",
+                "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "근무시간 계산기 활용법: 야근 수당부터 프리랜서 정산까지",
+                "description": "정확한 근무시간 계산이 필요한 모든 상황. 야근 수당, 프리랜서 시급 정산, 프로젝트 일정 관리 방법.",
+                "datePublished": "2026-05-14",
+                "url": "https://spinkorea.kr/blog/work-hours-calculator",
+                "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "집중력 도둑 TOP 5와 차단 방법",
+                "description": "SNS 알림, 오픈 오피스, 멀티탭... 우리의 집중력을 훔치는 주범들과 환경 설계로 차단하는 방법.",
+                "datePublished": "2026-05-13",
+                "url": "https://spinkorea.kr/blog/focus-thieves",
+                "image": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "텍스트 분석의 기초: 글자수·단어수·문장수가 중요한 이유",
+                "description": "SNS 글자 제한, 독해 수준 측정, SEO 콘텐츠 최적화까지. 텍스트 분석이 필요한 모든 상황을 알아봅니다.",
+                "datePublished": "2026-05-12",
+                "url": "https://spinkorea.kr/blog/text-analysis-basics",
+                "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "인간관계에서 경계선(Boundary) 긋기의 중요성",
+                "description": "거절 못 하는 사람이 더 힘든 이유. 건강한 경계선이 관계를 망치는 게 아니라 오히려 깊게 만드는 이유.",
+                "datePublished": "2026-05-11",
+                "url": "https://spinkorea.kr/blog/boundaries-relationship",
+                "image": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "D-Day 카운터로 인생 관리하기: 중요한 날을 카운트다운으로",
+                "description": "시험, 프로젝트 마감, 여행, 기념일... D-Day 카운터가 미루기를 방지하고 동기를 높이는 이유.",
+                "datePublished": "2026-05-10",
+                "url": "https://spinkorea.kr/blog/dday-life-management",
+                "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "성공한 사람들의 공통 습관 5가지",
+                "description": "빌 게이츠, 워런 버핏, 오프라 윈프리... 그들의 공통점은 재능이 아닌 습관이었습니다.",
+                "datePublished": "2026-05-09",
+                "url": "https://spinkorea.kr/blog/success-habits",
+                "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "API와 JSON: 앱들이 서로 대화하는 방법",
+                "description": "카카오 로그인, 날씨 앱, 지도 서비스... 모두 API와 JSON으로 작동합니다. 비개발자도 이해하는 완벽 가이드.",
+                "datePublished": "2026-05-08",
+                "url": "https://spinkorea.kr/blog/json-api-explained",
+                "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "감사 일기의 효과: 5분으로 바꾸는 하루의 질",
+                "description": "감사 일기가 우울감 감소, 수면 개선, 관계 향상에 미치는 과학적 효과와 올바른 작성법.",
+                "datePublished": "2026-05-07",
+                "url": "https://spinkorea.kr/blog/gratitude-journal",
+                "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "CSS box-shadow 마스터하기: 디자이너처럼 그림자 만들기",
+                "description": "단순한 검은 그림자에서 뉴모피즘, 글로우 효과까지. CSS box-shadow의 모든 파라미터와 실전 활용법.",
+                "datePublished": "2026-05-06",
+                "url": "https://spinkorea.kr/blog/css-shadow-design",
+                "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2670&auto=format&fit=crop"
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "완벽주의의 덫: 80점이 100점보다 나을 때",
+                "description": "완벽주의는 높은 기준이 아니라 실행을 막는 두려움입니다. 완벽주의를 극복하고 실행력을 높이는 방법.",
+                "datePublished": "2026-05-05",
+                "url": "https://spinkorea.kr/blog/perfectionism-trap",
+                "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2670&auto=format&fit=crop"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

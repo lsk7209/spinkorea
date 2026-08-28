@@ -37,35 +37,26 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.spinkorea.kr" }],
+      "destination": "https://spinkorea.kr/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/about",
-      "destination": "/about/index.html"
+      "source": "/s/:id",
+      "destination": "/api/s/:id"
     },
     {
-      "source": "/contact",
-      "destination": "/contact/index.html"
+      "source": "/spinflow-standalone",
+      "destination": "/index.html"
     },
     {
-      "source": "/privacy",
-      "destination": "/privacy/index.html"
-    },
-    {
-      "source": "/terms",
-      "destination": "/terms/index.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog/index.html"
-    },
-    {
-      "source": "/blog/:slug",
-      "destination": "/blog/:slug/index.html"
-    },
-    {
-      "source": "/((?!api/).*)",
+      "source": "/spinflow/:slug",
       "destination": "/index.html"
     }
   ]
 }
-

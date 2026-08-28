@@ -19,7 +19,10 @@ assert(blogPost.includes('to="/about"'), "curated articles need an editorial-pol
 assert(blogPost.includes('to="/contact"'), "curated articles need a correction link");
 assert(about.includes("콘텐츠 편집·검토 기준"), "about page needs editorial standards");
 assert(about.includes("검토되지 않은 자동 생성 초안은 검색 결과와 블로그 목록에 노출하지 않습니다."), "draft exclusion policy must be explicit");
-assert(metadata.includes('return post.source === "curated";'), "only curated posts may be indexable");
+assert(
+  metadata.includes('return post.source === "curated" || post.source === "editorial";'),
+  "only reviewed posts (curated or approved editorial) may be indexable",
+);
 assert(generator.includes('robots: isIndexablePost(post) ? undefined : "noindex,follow"'), "static shells must preserve generated-post noindex");
 assert(/^google\.com, pub-\d+, DIRECT, f08c47fec0942fa0$/m.test(adsTxt), "ads.txt publisher record missing or malformed");
 

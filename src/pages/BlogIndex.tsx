@@ -61,6 +61,7 @@ export default function BlogIndex() {
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
+              aria-label={post.title}
               onClick={() => trackEvent('content_selected', {
                 content_type: 'blog_post',
                 slug: post.slug,
@@ -74,6 +75,8 @@ export default function BlogIndex() {
                     <img
                       src={post.thumbnail}
                       alt={post.title}
+                      width={1600}
+                      height={900}
                       loading={index < 6 ? "eager" : "lazy"}
                       decoding="async"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

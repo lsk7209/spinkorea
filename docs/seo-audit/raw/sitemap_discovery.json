@@ -1,0 +1,61 @@
+{
+  "target": "https://spinkorea.kr",
+  "robots_url": "https://spinkorea.kr/robots.txt",
+  "declared": [
+    {
+      "url": "https://spinkorea.kr/sitemap.xml",
+      "query_redacted": false
+    }
+  ],
+  "found": [
+    {
+      "url": "https://spinkorea.kr/sitemap.xml",
+      "query_redacted": false,
+      "source": "robots.txt",
+      "status_code": 200,
+      "kind": "urlset",
+      "valid": true,
+      "error": null
+    }
+  ],
+  "checked": [
+    {
+      "url": "https://spinkorea.kr/sitemap.xml",
+      "query_redacted": false,
+      "source": "robots.txt",
+      "status_code": 200,
+      "kind": "urlset",
+      "valid": true,
+      "error": null
+    },
+    {
+      "url": "https://spinkorea.kr/sitemap_index.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 200,
+      "kind": null,
+      "valid": false,
+      "error": "DOCTYPE is not allowed in sitemap XML"
+    },
+    {
+      "url": "https://spinkorea.kr/sitemap-index.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 200,
+      "kind": null,
+      "valid": false,
+      "error": "DOCTYPE is not allowed in sitemap XML"
+    },
+    {
+      "url": "https://spinkorea.kr/wp-sitemap.xml",
+      "query_redacted": false,
+      "source": "common_path",
+      "status_code": 200,
+      "kind": null,
+      "valid": false,
+      "error": "DOCTYPE is not allowed in sitemap XML"
+    }
+  ],
+  "warnings": [],
+  "error": null
+}
