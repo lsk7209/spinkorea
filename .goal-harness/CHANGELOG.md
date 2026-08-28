@@ -16,3 +16,18 @@
 | `src/pages/tools/{LottoGenerator,DiceRoller,CoinFlip,RandomTeam,PasswordGenerator,YesNoOracle,JsonFormatter,QrCodeGenerator}.tsx` | Added real completion-boundary events | Measure completed outcomes instead of first interaction |
 | `src/data/post-metadata.runtime.generated.json`, `src/data/postMetadata.ts`, `scripts/generate-assets.mjs` | Added a runtime-only metadata projection | Reduce the blog metadata route chunk while preserving build-only source/link fields |
 | `src/components/ToolLayout.tsx`, `HourlyWageCalculator.tsx`, `BmiCalculator.tsx`, `VatCalculator.tsx` | Added official references, review dates, disclaimers, and the current 2026 wage baseline | Strengthen YMYL trust and freshness |
+# 2026-08-28 editorial schedule extension
+
+- Added a SpinKorea-specific practical-tool editorial persona and two samples.
+- Added 23 reviewed daily articles for September 8 through September 30.
+- Added an idempotent extension script that preserves the existing content plan and legacy manifest entries.
+- Added an `editorial` metadata source so reviewed data-driven articles are indexable while unreviewed generated pages stay noindex.
+- Extended validation for the mixed 5-hour legacy and daily editorial schedule plus 3,500-character body floor.
+
+# 2026-08-28 October editorial extension
+
+- Added six researched draft files containing 27 independent articles for October 1-27 at 08:00 KST.
+- Added six route-lazy October content chunks and updated the generated plan, manifest, and metadata projections.
+- Added an idempotent October schedule integrator and a standalone research/template/link/length/similarity validator.
+- Extended plan validation to assert the exact 50-day editorial run through October 27.
+- Repaired the standalone validator so it remains reproducible after October drafts are integrated.

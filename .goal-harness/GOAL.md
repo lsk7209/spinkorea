@@ -1,8 +1,14 @@
 # GOAL
 
+## 2026-08-28 October 60-day extension
+
+Extend the reviewed editorial schedule from 2026-10-01 through 2026-10-27 at one article every 24 hours. Each of 27 articles must be an independently researched, people-first guide tied to an implemented SpinFlow tool or workflow. No shared prose skeleton or keyword-variation page may be approved.
+
+Acceptance requires exact 08:00 KST slots, 3,500+ plain Korean characters, article-specific sources and examples, valid internal links, safe HTML, pairwise content similarity below the established threshold, consistent editorial index policy, lazy content chunks, current/future production builds, and independent review.
+
 ## Final Deliverable
 
-SpinKorea의 대표 도구에서 실제 결과 완료 전환을 정확히 측정하고, 검색 신뢰 콘텐츠와 내부 탐색성, 모바일 초기 로딩 성능을 개선한다.
+SpinKorea 전용 편집 페르소나를 설정하고 기존 예약 종료일 다음 날부터 2026-09-30까지 품질 검토 가능한 예약 콘텐츠를 확장하며, 검색·콘텐츠·성능 경계를 함께 최적화한다.
 
 ## User Value
 
@@ -10,11 +16,12 @@ SpinKorea의 대표 도구에서 실제 결과 완료 전환을 정확히 측정
 
 ## Required Features
 
-- 대표 도구 8개 이상의 실제 완료 지점 계측
-- 개인 입력값을 보내지 않는 공통 완료 이벤트 계약
-- 검색 의도가 높은 도구의 사용법·결과 해석·신뢰 근거 강화
-- 초기 번들 또는 대형 메타데이터 병목의 실질적 감소
-- 타입검사, 빌드, 집중 회귀검사, 대표 브라우저 흐름 검증
+- 검증 가능한 경력만 사용하는 사이트 전용 편집 페르소나와 서로 다른 구조의 샘플 2개
+- 2026-09-08부터 2026-09-30까지 최소 하루 1개 예약 콘텐츠
+- 기존 76개 및 예약 600개와 중복·카니벌라이제이션을 피하는 제목·글 계약
+- 글별 검색 의도, 독자 상황, 고유 답변, 근거 계획, 내부 링크 계약
+- 콘텐츠 증가 후에도 검색 범위와 블로그 런타임 번들 성능 유지
+- 타입검사, 콘텐츠 검사, 검색 범위, 빌드, 구조·중복 검증
 
 ## Non-Goals
 
@@ -25,10 +32,10 @@ SpinKorea의 대표 도구에서 실제 결과 완료 전환을 정확히 측정
 
 ## Done Conditions
 
-- 대표 도구 완료 이벤트가 실제 결과 생성 시점에만 발생한다.
-- 완료 이벤트에 사용자 입력값·URL 쿼리·개인정보가 포함되지 않는다.
-- 검색 신뢰 또는 내부 탐색 개선이 정적 산출물에 반영된다.
-- 초기 로딩 병목이 빌드 산출물 수치로 감소하거나, 불가 시 정확한 근거와 후속안을 남긴다.
+- 마지막 예약 시각이 2026-09-30 KST에 도달한다.
+- 모든 신규 행이 별도 존재 이유와 서로 다른 독자 결정·구조를 가진다.
+- 페르소나가 허위 자격이나 허구 경험을 주장하지 않는다.
+- 검색 범위, 빌드 및 런타임 메타데이터 성능 검사가 통과한다.
 - 모든 수용 기준과 잔여 위험이 하네스와 PROJECT_STATE.md에 기록된다.
 
 ## User-Visible Result

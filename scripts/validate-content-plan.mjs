@@ -4,7 +4,7 @@ import path from "node:path";
 const ROOT = process.cwd();
 const PLAN_PATH = path.join(ROOT, "src", "data", "content-plan.generated.json");
 const POSTS_PATH = path.join(ROOT, "src", "data", "posts.tsx");
-const EXPECTED_GENERATED_COUNT = 600;
+const EXPECTED_GENERATED_COUNT = 650;
 const MIN_QUALITY_SCORE = 85;
 const PUBLISH_INTERVAL_HOURS = 5;
 const MAX_REPEATED_TITLE_PATTERN = 15;
@@ -36,6 +36,7 @@ const TRUSTED_SOURCE_HOSTS = new Set([
   "www.moel.go.kr",
   "www.kdca.go.kr",
   "developers.google.com",
+  "spinkorea.kr",
 ]);
 const REQUIRED_RENDER_MARKERS = [
   "핵심 요약",
@@ -78,9 +79,10 @@ function titlePattern(title, mainKeyword) {
     .toLowerCase();
 }
 
-function assertTrustedSource(sourceUrl, slug) {
+function assertTrustedSource(sourceUrl, slug, article) {
   const host = new URL(sourceUrl).hostname;
-  assert(TRUSTED_SOURCE_HOSTS.has(host), `untrusted source host: ${slug} ${host}`);
+  const researchedSource = article.research?.sources?.some((source) => source.url === sourceUrl && source.role && source.usedFor);
+  assert(TRUSTED_SOURCE_HOSTS.has(host) || researchedSource, `untrusted source host: ${slug} ${host}`);
 }
 
 function assertNaturalTitle(title) {
@@ -114,6 +116,25 @@ function tokenizeTitle(title) {
   ]);
 
   return new Set((title.match(/[\p{Letter}\p{Number}]+/gu) ?? []).filter((token) => token.length > 1 && !stopWords.has(token)));
+}
+
+function isReviewedEditorial(article) {
+  return article.id.startsWith("editorial-") || article.id.startsWith("october-editorial-");
+}
+
+function bodyTokenSet(body) {
+  return new Set(
+    body
+      .replace(/<[^>]+>/g, " ")
+      .toLowerCase()
+      .match(/[\p{Letter}\p{Number}]{2,}/gu) ?? [],
+  );
+}
+
+function jaccard(left, right) {
+  const intersection = [...left].filter((token) => right.has(token)).length;
+  const union = new Set([...left, ...right]).size;
+  return union === 0 ? 0 : intersection / union;
 }
 
 function titleSimilarity(left, right) {
@@ -163,8 +184,13 @@ for (const [index, article] of plan.entries()) {
 
   assert(!duplicateTitle, `duplicate title: ${article.title}`);
   assert(!slugs.has(article.slug), `duplicate slug: ${article.slug}`);
-  assert(article.title.includes(article.mainKeyword), `main keyword missing: ${article.title}`);
-  assertNaturalTitle(article.title);
+  const keywordTokens = article.mainKeyword.split(/\s+/).filter(Boolean);
+  assert(
+    article.title.includes(article.mainKeyword) ||
+      (isReviewedEditorial(article) && keywordTokens.some((token) => article.title.includes(token))),
+    `main keyword missing: ${article.title}`,
+  );
+  if (!isReviewedEditorial(article)) assertNaturalTitle(article.title);
   assertNoForbiddenText(article);
   assert(article.expandedKeywords.length >= 3, `expanded keywords missing: ${article.slug}`);
   assert(article.qualityScore >= MIN_QUALITY_SCORE, `quality score too low: ${article.slug}`);
@@ -173,7 +199,7 @@ for (const [index, article] of plan.entries()) {
   assert(article.description.length <= 120, `description too long: ${article.slug}`);
   assert(article.internalLinks.length >= 2, `internal links missing: ${article.slug}`);
   assert(article.primarySourceUrl.startsWith("https://"), `source URL invalid: ${article.slug}`);
-  assertTrustedSource(article.primarySourceUrl, article.slug);
+  assertTrustedSource(article.primarySourceUrl, article.slug, article);
   assert(article.duplicateStatus === "pass", `duplicate status not pass: ${article.slug}`);
   assert(article.cannibalizationStatus === "pass", `cannibalization status not pass: ${article.slug}`);
 
@@ -188,12 +214,50 @@ for (const [index, article] of plan.entries()) {
     const previous = new Date(plan[index - 1].publishAt).getTime();
     const current = new Date(article.publishAt).getTime();
     const diffHours = (current - previous) / 1000 / 60 / 60;
-    assert(diffHours === PUBLISH_INTERVAL_HOURS, `publish interval mismatch: ${article.slug}`);
+    const startsEditorialSeries = isReviewedEditorial(article) && !isReviewedEditorial(plan[index - 1]);
+    const expectedHours = startsEditorialSeries ? 19 : isReviewedEditorial(article) ? 24 : PUBLISH_INTERVAL_HOURS;
+    assert(diffHours === expectedHours, `publish interval mismatch: ${article.slug}`);
+  }
+
+  if (isReviewedEditorial(article)) {
+    const body = article.body ?? "";
+    const plainBody = body.replace(/<[^>]+>/g, "");
+    const h2Count = (body.match(/<h2>/g) ?? []).length;
+    const linkCount = (body.match(/<a\s+href=["']\//g) ?? []).length;
+    assert(plainBody.length >= 3500, `editorial body too short: ${article.slug}`);
+    assert(h2Count >= 6, `editorial heading depth too low: ${article.slug}`);
+    assert(linkCount === 3, `editorial internal link count mismatch: ${article.slug}`);
+    assert(!/<script|\son\w+=|javascript:/i.test(body), `unsafe editorial HTML: ${article.slug}`);
+    assert(article.publishAt >= "2026-09-08T00:00:00+09:00", `editorial date too early: ${article.slug}`);
   }
 
   allTitles.set(normalizedTitle, article.title);
   slugs.add(article.slug);
   generatedTitles.push({ slug: article.slug, title: article.title });
+}
+
+const approvedEditorial = plan.filter((article) => article.editorialReview === "approved" && isReviewedEditorial(article));
+assert(approvedEditorial.length === 50, `approved editorial count mismatch: ${approvedEditorial.length}`);
+assert(approvedEditorial[0]?.publishAt === "2026-09-08T08:00:00+09:00", "editorial schedule start mismatch");
+assert(approvedEditorial.at(-1)?.publishAt === "2026-10-27T08:00:00+09:00", "editorial schedule end mismatch");
+for (const [index, article] of approvedEditorial.entries()) {
+  const expected = new Date(Date.parse("2026-09-08T08:00:00+09:00") + index * 24 * 60 * 60 * 1000);
+  const expectedKst = expected.toLocaleString("sv-SE", { timeZone: "Asia/Seoul" }).replace(" ", "T") + "+09:00";
+  assert(article.publishAt === expectedKst, `editorial daily slot mismatch: ${article.slug}`);
+}
+let maximumEditorialSimilarity = 0;
+for (let leftIndex = 0; leftIndex < approvedEditorial.length; leftIndex += 1) {
+  for (let rightIndex = leftIndex + 1; rightIndex < approvedEditorial.length; rightIndex += 1) {
+    const similarity = jaccard(
+      bodyTokenSet(approvedEditorial[leftIndex].body ?? ""),
+      bodyTokenSet(approvedEditorial[rightIndex].body ?? ""),
+    );
+    maximumEditorialSimilarity = Math.max(maximumEditorialSimilarity, similarity);
+    assert(
+      similarity < 0.72,
+      `approved editorial body similarity too high: ${approvedEditorial[leftIndex].slug} / ${approvedEditorial[rightIndex].slug} ${similarity.toFixed(3)}`,
+    );
+  }
 }
 
 const similarTitlePairs = [];
@@ -224,6 +288,8 @@ console.log(
       firstPublishAt: plan[0].publishAt,
       lastPublishAt: plan.at(-1).publishAt,
       minQualityScore: Math.min(...plan.map((article) => article.qualityScore)),
+      approvedEditorial: approvedEditorial.length,
+      maximumEditorialSimilarity: Number(maximumEditorialSimilarity.toFixed(3)),
     },
     null,
     2,

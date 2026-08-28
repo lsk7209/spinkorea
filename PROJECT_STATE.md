@@ -67,6 +67,27 @@ SpinKorea/SpinFlow의 검색 유입과 검색 방문자의 실제 도구 사용 
 3. GSC/Naver 기준선을 확보한 뒤 2026-09-11에 동기간 재측정.
 4. 별도 보안 작업으로 공개 API와 취약 의존성 문제 해결.
 
+## 2026-08-28 Editorial Schedule Phase
+
+- SpinKorea 편집 페르소나와 검수 샘플 2개를 `personas/spinkorea`에 추가했다.
+- 반복 템플릿 확대 대신 2026-09-08~09-30에 하루 1편, 총 23편의 도구 과업형 글을 예약했다. 마지막 예약은 2026-09-30 13:00 KST다.
+- 최초 공통 본문은 리뷰에서 유사도 0.959~0.969로 차단했다. 이후 23개를 실제 도구 동작과 독립 검색 의도에 맞춰 모두 다시 작성했으며, 태그 제외 3,752~6,181자·H2 6개 이상·내부 링크 3개·안전 HTML·본문 Jaccard 최대 0.235 게이트를 통과해 `editorialReview: approved`/index 대상으로 승격했다.
+- 기존 600개 계획과 매니페스트의 레거시 86개 slug를 보존하는 멱등 append 스크립트를 추가했다.
+- 예약 시각은 08:00 KST로 정해 09:00 KST 일일 빌드에 포함된다.
+- 23개 본문은 4개 lazy chunk로 분리했다. 단일 89.69kB gzip 청크 대신 상세 페이지가 19.93~26.38kB gzip 청크 하나만 불러온다.
+- 검증: `content:validate` PASS(623 plans, approved 23, similarity max 0.235, last 2026-09-30), typecheck/build PASS, growth 24/24 PASS, search scope 9/9 PASS. 미래 시점 빌드도 699개 본문 렌더링 PASS 후 현재 시점 산출물로 복원했다.
+
+## 2026-08-28 October Editorial Extension
+
+- Added 27 independently researched articles scheduled every day at 08:00 KST from 2026-10-01 through 2026-10-27. Together with the September set, the site now has 50 continuous daily editorial slots from 2026-09-08 through 2026-10-27.
+- Each October article has an article-specific research question, reader outcome, original contribution, 3-5 attributed sources, 3 internal links, 3-5 external source links, at least 6 H2 sections, and at least 3,500 Korean plain-text characters.
+- Added an idempotent October schedule integrator and a standalone draft validator. The validator can run before or after integration without treating the integrated October set as pre-existing duplicates.
+- Non-template gates passed: unique H2 sequences, no repeated long paragraphs, maximum October-plus-September draft Jaccard 0.219; integrated editorial maximum 0.235.
+- October bodies are split into six route-lazy chunks at 14.98-22.42 kB gzip.
+- Validation passed: content plan 650/50 approved, typecheck, production build, growth 24/24, search scope 13/13, and `git diff --check`.
+- Future build at 2026-10-28 rendered 726 pages and verified the final 2026-10-27 article in HTML, sitemap, RSS, and llms.txt without noindex. A normal build then restored current-time assets (627 rendered pages).
+- No Git commit, GitHub push, Vercel operation, or external publishing/account mutation was performed in this phase.
+
 ## 2026-08-28 Growth Phase 2
 
 - 로또, 주사위, 동전, 랜덤 팀, 비밀번호, Yes/No, JSON, QR의 실제 결과 완료 지점에 `tool_result_viewed`를 추가했다.

@@ -9,7 +9,7 @@ export interface BlogPostMeta {
   tags: string[];
   thumbnail?: string;
   qualityScore?: number;
-  source: "curated" | "generated";
+  source: "curated" | "editorial" | "generated";
 }
 
 export const BLOG_POST_METADATA = postMetadata as BlogPostMeta[];
@@ -20,7 +20,7 @@ export const BLOG_POST_METADATA = postMetadata as BlogPostMeta[];
  * reachable by their existing URLs while they await an editorial review.
  */
 export function isIndexablePost(post: BlogPostMeta): boolean {
-  return post.source === "curated";
+  return post.source === "curated" || post.source === "editorial";
 }
 
 export function getPostPublishDate(post: BlogPostMeta): string {

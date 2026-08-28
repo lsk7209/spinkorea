@@ -20878,5 +20878,1686 @@
       "에코드라이빙"
     ],
     "source": "generated"
+  },
+  {
+    "slug": "random-number-exclusion",
+    "title": "랜덤 숫자 뽑기, 제외 번호를 먼저 정하는 순서",
+    "description": "랜덤 숫자에서 범위와 제외수를 입력 전에 합의하고 결과를 기록하는 방법을 설명합니다.",
+    "date": "2026-09-08",
+    "publishAt": "2026-09-08T13:00:00+09:00",
+    "tags": [
+      "랜덤 숫자 뽑기",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "단계형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/random-number",
+    "internalLinks": [
+      {
+        "label": "랜덤 숫자 뽑기 도구",
+        "path": "/random-number"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "dice-multiple-sum",
+    "title": "주사위 여러 개 합계로 게임 판정표 만들기",
+    "description": "여러 주사위의 개수와 면 수를 고정하고 합계 판정 규칙을 운영하는 순서를 정리합니다.",
+    "date": "2026-09-09",
+    "publishAt": "2026-09-09T13:00:00+09:00",
+    "tags": [
+      "주사위 합계",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "판단표형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/dice-roller",
+    "internalLinks": [
+      {
+        "label": "주사위 합계 도구",
+        "path": "/tools/dice-roller"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "coin-flip-question",
+    "title": "동전 던지기 전에 질문을 두 선택지로 줄이는 법",
+    "description": "동전 던지기에 맞는 질문을 만들고 재실행 논쟁을 줄이는 간단한 규칙을 안내합니다.",
+    "date": "2026-09-10",
+    "publishAt": "2026-09-10T13:00:00+09:00",
+    "tags": [
+      "동전 던지기",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "시나리오형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/coin-flip",
+    "internalLinks": [
+      {
+        "label": "동전 던지기 도구",
+        "path": "/tools/coin-flip"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "yes-no-reversible-choice",
+    "title": "Yes or No 결정은 되돌릴 수 있는 일에만 쓰세요",
+    "description": "예·아니오 도구에 맡겨도 되는 선택과 직접 판단해야 하는 선택을 구분합니다.",
+    "date": "2026-09-11",
+    "publishAt": "2026-09-11T13:00:00+09:00",
+    "tags": [
+      "Yes or No 결정",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "오류진단형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/yes-no-oracle",
+    "internalLinks": [
+      {
+        "label": "Yes or No 결정 도구",
+        "path": "/tools/yes-no-oracle"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "random-team-odd-members",
+    "title": "홀수 인원 랜덤 팀 나누기, 한 명 차이를 공정하게 설명하기",
+    "description": "인원이 나누어떨어지지 않을 때 팀 크기와 예외 역할을 미리 합의하는 방법입니다.",
+    "date": "2026-09-12",
+    "publishAt": "2026-09-12T13:00:00+09:00",
+    "tags": [
+      "랜덤 팀 나누기",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "체크리스트형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/random-team",
+    "internalLinks": [
+      {
+        "label": "랜덤 팀 나누기 도구",
+        "path": "/tools/random-team"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "lotto-random-combination",
+    "title": "로또 번호 생성기는 예측이 아니라 무작위 조합 도구입니다",
+    "description": "무작위 번호 조합의 용도와 확률을 과장하지 않고 사용하는 범위를 설명합니다.",
+    "date": "2026-09-13",
+    "publishAt": "2026-09-13T13:00:00+09:00",
+    "tags": [
+      "로또 번호 생성기",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "단계형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/lotto-generator",
+    "internalLinks": [
+      {
+        "label": "로또 번호 생성기 도구",
+        "path": "/tools/lotto-generator"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "lorem-ipsum-layout-qa",
+    "title": "더미 텍스트로 모바일 레이아웃 깨짐을 찾는 체크리스트",
+    "description": "목업용 문단 수를 정하고 실제 문구 교체 전 화면을 검수하는 방법입니다.",
+    "date": "2026-09-14",
+    "publishAt": "2026-09-14T13:00:00+09:00",
+    "tags": [
+      "더미 텍스트",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "판단표형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/lorem-ipsum",
+    "internalLinks": [
+      {
+        "label": "더미 텍스트 도구",
+        "path": "/tools/lorem-ipsum"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "diff-whitespace-review",
+    "title": "문서 비교에서 공백 차이와 내용 수정을 분리해서 읽기",
+    "description": "줄바꿈과 공백 때문에 중요한 내용 변경이 묻히지 않게 비교하는 순서입니다.",
+    "date": "2026-09-15",
+    "publishAt": "2026-09-15T13:00:00+09:00",
+    "tags": [
+      "문서 비교",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "시나리오형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/diff-checker",
+    "internalLinks": [
+      {
+        "label": "문서 비교 도구",
+        "path": "/tools/diff-checker"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "hex-rgb-hsl-rounding",
+    "title": "HEX·RGB·HSL 변환값이 조금씩 다른 이유",
+    "description": "색상 모델과 반올림을 이해하고 원본 색을 잃지 않게 기록하는 법을 설명합니다.",
+    "date": "2026-09-16",
+    "publishAt": "2026-09-16T13:00:00+09:00",
+    "tags": [
+      "색상 코드 변환",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "오류진단형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/color-converter",
+    "internalLinks": [
+      {
+        "label": "색상 코드 변환 도구",
+        "path": "/tools/color-converter"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "css-shadow-states",
+    "title": "CSS 그림자는 기본·호버·포커스 상태를 함께 설계하세요",
+    "description": "그림자 코드를 상태별로 나누고 접근성을 해치지 않게 검토하는 방법입니다.",
+    "date": "2026-09-17",
+    "publishAt": "2026-09-17T13:00:00+09:00",
+    "tags": [
+      "CSS 그림자",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "체크리스트형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/css-shadow-generator",
+    "internalLinks": [
+      {
+        "label": "CSS 그림자 도구",
+        "path": "/tools/css-shadow-generator"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "qr-print-scan-test",
+    "title": "QR 코드 인쇄 전 실제 크기로 스캔 테스트하는 순서",
+    "description": "화면에서 만든 QR을 인쇄하기 전에 크기와 대비, 연결 주소를 확인하는 절차입니다.",
+    "date": "2026-09-18",
+    "publishAt": "2026-09-18T13:00:00+09:00",
+    "tags": [
+      "QR 코드 인쇄",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "단계형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/qr-code-generator",
+    "internalLinks": [
+      {
+        "label": "QR 코드 인쇄 도구",
+        "path": "/tools/qr-code-generator"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "word-frequency-editing",
+    "title": "단어 빈도표로 초안의 반복 표현을 고치는 방법",
+    "description": "빈도가 높은 단어를 무조건 지우지 않고 문맥과 핵심 용어를 구분해 편집합니다.",
+    "date": "2026-09-19",
+    "publishAt": "2026-09-19T13:00:00+09:00",
+    "tags": [
+      "단어 빈도 분석",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "판단표형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/word-frequency",
+    "internalLinks": [
+      {
+        "label": "단어 빈도 분석 도구",
+        "path": "/tools/word-frequency"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "uuid-test-fixture",
+    "title": "UUID 테스트 데이터는 실제 고객 정보와 분리하세요",
+    "description": "UUID 형식과 충돌 가능성의 의미, 테스트 데이터 안전 원칙을 함께 정리합니다.",
+    "date": "2026-09-20",
+    "publishAt": "2026-09-20T13:00:00+09:00",
+    "tags": [
+      "UUID 생성",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "시나리오형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/uuid-generator",
+    "internalLinks": [
+      {
+        "label": "UUID 생성 도구",
+        "path": "/tools/uuid-generator"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "unix-seconds-milliseconds",
+    "title": "Unix timestamp 10자리와 13자리 구분법",
+    "description": "타임스탬프 단위와 시간대를 구분해 1970년 또는 먼 미래 날짜 오류를 찾습니다.",
+    "date": "2026-09-21",
+    "publishAt": "2026-09-21T13:00:00+09:00",
+    "tags": [
+      "Unix timestamp",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "오류진단형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/unix-timestamp",
+    "internalLinks": [
+      {
+        "label": "Unix timestamp 도구",
+        "path": "/tools/unix-timestamp"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "meeting-timer-timebox",
+    "title": "회의 타이머는 종료 신호와 다음 행동까지 정해야 합니다",
+    "description": "타임박스가 단순 알람으로 끝나지 않도록 시작 조건과 종료 규칙을 설계합니다.",
+    "date": "2026-09-22",
+    "publishAt": "2026-09-22T13:00:00+09:00",
+    "tags": [
+      "회의 타이머",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "체크리스트형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/timer",
+    "internalLinks": [
+      {
+        "label": "회의 타이머 도구",
+        "path": "/tools/timer"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "date-calculator-inclusive",
+    "title": "날짜 계산에서 시작일 포함 여부를 먼저 정하기",
+    "description": "포함일과 제외일 차이를 이해하고 마감 역산 결과를 일정표와 대조합니다.",
+    "date": "2026-09-23",
+    "publishAt": "2026-09-23T13:00:00+09:00",
+    "tags": [
+      "날짜 계산",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "단계형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/date-calculator",
+    "internalLinks": [
+      {
+        "label": "날짜 계산 도구",
+        "path": "/tools/date-calculator"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "speed-distance-time-units",
+    "title": "거리·시간·속도 중 두 값을 넣을 때 단위를 맞추는 법",
+    "description": "속도 역산 전에 거리와 시간 단위를 통일하고 결과의 적용 한계를 설명합니다.",
+    "date": "2026-09-24",
+    "publishAt": "2026-09-24T13:00:00+09:00",
+    "tags": [
+      "속도 계산",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "판단표형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/speed-calculator",
+    "internalLinks": [
+      {
+        "label": "속도 계산 도구",
+        "path": "/tools/speed-calculator"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "pyeong-square-meter",
+    "title": "평과 제곱미터를 바꿀 때 전용면적을 따로 적으세요",
+    "description": "면적 단위 변환값과 매물에 표시된 면적 종류를 혼동하지 않는 기록법입니다.",
+    "date": "2026-09-25",
+    "publishAt": "2026-09-25T13:00:00+09:00",
+    "tags": [
+      "평 제곱미터 변환",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "시나리오형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/area-converter",
+    "internalLinks": [
+      {
+        "label": "평 제곱미터 변환 도구",
+        "path": "/tools/area-converter"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "mean-median-survey",
+    "title": "설문 결과는 평균과 중앙값을 같이 보면 달라집니다",
+    "description": "표본이 작은 자료에서 평균과 중앙값, 범위를 함께 읽는 기초 방법을 안내합니다.",
+    "date": "2026-09-26",
+    "publishAt": "2026-09-26T13:00:00+09:00",
+    "tags": [
+      "평균 중앙값",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "오류진단형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/statistics-calculator",
+    "internalLinks": [
+      {
+        "label": "평균 중앙값 도구",
+        "path": "/tools/statistics-calculator"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "base-converter-prefix",
+    "title": "2진수·16진수 변환 뒤 접두사를 다시 붙이는 이유",
+    "description": "진법 숫자와 표기 접두사를 구분해 복사 과정의 해석 오류를 줄입니다.",
+    "date": "2026-09-27",
+    "publishAt": "2026-09-27T13:00:00+09:00",
+    "tags": [
+      "진법 변환",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "체크리스트형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/base-converter",
+    "internalLinks": [
+      {
+        "label": "진법 변환 도구",
+        "path": "/tools/base-converter"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "text-length-frequency-workflow",
+    "title": "글자수와 단어 빈도를 함께 보는 짧은 편집 루틴",
+    "description": "공백 포함 글자수를 맞추고 반복어를 문맥별로 정리하는 두 단계 편집법입니다.",
+    "date": "2026-09-28",
+    "publishAt": "2026-09-28T13:00:00+09:00",
+    "tags": [
+      "글자수 단어 빈도",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "단계형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/text-counter",
+    "internalLinks": [
+      {
+        "label": "글자수 단어 빈도 도구",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "markdown-mobile-preview",
+    "title": "Markdown 표와 코드블록은 모바일에서 다시 확인하세요",
+    "description": "Markdown 문법이 맞아도 읽기 어려울 수 있는 모바일 표와 링크를 검수합니다.",
+    "date": "2026-09-29",
+    "publishAt": "2026-09-29T13:00:00+09:00",
+    "tags": [
+      "Markdown 미리보기",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "판단표형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/markdown-previewer",
+    "internalLinks": [
+      {
+        "label": "Markdown 미리보기 도구",
+        "path": "/tools/markdown-previewer"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "api-field-case-json",
+    "title": "API 필드명을 camelCase로 바꾼 뒤 JSON까지 검수하기",
+    "description": "이름 규칙을 변환한 뒤 누락과 중복, JSON 문법을 차례로 확인하는 흐름입니다.",
+    "date": "2026-09-30",
+    "publishAt": "2026-09-30T13:00:00+09:00",
+    "tags": [
+      "필드명 케이스 변환",
+      "도구 사용법",
+      "체크리스트"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 96,
+    "category": "실용 도구 가이드",
+    "contentType": "시나리오형",
+    "primarySourceName": "SpinFlow 도구 화면",
+    "primarySourceUrl": "https://spinkorea.kr/tools/case-converter",
+    "internalLinks": [
+      {
+        "label": "필드명 케이스 변환 도구",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "전체 도구",
+        "path": "/tools"
+      },
+      {
+        "label": "블로그",
+        "path": "/blog"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "uuid-v4-v7-choice",
+    "title": "UUID v4와 v7 차이: 데이터베이스 키로 무엇을 선택할까",
+    "description": "UUID v4와 v7의 필드와 정렬 특성을 비교하고, 현재 SpinKorea 생성기가 만드는 v4를 식별자와 보안용 값에 어떻게 구분해 쓸지 설명합니다.",
+    "date": "2026-10-01",
+    "publishAt": "2026-10-01T08:00:00+09:00",
+    "tags": [
+      "UUID v4",
+      "UUID v7",
+      "개발 도구",
+      "데이터베이스"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "개발·데이터 도구",
+    "contentType": "비교형",
+    "primarySourceName": "IETF RFC 9562",
+    "primarySourceUrl": "https://www.rfc-editor.org/rfc/rfc9562",
+    "internalLinks": [
+      {
+        "label": "UUID 생성기에서 v4 식별자 만들기",
+        "path": "/tools/uuid-generator"
+      },
+      {
+        "label": "보안용 랜덤 비밀번호 만들기",
+        "path": "/tools/random-password"
+      },
+      {
+        "label": "Unix 타임스탬프 확인하기",
+        "path": "/tools/unix-timestamp"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "json-large-integer-precision",
+    "title": "JSON 숫자 정밀도, 큰 ID가 바뀌는 이유와 보존법",
+    "description": "JSON 포매터에서 큰 숫자가 달라지는 원인을 JavaScript 안전 정수 범위와 실제 입력 예시로 확인하고, ID를 문자열로 보존하는 기준을 설명합니다.",
+    "date": "2026-10-02",
+    "publishAt": "2026-10-02T08:00:00+09:00",
+    "tags": [
+      "JSON",
+      "숫자 정밀도",
+      "JavaScript",
+      "API 설계"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "개발·데이터 도구",
+    "contentType": "경계값 실험형",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터로 입력과 출력을 비교하기",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "Base64 결과를 문자열로 확인하기",
+        "path": "/tools/base64-encoder"
+      },
+      {
+        "label": "ID와 payload의 글자·바이트 수 세기",
+        "path": "/tools/text-counter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "json-stringify-roundtrip-loss",
+    "title": "JSON.stringify 결과가 원본과 달라지는 5가지 경우",
+    "description": "undefined·함수·NaN·BigInt·순환 참조가 JSON.stringify 결과를 어떻게 바꾸는지 객체와 배열 예시로 진단합니다.",
+    "date": "2026-10-03",
+    "publishAt": "2026-10-03T08:00:00+09:00",
+    "tags": [
+      "JSON.stringify",
+      "JavaScript",
+      "디버깅",
+      "API payload"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "개발·데이터 도구",
+    "contentType": "오류 진단형",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify",
+    "internalLinks": [
+      {
+        "label": "JSON 문자열을 포매팅해 구조 확인하기",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "직렬화 전후 차이를 비교하기",
+        "path": "/tools/diff-checker"
+      },
+      {
+        "label": "payload의 필드와 바이트 수 확인하기",
+        "path": "/tools/text-counter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "url-space-plus-percent20",
+    "title": "URL 공백 +와 %20 차이, 쿼리 인코딩 비교",
+    "description": "URL 쿼리의 공백이 + 또는 %20으로 나타나는 이유를 값·경로·쿼리 문맥별로 나누고 URI 인코더 결과를 검수하는 방법을 설명합니다.",
+    "date": "2026-10-04",
+    "publishAt": "2026-10-04T08:00:00+09:00",
+    "tags": [
+      "URL 인코딩",
+      "쿼리스트링",
+      "URI",
+      "웹 개발"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "개발·데이터 도구",
+    "contentType": "문맥 분해형",
+    "primarySourceName": "WHATWG URL Standard",
+    "primarySourceUrl": "https://url.spec.whatwg.org/",
+    "internalLinks": [
+      {
+        "label": "URI 컴포넌트 인코더로 값 확인하기",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "인코딩한 URL을 QR로 만들기",
+        "path": "/tools/qr-code-generator"
+      },
+      {
+        "label": "쿼리 객체 JSON 구조 확인하기",
+        "path": "/tools/json-formatter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "urierror-malformed-percent-encoding",
+    "title": "URIError 해결, 잘린 퍼센트 인코딩 찾기",
+    "description": "decodeURIComponent가 URIError를 내는 %ZZ·잘린 UTF-8·고립 surrogate 사례를 분류하고, 원문을 보존하며 복구하는 순서를 설명합니다.",
+    "date": "2026-10-05",
+    "publishAt": "2026-10-05T08:00:00+09:00",
+    "tags": [
+      "URIError",
+      "decodeURIComponent",
+      "UTF-8",
+      "오류 해결"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "개발·데이터 도구",
+    "contentType": "트러블슈팅형",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Malformed_URI",
+    "internalLinks": [
+      {
+        "label": "URI 인코딩과 디코딩을 다시 실행하기",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "다국어 원문의 글자·바이트 수 확인하기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "오류 메시지 JSON을 읽기 좋게 정리하기",
+        "path": "/tools/json-formatter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "base64-korean-utf8",
+    "title": "한글 Base64 인코딩 원리: btoa 오류 없이 UTF-8로 변환하기",
+    "description": "한글이 btoa에서 오류 나는 이유를 UTF-8 바이트와 Base64 패딩으로 풀어 보고, SpinKorea 인코더에서 안전하게 왕복 확인하는 방법을 설명합니다.",
+    "date": "2026-10-06",
+    "publishAt": "2026-10-06T08:00:00+09:00",
+    "tags": [
+      "Base64",
+      "UTF-8",
+      "한글 인코딩",
+      "웹 개발"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "개발·데이터 도구",
+    "contentType": "코드 실험형",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Glossary/Base64",
+    "internalLinks": [
+      {
+        "label": "Base64 인코더에서 한글 왕복하기",
+        "path": "/tools/base64-encoder"
+      },
+      {
+        "label": "URI 컴포넌트 인코딩 결과 확인하기",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "JSON 문자열 payload 검수하기",
+        "path": "/tools/json-formatter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "markdown-raw-html-safety",
+    "title": "마크다운 미리보기에서 HTML이 안 보이는 이유와 안전한 처리",
+    "description": "ReactMarkdown과 remarkGfm을 사용하는 미리보기에서 raw HTML이 렌더링되지 않는 이유와 rehypeRaw를 켤 때 확인할 보안 조건을 설명합니다.",
+    "date": "2026-10-07",
+    "publishAt": "2026-10-07T08:00:00+09:00",
+    "tags": [
+      "Markdown",
+      "HTML",
+      "ReactMarkdown",
+      "웹 보안"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "개발·데이터 도구",
+    "contentType": "안전 판별형",
+    "primarySourceName": "react-markdown",
+    "primarySourceUrl": "https://github.com/remarkjs/react-markdown/blob/main/readme.md",
+    "internalLinks": [
+      {
+        "label": "Markdown을 안전하게 미리보기",
+        "path": "/tools/markdown-previewer"
+      },
+      {
+        "label": "초안과 결과의 차이 비교하기",
+        "path": "/tools/diff-checker"
+      },
+      {
+        "label": "Markdown 본문 글자 수 확인하기",
+        "path": "/tools/text-counter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "qr-code-capacity-version-ecc",
+    "title": "QR코드 용량·버전·오류복원: 짧은 URL이 더 잘 읽히는 이유",
+    "description": "QR코드의 데이터 종류·버전·오류복원 수준이 크기와 가독성에 미치는 영향을 50자 사례와 현재 생성기 설정으로 설명합니다.",
+    "date": "2026-10-08",
+    "publishAt": "2026-10-08T08:00:00+09:00",
+    "tags": [
+      "QR코드",
+      "오류복원",
+      "QR 버전",
+      "인쇄 가이드"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "개발·데이터 도구",
+    "contentType": "설계 판단형",
+    "primarySourceName": "DENSO WAVE",
+    "primarySourceUrl": "https://www.qrcode.com/en/about/version.html",
+    "internalLinks": [
+      {
+        "label": "QR코드 생성기에서 URL 검증하기",
+        "path": "/tools/qr-code-generator"
+      },
+      {
+        "label": "QR에 넣을 URL을 컴포넌트별로 인코딩하기",
+        "path": "/tools/uri-encoder"
+      },
+      {
+        "label": "QR 입력 길이와 바이트 수 확인하기",
+        "path": "/tools/text-counter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "hex-color-contrast-ratio",
+    "title": "HEX 색상 변환 다음에 해야 할 일: WCAG 대비비 4.5:1 계산",
+    "description": "HEX·RGB·HSL 변환 결과를 접근성 판단과 혼동하지 않도록 상대휘도와 WCAG 대비비를 계산하고 경계 색상을 비교합니다.",
+    "date": "2026-10-09",
+    "publishAt": "2026-10-09T08:00:00+09:00",
+    "tags": [
+      "HEX 색상",
+      "색상 대비",
+      "WCAG",
+      "웹 접근성"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "개발·데이터 도구",
+    "contentType": "계산·검수형",
+    "primarySourceName": "W3C WCAG 2.2",
+    "primarySourceUrl": "https://www.w3.org/TR/WCAG22/",
+    "internalLinks": [
+      {
+        "label": "HEX·RGB·HSL 값을 변환하기",
+        "path": "/tools/color-converter"
+      },
+      {
+        "label": "포커스 테두리 색상과 그림자 만들기",
+        "path": "/tools/css-shadow-generator"
+      },
+      {
+        "label": "색상 조합이 들어간 문서를 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "css-box-shadow-focus-visible",
+    "title": "box-shadow 포커스, outline 제거 전 체크",
+    "description": "CSS Shadow Generator의 결과를 :focus-visible 포커스 표시로 적용할 때 outline 제거, 대비 변화, 그림자 크기를 점검하는 방법을 안내합니다.",
+    "date": "2026-10-10",
+    "publishAt": "2026-10-10T08:00:00+09:00",
+    "tags": [
+      "box-shadow",
+      "focus-visible",
+      "키보드 접근성",
+      "CSS"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "개발·데이터 도구",
+    "contentType": "접근성 적용형",
+    "primarySourceName": "W3C WCAG 2.2",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html",
+    "internalLinks": [
+      {
+        "label": "box-shadow CSS를 생성하기",
+        "path": "/tools/css-shadow-generator"
+      },
+      {
+        "label": "포커스 색상 대비 후보를 변환하기",
+        "path": "/tools/color-converter"
+      },
+      {
+        "label": "키보드 상태가 있는 문서를 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "population-sample-standard-deviation",
+    "title": "표준편차가 1.414와 1.633으로 갈리는 이유: 모집단과 표본 계산",
+    "description": "같은 데이터에서 표준편차가 다르게 나오는 이유를 모집단 분산과 표본 분산의 분모 차이로 설명하고, SpinKorea 계산기 결과를 보고서에 표시하는 방법을 안내합니다.",
+    "date": "2026-10-11",
+    "publishAt": "2026-10-11T08:00:00+09:00",
+    "tags": [
+      "표준편차",
+      "모집단",
+      "표본",
+      "통계 계산"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "계산·데이터 도구",
+    "contentType": "손계산 비교형",
+    "primarySourceName": "NIST/SEMATECH e-Handbook of Statistical Methods",
+    "primarySourceUrl": "https://itl.nist.gov/div898/handbook/eda/section3/eda356.htm",
+    "internalLinks": [
+      {
+        "label": "통계 계산기에서 데이터 입력하기",
+        "path": "/tools/statistics-calculator"
+      },
+      {
+        "label": "검산용 숫자 목록 만들기",
+        "path": "/tools/random-number"
+      },
+      {
+        "label": "숫자 목록의 입력 길이 확인하기",
+        "path": "/tools/text-counter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "time-calculator-overnight",
+    "title": "시간 계산기에서 22:00→06:00은 몇 시간일까? 자정 넘김 계산법",
+    "description": "자정을 넘는 시간 차이를 분 단위로 계산하고, 같은 시각·다음 날·날짜와 시간대가 섞일 때 SpinKorea 결과를 해석하는 방법을 설명합니다.",
+    "date": "2026-10-12",
+    "publishAt": "2026-10-12T08:00:00+09:00",
+    "tags": [
+      "시간 계산",
+      "자정 넘김",
+      "근무 시간",
+      "날짜 계산"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "시간·날짜 도구",
+    "contentType": "타임라인 계산형",
+    "primarySourceName": "date-fns",
+    "primarySourceUrl": "https://github.com/date-fns/date-fns/blob/main/packages/core/docs/timeZones.md",
+    "internalLinks": [
+      {
+        "label": "자정 넘김 시간을 계산하기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "두 날짜 사이의 날짜 수 확인하기",
+        "path": "/tools/date-calculator"
+      },
+      {
+        "label": "기념일과 마감일까지 남은 날 계산하기",
+        "path": "/tools/d-day-counter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "text-counter-emoji-grapheme",
+    "title": "이모지 글자수는 왜 2로 셀까? UTF-16과 사용자 문자 구분",
+    "description": "텍스트 카운터의 UTF-16 글자 수와 UTF-8 바이트 수를 이모지·한글·grapheme cluster 사례로 나누어 서비스 글자 제한을 설계하는 방법을 설명합니다.",
+    "date": "2026-10-13",
+    "publishAt": "2026-10-13T08:00:00+09:00",
+    "tags": [
+      "이모지 글자수",
+      "UTF-16",
+      "grapheme",
+      "문자열 길이"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "텍스트·개발 도구",
+    "contentType": "측정 기준 비교형",
+    "primarySourceName": "MDN Web Docs",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length",
+    "internalLinks": [
+      {
+        "label": "텍스트 글자 수와 바이트 수 확인하기",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "Markdown 원문 길이 검수하기",
+        "path": "/tools/markdown-previewer"
+      },
+      {
+        "label": "다국어 문자열을 URI로 변환하기",
+        "path": "/tools/uri-encoder"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "temperature-conversion-offset",
+    "title": "섭씨·화씨 변환은 왜 단순 비율이 아닐까? 온도 단위 계산법",
+    "description": "섭씨·화씨·켈빈 변환에서 기준점과 온도 간격을 분리하고, 현재 SpinKorea 단위 변환기가 온도를 지원하지 않는다는 제품 범위를 명확히 안내합니다.",
+    "date": "2026-10-14",
+    "publishAt": "2026-10-14T08:00:00+09:00",
+    "tags": [
+      "섭씨 화씨",
+      "온도 변환",
+      "켈빈",
+      "단위 계산"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "단위·계산 도구",
+    "contentType": "개념·제품 경계형",
+    "primarySourceName": "NIST",
+    "primarySourceUrl": "https://www.nist.gov/pml/owm/si-units-temperature",
+    "internalLinks": [
+      {
+        "label": "현재 단위 변환기 지원 범위 확인하기",
+        "path": "/tools/unit-converter"
+      },
+      {
+        "label": "지원되는 면적 단위 변환 사용하기",
+        "path": "/tools/area-converter"
+      },
+      {
+        "label": "속도 단위 계산을 별도로 확인하기",
+        "path": "/tools/speed-calculator"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "json-duplicate-key-overwrite",
+    "title": "JSON 중복 키가 마지막 값으로 덮어써질 때 찾는 방법",
+    "description": "JSON 중복 키가 파싱 뒤 사라지는 이유와 객체 범위별 탐지, 수정 후 검증 순서를 재현 예제로 설명합니다.",
+    "date": "2026-10-15",
+    "publishAt": "2026-10-15T08:00:00+09:00",
+    "tags": [
+      "JSON 중복 키",
+      "JSON 파싱",
+      "API 검수",
+      "개발 도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "category": "실용 도구 가이드",
+    "contentType": "재현 실험형",
+    "primarySourceName": "SpinKorea JSON 포매터",
+    "primarySourceUrl": "https://spinkorea.kr/tools/json-formatter",
+    "internalLinks": [
+      {
+        "label": "JSON 포매터 사용하기",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "JSON 포매터 가이드",
+        "path": "/blog/json-formatter-guide"
+      },
+      {
+        "label": "API와 JSON의 관계",
+        "path": "/blog/json-api-explained"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "diff-crlf-lf-line-ending",
+    "title": "Diff에서 파일 전체가 바뀌어 보일 때 CRLF와 LF 확인하기",
+    "description": "Diff에서 파일 전체가 바뀌어 보이는 CRLF·LF 문제를 바이트 예제와 Git 저장소 규칙으로 진단합니다.",
+    "date": "2026-10-16",
+    "publishAt": "2026-10-16T08:00:00+09:00",
+    "tags": [
+      "CRLF",
+      "LF",
+      "Diff",
+      "Git",
+      "줄바꿈"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "category": "실용 도구 가이드",
+    "contentType": "진단 흐름형",
+    "primarySourceName": "SpinKorea Diff 비교",
+    "primarySourceUrl": "https://spinkorea.kr/tools/diff-checker",
+    "internalLinks": [
+      {
+        "label": "Diff 비교 도구",
+        "path": "/tools/diff-checker"
+      },
+      {
+        "label": "Diff 비교 가이드",
+        "path": "/blog/diff-checker-guide"
+      },
+      {
+        "label": "Markdown 미리보기",
+        "path": "/tools/markdown-previewer"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "case-converter-acronym-digit-boundary",
+    "title": "API 필드명 케이스 변환에서 약어와 숫자 경계 정하기",
+    "description": "API 필드명 케이스 변환에서 약어·숫자 경계가 달라지는 실제 결과와 충돌 검수법을 정리합니다.",
+    "date": "2026-10-17",
+    "publishAt": "2026-10-17T08:00:00+09:00",
+    "tags": [
+      "API 필드명",
+      "camelCase",
+      "약어",
+      "숫자 경계",
+      "케이스 변환"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "category": "실용 도구 가이드",
+    "contentType": "엣지 케이스 비교형",
+    "primarySourceName": "SpinKorea 케이스 변환기",
+    "primarySourceUrl": "https://spinkorea.kr/tools/case-converter",
+    "internalLinks": [
+      {
+        "label": "케이스 변환기",
+        "path": "/tools/case-converter"
+      },
+      {
+        "label": "케이스 변환 가이드",
+        "path": "/blog/case-converter-guide"
+      },
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "base64-data-url-mime-prefix",
+    "title": "Base64 Data URL이 안 보일 때 MIME 접두사 확인하기",
+    "description": "Base64 Data URL이 이미지로 보이지 않는 원인을 MIME 타입, 쉼표, 문자 인코딩, 길이별로 진단합니다.",
+    "date": "2026-10-18",
+    "publishAt": "2026-10-18T08:00:00+09:00",
+    "tags": [
+      "Base64",
+      "Data URL",
+      "MIME",
+      "이미지 미리보기",
+      "웹 개발"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "category": "실용 도구 가이드",
+    "contentType": "장애 원인 매트릭스형",
+    "primarySourceName": "SpinKorea Base64 인코더",
+    "primarySourceUrl": "https://spinkorea.kr/tools/base64-encoder",
+    "internalLinks": [
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      },
+      {
+        "label": "QR 코드 생성기",
+        "path": "/tools/qr-code-generator"
+      },
+      {
+        "label": "JSON 포매터",
+        "path": "/tools/json-formatter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "password-generator-policy-check",
+    "title": "비밀번호 생성기 결과가 거절될 때 길이와 문자 규칙 맞추기",
+    "description": "비밀번호 생성기 결과가 가입 폼에서 거절되는 이유를 길이·문자·붙여넣기·관리자 사용 관점에서 점검합니다.",
+    "date": "2026-10-19",
+    "publishAt": "2026-10-19T08:00:00+09:00",
+    "tags": [
+      "비밀번호 생성기",
+      "비밀번호 정책",
+      "길이 제한",
+      "특수문자",
+      "보안 습관"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 94,
+    "category": "실용 도구 가이드",
+    "contentType": "정책 대조형",
+    "primarySourceName": "SpinKorea 비밀번호 생성기",
+    "primarySourceUrl": "https://spinkorea.kr/tools/random-password",
+    "internalLinks": [
+      {
+        "label": "비밀번호 생성기",
+        "path": "/tools/random-password"
+      },
+      {
+        "label": "문자열 길이 확인",
+        "path": "/tools/text-counter"
+      },
+      {
+        "label": "Base64 인코더",
+        "path": "/tools/base64-encoder"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "overnight-time-difference",
+    "title": "밤을 넘긴 시간 차이, 23시 40분부터 새벽 2시 15분까지 계산하는 법",
+    "description": "자정을 지난 시간 차이를 다음 날 구간으로 읽는 원리와 휴게시간, 날짜·시간대 한계를 시간 계산기 사용 흐름에 맞춰 설명합니다.",
+    "date": "2026-10-20",
+    "publishAt": "2026-10-20T08:00:00+09:00",
+    "tags": [
+      "시간 계산",
+      "자정 넘긴 시간",
+      "야간 근무",
+      "경과 시간"
+    ],
+    "thumbnail": "https://picsum.photos/seed/overnight-time-difference/1600/900",
+    "qualityScore": 94,
+    "category": "실용 도구 가이드",
+    "contentType": "경계값 재현형",
+    "primarySourceName": "SpinKorea 시간 계산기",
+    "primarySourceUrl": "https://spinkorea.kr/tools/time-calculator",
+    "internalLinks": [
+      {
+        "label": "시간 계산기 바로 사용하기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "시간 계산기 기본 가이드",
+        "path": "/blog/time-calculator-guide"
+      },
+      {
+        "label": "날짜 계산기로 날짜 범위 확인하기",
+        "path": "/tools/date-calculator"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "time-add-minutes-blocks",
+    "title": "시간 더하기 계산기에서 135분을 2시간 15분으로 넣는 법",
+    "description": "시간 계산기의 시간·분 입력이 실제 분량을 어떻게 더하고 빼는지 135분 사례와 입력 제한까지 단계별로 정리합니다.",
+    "date": "2026-10-21",
+    "publishAt": "2026-10-21T08:00:00+09:00",
+    "tags": [
+      "시간 더하기",
+      "분 단위 계산",
+      "작업 블록",
+      "일정 계산"
+    ],
+    "thumbnail": "https://picsum.photos/seed/time-add-minutes-blocks/1600/900",
+    "qualityScore": 94,
+    "category": "실용 도구 가이드",
+    "contentType": "작업 블록 실습형",
+    "primarySourceName": "SpinKorea 시간 계산기",
+    "primarySourceUrl": "https://spinkorea.kr/tools/time-calculator",
+    "internalLinks": [
+      {
+        "label": "시간 더하기 계산기 사용하기",
+        "path": "/tools/time-calculator"
+      },
+      {
+        "label": "시간 계산기 기본 원리",
+        "path": "/blog/time-calculator-guide"
+      },
+      {
+        "label": "날짜 단위가 필요한 경우 날짜 계산기",
+        "path": "/tools/date-calculator"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "recipe-cup-ml-conversion",
+    "title": "컵을 mL로 바꿀 때 200mL와 240mL를 먼저 구분하는 법",
+    "description": "SpinKorea 단위 변환기의 cup=200mL 동작과 미국 레시피의 240mL 관행을 구분해 컵·mL 변환과 재료별 한계를 설명합니다.",
+    "date": "2026-10-22",
+    "publishAt": "2026-10-22T08:00:00+09:00",
+    "tags": [
+      "컵 mL 변환",
+      "레시피 단위",
+      "요리 계량",
+      "단위 변환기"
+    ],
+    "thumbnail": "https://picsum.photos/seed/recipe-cup-ml-conversion/1600/900",
+    "qualityScore": 95,
+    "category": "실용 도구 가이드",
+    "contentType": "레시피 검산형",
+    "primarySourceName": "SpinKorea 단위 변환기",
+    "primarySourceUrl": "https://spinkorea.kr/tools/unit-converter",
+    "internalLinks": [
+      {
+        "label": "단위 변환기에서 cup·mL 계산하기",
+        "path": "/tools/unit-converter"
+      },
+      {
+        "label": "단위 변환 실전 가이드",
+        "path": "/blog/unit-converter-guide"
+      },
+      {
+        "label": "배수 계산이 필요할 때 퍼센트 계산기",
+        "path": "/tools/percentage-calculator"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "inch-cm-measurement-conversion",
+    "title": "인치·센티미터 변환에서 2.54를 곱하는 순서와 반올림 기준",
+    "description": "SpinKorea 단위 변환기의 inch·cm 계산 과정을 실제 치수 예제와 CSS 화면 단위의 한계까지 연결해 설명합니다.",
+    "date": "2026-10-23",
+    "publishAt": "2026-10-23T08:00:00+09:00",
+    "tags": [
+      "인치 cm 변환",
+      "길이 단위",
+      "제품 치수",
+      "측정 검산"
+    ],
+    "thumbnail": "https://picsum.photos/seed/inch-cm-measurement-conversion/1600/900",
+    "qualityScore": 95,
+    "category": "실용 도구 가이드",
+    "contentType": "측정 검산형",
+    "primarySourceName": "SpinKorea 단위 변환기",
+    "primarySourceUrl": "https://spinkorea.kr/tools/unit-converter",
+    "internalLinks": [
+      {
+        "label": "단위 변환기에서 inch·cm 계산하기",
+        "path": "/tools/unit-converter"
+      },
+      {
+        "label": "단위 변환 실전 가이드",
+        "path": "/blog/unit-converter-guide"
+      },
+      {
+        "label": "면적이 필요할 때 면적 변환기",
+        "path": "/tools/area-converter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "dday-100-day-counting",
+    "title": "D-Day 100일과 100일째 날짜가 다른 이유, 시작일 포함해 계산하기",
+    "description": "D-Day 카운터의 달력 일수와 시작일을 1일로 세는 100일째 날짜를 실제 예시로 비교하고, 2026년 10월 24일을 기준으로 날짜를 틀리지 않게 기록하는 방법을 정리합니다.",
+    "date": "2026-10-24",
+    "publishAt": "2026-10-24T08:00:00+09:00",
+    "tags": [
+      "D-Day 100일",
+      "100일 계산",
+      "날짜 계산",
+      "기념일"
+    ],
+    "thumbnail": "https://picsum.photos/seed/dday-100-day-counting/1600/900",
+    "qualityScore": 95,
+    "category": "실용 도구 가이드",
+    "contentType": "날짜 계산 해설",
+    "primarySourceName": "SpinKorea D-Day 카운터",
+    "primarySourceUrl": "https://spinkorea.kr/tools/d-day-counter",
+    "internalLinks": [
+      {
+        "label": "D-Day 카운터에서 목표일 확인하기",
+        "path": "/tools/d-day-counter"
+      },
+      {
+        "label": "두 날짜 사이 일수 계산하기",
+        "path": "/tools/date-calculator"
+      },
+      {
+        "label": "D-Day 카운터 사용 가이드",
+        "path": "/blog/d-day-counter-guide"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "percentage-vs-percentage-point",
+    "title": "퍼센트와 퍼센트포인트 차이, 20%에서 25%를 정확히 읽는 법",
+    "description": "20%에서 25%로 바뀐 사례를 퍼센트포인트와 상대 변화율로 나누어 설명하고, SpinKorea 퍼센트 계산기의 세 모드와 분모·반올림 주의점을 실제 숫자로 정리합니다.",
+    "date": "2026-10-25",
+    "publishAt": "2026-10-25T08:00:00+09:00",
+    "tags": [
+      "퍼센트포인트",
+      "퍼센트 계산",
+      "변화율",
+      "지표 해석"
+    ],
+    "thumbnail": "https://picsum.photos/seed/percentage-vs-percentage-point/1600/900",
+    "qualityScore": 95,
+    "category": "실용 도구 가이드",
+    "contentType": "지표 읽기 해설",
+    "primarySourceName": "SpinKorea 퍼센트 계산기",
+    "primarySourceUrl": "https://spinkorea.kr/tools/percentage-calculator",
+    "internalLinks": [
+      {
+        "label": "퍼센트 세 가지 방식 계산하기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "할인율과 할인액 구분하기",
+        "path": "/tools/discount-calculator"
+      },
+      {
+        "label": "퍼센트 계산기 사용 가이드",
+        "path": "/blog/percentage-calculator-guide"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "reverse-discount-rounding",
+    "title": "할인된 가격에서 원가를 역산할 때 반올림이 달라지는 이유",
+    "description": "할인된 가격과 할인율만으로 원래 가격을 역산하는 공식을 설명하고, 30%와 33% 할인 사례에서 SpinKorea 계산기의 정수 표시가 검산에 어떤 차이를 만드는지 정리합니다.",
+    "date": "2026-10-26",
+    "publishAt": "2026-10-26T08:00:00+09:00",
+    "tags": [
+      "할인 후 원가",
+      "할인율 역산",
+      "반올림",
+      "가격 계산"
+    ],
+    "thumbnail": "https://picsum.photos/seed/reverse-discount-rounding/1600/900",
+    "qualityScore": 95,
+    "category": "실용 도구 가이드",
+    "contentType": "할인 역산 해설",
+    "primarySourceName": "SpinKorea 할인 계산기",
+    "primarySourceUrl": "https://spinkorea.kr/tools/discount-calculator",
+    "internalLinks": [
+      {
+        "label": "할인된 가격에서 원가 역산하기",
+        "path": "/tools/discount-calculator"
+      },
+      {
+        "label": "비율의 기준값 확인하기",
+        "path": "/tools/percentage-calculator"
+      },
+      {
+        "label": "퍼센트 계산식 다시 보기",
+        "path": "/blog/percentage-calculator-guide"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "dutch-pay-discount-rounding",
+    "title": "더치페이 할인 금액과 반올림, 1원 차이를 투명하게 나누는 법",
+    "description": "SpinKorea 더치페이 계산기가 할인액을 고정 금액으로 처리하고 올림·내림·반올림을 선택하는 방식을 실제 영수증 예시로 설명하며, 균등 정산의 1원 차이를 숨기지 않는 방법을 정리합니다.",
+    "date": "2026-10-27",
+    "publishAt": "2026-10-27T08:00:00+09:00",
+    "tags": [
+      "더치페이",
+      "정산",
+      "반올림",
+      "할인액"
+    ],
+    "thumbnail": "https://picsum.photos/seed/dutch-pay-discount-rounding/1600/900",
+    "qualityScore": 95,
+    "category": "실용 도구 가이드",
+    "contentType": "정산 규칙 해설",
+    "primarySourceName": "SpinKorea 더치페이 계산기",
+    "primarySourceUrl": "https://spinkorea.kr/tools/dutch-pay",
+    "internalLinks": [
+      {
+        "label": "할인 후 더치페이 계산하기",
+        "path": "/tools/dutch-pay"
+      },
+      {
+        "label": "할인율을 금액으로 바꾸기",
+        "path": "/tools/discount-calculator"
+      },
+      {
+        "label": "비율 계산 모드 확인하기",
+        "path": "/tools/percentage-calculator"
+      }
+    ],
+    "source": "editorial"
   }
 ]

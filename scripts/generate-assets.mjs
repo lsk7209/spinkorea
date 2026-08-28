@@ -529,7 +529,7 @@ function extractGeneratedPosts() {
       primarySourceName: post.primarySourceName,
       primarySourceUrl: post.primarySourceUrl,
       internalLinks: post.internalLinks,
-      source: "generated",
+      source: post.editorialReview === "approved" ? "editorial" : "generated",
     }));
 }
 
@@ -570,7 +570,7 @@ function extractPosts() {
 }
 
 function isIndexablePost(post) {
-  return post.source === "curated";
+  return post.source === "curated" || post.source === "editorial";
 }
 
 function buildSitemap(posts) {
