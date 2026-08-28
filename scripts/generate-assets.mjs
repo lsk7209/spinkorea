@@ -714,6 +714,7 @@ function structuredDataForPage(page) {
     inLanguage: "ko-KR",
     isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
     about: { "@id": `${SITE_ORIGIN}/#organization` },
+    ...(page.lastmod ? { dateModified: page.lastmod } : {}),
   };
   const toolNodes = page.path.startsWith("/tools/")
     ? [
@@ -726,6 +727,7 @@ function structuredDataForPage(page) {
           applicationCategory: "UtilitiesApplication",
           operatingSystem: "Any",
           browserRequirements: "Requires JavaScript",
+          ...(page.lastmod ? { dateModified: page.lastmod } : {}),
           offers: {
             "@type": "Offer",
             price: "0",
@@ -938,6 +940,7 @@ function renderToolGuide(page) {
     <p>${escapeHtml(privacyGuide)}</p>
     <h2>관련 도구로 이어가기</h2>
     <ul>${related}</ul>
+    ${page.lastmod ? `<p>페이지 업데이트: <time datetime="${page.lastmod}">${page.lastmod}</time></p>` : ""}
   </div>`;
 }
 
@@ -985,19 +988,33 @@ function injectHtml(template, route) {
   const robots = route.robots
     ? `\n  <meta name="robots" content="${route.robots}" />`
     : "";
+  const ogType = route.ogType ?? "website";
+  const hasCustomImage = Boolean(route.image);
+  const ogImage = hasCustomImage
+    ? (route.image.startsWith("http") ? route.image : `${SITE_ORIGIN}${route.image}`)
+    : `${SITE_ORIGIN}/og-image.png`;
+  const ogImageW = route.imageWidth ?? (hasCustomImage ? 1600 : 1024);
+  const ogImageH = route.imageHeight ?? (hasCustomImage ? 900 : 1024);
+  const articleMeta = ogType === "article"
+    ? `\n  <meta property="article:published_time" content="${escapeHtml(route.articlePublishedTime ?? "")}" />\n  <meta property="article:modified_time" content="${escapeHtml(route.articleModifiedTime ?? route.articlePublishedTime ?? "")}" />\n  <meta property="article:author" content="SpinFlow" />`
+    : "";
   const headTags = `
   <title>${escapeHtml(meta.title)}</title>
   <meta name="description" content="${escapeHtml(meta.description)}" />
   <link rel="canonical" href="${canonical}" />
+  <meta property="og:type" content="${ogType}" />
   <meta property="og:url" content="${canonical}" />
   <meta property="og:title" content="${escapeHtml(meta.title)}" />
   <meta property="og:description" content="${escapeHtml(meta.description)}" />
-  <meta property="og:image" content="${SITE_ORIGIN}/og-image.png" />
+  <meta property="og:image" content="${ogImage}" />
+  <meta property="og:image:width" content="${ogImageW}" />
+  <meta property="og:image:height" content="${ogImageH}" />
+  <meta property="og:image:alt" content="${escapeHtml(meta.title)}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="${canonical}" />
   <meta name="twitter:title" content="${escapeHtml(meta.title)}" />
   <meta name="twitter:description" content="${escapeHtml(meta.description)}" />
-  <meta name="twitter:image" content="${SITE_ORIGIN}/og-image.png" />
+  <meta name="twitter:image" content="${ogImage}" />${articleMeta}
   <script id="spinflow-json-ld" type="application/ld+json">${jsonLd}</script>${robots}`;
 
   const cleanedTemplate = template
@@ -1005,10 +1022,13 @@ function injectHtml(template, route) {
     .replace(/<meta\s+name=["']description["'][\s\S]*?>/gi, "")
     .replace(/<meta\s+name=["']robots["'][\s\S]*?>/gi, "")
     .replace(/<link\s+rel=["']canonical["'][\s\S]*?>/gi, "")
+    .replace(/<meta\s+property=["']og:type["'][\s\S]*?>/gi, "")
     .replace(/<meta\s+property=["']og:url["'][\s\S]*?>/gi, "")
     .replace(/<meta\s+property=["']og:title["'][\s\S]*?>/gi, "")
     .replace(/<meta\s+property=["']og:description["'][\s\S]*?>/gi, "")
     .replace(/<meta\s+property=["']og:image["'][\s\S]*?>/gi, "")
+    .replace(/<meta\s+property=["']og:image:(?:width|height|alt)["'][\s\S]*?>/gi, "")
+    .replace(/<meta\s+property=["']article:[\s\S]*?>/gi, "")
     .replace(/<meta\s+name=["']twitter:card["'][\s\S]*?>/gi, "")
     .replace(/<meta\s+property=["']twitter:card["'][\s\S]*?>/gi, "")
     .replace(/<meta\s+name=["']twitter:url["'][\s\S]*?>/gi, "")
@@ -1030,6 +1050,31 @@ function writeRouteHtml(distDir, template, route) {
   const targetDir = route.path === "/" ? distDir : path.join(distDir, route.path);
   fs.mkdirSync(targetDir, { recursive: true });
   fs.writeFileSync(path.join(targetDir, "index.html"), injectHtml(template, route));
+}
+
+// Vercel serves dist/404.html with an HTTP 404 status for any path that does not
+// match a prerendered file or an explicit rewrite. This replaces the previous
+// catch-all rewrite that returned every unknown URL as a 200 soft-404.
+function write404Html(distDir, template) {
+  const body = `<main class="prerender-shell" style="max-width:640px;margin:0 auto;padding:64px 24px;text-align:center">
+  <p style="font-size:64px;font-weight:900;color:#0e7490;margin:0">404</p>
+  <h1>페이지를 찾을 수 없습니다</h1>
+  <p>요청하신 페이지가 존재하지 않거나 이동되었습니다.</p>
+  <nav aria-label="주요 링크"><ul style="list-style:none;padding:0;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <li><a href="/">홈으로 돌아가기</a></li>
+    <li><a href="/tools">도구 모음 보기</a></li>
+    <li><a href="/blog">블로그</a></li>
+  </ul></nav>
+</main>`;
+  const html = injectHtml(template, {
+    path: "/404",
+    title: "404 - 페이지를 찾을 수 없음 | SpinFlow",
+    description: "요청한 페이지를 찾을 수 없습니다.",
+    structuredData: { "@context": "https://schema.org", "@graph": [] },
+    robots: "noindex,follow",
+    body,
+  }).replace(/<link rel="canonical"[^>]*>\s*/i, "");
+  fs.writeFileSync(path.join(distDir, "404.html"), html);
 }
 
 function writePublicAssets(posts) {
@@ -1066,40 +1111,63 @@ function writeDistAssets(posts) {
     structuredData: structuredDataForPage(page),
     body: renderShell(page, indexablePosts),
   }));
-  const postRoutes = posts.map((post) => ({
-    path: `/blog/${post.slug}`,
-    title: post.title,
-    description: post.description,
-    structuredData: {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": `${SITE_ORIGIN}/#organization`,
-          name: "SpinFlow",
-          alternateName: "SpinKorea",
-          url: SITE_ORIGIN,
-        },
-        {
-          "@type": "BlogPosting",
-          headline: post.title,
-          description: post.description,
-          datePublished: getPublishAt(post),
-          dateModified: getPublishAt(post),
-          url: `${SITE_ORIGIN}/blog/${post.slug}`,
-          inLanguage: "ko-KR",
-          author: { "@id": `${SITE_ORIGIN}/#organization` },
-          publisher: { "@id": `${SITE_ORIGIN}/#organization` },
-        },
-      ],
-    },
-    robots: isIndexablePost(post) ? undefined : "noindex,follow",
-    body: renderPostShell(post, staticContentBySlug[post.slug]),
-  }));
+  const postRoutes = posts.map((post) => {
+    const postUrl = `${SITE_ORIGIN}/blog/${post.slug}`;
+    const publishedAt = getPublishAt(post);
+    const imageUrl = post.thumbnail
+      ? (post.thumbnail.startsWith("http") ? post.thumbnail : `${SITE_ORIGIN}${post.thumbnail}`)
+      : `${SITE_ORIGIN}/og-image.png`;
+    return {
+      path: `/blog/${post.slug}`,
+      title: post.title,
+      description: post.description,
+      ogType: "article",
+      image: imageUrl,
+      articlePublishedTime: publishedAt,
+      articleModifiedTime: publishedAt,
+      structuredData: {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": `${SITE_ORIGIN}/#organization`,
+            name: "SpinFlow",
+            alternateName: "SpinKorea",
+            url: SITE_ORIGIN,
+            logo: {
+              "@type": "ImageObject",
+              url: `${SITE_ORIGIN}/og-image.png`,
+            },
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": `${postUrl}#article`,
+            mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+            headline: post.title,
+            description: post.description,
+            image: {
+              "@type": "ImageObject",
+              url: imageUrl,
+            },
+            datePublished: publishedAt,
+            dateModified: publishedAt,
+            url: postUrl,
+            inLanguage: "ko-KR",
+            author: { "@id": `${SITE_ORIGIN}/#organization` },
+            publisher: { "@id": `${SITE_ORIGIN}/#organization` },
+          },
+        ],
+      },
+      robots: isIndexablePost(post) ? undefined : "noindex,follow",
+      body: renderPostShell(post, staticContentBySlug[post.slug]),
+    };
+  });
 
   for (const route of [...pageRoutes, ...postRoutes]) {
     writeRouteHtml(distDir, template, route);
   }
+
+  write404Html(distDir, template);
 
   fs.writeFileSync(path.join(distDir, "sitemap.xml"), buildSitemap(indexablePosts));
   fs.writeFileSync(path.join(distDir, "rss.xml"), buildRss(indexablePosts));

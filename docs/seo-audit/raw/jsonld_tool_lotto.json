@@ -1,0 +1,129 @@
+{
+  "block_count": 1,
+  "processed_count": 1,
+  "total_bytes": 2329,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 2329,
+      "valid": true,
+      "types": [
+        "Answer",
+        "BreadcrumbList",
+        "FAQPage",
+        "HowTo",
+        "HowToStep",
+        "ImageObject",
+        "ListItem",
+        "Offer",
+        "Organization",
+        "Question",
+        "WebApplication",
+        "WebSite"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://spinkorea.kr/#organization",
+            "name": "SpinFlow",
+            "alternateName": "SpinKorea",
+            "url": "https://spinkorea.kr",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://spinkorea.kr/og-image.png"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://spinkorea.kr/#website",
+            "name": "SpinFlow",
+            "alternateName": "SpinKorea",
+            "url": "https://spinkorea.kr",
+            "inLanguage": "ko-KR",
+            "publisher": {
+              "@id": "https://spinkorea.kr/#organization"
+            }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://spinkorea.kr/tools/lotto-generator#app",
+            "name": "로또 번호 생성기",
+            "description": "브라우저의 보안 난수 기능으로 로또 번호를 무료로 생성하세요. 1~5게임을 한 번에 생성하고, 전체 복사까지 가능합니다. 당첨을 보장하지 않는 번호 조합 도구입니다.",
+            "url": "https://spinkorea.kr/tools/lotto-generator",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "KRW"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "무료 도구",
+                "item": "https://spinkorea.kr/tools"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "로또 번호 생성기",
+                "item": "https://spinkorea.kr/tools/lotto-generator"
+              }
+            ]
+          },
+          {
+            "@type": "HowTo",
+            "name": "로또 번호 생성기 사용 방법",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "text": "게임 수(1~5)를 선택하세요"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "text": "'번호 생성' 버튼을 클릭하면 선택한 게임 수만큼 번호가 생성됩니다"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "text": "각 게임 우측 복사 버튼 또는 전체 복사로 저장하세요"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "생성된 번호가 정말 무작위인가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "브라우저의 Web Crypto 난수 기능으로 각 번호를 선택하며, 이 도구가 특정 번호의 당첨 가능성을 높이거나 당첨을 예측해 주는 것은 아닙니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "5게임 동시 생성 시 번호가 겹치나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "각 게임 내에서는 중복이 없습니다. 게임 간 같은 번호가 나올 수는 있으나 실제 로또에서도 마찬가지입니다."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

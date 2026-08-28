@@ -106,3 +106,14 @@ SpinKorea/SpinFlow의 검색 유입과 검색 방문자의 실제 도구 사용 
 - 최종 리뷰 후 BMI 출처를 국내 분류와 일치하는 질병관리청 자료로 교체하고, 시급 결과에서 주휴 제외 단순 환산과 209시간 기준 월 환산을 분리했다.
 - 검증: typecheck, production build 625 pages, growth 24/24, search scope 9/9, content validation, random-team 완료 흐름, 390x844 모바일 출처 UI 통과.
 - 외부 계정 변경, Git push, 배포는 수행하지 않았다.
+
+## 2026-08-28 SEO Audit (claude-seo skill) + Remediation
+
+- 오픈소스 스킬 `AgricIDaniel/claude-seo` v2.2.5(로컬 전용, 외부 AI/데이터 API 미사용)를 `~/.claude/`에 수동 설치하고 라이브 `https://spinkorea.kr` 대표 6개 URL에 타깃 감사(technical/schema/GEO/content) 실행. 산출물은 `docs/seo-audit/`.
+- 핵심 결함 3: (1) soft-404 — 미지 경로가 200 홈 셸(noindex 없음), (2) 블로그 글 정적 메타 부정확(`og:type=website` 고정, `og:image`가 항상 기본 이미지, `article:*` 없음), (3) 신선도·E-E-A-T 약함(도구 갱신일 없음, 저자 조직명뿐, 큐레이트 76편 중 35편 얕음).
+- 적용(T1+T2): 블로그 `og:type=article`+`article:*`+썸네일 `og:image`, `BlogPosting` 그래프 보강(`@id`/`mainEntityOfPage`/ImageObject), 도구 `WebApplication.dateModified` + 노출 갱신일, 파비콘 885 kB→1.9 kB, `preconnect`, Speculation Rules `prefetch`, `<img>` 치수, aria-label(blog 카드·lotto 버튼).
+- soft-404: `vercel.json` catch-all 제거 → `generate-assets.mjs`가 `dist/404.html`(noindex) 생성, Vercel 파일시스템 해석이 프리렌더 라우트 200 유지, 미지 경로 HTTP 404. SPA 전용 라우트만 명시 rewrite. www→apex 308 redirect 추가.
+- 부수: `/s/:id → /api/s/:id` rewrite(단축 링크가 catch-all에 먹혀 리다이렉트 안 되던 것 복구), `audit-adsense-readiness.mjs` 낡은 단언(`curated` only → `curated||editorial`) 수정.
+- 검증: typecheck, production build 627 pages(+`dist/404.html`), growth 24/24, search scope 13/13, adsense-readiness PASS, content:validate PASS(650/50, similarity 0.235). 로컬 정적 서버: 알려진 라우트 200 / 미지 404.
+- 보류(후속): 썸네일 126장 자가호스팅(`update-thumbnails.mjs` 정합 필요), YMYL 검토자·출처, 저자 Person 스키마, 얕은 글 확장, 강제 CSP, PSI API 키, GSC·네이버 연결, GA4 주요 이벤트, AdSense 403 조사.
+- 배포 후 검증 필요: 미지 경로 실제 404 + `404.html` 표시, www 308(대시보드 리다이렉트가 선행하면 대시보드 변경), `/s/` 단축 링크 301. Git push·배포·외부 계정 변경 없음.

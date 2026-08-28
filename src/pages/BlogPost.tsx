@@ -219,25 +219,19 @@ export default function BlogPost() {
 
   const blogPostingStructuredData = {
     "@type": "BlogPosting",
+    "@id": `${SITE_ORIGIN}/blog/${post.slug}#article`,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${SITE_ORIGIN}/blog/${post.slug}`,
     },
     headline: post.title,
     description: post.description,
-    image: post.thumbnail || `${SITE_ORIGIN}/og-image.png`,
-    author: {
-      "@type": "Organization",
-      name: "SpinFlow",
+    image: {
+      "@type": "ImageObject",
+      url: post.thumbnail || `${SITE_ORIGIN}/og-image.png`,
     },
-    publisher: {
-      "@type": "Organization",
-      name: "SpinFlow",
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE_ORIGIN}/og-image.png`,
-      },
-    },
+    author: { "@id": `${SITE_ORIGIN}/#organization` },
+    publisher: { "@id": `${SITE_ORIGIN}/#organization` },
     datePublished: post.publishAt ?? post.date,
     dateModified: post.publishAt ?? post.date,
     url: `${SITE_ORIGIN}/blog/${post.slug}`,
@@ -297,6 +291,9 @@ export default function BlogPost() {
         image={post.thumbnail}
         structuredData={structuredData}
         robots={post.source === "generated" ? "noindex,follow" : "index,follow"}
+        ogType="article"
+        articlePublishedTime={post.publishAt ?? post.date}
+        articleModifiedTime={post.publishAt ?? post.date}
       />
 
       <nav className="w-full px-4 py-6 border-b border-slate-200 bg-white/90 backdrop-blur-md sticky top-0 z-50">
@@ -364,7 +361,10 @@ export default function BlogPost() {
               <img
                 src={post.thumbnail}
                 alt={post.title}
+                width={1600}
+                height={900}
                 loading="eager"
+                fetchPriority="high"
                 decoding="async"
                 className="w-full h-auto object-cover max-h-[500px]"
               />

@@ -90,6 +90,7 @@ export default function LottoGenerator() {
                     <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-2">
                         <button
                             type="button"
+                            aria-label="게임 수 줄이기"
                             onClick={() => setGameCount(c => Math.max(1, c - 1))}
                             className="text-gray-400 hover:text-white transition-colors"
                         >
@@ -98,6 +99,7 @@ export default function LottoGenerator() {
                         <span className="w-6 text-center font-bold text-white text-lg">{gameCount}</span>
                         <button
                             type="button"
+                            aria-label="게임 수 늘리기"
                             onClick={() => setGameCount(c => Math.min(5, c + 1))}
                             className="text-gray-400 hover:text-white transition-colors"
                         >

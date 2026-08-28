@@ -1,0 +1,27 @@
+{
+  "url": "https://spinkorea.kr/tools",
+  "status_code": 200,
+  "render_error": null,
+  "html_findings": {
+    "real_buttons": 8,
+    "real_anchors": 71,
+    "div_onclick_widgets": 0,
+    "semantic_landmarks": 7,
+    "inputs_without_aria": 1,
+    "inputs_without_label": 0
+  },
+  "a11y_findings": {
+    "tree_present": true,
+    "total_nodes": 799,
+    "interactive_nodes": 79,
+    "role_button": 7,
+    "role_link": 71,
+    "role_generic": 55,
+    "unnamed_interactive": 0
+  },
+  "score": 100,
+  "score_status": "complete",
+  "partial": false,
+  "partial_reasons": [],
+  "issues": []
+}

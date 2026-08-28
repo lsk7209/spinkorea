@@ -1,0 +1,137 @@
+{
+  "block_count": 1,
+  "processed_count": 1,
+  "total_bytes": 2764,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 2764,
+      "valid": true,
+      "types": [
+        "Answer",
+        "BreadcrumbList",
+        "FAQPage",
+        "HowTo",
+        "HowToStep",
+        "ImageObject",
+        "ListItem",
+        "Offer",
+        "Organization",
+        "Question",
+        "WebApplication",
+        "WebSite"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://spinkorea.kr/#organization",
+            "name": "SpinFlow",
+            "alternateName": "SpinKorea",
+            "url": "https://spinkorea.kr",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://spinkorea.kr/og-image.png"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://spinkorea.kr/#website",
+            "name": "SpinFlow",
+            "alternateName": "SpinKorea",
+            "url": "https://spinkorea.kr",
+            "inLanguage": "ko-KR",
+            "publisher": {
+              "@id": "https://spinkorea.kr/#organization"
+            }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://spinkorea.kr/tools/hourly-wage#app",
+            "name": "시급 계산기 | 일급·월급·연봉 자동 계산",
+            "description": "시급을 입력하면 일급, 월급, 연봉을 자동으로 계산합니다. 월급에서 시급도 역산할 수 있습니다. 2026년 최저시급 10,320원 기준 예시를 포함합니다.",
+            "url": "https://spinkorea.kr/tools/hourly-wage",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "KRW"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "무료 도구",
+                "item": "https://spinkorea.kr/tools"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "시급 계산기 | 일급·월급·연봉 자동 계산",
+                "item": "https://spinkorea.kr/tools/hourly-wage"
+              }
+            ]
+          },
+          {
+            "@type": "HowTo",
+            "name": "시급 계산기 | 일급·월급·연봉 자동 계산 사용 방법",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "text": "시급, 하루 근무시간, 한 달 근무일수를 입력하세요."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "text": "일급·월급·연봉이 자동으로 계산됩니다."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "text": "월급 → 시급 역산은 아래 섹션에서 계산하세요."
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "주휴수당이 포함된 시급을 계산하려면?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "주 15시간 이상 근무 시 주 1회 유급휴일(주휴일)이 발생합니다. 주 40시간 기준 월 소정근로시간 174시간 + 주휴시간 35시간 = 209시간으로 계산합니다."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "최저시급보다 낮은 금액이 나왔는데 괜찮은가요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "2026년 적용 최저시급은 10,320원입니다. 적용 대상과 산입 범위는 근로 조건에 따라 달라질 수 있으므로 최저임금위원회와 고용노동부 안내를 확인하세요."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "연봉에서 실수령액은 어떻게 계산하나요?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "연봉에서 4대보험(약 9.4%)과 소득세를 공제하면 실수령액이 됩니다. 연봉 3,000만원 기준 실수령 월급은 약 215만원 내외입니다."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

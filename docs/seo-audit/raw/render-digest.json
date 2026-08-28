@@ -1,0 +1,147 @@
+{
+ "home": {
+  "status_code": 200,
+  "is_spa": false,
+  "mode_used": "rendered",
+  "render_ms": 3531,
+  "redirect_chain": [],
+  "console_errors": [
+   "Failed to load resource: the server responded with a status of 403 ()"
+  ],
+  "headers": {
+   "cache-control": "public, max-age=0, must-revalidate",
+   "content-type": "text/html; charset=utf-8",
+   "permissions-policy": "camera=(), microphone=(), geolocation=()",
+   "referrer-policy": "strict-origin-when-cross-origin",
+   "server": "Vercel",
+   "strict-transport-security": "max-age=31536000; includeSubDomains",
+   "x-content-type-options": "nosniff",
+   "x-frame-options": "DENY"
+  },
+  "publication_date": "2026-01-01",
+  "extracted_text_chars": 1797,
+  "rendered_content_chars": 53818,
+  "raw_html_chars": 5633
+ },
+ "tools": {
+  "status_code": 200,
+  "is_spa": false,
+  "mode_used": "rendered",
+  "render_ms": 3297,
+  "redirect_chain": [],
+  "console_errors": [
+   "Failed to load resource: the server responded with a status of 403 ()",
+   "Framing 'https://www.google.com/' violates the following report-only Content Security Policy directive: \"frame-ancestors 'self'\". The violation has been logged, but no further action has been taken.\n"
+  ],
+  "headers": {
+   "cache-control": "public, max-age=0, must-revalidate",
+   "content-type": "text/html; charset=utf-8",
+   "permissions-policy": "camera=(), microphone=(), geolocation=()",
+   "referrer-policy": "strict-origin-when-cross-origin",
+   "server": "Vercel",
+   "strict-transport-security": "max-age=31536000; includeSubDomains",
+   "x-content-type-options": "nosniff",
+   "x-frame-options": "DENY"
+  },
+  "publication_date": "2026-01-01",
+  "extracted_text_chars": 856,
+  "rendered_content_chars": 82810,
+  "raw_html_chars": 13301
+ },
+ "tool_lotto": {
+  "status_code": 200,
+  "is_spa": false,
+  "mode_used": "rendered",
+  "render_ms": 3312,
+  "redirect_chain": [],
+  "console_errors": [
+   "Failed to load resource: the server responded with a status of 403 ()"
+  ],
+  "headers": {
+   "cache-control": "public, max-age=0, must-revalidate",
+   "content-type": "text/html; charset=utf-8",
+   "permissions-policy": "camera=(), microphone=(), geolocation=()",
+   "referrer-policy": "strict-origin-when-cross-origin",
+   "server": "Vercel",
+   "strict-transport-security": "max-age=31536000; includeSubDomains",
+   "x-content-type-options": "nosniff",
+   "x-frame-options": "DENY"
+  },
+  "publication_date": "2026-01-01",
+  "extracted_text_chars": 548,
+  "rendered_content_chars": 37752,
+  "raw_html_chars": 9483
+ },
+ "tool_wage": {
+  "status_code": 200,
+  "is_spa": false,
+  "mode_used": "rendered",
+  "render_ms": 3375,
+  "redirect_chain": [],
+  "console_errors": [
+   "Failed to load resource: the server responded with a status of 403 ()"
+  ],
+  "headers": {
+   "cache-control": "public, max-age=0, must-revalidate",
+   "content-type": "text/html; charset=utf-8",
+   "permissions-policy": "camera=(), microphone=(), geolocation=()",
+   "referrer-policy": "strict-origin-when-cross-origin",
+   "server": "Vercel",
+   "strict-transport-security": "max-age=31536000; includeSubDomains",
+   "x-content-type-options": "nosniff",
+   "x-frame-options": "DENY"
+  },
+  "publication_date": "2026-08-28",
+  "extracted_text_chars": 924,
+  "rendered_content_chars": 40289,
+  "raw_html_chars": 7038
+ },
+ "blog": {
+  "status_code": 200,
+  "is_spa": false,
+  "mode_used": "rendered",
+  "render_ms": 3406,
+  "redirect_chain": [],
+  "console_errors": [
+   "Failed to load resource: the server responded with a status of 403 ()"
+  ],
+  "headers": {
+   "cache-control": "public, max-age=0, must-revalidate",
+   "content-type": "text/html; charset=utf-8",
+   "permissions-policy": "camera=(), microphone=(), geolocation=()",
+   "referrer-policy": "strict-origin-when-cross-origin",
+   "server": "Vercel",
+   "strict-transport-security": "max-age=31536000; includeSubDomains",
+   "x-content-type-options": "nosniff",
+   "x-frame-options": "DENY"
+  },
+  "publication_date": "2026-05-24",
+  "extracted_text_chars": 867,
+  "rendered_content_chars": 34453,
+  "raw_html_chars": 19625
+ },
+ "post_curated": {
+  "status_code": 200,
+  "is_spa": false,
+  "mode_used": "rendered",
+  "render_ms": 3375,
+  "redirect_chain": [],
+  "console_errors": [
+   "Failed to load resource: the server responded with a status of 403 ()"
+  ],
+  "headers": {
+   "cache-control": "public, max-age=0, must-revalidate",
+   "content-type": "text/html; charset=utf-8",
+   "permissions-policy": "camera=(), microphone=(), geolocation=()",
+   "referrer-policy": "strict-origin-when-cross-origin",
+   "server": "Vercel",
+   "strict-transport-security": "max-age=31536000; includeSubDomains",
+   "x-content-type-options": "nosniff",
+   "x-frame-options": "DENY"
+  },
+  "publication_date": "2026-05-24",
+  "extracted_text_chars": 390,
+  "rendered_content_chars": 33900,
+  "raw_html_chars": 6599
+ }
+}

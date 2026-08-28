@@ -1,0 +1,27 @@
+{
+  "url": "https://spinkorea.kr/",
+  "status_code": 200,
+  "render_error": null,
+  "html_findings": {
+    "real_buttons": 16,
+    "real_anchors": 26,
+    "div_onclick_widgets": 0,
+    "semantic_landmarks": 17,
+    "inputs_without_aria": 0,
+    "inputs_without_label": 0
+  },
+  "a11y_findings": {
+    "tree_present": true,
+    "total_nodes": 476,
+    "interactive_nodes": 40,
+    "role_button": 13,
+    "role_link": 26,
+    "role_generic": 19,
+    "unnamed_interactive": 0
+  },
+  "score": 100,
+  "score_status": "complete",
+  "partial": false,
+  "partial_reasons": [],
+  "issues": []
+}
