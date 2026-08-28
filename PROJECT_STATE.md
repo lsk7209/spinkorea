@@ -88,6 +88,14 @@ SpinKorea/SpinFlow의 검색 유입과 검색 방문자의 실제 도구 사용 
 - Future build at 2026-10-28 rendered 726 pages and verified the final 2026-10-27 article in HTML, sitemap, RSS, and llms.txt without noindex. A normal build then restored current-time assets (627 rendered pages).
 - No Git commit, GitHub push, Vercel operation, or external publishing/account mutation was performed in this phase.
 
+## 2026-08-28 Dependency Security Remediation
+
+- Reproduced the GitHub dependency warning locally as 8 affected package paths (6 high, 2 low) in the current npm audit database.
+- Updated only `package-lock.json` within existing declared semver ranges. Patched nanoid, postcss, react-router, Vite, esbuild, ws, and Babel dependency paths without a major-version application migration.
+- A clean `npm ci`, full `npm audit`, and production-only audit all report 0 vulnerabilities.
+- Regression checks pass: typecheck, production build (3,317 modules, 627 pages), content plan 650/50, editorial QA, growth 24/24, and search scope 13/13.
+- Vercel and other hosting settings were not changed.
+
 ## 2026-08-28 Growth Phase 2
 
 - 로또, 주사위, 동전, 랜덤 팀, 비밀번호, Yes/No, JSON, QR의 실제 결과 완료 지점에 `tool_result_viewed`를 추가했다.

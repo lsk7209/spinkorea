@@ -96,3 +96,15 @@ Browser console boundary remains the expected local AdSense request error; no ap
 - Normal production build rerun after the future check restored current-time public assets.
 - Six October route-lazy chunks are 14.98-22.42 kB gzip.
 - `git diff --check`: PASS with line-ending notices only.
+
+## 2026-08-28 Dependency security remediation
+
+- Baseline `npm audit --json`: 8 vulnerable package paths (6 high, 2 low) across nanoid, postcss, react-router, react-router-dom, vite, ws, esbuild, and Babel paths.
+- `npm audit fix`: updated 25, added 2, removed 5 transitive package entries without changing declared dependency ranges; audit result 0.
+- Clean `npm ci`: PASS; 275 packages audited, 0 vulnerabilities.
+- `npm audit --json`: PASS, total 0. `npm audit --omit=dev --json`: PASS, total 0.
+- Resolved safe versions include nanoid 5.1.16 and 3.3.18, postcss 8.5.26, react-router/react-router-dom 7.18.2, vite 7.3.6, esbuild 0.28.2, ws 8.21.3, and @babel/core 7.29.7.
+- `npm run type-check`: PASS; `npm run build`: PASS, Vite 7.3.6, 3,317 modules and 627 pages rendered.
+- `npm run content:validate`: PASS (650 plans, 50 approved); editorial validator PASS (27 October drafts); growth PASS 24/24; search scope PASS 13/13.
+- `git diff --check`: PASS.
+- Dependency import smoke for `@libsql/client`, `nanoid`, and `react-router-dom`: PASS.

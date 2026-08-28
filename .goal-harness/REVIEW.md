@@ -68,3 +68,9 @@
 - Initial HIGH: the standalone October draft validator treated already-integrated October rows as pre-existing duplicates, so post-integration QA was not reproducible.
 - Fixed by excluding October slugs from the pre-existing baseline and September comparison set. Re-run PASS: 6 files, 27 drafts, 50 compared, maximum similarity 0.219.
 - Final independent re-review: the repaired validator and content/type/growth/search checks all pass; no remaining BLOCKER or HIGH finding in this diff.
+
+## Dependency security review
+
+- Independent reliability review found no material finding and no remaining BLOCKER/HIGH.
+- `package.json` and its root lock declarations remain unchanged; `npm ls --all` confirms compatible resolution.
+- Clean install, full and production audits, type/content/editorial/growth/search checks, and production build all pass.

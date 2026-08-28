@@ -31,6 +31,15 @@
 | The final scheduled article becomes indexable and discoverable after publication | PASS | Future build rendered 726 pages; final route has no noindex and appears in sitemap, RSS, and llms.txt |
 | October article bodies remain route-lazy | PASS | Six chunks, 14.98-22.42 kB gzip |
 
+### Dependency security remediation
+
+| Criteria | Status | Evidence |
+|---|---|---|
+| Full and production npm dependency graphs contain no known audit vulnerability | PASS | `npm audit --json` and `npm audit --omit=dev --json`: total 0 |
+| A clean lockfile install reproduces the secure graph | PASS | `npm ci`: 275 packages audited, 0 vulnerabilities |
+| Security updates avoid major-version application migrations | PASS | Only `package-lock.json` changed; all resolved versions remain inside declared package ranges |
+| Existing content, SEO, routing, analytics, and build behavior remain valid | PASS | Typecheck, content, editorial, growth, search-scope, and production build checks pass |
+
 - GSC: evidence_missing because configured service-account file was absent.
 - GA4 organic-to-conversion baseline: not_configured in repository evidence.
 - Naver Search Advisor: evidence_missing; no account mutation authorized.

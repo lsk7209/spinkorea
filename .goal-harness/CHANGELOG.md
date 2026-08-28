@@ -31,3 +31,8 @@
 - Added an idempotent October schedule integrator and a standalone research/template/link/length/similarity validator.
 - Extended plan validation to assert the exact 50-day editorial run through October 27.
 - Repaired the standalone validator so it remains reproducible after October drafts are integrated.
+
+# 2026-08-28 Dependency security remediation
+
+- Refreshed `package-lock.json` within existing semver declarations to remove all npm-audit findings.
+- No package.json range, application source, content, route, or deployment configuration was changed.
