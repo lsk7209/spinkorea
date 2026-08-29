@@ -6,9 +6,9 @@ SpinKorea/SpinFlow의 검색 유입과 검색 방문자의 실제 도구 사용 
 
 ## Current Work
 
-- 2026-08-28: 기술 SEO, GEO/AEO 기반 엔티티, 내부 링크, CTA, GA4 전환 측정을 로컬 구현했다.
-- 현재 브랜치: `main`; 기준 원격 커밋: `bac20fa`; 아직 커밋·푸시·배포하지 않았다.
-- 외부 Google, Naver, Vercel, AdSense 또는 데이터베이스 상태는 변경하지 않았다.
+- 2026-08-30: 대시보드 fleet 감사에서 확인된 모바일 고정 SPIN 겹침과 sitemap 불필요 힌트를 최소 범위로 수정하고 실서비스 검증까지 완료했다.
+- 현재 브랜치: `main`; 배포된 런타임 커밋: `9db17d0e63ddfe7772d9437250fb0da1e90a2a99`; GitHub Action `33268913711`과 Production 배포 `6158893572`가 동일 SHA에서 성공했다.
+- 외부 Google, Naver, AdSense, DNS, 데이터베이스 상태는 변경하지 않았다. 일반 Git push에 연결된 Production 배포만 실행됐다.
 
 ## Decisions
 
@@ -27,15 +27,20 @@ SpinKorea/SpinFlow의 검색 유입과 검색 방문자의 실제 도구 사용 
 - 전역 SEO: Organization/WebSite 엔티티와 SpinFlow/SpinKorea 이름 연결.
 - 정적 HTML: 영어 승인용 홈 메타·본문을 한국어 검색 의도와 사용자 안내로 교체.
 - 404: `noindex,follow`; AI 크롤러별 `/api/` 차단 유지.
+- 모바일 홈: 룰렛 내부 SPIN은 유지하고 중복 고정 SPIN은 `md` 미만에서 숨겨 추천 카드 가림을 제거했다.
+- Sitemap: 모든 138개 URL의 `loc`와 실제 `lastmod`를 유지하고 검색엔진이 무시하는 `changefreq`·`priority` 출력은 제거했다.
 
 ## Validation
 
 - `npm run type-check`: PASS.
-- `npm run content:validate`: PASS, 600 plans / 76 existing titles / minimum score 88.
-- `npm run build`: PASS, 625 static pages rendered.
-- `npm run verify:growth`: PASS, 14 focused assertions.
-- `node scripts/verify-search-scope.mjs`: PASS, 9 assertions.
-- Playwright desktop/mobile: 홈 CTA, 룰렛 실행·결과, 도구 허브와 빠른 링크 노출 확인.
+- `npm run lint`: PASS.
+- `npm run content:validate`: PASS, 650 plans / 76 existing titles / 50 approved editorial / minimum score 88.
+- `node scripts/validate-editorial-drafts.mjs`: PASS, 27 October drafts / maximum similarity 0.219.
+- `npm run build`: PASS, 635 static pages rendered.
+- `npm run verify:growth`: PASS, 25 focused assertions.
+- `node scripts/verify-search-scope.mjs`: PASS, 18 assertions across public/dist sitemap and index boundaries.
+- `npm audit` and `npm audit --omit=dev`: PASS, 0 vulnerabilities.
+- Playwright local and public desktop/mobile: one H1, apex canonical, no overflow, mobile in-wheel result, hidden duplicate mobile FAB, visible desktop FAB 확인.
 - 브라우저 콘솔의 유일한 오류는 로컬 AdSense 요청 403으로, 앱 런타임 오류는 확인되지 않았다.
 
 ## Evidence Boundaries
@@ -44,28 +49,27 @@ SpinKorea/SpinFlow의 검색 유입과 검색 방문자의 실제 도구 사용 
 - GA4 organic-to-conversion baseline: repository evidence상 `not_configured`; 새 이벤트 배포 후 주요 이벤트 지정 필요.
 - Naver Search Advisor: `evidence_missing`; 계정/수집 요청 미실행.
 - AI referral: `not_identifiable`.
-- 라이브 canonical host와 실제 HTTP 404 응답은 검증하지 않았다.
+- 라이브 apex canonical과 임의 미존재 경로의 실제 HTTP 404 응답을 검증했다.
 
 ## Remaining Risks
 
-- Vercel catch-all 때문에 미지 URL은 HTTP 200 soft-404일 수 있다. 화면은 noindex 처리했지만 서버 404가 더 좋다.
-- API 보안·취약 의존성·테스트 공백은 이전 감사에서 확인된 별도 HIGH 항목이며 이번 검색/전환 범위에서 수정하지 않았다.
+- 미지 URL은 현재 실서비스에서 HTTP 404를 반환한다. 이 확인은 전체 API 보안 범위를 대체하지 않는다.
+- 공개 API 인증·rate limit·quota 및 API 테스트 공백은 이전 감사의 별도 HIGH 범위다. 의존성 감사는 현재 full/prod 모두 0건이다.
 - 금융·건강·노무 도구의 공식 출처, 기준일, 실제 책임 검토자 정보는 추가 보강이 필요하다.
-- `postMetadata` 번들 538 kB 경고와 이미지 최적화 여지가 남아 있다.
+- `postMetadata` 빌드 청크는 약 356 kB이며 추가 번들·이미지 최적화 여지가 남아 있다.
 
 ## Remeasurement
 
-- 변경 예정일: GitHub push 시점(아직 미실행).
-- 기본 재측정일: 2026-09-11 또는 실제 배포 14일 후.
+- 변경 배포일: 2026-08-30 KST.
+- 기본 재측정일: 2026-09-13 또는 실제 데이터가 14일 누적된 직후.
 - 비교: 동일 14일 기간의 GSC 노출·클릭·CTR·평균순위, GA4 organic landing→`tool_result_viewed`, `tool_used`, `tool_engaged`, `content_to_tool_clicked`, `share_clicked`.
 - Naver와 AI 검색은 동일 질문·동일 로케일 반복 관찰이 가능할 때만 비교한다.
 
 ## Next Actions
 
-1. 변경 검토 후 허용 시 명시적 파일만 커밋하고 GitHub에 push.
-2. GA4에서 `tool_result_viewed`를 주요 이벤트로 지정하고, `tool_used`와 `tool_engaged`는 보조 참여 지표로 사용하며 내부/테스트 트래픽을 제외.
-3. GSC/Naver 기준선을 확보한 뒤 2026-09-11에 동기간 재측정.
-4. 별도 보안 작업으로 공개 API와 취약 의존성 문제 해결.
+1. 2026-09-13에 GSC 노출·클릭·CTR·평균순위와 GA4 organic→도구 결과 전환을 동일 14일 기준으로 재측정한다.
+2. 계정 변경 권한이 별도로 주어질 때만 GA4 주요 이벤트 지정이나 GSC/Naver 작업을 수행한다.
+3. 별도 보안 작업으로 공개 API 인증·rate limit·quota·테스트 경계를 해결한다.
 
 ## 2026-08-28 Editorial Schedule Phase
 

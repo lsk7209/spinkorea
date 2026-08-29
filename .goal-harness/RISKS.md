@@ -1,5 +1,17 @@
 # RISKS
 
+## 2026-08-30 focused repair risks
+
+| Risk | Impact | Mitigation | Status |
+|---|---|---|---|
+| Removing the mobile FAB could remove the only spin action | Functional regression | Keep and browser-test the existing in-wheel SPIN button; retain FAB from `md` upward | Controlled |
+| Editing generated XML directly would drift on the next build | SEO regression | Change `buildSitemap`, regenerate both public/dist outputs, and add source-independent output assertions | Controlled |
+| Fleet audit parser misread `/api/` exclusion as global AI-bot blocking | Unnecessary robots regression | Leave robots unchanged and record the false positive | Controlled |
+| Remote `main` changes during work | Lost other-computer work | Re-fetch and require exact remote ancestry immediately before push | Closed; exact no-drift check passed before runtime commit |
+| Existing high-risk API/security items are outside this focused SEO release | Residual security risk | Do not broaden this release; preserve the existing risk record for a separately authorized security task | Open |
+
+## Prior risk register
+
 | Risk | Impact | Likelihood | Mitigation | Status |
 |---|---|---|---|---|
 | Unauthenticated DB-writing endpoints | Turso cost/storage abuse | High | Rate limit, quota, bounds, retention or disable endpoints | Open HIGH |

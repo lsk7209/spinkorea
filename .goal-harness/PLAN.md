@@ -1,5 +1,15 @@
 # PLAN
 
+## Current plan — 2026-08-30
+
+1. **Completed:** Establish GitHub-first remote/deployment baseline and preserve the stale local checkout read-only.
+2. **Completed:** Reproduce the mobile overlap and separate confirmed findings from audit false positives.
+3. **Completed:** Apply the minimal mobile-control and sitemap-generator repairs with deterministic assertions.
+4. **Completed:** Run static, build, browser, dependency, content, and independent-review gates.
+5. **Completed:** Recheck remote drift, commit exact scope, push, monitor same-SHA checks/deployment, and verify public output.
+
+## Prior plan history
+
 ## Classification
 
 - Size: large

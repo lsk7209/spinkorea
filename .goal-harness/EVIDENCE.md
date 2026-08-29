@@ -1,5 +1,41 @@
 # EVIDENCE
 
+## 2026-08-30 baseline
+
+- Remote source of truth: `lsk7209/spinkorea` `main` at `c2d0ff1cdb2ea81ec1061377a3a8895ce3c808bd`; successful same-SHA Production deployment `6136416928` and successful Actions runs were observed before editing.
+- Preservation boundary: `D:\web\spinkorea` is clean but five commits behind and remains read-only. Work occurs only in `D:\web\seo-worktrees\spinkorea-seo-20260830`.
+- Public mobile geometry at 390x844: the fixed SPIN button was `{x:246,y:700,w:112,h:112}` and the lunch preset card was `{x:201,y:612.5,w:173,h:155}`, producing about 7,560 square pixels of overlap.
+- The roulette itself exposes a separate 64x64 SPIN button, so the mobile fixed button is duplicate functionality.
+- `public/sitemap.xml` contains 138 URLs, 138 `changefreq` tags, and 138 `priority` tags. Generator ownership is `scripts/generate-assets.mjs`.
+- Audit false positive: `public/robots.txt` explicitly allows GPTBot, PerplexityBot, ClaudeBot, Google-Extended, OAI-SearchBot, Yeti, and Daumoa; only `/api/` is excluded.
+
+## 2026-08-30 local implementation verification
+
+- `npm ci`: 275 packages audited, 0 vulnerabilities.
+- `npm run type-check`: PASS.
+- `npm run content:validate`: PASS, 650 generated plans, 76 existing titles, 50 approved editorial entries, quality floor 88, maximum similarity 0.235.
+- `node scripts/validate-editorial-drafts.mjs`: PASS, 27 October drafts and maximum compared similarity 0.219.
+- `npm run build`: PASS, Vite build plus 635 generated static routes.
+- `npm run verify:growth`: 25/25 PASS, including the mobile duplicate-control assertion.
+- `node scripts/verify-search-scope.mjs`: 18/18 PASS, including public/dist equality, paired URL/lastmod, canonical HTTPS uniqueness, and date-format assertions.
+- `npm audit` and `npm audit --omit=dev`: 0 vulnerabilities.
+- Valid XML sitemap: 138 `url`, 138 `loc`, 138 `lastmod`, zero `changefreq`, zero `priority`.
+- Local Playwright mobile 390x844: HTTP 200, apex canonical, one H1, no overflow, fixed SPIN `display:none`/0x0, in-wheel SPIN visible and result produced.
+- Local Playwright desktop 1440x1000: HTTP 200, apex canonical, one H1, no overflow, fixed SPIN visible at 112x112 and result produced.
+- The only browser console error remained the already-documented third-party AdSense 403; no product runtime failure was observed.
+
+## 2026-08-30 independent review and live release
+
+- Independent Luna/max final review: source GO, BLOCKER 0, HIGH 0. The noted harness/project-state drift and sitemap-verifier gaps were repaired before closeout.
+- Runtime commit: `9db17d0e63ddfe7772d9437250fb0da1e90a2a99`, exactly five staged files, 0 secret-pattern hits, pushed after exact remote no-drift verification.
+- Same-SHA GitHub Action: Hosting Cost Guard `33268913711`, completed `success`.
+- Same-SHA Production deployment: `6158893572`, completed `success`.
+- Final public HTTP: `/` 200 with apex canonical; `/sitemap.xml` 200 and valid XML with 138 URL/loc/lastmod entries plus zero `changefreq`/`priority`; `/robots.txt` 200 with sitemap reference, GPTBot/ClaudeBot rules, and `/api/` exclusion; unknown verification route 404.
+- Final public Playwright mobile 390x844: one H1, apex canonical, no horizontal overflow, in-wheel SPIN 64x64 visible, duplicate fixed SPIN `display:none`/0x0, result produced.
+- Final public Playwright desktop 1440x1000: in-wheel SPIN visible and fixed SPIN remains visible at 112x112.
+
+## Prior evidence history
+
 ## Validation Level
 
 Level: 4

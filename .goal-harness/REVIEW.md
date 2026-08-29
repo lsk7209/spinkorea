@@ -1,5 +1,27 @@
 # REVIEW
 
+## 2026-08-30 final independent review
+
+- Reviewer: role-matched Luna/max read-only lane after the full local gate.
+- Verdict: source GO; BLOCKER 0; HIGH 0.
+- Confirmed mobile safety: the roulette's 64x64 in-wheel SPIN remains available while the duplicate 112x112 fixed control is hidden below `md`; local and public mobile result flows pass.
+- Confirmed sitemap safety: 138 URL/`loc`/truthful `lastmod` pairs are unchanged while ignored `changefreq`/`priority` output is removed.
+- Confirmed scope: no content rewrite, robots change, API/DB/auth/analytics/account mutation, or edit to the stale primary checkout.
+
+## Review follow-up repairs
+
+- Reconciled PLAN, STATUS, ACCEPTANCE, EVIDENCE, REVIEW, HANDOFF, and PROJECT_STATE with the actual implementation and release state.
+- Strengthened `verify-search-scope.mjs` from count-only dist checks to 18 checks covering public/dist equality, URL/lastmod pairing, canonical HTTPS uniqueness, date format, and existing index boundaries.
+- Preserved exact staging to avoid line-ending-only/generated-file noise; the runtime commit contains only five intended files.
+
+## Completion verdict
+
+- Runtime commit `9db17d0e63ddfe7772d9437250fb0da1e90a2a99` is live through successful same-SHA Production deployment `6158893572`.
+- Final public HTTP and desktop/mobile browser verification passes. It is accurate to mark this focused SpinKorea task DONE.
+- Existing public API authority/security risks remain a separate task; full and production dependency audits currently report zero vulnerabilities.
+
+## Prior review history
+
 ## Diff Review
 
 - SEO/CRO source changes, generated discovery artifacts, focused verification, and handoff documents were reviewed against the fresh build.

@@ -1,5 +1,32 @@
 # GOAL
 
+## 2026-08-30 GitHub-first fleet SEO remediation
+
+### Concrete goal
+
+Repair the smallest confirmed SpinKorea SEO/SXO defects from the fresh fleet audit while preserving the current remote `main` as the source of truth.
+
+### Done condition
+
+- Mobile visitors no longer receive the redundant fixed SPIN control that obscures recommendation content; the in-wheel SPIN control remains operable.
+- Generated sitemap entries retain canonical `loc` and truthful `lastmod` values without ignored `changefreq` or `priority` hints.
+- The existing robots policy continues to allow named AI/search crawlers while excluding only `/api/`.
+- Type, build, growth, search-scope, content, browser, independent-review, GitHub, deployment, and public checks pass.
+
+### Evidence target
+
+Record the before/after mobile geometry, generated sitemap assertions, exact commit SHA, same-SHA GitHub Actions/Vercel success, and final public checks.
+
+### Stop condition
+
+Stop only after the focused commit is live-verified or after a concrete credential/external-state blocker is recorded without repeating a mutation.
+
+### Scope boundaries
+
+No bulk content rewrite, scheduled publishing, GSC/IndexNow submission, database write, Google/AdSense/Vercel/DNS account mutation, or edit to the stale primary checkout at `D:\web\spinkorea`.
+
+## Prior goal history
+
 ## 2026-08-28 October 60-day extension
 
 Extend the reviewed editorial schedule from 2026-10-01 through 2026-10-27 at one article every 24 hours. Each of 27 articles must be an independently researched, people-first guide tied to an implemented SpinFlow tool or workflow. No shared prose skeleton or keyword-variation page may be approved.

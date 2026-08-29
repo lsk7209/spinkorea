@@ -1,4 +1,55 @@
-# Current handoff — 2026-08-11 KST
+# Current handoff — 2026-08-30 03:43 KST
+
+## User goal
+
+Audit and optimize the dashboard fleet with GitHub-first handling for sites changed on another computer. This checkout owns the focused SpinKorea SEO/SXO repair.
+
+## Exact current state
+
+- Runtime source commit `9db17d0e63ddfe7772d9437250fb0da1e90a2a99` is on remote `main`; same-SHA Hosting Cost Guard `33268913711` and Production deployment `6158893572` are successful. This documentation closeout follows that runtime commit.
+- The original `D:\web\spinkorea` checkout is clean but five commits behind and is deliberately untouched.
+- Fresh public mobile evidence confirms the 112x112 fixed SPIN control obscures the lunch preset card, while the roulette already contains its own SPIN action.
+- The focused source fix is live: the duplicate fixed SPIN control is hidden below `md`, and the sitemap generator emits only `loc` and truthful `lastmod`. Robots remains unchanged because it already allows named AI/search crawlers.
+
+## Completed work
+
+- GitHub/deployment baseline, repository/handoff review, generator ownership mapping, mobile geometry reproduction, focused implementation, full local gate, independent Luna/max review, exact push, same-SHA deployment monitoring, and final public desktop/mobile checks are complete.
+- Goal Harness acceptance, evidence, risks, plan, review, stop condition, and canonical project state are current.
+
+## Changed files or live systems
+
+- Runtime commit `9db17d0` changed `src/components/SpinButton.tsx`, `scripts/generate-assets.mjs`, `scripts/verify-growth-optimization.mjs`, `scripts/verify-search-scope.mjs`, and `public/sitemap.xml`.
+- Remote `main` and its Git-connected Production deployment changed. Goal Harness, `PROJECT_STATE.md`, and this handoff are the documentation closeout.
+- No database, content publishing, indexing submission, Google/Naver/AdSense/DNS account state, or direct Vercel CLI/API mutation occurred.
+
+## Fresh validation evidence
+
+- Public homepage: HTTP 200, apex self-canonical, one H1, no horizontal overflow.
+- Fixed button/card overlap: about 7,560 square pixels at 390x844.
+- Local gates: clean install; type/content/editorial/growth/search/build/full and production dependency audits all PASS; 635 routes rendered.
+- Local mobile: fixed SPIN is hidden and the in-wheel control produces a result. Local desktop: fixed SPIN remains visible and produces a result.
+- Sitemap: valid XML, 138 URL/loc/lastmod entries, zero changefreq/priority.
+- Independent review: source GO, BLOCKER 0, HIGH 0; documentation drift and the low sitemap-verifier gap were repaired.
+- Same-SHA release: Hosting Cost Guard `33268913711` success; Production `6158893572` success.
+- Final public: homepage 200/self-canonical/one H1/no overflow; sitemap and robots 200; unknown route 404; mobile in-wheel result works with fixed control hidden; desktop fixed control remains visible.
+
+## Side effects and rollback
+
+- Roll back the product change by reverting runtime commit `9db17d0`, pushing the focused revert, and confirming the resulting Git-connected deployment. No database or account rollback is required.
+
+## Blockers or risks
+
+- No in-scope blocker. Public API authentication/rate-limit/test risks remain explicitly outside this SEO/SXO release.
+
+## Single next step
+
+Return to `D:\web\multi-dashboard`, record SpinKorea as complete in the fleet ledger, and choose the next site from fresh dashboard evidence.
+
+## Deliberately not run or sent
+
+- No bulk content rewrite, scheduled publishing, GSC/IndexNow submission, DB write, direct Vercel CLI/API mutation, or Google/Naver/AdSense/DNS account change.
+
+# Prior handoff — 2026-08-11 KST
 
 ## User goal
 

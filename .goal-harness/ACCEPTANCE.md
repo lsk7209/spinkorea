@@ -1,5 +1,20 @@
 # ACCEPTANCE
 
+## 2026-08-30 focused SEO/SXO repair
+
+| Criterion | Status | Required evidence |
+|---|---|---|
+| Remote GitHub `main` is the implementation baseline | PASS | Clean isolated clone at `c2d0ff1`; original stale checkout remains untouched |
+| Mobile recommendation content is not obscured by the duplicate fixed SPIN control | PASS | At 390x844 the fixed control is `display:none`/0x0 and the in-wheel control successfully produces a result |
+| Desktop fixed SPIN behavior remains available | PASS | At 1440x1000 the 112x112 fixed control is visible and successfully produces a result |
+| Sitemap contains only supported discovery fields used by this project | PASS | Public/dist XML has 138 `url`, `loc`, and `lastmod` entries with zero `changefreq`/`priority` tags |
+| Search scope and robots policy are preserved | PASS | Search verifier 18/18; robots file unchanged |
+| Existing product/content behavior remains valid | PASS | Typecheck; content 650/50; editorial similarity 0.219; growth 25/25; 635-route build; full/prod audit 0 |
+| Release is exact and live | PASS | Runtime `9db17d0`; Action `33268913711` success; Production `6158893572` success; public source/browser checks pass |
+| Independent review finds no BLOCKER/HIGH regression | PASS | Luna/max read-only review: source GO, BLOCKER 0, HIGH 0; documentation inconsistencies repaired |
+
+## Prior acceptance history
+
 ## Feature Criteria
 
 | Criteria | Status | Evidence |
