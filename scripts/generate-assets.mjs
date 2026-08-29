@@ -577,14 +577,10 @@ function buildSitemap(posts) {
   const pageUrls = sitePages.map((page) => ({
     loc: `${SITE_ORIGIN}${page.path}`,
     lastmod: getPageLastmod(page, posts),
-    changefreq: page.changefreq,
-    priority: page.priority,
   }));
   const postUrls = posts.map((post) => ({
     loc: `${SITE_ORIGIN}/blog/${post.slug}`,
     lastmod: getPublishDate(post),
-    changefreq: "yearly",
-    priority: 0.7,
   }));
 
   const urls = [...pageUrls, ...postUrls]
@@ -592,8 +588,6 @@ function buildSitemap(posts) {
       (url) => `  <url>
     <loc>${url.loc}</loc>
     <lastmod>${url.lastmod}</lastmod>
-    <changefreq>${url.changefreq}</changefreq>
-    <priority>${url.priority}</priority>
   </url>`,
     )
     .join("\n");

@@ -53,6 +53,7 @@ assert(toolLinks.length >= 50, "tools hub exposes crawlable links to the tool di
 const analyticsSource = read("src/utils/analytics.ts");
 const toolLayoutSource = read("src/components/ToolLayout.tsx");
 const homeSource = read("src/pages/Home.tsx");
+const spinButtonSource = read("src/components/SpinButton.tsx");
 assert(analyticsSource.includes('trackEvent("page_view"'), "SPA page-view event is defined");
 assert(analyticsSource.includes('trackEvent("tool_result_viewed"'), "privacy-safe tool completion helper is defined");
 const completedToolSources = [
@@ -76,6 +77,7 @@ assert(trustedToolLayout.includes("기준·출처") && trustedToolLayout.include
 assert(read("scripts/generate-assets.mjs").includes("trustedToolReferences"), "trusted references are included in static tool guidance");
 assert(toolLayoutSource.includes("onInputCapture={handleToolInteraction}"), "tool input engagement is measured");
 assert(toolLayoutSource.includes("onClickCapture={handleToolInteraction}"), "tool click engagement is measured");
+assert(spinButtonSource.includes("hidden md:flex fixed"), "duplicate fixed SPIN control is hidden on mobile");
 assert(homeSource.includes("무료 룰렛 바로 돌리기"), "homepage has a direct primary CTA");
 assert(read("src/pages/NotFound.tsx").includes('robots="noindex,follow"'), "soft-404 screen is noindex");
 

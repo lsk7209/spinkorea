@@ -3,6 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const sitemap = fs.readFileSync(path.join(root, "dist", "sitemap.xml"), "utf8");
+const publicSitemap = fs.readFileSync(path.join(root, "public", "sitemap.xml"), "utf8");
 const rss = fs.readFileSync(path.join(root, "dist", "rss.xml"), "utf8");
 const llms = fs.readFileSync(path.join(root, "dist", "llms.txt"), "utf8");
 const generatedRoute = fs.readFileSync(path.join(root, "dist", "blog", "team-rotation-fairness", "index.html"), "utf8");
@@ -13,7 +14,24 @@ const blogPostSource = fs.readFileSync(path.join(root, "src", "pages", "BlogPost
 const metadata = JSON.parse(fs.readFileSync(path.join(root, "src", "data", "post-metadata.generated.json"), "utf8"));
 const editorialMeta = metadata.find((post) => post.slug === "random-number-exclusion");
 const noindex = /<meta name="robots" content="noindex,follow"\s*\/>/;
+
+function parseSitemapEntries(xml) {
+  return [...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>\s*<\/url>/g)]
+    .map((match) => ({ loc: match[1], lastmod: match[2] }));
+}
+
+const sitemapEntries = parseSitemapEntries(sitemap);
+const publicSitemapEntries = parseSitemapEntries(publicSitemap);
+const sitemapUrlCount = (sitemap.match(/<url>/g) ?? []).length;
+const sitemapLocCount = (sitemap.match(/<loc>/g) ?? []).length;
+const sitemapLastmodCount = (sitemap.match(/<lastmod>/g) ?? []).length;
+const sitemapLocs = sitemapEntries.map((entry) => entry.loc);
 const checks = [
+  ["public and dist sitemaps omit ignored changefreq and priority hints", !/<(?:changefreq|priority)>/.test(sitemap) && !/<(?:changefreq|priority)>/.test(publicSitemap)],
+  ["every sitemap URL retains a paired loc and lastmod", sitemapUrlCount > 0 && sitemapEntries.length === sitemapUrlCount && sitemapUrlCount === sitemapLocCount && sitemapUrlCount === sitemapLastmodCount],
+  ["public and dist sitemap URL metadata match", JSON.stringify(publicSitemapEntries) === JSON.stringify(sitemapEntries)],
+  ["sitemap URLs are unique canonical HTTPS URLs", new Set(sitemapLocs).size === sitemapLocs.length && sitemapLocs.every((loc) => loc.startsWith("https://spinkorea.kr/"))],
+  ["sitemap lastmod values use YYYY-MM-DD dates", sitemapEntries.every((entry) => /^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod) && !Number.isNaN(Date.parse(`${entry.lastmod}T00:00:00Z`)))],
   ["sitemap excludes generated posts", !sitemap.includes("/blog/team-rotation-fairness")],
   ["sitemap excludes legacy post", !sitemap.includes("/blog/fuel-economy-guide")],
   ["RSS excludes legacy post", !rss.includes("/blog/fuel-economy-guide")],
