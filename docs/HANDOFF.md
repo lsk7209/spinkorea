@@ -1,4 +1,16 @@
-# Current handoff — 2026-08-30 03:43 KST
+# Current handoff — 2026-09-07 browser-state recovery LOCAL
+
+- Goal: improve primary roulette reliability within the ten-site AdSense quality workflow; no approval prediction or account submission.
+- Clean primary fast-forwarded to origin/main9ca709f. Browser reproduced stored {v:1,items:'broken'} causing items.map TypeError and empty page. Independent Terra review confirmed URL array-member/history/result/recent-tools variants.
+- Local changes: src/utils/roulette-storage.ts (new), hooks/use-state-persistence.ts, hooks/useRecentTools.ts, utils/url-state.ts, scripts/verify-roulette-storage.mjs (new), this handoff. Invalid data ignored; storage access denial gracefully falls back; normal string candidates/version behavior preserved; malformed or future/expired result rejected.
+- Fresh evidence: ROULETTE_STORAGE_OK and RECENT_TOOLS_STORAGE_OK; type-check; full build676routes; search18assertions and growth checks pass. Browser same poisoned-state reload recovers; denied localStorage getter still allows actual spin/result. Browser calls real encode/decode for malformed string/null/object items and valid A/B roundtrip, all pass. First button locator SPIN timed out; corrected accessible label 룰렛 돌리기 succeeded.
+- Residual: unbounded encoded-URL decompression predates this patch; no compatibility-changing input cap added. Production-build browser and live proof still pending. No dependency/account/DB changes, commit/push or deployment.
+- Build touched three generated files (public/sitemap.xml and two metadata JSON files); git diff numstat shows no substantive changes, likely line endings. Do not include them blindly. .playwright-cli contains local browser evidence only, exclude from commit.
+- Production-build browser passed: malformed candidate/history/recent-tools/result storage recovers and spins; storage-denied getter also spins to result.390/1280 no overflow. Screenshots output/playwright/spinkorea-storage-{mobile,desktop}.png. Prior dev server/browser closed; release preview69311 port3242 and browser adsense-spin-release owned by this task.
+- Independent Terra final review confirmed six-file allowlist; three generated files are EOL-only and excluded. New regression is a manual Node24 release check, not an installed CI gate; CI Node22 execution not directly run.
+- Risk notice: normal Git push of these six files only under confirmed site-fix authority. Git-connected production changes, no DB/account/Vercel mutation. Revert the focused commit for rollback; no force push. Next: push and exact-SHA/live proof.
+
+# Prior handoff — 2026-08-30 03:43 KST
 
 ## User goal
 

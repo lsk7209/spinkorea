@@ -5,11 +5,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { RouletteState, LastResult } from '@/types';
 import { getStateFromUrl, updateUrlWithState } from '@/utils/url-state';
+import { isRouletteState, readStoredJson, parseStoredHistory, parseStoredResult } from '@/utils/roulette-storage';
 
 const LAST_STATE_KEY = 'spinflow:lastState';
 const LAST_RESULT_KEY = 'spinflow:lastResult';
 const HISTORY_KEY = 'spinflow:history';
-const RESULT_EXPIRY_MINUTES = 5;
 const HISTORY_MAX = 10;
 
 interface StatePersistenceOptions {
@@ -40,45 +40,21 @@ export function useStatePersistence(initialItems: string[] = [], options: StateP
     if (urlState && urlState.items.length > 0) {
       setItems(urlState.items);
     } else if (!preferInitialOnFirstLoad) {
-      const savedState = localStorage.getItem(LAST_STATE_KEY);
-      if (savedState) {
-        try {
-          const state = JSON.parse(savedState) as RouletteState;
-          if (state.items && state.items.length > 0) {
-            setItems(state.items);
-          }
-        } catch (error) {
-          console.error('Failed to load saved state:', error);
-        }
+      const state = readStoredJson(() => localStorage.getItem(LAST_STATE_KEY));
+      if (isRouletteState(state) && state.items.length > 0) {
+        setItems(state.items);
       }
     }
 
     // 히스토리 로드
-    const savedHistory = localStorage.getItem(HISTORY_KEY);
-    if (savedHistory) {
-      try {
-        const h = JSON.parse(savedHistory) as string[];
-        if (Array.isArray(h)) setHistory(h);
-      } catch { /* ignore */ }
-    }
+    setHistory(parseStoredHistory(readStoredJson(() => localStorage.getItem(HISTORY_KEY))));
 
     // 최근 결과 로드
-    const savedResult = localStorage.getItem(LAST_RESULT_KEY);
-    if (savedResult) {
-      try {
-        const result = JSON.parse(savedResult) as LastResult;
-        const resultTime = new Date(result.time).getTime();
-        const now = Date.now();
-        const minutesAgo = Math.floor((now - resultTime) / (1000 * 60));
-        
-        if (minutesAgo < RESULT_EXPIRY_MINUTES) {
-          setLastResult(result);
-        } else {
-          localStorage.removeItem(LAST_RESULT_KEY);
-        }
-      } catch (error) {
-        console.error('Failed to load last result:', error);
-      }
+    const savedResult = readStoredJson(() => localStorage.getItem(LAST_RESULT_KEY));
+    const restoredResult = parseStoredResult(savedResult);
+    setLastResult(restoredResult);
+    if (savedResult !== null && !restoredResult) {
+      try { localStorage.removeItem(LAST_RESULT_KEY); } catch { /* Storage is optional. */ }
     }
   }, []);
 

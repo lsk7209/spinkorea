@@ -5,6 +5,7 @@
 
 import * as LZString from 'lz-string';
 import type { RouletteState } from '@/types';
+import { isRouletteState } from './roulette-storage';
 
 /**
  * 상태를 URL 쿼리 파라미터로 인코딩
@@ -37,7 +38,7 @@ export function decodeState(encoded: string): RouletteState | null {
     const state = JSON.parse(decompressed) as RouletteState;
     
     // 버전 및 항목 검증
-    if (typeof state.v !== 'number' || !Array.isArray(state.items)) {
+    if (!isRouletteState(state)) {
       return null;
     }
     
