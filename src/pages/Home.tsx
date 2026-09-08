@@ -118,15 +118,21 @@ export default function Home({
 
     const handleUpdateItems = useCallback(
         (newItems: string[]) => {
+            if (isSpinning) {
+                return false;
+            }
             updateItems(newItems);
             setShowResult(false);
+            return true;
         },
-        [updateItems]
+        [isSpinning, updateItems]
     );
 
     const applyPreset = useCallback(
         (presetItems: string[]) => {
-            handleUpdateItems(presetItems);
+            if (!handleUpdateItems(presetItems)) {
+                return;
+            }
             rouletteSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         },
         [handleUpdateItems]
@@ -170,7 +176,9 @@ export default function Home({
             presetId && TEMPLATES.find((t) => t.id === presetId)?.items;
 
         if (presetItems && presetItems.length > 0) {
-            handleUpdateItems(presetItems);
+            if (!handleUpdateItems(presetItems)) {
+                return;
+            }
             lastAppliedSlugRef.current = slug;
             // Replace URL back to /spinflow to avoid further navigations / bookmarking deep slug
             navigate('/spinflow', { replace: true });
@@ -226,7 +234,7 @@ export default function Home({
                 </div>
             )}
 
-            <RecommendedPresets onSelect={applyPreset} fallbackItems={initialItems} />
+            <RecommendedPresets onSelect={applyPreset} fallbackItems={initialItems} isSpinning={isSpinning} />
 
             {/* 메인 콘텐츠 */}
             <main
@@ -247,7 +255,7 @@ export default function Home({
                 {/* 데스크톱: 항목 편집 패널 (우측) */}
                 <div className="hidden md:block w-full max-w-md">
                     <div className="rounded-3xl bg-slate-950 border border-slate-800 p-6 shadow-xl">
-                        <ItemEditor items={items} onUpdate={handleUpdateItems} />
+                        <ItemEditor items={items} onUpdate={handleUpdateItems} isSpinning={isSpinning} />
                         {urlWarning && (
                             <div className="mt-4 p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-xl">
                                 <p className="text-sm text-yellow-300">
@@ -281,14 +289,16 @@ export default function Home({
                         <button
                             type="button"
                             onClick={() => setIsEditorModalOpen(true)}
-                            className="btn-secondary w-full backdrop-blur-md bg-slate-900 border-slate-700 hover:bg-slate-800 group"
+                            disabled={isSpinning}
+                            className="btn-secondary w-full backdrop-blur-md bg-slate-900 border-slate-700 hover:bg-slate-800 group disabled:cursor-not-allowed disabled:opacity-50"
                         >
                             <span className="group-hover:scale-110 transition-transform">✏️</span> 항목 수정
                         </button>
                         <button
                             type="button"
                             onClick={() => setIsTemplateModalOpen(true)}
-                            className="bg-slate-900 border border-slate-700 rounded-2xl text-white font-bold hover:border-cyan-500 transition-all flex items-center justify-center gap-2 hover:-translate-y-1 active:scale-95 shadow-lg shadow-black/20"
+                            disabled={isSpinning}
+                            className="bg-slate-900 border border-slate-700 rounded-2xl text-white font-bold hover:border-cyan-500 transition-all flex items-center justify-center gap-2 hover:-translate-y-1 active:scale-95 shadow-lg shadow-black/20 disabled:cursor-not-allowed disabled:opacity-50"
                         >
                             <LayoutGrid size={20} className="text-aurora-secondary" />
                             템플릿

@@ -13,6 +13,7 @@ import { RotateCcw, Calculator, AlignJustify, CheckCircle2 } from 'lucide-react'
 interface ItemEditorProps {
   items: string[];
   onUpdate: (items: string[]) => void;
+  isSpinning?: boolean;
 }
 
 const PRESETS = [
@@ -24,7 +25,7 @@ const PRESETS = [
   { label: '메뉴 정하기', icon: <AlignJustify size={16} />, items: ['한식', '중식', '일식', '양식', '분식', '치킨', '피자'] },
 ];
 
-export default function ItemEditor({ items, onUpdate }: ItemEditorProps) {
+export default function ItemEditor({ items, onUpdate, isSpinning = false }: ItemEditorProps) {
   const [text, setText] = useState(items.join('\n'));
   const [errors, setErrors] = useState<string[]>([]);
 
@@ -64,7 +65,8 @@ export default function ItemEditor({ items, onUpdate }: ItemEditorProps) {
             <button
               key={preset.label}
               onClick={() => handlePreset(preset.items)}
-              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neon-primary/50 rounded-lg text-sm text-gray-300 hover:text-white transition-all"
+              disabled={isSpinning}
+              className="flex items-center justify-center gap-2 px-3 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neon-primary/50 rounded-lg text-sm text-gray-300 hover:text-white transition-all disabled:cursor-not-allowed disabled:opacity-50"
               type="button"
             >
               {preset.icon}
@@ -82,6 +84,7 @@ export default function ItemEditor({ items, onUpdate }: ItemEditorProps) {
           id="item-editor"
           value={text}
           onChange={handleChange}
+          disabled={isSpinning}
           rows={10}
           className="
             w-full px-4 py-3
@@ -91,7 +94,7 @@ export default function ItemEditor({ items, onUpdate }: ItemEditorProps) {
             resize-y
             transition-all duration-200
             text-base leading-relaxed font-medium
-            shadow-inner
+            shadow-inner disabled:cursor-not-allowed disabled:opacity-50
             "
           placeholder="항목1&#10;항목2&#10;항목3"
         />

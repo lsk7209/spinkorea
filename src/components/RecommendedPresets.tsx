@@ -4,6 +4,7 @@ import { TEMPLATES } from '@/data/templates';
 interface RecommendedPresetsProps {
     onSelect: (items: string[]) => void;
     fallbackItems: string[];
+    isSpinning?: boolean;
 }
 
 const PRESET_CONFIG = [
@@ -33,7 +34,7 @@ const PRESET_CONFIG = [
     },
 ];
 
-export default function RecommendedPresets({ onSelect, fallbackItems }: RecommendedPresetsProps) {
+export default function RecommendedPresets({ onSelect, fallbackItems, isSpinning = false }: RecommendedPresetsProps) {
     const presets = useMemo(() => {
         return PRESET_CONFIG.map((preset) => {
             if (preset.id === 'default') {
@@ -45,7 +46,7 @@ export default function RecommendedPresets({ onSelect, fallbackItems }: Recommen
     }, [fallbackItems]);
 
     return (
-        <section className="w-full max-w-7xl mx-auto px-4 py-8">
+        <section className="w-full max-w-7xl mx-auto px-4 py-8" aria-busy={isSpinning}>
             <div className="flex items-center justify-between mb-4">
                 <div>
                     <p className="text-xs uppercase tracking-[0.24em] text-cyan-700 font-semibold">Recommended presets</p>
@@ -58,12 +59,13 @@ export default function RecommendedPresets({ onSelect, fallbackItems }: Recommen
                     <button
                         key={preset.id}
                         type="button"
+                        disabled={isSpinning}
                         onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
                             onSelect([...preset.items]);
                         }}
-                        className="group text-left bg-white border border-slate-200 hover:border-cyan-500 rounded-2xl p-4 transition-all hover:-translate-y-1 hover:shadow-lg flex flex-col gap-2"
+                        className="group text-left bg-white border border-slate-200 hover:border-cyan-500 rounded-2xl p-4 transition-all hover:-translate-y-1 hover:shadow-lg flex flex-col gap-2 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0"
                     >
                         <span className="text-2xl drop-shadow">{preset.icon}</span>
                         <div className="flex-1">

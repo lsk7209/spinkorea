@@ -1,3 +1,16 @@
+# Current handoff — 2026-09-08 spin-consistency repair LOCAL
+
+- Goal: improve SpinKorea reliability for the active AdSense-readiness fleet without predicting approval or changing the AdSense account.
+- Source gate: isolated worktree branch `codex/spinkorea-spin-consistency-20260908` is based on `origin/main` commit `c054de1354a4c8789916ce1e944328edcdbe6379`; the primary dirty checkout was preserved.
+- Defect and repair: the five-second spin captured a result from the starting item list while presets/editors could replace the rendered list mid-spin. `Home` now rejects item mutations while spinning, and desktop/mobile edit and preset controls expose the same lock.
+- Intended files: `src/pages/Home.tsx`, `src/components/ItemEditor.tsx`, `src/components/RecommendedPresets.tsx`, `scripts/verify-spin-consistency.mjs`, and this handoff. Generated build outputs and `.playwright-cli` evidence are excluded from release.
+- Fresh validation: regression verifier PASS (including central fail-closed and every mutation surface), TypeScript PASS, content validation PASS, full build PASS with 677 routes, growth 25 assertions PASS, search-scope 18 assertions PASS, and `git diff --check` PASS.
+- Actual browser proof: desktop stayed at 8 items during the spin and accepted the 45-item lotto preset after settling; mobile edit/template buttons were disabled during the spin, opened no dialog during the lock, and opened normally afterward. Mobile viewport 390x844 had no horizontal overflow.
+- Review: independent review GO with no material blocker. Local AdSense request returned 403 in preview and was not treated as a production defect. Current audit reports one low and one high vulnerability; the production high is the pre-existing `browserslist` advisory and is outside this focused patch.
+- Side effects: no production, database, content, account, submission, indexing, dependency, or direct Vercel mutation yet. The owned preview listener on port 3244 was stopped; unrelated listener 3243/PID 7908 was preserved.
+- Rollback: revert the eventual focused commit; no data/account rollback is required.
+- Single next step: exact-file commit and normal push to `main`, then confirm the same-SHA Git-connected deployment and repeat public/browser checks.
+
 # Current handoff — 2026-09-07 browser-state recovery LOCAL
 
 - Goal: improve primary roulette reliability within the ten-site AdSense quality workflow; no approval prediction or account submission.
