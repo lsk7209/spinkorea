@@ -303,8 +303,10 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
             보안 레이어가 계정을 보호합니다.
           </li>
           <li>
-            <strong>정기적 변경:</strong> 중요한 계정(은행, 이메일)은
-            3~6개월마다 변경하세요.
+            <strong>유출 시에만 변경:</strong> 미국 NIST(국립표준기술연구소)의
+            최신 지침은 유출 정황이 없다면 비밀번호를 주기적으로 강제 변경할
+            필요가 없다고 권고합니다. 대신 계정마다 다른 비밀번호를 쓰고, 유출이
+            확인되면 즉시 변경하세요.
           </li>
           <li>
             <strong>유출 확인:</strong> haveibeenpwned.com 같은 사이트에서
@@ -1394,8 +1396,10 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
             인증으로 보호할 수 있습니다.
           </li>
           <li>
-            <strong>정기적 변경:</strong> 중요 계정은 3~6개월마다 비밀번호를
-            변경하세요.
+            <strong>유출 시에만 변경:</strong> NIST(미국 국립표준기술연구소)
+            지침은 유출 정황이 없는 비밀번호를 정기적으로 강제 변경하는 것을
+            권장하지 않습니다. 계정별로 다른 비밀번호를 사용하고, 유출이
+            확인되면 그때 바꾸는 방식이 더 효과적입니다.
           </li>
           <li>
             <strong>유출 확인:</strong> haveibeenpwned.com에서 내 이메일이
@@ -5015,9 +5019,12 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
             ],
             [
               "우울·불안 감소",
-              "30분 유산소 운동이 항우울제와 동등한 효과 (Duke 대학 연구)",
+              "16주간 주 3회 30분 유산소 운동을 한 중년 이후 우울증 환자군이 항우울제 복용군과 비슷한 수준으로 증상이 개선 (Duke대 SMILE 연구, 특정 대상·기간 조건)",
             ],
-            ["창의력 향상", "걷기 중 발산적 사고 81% 증가 (스탠퍼드 연구)"],
+            [
+              "창의력 향상",
+              "걷는 동안 창의성 과제를 수행한 참가자의 81%가 앉아 있을 때보다 나은 결과를 보임 (스탠퍼드대 Oppezzo·Schwartz 연구)",
+            ],
           ].map(([t, d], i) => (
             <div key={i} className="bg-white/5 p-4 rounded-lg">
               <p className="font-bold text-neon-primary mb-1">{t}</p>
@@ -6449,7 +6456,10 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
               "GitHub Copilot",
               "반복 코드 자동완성. 아낀 시간을 아키텍처 설계에 투자",
             ],
-            ["Notion AI", "회의록 요약, 문서 구조화. 정보 관리 시간 70% 절감"],
+            [
+              "Notion AI",
+              "회의록 요약, 문서 구조화. 정리에 드는 수작업 시간을 줄이는 데 도움",
+            ],
             [
               "Midjourney/DALL-E",
               "레퍼런스 이미지 빠른 생성. 디자이너와 협업 속도 향상",
@@ -6719,6 +6729,4 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
   },
 ];
 
-export const BLOG_POSTS: BlogPost[] = [
-  ...CURATED_BLOG_POSTS,
-];
+export const BLOG_POSTS: BlogPost[] = [...CURATED_BLOG_POSTS];
