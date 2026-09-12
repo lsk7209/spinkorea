@@ -15,6 +15,16 @@ const metadata = JSON.parse(fs.readFileSync(path.join(root, "src", "data", "post
 const editorialMeta = metadata.find((post) => post.slug === "random-number-exclusion");
 const noindex = /<meta name="robots" content="noindex,follow"\s*\/>/;
 
+// Pick a still-future editorial post dynamically instead of a hardcoded slug,
+// so this check does not silently go stale once real time passes a fixed date.
+const now = new Date();
+const futureEditorial = metadata
+  .filter((post) => post.source === "editorial" && post.publishAt && new Date(post.publishAt) > now)
+  .sort((a, b) => new Date(a.publishAt) - new Date(b.publishAt))[0];
+if (!futureEditorial) {
+  throw new Error("No future-dated editorial post found in post-metadata.generated.json to verify pre-publish exclusion.");
+}
+
 function parseSitemapEntries(xml) {
   return [...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>\s*<\/url>/g)]
     .map((match) => ({ loc: match[1], lastmod: match[2] }));
@@ -44,7 +54,7 @@ const checks = [
   ["approved editorial metadata uses editorial source", editorialMeta?.source === "editorial"],
   ["static generator indexes curated and editorial sources", generateAssetsSource.includes('post.source === "curated" || post.source === "editorial"')],
   ["runtime robots only excludes generated sources", blogPostSource.includes('post.source === "generated" ? "noindex,follow" : "index,follow"')],
-  ["future editorial remains absent before publish time", !sitemap.includes("/blog/random-number-exclusion")],
+  ["future editorial remains absent before publish time", !sitemap.includes(`/blog/${futureEditorial.slug}`)],
 ];
 for (const [label, passed] of checks) {
   if (!passed) throw new Error(`Search scope check failed: ${label}`);
