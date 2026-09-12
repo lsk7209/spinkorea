@@ -93,8 +93,8 @@ export default function CompoundInterestCalculator() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-sm text-gray-400 mb-1">원금 (원)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="compound-interest-calculator-1">원금 (원)</label>
+              <input id="compound-interest-calculator-1"
                 type="number"
                 value={principal}
                 onChange={(e) => setPrincipal(e.target.value)}
@@ -102,8 +102,8 @@ export default function CompoundInterestCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">연 이자율 (%)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="compound-interest-calculator-2">연 이자율 (%)</label>
+              <input id="compound-interest-calculator-2"
                 type="number"
                 step="0.1"
                 value={rate}
@@ -112,8 +112,8 @@ export default function CompoundInterestCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">투자 기간 (년)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="compound-interest-calculator-3">투자 기간 (년)</label>
+              <input id="compound-interest-calculator-3"
                 type="number"
                 value={years}
                 onChange={(e) => setYears(e.target.value)}
@@ -121,8 +121,8 @@ export default function CompoundInterestCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">매월 추가 납입 (원)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="compound-interest-calculator-4">매월 추가 납입 (원)</label>
+              <input id="compound-interest-calculator-4"
                 type="number"
                 value={monthly}
                 onChange={(e) => setMonthly(e.target.value)}

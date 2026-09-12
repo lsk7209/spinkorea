@@ -147,11 +147,11 @@ export default function AgeCalculator() {
     >
       <div className="flex flex-col gap-8 max-w-2xl mx-auto">
         <div className="bg-white/5 border border-white/10 p-6 rounded-xl text-center">
-          <label className="text-gray-300 font-bold mb-4 block flex items-center justify-center gap-2">
+          <label className="text-gray-300 font-bold mb-4 block flex items-center justify-center gap-2" htmlFor="age-calculator-1">
             <Calendar size={20} className="text-neon-primary" /> 생년월일을
             입력해주세요
           </label>
-          <input
+          <input id="age-calculator-1"
             type="date"
             value={birthDate}
             onChange={(e) => setBirthDate(e.target.value)}

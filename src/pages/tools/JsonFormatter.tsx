@@ -26,7 +26,11 @@ export default function JsonFormatter() {
       trackToolCompleted("/tools/json-formatter", "formatted_json");
       toast.success("포맷팅이 완료되었습니다.");
     } catch (error) {
-      setError(error instanceof Error ? error.message : "JSON 파싱 오류가 발생했습니다.");
+      setError(
+        error instanceof Error
+          ? error.message
+          : "JSON 파싱 오류가 발생했습니다.",
+      );
       toast.error("유효하지 않은 JSON 형식입니다.");
     }
   };
@@ -40,7 +44,11 @@ export default function JsonFormatter() {
       trackToolCompleted("/tools/json-formatter", "minified_json");
       toast.success("압축(Minify)이 완료되었습니다.");
     } catch (error) {
-      setError(error instanceof Error ? error.message : "JSON 파싱 오류가 발생했습니다.");
+      setError(
+        error instanceof Error
+          ? error.message
+          : "JSON 파싱 오류가 발생했습니다.",
+      );
       toast.error("유효하지 않은 JSON 형식입니다.");
     }
   };
@@ -149,10 +157,10 @@ export default function JsonFormatter() {
         <div className="grid md:grid-cols-2 gap-4 flex-1 min-h-[500px]">
           {/* Input Area */}
           <div className="flex flex-col gap-2">
-            <label className="text-gray-400 text-sm font-medium ml-1 flex items-center gap-2">
+            <label className="text-gray-400 text-sm font-medium ml-1 flex items-center gap-2" htmlFor="json-formatter-1">
               <Braces size={14} /> 입력 (Input)
             </label>
-            <textarea
+            <textarea id="json-formatter-1"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="JSON 데이터를 여기에 입력하세요..."
@@ -173,7 +181,7 @@ export default function JsonFormatter() {
 
           {/* Output Area */}
           <div className="flex flex-col gap-2 relative group">
-            <label className="text-gray-400 text-sm font-medium ml-1 flex items-center justify-between">
+            <label className="text-gray-400 text-sm font-medium ml-1 flex items-center justify-between" htmlFor="json-formatter-2">
               <span className="flex items-center gap-2">
                 <CheckCircle size={14} className="text-green-500" /> 결과
                 (Result)
@@ -184,7 +192,7 @@ export default function JsonFormatter() {
                 </span>
               )}
             </label>
-            <textarea
+            <textarea id="json-formatter-2"
               value={output}
               readOnly
               placeholder="변환된 결과가 여기에 표시됩니다."

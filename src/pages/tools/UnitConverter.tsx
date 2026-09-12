@@ -165,10 +165,10 @@ export default function UnitConverter() {
         <div className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl flex flex-col md:flex-row items-center gap-6 relative">
           {/* FROM */}
           <div className="w-full flex-1">
-            <label className="text-gray-400 text-sm mb-2 block">
+            <label className="text-gray-400 text-sm mb-2 block" htmlFor="unit-converter-1">
               변환할 값
             </label>
-            <select
+            <select id="unit-converter-1"
               value={fromUnit}
               onChange={(e) => setFromUnit(e.target.value)}
               className="w-full bg-black/40 border border-white/10 rounded-t-lg px-4 py-2 text-gray-300 focus:outline-none mb-1"
@@ -211,8 +211,8 @@ export default function UnitConverter() {
 
           {/* TO */}
           <div className="w-full flex-1">
-            <label className="text-gray-400 text-sm mb-2 block">결과 값</label>
-            <select
+            <label className="text-gray-400 text-sm mb-2 block" htmlFor="unit-converter-2">결과 값</label>
+            <select id="unit-converter-2"
               value={toUnit}
               onChange={(e) => setToUnit(e.target.value)}
               className="w-full bg-black/40 border border-white/10 rounded-t-lg px-4 py-2 text-gray-300 focus:outline-none mb-1"

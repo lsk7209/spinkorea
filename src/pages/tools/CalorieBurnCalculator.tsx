@@ -63,8 +63,8 @@ export default function CalorieBurnCalculator() {
       <div className="space-y-6 max-w-lg mx-auto">
         {/* 체중 */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">체중 (kg)</label>
-          <input
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="calorie-burn-calculator-1">체중 (kg)</label>
+          <input id="calorie-burn-calculator-1"
             type="number"
             min={1}
             max={300}
@@ -95,8 +95,8 @@ export default function CalorieBurnCalculator() {
 
         {/* 운동 시간 */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">운동 시간 (분)</label>
-          <input
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="calorie-burn-calculator-2">운동 시간 (분)</label>
+          <input id="calorie-burn-calculator-2"
             type="number"
             min={1}
             placeholder="e.g. 30"

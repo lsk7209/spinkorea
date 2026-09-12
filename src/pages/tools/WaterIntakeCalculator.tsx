@@ -56,8 +56,8 @@ export default function WaterIntakeCalculator() {
       <div className="space-y-6 max-w-lg mx-auto">
         {/* 체중 */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">체중 (kg)</label>
-          <input
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="water-intake-calculator-1">체중 (kg)</label>
+          <input id="water-intake-calculator-1"
             type="number"
             min={1}
             max={300}
@@ -88,8 +88,8 @@ export default function WaterIntakeCalculator() {
 
         {/* 운동 시간 */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">오늘 운동 시간 (분)</label>
-          <input
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="water-intake-calculator-2">오늘 운동 시간 (분)</label>
+          <input id="water-intake-calculator-2"
             type="number"
             min={0}
             placeholder="0"

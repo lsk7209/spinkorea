@@ -129,7 +129,7 @@ export default function UriEncoder() {
 
           {/* Input Area */}
           <div className="flex flex-col gap-2">
-            <label className="text-gray-400 text-sm font-medium ml-1 flex justify-between">
+            <label className="text-gray-400 text-sm font-medium ml-1 flex justify-between" htmlFor="uri-encoder-1">
               <span>입력 (Input)</span>
               <button
                 onClick={() => setInput("")}
@@ -138,7 +138,7 @@ export default function UriEncoder() {
                 <Trash2 size={12} /> 지우기
               </button>
             </label>
-            <textarea
+            <textarea id="uri-encoder-1"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={
@@ -152,10 +152,10 @@ export default function UriEncoder() {
 
           {/* Output Area */}
           <div className="flex flex-col gap-2 relative">
-            <label className="text-gray-400 text-sm font-medium ml-1">
+            <label className="text-gray-400 text-sm font-medium ml-1" htmlFor="uri-encoder-2">
               결과 (Result)
             </label>
-            <textarea
+            <textarea id="uri-encoder-2"
               value={error || output}
               readOnly
               placeholder="결과가 여기에 표시됩니다."

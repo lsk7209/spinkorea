@@ -119,10 +119,10 @@ export default function StatisticsCalculator() {
 
         {/* 숫자 입력 */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="statistics-calculator-1">
             숫자 입력 (쉼표·공백·줄바꿈으로 구분)
           </label>
-          <textarea
+          <textarea id="statistics-calculator-1"
             rows={5}
             placeholder={"85, 92, 78, 95, 88\n또는 줄바꿈으로 입력"}
             value={input}

@@ -12,33 +12,81 @@ function navyBodyFat(
   height: number,
   waist: number,
   neck: number,
-  hip: number
+  hip: number,
 ): number {
   if (height <= 0 || waist <= 0 || neck <= 0) return 0;
   if (gender === "male") {
     return (
-      495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(height)) - 450
+      495 /
+        (1.0324 -
+          0.19077 * Math.log10(waist - neck) +
+          0.15456 * Math.log10(height)) -
+      450
     );
   } else {
     if (hip <= 0) return 0;
     return (
-      495 / (1.29579 - 0.35004 * Math.log10(waist + hip - neck) + 0.22100 * Math.log10(height)) - 450
+      495 /
+        (1.29579 -
+          0.35004 * Math.log10(waist + hip - neck) +
+          0.221 * Math.log10(height)) -
+      450
     );
   }
 }
 
 function getCategory(bf: number, gender: "male" | "female") {
   if (gender === "male") {
-    if (bf < 6) return { label: "필수 지방", color: "text-blue-400", bg: "bg-blue-400/10" };
-    if (bf < 14) return { label: "운동선수", color: "text-green-400", bg: "bg-green-400/10" };
-    if (bf < 18) return { label: "건강 체형", color: "text-cyan-400", bg: "bg-cyan-400/10" };
-    if (bf < 25) return { label: "보통", color: "text-yellow-400", bg: "bg-yellow-400/10" };
+    if (bf < 6)
+      return {
+        label: "필수 지방",
+        color: "text-blue-400",
+        bg: "bg-blue-400/10",
+      };
+    if (bf < 14)
+      return {
+        label: "운동선수",
+        color: "text-green-400",
+        bg: "bg-green-400/10",
+      };
+    if (bf < 18)
+      return {
+        label: "건강 체형",
+        color: "text-cyan-400",
+        bg: "bg-cyan-400/10",
+      };
+    if (bf < 25)
+      return {
+        label: "보통",
+        color: "text-yellow-400",
+        bg: "bg-yellow-400/10",
+      };
     return { label: "비만", color: "text-red-400", bg: "bg-red-400/10" };
   } else {
-    if (bf < 14) return { label: "필수 지방", color: "text-blue-400", bg: "bg-blue-400/10" };
-    if (bf < 21) return { label: "운동선수", color: "text-green-400", bg: "bg-green-400/10" };
-    if (bf < 25) return { label: "건강 체형", color: "text-cyan-400", bg: "bg-cyan-400/10" };
-    if (bf < 32) return { label: "보통", color: "text-yellow-400", bg: "bg-yellow-400/10" };
+    if (bf < 14)
+      return {
+        label: "필수 지방",
+        color: "text-blue-400",
+        bg: "bg-blue-400/10",
+      };
+    if (bf < 21)
+      return {
+        label: "운동선수",
+        color: "text-green-400",
+        bg: "bg-green-400/10",
+      };
+    if (bf < 25)
+      return {
+        label: "건강 체형",
+        color: "text-cyan-400",
+        bg: "bg-cyan-400/10",
+      };
+    if (bf < 32)
+      return {
+        label: "보통",
+        color: "text-yellow-400",
+        bg: "bg-yellow-400/10",
+      };
     return { label: "비만", color: "text-red-400", bg: "bg-red-400/10" };
   }
 }
@@ -100,21 +148,36 @@ export default function BodyFatCalculator() {
       faqs={[
         {
           question: "BMI와 체지방률의 차이는?",
-          answer: "BMI는 키·몸무게만으로 계산해 근육량을 반영하지 못합니다. 체지방률은 실제 지방 비율을 측정해 같은 몸무게라도 근육량에 따라 체성분이 다름을 보여줍니다.",
+          answer:
+            "BMI는 키·몸무게만으로 계산해 근육량을 반영하지 못합니다. 체지방률은 실제 지방 비율을 측정해 같은 몸무게라도 근육량에 따라 체성분이 다름을 보여줍니다.",
         },
         {
           question: "Navy Method란?",
-          answer: "미해군이 개발한 체지방 추정 공식으로, 신체 둘레 측정만으로 체지방률을 계산합니다. 정밀도는 DEXA보다 낮지만 별도 장비 없이 간편하게 측정할 수 있습니다.",
+          answer:
+            "미해군이 개발한 체지방 추정 공식으로, 신체 둘레 측정만으로 체지방률을 계산합니다. 정밀도는 DEXA보다 낮지만 별도 장비 없이 간편하게 측정할 수 있습니다.",
         },
         {
           question: "이상적인 체지방률은?",
-          answer: "남성은 14~17%(건강 체형), 여성은 21~24%가 건강 체형 범위입니다. 운동선수는 더 낮고, 나이가 들수록 자연스럽게 높아집니다.",
+          answer:
+            "남성은 14~17%(건강 체형), 여성은 21~24%가 건강 체형 범위입니다. 운동선수는 더 낮고, 나이가 들수록 자연스럽게 높아집니다.",
         },
       ]}
       relatedTools={[
-        { name: "BMI 계산기", path: "/tools/bmi-calculator", description: "체질량지수 측정" },
-        { name: "칼로리 계산기", path: "/tools/calorie-calculator", description: "기초대사량·일일 권장 칼로리" },
-        { name: "단위 변환기", path: "/tools/unit-converter", description: "길이·무게 단위 변환" },
+        {
+          name: "BMI 계산기",
+          path: "/tools/bmi-calculator",
+          description: "체질량지수 측정",
+        },
+        {
+          name: "칼로리 계산기",
+          path: "/tools/calorie-calculator",
+          description: "기초대사량·일일 권장 칼로리",
+        },
+        {
+          name: "단위 변환기",
+          path: "/tools/unit-converter",
+          description: "길이·무게 단위 변환",
+        },
       ]}
     >
       <div className="flex flex-col gap-8">
@@ -146,11 +209,19 @@ export default function BodyFatCalculator() {
               { label: "몸무게 (kg)", value: weight, set: setWeight },
               { label: "허리 둘레 (cm)", value: waist, set: setWaist },
               { label: "목 둘레 (cm)", value: neck, set: setNeck },
-              ...(gender === "female" ? [{ label: "엉덩이 둘레 (cm)", value: hip, set: setHip }] : []),
-            ].map(({ label, value, set }) => (
+              ...(gender === "female"
+                ? [{ label: "엉덩이 둘레 (cm)", value: hip, set: setHip }]
+                : []),
+            ].map(({ label, value, set }, idx) => (
               <div key={label}>
-                <label className="block text-sm text-gray-400 mb-1">{label}</label>
+                <label
+                  className="block text-sm text-gray-400 mb-1"
+                  htmlFor={`body-fat-calculator-${idx}`}
+                >
+                  {label}
+                </label>
                 <input
+                  id={`body-fat-calculator-${idx}`}
                   type="number"
                   value={value}
                   onChange={(e) => set(e.target.value)}
@@ -166,11 +237,26 @@ export default function BodyFatCalculator() {
           <>
             <div className="grid grid-cols-3 gap-4">
               {[
-                { label: "체지방률", value: `${fmt(bf)}%`, color: "text-neon-primary" },
-                { label: "체지방 질량", value: `${fmt(fatMass)} kg`, color: "text-red-400" },
-                { label: "제지방 질량", value: `${fmt(leanMass)} kg`, color: "text-green-400" },
+                {
+                  label: "체지방률",
+                  value: `${fmt(bf)}%`,
+                  color: "text-neon-primary",
+                },
+                {
+                  label: "체지방 질량",
+                  value: `${fmt(fatMass)} kg`,
+                  color: "text-red-400",
+                },
+                {
+                  label: "제지방 질량",
+                  value: `${fmt(leanMass)} kg`,
+                  color: "text-green-400",
+                },
               ].map(({ label, value, color }) => (
-                <div key={label} className="bg-black/30 rounded-xl p-4 text-center">
+                <div
+                  key={label}
+                  className="bg-black/30 rounded-xl p-4 text-center"
+                >
                   <p className="text-xs text-gray-400 mb-1">{label}</p>
                   <p className={`text-xl font-black ${color}`}>{value}</p>
                 </div>
@@ -179,7 +265,9 @@ export default function BodyFatCalculator() {
 
             <div className="bg-white/5 border border-white/10 p-6 rounded-xl text-center">
               <p className="text-sm text-gray-400 mb-2">체성분 분류</p>
-              <span className={`text-2xl font-black px-4 py-2 rounded-xl ${category?.bg} ${category?.color}`}>
+              <span
+                className={`text-2xl font-black px-4 py-2 rounded-xl ${category?.bg} ${category?.color}`}
+              >
                 {category?.label}
               </span>
             </div>

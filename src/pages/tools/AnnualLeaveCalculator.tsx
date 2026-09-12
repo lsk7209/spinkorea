@@ -91,8 +91,8 @@ export default function AnnualLeaveCalculator() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm text-gray-400 mb-1">입사일</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="annual-leave-calculator-1">입사일</label>
+              <input id="annual-leave-calculator-1"
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
@@ -100,8 +100,8 @@ export default function AnnualLeaveCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">기준일 (오늘 또는 퇴사 예정일)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="annual-leave-calculator-2">기준일 (오늘 또는 퇴사 예정일)</label>
+              <input id="annual-leave-calculator-2"
                 type="date"
                 value={refDate}
                 onChange={(e) => setRefDate(e.target.value)}
@@ -109,8 +109,8 @@ export default function AnnualLeaveCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">통상시급 (원, 연차수당 계산용)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="annual-leave-calculator-3">통상시급 (원, 연차수당 계산용)</label>
+              <input id="annual-leave-calculator-3"
                 type="number"
                 value={hourlyWage}
                 onChange={(e) => setHourlyWage(e.target.value)}
@@ -118,8 +118,8 @@ export default function AnnualLeaveCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">이미 사용한 연차일수</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="annual-leave-calculator-4">이미 사용한 연차일수</label>
+              <input id="annual-leave-calculator-4"
                 type="number"
                 value={usedDays}
                 onChange={(e) => setUsedDays(e.target.value)}

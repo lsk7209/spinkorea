@@ -102,10 +102,10 @@ export default function DiffChecker() {
         {/* Input Area */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
-            <label className="text-sm text-gray-400 font-bold block">
+            <label className="text-sm text-gray-400 font-bold block" htmlFor="diff-checker-1">
               원본 텍스트 (Original)
             </label>
-            <textarea
+            <textarea id="diff-checker-1"
               value={oldText}
               onChange={(e) => setOldText(e.target.value)}
               className="w-full h-48 bg-black/30 border border-white/20 rounded-xl p-4 text-gray-300 font-mono text-sm leading-relaxed resize-none focus:outline-none focus:border-red-500/50"
@@ -113,10 +113,10 @@ export default function DiffChecker() {
             />
           </div>
           <div className="space-y-2">
-            <label className="text-sm text-gray-400 font-bold block">
+            <label className="text-sm text-gray-400 font-bold block" htmlFor="diff-checker-2">
               수정된 텍스트 (Modified)
             </label>
-            <textarea
+            <textarea id="diff-checker-2"
               value={newText}
               onChange={(e) => setNewText(e.target.value)}
               className="w-full h-48 bg-black/30 border border-white/20 rounded-xl p-4 text-gray-300 font-mono text-sm leading-relaxed resize-none focus:outline-none focus:border-green-500/50"

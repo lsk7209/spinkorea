@@ -109,10 +109,10 @@ export default function DDayCounter() {
         <div className="bg-white/5 border border-white/10 p-6 rounded-xl flex flex-col gap-6">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
-              <label className="text-gray-300 font-bold mb-2 block flex items-center gap-2">
+              <label className="text-gray-300 font-bold mb-2 block flex items-center gap-2" htmlFor="dday-counter-1">
                 <Flag size={18} className="text-neon-primary" /> 제목 (선택)
               </label>
-              <input
+              <input id="dday-counter-1"
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -121,10 +121,10 @@ export default function DDayCounter() {
               />
             </div>
             <div className="flex-1">
-              <label className="text-gray-300 font-bold mb-2 block flex items-center gap-2">
+              <label className="text-gray-300 font-bold mb-2 block flex items-center gap-2" htmlFor="dday-counter-2">
                 <Calendar size={18} className="text-neon-secondary" /> 기준 날짜
               </label>
-              <input
+              <input id="dday-counter-2"
                 type="date"
                 value={targetDate}
                 onChange={(e) => setTargetDate(e.target.value)}

@@ -19,9 +19,9 @@ function fmtRate(n: number): string {
 interface CalcResult {
   cost: number;
   price: number;
-  margin: number;   // gross margin %
-  markup: number;   // markup %
-  profit: number;   // absolute profit
+  margin: number; // gross margin %
+  markup: number; // markup %
+  profit: number; // absolute profit
 }
 
 function calculate(mode: Mode, a: number, b: number): CalcResult | null {
@@ -133,7 +133,11 @@ export default function MarginCalculator() {
             <button
               key={key}
               type="button"
-              onClick={() => { setMode(key); setInputA(""); setInputB(""); }}
+              onClick={() => {
+                setMode(key);
+                setInputA("");
+                setInputB("");
+              }}
               className={`py-3 rounded-xl text-xs font-bold transition-all ${
                 mode === key
                   ? "bg-neon-primary text-black"
@@ -147,24 +151,34 @@ export default function MarginCalculator() {
 
         {/* 입력 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {([["A", inputA, setInputA, labelA], ["B", inputB, setInputB, labelB]] as const).map(
-            ([, val, setter, label]) => (
-              <div key={label} className="bg-white/5 border border-white/10 p-4 rounded-xl">
-                <label className="block text-sm font-bold text-neon-primary mb-2 flex items-center gap-1.5">
-                  <TrendingUp size={14} />
-                  {label}
-                </label>
-                <input
-                  type="text"
-                  inputMode="decimal"
-                  value={val}
-                  onChange={(e) => setter(e.target.value)}
-                  placeholder="입력"
-                  className="w-full bg-black/30 border border-white/20 rounded-xl px-3 py-3 text-white font-bold focus:outline-none focus:border-neon-primary text-right"
-                />
-              </div>
-            )
-          )}
+          {(
+            [
+              ["A", inputA, setInputA, labelA],
+              ["B", inputB, setInputB, labelB],
+            ] as const
+          ).map(([slot, val, setter, label]) => (
+            <div
+              key={label}
+              className="bg-white/5 border border-white/10 p-4 rounded-xl"
+            >
+              <label
+                className="block text-sm font-bold text-neon-primary mb-2 flex items-center gap-1.5"
+                htmlFor={`margin-calculator-${slot}`}
+              >
+                <TrendingUp size={14} />
+                {label}
+              </label>
+              <input
+                id={`margin-calculator-${slot}`}
+                type="text"
+                inputMode="decimal"
+                value={val}
+                onChange={(e) => setter(e.target.value)}
+                placeholder="입력"
+                className="w-full bg-black/30 border border-white/20 rounded-xl px-3 py-3 text-white font-bold focus:outline-none focus:border-neon-primary text-right"
+              />
+            </div>
+          ))}
         </div>
 
         {/* 결과 */}
@@ -172,14 +186,18 @@ export default function MarginCalculator() {
           <div className="space-y-3">
             <div className="bg-neon-primary/10 border border-neon-primary/50 p-5 rounded-xl text-center">
               <p className="text-xs text-gray-400 mb-1">
-                {mode === "margin" ? "마진율" : mode === "price" ? "판매가" : "원가"}
+                {mode === "margin"
+                  ? "마진율"
+                  : mode === "price"
+                    ? "판매가"
+                    : "원가"}
               </p>
               <p className="text-4xl font-black text-neon-primary">
                 {mode === "margin"
                   ? `${fmtRate(result.margin)} %`
                   : mode === "price"
-                  ? `${fmt(result.price)} 원`
-                  : `${fmt(result.cost)} 원`}
+                    ? `${fmt(result.price)} 원`
+                    : `${fmt(result.cost)} 원`}
               </p>
             </div>
 
@@ -190,11 +208,17 @@ export default function MarginCalculator() {
               {mode !== "price" && mode !== "cost" && (
                 <InfoRow label="판매가" value={`${fmt(result.price)} 원`} />
               )}
-              <InfoRow label="이익 (절대값)" value={`${fmt(result.profit)} 원`} />
+              <InfoRow
+                label="이익 (절대값)"
+                value={`${fmt(result.profit)} 원`}
+              />
               <InfoRow label="마진율" value={`${fmtRate(result.margin)} %`} />
               <InfoRow label="마크업률" value={`${fmtRate(result.markup)} %`} />
               {mode !== "margin" && (
-                <InfoRow label={mode === "price" ? "판매가" : "판매가"} value={`${fmt(result.price)} 원`} />
+                <InfoRow
+                  label={mode === "price" ? "판매가" : "판매가"}
+                  value={`${fmt(result.price)} 원`}
+                />
               )}
             </div>
           </div>

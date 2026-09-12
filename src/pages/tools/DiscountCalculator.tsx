@@ -85,8 +85,8 @@ export default function DiscountCalculator() {
         {/* 입력 */}
         <div className="space-y-4">
           <div>
-            <label className="block text-sm text-gray-400 mb-1.5">{labelA}</label>
-            <input
+            <label className="block text-sm text-gray-400 mb-1.5" htmlFor="discount-calculator-1">{labelA}</label>
+            <input id="discount-calculator-1"
               type="number"
               min={0}
               placeholder={phA}
@@ -96,8 +96,8 @@ export default function DiscountCalculator() {
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-400 mb-1.5">{labelB}</label>
-            <input
+            <label className="block text-sm text-gray-400 mb-1.5" htmlFor="discount-calculator-2">{labelB}</label>
+            <input id="discount-calculator-2"
               type="number"
               min={0}
               max={showRatePresets ? 99 : undefined}

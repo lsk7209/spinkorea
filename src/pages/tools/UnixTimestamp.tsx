@@ -134,10 +134,10 @@ export default function UnixTimestamp() {
             </h3>
             <div className="space-y-4">
               <div>
-                <label className="text-xs text-gray-500 mb-1 block">
+                <label className="text-xs text-gray-500 mb-1 block" htmlFor="unix-timestamp-1">
                   Unix Timestamp (Seconds or ms)
                 </label>
-                <input
+                <input id="unix-timestamp-1"
                   type="number"
                   value={inputTimestamp}
                   onChange={(e) => setInputTimestamp(e.target.value)}
@@ -170,10 +170,10 @@ export default function UnixTimestamp() {
             </h3>
             <div className="space-y-4">
               <div>
-                <label className="text-xs text-gray-500 mb-1 block">
+                <label className="text-xs text-gray-500 mb-1 block" htmlFor="unix-timestamp-2">
                   Date (Local Time)
                 </label>
-                <input
+                <input id="unix-timestamp-2"
                   type="datetime-local"
                   value={inputDate}
                   onChange={(e) => setInputDate(e.target.value)}

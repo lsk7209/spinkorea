@@ -96,8 +96,8 @@ export default function FuelEconomyCalculator() {
         <div className="space-y-4">
           {/* 주행거리 — 연비·연료비·주유량 모두 필요 */}
           <div>
-            <label className="block text-sm text-gray-400 mb-1.5">주행거리 (km)</label>
-            <input
+            <label className="block text-sm text-gray-400 mb-1.5" htmlFor="fuel-economy-calculator-1">주행거리 (km)</label>
+            <input id="fuel-economy-calculator-1"
               type="number" min={0} placeholder="e.g. 500"
               value={distance} onChange={(e) => setDistance(e.target.value)}
               className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors"
@@ -107,8 +107,8 @@ export default function FuelEconomyCalculator() {
           {/* 주유량 — 연비 계산 모드만 */}
           {mode === "economy" && (
             <div>
-              <label className="block text-sm text-gray-400 mb-1.5">주유량 (L)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1.5" htmlFor="fuel-economy-calculator-2">주유량 (L)</label>
+              <input id="fuel-economy-calculator-2"
                 type="number" min={0} placeholder="e.g. 40"
                 value={fuelUsed} onChange={(e) => setFuelUsed(e.target.value)}
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors"
@@ -119,8 +119,8 @@ export default function FuelEconomyCalculator() {
           {/* 연비 — 연료비·주유량 모드 */}
           {mode !== "economy" && (
             <div>
-              <label className="block text-sm text-gray-400 mb-1.5">연비 (km/L)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1.5" htmlFor="fuel-economy-calculator-3">연비 (km/L)</label>
+              <input id="fuel-economy-calculator-3"
                 type="number" min={0} placeholder="e.g. 12"
                 value={economy} onChange={(e) => setEconomy(e.target.value)}
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors"
@@ -130,10 +130,10 @@ export default function FuelEconomyCalculator() {
 
           {/* 유가 — 연비·연료비·주유량 모드 모두 (선택적) */}
           <div>
-            <label className="block text-sm text-gray-400 mb-1.5">
+            <label className="block text-sm text-gray-400 mb-1.5" htmlFor="fuel-economy-calculator-4">
               유가 (원/L){mode === "cost" ? "" : " · 선택"}
             </label>
-            <input
+            <input id="fuel-economy-calculator-4"
               type="number" min={0} placeholder="e.g. 1650"
               value={fuelPrice} onChange={(e) => setFuelPrice(e.target.value)}
               className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors"

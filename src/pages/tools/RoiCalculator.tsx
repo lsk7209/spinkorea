@@ -88,8 +88,8 @@ export default function RoiCalculator() {
 
         {/* 공통 입력: 투자 원금 */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">투자 원금 (원)</label>
-          <input
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="roi-calculator-1">투자 원금 (원)</label>
+          <input id="roi-calculator-1"
             type="number" min={0} placeholder="e.g. 1000000"
             value={invest} onChange={(e) => setInvest(e.target.value)}
             className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors"
@@ -102,8 +102,8 @@ export default function RoiCalculator() {
         {/* ROI / CAGR: 현재 가치 */}
         {(mode === "roi" || mode === "cagr") && (
           <div>
-            <label className="block text-sm text-gray-400 mb-1.5">현재 가치 (원)</label>
-            <input
+            <label className="block text-sm text-gray-400 mb-1.5" htmlFor="roi-calculator-2">현재 가치 (원)</label>
+            <input id="roi-calculator-2"
               type="number" min={0} placeholder="e.g. 1300000"
               value={current} onChange={(e) => setCurrent(e.target.value)}
               className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors"
@@ -141,8 +141,8 @@ export default function RoiCalculator() {
         {/* 목표 ROI */}
         {mode === "target" && (
           <div>
-            <label className="block text-sm text-gray-400 mb-1.5">목표 수익률 (%)</label>
-            <input
+            <label className="block text-sm text-gray-400 mb-1.5" htmlFor="roi-calculator-3">목표 수익률 (%)</label>
+            <input id="roi-calculator-3"
               type="number" min={-100} placeholder="e.g. 50"
               value={targetRoi} onChange={(e) => setTargetRoi(e.target.value)}
               className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors"

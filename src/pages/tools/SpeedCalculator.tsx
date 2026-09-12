@@ -104,8 +104,8 @@ export default function SpeedCalculator() {
         {/* 거리 입력 (속도·시간 모드에서 표시) */}
         {mode !== "distance" && (
           <div>
-            <label className="block text-sm text-gray-400 mb-1.5">거리 (km)</label>
-            <input
+            <label className="block text-sm text-gray-400 mb-1.5" htmlFor="speed-calculator-1">거리 (km)</label>
+            <input id="speed-calculator-1"
               type="number"
               min={0}
               placeholder="e.g. 325"
@@ -151,8 +151,8 @@ export default function SpeedCalculator() {
         {/* 속도 입력 (거리·시간 모드에서 표시) */}
         {mode !== "speed" && (
           <div>
-            <label className="block text-sm text-gray-400 mb-1.5">속도 (km/h)</label>
-            <input
+            <label className="block text-sm text-gray-400 mb-1.5" htmlFor="speed-calculator-2">속도 (km/h)</label>
+            <input id="speed-calculator-2"
               type="number"
               min={0}
               placeholder="e.g. 100"

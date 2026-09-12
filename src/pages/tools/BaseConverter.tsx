@@ -87,10 +87,10 @@ export default function BaseConverter() {
 
         {/* 숫자 입력 */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="base-converter-1">
             {currentInfo.label} 입력
           </label>
-          <input
+          <input id="base-converter-1"
             type="text"
             placeholder={inputBase === 10 ? "e.g. 255" : inputBase === 16 ? "e.g. FF" : inputBase === 2 ? "e.g. 11111111" : "e.g. 377"}
             value={inputVal}

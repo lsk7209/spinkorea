@@ -71,7 +71,7 @@ export default function MarkdownPreviewer() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-[600px] max-w-7xl mx-auto">
         {/* Editor */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm text-gray-400 font-bold flex items-center justify-between">
+          <label className="text-sm text-gray-400 font-bold flex items-center justify-between" htmlFor="markdown-previewer-1">
             <span>Markdown 입력</span>
             <button
               onClick={() => setMarkdown("")}
@@ -80,7 +80,7 @@ export default function MarkdownPreviewer() {
               모두 지우기
             </button>
           </label>
-          <textarea
+          <textarea id="markdown-previewer-1"
             value={markdown}
             onChange={(e) => setMarkdown(e.target.value)}
             className="flex-1 bg-black/30 border border-white/20 rounded-xl p-4 text-gray-300 font-mono text-sm leading-relaxed resize-none focus:outline-none focus:border-neon-primary"

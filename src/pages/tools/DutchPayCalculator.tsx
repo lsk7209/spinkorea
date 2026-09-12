@@ -54,8 +54,8 @@ export default function DutchPayCalculator() {
       <div className="space-y-6 max-w-lg mx-auto">
         {/* 총 금액 */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">총 금액 (원)</label>
-          <input
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="dutch-pay-calculator-1">총 금액 (원)</label>
+          <input id="dutch-pay-calculator-1"
             type="number"
             min={0}
             placeholder="e.g. 48000"
@@ -102,8 +102,8 @@ export default function DutchPayCalculator() {
 
         {/* 할인 금액 (선택) */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">할인 금액 (원, 선택)</label>
-          <input
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="dutch-pay-calculator-2">할인 금액 (원, 선택)</label>
+          <input id="dutch-pay-calculator-2"
             type="number"
             min={0}
             placeholder="쿠폰·포인트·할인액"

@@ -105,10 +105,10 @@ export default function LoremIpsum() {
         {/* Controls */}
         <div className="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center justify-between">
           <div className="flex items-center gap-4 w-full md:w-auto">
-            <label className="text-gray-300 font-medium whitespace-nowrap">
+            <label className="text-gray-300 font-medium whitespace-nowrap" htmlFor="lorem-ipsum-1">
               개수:
             </label>
-            <input
+            <input id="lorem-ipsum-1"
               type="number"
               min="1"
               max="100"

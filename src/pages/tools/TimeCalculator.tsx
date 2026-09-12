@@ -122,10 +122,10 @@ export default function TimeCalculator() {
           </h3>
           <div className="flex flex-col md:flex-row items-center gap-4">
             <div className="flex-1 w-full">
-              <label className="text-gray-400 text-sm mb-1 block">
+              <label className="text-gray-400 text-sm mb-1 block" htmlFor="time-calculator-1">
                 시작 시간
               </label>
-              <input
+              <input id="time-calculator-1"
                 type="time"
                 value={diffStart}
                 onChange={(e) => setDiffStart(e.target.value)}
@@ -134,10 +134,10 @@ export default function TimeCalculator() {
             </div>
             <span className="text-gray-500 mt-6">~</span>
             <div className="flex-1 w-full">
-              <label className="text-gray-400 text-sm mb-1 block">
+              <label className="text-gray-400 text-sm mb-1 block" htmlFor="time-calculator-2">
                 종료 시간
               </label>
-              <input
+              <input id="time-calculator-2"
                 type="time"
                 value={diffEnd}
                 onChange={(e) => setDiffEnd(e.target.value)}
@@ -164,10 +164,10 @@ export default function TimeCalculator() {
 
           <div className="flex flex-col gap-4">
             <div>
-              <label className="text-gray-400 text-sm mb-1 block">
+              <label className="text-gray-400 text-sm mb-1 block" htmlFor="time-calculator-3">
                 기준 시간
               </label>
-              <input
+              <input id="time-calculator-3"
                 type="time"
                 value={baseTime}
                 onChange={(e) => setBaseTime(e.target.value)}

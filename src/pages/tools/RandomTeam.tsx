@@ -94,10 +94,10 @@ export default function RandomTeam() {
         {/* Input Area */}
         <div className="space-y-6">
           <div>
-            <label className="block text-gray-400 text-sm font-medium mb-2">
+            <label className="block text-gray-400 text-sm font-medium mb-2" htmlFor="random-team-1">
               참가자 이름 입력 (줄바꿈으로 구분)
             </label>
-            <textarea
+            <textarea id="random-team-1"
               value={names}
               onChange={(e) => setNames(e.target.value)}
               placeholder={`김철수\n이영희\n박민수\n...`}

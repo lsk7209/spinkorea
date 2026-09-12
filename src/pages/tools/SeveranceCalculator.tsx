@@ -83,8 +83,8 @@ export default function SeveranceCalculator() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm text-gray-400 mb-1">입사일</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="severance-calculator-1">입사일</label>
+              <input id="severance-calculator-1"
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
@@ -92,8 +92,8 @@ export default function SeveranceCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">퇴사일 (예정일)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="severance-calculator-2">퇴사일 (예정일)</label>
+              <input id="severance-calculator-2"
                 type="date"
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
@@ -101,8 +101,8 @@ export default function SeveranceCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">월 평균임금 (최근 3개월, 원)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="severance-calculator-3">월 평균임금 (최근 3개월, 원)</label>
+              <input id="severance-calculator-3"
                 type="number"
                 value={monthlyWage}
                 onChange={(e) => setMonthlyWage(e.target.value)}
@@ -110,8 +110,8 @@ export default function SeveranceCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">연간 상여금 (원, 없으면 0)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="severance-calculator-4">연간 상여금 (원, 없으면 0)</label>
+              <input id="severance-calculator-4"
                 type="number"
                 value={bonusAnnual}
                 onChange={(e) => setBonusAnnual(e.target.value)}

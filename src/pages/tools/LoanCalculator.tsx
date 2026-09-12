@@ -84,8 +84,8 @@ export default function LoanCalculator() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
             <div>
-              <label className="block text-sm text-gray-400 mb-1">대출 원금 (원)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="loan-calculator-1">대출 원금 (원)</label>
+              <input id="loan-calculator-1"
                 type="number"
                 value={principal}
                 onChange={(e) => setPrincipal(e.target.value)}
@@ -93,8 +93,8 @@ export default function LoanCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">연 이자율 (%)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="loan-calculator-2">연 이자율 (%)</label>
+              <input id="loan-calculator-2"
                 type="number"
                 step="0.1"
                 value={annualRate}
@@ -103,8 +103,8 @@ export default function LoanCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">대출 기간 (개월)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="loan-calculator-3">대출 기간 (개월)</label>
+              <input id="loan-calculator-3"
                 type="number"
                 value={months}
                 onChange={(e) => setMonths(e.target.value)}

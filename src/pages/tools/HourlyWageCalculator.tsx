@@ -74,8 +74,8 @@ export default function HourlyWageCalculator() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             <div>
-              <label className="block text-sm text-gray-400 mb-1">시급 (원)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="hourly-wage-calculator-1">시급 (원)</label>
+              <input id="hourly-wage-calculator-1"
                 type="number"
                 value={hourlyWage}
                 onChange={(e) => setHourlyWage(e.target.value)}
@@ -83,8 +83,8 @@ export default function HourlyWageCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">하루 근무시간</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="hourly-wage-calculator-2">하루 근무시간</label>
+              <input id="hourly-wage-calculator-2"
                 type="number"
                 value={hoursPerDay}
                 onChange={(e) => setHoursPerDay(e.target.value)}
@@ -92,8 +92,8 @@ export default function HourlyWageCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">월 근무일수</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="hourly-wage-calculator-3">월 근무일수</label>
+              <input id="hourly-wage-calculator-3"
                 type="number"
                 value={daysPerMonth}
                 onChange={(e) => setDaysPerMonth(e.target.value)}
@@ -123,8 +123,8 @@ export default function HourlyWageCalculator() {
           <h3 className="text-lg font-bold text-blue-400 mb-5">월급 → 시급 역산</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-sm text-gray-400 mb-1">월 급여 (원)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="hourly-wage-calculator-4">월 급여 (원)</label>
+              <input id="hourly-wage-calculator-4"
                 type="number"
                 value={monthlySalary}
                 onChange={(e) => setMonthlySalary(e.target.value)}
@@ -133,8 +133,8 @@ export default function HourlyWageCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1">월 근무시간 (기본 209h)</label>
-              <input
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="hourly-wage-calculator-5">월 근무시간 (기본 209h)</label>
+              <input id="hourly-wage-calculator-5"
                 type="number"
                 value={workHours}
                 onChange={(e) => setWorkHours(e.target.value)}

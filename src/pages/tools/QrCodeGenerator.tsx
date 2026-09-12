@@ -86,10 +86,10 @@ export default function QrCodeGenerator() {
         {/* Input & Settings */}
         <div className="bg-white/5 border border-white/10 p-6 rounded-xl space-y-6">
           <div>
-            <label className="text-sm text-gray-400 mb-2 block font-bold">
+            <label className="text-sm text-gray-400 mb-2 block font-bold" htmlFor="qr-code-generator-1">
               내용 입력 (URL, 텍스트)
             </label>
-            <textarea
+            <textarea id="qr-code-generator-1"
               value={value}
               onChange={(e) => setValue(e.target.value)}
               className="w-full h-32 bg-black/30 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:border-neon-primary resize-none"
@@ -133,10 +133,10 @@ export default function QrCodeGenerator() {
           </div>
 
           <div>
-            <label className="text-xs text-gray-500 mb-2 block">
+            <label className="text-xs text-gray-500 mb-2 block" htmlFor="qr-code-generator-2">
               크기 (Size: {size}px)
             </label>
-            <input
+            <input id="qr-code-generator-2"
               type="range"
               min={128}
               max={512}

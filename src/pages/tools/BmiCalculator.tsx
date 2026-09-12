@@ -117,10 +117,10 @@ export default function BmiCalculator() {
         {/* Inputs */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white/5 border border-white/10 p-6 rounded-xl flex flex-col gap-4">
-            <label className="text-gray-300 font-bold flex items-center gap-2">
+            <label className="text-gray-300 font-bold flex items-center gap-2" htmlFor="bmi-calculator-1">
               <Ruler size={20} className="text-neon-primary" /> 키 (cm)
             </label>
-            <input
+            <input id="bmi-calculator-1"
               type="number"
               value={height}
               onChange={(e) => setHeight(e.target.value)}
@@ -129,10 +129,10 @@ export default function BmiCalculator() {
             />
           </div>
           <div className="bg-white/5 border border-white/10 p-6 rounded-xl flex flex-col gap-4">
-            <label className="text-gray-300 font-bold flex items-center gap-2">
+            <label className="text-gray-300 font-bold flex items-center gap-2" htmlFor="bmi-calculator-2">
               <Scale size={20} className="text-neon-secondary" /> 몸무게 (kg)
             </label>
-            <input
+            <input id="bmi-calculator-2"
               type="number"
               value={weight}
               onChange={(e) => setWeight(e.target.value)}

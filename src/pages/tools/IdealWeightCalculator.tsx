@@ -97,8 +97,8 @@ export default function IdealWeightCalculator() {
 
         {/* 키 */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">키 (cm)</label>
-          <input
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="ideal-weight-calculator-1">키 (cm)</label>
+          <input id="ideal-weight-calculator-1"
             type="number" min={100} max={250} placeholder="e.g. 170"
             value={height} onChange={(e) => setHeight(e.target.value)}
             className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors"
@@ -107,8 +107,8 @@ export default function IdealWeightCalculator() {
 
         {/* 현재 체중 (선택) */}
         <div>
-          <label className="block text-sm text-gray-400 mb-1.5">현재 체중 (kg) · 선택</label>
-          <input
+          <label className="block text-sm text-gray-400 mb-1.5" htmlFor="ideal-weight-calculator-2">현재 체중 (kg) · 선택</label>
+          <input id="ideal-weight-calculator-2"
             type="number" min={1} max={500} placeholder="입력 시 현재 BMI 표시"
             value={weight} onChange={(e) => setWeight(e.target.value)}
             className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors"
