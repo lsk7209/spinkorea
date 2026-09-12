@@ -18,6 +18,11 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [로또 번호 생성기](https://spinkorea.kr/tools/lotto-generator) — 버튼 한 번으로 로또 번호 조합을 생성합니다.
 
 ## 최신 블로그
+- [홀수 인원 랜덤 팀 나누기, 한 명 차이를 공정하게 설명하기](https://spinkorea.kr/blog/random-team-odd-members) — 인원이 나누어떨어지지 않을 때 팀 크기와 예외 역할을 미리 합의하는 방법입니다.
+- [Yes or No 결정은 되돌릴 수 있는 일에만 쓰세요](https://spinkorea.kr/blog/yes-no-reversible-choice) — 예·아니오 도구에 맡겨도 되는 선택과 직접 판단해야 하는 선택을 구분합니다.
+- [동전 던지기 전에 질문을 두 선택지로 줄이는 법](https://spinkorea.kr/blog/coin-flip-question) — 동전 던지기에 맞는 질문을 만들고 재실행 논쟁을 줄이는 간단한 규칙을 안내합니다.
+- [주사위 여러 개 합계로 게임 판정표 만들기](https://spinkorea.kr/blog/dice-multiple-sum) — 여러 주사위의 개수와 면 수를 고정하고 합계 판정 규칙을 운영하는 순서를 정리합니다.
+- [랜덤 숫자 뽑기, 제외 번호를 먼저 정하는 순서](https://spinkorea.kr/blog/random-number-exclusion) — 랜덤 숫자에서 범위와 제외수를 입력 전에 합의하고 결과를 기록하는 방법을 설명합니다.
 - [온라인 계산기 vs 엑셀: 언제 무엇을 써야 하나](https://spinkorea.kr/blog/calculator-vs-excel) — 간단한 계산에 엑셀을 여는 것은 낭비입니다. 상황별로 온라인 계산기와 스프레드시트를 현명하게 선택하는 기준.
 - [디지털 노마드의 생산성 도구 모음: 어디서든 일하는 법](https://spinkorea.kr/blog/digital-nomad-tools) — 카페·공유오피스·해외 어디서든 최고의 생산성을 유지하는 디지털 노마드들의 필수 도구와 루틴.
 - [텍스트 변환이 필요한 의외의 상황 7가지](https://spinkorea.kr/blog/text-formatting-situations) — 대소문자 변환, 특수문자 제거, 줄바꿈 정리... 텍스트를 정제하고 변환해야 하는 실무 상황 완벽 정리.
@@ -25,11 +30,6 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [이미지 포맷 완벽 가이드: JPG vs PNG vs WebP vs AVIF](https://spinkorea.kr/blog/image-format-guide) — 언제 JPG를 쓰고 언제 PNG를 써야 하나? 웹 성능을 위한 최신 이미지 포맷 선택 기준 완벽 정리.
 - [구글 캘린더 100% 활용법: 시간을 설계하는 방법](https://spinkorea.kr/blog/google-calendar-tips) — 단순한 일정 관리를 넘어 타임 블로킹, 색상 코딩, 반복 일정, 팀 캘린더까지. 구글 캘린더 고수의 사용법.
 - [URL 단축기의 원리: 짧은 링크 뒤에 숨겨진 기술](https://spinkorea.kr/blog/url-shortener-tech) — bit.ly, tinyurl... 긴 URL이 짧아지는 원리, 리다이렉트 동작 방식, 단축 URL의 보안 위험까지 알아봅니다.
-- [두려움을 행동으로 전환하는 5초의 법칙](https://spinkorea.kr/blog/five-second-rule) — 멜 로빈스의 5초 법칙: 하고 싶은 것이 생기면 5초 안에 시작하지 않으면 뇌가 방해합니다. 과학적 근거와 실천법.
-- [주사위와 확률: 보드게임 뒤에 숨겨진 수학](https://spinkorea.kr/blog/dice-probability) — 주사위 2개를 굴렸을 때 7이 가장 많이 나오는 이유, 크리티컬 확률 계산, 보드게임 전략에 확률을 활용하는 법.
-- [메모의 기술: 두 번째 뇌 만들기](https://spinkorea.kr/blog/note-taking-art) — 좋은 아이디어는 기억에 의존하면 안 됩니다. 코넬 노트, 제텔카스텐, 디지털 노트 시스템 완벽 가이드.
-- [근무시간 계산기 활용법: 야근 수당부터 프리랜서 정산까지](https://spinkorea.kr/blog/work-hours-calculator) — 정확한 근무시간 계산이 필요한 모든 상황. 야근 수당, 프리랜서 시급 정산, 프로젝트 일정 관리 방법.
-- [집중력 도둑 TOP 5와 차단 방법](https://spinkorea.kr/blog/focus-thieves) — SNS 알림, 오픈 오피스, 멀티탭... 우리의 집중력을 훔치는 주범들과 환경 설계로 차단하는 방법.
 
 ## 기술 정보
 React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.xml, JSON-LD, AdSense 자동광고, GA4를 사용합니다.
