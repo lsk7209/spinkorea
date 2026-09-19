@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Copy, RefreshCw, KeyRound, ShieldCheck, ShieldAlert, Shield, Check } from 'lucide-react';
+import { Copy, RefreshCw, KeyRound, Check } from 'lucide-react';
 import { toast } from 'sonner';
 import ToolLayout from '@/components/ToolLayout';
 import { trackToolCompleted } from '@/utils/analytics';
+import { getSecureRandomInt } from '@/utils/random';
 
 const CHARS = {
     upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -20,7 +21,6 @@ export default function PasswordGenerator() {
         numbers: true,
         symbols: true
     });
-    const [strength, setStrength] = useState(0);
 
     const generatePassword = useCallback(() => {
         let charset = '';
@@ -32,20 +32,17 @@ export default function PasswordGenerator() {
         if (!charset) return;
 
         let newPassword = '';
-        const cryptoObj = window.crypto ?? (window as unknown as { msCrypto?: Crypto }).msCrypto;
-        if (!cryptoObj?.getRandomValues) {
+        try {
+            for (let i = 0; i < length; i++) {
+                newPassword += charset[getSecureRandomInt(charset.length)];
+            }
+        } catch {
+            setPassword('');
             toast.error('안전한 랜덤 생성기를 사용할 수 없습니다.');
             return;
         }
-        const randomValues = new Uint32Array(length);
-        cryptoObj.getRandomValues(randomValues);
-
-        for (let i = 0; i < length; i++) {
-            newPassword += charset[randomValues[i] % charset.length];
-        }
 
         setPassword(newPassword);
-        calculateStrength(newPassword);
     }, [length, options]);
 
     // Initial generate
@@ -53,19 +50,14 @@ export default function PasswordGenerator() {
         generatePassword();
     }, [generatePassword]);
 
-    const calculateStrength = (pwd: string) => {
-        let score = 0;
-        if (pwd.length > 8) score += 1;
-        if (pwd.length > 12) score += 1;
-        if (/[A-Z]/.test(pwd)) score += 1;
-        if (/[0-9]/.test(pwd)) score += 1;
-        if (/[^A-Za-z0-9]/.test(pwd)) score += 1;
-        setStrength(score);
-    };
-
-    const copyToClipboard = () => {
-        navigator.clipboard.writeText(password);
-        toast.success('비밀번호가 복사되었습니다!');
+    const copyToClipboard = async () => {
+        if (!password) return;
+        try {
+            await navigator.clipboard.writeText(password);
+            toast.success('비밀번호가 복사되었습니다!');
+        } catch {
+            toast.error('복사하지 못했습니다. 브라우저 권한을 확인하거나 비밀번호를 직접 선택해 복사하세요.');
+        }
     };
 
     const regeneratePassword = () => {
@@ -73,36 +65,28 @@ export default function PasswordGenerator() {
         trackToolCompleted('/tools/random-password', 'password_generated');
     };
 
-    const getStrengthLabel = () => {
-        if (strength < 2) return { text: 'Weak', color: 'text-red-500', icon: ShieldAlert };
-        if (strength < 4) return { text: 'Medium', color: 'text-yellow-500', icon: Shield };
-        return { text: 'Strong', color: 'text-green-500', icon: ShieldCheck };
-    };
-
-    const StrengthIcon = getStrengthLabel().icon;
-
     return (
         <ToolLayout
-            title="강력한 비밀번호 생성기"
+            title="랜덤 비밀번호 생성기"
             description="브라우저의 Crypto API 기반 난수로 추측하기 어려운 랜덤 비밀번호를 생성하세요. 생성된 문자열의 보관과 계정 보안은 사용자가 관리해야 하며, 길이·대문자·소문자·숫자·특수문자 포함 여부를 설정할 수 있습니다."
             keywords="비밀번호생성, 암호생성, 랜덤비밀번호, 패스워드제너레이터, 비밀번호보안, 안전한비밀번호"
             howToUse={[
-                "비밀번호 길이를 슬라이더로 조절하세요 (4~50자, 권장: 16자 이상)",
+                "사용할 서비스의 길이 제한을 확인하고 슬라이더로 길이를 조절하세요 (4~50자)",
                 "포함할 문자 종류를 선택하세요 (대문자, 소문자, 숫자, 특수문자)",
                 "'새로운 비밀번호 생성' 버튼을 클릭하세요",
                 "생성된 비밀번호 옆의 복사 버튼을 눌러 클립보드에 저장하세요"
             ]}
             tips={[
-                "최소 12자 이상, 가능하면 16자 이상을 권장합니다",
-                "모든 문자 유형을 포함하면 보안 강도가 크게 향상됩니다",
+                "생성 가능한 길이 범위가 모든 서비스의 보안 기준을 충족한다는 뜻은 아닙니다",
+                "선택한 문자군은 추출 후보입니다. 모든 문자군이 결과에 반드시 포함되지는 않습니다",
                 "사이트마다 다른 비밀번호를 사용하세요",
                 "비밀번호 관리자(1Password, Bitwarden 등)와 함께 사용하면 편리합니다"
             ]}
             faqs={[
                 { question: "생성된 비밀번호는 안전한가요?", answer: "브라우저의 Crypto API 기반 난수를 사용하지만 어떤 도구도 계정 보안을 보장하지는 않습니다. 생성된 비밀번호는 사이트에 입력하거나 공유하지 말고, 사용자가 안전한 비밀번호 관리자 등에 직접 보관하세요." },
-                { question: "비밀번호 길이는 몇 자가 좋나요?", answer: "보안 전문가들은 최소 12자 이상, 가능하면 16자 이상을 권장합니다. 길이가 길수록 브루트 포스 공격에 대한 저항력이 강해집니다." },
-                { question: "특수문자를 포함해야 하나요?", answer: "가능하면 포함하는 것이 좋습니다. 다만, 일부 웹사이트에서 특정 특수문자를 허용하지 않는 경우가 있으니 확인이 필요합니다." },
-                { question: "같은 비밀번호가 생성될 수 있나요?", answer: "이론적으로 가능하지만, 16자 비밀번호의 경우 가능한 조합이 천문학적으로 많아 실질적으로 불가능합니다." }
+                { question: "비밀번호 길이는 몇 자가 좋나요?", answer: "사용할 서비스의 길이 제한을 확인하고 충분히 긴 새 비밀번호를 계정마다 따로 생성하세요. 길이만으로 실제 해독 시간이나 계정 안전을 보장할 수는 없습니다." },
+                { question: "특수문자를 포함해야 하나요?", answer: "사용할 서비스가 허용하는 문자와 요구 조건을 확인해 선택하세요. 이 옵션은 추출 후보를 정하며, 특수문자의 포함이나 특정 서비스의 조건 충족을 보장하지 않습니다." },
+                { question: "같은 비밀번호가 생성될 수 있나요?", answer: "가능합니다. 결과의 중복을 검사하지 않으며, 발생 가능성은 길이와 선택한 문자 풀에 따라 달라집니다. 서로 다른 계정에서 같은 비밀번호를 재사용하지 마세요." }
             ]}
             relatedTools={[
                 { name: "Base64 인코더", path: "/tools/base64-encoder", description: "텍스트를 Base64로 인코딩/디코딩" },
@@ -110,6 +94,7 @@ export default function PasswordGenerator() {
             ]}
         >
             <div className="max-w-2xl mx-auto space-y-8">
+                <p className="text-sm text-gray-400">표시되는 문자 수는 생성 결과의 길이입니다. 유출 여부·해독 시간·피싱 저항성은 검사하지 않습니다. 선택한 문자군이 모두 결과에 포함된다는 보장은 없습니다.</p>
 
                 {/* Result Display */}
                 <div className="relative">
@@ -129,13 +114,9 @@ export default function PasswordGenerator() {
                         </button>
                     </div>
 
-                    {/* Strength Indicator */}
+                    {/* Generated length */}
                     <div className="absolute -top-3 right-4 bg-neon-dark px-3 py-1 rounded-full border border-neon-border/50 flex items-center gap-2 text-xs font-bold shadow-lg">
-                        <span className="text-gray-400">보안 강도:</span>
-                        <div className={`flex items-center gap-1 ${getStrengthLabel().color}`}>
-                            <StrengthIcon size={14} />
-                            {getStrengthLabel().text}
-                        </div>
+                        <span className="text-gray-300">문자 수: {password.length}</span>
                     </div>
                 </div>
 

@@ -7,7 +7,7 @@ import { trackToolCompleted } from "@/utils/analytics";
 const ANSWERS = [
   {
     text: "YES",
-    sub: "확실합니다",
+    sub: "무작위 응답",
     color: "text-green-400",
     border: "border-green-400",
   },
@@ -69,7 +69,7 @@ export default function YesNoOracle() {
         {
           question: "중요한 결정에 사용해도 되나요?",
           answer:
-            "Yes/No 오라클은 결정 피로를 줄여주는 가벼운 도구입니다. 사소한 결정에는 유용하지만, 중요한 결정은 충분한 정보를 바탕으로 내리시길 권장합니다.",
+            "쉽게 되돌릴 수 있는 사소한 선택에만 참고하세요. 의료·금융·계약·안전·진로 판단을 무작위 결과에 맡기지 마세요.",
         },
       ]}
       relatedTools={[
@@ -91,6 +91,7 @@ export default function YesNoOracle() {
       ]}
     >
       <div className="flex flex-col items-center justify-center gap-8 py-8 w-full max-w-lg mx-auto">
+        <p className="text-sm text-gray-400">가벼운 놀이용 무작위 응답입니다. 의료·금융·계약·안전·진로 판단에 사용하지 마세요.</p>
         {/* Visual Circle */}
         <div
           className={`

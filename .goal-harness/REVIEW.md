@@ -1,3 +1,27 @@
+# Release checkpoint — 2026-09-20 08:55 대한민국 표준시
+
+Independent Luna lanes reviewed prior product/release scope and SPK014 copy/tool scope. Privacy invitation mismatch, original-date/index verification gap and BMI FAQ scope resolved. No remaining scoped BLOCKER/HIGH reported. Main verified files and command evidence.
+
+---
+
+# Current review — SPK-014 — 2026-09-20 08:33 KST
+
+Independent read-only Luna/max review of the report against current article/tool code, metadata contract and official PDF extracts. E05 already says similar outcomes; E06 already uses81% participant share: reviewer confirmed the report does not misclassify these as original errors. KSSO/NICE boundaries supported. Reviewer findings incorporated by parent: add T03 health-status hero/howToUse conflict, add T02 disclaimer23-to-under25 clarity without inventing a branch defect, include gauge/legend and35 indicator cap under T01, specify E05 card title. Parent checked each source location and report update. No known unresolved material report finding remains. Current product defects remain future work. Existing Luna agents were reused after the earlier Spark Unknown-model fallback; no new model failure/authority expansion this slice. Parent owns final preservation/coverage checks.
+
+---
+
+# Current review — 2026-09-20 08:00 KST
+
+Two bounded Luna/max read-only lanes reviewed official-source claims/loan logic and static/SPA/contact/CSS respectively. Parent fixed identified sleep recommendation styling, password scoring/length advice, early-repayment guarantee, static search-box instruction, and contact hero/metadata mismatch. Final static reviewer reran verify-audit-repairs.mjs PASS and found no remaining concrete blockers; no CSS source/slug/redirect changes. Parent verified math/build/browser and corrected three stale title/description cache pairs. Initial Spark Unknown model was retried once on Luna/max without expanded authority. Remaining evidence limits are in docs/HANDOFF.md; no claim of complete external audit.
+
+---
+
+# Prior review — 2026-09-20
+
+Independent Luna/max review: no substantiated blockers. Spark launch failed with Unknown model; identical read-only lane retried once on Luna/max. Parent independently ran all reported tests. Residual: clipboard is API-mocked, RandomTeam payload test verifies members but not exact displayed grouping, verifier uses external installed Playwright. These do not block this bounded handler fix; no clipboard serialization changed. All product changes local, no dependencies added.
+
+---
+
 # REVIEW
 
 ## 2026-08-30 final independent review

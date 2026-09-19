@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
 import { TrendingDown } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
+import { calculateLoan } from "@/utils/loan";
+import guidance from "@/data/site-guidance.json";
 
 function fmt(n: number) {
   return Math.round(n).toLocaleString("ko-KR");
@@ -12,38 +14,7 @@ export default function LoanCalculator() {
   const [months, setMonths] = useState("36");
   const [method, setMethod] = useState<"equal-payment" | "equal-principal">("equal-payment");
 
-  const result = useMemo(() => {
-    const P = parseFloat(principal) || 0;
-    const r = (parseFloat(annualRate) || 0) / 100 / 12;
-    const n = parseInt(months) || 0;
-    if (P <= 0 || r <= 0 || n <= 0) return null;
-
-    if (method === "equal-payment") {
-      // 원리금균등상환
-      const monthly = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-      const totalPayment = monthly * n;
-      const totalInterest = totalPayment - P;
-      return { monthly, totalPayment, totalInterest, firstMonthInterest: P * r };
-    } else {
-      // 원금균등상환
-      const principalPerMonth = P / n;
-      let remaining = P;
-      let totalInterest = 0;
-      const firstMonthInterest = P * r;
-      const firstMonthly = principalPerMonth + firstMonthInterest;
-      for (let i = 0; i < n; i++) {
-        totalInterest += remaining * r;
-        remaining -= principalPerMonth;
-      }
-      return {
-        monthly: firstMonthly,
-        totalPayment: P + totalInterest,
-        totalInterest,
-        firstMonthInterest,
-        monthlyNote: "첫 달 납부액 (이후 점차 감소)",
-      };
-    }
-  }, [principal, annualRate, months, method]);
+  const result = useMemo(() => calculateLoan(principal, annualRate, months, method), [principal, annualRate, months, method]);
 
   return (
     <ToolLayout
@@ -57,17 +28,17 @@ export default function LoanCalculator() {
       ]}
       tips={[
         "원리금균등: 매달 동일한 금액을 납부해 가계 지출 예측이 쉽습니다.",
-        "원금균등: 초기 납부액이 많지만 총 이자 부담이 적습니다.",
-        "같은 원금이면 기간이 짧을수록, 금리가 낮을수록 총 이자가 줄어듭니다.",
+        "양의 금리·여러 달 상환을 비교하면 원금균등은 초기에 원금을 더 빨리 줄이는 방식입니다.",
+        "금리 0% 또는 상환 기간 1개월이면 두 방식의 계산 결과가 같습니다.",
       ]}
       faqs={[
         {
           question: "원리금균등과 원금균등 중 어느 방식이 유리한가요?",
-          answer: "총 이자 부담은 원금균등이 더 적습니다. 하지만 초기 납부액이 높아 부담스럽다면 원리금균등이 실용적입니다. 여유 자금이 있을 때 조기상환을 함께 활용하면 이자를 줄일 수 있습니다.",
+          answer: "같은 원금·양의 금리·2개월 이상 기간의 단순 계산에서는 원금균등의 총 이자가 더 적습니다. 금리 0% 또는 1개월 상환이면 결과가 같습니다. 실제 선택은 초기 납부 부담과 상품 조건을 함께 확인해야 합니다.",
         },
         {
           question: "중도상환 시 이자 절약 효과는?",
-          answer: "잔여 원금에 대한 이자만 계산되므로 조기상환할수록 이자가 크게 줄어듭니다. 단, 중도상환수수료(보통 잔여원금의 0.5~1.5%) 여부를 금융기관에 확인하세요.",
+          answer: "이 계산기는 중도상환을 계산하지 않습니다. 실제 절약액은 상환일, 잔여 원금, 금리와 수수료에 따라 달라지므로 상품별 계약과 금융기관의 상환 견적을 확인하세요.",
         },
       ]}
       relatedTools={[
@@ -77,6 +48,7 @@ export default function LoanCalculator() {
       ]}
     >
       <div className="flex flex-col gap-8">
+        <p className="text-sm text-gray-400">{guidance.loan.definition}</p>
         {/* 입력 */}
         <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
           <h3 className="text-lg font-bold text-neon-primary mb-5 flex items-center gap-2">
@@ -152,7 +124,7 @@ export default function LoanCalculator() {
             </div>
           </div>
         ) : (
-          <p className="text-center text-gray-500 py-6">위 항목을 모두 입력하면 결과가 나타납니다.</p>
+          <p className="text-center text-gray-500 py-6">원금은 0보다 큰 수, 연 이자율은 0 이상, 기간은 1 이상의 정수 개월로 입력하세요. 빈 값이나 계산 범위를 벗어난 값은 계산하지 않습니다.</p>
         )}
 
         {/* 공식 */}
@@ -162,7 +134,7 @@ export default function LoanCalculator() {
             <p className="text-gray-400 text-xs">
               월납부금 = P × r(1+r)ⁿ / ((1+r)ⁿ-1)
             </p>
-            <p className="text-gray-500 text-xs mt-1">P=원금, r=월이율, n=기간(개월)</p>
+            <p className="text-gray-500 text-xs mt-1">P=원금, r=월이율, n=기간(개월). 금리 0%이면 월납부금=P/n, 총 이자=0입니다.</p>
           </div>
           <div className="bg-black/20 p-4 rounded-lg">
             <p className="text-blue-400 font-bold mb-2">원금균등상환 공식</p>

@@ -11,6 +11,7 @@ import {
 import { toast } from "sonner";
 import ToolLayout from "@/components/ToolLayout";
 import { trackToolCompleted } from "@/utils/analytics";
+import { formatSupportedJson } from "@/utils/json-format";
 
 export default function JsonFormatter() {
   const [input, setInput] = useState("");
@@ -18,10 +19,10 @@ export default function JsonFormatter() {
   const [error, setError] = useState<string | null>(null);
 
   const formatJson = (space: number) => {
-    if (!input.trim()) return;
+    setOutput("");
+    if (!input.trim()) { setError("JSON을 입력하세요."); return; }
     try {
-      const parsed = JSON.parse(input);
-      setOutput(JSON.stringify(parsed, null, space));
+      setOutput(formatSupportedJson(input, space));
       setError(null);
       trackToolCompleted("/tools/json-formatter", "formatted_json");
       toast.success("포맷팅이 완료되었습니다.");
@@ -31,15 +32,15 @@ export default function JsonFormatter() {
           ? error.message
           : "JSON 파싱 오류가 발생했습니다.",
       );
-      toast.error("유효하지 않은 JSON 형식입니다.");
+      toast.error("변환하지 못했습니다. 입력창 아래 안내를 확인하세요.");
     }
   };
 
   const minifyJson = () => {
-    if (!input.trim()) return;
+    setOutput("");
+    if (!input.trim()) { setError("JSON을 입력하세요."); return; }
     try {
-      const parsed = JSON.parse(input);
-      setOutput(JSON.stringify(parsed));
+      setOutput(formatSupportedJson(input));
       setError(null);
       trackToolCompleted("/tools/json-formatter", "minified_json");
       toast.success("압축(Minify)이 완료되었습니다.");
@@ -49,14 +50,18 @@ export default function JsonFormatter() {
           ? error.message
           : "JSON 파싱 오류가 발생했습니다.",
       );
-      toast.error("유효하지 않은 JSON 형식입니다.");
+      toast.error("변환하지 못했습니다. 입력창 아래 안내를 확인하세요.");
     }
   };
 
-  const copyOutput = () => {
+  const copyOutput = async () => {
     if (!output) return;
-    navigator.clipboard.writeText(output);
-    toast.success("결과가 복사되었습니다.");
+    try {
+      await navigator.clipboard.writeText(output);
+      toast.success("결과가 복사되었습니다.");
+    } catch {
+      toast.error("복사하지 못했습니다. 브라우저 권한을 확인하거나 결과를 직접 선택해 복사하세요.");
+    }
   };
 
   const loadExample = () => {
@@ -113,6 +118,10 @@ export default function JsonFormatter() {
       ]}
     >
       <div className="flex flex-col gap-6 h-full">
+        <p className="text-sm text-gray-400">
+          정수는 ±9,007,199,254,740,991까지 지원합니다. 더 큰 정수는 문자열로 입력하세요.
+          소수는 JavaScript 숫자 정밀도에 따라 반올림될 수 있습니다. 입력을 수정하면 이전 결과가 지워집니다.
+        </p>
         {/* Actions Toolbar */}
         <div className="flex flex-wrap items-center gap-3 bg-white/5 border border-white/10 p-4 rounded-xl">
           <button
@@ -162,7 +171,11 @@ export default function JsonFormatter() {
             </label>
             <textarea id="json-formatter-1"
               value={input}
-              onChange={(e) => setInput(e.target.value)}
+              onChange={(e) => {
+                setInput(e.target.value);
+                setOutput("");
+                setError(null);
+              }}
               placeholder="JSON 데이터를 여기에 입력하세요..."
               className={`w-full h-full bg-black/30 border rounded-xl p-4 text-sm font-mono leading-relaxed focus:outline-none focus:ring-1 resize-none ${
                 error

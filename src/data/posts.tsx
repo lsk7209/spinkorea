@@ -3072,90 +3072,34 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "yes-no-oracle-guide",
-    title: "예스/노 신탁기: 결정을 못 내릴 때 랜덤이 도움이 되는 심리학적 이유",
+    title: "예스/노 신탁기: 가벼운 선택에 랜덤 응답을 쓰는 기준",
     description:
-      "동전 던지기, 예스/노 신탁기... 왜 중요한 결정에 랜덤을 쓰면 오히려 더 좋은 결과가 나오는지 심리학 연구로 알아봅니다.",
+      "되돌릴 수 있는 작은 선택에서 랜덤 응답을 참고하는 방법과, 의료·금융·계약 등 결과에 맡기면 안 되는 결정을 구분합니다.",
     date: "2026-04-01",
     tags: ["결정심리학", "예스노", "랜덤결정", "심리학"],
     thumbnail:
       "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2670&auto=format&fit=crop",
     content: (
       <div className="space-y-6 text-gray-300 leading-relaxed">
-        <p>
-          "그냥 동전으로 정해버릴까?"라고 생각해본 적 있나요? 실제로 이 방법이
-          효과적이라는 심리학 연구가 있습니다.{" "}
-          <Link
-            to="/tools/yes-no-oracle"
-            className="text-neon-primary hover:underline"
-          >
-            무료 예스/노 신탁기
-          </Link>
-          로 결정의 부담을 내려놓으세요.
-        </p>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          동전 던지기 실험 — 시카고 대학교 연구
-        </h2>
-        <p>
-          경제학자 스티븐 레빗(Steven Levitt)의 연구에 따르면, 동전 던지기로
-          중요한 결정(이직, 이사, 이별 등)을 내린 사람들이{" "}
-          <strong className="text-white">6개월 후 더 행복하다고 응답</strong>
-          했습니다. 결정 자체보다 결정 후 실행력이 행복을 결정한다는 것입니다.
-        </p>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          랜덤 결정이 도움이 되는 심리학적 메커니즘
-        </h2>
-        <div className="space-y-3">
-          {[
-            [
-              "결과 편향 제거",
-              "본인이 결정하면 결과가 나빠도 '내 탓'이라는 후회가 크지만, 랜덤은 책임을 분산시켜 실행에 집중하게 함",
-            ],
-            [
-              "분석 마비 탈출",
-              "선택지를 오래 고민할수록 뇌의 에너지가 소모되어 오히려 나쁜 결정을 함 — 랜덤이 이 루프를 끊음",
-            ],
-            [
-              "직관 확인 도구",
-              "동전이 '예스'로 나왔을 때 실망하면 → 실제 원하는 건 '노'라는 뜻. 내 감정을 확인하는 거울 역할",
-            ],
-          ].map(([t, d], i) => (
-            <div key={i} className="bg-white/5 p-4 rounded-lg">
-              <p className="font-bold text-neon-primary mb-2">{t}</p>
-              <p className="text-sm text-gray-400">{d}</p>
-            </div>
-          ))}
-        </div>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          이런 상황에 쓰세요
-        </h2>
-        <div className="grid grid-cols-2 gap-3">
-          {[
-            "🍕 뭐 먹을지 못 정할 때",
-            "💼 이직 제안 수락 여부",
-            "🎬 오늘 볼 영화 고르기",
-            "✉️ 연락할지 말지 망설일 때",
-            "🏃 오늘 운동할지 쉴지",
-            "💸 살까 말까 충동구매 방지",
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="bg-white/5 p-3 rounded-lg text-sm text-center"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-        <hr className="border-white/10 my-8" />
-        <p>
-          지금 결정을 못 내리고 있다면{" "}
-          <Link
-            to="/tools/yes-no-oracle"
-            className="text-neon-primary hover:underline"
-          >
-            SpinFlow 예스/노 신탁기
-          </Link>
-          를 눌러보세요. 결과에 대한 내 감정이 진짜 원하는 것을 알려줄 겁니다.
-        </p>
+
+        <p>랜덤 응답은 정답을 찾거나 결정의 책임을 대신하는 기능이 아닙니다. 두 선택 모두 괜찮고 쉽게 되돌릴 수 있을 때, 시작할 순서를 가볍게 정하는 데 사용할 수 있습니다. 의료·금융·계약·안전·진로처럼 결과의 비용이 큰 판단은 이 도구에 맡기지 마세요.</p>
+        <h2>양쪽 결과를 받아들일 수 있는 질문인가요?</h2>
+        <p>‘이미 골라 둔 두 영화 중 첫 번째 영화를 오늘 볼까?’처럼 어느 쪽이 나와도 손실이 작고 취소할 수 있는 질문부터 생각해 보세요. ‘이직 제안을 수락할까?’처럼 계약이나 생활에 큰 영향을 주는 질문은 정보를 모으고 이해관계자와 검토할 대상입니다. 무작위 결과는 그런 검토를 대신할 근거가 되지 않습니다.</p>
+        <h2>실제 도구는 두 가지가 아니라 네 가지 응답을 냅니다</h2>
+        <p><Link to="/tools/yes-no-oracle">Yes/No 결정 도구</Link>는 YES, NO, MAYBE, TRY AGAIN 중 하나를 선택합니다. 질문의 사실 관계를 분석하지 않으며, 네 응답 중 YES와 NO만 나오는 동전 던지기와도 다릅니다. 결과를 기다린 시간이 답의 신뢰도와 연결되지 않습니다.</p>
+        <h2>실행 전에 멈출 기준을 정하세요</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>양쪽 선택 모두 시간·비용 한도 안에 있는지 확인합니다.</li>
+          <li>MAYBE 또는 TRY AGAIN이면 보류할지, 한 번만 다시 할지 미리 정합니다.</li>
+          <li>마음에 드는 답이 나올 때까지 반복한 결과를 객관적인 판단으로 설명하지 않습니다.</li>
+          <li>결과에 동의하지 않으면 행동을 멈추고 조건을 다시 살펴봅니다.</li>
+        </ul>
+        <h2>결과를 본 뒤의 감정도 하나의 관찰입니다</h2>
+        <p>예상과 다른 결과가 나오면 자신이 선호하던 쪽을 떠올릴 수 있습니다. 그렇다고 실망이나 안도감이 ‘진짜 정답’을 입증하는 것은 아닙니다. 마음이 달라진 이유를 적고, 빠뜨린 정보나 다른 사람에게 미치는 영향을 확인하세요. 랜덤 선택이 행복이나 실행력을 높인다는 일반적인 효과를 이 글에서 보장하지 않습니다.</p>
+        <h2>가상의 영화 선택 기록</h2>
+        <p>질문: ‘오늘 첫 번째 영화를 볼까?’ / 전제: 두 영화 모두 구독 범위 안이고 오늘 볼 시간이 있음 / 규칙: 한 번 실행, MAYBE·TRY AGAIN이면 내일 결정 / 가상 응답: MAYBE / 행동: 오늘은 보류. 이 기록은 실제 사용자 사례나 자동 저장 기능의 예시가 아닙니다.</p>
+        <p>질문을 더 작게 만드는 순서는 <Link to="/blog/yes-no-reversible-choice">되돌릴 수 있는 선택을 위한 Yes/No 사용법</Link>에서 확인하세요. 반드시 두 결과 중 하나가 필요한 사소한 선택이라면 <Link to="/tools/coin-flip">동전 던지기</Link>의 동작과 비교할 수 있습니다.</p>
+        <p className="text-sm text-gray-400">내용 확인: 2026-09-20. 연구 결과를 모든 중요한 결정에 일반화하던 설명을 제거했습니다.</p>
       </div>
     ),
   },
@@ -4395,142 +4339,37 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "password-strength",
-    title: "비밀번호 강도 테스트: 내 비밀번호는 얼마나 안전한가",
+    title: "비밀번호 강도 표시의 한계와 계정 보안 점검",
     description:
-      "해커가 비밀번호를 푸는 데 걸리는 시간, 강력한 비밀번호의 조건, 비밀번호 관리자를 써야 하는 이유.",
+      "비밀번호의 길이만으로 해독 시간을 보장할 수 없는 이유와, 계정별 생성·재사용 방지·다중 인증의 역할을 구분합니다.",
     date: "2026-04-26",
     tags: ["비밀번호", "보안", "해킹", "개인정보"],
     thumbnail:
       "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2670&auto=format&fit=crop",
     content: (
       <div className="space-y-6 text-gray-300 leading-relaxed">
-        <p>
-          <code className="bg-white/10 px-1 rounded">123456</code>는 해커가{" "}
-          <strong className="text-white">1초 이내</strong>에 뚫습니다.{" "}
-          <Link
-            to="/tools/password-generator"
-            className="text-neon-primary hover:underline"
-          >
-            무료 비밀번호 생성기
-          </Link>
-          로 지금 당장 강력한 비밀번호를 만드세요.
-        </p>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          비밀번호 해독 예상 시간
-        </h2>
-        <div className="space-y-2">
-          {[
-            ["password", "즉시", "red"],
-            ["P@ssw0rd", "3시간", "red"],
-            ["Tr0ub4dor&3", "수백 년", "green"],
-            ["correct-horse-battery", "수천 년 이상", "green"],
-          ].map(([pw, time, color], i) => (
-            <div
-              key={i}
-              className="flex justify-between items-center bg-white/5 p-3 rounded-lg"
-            >
-              <code className="font-mono text-sm text-white">{pw}</code>
-              <span
-                className={`text-sm font-bold ${color === "red" ? "text-red-400" : "text-green-400"}`}
-              >
-                {time}
-              </span>
-            </div>
-          ))}
-        </div>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          강력한 비밀번호의 4가지 조건
-        </h2>
+
+        <p>문자열 하나만 보고 ‘몇 초’ 또는 ‘수백 년 동안 안전’이라고 말할 수는 없습니다. 로그인 시도 제한이 있는 온라인 공격인지, 유출된 비밀번호 저장 자료를 공격하는 상황인지에 따라 조건이 달라집니다. 이 글은 실제 비밀번호를 입력해 검사하도록 요구하지 않습니다.</p>
+        <h2>해독 시간 표에 빠져 있던 공격 조건</h2>
+        <p>온라인 로그인 시도에는 서비스의 속도 제한과 잠금 정책이 영향을 줍니다. 저장 자료가 유출된 상황에서는 해시 방식, 계산 비용, 공격 장비와 추측 목록이 영향을 줍니다. 공개된 예시 문자열은 이미 알려진 후보이므로 글이나 그림에 있는 예시를 실제 비밀번호로 쓰지 마세요.</p>
+        <p><a href="https://pages.nist.gov/800-63-4/sp800-63b.html" target="_blank" rel="noopener noreferrer">NIST SP 800-63B-4</a>는 인증 시스템의 위협과 통제 수단을 함께 설명합니다. 이 지침을 웹 생성기의 인증서나 특정 길이의 안전 보장으로 해석하지 않습니다.</p>
+        <h2>길이와 재사용 여부를 먼저 구분하세요</h2>
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong>길이 12자 이상</strong> — 길이가 강도의 핵심
-          </li>
-          <li>
-            <strong>대소문자 + 숫자 + 특수문자</strong> 혼합
-          </li>
-          <li>
-            <strong>사전 단어, 생일, 이름 사용 금지</strong>
-          </li>
-          <li>
-            <strong>서비스마다 다른 비밀번호</strong> — 1Password, Bitwarden 등
-            관리자 활용
-          </li>
+          <li>서비스가 허용하는 충분한 길이의 새 비밀번호를 계정마다 따로 생성합니다.</li>
+          <li>한 계정의 비밀번호가 유출되더라도 다른 계정에 그대로 대입되지 않도록 재사용을 피합니다.</li>
+          <li>알려진 비밀번호에 숫자나 기호만 덧붙이는 방식은 새로운 무작위 생성과 다릅니다.</li>
+          <li>서비스의 문자 제한을 확인하되, 대소문자·숫자·기호를 섞었다는 사실만으로 보안을 보장하지 않습니다.</li>
         </ul>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          주요 해킹 방법과 대응법
-        </h2>
-        <div className="space-y-3">
-          {[
-            [
-              "브루트 포스(Brute Force)",
-              "모든 경우의 수를 대입. 대응: 12자 이상 + 복잡도 증가 → 수억 년 필요",
-            ],
-            [
-              "딕셔너리 어택",
-              "사전 단어·흔한 비밀번호 목록 대입. 대응: 사전 단어 절대 사용 금지",
-            ],
-            [
-              "피싱(Phishing)",
-              "가짜 사이트로 속여 직접 입력 유도. 대응: URL 확인 + 이중 인증(2FA)",
-            ],
-            [
-              "크레덴셜 스터핑",
-              "다른 사이트에서 유출된 아이디/비번 재사용 시도. 대응: 서비스마다 다른 비밀번호",
-            ],
-          ].map(([t, d], i) => (
-            <div key={i} className="bg-white/5 p-4 rounded-lg">
-              <p className="font-bold text-neon-primary mb-1">{t}</p>
-              <p className="text-sm text-gray-400">{d}</p>
-            </div>
-          ))}
-        </div>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          비밀번호 관리자 추천
-        </h2>
-        <div className="space-y-2">
-          {[
-            ["1Password", "유료(월 $3~)", "가족·팀 공유 기능 우수. UI 최고"],
-            [
-              "Bitwarden",
-              "무료 (오픈소스)",
-              "자체 서버 호스팅 가능. 개발자 선호",
-            ],
-            ["KeePass", "무료 (로컬 저장)", "클라우드 없이 로컬 DB. 보안 최강"],
-            ["네이버 패스워드", "무료", "한국 서비스 연동에 편리"],
-          ].map(([name, price, desc], i) => (
-            <div
-              key={i}
-              className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"
-            >
-              <div className="flex-1">
-                <p className="text-sm font-bold text-white">{name}</p>
-                <p className="text-xs text-gray-400">{desc}</p>
-              </div>
-              <span className="text-xs text-neon-primary font-mono">
-                {price}
-              </span>
-            </div>
-          ))}
-        </div>
-        <div className="bg-blue-500/10 border border-blue-500/30 p-4 rounded-lg mt-4">
-          <p className="font-bold text-blue-400 mb-1">
-            💡 이중 인증(2FA)도 필수
-          </p>
-          <p className="text-sm text-gray-400">
-            비밀번호가 유출되어도 2FA가 있으면 안전합니다. Google Authenticator,
-            Authy 앱을 모든 주요 서비스에 설정하세요.
-          </p>
-        </div>
-        <hr className="border-white/10 my-8" />
-        <p>
-          <Link
-            to="/tools/password-generator"
-            className="text-neon-primary hover:underline"
-          >
-            SpinFlow 비밀번호 생성기
-          </Link>
-          로 길이·복잡도를 설정해 즉시 생성하세요.
-        </p>
+        <h2>SpinFlow 생성기가 하는 일과 하지 않는 일</h2>
+        <p><Link to="/tools/random-password">비밀번호 생성기</Link>는 브라우저의 보안 난수 기능으로 선택된 문자 풀에서 문자를 뽑습니다. 길이와 사용할 문자군을 고를 수 있지만, 선택한 모든 문자군이 결과에 반드시 한 번씩 나타나는 계약은 아닙니다. 해당 브라우저에서 보안 난수 기능을 사용할 수 없으면 생성을 중단합니다.</p>
+        <p>생성기 화면은 생성 결과의 문자 수를 표시합니다. 실제 해독 시간, 유출 여부, 서비스의 저장 방식, 피싱 저항성을 검사하지 않습니다. 생성한 문자열은 브라우저에서 처리되며 생성기 로직은 이를 분석 이벤트에 포함하지 않습니다. 복사하면 기기 클립보드에 들어가므로 클립보드 기록·동기화 설정과 주변 화면 노출도 확인하세요.</p>
+        <h2>다중 인증은 위험을 줄이지만 모든 공격을 막지는 않습니다</h2>
+        <p>비밀번호 외의 인증 수단을 추가하면 비밀번호만 탈취한 공격에 대응하는 데 도움이 될 수 있습니다. 그러나 인증 방식에 따라 피싱이나 세션 탈취 등의 위험은 남습니다. ‘2FA가 있으니 유출되어도 안전하다’는 결론은 성립하지 않습니다. 지원되는 인증 방식의 안내와 계정 복구 수단을 함께 확인하세요.</p>
+        <p>낯선 링크에서 로그인하라는 요청을 받았다면 비밀번호 복잡도보다 접속한 서비스와 주소를 먼저 확인해야 합니다. NIST 역시 비밀번호 자체는 피싱에 저항하는 인증 방식이 아니라고 구분합니다.</p>
+        <h2>비밀번호 관리자는 복구 방식까지 확인하고 선택하세요</h2>
+        <p>관리자의 가격이나 브랜드만으로 보안 수준을 순위 매기지 않습니다. 사용하는 기기 지원, 동기화 범위, 잠금 방식, 복구 절차, 내보내기와 백업 방법을 공식 안내에서 확인하세요. 복구 정보를 잃었을 때의 동작을 모른 채 유일한 사본을 맡기지 않는 것이 중요합니다.</p>
+        <p>새 비밀번호로 변경했다면 정상 로그인과 복구 수단을 확인하고, 공개 이슈나 문의에 실제 비밀번호를 붙여 넣지 마세요. 서비스별 설정은 해당 서비스의 계정 보안 안내를 따릅니다.</p>
+        <p className="text-sm text-gray-400">내용 확인: 2026-09-20. 고정 해독 시간과 포괄적 안전 보장을 삭제했습니다. 실제 계정 침입·크래킹 시험은 수행하지 않았습니다.</p>
       </div>
     ),
   },
@@ -4593,7 +4432,7 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
     slug: "bmi-limitations",
     title: "BMI 계산기의 한계: 숫자 너머의 건강 지표",
     description:
-      "BMI가 과체중이라도 건강할 수 있고, 정상이라도 위험할 수 있습니다. BMI의 한계와 보완 지표를 알아봅니다.",
+      "BMI만으로 개인의 건강 상태를 판단하기는 어렵습니다. 체성분과 허리둘레 등 함께 살펴볼 지표를 알아봅니다.",
     date: "2026-04-28",
     tags: ["BMI", "건강", "체중", "운동"],
     thumbnail:
@@ -4601,70 +4440,54 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
     content: (
       <div className="space-y-6 text-gray-300 leading-relaxed">
         <p>
-          BMI(체질량지수)는{" "}
-          <strong className="text-white">1830년대에 개발된 공식</strong>입니다.
-          현대 의학은 BMI만으로 건강을 판단하는 것의 한계를 명확히 인지하고
-          있습니다.{" "}
-          <Link
-            to="/tools/bmi-calculator"
-            className="text-neon-primary hover:underline"
-          >
-            BMI 계산기
-          </Link>
-          로 내 수치를 확인해보세요.
+          BMI(체질량지수)는 체중(kg)을 키(m)의 제곱으로 나눈 값입니다.
+          체중 상태를 살펴보는 간편한 선별 지표이지만 개인의 건강을 단독으로 판정하는 값은 아닙니다.{" "}
+          <Link to="/tools/bmi-calculator" className="text-neon-primary hover:underline">BMI 계산기</Link>로
+          수치를 확인한 뒤, 어떤 기준과 한계가 있는지 함께 살펴보세요.{" "}
+          <a href="https://www.cdc.gov/bmi/about/index.html" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">CDC의 BMI 설명</a>
         </p>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          BMI가 놓치는 것들
-        </h2>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">BMI가 놓치는 것들</h2>
         <div className="space-y-3">
           {[
-            [
-              "근육량 무시",
-              "보디빌더는 BMI상 비만이지만 체지방률은 낮음 — 근육이 지방보다 무겁기 때문",
-            ],
-            [
-              "체지방 분포 무시",
-              "복부 비만(내장지방)은 BMI 정상이어도 심혈관 질환 위험이 높음",
-            ],
-            [
-              "인종 차이",
-              "동아시아인은 같은 BMI에서 서구인보다 체지방률·당뇨 위험이 더 높음",
-            ],
-            [
-              "나이·성별 무시",
-              "같은 BMI라도 노인과 청년, 남성과 여성의 건강 리스크가 다름",
-            ],
-          ].map(([t, d], i) => (
-            <div key={i} className="bg-white/5 p-4 rounded-lg">
-              <p className="font-bold text-neon-primary mb-1">{t}</p>
-              <p className="text-sm text-gray-400">{d}</p>
+            ["근육과 지방의 구분", "근육량이 많은 사람은 BMI가 높아도 체지방량이 많다고 단정할 수 없습니다. BMI는 체중을 구성하는 근육과 지방을 구분하지 못합니다."],
+            ["체지방 분포", "BMI가 정상 범위여도 복부 지방과 다른 위험 요인을 함께 살펴야 합니다. 허리둘레는 복부 지방 분포를 살펴보는 보완 지표이며 내장지방량을 직접 측정하는 값은 아닙니다."],
+            ["인구집단과 분류 기준", "BMI와 체지방·대사 위험의 관계는 인구집단에 따라 다를 수 있습니다. 국내 성인 기준과 해외 기준을 구분해 해석해야 합니다."],
+            ["개인의 상황", "나이, 근육량, 동반 질환에 따라 같은 BMI의 해석이 달라질 수 있습니다. 숫자가 같다고 건강 상태까지 같은 것은 아닙니다."],
+          ].map(([title, text]) => (
+            <div key={title} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{title}</p>
+              <p className="text-sm text-gray-400">{text}</p>
             </div>
           ))}
         </div>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          BMI를 보완하는 지표
-        </h2>
-        <ul className="list-disc pl-6 space-y-2">
+        <p>
+          WHO의 아시아 인구집단 관련 전문가 협의도 집단에 따라 위험 경계가 다를 수 있음을
+          설명합니다. 이를 모든 아시아인에게 적용되는 하나의 BMI 기준으로 해석해서는 안 됩니다.{" "}
+          <a href="https://pubmed.ncbi.nlm.nih.gov/14726171/" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">WHO 전문가 협의(2004)</a>
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">BMI를 보완하는 지표</h2>
+        <ul className="list-disc pl-6 space-y-3">
           <li>
-            <strong>허리둘레</strong> — 남성 90cm, 여성 85cm 이상 시 복부비만
+            <strong>허리둘레</strong> — 국내 성인 복부비만 기준은 남성 90cm 이상, 여성 85cm 이상입니다.
+            소아·청소년이나 모든 국가의 공통 기준으로 적용하지 마세요.{" "}
+            <a href="https://general.kosso.or.kr/html/user/core/view/reaction/main/kosso/inc/data/guideline2022_vol8.pdf" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">대한비만학회 2022 지침, 비만 진단 표</a>
           </li>
           <li>
-            <strong>체지방률</strong> — 인바디 측정, 남성 15~25%, 여성 20~30%
-            정상
+            <strong>체지방률</strong> — 측정 방법과 대상에 따른 참고 범위가 필요합니다.
+            기기 수치를 단독으로 정상·질환 판정에 사용하지 마세요.
           </li>
           <li>
-            <strong>허리-키 비율</strong> — 허리둘레 ÷ 키, 0.5 이하가 건강
+            <strong>허리-키 비율</strong> — 같은 단위로 잰 허리둘레를 키로 나눈 값입니다.
+            NICE는 BMI 35 미만 성인에게 허리둘레를 키의 절반 미만, 즉 비율 0.5 미만으로
+            유지하도록 안내합니다. 이 비율만으로 전반적인 건강을 판정하지는 않습니다.{" "}
+            <a href="https://www.nice.org.uk/guidance/ng246/chapter/Identifying-and-assessing-overweight-obesity-and-central-adiposity" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">NICE NG246 성인 평가 지침</a>
           </li>
         </ul>
         <hr className="border-white/10 my-8" />
         <p>
-          <Link
-            to="/tools/bmi-calculator"
-            className="text-neon-primary hover:underline"
-          >
-            SpinFlow BMI 계산기
-          </Link>
-          로 수치를 확인하되, 하나의 참고 지표로만 활용하세요.
+          <Link to="/tools/bmi-calculator" className="text-neon-primary hover:underline">SpinFlow BMI 계산기</Link>는
+          국내 성인 분류를 보여 줍니다. 수치는 하나의 참고 지표로 활용하고,
+          개인의 건강 상태는 다른 검사 결과와 병력 등을 함께 고려해 의료 전문가와 상담하세요.
         </p>
       </div>
     ),
@@ -4803,113 +4626,37 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "sleep-optimization",
-    title: "잠 못 자는 현대인을 위한 수면 최적화 완벽 가이드",
+    title: "수면 시간 계산: 90분 주기와 입면 시간 가정 읽기",
     description:
-      "수면 부채, 수면 사이클, 최적 취침 시간까지. 과학이 알려주는 수면의 질을 높이는 방법.",
+      "수면 시간 계산의 90분·입면 시간 가정을 구분하고, 실제 수면 단계와 혼동하지 않도록 시간 예시를 검산합니다.",
     date: "2026-05-01",
     tags: ["수면", "건강", "생산성", "수면사이클"],
     thumbnail:
       "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2670&auto=format&fit=crop",
     content: (
       <div className="space-y-6 text-gray-300 leading-relaxed">
-        <p>
-          수면 부족은 단순한 피로가 아닙니다. 하루 6시간 수면이 2주 지속되면
-          인지 능력이{" "}
-          <strong className="text-white">24시간 수면 박탈과 동등한 수준</strong>
-          으로 떨어집니다 (펜실베이니아 대학 연구).
-        </p>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          수면 사이클 이해하기
-        </h2>
-        <p>
-          수면은 90분 주기로 반복됩니다. 4~5사이클(6~7.5시간)이 이상적. 알람은
-          사이클이 끝나는 시점에 맞추세요.
-        </p>
-        <div className="bg-white/5 p-4 rounded-lg font-mono text-sm text-gray-300">
-          취침 11시 → 기상 6:30 (7.5시간 = 5 사이클) ✓<br />
-          취침 11시 → 기상 6:00 (7시간 = 90분×4+30분) ✗ 중간에 깸
-        </div>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          수면 질을 높이는 5가지
-        </h2>
-        <div className="space-y-2">
-          {[
-            ["일정한 기상 시간", "주말도 동일하게 — 수면 리듬의 핵심"],
-            ["취침 1시간 전 화면 차단", "블루라이트가 멜라토닌 분비 억제"],
-            ["침실 온도 18~20°C", "체온 하강이 수면 유도"],
-            [
-              "카페인 오후 2시 이후 금지",
-              "반감기 6시간 — 오후 2시 커피 = 자정에 절반이 남아있음",
-            ],
-            ["수면 전 루틴", "뇌에 '이제 잘 시간' 신호 보내기"],
-          ].map(([t, d], i) => (
-            <div
-              key={i}
-              className="flex gap-3 items-start bg-white/5 p-3 rounded-lg"
-            >
-              <span className="text-neon-primary font-bold text-sm flex-shrink-0">
-                ✓
-              </span>
-              <div>
-                <p className="text-sm text-white font-bold">{t}</p>
-                <p className="text-xs text-gray-400 mt-0.5">{d}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          수면 부채(Sleep Debt)란?
-        </h2>
-        <p>
-          하루 1시간씩 덜 자면 일주일 뒤{" "}
-          <strong className="text-white">7시간의 수면 부채</strong>가 쌓입니다.
-          주말에 몰아 자도 인지 기능은 완전히 회복되지 않습니다 (하버드 의대
-          연구). 수면 부채는 누적되고, 일시 보충은 임시방편에 불과합니다.
-        </p>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          낮잠 황금 시간 — 최적 낮잠 가이드
-        </h2>
-        <div className="space-y-3">
-          {[
-            [
-              "10~20분 (파워냅)",
-              "N1~N2 수면만. 깨어나면 즉시 각성. 집중력 34%·주의력 54% 향상 (NASA 연구)",
-            ],
-            [
-              "90분 (전체 사이클)",
-              "한 사이클 완성. 깊은 피로 회복에 효과적. 하지만 밤 수면에 영향 줄 수 있음",
-            ],
-            [
-              "피해야 할 낮잠",
-              "30~60분 — 깊은 수면(N3) 진입 후 중단되어 오히려 더 피곤함",
-            ],
-          ].map(([t, d], i) => (
-            <div key={i} className="bg-white/5 p-4 rounded-lg">
-              <p className="font-bold text-neon-primary mb-1">{t}</p>
-              <p className="text-sm text-gray-400">{d}</p>
-            </div>
-          ))}
-        </div>
-        <div className="bg-yellow-500/10 border border-yellow-500/30 p-4 rounded-lg">
-          <p className="font-bold text-yellow-400 mb-1">
-            💡 커피냅(Coffee Nap) 꿀팁
-          </p>
-          <p className="text-sm text-gray-400">
-            낮잠 직전 커피 한 잔 → 20분 수면 → 카페인이 딱 이때 흡수되어
-            상쾌하게 기상. 카페인 효과 + 수면 효과 동시에.
-          </p>
-        </div>
-        <hr className="border-white/10 my-8" />
-        <p>
-          취침·기상 시간 계산은{" "}
-          <Link
-            to="/tools/time-calculator"
-            className="text-neon-primary hover:underline"
-          >
-            SpinFlow 시간 계산기
-          </Link>
-          로 90분 단위로 역산해보세요.
-        </p>
+
+        <p>알람 시간을 계산하는 일과 몸의 수면 상태를 판단하는 일은 다릅니다. 이 글은 취침·기상 시각을 기록하고 계산기의 가정을 읽는 방법을 설명합니다. 계산 결과만으로 수면 부족, 수면 단계, 기상 후 컨디션을 판정하지 않습니다.</p>
+        <h2>90분은 계산 가정이며 개인의 수면 주기 측정값이 아닙니다</h2>
+        <p>미국 국립심폐혈액연구소(NHLBI)는 수면 주기가 약 80~100분마다 반복되며, 밤 동안 여러 주기를 거친다고 설명합니다. 실제 주기는 일정한 90분 타이머처럼 작동하지 않습니다. 특정 시각에 일어났다는 이유로 깊은 수면 도중에 깼다거나 잘못 잤다고 결론 낼 수 없습니다.</p>
+        <p><a href="https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep" target="_blank" rel="noopener noreferrer">NHLBI 수면 단계 설명</a>은 수면 단계의 관찰에 뇌 활동과 안구 움직임 등의 측정이 쓰인다고 안내합니다. 이 사이트의 시간 계산은 그러한 수면 검사를 수행하지 않습니다.</p>
+        <h2>밤 11시부터 아침까지의 시간을 먼저 검산하세요</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>23:00부터 다음 날 06:30까지의 경과 시간은 7시간 30분입니다.</li>
+          <li>23:00부터 다음 날 06:00까지는 7시간입니다. 잠드는 데 걸린 시간과 깨어 있던 시간을 빼기 전의 간격입니다.</li>
+          <li>90분 × 4 + 30분 = 390분 = 6시간 30분입니다. 7시간과 같은 값이 아닙니다.</li>
+        </ul>
+        <p>위 숫자들은 산술 예시입니다. 06:00은 나쁘고 06:30은 좋다는 건강 판단을 뜻하지 않습니다. 일어난 시각만으로 수면 단계를 알 수 없으므로 계산표에 성공·실패 표시를 붙이지 않습니다.</p>
+        <h2>수면 계산기는 입면 15분을 별도로 더합니다</h2>
+        <p><Link to="/tools/sleep-calculator">수면 시간 계산기</Link>는 한 구간을 90분으로, 잠드는 데 걸리는 시간을 15분으로 가정합니다. 취침 입력이 23:00이면 5구간 예시는 23:00 + 15분 + 450분 = 다음 날 06:45입니다. 이는 개인에게 7시간 30분이 충분하다는 판정이나 실제 입면 시간 측정값이 아닙니다.</p>
+        <p>계산기에 넣는 시각이 침대에 누운 시각인지, 잠든 것으로 추정하는 시각인지 먼저 구분하세요. 이미 잠든 시각을 입력하면서 입면 시간을 또 더하면 시간 해석이 어긋납니다. 날짜를 넘기는 간격은 <Link to="/tools/time-calculator">시간 계산기</Link>로 별도로 확인할 수 있습니다.</p>
+        <h2>카페인 반감기 예시는 실제 몸속 양과 구분하세요</h2>
+        <p>반감기를 6시간으로 고정한 단순 모델에서 10시간 후 잔존 비율은 0.5의 (10÷6)제곱, 약 31.5%입니다. 오후 2시부터 자정까지 10시간이 지났다면 이 가정에서는 절반이 아니라 약 31.5%입니다. 실제 개인의 대사 속도, 섭취량, 약물이나 건강 상태를 추정하는 계산은 아닙니다.</p>
+        <p>이 가상의 반감기 숫자를 모든 사람에게 적용하는 카페인 섭취 마감 시각으로 바꾸지 마세요. 카페인과 일상 습관에 관한 일반 안내는 <a href="https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits" target="_blank" rel="noopener noreferrer">NHLBI 건강한 수면 습관</a>에서 확인할 수 있습니다.</p>
+        <h2>기록할 것은 시각과 느낌이며 수면 단계는 추정하지 않습니다</h2>
+        <p>예를 들어 ‘침대에 누운 시각 23:00 / 잠든 시각은 모름 / 기상 06:30 / 중간에 한 번 깬 것으로 기억 / 오전 졸림 있음’처럼 확인한 것과 모르는 것을 나눠 적을 수 있습니다. 이 기록은 가상 예시이며 특정 수면 처방이나 실제 사용자 사례가 아닙니다.</p>
+        <p>계속되는 수면 문제나 낮 활동에 영향을 주는 증상이 있다면 계산기 결과로 진단을 대신하지 말고 의료진과 상담하세요. 이 글은 낮잠 길이별 집중력 향상률이나 특정 기상 시각의 효과를 보장하지 않습니다.</p>
+        <p className="text-sm text-gray-400">내용 확인: 2026-09-20. 시간 계산과 모델 가정을 바로잡았으며, 개인의 수면 상태를 검수했다는 의미는 아닙니다.</p>
       </div>
     ),
   },
@@ -4991,7 +4738,7 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
     slug: "exercise-brain",
     title: "운동이 뇌를 바꾼다: 신체 활동과 인지 기능의 관계",
     description:
-      "30분 걷기가 항우울제보다 효과적일 수 있습니다. 운동이 뇌에 미치는 과학적 효과와 실천 가이드.",
+      "운동과 기억·기분·아이디어 생성의 관계를 연구 결과와 한계로 살펴봅니다.",
     date: "2026-05-03",
     tags: ["운동", "뇌과학", "인지기능", "정신건강"],
     thumbnail:
@@ -4999,56 +4746,54 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
     content: (
       <div className="space-y-6 text-gray-300 leading-relaxed">
         <p>
-          하버드 의대 존 레이티 교수는 운동을{" "}
-          <strong className="text-white">"뇌에 주는 최고의 선물"</strong>이라고
-          표현합니다. 신체 활동은 BDNF(뇌유래신경영양인자)를 증가시켜 새로운
-          뉴런 생성을 촉진합니다.
+          운동과 뇌 건강의 관계는 사람을 대상으로 한 연구에서도 다뤄져 왔습니다.
+          다만 뇌의 구조 변화, 기억 과제 점수, 우울 증상은 서로 다른 측정값입니다.
+          한 연구의 결과를 모든 사람에게 같은 효과가 나타난다는 뜻으로 읽지 않는 것이 중요합니다.
         </p>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          운동이 뇌에 미치는 효과
-        </h2>
-        <div className="space-y-3">
-          {[
-            [
-              "기억력 향상",
-              "해마 부피 증가 — 운동하는 노인은 비운동 노인보다 기억력 40% 우수",
-            ],
-            [
-              "집중력 강화",
-              "운동 후 2~3시간 도파민·노르에피네프린 상승 — 학습·업무 골든타임",
-            ],
-            [
-              "우울·불안 감소",
-              "16주간 주 3회 30분 유산소 운동을 한 중년 이후 우울증 환자군이 항우울제 복용군과 비슷한 수준으로 증상이 개선 (Duke대 SMILE 연구, 특정 대상·기간 조건)",
-            ],
-            [
-              "창의력 향상",
-              "걷는 동안 창의성 과제를 수행한 참가자의 81%가 앉아 있을 때보다 나은 결과를 보임 (스탠퍼드대 Oppezzo·Schwartz 연구)",
-            ],
-          ].map(([t, d], i) => (
-            <div key={i} className="bg-white/5 p-4 rounded-lg">
-              <p className="font-bold text-neon-primary mb-1">{t}</p>
-              <p className="text-sm text-gray-400">{d}</p>
-            </div>
-          ))}
-        </div>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          최소 유효 용량
-        </h2>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">기억력과 해마: 무엇을 측정했을까?</h2>
         <p>
-          주 3회, 30분 중강도 유산소(빠른 걷기, 자전거)만으로도 인지 기능 향상
-          효과가 나타납니다. 헬스장이 필요 없습니다.
+          2011년 고령자 120명을 대상으로 한 무작위시험에서 유산소 운동군의 해마 부피는
+          1년 뒤 약 2% 증가했습니다. 다만 공간기억 과제 성적은 스트레칭 대조군보다
+          유의하게 더 향상되지 않았습니다. 해마의 부피 증가율을 기억력 향상률로 바꿔 읽을 수는 없습니다.{" "}
+          <a href="https://doi.org/10.1073/pnas.1015950108" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">Erickson 등의 2011년 원논문</a>
         </p>
-        <hr className="border-white/10 my-8" />
         <p>
-          오늘 운동할지 쉴지 고민이라면{" "}
-          <Link
-            to="/tools/yes-no-oracle"
-            className="text-neon-primary hover:underline"
-          >
-            예스/노 신탁기
-          </Link>
-          에 물어보세요 — 단, 운동 쪽이 나왔을 때 안도감이 든다면 그게 답입니다.
+          이 연구는 BDNF(뇌유래신경영양인자) 같은 혈액 지표도 살폈습니다.
+          혈액 지표나 MRI의 부피 변화만으로 사람의 뇌에 새 뉴런이 생겼다고 직접 확인할 수는 없습니다.
+          연구에서 제시하는 생물학적 설명과 실제로 측정한 결과를 구분해야 합니다.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">우울 증상 연구: 약물과의 비교를 읽는 법</h2>
+        <p>
+          주요우울장애 성인 202명이 참여한 2007년 SMILE-II 시험은 운동·약물·위약군을
+          16주 동안 비교했습니다. 감독 운동군은 주 3회, 준비·정리를 포함한 45분 세션 중
+          약 30분 동안 걷기·조깅을 했습니다. 관해율은 감독 운동군 45%, 가정 운동군 40%,
+          세르트랄린군 47%, 위약군 31%였습니다.{" "}
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2702700/" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">SMILE-II 원논문</a>
+        </p>
+        <p>
+          운동군과 약물군의 차이가 통계적으로 유의하지 않았다는 결과가 치료의 동등성이나
+          운동의 우월성을 증명하지는 않습니다. 주 분석에서는 활성 치료와 위약의 차이도
+          통상적인 유의수준에 도달하지 않았습니다. 이 결과를 모든 우울·불안 증상에 일반화하거나
+          운동으로 처방 치료를 바꾸라는 뜻으로 받아들이지 마세요.
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">걷기와 아이디어 생성</h2>
+        <p>
+          Oppezzo와 Schwartz의 2014년 연구 중 대학생 48명이 참여한 한 실험에서,
+          걷는 동안 발산적 아이디어 과제 성적이 좋아진 참가자는 81%였습니다.
+          이 수치는 점수 자체가 81% 높아졌다는 뜻이 아닙니다. 정답을 찾는 수렴적 과제에서는
+          같은 이점이 나타나지 않았습니다.{" "}
+          <a href="https://aaalab.stanford.edu/wp-content/uploads/2015/05/Oppezzo2014GiveYourIdeasSomeLegs.pdf" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">실험 1의 방법과 결과</a>
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">생활에 운동 시간을 마련하기</h2>
+        <p>
+          운동량과 인지 기능의 관계는 대상과 운동 유형에 따라 다릅니다.
+          주 3회 30분을 모든 사람에게 효과가 보장되는 최소량으로 볼 수는 없습니다.
+          50세 이상을 대상으로 한 시험들을 종합한 연구에서도 운동 유형에 따라 용량과 효과의 관계가 달랐습니다.{" "}
+          <a href="https://doi.org/10.1016/j.arr.2022.101591" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">2022년 운동량·인지 기능 분석</a>
+        </p>
+        <p>
+          일정한 “학습 골든타임”을 전제로 계획하기보다, 운동 뒤 자신의 피로도와 업무 집중이
+          어떻게 달라지는지 기록해 보세요. 운동과 휴식은 몸 상태와 기존 치료 계획을 고려해 정하세요.
         </p>
       </div>
     ),
@@ -6353,9 +6098,9 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "ai-era-skills",
-    title: "AI 시대에 살아남는 스킬: 대체되지 않는 능력 5가지",
+    title: "AI와 일할 때 기를 역량 5가지: 질문·검증·협업",
     description:
-      "ChatGPT가 할 수 없는 것은 무엇인가. AI 시대에 오히려 더 가치가 높아지는 인간 고유의 능력.",
+      "AI 결과를 확인하고 업무 맥락에 맞게 활용하는 질문·판단·협업 방법을 살펴봅니다.",
     date: "2026-05-21",
     tags: ["AI", "미래직업", "스킬", "자기계발"],
     thumbnail:
@@ -6363,127 +6108,66 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
     content: (
       <div className="space-y-6 text-gray-300 leading-relaxed">
         <p>
-          AI가 코드를 짜고, 글을 쓰고, 이미지를 생성하는 시대. 그렇다면{" "}
-          <strong className="text-white">인간만이 할 수 있는 것</strong>은
-          무엇일까요? 역설적으로 AI의 발전이 특정 인간 능력의 가치를 높이고
-          있습니다.
+          AI로 초안을 만들거나 반복 작업을 보조하는 것과 업무 전체를 맡기는 것은 범위가 다릅니다.
+          다음은 AI와 함께 일할 때 연습해 볼 다섯 가지 역량입니다.
+          특정 직업의 생존이나 임금 상승을 보장하는 목록이 아니라, 결과를 검토하고 협업하는 실천 제안입니다.
         </p>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          AI가 대체하기 어려운 5가지 능력
-        </h2>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">함께 연습할 다섯 가지 역량</h2>
         <div className="space-y-3">
           {[
-            [
-              "🤝 관계 구축·공감",
-              "신뢰는 인간 대 인간 상호작용에서 형성됩니다. AI는 흉내 낼 수 있어도 진짜 관계를 만들지 못함",
-            ],
-            [
-              "🎯 질문하는 능력",
-              "AI는 좋은 답을 내지만 좋은 질문은 인간이 해야 합니다. 프롬프트 엔지니어링이 핵심 스킬이 된 이유",
-            ],
-            [
-              "⚖️ 윤리적 판단",
-              "맥락·이해관계·가치관을 고려한 복잡한 도덕적 결정은 AI가 대리할 수 없음",
-            ],
-            [
-              "🔗 도메인 간 연결",
-              "서로 다른 분야의 지식을 창의적으로 연결하는 것은 여전히 인간의 강점",
-            ],
-            [
-              "🗣️ 설득과 영향력",
-              "청중의 감정·문화·맥락을 읽고 메시지를 조율하는 능력 — 리더십의 핵심",
-            ],
-          ].map(([t, d], i) => (
-            <div key={i} className="bg-white/5 p-4 rounded-lg">
-              <p className="font-bold text-neon-primary mb-1">{t}</p>
-              <p className="text-sm text-gray-400">{d}</p>
+            ["🤝 관계 구축·공감", "상대의 요구와 기대를 확인하고 약속한 일을 이행하는 연습을 하세요. 자동으로 만든 답변을 전달하기 전에 상대가 실제로 궁금해한 부분을 다뤘는지 살펴보세요."],
+            ["🎯 질문과 목표 설정", "AI도 질문 생성을 도울 수 있습니다. 제안된 질문이 실제 목적과 제약을 다루는지는 사용자가 확인해야 합니다."],
+            ["⚖️ 판단과 책임", "영향을 받는 사람과 상황을 확인하고 어떤 결정을 누가 책임질지 정하세요. AI 제안을 채택하기 전에 해당 업무의 검토 절차를 따르세요."],
+            ["🔗 도메인 연결과 검증", "다른 분야의 아이디어를 적용할 때 전제와 근거가 맞는지 확인하세요. AI가 만든 비유나 연결도 실제 자료로 검토하세요."],
+            ["🗣️ 설명과 협업", "청중의 배경에 맞춰 설명을 조정하고 질문과 피드백으로 이해 여부를 확인하세요. 그럴듯한 문장이 서로의 이해를 보장하지는 않습니다."],
+          ].map(([title, text]) => (
+            <div key={title} className="bg-white/5 p-4 rounded-lg">
+              <p className="font-bold text-neon-primary mb-1">{title}</p>
+              <p className="text-sm text-gray-400">{text}</p>
             </div>
           ))}
         </div>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          AI가 빠르게 대체하는 직무 vs 강화하는 직무
-        </h2>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {[
-            {
-              title: "⚠️ 주의 필요",
-              color: "border-red-500/30 bg-red-500/5",
-              textColor: "text-red-400",
-              items: [
-                "단순 데이터 입력·정리",
-                "기본 번역·교정",
-                "표준 보고서 작성",
-                "반복적 코드 생성",
-                "이미지 편집·리터치",
-              ],
-            },
-            {
-              title: "💪 더 가치 상승",
-              color: "border-green-500/30 bg-green-500/5",
-              textColor: "text-green-400",
-              items: [
-                "AI 프롬프트 설계",
-                "전략적 의사결정",
-                "복잡한 협상·영업",
-                "창의적 방향 설정",
-                "인간 중심 서비스",
-              ],
-            },
-          ].map((card, i) => (
-            <div key={i} className={`border ${card.color} p-4 rounded-lg`}>
-              <p className={`font-bold ${card.textColor} mb-3`}>{card.title}</p>
-              <ul className="space-y-1">
-                {card.items.map((item, j) => (
-                  <li key={j} className="text-xs text-gray-400 flex gap-2">
-                    <span>•</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          지금 당장 시작할 수 있는 AI 활용법
-        </h2>
-        <div className="space-y-2">
-          {[
-            [
-              "ChatGPT/Claude",
-              "초안 작성 → 본인이 편집·발전. AI를 조수로, 자신이 편집장으로",
-            ],
-            [
-              "GitHub Copilot",
-              "반복 코드 자동완성. 아낀 시간을 아키텍처 설계에 투자",
-            ],
-            [
-              "Notion AI",
-              "회의록 요약, 문서 구조화. 정리에 드는 수작업 시간을 줄이는 데 도움",
-            ],
-            [
-              "Midjourney/DALL-E",
-              "레퍼런스 이미지 빠른 생성. 디자이너와 협업 속도 향상",
-            ],
-          ].map(([tool, use], i) => (
-            <div
-              key={i}
-              className="flex gap-3 items-start bg-white/5 p-3 rounded-lg"
-            >
-              <span className="text-neon-primary font-bold font-mono text-sm min-w-[120px]">
-                {tool}
-              </span>
-              <span className="text-sm text-gray-400">{use}</span>
-            </div>
-          ))}
-        </div>
-        <hr className="border-white/10 my-8" />
         <p>
-          AI 도구를 활용해 반복 업무를 줄이고, 위의 5가지 능력에 시간을
-          투자하세요.{" "}
-          <Link to="/tools" className="text-neon-primary hover:underline">
-            SpinFlow 도구 모음
-          </Link>
-          도 단순 반복 작업을 줄이는 데 도움이 됩니다.
+          검색 의도를 명확히 하는 질문을 자동 생성하고 평가한 연구도 있습니다.
+          이처럼 질문 생성 자체를 인간만의 능력으로 단정할 수는 없지만,
+          특정 검색 과업의 결과를 모든 상황에서 질문 품질이 보장된다는 뜻으로 확대해서도 안 됩니다.{" "}
+          <a href="https://www.microsoft.com/en-us/research/publication/generating-clarifying-questions-for-information-retrieval/" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">명확화 질문 생성 연구(2020)</a>
+        </p>
+        <p>
+          NIST AI RMF는 시스템의 구성과 위험에 맞게 사람의 역할과 책임을 정의하도록 안내합니다.
+          이는 모든 AI가 판단할 능력이 없다는 선언이 아니라, 어떤 검토와 책임 구조가 필요한지 정하는 문제입니다.{" "}
+          <a href="https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">NIST의 인간·AI 상호작용 설명</a>
+        </p>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">AI 보조를 검토할 과업과 사람이 확인할 사항</h2>
+        <p>
+          ILO의 2025년 분석은 직업을 구성하는 과업의 잠재적 AI 노출도를 추정합니다.
+          이는 실제 일자리 감소나 임금 상승을 측정한 결과와 다릅니다.
+          같은 직무도 조직의 도입 방식과 담당 과업에 따라 영향이 달라질 수 있습니다.{" "}
+          <a href="https://www.ilo.org/resource/article/how-might-generative-ai-impact-different-occupations" target="_blank" rel="noopener noreferrer" className="text-neon-primary underline">ILO의 방법과 해석 범위(2025)</a>
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left">
+            <thead><tr className="border-b border-white/20"><th className="p-3">보조를 검토할 과업</th><th className="p-3">확인할 사항</th></tr></thead>
+            <tbody>
+              {[
+                ["데이터 정리", "누락·중복·단위가 원자료와 맞는지 확인"],
+                ["번역·교정", "맥락과 전문 용어가 유지되는지 검토"],
+                ["보고서 초안", "인용 출처와 계산 결과를 원자료로 확인"],
+                ["코드 작성 보조", "요구사항과 테스트를 확인하고 적용 범위를 검토"],
+                ["이미지 제작 보조", "사용 목적과 출처·이용 권리를 확인"],
+              ].map(([task, check]) => <tr key={task} className="border-b border-white/10"><td className="p-3">{task}</td><td className="p-3">{check}</td></tr>)}
+            </tbody>
+          </table>
+        </div>
+        <h2 className="text-2xl font-bold text-white mt-8 mb-4">작은 작업에서 활용 여부를 판단하기</h2>
+        <p>
+          초안 도구를 쓸 때는 출처와 표현을 편집하고, 요약 도구를 쓸 때는 원문의 중요한 내용이
+          빠지지 않았는지 대조해 보세요. 생성 시간만이 아니라 검토와 수정에 드는 시간까지 포함해
+          자신에게 도움이 되는지 확인하는 편이 좋습니다.
+        </p>
+        <p>
+          반복 계산이나 변환이 필요하다면 <Link to="/tools" className="text-neon-primary hover:underline">SpinFlow 도구 모음</Link>에서
+          용도에 맞는 도구를 찾아보세요. 어떤 도구를 쓰더라도 입력과 결과의 의미를 확인하는 과정은 남아 있습니다.
         </p>
       </div>
     ),

@@ -1,3 +1,27 @@
+# Current release acceptance — 2026-09-20 08:55 대한민국 표준시
+
+PASS local: audited article corrections, original slugs/dates/index scope, finite positive BMI and18.5/23/25/30/35 classes, matching legend/gauge/FAQ/static references, title/description cache parity,62 browser checks, build689 and domain/content/growth/search/static gates, independent review findings resolved. PENDING: selective commit, exact remote SHA and Git-connected deployment/live-page reconciliation. Inbox/CMP/account/crawler success is not an acceptance claim.
+
+---
+
+# Current acceptance — SPK-014 — 2026-09-20 08:33 KST
+
+PASS for source audit: E01–08/B01–09/A01–08 all classified with source/date/population/endpoint or explicit unverified/value-judgment status; exact strongest figures checked without confusing participant share, volume, cognitive score or remission; BMI country/adult/strict-boundary context explicit; AI capability/responsibility/employment exposure separated; replacement draft per unsupported statement; related BMI T01/T02/T03 and metadata contracts recorded; independent review findings resolved;27/27 product hashes and changed-product paths preserved. Product build/tests/browser N/A for this report-only slice and NOT RUN. Product repair, live deployment, account/receiver/CMP/crawler evidence are not passed by this acceptance.
+
+---
+
+# Prior continuation — 2026-09-20
+
+PASS (local): SPK-007 zero/positive rate, both methods, invalid periods and independent repayment reconciliation; SPK-003 corrected390min/31.5percent/fixed-model assumptions and neutral UI; SPK-004 no security score/crack-time/MFA guarantee; SPK-008 UTF16/UTF8 examples; SPK-009 shared static/SPA core contracts and post metadata; SPK-010 usable fictional record with original noindex; SPK-011 low-risk scope; SPK-005/012 truthful disclosure without invented configuration/contact; SPK-013 unique-content comparison without speculative URL mutation. Final browser32/32/pageerrors0, static repair verifier, build688 and existing gates PASS. External CMP/account/real crawler/receiver, GSC traffic and SPK-014 remain unverified, not passed.
+
+---
+
+# Current slice — 2026-09-20
+
+PASS: JSON boundary/negative/string/exponent/decimal/syntax; stale output removed on edits/errors; percentage zero/empty/negative/nonfinite/overflow; four clipboard handlers allowed/denied/unavailable/pending, repeat copy; type/lint/build/domain checks; browser 390/1280 and keyboard actions; zero external writes. Independent review: no blockers. OS clipboard/live deployment remain unverified and outside this local acceptance.
+
+---
+
 # ACCEPTANCE
 
 ## 2026-08-30 focused SEO/SXO repair

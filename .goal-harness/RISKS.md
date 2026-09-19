@@ -1,3 +1,9 @@
+# Release checkpoint — 2026-09-20 08:55 대한민국 표준시
+
+Current release: preserve untracked work and remote ancestry; deployment stops at normal Git push plus read-only observation. Private inbox/CMP/account/GSC/crawler state remains unverified. Prior security notes below are historical, not fresh release findings.
+
+---
+
 # RISKS
 
 ## 2026-08-30 focused repair risks

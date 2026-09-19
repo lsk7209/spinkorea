@@ -1,3 +1,29 @@
+# Current release goal — 2026-09-20 08:38 KST
+
+Finish SPK-014 three-post/BMI changes and both metadata caches, preserve existing local audit repairs, verify the combined release, commit only intended code/docs/generated artifacts, normal push to GitHub main. User explicitly requested deployment. Read Git-connected deployment status without direct Vercel mutation. Stop: Git remote SHA reconciled and deployment/public status truthfully recorded; actual provider failure cannot be labeled live success. No new account/CMP/DB/indexing/URL policy changes.
+
+---
+
+# Current goal — SPK-014 source audit — 2026-09-20
+
+Goal: verify exact claims in exercise-brain, bmi-limitations and ai-era-skills against primary research/official guidance, with claim-level scope, source date, uncertainty and concrete replacement drafts. Scope: read-only product audit plus durable reports; preserve prior uncommitted repairs and all publication/account state. Acceptance: all substantive claims classified; strongest figures checked in original studies; BMI country/adult/boundary context explicit; AI capability versus normative responsibility versus employment prediction separated; local render/cache/link evidence and independent review; file hashes unchanged. Stop: source matrix, minimal repair plan and recovery state verified. Separate BMI/hourly tool observations may be recorded without expanding into implementation or compliance claims.
+
+Outcome: DONE for this source-audit objective; product correction/release not included or claimed.
+
+---
+
+# Prior continuation — 2026-09-20
+
+Goal: continue remaining audit backlog SPK-003/004/005/007/008/009/010/011/012/013 through safe local implementation and evidence; preserve completed SPK-001/002/006. Acceptance: loan boundaries, corrected sourced content, clear counting semantics, matching static/SPA guidance, privacy/public-contact disclosure, CSS merge review with no speculative URL mutation. External account/CMP/crawler evidence remains explicitly unverified until available. Stop: all authorized local work verified, remaining real external requirements recorded; do not claim the full external audit complete.
+
+---
+
+# Current slice — 2026-09-20
+
+Goal: repair SPK-001 JSON unsafe integer handling, SPK-002 invalid percentage results, SPK-006 clipboard feedback locally. Acceptance: normal results preserved; unsafe JSON blocked without input loss; invalid percentages clear; clipboard success only after resolution. Evidence: focused behavioral checks, type/lint, build, content/search/growth, browser desktop/mobile. Stop: local checks and durable handoff complete. No push or deployment.
+
+---
+
 # GOAL
 
 ## 2026-08-30 GitHub-first fleet SEO remediation

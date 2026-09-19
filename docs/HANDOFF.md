@@ -1,3 +1,60 @@
+# Current release handoff — 2026-09-20 08:55 대한민국 표준시
+
+- User goal: deploy the audited SpinKorea fixes, including remaining SPK-014 implementation.
+- Exact state: LOCAL VERIFIED on main baseline97b2c0d; scoped source/generated/test/docs changes are not yet committed or pushed.
+- Completed: prior tool reliability/claim repairs, three source-audited health/AI articles, both metadata caches, domestic adult BMI ranges and static/SPA disclosure parity. Privacy wording explicitly states the absent private request channel.
+- Changed files/evidence: docs/audits/spinkorea/2026-09-19-225440/release-20260920.md; src/pages/tools and content/shared guidance/generator/verification scripts/public feeds; no live systems changed yet.
+- Fresh validation: build689 and TypeScript PASS; loan/JSON/storage/spin/content/growth/search/static PASS; browser32+30=62 PASS with zero page errors;727 metadata identities/dates/schedules/source flags unchanged; mobile BMI visually checked. Independent Luna findings resolved. See release report and output/spk014-release/browser.json.
+- Side effects/rollback: local files only; pre-release tracked patch and SHA256 hashes in output/spk014-release. Preserve unrelated untracked evidence/caches/drafts. For a pushed release, revert the focused commit; no force push/reset.
+- Risks: actual private inbox, CMP/AdSense/account/GSC/crawler evidence remains unverified. Simulated clipboard is not OS clipboard proof. Direct Vercel mutations and workflow dispatch remain excluded.
+- Deliberately not run/sent: push/deploy yet, Vercel CLI/API/hooks, account/env/domain/DB writes, indexing submissions, email/Issues. Git push is authorized and next.
+- Single next step: selective commit, fresh remote ancestry check, normal main push, then read-only Git deployment/public verification.
+
+---
+
+# Current handoff — 2026-09-20 08:33 KST — SPK-014 SOURCE AUDIT DONE
+
+- User goal: continue the documented original-source comparison of exercise-brain, bmi-limitations and ai-era-skills; deliver concrete correction drafts while preserving product and publication state.
+- Exact state: main97b2c0d, prior uncommitted local repairs intact. Source-audit objective complete; SPK-014 product corrections are not implemented. Local/remote release and external-account axes remain separate.
+- Completed: 25 article claim groups classified with original/official sources or explicit uncertainty; exact figures/populations/endpoints checked; minimal replacement drafts and metadata/render contract mapped. Related BMI T01 classification/gauge, T02 FAQ/disclaimer, T03 health-status copy recorded separately. Source report: docs/audits/spinkorea/2026-09-19-225440/spk014-source-review-20260920.md.
+- Changed files/live systems: report, current Goal Harness sections, this handoff, PROJECT_STATE.md and audit-backlog follow-up only; evidence under output/spk014. No live-system changes.
+- Fresh validation: 27/27 changed/new product SHA256 hashes preserved, changed-product path set unchanged, related BMI/hourly tool git diff empty; 25 claim IDs complete. NICE p37 and KSSO PDF p3 table/footnote visually verified. Independent Luna/max report review plus parent resolution of four wording/coverage findings; git diff --check passes. See output/spk014/verification.json. Product build/tests/browser NOT RUN this document-only slice; older build688/browser32 evidence remains historical.
+- Side effects/rollback: public source reads and local evidence downloads only. Roll back the new audit report/current docs sections if necessary; preserve prior product diff and old untracked work. No account/credentials accessed, no outbound messages sent.
+- Risks/limits: unlocated exact quotes,40% memory figure,universal bodyfat/minimum-dose values and permanent AI job/capability forecasts are not established false merely because unsupported. Historical studies are not current treatment prescriptions. Product inconsistencies identified here still exist until the next patch. Actual inbox,CMP,AdSense,GSC,crawler and deployment evidence remains unverified.
+- Deliberately not run/sent: product edits, generator changes/build/tests, publish-date/index/URL changes, commit/push/deployment, Vercel/account/CMP/DB/indexing mutations, email/Issues.
+- Single concrete next step: apply the report's bounded corrections to the three posts and both metadata caches plus BmiCalculator, preserve slugs/dates/indexing, then verify BMI18.5/23/25/30/35 boundaries and static/SPA metadata/body parity. Current source-audit DONE does not mean product repair or release DONE.
+
+---
+
+# Prior handoff — 2026-09-20 08:00 KST — audit repairs LOCAL DONE
+
+- User goal: continue the remaining 2026-09-19 confirmed audit repairs locally and clarify what work remains. Full external audit/release is not marked complete.
+- Exact state: main at 97b2c0d with uncommitted scoped changes. Prior SPK-001/002/006 reliability repairs preserved; local SPK-003/004/005/007/008/009/010/011/012 corrections and SPK-013 content comparison completed. No remote state was changed or reverified.
+- Completed: stable zero-rate/invalid-period loan calculation and independent reconciliation; sourced sleep/password corrections and neutral output labels; UTF-16/UTF-8 definitions; shared static/SPA privacy/contact guidance; usable fictional random record; low-risk Yes/No scope; three article titles/descriptions synchronized with both metadata caches. CSS articles/URLs unchanged pending traffic evidence.
+- Changed files: src/pages/tools/{LoanCalculator,SleepCalculator,PasswordGenerator,TextCounter,YesNoOracle}.tsx; src/utils/loan.ts; src/pages/{Contact,PrivacyPolicy}.tsx; src/data/{site-guidance,site-pages,content-plan.generated,post-metadata.generated,post-metadata.runtime.generated}.json; src/data/generated-content-chunks/chunk-01.json; posts.tsx; generate-assets.mjs; verification scripts; public feeds; Goal Harness/PROJECT_STATE and audit evidence. Prior JSON/percentage/copy files are also still dirty. Full matrix: docs/audits/spinkorea/2026-09-19-225440/local-repairs-20260920.md.
+- Fresh validation: Node24.12.0 loan and JSON checks PASS; type-check/lint (both tsc) PASS; content650/50/min88 PASS; full build688 PASS; growth25 PASS; search18 PASS; static repair verifier PASS; final browser32/32 PASS with pageerrors0, including title/canonical/index and shared disclosure checks. Independent Luna/max final review found no concrete blockers. git diff --check PASS before final docs update.
+- Evidence: output/audit-repairs-{build,browser}.log; output/tool-reliability/browser-results.json and 390/1280 screenshots; the audit repair report above. First static verifier false-positive matched a negative security disclaimer; fixed test passes. The older 22-case report below is superseded by the 32-case result.
+- Side effects/rollback: local source, generated artifacts and docs only. public/{llms.txt,rss.xml,sitemap.xml} intentionally retain current-build outputs including seven already-due scheduled articles and corrected metadata; public/dist search parity passes. No schedule, publication timestamp or editorial approval was changed. Revert only the scoped local diff; preserve pre-existing .omc/.playwright-cli/vite-cache/draft prompts/output. Owned browser/Vite server closed by verifier finally.
+- Remaining: actual private inbox is not provided/verified; AdSense/CMP/region/consent and operating data-flow evidence remain unverified; genuine Google crawler/GSC traffic evidence unavailable; CSS representative URL/merge not chosen; SPK-014 other health/AI claims still need source comparison. Clipboard is mocked, browser runs isolated local Vite, and no live release/OS clipboard proof is claimed. Direct .ts test imports were verified on Node24, not every runtime.
+- Deliberately not run/sent: commit/push, Vercel/deployment, account/CMP changes, email/Issues, advertising clicks, content/indexing submission, database writes, CSS redirect/delete/noindex changes.
+- Single next step: read-only SPK-014 comparison of the remaining health/AI statements against their original sources; obtain private-inbox and actual account/crawler evidence separately. No permission handoff is needed for that local read-only follow-up, but it is not part of this completed repair slice.
+
+---
+
+# Prior handoff — 2026-09-20 07:05 KST — tool reliability LOCAL
+
+- Goal: continue the latest 2026-09-19 audit with its next bounded JSON/percentage/copy regression slice (SPK-001, SPK-002, SPK-006).
+- Baseline: main at 97b2c0d (published audit); tracked worktree clean at start. Existing .omc, .playwright-cli, old audit vite-cache, draft prompts, and output were preserved. Remote/deployment state not rechecked.
+- Completed implementation: JSON rejects unsupported integer/nonfinite number tokens while respecting quoted strings; valid formatting stays compatible. Editing or invalid input clears prior output; original input remains. Percentage calculations clear zero-denominator/empty/nonfinite/overflow results and explain signed negative inputs. Four clipboard handlers await actual completion, catch denial/unavailable API, and preserve displayed content.
+- Changed product files: src/utils/json-format.ts; src/pages/tools/{JsonFormatter,PercentageCalculator,TextCounter,PasswordGenerator,RandomTeam}.tsx. New reusable checks: scripts/verify-tool-reliability.mjs and scripts/verify-tool-reliability-browser.mjs. State: .goal-harness, PROJECT_STATE.md, this handoff.
+- Fresh validation: JSON pure-function checks PASS; type-check and lint (both tsc --noEmit) PASS; content validation PASS (650 plans, 50 approved, min score 88); full build PASS (688 routes); growth 25 PASS; search-scope 18 PASS on current-time build. Expanded browser regression PASS 22/22, pageerrors 0; includes repeat copy, content retention, mobile/desktop keyboard actions. Independent Luna/max review found no substantiated blockers. git diff --check PASS. Local slice DONE.
+- Evidence: output/tool-reliability/{baseline-results.json,browser-results.json,*.png}; output/tool-reliability-{baseline,final,build}.log. Baseline 8 PASS/14 FAIL includes a percentage selector defect in the test; it is not a count of 14 distinct product defects. Corrected result-card scoping passes current percentage transitions. Earlier audit provides original 0-denominator reproduction.
+- Side effects/rollback: local source and test artifacts only. Build refreshed public/{llms.txt,rss.xml,sitemap.xml} with newly due content; those three build-owned changes were inspected and restored to HEAD to exclude unrelated content publication. dist remains a successful current-time build, so rerun build before repeating public/dist parity verification. Roll back only the scoped local diff; do not remove pre-existing untracked work.
+- Limitations: clipboard allowed/denied/pending are API mocks, not real OS permission/clipboard proof. Browser checks isolate external/API/non-GET requests; no real ads, analytics or account behavior proven. JSON decimals retain JavaScript floating-point rounding, explicitly disclosed; no lossless-number parser added. Browser verifier uses PLAYWRIGHT_MODULE or installed user-level Playwright CLI, without new dependencies.
+- Not run/sent: Git commit/push, direct Vercel operations, production writes, content publication, database/account/indexing operations, real ad clicks or messages. Owned browser/Vite server close in verifier finally; owned caches retained.
+- Single next step: continue the remaining audit backlog with SPK-007 loan zero-rate/period validation as the next bounded local regression slice; keep current SPK-001/002/006 changes separate. Commit/push is not performed or implied by this handoff.
+
+---
 # Current handoff — 2026-09-08 spin-consistency repair LOCAL
 
 - Goal: improve SpinKorea reliability for the active AdSense-readiness fleet without predicting approval or changing the AdSense account.

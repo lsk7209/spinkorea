@@ -72,12 +72,12 @@
   {
     "path": "/contact",
     "title": "문의하기 | SpinFlow",
-    "description": "SpinFlow 서비스 문의, 버그 제보, 제휴 및 개선 제안을 보낼 수 있습니다.",
+    "description": "공개 가능한 도구 오류, 콘텐츠 정정 요청과 개선 제안은 GitHub Issues로 남길 수 있습니다. 개인정보나 비공개 제휴 자료를 받을 별도 연락처는 현재 안내하지 않습니다.",
     "heading": "문의하기",
-    "summary": "서비스 개선 제안과 오류 제보를 받습니다.",
+    "summary": "GitHub 공개 오류 제보와 비공개 문의 경로의 현재 상태를 안내합니다.",
     "changefreq": "monthly",
     "priority": 0.5,
-    "lastmod": "2026-05-05"
+    "lastmod": "2026-09-20"
   },
   {
     "path": "/privacy",
@@ -87,7 +87,7 @@
     "summary": "사용자 개인정보와 브라우저 저장 데이터 처리 방침입니다.",
     "changefreq": "yearly",
     "priority": 0.4,
-    "lastmod": "2026-05-05"
+    "lastmod": "2026-09-20"
   },
   {
     "path": "/terms",
@@ -161,23 +161,23 @@
   },
   {
     "path": "/tools/random-password",
-    "title": "비밀번호 생성기 | 안전한 랜덤 암호 만들기",
-    "description": "길이와 문자 조건을 선택해 강력한 랜덤 비밀번호를 생성하는 무료 보안 도구입니다.",
+    "title": "랜덤 비밀번호 생성기 | 길이·문자 후보 선택",
+    "description": "Crypto API 기반 난수로 선택한 후보 문자에서 비밀번호를 생성합니다. 결과의 길이를 표시하며 실제 계정 보안이나 해독 시간을 보장하지 않습니다.",
     "heading": "비밀번호 생성기",
-    "summary": "브라우저에서 안전한 비밀번호를 즉시 생성합니다.",
+    "summary": "길이와 후보 문자군을 정해 브라우저에서 랜덤 문자열을 생성합니다.",
     "changefreq": "monthly",
     "priority": 0.8,
-    "lastmod": "2026-05-05"
+    "lastmod": "2026-09-20"
   },
   {
     "path": "/tools/text-counter",
-    "title": "글자수 세기 | 공백 포함·제외 문자수 계산",
-    "description": "자소서, 블로그, 문서 작성에 필요한 글자수와 단어수를 빠르게 계산합니다.",
+    "title": "글자수 세기 | UTF-16 코드 단위와 UTF-8 바이트",
+    "description": "UTF-16 코드 단위, 공백 제외 길이, UTF-8 바이트를 계산합니다. 제출처의 글자수 기준은 별도로 확인하세요.",
     "heading": "글자수 세기",
-    "summary": "텍스트 길이와 단어 수를 즉시 확인합니다.",
+    "summary": "화면에 보이는 글자 수와 코드 단위 수가 다를 수 있습니다.",
     "changefreq": "monthly",
     "priority": 0.8,
-    "lastmod": "2026-05-05"
+    "lastmod": "2026-09-20"
   },
   {
     "path": "/tools/case-converter",
@@ -292,12 +292,12 @@
   {
     "path": "/tools/bmi-calculator",
     "title": "BMI 계산기 | 체질량지수 계산",
-    "description": "키와 몸무게를 입력해 BMI 체질량지수를 계산하고 상태를 확인합니다.",
+    "description": "키와 몸무게로 BMI 수치와 국내 성인 분류를 확인하세요. BMI는 개인의 건강 상태를 단독으로 판정하는 값이 아닙니다.",
     "heading": "BMI 계산기",
-    "summary": "체질량지수를 간단히 계산합니다.",
+    "summary": "국내 성인 BMI 분류와 선별 지표의 한계를 함께 확인합니다.",
     "changefreq": "monthly",
     "priority": 0.8,
-    "lastmod": "2026-05-05"
+    "lastmod": "2026-09-20"
   },
   {
     "path": "/tools/percentage-calculator",
@@ -372,12 +372,12 @@
   {
     "path": "/tools/loan-calculator",
     "title": "대출 이자·상환금 계산기 | 원리금균등·원금균등",
-    "description": "대출 원금, 금리, 기간을 입력하면 월 상환금, 총 이자, 총 상환금을 자동 계산합니다.",
+    "description": "고정 금리·매월 상환을 가정한 대출 계산입니다. 금리 0%와 양의 정수 개월을 지원하며, 수수료·일수별 이자는 제외합니다.",
     "heading": "대출 계산기",
     "summary": "대출 이자와 월 상환금을 빠르게 계산합니다.",
     "changefreq": "monthly",
     "priority": 0.8,
-    "lastmod": "2026-06-09"
+    "lastmod": "2026-09-20"
   },
   {
     "path": "/tools/jeonse-converter",
@@ -421,13 +421,13 @@
   },
   {
     "path": "/tools/sleep-calculator",
-    "title": "수면 계산기 | 90분 사이클 최적 기상·취침 시각",
-    "description": "취침 시각 또는 기상 시각을 입력하면 90분 수면 사이클 기준으로 최적 기상·취침 시각을 자동 계산합니다.",
+    "title": "수면 계산기 | 90분·입면 15분 가정의 참고 시각",
+    "description": "90분 구간과 입면 15분을 가정해 기상·취침 참고 시각을 계산합니다. 개인의 수면 단계나 최적 기상 시각을 판정하지 않습니다.",
     "heading": "수면 계산기",
-    "summary": "90분 수면 사이클 기준 최적 기상·취침 시각을 계산합니다.",
+    "summary": "90분·입면 15분은 계산 가정이며 실제 수면 상태를 측정하지 않습니다.",
     "changefreq": "monthly",
     "priority": 0.8,
-    "lastmod": "2026-06-09"
+    "lastmod": "2026-09-20"
   },
   {
     "path": "/tools/body-fat",

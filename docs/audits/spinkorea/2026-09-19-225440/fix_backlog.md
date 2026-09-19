@@ -1,3 +1,15 @@
+# Release checkpoint — 2026-09-20
+
+SPK-014 source corrections and related adult BMI boundary fixes are now implemented and locally verified alongside the earlier repairs. Fresh build689 and browser62/62 PASS. See release-20260920.md; push and live reconciliation pending. Operational inbox/CMP/account/crawler questions remain unverified.
+
+---
+
+# 후속 상태 — 2026-09-20 08:33 KST
+
+아래는 2026-09-19 최초 감사 시점의 제안 기록이다. 이후 로컬 수정 상태는 [local-repairs-20260920.md](local-repairs-20260920.md), 최신 SPK-014 원자료 대조와 수정안은 [spk014-source-review-20260920.md](spk014-source-review-20260920.md)를 따른다. SPK-014의25개 주장 감사는 완료됐으며 제품 반영은 아직 하지 않았다. 다음 작은 수정은 세 글/두 메타데이터 캐시와 연결 BMI 분류·FAQ·안내 문구다. 실제 계정/문의 수신/CMP/GSC 및 배포 증거는 별도로 미확인이다. 최초 기록의 미승인 표기는 당시 상태이며 이후 사용자 지시를 취소하지 않는다.
+
+---
+
 # 최소 변경 백로그 — 제안만, 구현하지 않음
 승인 대상은 각 ID의 최소 파일/조건이다. 배포·설정·삭제·URL통합은 이번 권한에 없음. 상세 사실과 불확실성은 evidence.md 참조.
 

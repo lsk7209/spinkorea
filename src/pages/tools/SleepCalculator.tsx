@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Moon } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
+import guidance from "@/data/site-guidance.json";
 
 const CYCLE_MIN = 90;
 const FALL_ASLEEP_MIN = 15;
@@ -48,43 +49,37 @@ export default function SleepCalculator() {
     time: minutesToTime(wakeMin - FALL_ASLEEP_MIN - cycles * CYCLE_MIN),
   })).reverse();
 
-  const qualityInfo = [
-    { cycles: 4, hours: "6시간", quality: "최소", color: "text-yellow-400" },
-    { cycles: 5, hours: "7.5시간", quality: "적정", color: "text-green-400" },
-    { cycles: 6, hours: "9시간", quality: "충분", color: "text-cyan-400" },
-  ];
-
   return (
     <ToolLayout
-      title="수면 시간 계산기 | 90분 사이클 기준 최적 기상·취침 시각"
-      description="취침 시각 또는 기상 시각을 입력하면 90분 수면 사이클 기준으로 최적 기상·취침 시각을 자동 계산합니다."
-      keywords="수면계산기, 수면시간계산기, 기상시간계산기, 수면사이클, 최적기상시각, 잠자는시간"
+      title="수면 시간 계산기 | 90분 사이클 기준 기상·취침 참고 시각"
+      description="취침 시각 또는 기상 시각을 입력하면 90분 수면 사이클 기준으로 기상·취침 참고 시각을 자동 계산합니다."
+      keywords="수면계산기, 수면시간계산기, 기상시간계산기, 수면사이클, 취침시각, 잠자는시간"
       howToUse={[
-        "취침 시각 → 기상 시각: 잠드는 시각을 입력하면 최적 기상 시각을 계산합니다.",
-        "기상 시각 → 취침 시각: 일어날 시각을 입력하면 최적 취침 시각을 계산합니다.",
+        "취침 시각 → 기상 시각: 잠자리에 눕는 시각을 입력하면 입면 15분을 더해 기상 참고 시각을 계산합니다.",
+        "기상 시각 → 취침 시각: 일어날 시각을 입력하면 취침 참고 시각을 계산합니다.",
         "수면 사이클(4~6회) 중 생활에 맞는 시각을 선택하세요.",
       ]}
       tips={[
-        "이 계산기는 평균값인 90분을 한 사이클로 가정합니다. 실제 개인별 수면 사이클은 대략 70~120분으로 편차가 있어 결과는 참고용입니다.",
-        "평균 입면(잠드는 데 걸리는 시간)은 약 15분으로 반영되어 있습니다.",
-        "성인 권장 수면은 7~9시간(5~6 사이클)입니다.",
+        "이 계산기는 한 구간을 90분으로 가정합니다. NHLBI는 주기가 약 80~100분마다 반복된다고 설명하며, 개인의 실제 수면 단계는 이 계산기로 알 수 없습니다.",
+        "입면 시간 15분은 계산을 위한 고정 가정이며 개인의 측정값이 아닙니다.",
+        "구간 수만으로 필요한 수면량이나 알람의 적절성을 판단하지 마세요.",
         "같은 시간에 자고 일어나는 규칙적인 수면이 수면의 질을 높이는 데 도움이 됩니다.",
       ]}
       faqs={[
         {
           question: "왜 90분 단위로 계산하나요?",
           answer:
-            "수면은 얕은 수면 → 깊은 수면 → REM 수면 단계를 거치며 순환하고, 이 한 주기가 평균적으로 약 90분입니다. 다만 실제 주기 길이는 사람마다 대략 70~120분까지 차이가 있어, 90분은 계산 편의를 위한 평균값이며 모든 사람에게 정확히 들어맞는 것은 아닙니다.",
+            "90분은 시간 계산을 위한 가정입니다. 실제 수면은 여러 단계를 거치며 주기 길이가 일정하지 않으므로, 계산된 시각이 특정 수면 단계의 끝이라는 뜻은 아닙니다.",
         },
         {
           question: "알람을 몇 사이클에 맞춰야 할까요?",
           answer:
-            "최소 5사이클(7.5시간)을 권장합니다. 시간이 부족하다면 4사이클(6시간)이 3사이클(4.5시간)보다 훨씬 낫습니다. 사이클 중간(예: 6~7시간)보다 사이클 완료 시점이 기상에 유리합니다.",
+            "구간 수만으로 최적 알람을 정할 수 없습니다. 필요한 수면 시간과 생활 일정을 고려하고, 수면 문제가 계속되면 계산 결과로 진단을 대신하지 마세요.",
         },
         {
           question: "잠드는 데 시간이 더 걸리면 어떻게 되나요?",
           answer:
-            "이 계산기는 입면 시간을 15분으로 가정합니다. 실제로 잠드는 데 더 오래 걸린다면 취침 시각을 조금 앞당기는 것이 좋습니다.",
+            "이 계산기는 입면 시간을 15분으로 고정합니다. 실제 입면 시간이 다르면 표에 표시된 시간과 실제 수면 시간도 달라지며, 이 도구는 그 차이를 측정하거나 보정하지 않습니다.",
         },
       ]}
       relatedTools={[
@@ -106,6 +101,7 @@ export default function SleepCalculator() {
       ]}
     >
       <div className="flex flex-col gap-8">
+        <p className="text-sm text-gray-400">{guidance.sleep.definition}</p>
         {/* 모드 선택 */}
         <div className="flex gap-3">
           {(["bedtime", "wakeup"] as const).map((m) => (
@@ -125,7 +121,7 @@ export default function SleepCalculator() {
           <h3 className="text-base font-bold text-neon-primary mb-4 flex items-center gap-2">
             <Moon size={18} />
             {mode === "bedtime"
-              ? "잠드는 시각을 입력하세요"
+              ? "잠자리에 눕는 시각을 입력하세요"
               : "일어날 시각을 입력하세요"}
           </h3>
           <input
@@ -146,26 +142,26 @@ export default function SleepCalculator() {
         {/* 결과 */}
         <div className="space-y-3">
           <h3 className="text-base font-bold text-white">
-            {mode === "bedtime" ? "추천 기상 시각" : "추천 취침 시각"}
+            {mode === "bedtime" ? "계산된 기상 참고 시각" : "계산된 취침 참고 시각"}
           </h3>
           {(mode === "bedtime" ? wakeResults : bedResults).map(
-            ({ cycles, label, time }, i) => (
+            ({ cycles, label, time }) => (
               <div
                 key={cycles}
-                className={`flex items-center justify-between p-4 rounded-xl border transition-all ${i === 1 ? "bg-neon-primary/10 border-neon-primary/50" : "bg-white/5 border-white/10"}`}
+                className="flex items-center justify-between p-4 rounded-xl border bg-white/5 border-white/10"
               >
                 <div>
                   <span
-                    className={`text-xs font-bold px-2 py-0.5 rounded-full mr-2 ${qualityInfo[i].color} bg-white/10`}
+                    className="text-xs font-bold px-2 py-0.5 rounded-full mr-2 text-gray-300 bg-white/10"
                   >
-                    {qualityInfo[i].quality}
+                    계산 예시
                   </span>
                   <span className="text-sm text-gray-400">
                     {cycles} 사이클 · {label}
                   </span>
                 </div>
                 <span
-                  className={`text-2xl font-black ${i === 1 ? "text-neon-primary" : "text-white"}`}
+                  className="text-2xl font-black text-white"
                 >
                   {time}
                 </span>
@@ -174,26 +170,27 @@ export default function SleepCalculator() {
           )}
         </div>
 
+        <p className="text-sm text-gray-400">근거: <a href="https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep" target="_blank" rel="noopener noreferrer" className="underline">NHLBI 수면 단계</a>와 <a href="https://www.nhlbi.nih.gov/health/sleep-deprivation/healthy-sleep-habits" target="_blank" rel="noopener noreferrer" className="underline">건강한 수면 습관</a>. 90분·입면 15분은 계산 가정이며, 개인의 수면 상태를 판정하지 않습니다.</p>
         {/* 수면 사이클 안내 */}
         <div className="bg-white/5 border border-white/10 p-5 rounded-xl">
           <h3 className="text-sm font-bold text-white mb-3">
             수면 사이클 참고
           </h3>
           <div className="space-y-2">
-            {qualityInfo.map((q) => (
+            {CYCLE_COUNTS.map((cycles) => (
               <div
-                key={q.cycles}
+                key={cycles}
                 className="flex items-center justify-between text-sm"
               >
                 <span className="text-gray-400">
-                  {q.cycles} 사이클 ({q.hours})
+                  {cycles} 사이클 ({cyclesLabel(cycles)})
                 </span>
-                <span className={`font-bold ${q.color}`}>{q.quality}</span>
+                <span className="font-bold text-gray-300">계산 예시</span>
               </div>
             ))}
           </div>
           <p className="text-xs text-gray-500 mt-3">
-            성인 권장 수면: 7~9시간 (5~6 사이클)
+            표의 구간 수는 수면의 질이나 충분함을 판정하지 않습니다.
           </p>
         </div>
       </div>

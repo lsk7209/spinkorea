@@ -1,3 +1,29 @@
+# Release checkpoint — 2026-09-20 08:55 대한민국 표준시
+
+Fresh results and rollback evidence are recorded in docs/audits/spinkorea/2026-09-19-225440/release-20260920.md and output/spk014-release. No Git push or production result is claimed yet.
+
+---
+
+# Current evidence — SPK-014 — 2026-09-20 08:33 KST
+
+Source audit report: docs/audits/spinkorea/2026-09-19-225440/spk014-source-review-20260920.md. Covers 25 article claim groups and three related BMI classification/FAQ/copy findings with official/original sources, study populations/endpoints and concrete replacement drafts. Downloaded official NICE NG246 and KSSO2022 PDFs; extracted with pypdf and visually inspected relevant tables with PyMuPDF rendering. NICE p37 adult thresholds and KSSO PDF p3 table/footnote confirmed. Windows cp949 print attempt failed once; explicit UTF-8 succeeded. Existing Luna/max source and repo-only lanes returned evidence; final report review complete and four concrete wording/coverage findings resolved by parent.
+
+Fresh verification at08:27: output/spk014/verification.json records articleClaimCount25, productHashesUnchanged27, productPathDrift=false, relatedToolDiff=NONE. git diff --check exit0 (only Git line-ending advisories). No product source, public/dist build artifacts, publishing/account or remote writes in this slice. Previous build688 and browser32/32 are historical; product tests/build NOT RUN for this document audit.
+
+---
+
+# Current evidence — 2026-09-20 08:00 KST
+
+Final local gates PASS: loan zero/invalid/tiny-rate/large-period/overflow and independent amortization; prior JSON numeric regression; type-check/lint (same tsc); content650/50/min88; build688; growth25; search18; verify-audit-repairs.mjs static body/metadata/index/links/RNG; browser32/32/pageerrors0 with corrected article metadata, canonical/index, disclosures, neutral sleep, password length/RNG and earlier clipboard checks. Logs: output/audit-repairs-{build,browser}.log; output/tool-reliability/browser-results.json. Existing 390/1280 JSON/percentage keyboard/layout screenshots retained. Detailed sources, implementation/verification boundaries, false-positive test correction and CSS comparison: docs/audits/spinkorea/2026-09-19-225440/local-repairs-20260920.md. No operating-account, actual OS clipboard or production proof.
+
+---
+
+# Prior slice — 2026-09-20
+
+2026-09-20: node scripts/verify-tool-reliability.mjs PASS (numeric/string/exponent/decimal/syntax/format); npm run type-check and npm run lint PASS (same tsc check); npm run content:validate PASS (650/50/min88); npm run build PASS (688 routes); npm run verify:growth PASS 25; node scripts/verify-search-scope.mjs PASS 18 before reverting only unrelated public feeds. node scripts/verify-tool-reliability-browser.mjs PASS 22/22, pageerrors 0, including all 4 clipboard APIs under allowed/denied/unavailable/pending, repeat copy, content retention, percentage transitions, JSON invalidation, 390/1280 layout and keyboard flow. Evidence output/tool-reliability/browser-results.json, screenshots, and output/tool-reliability-build.log. Clipboard is mocked; no OS/live evidence. Baseline 8/22 passed; original percentage test selector was defective and corrected, so baseline tally is not a product-defect count.
+
+---
+
 # EVIDENCE
 
 ## 2026-08-30 baseline

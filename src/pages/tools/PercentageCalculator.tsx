@@ -19,23 +19,25 @@ export default function PercentageCalculator() {
   const [res3, setRes3] = useState<number | null>(null);
 
   useEffect(() => {
+    const finiteResult = (value: number) => Number.isFinite(value) ? value : null;
+    const validInputs = (a: string, b: string) => a.trim() !== "" && b.trim() !== "" && Number.isFinite(Number(a)) && Number.isFinite(Number(b));
     // Calculate Mode 1
-    if (val1_A && val1_B) {
-      setRes1((parseFloat(val1_A) / 100) * parseFloat(val1_B));
+    if (validInputs(val1_A, val1_B)) {
+      setRes1(finiteResult((Number(val1_A) / 100) * Number(val1_B)));
     } else setRes1(null);
 
     // Calculate Mode 2
-    if (val2_A && val2_B) {
-      setRes2((parseFloat(val2_A) / parseFloat(val2_B)) * 100);
+    if (validInputs(val2_A, val2_B) && Number(val2_B) !== 0) {
+      setRes2(finiteResult((Number(val2_A) / Number(val2_B)) * 100));
     } else setRes2(null);
 
     // Calculate Mode 3
-    if (val3_A && val3_B) {
-      const a = parseFloat(val3_A);
-      const b = parseFloat(val3_B);
+    if (validInputs(val3_A, val3_B)) {
+      const a = Number(val3_A);
+      const b = Number(val3_B);
       if (a !== 0) {
-        setRes3(((b - a) / a) * 100);
-      }
+        setRes3(finiteResult(((b - a) / a) * 100));
+      } else setRes3(null);
     } else setRes3(null);
   }, [val1_A, val1_B, val2_A, val2_B, val3_A, val3_B]);
 
@@ -80,6 +82,11 @@ export default function PercentageCalculator() {
       ]}
     >
       <div className="flex flex-col gap-8">
+        <p className="text-sm text-gray-400" role="status">
+          빈 입력이나 계산 범위를 벗어난 값은 결과를 표시하지 않습니다.
+          일부 값의 비율에서 전체 값이 0이거나 증감률의 기존 값이 0이면 계산할 수 없습니다.
+          음수는 아래 공식에 부호를 그대로 적용합니다. 음수 기준의 증감률은 일반적인 증가·감소 해석과 다를 수 있습니다.
+        </p>
         {/* Case 1: Percentage Value */}
         <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
           <h3 className="text-lg font-bold text-neon-primary mb-4 flex items-center gap-2">

@@ -30,11 +30,11 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/contact</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/privacy</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/terms</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/blog</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-19</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/lotto-generator</loc>
@@ -66,11 +66,11 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/random-password</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/text-counter</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/case-converter</loc>
@@ -118,7 +118,7 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/bmi-calculator</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/percentage-calculator</loc>
@@ -150,7 +150,7 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/loan-calculator</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/jeonse-converter</loc>
@@ -170,7 +170,7 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/sleep-calculator</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/body-fat</loc>
@@ -247,6 +247,34 @@
   <url>
     <loc>https://spinkorea.kr/tools/word-frequency</loc>
     <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/word-frequency-editing</loc>
+    <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/qr-print-scan-test</loc>
+    <lastmod>2026-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/css-shadow-states</loc>
+    <lastmod>2026-09-17</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/hex-rgb-hsl-rounding</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/diff-whitespace-review</loc>
+    <lastmod>2026-09-15</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/lorem-ipsum-layout-qa</loc>
+    <lastmod>2026-09-14</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/lotto-random-combination</loc>
+    <lastmod>2026-09-13</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/blog/random-team-odd-members</loc>

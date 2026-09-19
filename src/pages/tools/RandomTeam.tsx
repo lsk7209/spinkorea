@@ -46,12 +46,17 @@ export default function RandomTeam() {
     }, 800);
   };
 
-  const copyResults = () => {
+  const copyResults = async () => {
+    if (!teams.length) return;
     const text = teams
       .map((team, idx) => `[팀 ${idx + 1}]\n${team.join(", ")}`)
       .join("\n\n");
-    navigator.clipboard.writeText(text);
-    toast.success("결과가 클립보드에 복사되었습니다.");
+    try {
+      await navigator.clipboard.writeText(text);
+      toast.success("결과가 클립보드에 복사되었습니다.");
+    } catch {
+      toast.error("복사하지 못했습니다. 브라우저 권한을 확인하거나 결과를 직접 선택해 복사하세요.");
+    }
   };
 
   return (

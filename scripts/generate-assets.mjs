@@ -14,6 +14,7 @@ const RUNTIME_POST_METADATA_PATH = path.join(ROOT, "src", "data", "post-metadata
 const STATIC_CONTENT_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-generated-content-html.json");
 
 const sitePages = JSON.parse(fs.readFileSync(SITE_PAGES_PATH, "utf8"));
+const guidance = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/site-guidance.json"), "utf8"));
 
 const approvalMetaOverrides = {
   "/": {
@@ -170,33 +171,9 @@ const approvalBodies = {
     "범위의 양 끝값을 포함하는지, 소수와 음수를 허용하는지, 숫자를 몇 개 만들지 확인하세요. 화면에 표시된 숫자와 실제로 필요한 형식이 다르면 결과를 옮겨 적는 과정에서 오류가 생길 수 있으므로, 실행 전에 형식과 기록 방법을 합의하면 발표·배정·게임에서 같은 결과를 더 쉽게 확인할 수 있습니다.",
   ],
   "/tools": [
-    "무료 웹 유틸리티 모음은 SpinFlow의 전체 도구를 한 곳에서 찾기 위한 허브입니다. 랜덤 추첨, 텍스트 처리, 개발자 도구, 날짜·시간 계산, 생활 금융 계산, 건강 관련 계산처럼 서로 다른 작업을 분류해 사용자가 필요한 도구로 바로 이동할 수 있게 합니다.",
-    "도구 허브는 검색용 목록만 늘리는 페이지가 아니라 실제 작업 경로를 연결하는 안내 페이지입니다. 사용자는 글자수 세기에서 문서 길이를 확인하고, JSON 포맷터에서 API 응답을 정리하고, 더치페이 계산기에서 모임 비용을 나누고, D-Day 카운터에서 일정까지 남은 시간을 확인할 수 있습니다.",
-    "각 계산기는 입력값을 바탕으로 브라우저에서 결과를 보여주는 참고용 도구입니다. 세금, 급여, 대출, 건강, 투자처럼 현실의 조건이 복잡한 분야에서는 최종 결정 전에 공식 기관, 계약서, 전문가 안내를 함께 확인해야 합니다.",
-    "개인정보가 필요한 작업은 최소한의 값만 입력하는 것이 좋습니다. 비밀번호 생성기, UUID 생성기, 인코더, QR 코드 도구처럼 복사와 공유가 쉬운 기능은 결과를 어디에 붙여 넣는지 사용자가 직접 관리해야 합니다.",
-    "이 허브는 내부 링크 품질을 높이기 위해 각 도구의 목적을 구분하고, 관련 블로그와 정책 페이지로 이어지는 경로를 유지합니다. AdSense 검토자는 이 페이지에서 사이트가 단일 위젯이 아니라 여러 실용 도구를 제공하는 서비스임을 확인할 수 있습니다.",
-    "랜덤 카테고리는 선택이나 순서를 정하는 작업에 적합합니다. 로또 번호 생성기는 1부터 45까지의 번호 조합, 주사위는 6면 결과, 동전은 앞면과 뒷면, Yes or No는 가벼운 질문의 선택, 랜덤 팀은 이름 목록의 분배처럼 서로 다른 입력 형식을 사용합니다.",
-    "텍스트·개발 카테고리는 붙여 넣은 값의 형식과 길이를 점검하는 데 유용합니다. 글자 수를 확인한 뒤 제출 규칙을 비교하고, JSON을 정리한 뒤 실제 API 형식을 검증하며, 인코더 결과를 복사하기 전에 원문과 대상 서비스의 요구 형식을 함께 확인하세요.",
-    "계산기 카테고리는 숫자를 빠르게 비교하는 출발점으로 사용할 수 있습니다. 같은 계산이라도 단위, 반올림, 세금 포함 여부, 기간, 적용 법령에 따라 결과가 달라질 수 있으므로 화면의 숫자를 공식 결정으로 받아들이지 말고 입력 조건을 기록해 두는 것이 좋습니다.",
-    "건강·피트니스 도구는 신체 정보와 생활 습관을 단순한 공식에 넣어 참고값을 보여줍니다. 진단, 처방, 운동 제한, 섭식 계획을 결정하는 기능이 아니므로 몸 상태에 관한 걱정이 있으면 의료 전문가와 상담하고 계산 결과는 대화의 참고 자료로만 사용하세요.",
-    "날짜·시간 도구는 일정, 기간, 타이머, D-Day처럼 기준 시점이 분명한 작업을 돕습니다. 시간대와 서머타임, 자정 경계, 포함일 계산 여부가 결과에 영향을 줄 수 있으므로 실제 예약이나 계약에서 사용할 날짜는 원본 일정과 한 번 더 비교해야 합니다.",
-    "생활 금융 도구는 급여, 대출, 전월세, 복리, 부가세, 더치페이처럼 입력값을 정리하는 데 초점을 둡니다. 금리와 법정 기준은 바뀔 수 있고 개인별 조건도 다르므로 금융기관 안내, 계약서, 최신 공식 자료를 최종 기준으로 삼으세요.",
-    "도구를 찾을 때는 결과의 이름보다 작업의 목적을 먼저 생각하면 선택이 쉬워집니다. 사람을 나누는 일에는 팀 편성, 두 후보 중 하나를 정하는 일에는 동전, 숫자 범위가 필요한 일에는 랜덤 숫자, 후보 목록에서 하나를 고르는 일에는 룰렛이 알맞습니다.",
-    "입력 내용은 화면에 붙여 넣기 전에 공개되어도 괜찮은지 확인하세요. 고객 목록, 내부 문서, API 키, 비밀번호, 건강 기록, 결제 정보는 무료 웹 도구에 입력하지 말고 필요한 경우 가상의 샘플 데이터로 먼저 테스트하세요.",
-    "결과를 복사하는 기능은 편리하지만 복사한 값이 클립보드와 메신저, 문서, 로그에 남을 수 있습니다. 특히 비밀번호나 토큰을 생성하는 경우에는 안전한 비밀번호 관리 도구와 보관 절차를 사용하고, 사용 후 공유 기록을 정리하세요.",
-    "모바일에서는 화면 폭과 키보드 때문에 긴 입력을 확인하기 어려울 수 있습니다. 실행 전 범위와 단위를 다시 읽고, 결과가 잘리지 않았는지 확인한 뒤 필요한 값만 복사하면 작은 화면에서도 실수를 줄일 수 있습니다.",
-    "각 도구 페이지에는 사용 순서와 관련 도구 링크가 함께 제공됩니다. 처음 방문한 기능이 문제에 맞지 않으면 뒤로 돌아가 검색어를 바꾸기보다 관련 링크를 따라 더 적합한 도구로 이동하는 것이 빠릅니다.",
-    "SpinFlow의 도구는 회원가입이나 설치 없이 브라우저에서 시작할 수 있는 작은 작업을 대상으로 합니다. 따라서 서비스가 해결할 수 있는 범위를 명확히 알고, 공식 제출·결제·법률·의료·보안 시스템을 대신하지 않는다는 원칙을 지키는 것이 중요합니다.",
-    "허브의 검색창은 도구 이름과 짧은 설명을 기준으로 목록을 좁히는 용도입니다. 원하는 결과가 보이지 않으면 같은 작업을 다른 표현으로 검색하거나 카테고리 탭을 바꾸고, 도구 페이지에서 제공 범위와 입력 형식을 확인하세요.",
-    "랜덤 도구는 결과를 빠르게 만들지만 공정성은 입력 목록과 사전 합의에 달려 있습니다. 계산 도구는 결과를 빠르게 보여주지만 공식을 적용할 값과 기준일이 정확해야 하므로, 어떤 카테고리든 실행 전 조건을 읽는 습관이 필요합니다.",
-    "개발자 도구의 결과는 복사하기 편한 형태로 제공되더라도 악성 코드나 비밀값을 자동으로 검증하지 않습니다. 외부에서 받은 문자열을 포맷하거나 변환할 때는 내용을 먼저 확인하고, 실행 가능한 코드나 링크를 바로 운영 환경에 붙여 넣지 마세요.",
-    "브라우저에서만 처리되는 기능이라도 화면 캡처, 클립보드, 방문 기록, 분석 도구를 통해 결과가 사용자 기기에 남을 수 있습니다. 입력값과 출력값을 저장하거나 공유할 때는 정보의 민감도와 보관 기간을 직접 판단해야 합니다.",
-    "도구 페이지의 설명과 실제 화면이 다르면 페이지 주소와 실행 조건을 기록해 문의하세요. 기능 이름, 입력 범위, 결과 형식이 바뀐 경우에는 관련 안내와 내부 링크를 함께 정리해야 방문자가 오래된 정보를 따라 하지 않게 됩니다.",
-    "한 번에 하나의 목적을 해결하는 것이 좋습니다. 여러 계산을 섞어 결과를 추정하거나 서로 다른 도구의 기본값을 비교할 때는 입력 단위와 반올림 조건을 메모하고, 최종 값은 원자료 또는 공식 문서와 대조하세요.",
-    "도구 목록의 숫자는 현재 제공되는 기능을 찾기 위한 안내이며, 모든 기능이 같은 계산 공식이나 저장 방식을 사용한다는 뜻은 아닙니다. 페이지를 열었을 때 제목과 입력 항목을 확인하고 필요한 옵션이 실제로 있는지 먼저 살펴보세요.",
-    "랜덤·텍스트·계산·건강 카테고리를 한 페이지에서 연결하는 이유는 방문자가 문제에 맞는 작은 기능을 찾도록 돕기 위해서입니다. 검색 결과만 보고 가장 비슷한 이름의 도구를 고르기보다 입력값과 출력값을 비교해 선택하세요.",
-    "계산 결과를 문서나 메시지에 붙여 넣을 때는 단위와 소수점 표시를 함께 복사하는 것이 좋습니다. 숫자만 옮기면 원래의 기준이 사라져 다른 사람이 결과를 잘못 해석할 수 있으므로 결과 설명을 짧게 남겨 주세요.",
-    "도구 허브에서 제공하는 기능은 무료로 시작할 수 있지만, 외부 서비스의 유료 기능이나 공식 제출을 대신하지 않습니다. QR과 인코딩 결과를 실제 시스템에 사용하기 전에는 대상 서비스에서 다시 열어 보고, 금융·건강 값은 최신 기준과 비교하세요.",
+    "계산, 텍스트 처리, 개발·디자인, 무작위 선택 등 하려는 작업에 맞는 도구를 아래 전체 목록에서 고르세요.",
+    "각 도구에서 입력 단위와 계산 기준을 확인한 뒤 결과를 사용하세요. 도구 입력 처리와 광고·방문 분석은 구분되며, 자세한 내용은 개인정보처리방침에서 확인할 수 있습니다.",
+    "자주 찾는 작업은 연봉 실수령액, 대출 이자, 글자수, 랜덤 팀, QR 코드, BMI 계산입니다. 아래 전체 목록에서 바로 이동할 수 있습니다.",
   ],
   "/faq": [
     "자주 묻는 질문 페이지는 룰렛, 랜덤 추첨, 계산기, 개인정보, 광고, 오류 제보에 대한 기본 답변을 정리합니다. 새 방문자가 도구를 쓰기 전에 서비스 범위와 한계를 빠르게 확인할 수 있게 하는 신뢰 페이지입니다.",
@@ -775,7 +752,13 @@ function renderShell(page, posts = []) {
     .join("");
   const homeBody = localizedApprovalBodies[page.path] ?? approvalBodies[page.path] ?? [];
   const approvalHeading = approvalSectionHeadings[page.path];
-  const trustBody = (trustPageBodies[page.path] ?? [])
+  const trustParagraphs = page.path === "/privacy"
+    ? [guidance.privacy.inputProcessing, guidance.privacy.thirdParty, guidance.privacy.controls, guidance.privacy.rightsContact]
+    : page.path === "/contact" ? [guidance.contact.summary, guidance.contact.publicIssueCaution, "공개 오류 제보에는 관련 URL, 브라우저, 더미 입력값과 재현 순서를 남겨 주세요."]
+    : (trustPageBodies[page.path] ?? []);
+  const trustLinks = page.path === "/privacy" ? guidance.privacy.links
+    : page.path === "/contact" ? [{ name: "GitHub Issues — 공개 오류 제보", url: guidance.contact.issueUrl }] : [];
+  const trustBody = trustParagraphs
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
     .join("\n");
   const homeTrustBody = homeBody.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n");
@@ -827,6 +810,7 @@ function renderShell(page, posts = []) {
     ${approvalHeading ? `<h2 id="page-guide">${escapeHtml(approvalHeading)}</h2>` : ""}
     ${homeTrustBody}
     ${trustBody}
+    ${trustLinks.map(link => `<p><a href="${escapeHtml(link.url)}" rel="noopener noreferrer">${escapeHtml(link.name)}</a></p>`).join("")}
     ${toolGuide}
   </section>
   ${directorySection}
@@ -836,10 +820,10 @@ function renderShell(page, posts = []) {
     <a href="/privacy/">Privacy Policy</a>
     <a href="/terms/">Terms of Use</a>
   </nav>
-  <section id="related-tools">
+  ${page.path === "/tools/text-counter" ? "" : `<section id="related-tools">
     <h2>관련 무료 도구</h2>
     <ul>${related}</ul>
-  </section>
+  </section>`}
   <section id="reference-links">
     <h2>운영 기준 참고 링크</h2>
     <ul>${officialReferenceLinks
@@ -856,9 +840,9 @@ const trustedToolReferences = {
     note: "단순 환산 참고값이며 실제 임금은 적용 연도와 근로 조건의 공식 기준을 확인해야 합니다.",
   },
   "/tools/bmi-calculator": {
-    name: "질병관리청 국가건강정보포털 BMI 분류 안내",
-    url: "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6774",
-    note: "화면의 분류는 국내 성인 기준입니다. BMI는 선별 지표이며 진단이 아니므로 건강 판단은 의료 전문가와 상담하세요.",
+    name: "대한비만학회 비만 진료지침 2022: 성인 분류",
+    url: "https://general.kosso.or.kr/html/user/core/view/reaction/main/kosso/inc/data/guideline2022_vol8.pdf",
+    note: "국내 성인 기준으로 BMI 18.5 이상 23 미만은 정상, 23 이상 25 미만은 비만전단계입니다. 25 이상 30 미만은 1단계, 30 이상 35 미만은 2단계, 35 이상은 3단계 비만입니다. BMI는 선별 지표이며 진단이 아닙니다. 소아·청소년에게 이 성인 분류를 적용하지 마세요.",
   },
   "/tools/vat-calculator": {
     name: "국세청 부가가치세 안내",
@@ -886,7 +870,9 @@ function renderToolGuide(page) {
           ? "계산·변환 도구"
           : "생활·생산성 도구";
 
-  const resultGuide = isRandom
+  const resultGuide = page.path === "/tools/text-counter" ? guidance.textCounter.definition
+    : page.path === "/tools/loan-calculator" ? guidance.loan.definition
+    : page.path === "/tools/sleep-calculator" ? guidance.sleep.definition : isRandom
     ? "무작위 결과는 입력한 선택지와 설정을 기준으로 만들어집니다. 중복 항목을 허용할지 먼저 정하고, 결과가 나온 뒤에는 입력 목록을 바꾸지 않는 것이 기록과 공유에 유리합니다. 금전·법률·안전과 관련된 공식 추첨은 이 도구 대신 해당 기관의 절차를 사용하세요."
     : isDeveloper
       ? "변환·생성 결과는 복사하기 전에 원문과 결과를 함께 확인하세요. 특히 인코딩, JSON, Markdown, CSS, QR 결과는 사용하는 서비스의 형식과 길이 제한이 다를 수 있으므로 실제 적용 환경에서 한 번 더 테스트하는 것이 안전합니다."
@@ -901,7 +887,9 @@ function renderToolGuide(page) {
     : "주민등록번호, 연락처, 주소, 건강 기록, 계정 정보처럼 민감한 개인정보는 입력하지 않는 것을 권장합니다. 예시가 필요하면 실제 값 대신 가상의 값으로 테스트하세요.";
 
   const related = sitePages
-    .filter((item) => item.path !== page.path && item.path.startsWith("/tools/"))
+    .filter((item) => page.path === "/tools/text-counter"
+      ? guidance.textCounter.relatedTools.some(tool => tool.path === item.path)
+      : item.path !== page.path && item.path.startsWith("/tools/"))
     .slice(0, 5)
     .map((item) => `<li><a href="${item.path}">${escapeHtml(item.heading)}</a> — ${escapeHtml(item.summary)}</li>`)
     .join("");

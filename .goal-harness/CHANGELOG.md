@@ -1,3 +1,27 @@
+# Release checkpoint — 2026-09-20 08:55 대한민국 표준시
+
+Implemented audited SPK014 articles/BMI and metadata; repaired privacy request guidance across SPA/static; added30-case built-preview regression. Prior repairs retained; build/domain/search/content and62 browser cases PASS.
+
+---
+
+# Current changes — SPK-014 — 2026-09-20
+
+Added docs/audits/spinkorea/2026-09-19-225440/spk014-source-review-20260920.md; updated current sections of Goal Harness, docs/HANDOFF.md and PROJECT_STATE.md; audit backlog follow-up records source verification separate from implementation. Evidence files only under output/spk014: baseline product hashes, official PDFs/page extracts and verification.json. Product source, generated assets, source/index/publish contracts and prior dirty work preserved. No dependencies, account or remote changes.
+
+---
+
+# Current changes — 2026-09-20 08:00 KST
+
+Completed remaining safe audit repairs and CSS content review. Reused secure RNG; removed heuristic strength scoring and loan per-month loop; shared definition/privacy/contact copy; replaced misleading article claims and unusable random template; synchronized cached titles/descriptions. No new dependencies, routing/index approval changes or external mutations. Public feeds retain verified current-build outputs. Full file/acceptance/evidence/remaining-work record: docs/HANDOFF.md and audit local-repairs-20260920.md.
+
+---
+
+# Prior slice — 2026-09-20
+
+2026-09-20: Added json-format.ts with string-aware numeric support guard; adjusted JSON output invalidation, PercentageCalculator result validation, and awaited clipboard feedback in four tools. Added Node and browser regression scripts. No dependency or URL changes. Restored build-only public feeds to HEAD after checks; unrelated untracked files preserved.
+
+---
+
 # CHANGELOG
 
 ## Changed Files

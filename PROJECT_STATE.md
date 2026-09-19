@@ -1,3 +1,27 @@
+# Release checkpoint — 2026-09-20 08:55 대한민국 표준시
+
+Local audited release implementation complete and freshly verified. Deployment is authorized; selective Git commit/push and read-only production reconciliation remain. Canonical current handoff: docs/HANDOFF.md. Detailed proof: docs/audits/spinkorea/2026-09-19-225440/release-20260920.md.
+
+---
+
+# Current local state — 2026-09-20 08:33 KST
+
+SPK-014 SOURCE AUDIT DONE, product corrections pending. Three posts/25 claim groups compared with original/official sources; minimal replacement drafts, two-cache synchronization contract and related BMI classification/FAQ/health-copy fixes documented in docs/audits/spinkorea/2026-09-19-225440/spk014-source-review-20260920.md. Existing local repairs remain intact at main97b2c0d:27/27 product hashes unchanged, no product-path drift, related tool diff NONE. Independent Luna/max review findings incorporated and source-table visual checks complete. This slice ran no product build/tests or external writes. Earlier build688/browser32 are historical. Canonical recovery: docs/HANDOFF.md. Next: bounded implementation of the three-post/two-cache/BMI corrections followed by boundary/render validation. Full external audit/release, actual inbox/CMP/account/GSC evidence and CSS merge remain open.
+
+---
+
+# Current local state — 2026-09-20 08:00 KST
+
+Confirmed audit repair slice LOCAL DONE; full external audit/release remains open. Preserved SPK-001/002/006 and completed safe local corrections for SPK-003/004/005/007/008/009/010/011/012 plus content-only SPK-013 review. Build688, type/lint, content650/50, loan/JSON, growth25, search18, static repair verifier and browser32/32/pageerrors0 PASS. Independent final Luna/max review: no concrete blockers. main97b2c0d remains uncommitted/unpushed. Canonical recovery: docs/HANDOFF.md. Detailed result/limitations: docs/audits/spinkorea/2026-09-19-225440/local-repairs-20260920.md. Next: SPK-014 read-only original-source comparison; inbox/account/CMP/crawler/GSC and CSS merge evidence remain unverified.
+
+---
+
+# Prior local slice — 2026-09-20
+
+SPK-001/002/006 implemented locally after the 2026-09-19 audit. Type/lint, JSON regression, content, full build (688), growth (25), and search scope (18) pass. Expanded browser verification PASS 22/22, pageerrors 0. Independent Luna/max review found no substantiated blockers. Local slice DONE; remaining audit backlog remains open. Canonical current recovery detail: docs/HANDOFF.md. No commit/push/deployment or external account changes.
+
+---
+
 # Project State
 
 ## Purpose

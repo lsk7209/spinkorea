@@ -1,5 +1,5 @@
 import SEO from "@/components/SEO";
-import { Link } from "react-router-dom";
+import guidance from "@/data/site-guidance.json";
 
 export default function PrivacyPolicy() {
   return (
@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
         <div className="max-w-3xl mx-auto">
           <p className="text-sm font-bold text-cyan-700 mb-3 uppercase tracking-widest">Privacy Policy</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-950 mb-4">개인정보처리방침</h1>
-          <p className="text-slate-500 text-sm">최종 업데이트: 2026년 6월 8일</p>
+          <p className="text-slate-500 text-sm">최종 업데이트: 2026년 9월 20일</p>
         </div>
       </header>
 
@@ -29,15 +29,11 @@ export default function PrivacyPolicy() {
           <section>
             <h2>1. 수집될 수 있는 정보</h2>
             <ul>
-              <li>방문 페이지, 유입 경로, 체류 시간, 브라우저 유형 등 비식별 분석 정보</li>
+              <li>방문 페이지, 유입 경로, 체류 시간, 브라우저 유형 등 방문 분석 정보</li>
               <li>기기 종류, 운영체제, 화면 크기 등 서비스 품질 점검에 필요한 기술 정보</li>
               <li>문의 또는 오류 제보 시 사용자가 직접 제공한 연락 정보와 문의 내용</li>
             </ul>
-            <p>
-              룰렛, 추첨, 텍스트 도구 등 대부분의 도구 입력값은 브라우저에서 처리되며
-              별도 서버 저장을 전제로 하지 않습니다. 단, 사용자가 직접 문의로 보낸
-              내용은 답변과 정정 처리를 위해 확인될 수 있습니다.
-            </p>
+            <p>{guidance.privacy.inputProcessing}</p>
           </section>
 
           <section>
@@ -52,19 +48,9 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2>3. 쿠키와 제3자 서비스</h2>
-            <p>
-              SpinFlow는 Google Analytics, Google AdSense 등 제3자 서비스를 사용할 수
-              있습니다. Google을 포함한 제3자 사업자는 쿠키 또는 유사 기술을 사용해
-              광고 노출, 광고 성과 측정, 방문 통계 분석을 수행할 수 있습니다.
-            </p>
-            <p>
-              Google의 개인정보 처리 방식은{" "}
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
-                Google 개인정보처리방침
-              </a>
-              에서 확인할 수 있습니다. 개인 맞춤 광고 설정은 Google 광고 설정 또는
-              브라우저 쿠키 설정에서 관리할 수 있습니다.
-            </p>
+            <p>{guidance.privacy.thirdParty}</p>
+            <p>{guidance.privacy.controls}</p>
+            <ul>{guidance.privacy.links.map(link => <li key={link.url}><a href={link.url} target="_blank" rel="noopener noreferrer">{link.name}</a></li>)}</ul>
           </section>
 
           <section>
@@ -80,8 +66,8 @@ export default function PrivacyPolicy() {
             <h2>5. 이용자의 권리</h2>
             <p>
               이용자는 개인정보 열람, 정정, 삭제, 처리 중지를 요청할 수 있습니다.
-              관련 요청은 <Link to="/contact">문의하기</Link> 페이지를 통해 보내주세요.
             </p>
+            <p>{guidance.privacy.rightsContact}</p>
           </section>
 
           <section>

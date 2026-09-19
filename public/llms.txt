@@ -11,25 +11,25 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [무료 웹 유틸리티 모음](https://spinkorea.kr/tools) — 랜덤 추첨, 텍스트, 개발, 디자인, 계산 도구를 한 곳에서 사용할 수 있습니다.
 - [SpinFlow 소개](https://spinkorea.kr/about) — 설치 없이 사용할 수 있는 결정 도구와 생활 유틸리티를 제공합니다.
 - [자주 묻는 질문](https://spinkorea.kr/faq) — 서비스 이용 전 확인할 수 있는 핵심 질문을 정리했습니다.
-- [문의하기](https://spinkorea.kr/contact) — 서비스 개선 제안과 오류 제보를 받습니다.
+- [문의하기](https://spinkorea.kr/contact) — GitHub 공개 오류 제보와 비공개 문의 경로의 현재 상태를 안내합니다.
 - [개인정보처리방침](https://spinkorea.kr/privacy) — 사용자 개인정보와 브라우저 저장 데이터 처리 방침입니다.
 - [이용약관](https://spinkorea.kr/terms) — 서비스 이용에 필요한 기본 약관입니다.
 - [SpinFlow 블로그](https://spinkorea.kr/blog) — 결정과 생산성을 돕는 실용 가이드를 제공합니다.
 - [로또 번호 생성기](https://spinkorea.kr/tools/lotto-generator) — 버튼 한 번으로 로또 번호 조합을 생성합니다.
 
 ## 최신 블로그
+- [단어 빈도표로 초안의 반복 표현을 고치는 방법](https://spinkorea.kr/blog/word-frequency-editing) — 빈도가 높은 단어를 무조건 지우지 않고 문맥과 핵심 용어를 구분해 편집합니다.
+- [QR 코드 인쇄 전 실제 크기로 스캔 테스트하는 순서](https://spinkorea.kr/blog/qr-print-scan-test) — 화면에서 만든 QR을 인쇄하기 전에 크기와 대비, 연결 주소를 확인하는 절차입니다.
+- [CSS 그림자는 기본·호버·포커스 상태를 함께 설계하세요](https://spinkorea.kr/blog/css-shadow-states) — 그림자 코드를 상태별로 나누고 접근성을 해치지 않게 검토하는 방법입니다.
+- [HEX·RGB·HSL 변환값이 조금씩 다른 이유](https://spinkorea.kr/blog/hex-rgb-hsl-rounding) — 색상 모델과 반올림을 이해하고 원본 색을 잃지 않게 기록하는 법을 설명합니다.
+- [문서 비교에서 공백 차이와 내용 수정을 분리해서 읽기](https://spinkorea.kr/blog/diff-whitespace-review) — 줄바꿈과 공백 때문에 중요한 내용 변경이 묻히지 않게 비교하는 순서입니다.
+- [더미 텍스트로 모바일 레이아웃 깨짐을 찾는 체크리스트](https://spinkorea.kr/blog/lorem-ipsum-layout-qa) — 목업용 문단 수를 정하고 실제 문구 교체 전 화면을 검수하는 방법입니다.
+- [로또 번호 생성기는 예측이 아니라 무작위 조합 도구입니다](https://spinkorea.kr/blog/lotto-random-combination) — 무작위 번호 조합의 용도와 확률을 과장하지 않고 사용하는 범위를 설명합니다.
 - [홀수 인원 랜덤 팀 나누기, 한 명 차이를 공정하게 설명하기](https://spinkorea.kr/blog/random-team-odd-members) — 인원이 나누어떨어지지 않을 때 팀 크기와 예외 역할을 미리 합의하는 방법입니다.
 - [Yes or No 결정은 되돌릴 수 있는 일에만 쓰세요](https://spinkorea.kr/blog/yes-no-reversible-choice) — 예·아니오 도구에 맡겨도 되는 선택과 직접 판단해야 하는 선택을 구분합니다.
 - [동전 던지기 전에 질문을 두 선택지로 줄이는 법](https://spinkorea.kr/blog/coin-flip-question) — 동전 던지기에 맞는 질문을 만들고 재실행 논쟁을 줄이는 간단한 규칙을 안내합니다.
 - [주사위 여러 개 합계로 게임 판정표 만들기](https://spinkorea.kr/blog/dice-multiple-sum) — 여러 주사위의 개수와 면 수를 고정하고 합계 판정 규칙을 운영하는 순서를 정리합니다.
 - [랜덤 숫자 뽑기, 제외 번호를 먼저 정하는 순서](https://spinkorea.kr/blog/random-number-exclusion) — 랜덤 숫자에서 범위와 제외수를 입력 전에 합의하고 결과를 기록하는 방법을 설명합니다.
-- [온라인 계산기 vs 엑셀: 언제 무엇을 써야 하나](https://spinkorea.kr/blog/calculator-vs-excel) — 간단한 계산에 엑셀을 여는 것은 낭비입니다. 상황별로 온라인 계산기와 스프레드시트를 현명하게 선택하는 기준.
-- [디지털 노마드의 생산성 도구 모음: 어디서든 일하는 법](https://spinkorea.kr/blog/digital-nomad-tools) — 카페·공유오피스·해외 어디서든 최고의 생산성을 유지하는 디지털 노마드들의 필수 도구와 루틴.
-- [텍스트 변환이 필요한 의외의 상황 7가지](https://spinkorea.kr/blog/text-formatting-situations) — 대소문자 변환, 특수문자 제거, 줄바꿈 정리... 텍스트를 정제하고 변환해야 하는 실무 상황 완벽 정리.
-- [AI 시대에 살아남는 스킬: 대체되지 않는 능력 5가지](https://spinkorea.kr/blog/ai-era-skills) — ChatGPT가 할 수 없는 것은 무엇인가. AI 시대에 오히려 더 가치가 높아지는 인간 고유의 능력.
-- [이미지 포맷 완벽 가이드: JPG vs PNG vs WebP vs AVIF](https://spinkorea.kr/blog/image-format-guide) — 언제 JPG를 쓰고 언제 PNG를 써야 하나? 웹 성능을 위한 최신 이미지 포맷 선택 기준 완벽 정리.
-- [구글 캘린더 100% 활용법: 시간을 설계하는 방법](https://spinkorea.kr/blog/google-calendar-tips) — 단순한 일정 관리를 넘어 타임 블로킹, 색상 코딩, 반복 일정, 팀 캘린더까지. 구글 캘린더 고수의 사용법.
-- [URL 단축기의 원리: 짧은 링크 뒤에 숨겨진 기술](https://spinkorea.kr/blog/url-shortener-tech) — bit.ly, tinyurl... 긴 URL이 짧아지는 원리, 리다이렉트 동작 방식, 단축 URL의 보안 위험까지 알아봅니다.
 
 ## 기술 정보
 React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.xml, JSON-LD, AdSense 자동광고, GA4를 사용합니다.

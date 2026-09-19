@@ -1,3 +1,4 @@
+import guidance from "@/data/site-guidance.json";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Clock, Github, Mail, MessageSquare } from "lucide-react";
@@ -10,7 +11,7 @@ export default function Contact() {
     "@type": "ContactPage",
     name: "SpinFlow 문의하기",
     description:
-      "SpinFlow 서비스 제안, 오류 제보, 개인정보 문의, 광고 및 제휴 문의를 받는 공식 연락 페이지입니다.",
+      guidance.contact.summary,
     url: `${SITE_ORIGIN}/contact`,
   };
 
@@ -18,7 +19,7 @@ export default function Contact() {
     <div className="min-h-[100dvh] bg-slate-50 text-slate-950 flex flex-col">
       <SEO
         title="문의하기 | SpinFlow"
-        description="SpinFlow의 오류 제보, 기능 제안, 개인정보 문의, 광고 및 제휴 문의를 위한 공식 연락 페이지입니다."
+        description={guidance.contact.summary}
         keywords="SpinFlow 문의, 오류 제보, 서비스 제안, 개인정보 문의, 제휴 문의"
         structuredData={structuredData}
       />
@@ -32,8 +33,7 @@ export default function Contact() {
             문의하기
           </h1>
           <p className="mx-auto max-w-2xl text-base leading-7 text-slate-600">
-            도구 오류, 콘텐츠 정정 요청, 개인정보 문의, 광고·제휴 제안은 아래
-            연락 경로로 보내주세요.
+            {guidance.contact.summary}
           </p>
         </div>
       </header>
@@ -47,7 +47,7 @@ export default function Contact() {
               content: (
                 <>
                   <a
-                    href="https://github.com/lsk7209/spinkorea/issues"
+                    href={guidance.contact.issueUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="break-all text-sm font-semibold text-cyan-700 hover:underline"
@@ -63,32 +63,18 @@ export default function Contact() {
             },
             {
               icon: <Mail className="text-cyan-700" size={24} />,
-              title: "개인정보·제휴 문의",
+              title: "비공개 문의 경로 미설정",
               content: (
-                <p className="text-sm leading-6 text-slate-500">
-                  개인정보 처리, 광고 노출, 제휴 제안처럼 공개로 남기기 어려운
-                  내용도 현재는{" "}
-                  <a
-                    href="https://github.com/lsk7209/spinkorea/issues"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-cyan-700 hover:underline font-medium"
-                  >
-                    GitHub Issues
-                  </a>
-                  로 받고 있습니다. 이슈 제목에 "[개인정보]" 또는 "[제휴]"를
-                  붙이고 요청 목적을 적어 주시면 우선 확인합니다.
-                </p>
+                <p className="text-sm leading-6 text-slate-500">{guidance.contact.publicIssueCaution}</p>
               ),
             },
             {
               icon: <Clock className="text-amber-600" size={24} />,
-              title: "응답 기준",
+              title: "재현 정보 남기기",
               content: (
                 <p className="text-sm leading-6 text-slate-500">
-                  일반 문의는 평일 기준으로 순차 검토합니다. 서비스 장애, 명백한
-                  개인정보 문제, 잘못된 광고 표시 등 이용자 보호와 관련된 문의는
-                  우선 확인합니다.
+                  사용한 도구 URL, 브라우저, 더미 입력값, 기대한 결과와 실제
+                  결과를 함께 적어 주세요. 스크린샷의 개인 정보는 먼저 가려 주세요.
                 </p>
               ),
             },
