@@ -1,6 +1,6 @@
-# Current release goal — 2026-09-20 08:38 KST
+# Current release goal — 2026-09-20 08:59 대한민국 표준시
 
-Finish SPK-014 three-post/BMI changes and both metadata caches, preserve existing local audit repairs, verify the combined release, commit only intended code/docs/generated artifacts, normal push to GitHub main. User explicitly requested deployment. Read Git-connected deployment status without direct Vercel mutation. Stop: Git remote SHA reconciled and deployment/public status truthfully recorded; actual provider failure cannot be labeled live success. No new account/CMP/DB/indexing/URL policy changes.
+COMPLETE: finish SPK-014 article/BMI corrections and deploy the combined audited local repairs through normal GitHub main push, then verify the exact connected deployment and public site. Runtime ce9d881021c0e123c1e5721543de47e4ca296770; Production6547101903 success; live30/30 and HTTP9/9. Stop condition met. No direct Vercel/account writes or expanded operational audit. Earlier goals below are historical.
 
 ---
 

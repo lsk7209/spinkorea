@@ -1,6 +1,6 @@
-# Current release state — 2026-09-20 08:55 대한민국 표준시
+# Current release state — 2026-09-20 08:59 대한민국 표준시
 
-LOCAL VERIFIED; release pending commit/push/public reconciliation. SPK-014 implementation plus earlier local repairs pass build689,62 browser checks, targeted domain/content/static/search checks and727-row preservation. Root resolved independent review findings. User authorized GitHub main deployment; direct Vercel/account operations excluded. Next: selective commit and normal push. Detailed current state: docs/HANDOFF.md.
+DONE. Runtime ce9d881021c0e123c1e5721543de47e4ca296770 pushed and same-SHA Production6547101903 / Hosting Cost Guard succeeded. Live browser30/30/pageerrors0 and9 HTTP routes200 confirm updated content/BMI and canonical/index behavior. Local build689, browser62/62 and domain/content/search checks PASS. Post-release documentation records evidence; unrelated untracked work remains preserved. Direct Vercel/account operations were not run. Current recovery: docs/HANDOFF.md.
 
 ---
 

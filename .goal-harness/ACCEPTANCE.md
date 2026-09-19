@@ -1,6 +1,6 @@
-# Current release acceptance — 2026-09-20 08:55 대한민국 표준시
+# Current release acceptance — 2026-09-20 08:59 대한민국 표준시
 
-PASS local: audited article corrections, original slugs/dates/index scope, finite positive BMI and18.5/23/25/30/35 classes, matching legend/gauge/FAQ/static references, title/description cache parity,62 browser checks, build689 and domain/content/growth/search/static gates, independent review findings resolved. PENDING: selective commit, exact remote SHA and Git-connected deployment/live-page reconciliation. Inbox/CMP/account/crawler success is not an acceptance claim.
+PASS: audited article corrections with original slugs/dates/index scope; finite positive BMI and18.5/23/25/30/35 classification/gauge/FAQ; metadata/static/SPA parity; all local gates and62 browser checks; reviewer findings resolved;44 intended files selectively committed; normal Git push/exact origin SHA; same-SHA Production success; live SPA30/30 and9 HTTP routes200. No inbox/CMP/account/GSC/crawler or OS clipboard claim is made. Authorized release scope is complete.
 
 ---
 

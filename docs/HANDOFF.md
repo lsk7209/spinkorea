@@ -1,14 +1,14 @@
-# Current release handoff — 2026-09-20 08:55 대한민국 표준시
+# Current release handoff — 2026-09-20 08:59 대한민국 표준시
 
-- User goal: deploy the audited SpinKorea fixes, including remaining SPK-014 implementation.
-- Exact state: LOCAL VERIFIED on main baseline97b2c0d; scoped source/generated/test/docs changes are not yet committed or pushed.
-- Completed: prior tool reliability/claim repairs, three source-audited health/AI articles, both metadata caches, domestic adult BMI ranges and static/SPA disclosure parity. Privacy wording explicitly states the absent private request channel.
-- Changed files/evidence: docs/audits/spinkorea/2026-09-19-225440/release-20260920.md; src/pages/tools and content/shared guidance/generator/verification scripts/public feeds; no live systems changed yet.
-- Fresh validation: build689 and TypeScript PASS; loan/JSON/storage/spin/content/growth/search/static PASS; browser32+30=62 PASS with zero page errors;727 metadata identities/dates/schedules/source flags unchanged; mobile BMI visually checked. Independent Luna findings resolved. See release report and output/spk014-release/browser.json.
-- Side effects/rollback: local files only; pre-release tracked patch and SHA256 hashes in output/spk014-release. Preserve unrelated untracked evidence/caches/drafts. For a pushed release, revert the focused commit; no force push/reset.
-- Risks: actual private inbox, CMP/AdSense/account/GSC/crawler evidence remains unverified. Simulated clipboard is not OS clipboard proof. Direct Vercel mutations and workflow dispatch remain excluded.
-- Deliberately not run/sent: push/deploy yet, Vercel CLI/API/hooks, account/env/domain/DB writes, indexing submissions, email/Issues. Git push is authorized and next.
-- Single next step: selective commit, fresh remote ancestry check, normal main push, then read-only Git deployment/public verification.
+- User goal: deploy the audited SpinKorea tool/content repairs, including SPK-014.
+- Exact state: DONE for runtime release. Runtime commit ce9d881021c0e123c1e5721543de47e4ca296770 pushed normally to origin/main; exact remote SHA confirmed. Same-SHA Hosting Cost Guard success and Production deployment6547101903 success (2026-09-19T23:56:32Z). A documentation-only commit records this evidence after the runtime release.
+- Completed: all reviewed local reliability/copy fixes, source-audited exercise/BMI/AI articles, metadata synchronization, domestic adult BMI boundaries and honest shared contact/privacy disclosures. Slugs, original dates, schedules and source/index classifications retained.
+- Changed files/live systems:44 reviewed source/generated/test/report files in runtime commit; GitHub main updated and existing Git integration automatically deployed https://spinkorea.kr. Details: docs/audits/spinkorea/2026-09-19-225440/release-20260920.md.
+- Fresh validation: local build689/TypeScript; loan/JSON/storage/spin/content/growth/search/static PASS; local browser62/62 and live production SPA browser30/30 with zero page errors;9 public HTTP routes200 with expected updated markers, article canonicals/indexability;727 metadata identities/dates/schedules/source flags unchanged. Owned test browsers/servers closed.
+- Side effects/rollback: normal Git push and automatic connected deployment only. Baseline patch/hashes and final local evidence are in output/spk014-release. Revert only the focused runtime commit through normal Git if rollback is required; preserve unrelated .omc/.playwright-cli/vite-cache/output/draft prompts. No force push/reset.
+- Remaining limits: no actual private rights-request inbox is provided/verified; account/CMP/AdSense/GSC/genuine crawler evidence remains unverified. Clipboard outcomes were simulated locally. Historical out-of-scope risk records are not re-audited. These are separate operational follow-ups, not incomplete changes in this release.
+- Deliberately not run/sent: direct Vercel CLI/API/hooks/link/env/domain writes; account/DB/index submission changes; manual workflow dispatch; email/Issues/ad clicks. Scheduled workflows may run independently of this task.
+- Single next step: no further product/deployment change is required for this request. Future work should obtain concrete private-inbox/account/CMP evidence under its own scoped task. The documentation commit and final remote reconciliation receipt are recorded locally in output/spk014-release/final.json.
 
 ---
 

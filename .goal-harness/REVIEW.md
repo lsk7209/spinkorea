@@ -1,6 +1,6 @@
-# Release checkpoint — 2026-09-20 08:55 대한민국 표준시
+# Release completion — 2026-09-20 08:59 대한민국 표준시
 
-Independent Luna lanes reviewed prior product/release scope and SPK014 copy/tool scope. Privacy invitation mismatch, original-date/index verification gap and BMI FAQ scope resolved. No remaining scoped BLOCKER/HIGH reported. Main verified files and command evidence.
+Two independent Luna/max lanes reviewed prior fixes/release path and source-audited SPK014. Privacy request mismatch, source/date/index coverage gap and FAQ scope repaired and verified by root. No remaining reviewed BLOCKER/HIGH. GitHub exact-SHA deployment and public runtime now confirmed; actual private inbox/account evidence remains unverified.
 
 ---
 

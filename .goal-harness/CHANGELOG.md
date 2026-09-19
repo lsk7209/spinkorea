@@ -1,6 +1,6 @@
-# Release checkpoint — 2026-09-20 08:55 대한민국 표준시
+# Release completion — 2026-09-20 08:59 대한민국 표준시
 
-Implemented audited SPK014 articles/BMI and metadata; repaired privacy request guidance across SPA/static; added30-case built-preview regression. Prior repairs retained; build/domain/search/content and62 browser cases PASS.
+Released runtime ce9d881: audited tools, article sources, BMI ranges and synchronized metadata/disclosures. Added30-case production-preview regression; prior32-case browser suite retained. Normal Git push followed by same-SHA production success and live verification. Post-release documentation only follows.
 
 ---
 

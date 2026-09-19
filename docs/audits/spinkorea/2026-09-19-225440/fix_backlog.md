@@ -1,6 +1,6 @@
 # Release checkpoint — 2026-09-20
 
-SPK-014 source corrections and related adult BMI boundary fixes are now implemented and locally verified alongside the earlier repairs. Fresh build689 and browser62/62 PASS. See release-20260920.md; push and live reconciliation pending. Operational inbox/CMP/account/crawler questions remain unverified.
+SPK-014 source corrections and related adult BMI boundary fixes are now implemented and locally verified alongside the earlier repairs. Fresh build689 and browser62/62 PASS. Released in ce9d881; same-SHA Production6547101903 success, live browser30/30 and HTTP9/9 PASS. See release-20260920.md. Operational inbox/CMP/account/crawler questions remain unverified.
 
 ---
 

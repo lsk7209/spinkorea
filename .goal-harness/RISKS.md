@@ -1,6 +1,6 @@
-# Release checkpoint — 2026-09-20 08:55 대한민국 표준시
+# Release completion — 2026-09-20 08:59 대한민국 표준시
 
-Current release: preserve untracked work and remote ancestry; deployment stops at normal Git push plus read-only observation. Private inbox/CMP/account/GSC/crawler state remains unverified. Prior security notes below are historical, not fresh release findings.
+Release controlled: remote ancestry checked,44 intended files committed, normal push and exact-SHA Production success; unrelated untracked work preserved. Actual private inbox/CMP/account/GSC/crawler and historical security records below remain outside this release; no new verification claim. No direct Vercel or external account mutations. Rollback uses a focused revert commit.
 
 ---
 

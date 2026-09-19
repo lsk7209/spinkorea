@@ -1,8 +1,6 @@
-# Current release plan — 2026-09-20 08:38 KST
+# Current release plan — 2026-09-20 08:59 대한민국 표준시
 
-1. Preserve dirty baseline and reconcile origin/main. 2. Apply reviewed SPK-014 article/metadata/BMI changes. 3. Verify BMI boundaries and metadata/static/SPA parity plus existing local regression/build checks; independent prior-diff and new-slice review. 4. Update recovery and exact staging allowlist, inspect staged diff and secrets, commit, refetch and normal push main. 5. Read GitHub deployment/check evidence for exact SHA and public source markers; record outcome without Vercel commands or settings changes.
-
-Implementation and local validation are complete: build689, browser62/62, all727 metadata contracts retained. Next execute the existing selective commit / fresh fetch / normal push / read-only deployment reconciliation steps.
+Completed: recover baseline, implement audited corrections, validate locally, resolve two independent reviews, select44 release files, commit, re-fetch origin, normal main push, verify exact-SHA Production success and live public behavior, record handoff. A documentation-only commit follows the deployed runtime commit. No further product steps remain.
 
 ---
 

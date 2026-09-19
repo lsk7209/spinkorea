@@ -1,6 +1,6 @@
-# Release checkpoint — 2026-09-20 08:55 대한민국 표준시
+# Current project release state — 2026-09-20 08:59 대한민국 표준시
 
-Local audited release implementation complete and freshly verified. Deployment is authorized; selective Git commit/push and read-only production reconciliation remain. Canonical current handoff: docs/HANDOFF.md. Detailed proof: docs/audits/spinkorea/2026-09-19-225440/release-20260920.md.
+SpinKorea requested release is complete: runtime ce9d881021c0e123c1e5721543de47e4ca296770, same-SHA Production6547101903 success, public https://spinkorea.kr verified. Local build689/browser62 and public browser30/HTTP9 all pass. All727 metadata identities/dates/schedules/source flags preserved. Documentation-only evidence commit follows runtime deployment. Unrelated untracked work retained. Operational inbox/CMP/account/crawler evidence remains unverified and outside this release. Canonical continuation: docs/HANDOFF.md; proof: docs/audits/spinkorea/2026-09-19-225440/release-20260920.md.
 
 ---
 

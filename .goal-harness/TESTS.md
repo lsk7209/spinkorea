@@ -1,6 +1,6 @@
-# Release checkpoint — 2026-09-20 08:55 대한민국 표준시
+# Release completion — 2026-09-20 08:59 대한민국 표준시
 
-Build689/TypeScript; loan/JSON/storage/spin/content/growth25/search18/static; reliability browser32/32 and built-preview SPK014 browser30/30, both pageerrors0; all727 metadata identities/dates/schedules/source flags preserved. PASS. See release report for command details and local proof limits.
+All local checks pass: build689/TypeScript; loan/JSON/storage/spin/content/growth25/search18/static;62 browser cases/pageerrors0;727 metadata rows preserve identity/date/schedule/source. Production browser30/30/pageerrors0 and HTTP9/9 pass. Live checks use GET/HEAD and block foreign/API requests; local clipboard checks simulate browser API outcomes.
 
 ---
 
