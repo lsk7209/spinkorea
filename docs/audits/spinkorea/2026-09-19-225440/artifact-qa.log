@@ -1,0 +1,7 @@
+PASS six required artifacts nonempty
+PASS A01-A12 exactly once
+PASS 1313 unique raw URLs, no blank inventory fields
+PASS all 149 sitemap URLs HTTP200 with no explicit noindex
+PASS T11 independently counted 10 distinct members in 4/3/3
+PASS final test tally 15PASS/6FAIL; retries excluded
+PASS no tracked product-file diff

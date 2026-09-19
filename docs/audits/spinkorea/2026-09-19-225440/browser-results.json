@@ -1,0 +1,1027 @@
+{
+  "at": "2026-09-19T13:59:37.827Z",
+  "origin": "http://127.0.0.1:5173",
+  "scope": "local source, fresh Chromium context, all third-party requests aborted; live DOM sampled without ads",
+  "results": [
+    {
+      "id": "T01",
+      "status": "FAIL",
+      "expected": "Labels specify UTF-16 or show codepoints 4/3; UTF-8 9B",
+      "actual": {
+        "stats": "공백 포함\n5자\n공백 제외\n4자\n바이트(Byte)\n9B\n단어 / 줄\n2 / 1\n* 한글 1자 = 3Byte (UTF-8 기준)\n1 문단\n도구 소개\n\n자기소개서, 블로그, 레포트 작성 시 필수! 공백 포함/제외 글",
+        "utf16Disclosure": false
+      },
+      "at": "2026-09-19T13:59:25.207Z"
+    },
+    {
+      "id": "T01-edge",
+      "status": "PASS",
+      "expected": "Source UTF16/whitespace formula matched; semantic definition remains missing",
+      "actual": {
+        "input": "",
+        "stats": "공백 포함\n0자\n공백 제외\n0자\n바이트(Byte)\n0B\n단어 / 줄\n0 / 0\n* 한글 1자 = 3Byte (UTF-8 기준)\n0 문단\n도구 소개\n\n자기소개서, 블로그, 레포트 작성 시 필수! 공백 포함/제외 글"
+      },
+      "at": "2026-09-19T13:59:25.238Z"
+    },
+    {
+      "id": "T01-edge",
+      "status": "PASS",
+      "expected": "Source UTF16/whitespace formula matched; semantic definition remains missing",
+      "actual": {
+        "input": "a\nb",
+        "stats": "공백 포함\n3자\n공백 제외\n2자\n바이트(Byte)\n3B\n단어 / 줄\n2 / 2\n* 한글 1자 = 3Byte (UTF-8 기준)\n1 문단\n도구 소개\n\n자기소개서, 블로그, 레포트 작성 시 필수! 공백 포함/제외 글"
+      },
+      "at": "2026-09-19T13:59:25.262Z"
+    },
+    {
+      "id": "T01-edge",
+      "status": "PASS",
+      "expected": "Source UTF16/whitespace formula matched; semantic definition remains missing",
+      "actual": {
+        "input": "é",
+        "stats": "공백 포함\n2자\n공백 제외\n2자\n바이트(Byte)\n3B\n단어 / 줄\n1 / 1\n* 한글 1자 = 3Byte (UTF-8 기준)\n1 문단\n도구 소개\n\n자기소개서, 블로그, 레포트 작성 시 필수! 공백 포함/제외 글"
+      },
+      "at": "2026-09-19T13:59:25.284Z"
+    },
+    {
+      "id": "T01-edge",
+      "status": "PASS",
+      "expected": "Source UTF16/whitespace formula matched; semantic definition remains missing",
+      "actual": {
+        "input": "👩‍👩‍👧‍👦",
+        "stats": "공백 포함\n11자\n공백 제외\n11자\n바이트(Byte)\n25B\n단어 / 줄\n1 / 1\n* 한글 1자 = 3Byte (UTF-8 기준)\n1 문단\n도구 소개\n\n자기소개서, 블로그, 레포트 작성 시 필수! 공백 포함/제외"
+      },
+      "at": "2026-09-19T13:59:25.309Z"
+    },
+    {
+      "id": "T02",
+      "status": "FAIL",
+      "expected": "Reject clipboard => no success toast",
+      "actual": {
+        "successToast": true
+      },
+      "at": "2026-09-19T13:59:25.633Z"
+    },
+    {
+      "id": "T03",
+      "status": "FAIL",
+      "expected": "Preserve integer or warn",
+      "actual": {
+        "output": "{\n  \"id\": 9007199254740992\n}",
+        "warning": false
+      },
+      "at": "2026-09-19T13:59:26.531Z"
+    },
+    {
+      "id": "T04",
+      "status": "FAIL",
+      "expected": "Syntax error shown",
+      "actual": {
+        "errorShown": false,
+        "staleOutput": "{\n  \"id\": 9007199254740992\n}"
+      },
+      "at": "2026-09-19T13:59:27.174Z"
+    },
+    {
+      "id": "T05",
+      "status": "FAIL",
+      "expected": "0%/12 months => 100000 monthly, zero interest",
+      "actual": {
+        "has100000": false,
+        "tail": "대출 정보 입력\n대출 원금 (원)\n연 이자율 (%)\n대출 기간 (개월)\n원리금균등\n원금균등\n\n위 항목을 모두 입력하면 결과가 나타납니다.\n\n원리금균등상환 공식\n\n월납부금 = P × r(1+r)ⁿ / ((1+r)ⁿ-1)\n\nP=원금, r=월이율, n=기간(개월)\n\n원금균등상환 공식\n\n월납부금 = P/n + 잔여원금 × r\n\n매달 원금이 균등 감소, 이자는 점감\n\n도구 소개\n\n대출 원금, 금리, 기간을 입력하면 월 상환금, 총 이자, 총 상환금을 자동 계산합니다. 원리금균등·원금균등 두 방식 비교 가능.\n\n"
+      },
+      "at": "2026-09-19T13:59:27.991Z"
+    },
+    {
+      "id": "T06",
+      "status": "PASS",
+      "expected": "1200000 at 12% APR for 12 months => round 106618.546=106619",
+      "actual": {
+        "has106619": true
+      },
+      "at": "2026-09-19T13:59:28.014Z"
+    },
+    {
+      "id": "T07",
+      "status": "PASS",
+      "expected": "zero term no NaN/Infinity",
+      "actual": {
+        "nan": false
+      },
+      "at": "2026-09-19T13:59:28.032Z"
+    },
+    {
+      "id": "T08",
+      "status": "PASS",
+      "expected": "Elapsed 2 days",
+      "actual": {
+        "excerpt": "총 일수, 주수, 개월수, 연수를 확인합니다.\n3\n프리셋 버튼으로 오늘 기준 1개월·1년 등을 빠르게 설정할 수 있습니다.\n활용 팁\n💡\n계약 만료일·근무 기간·프로젝트 일정 계산에 활용하세요.\n💡\n개월수·연수는 30.4일·365.2"
+      },
+      "at": "2026-09-19T13:59:28.821Z"
+    },
+    {
+      "id": "T09",
+      "status": "FAIL",
+      "expected": "same day indicated",
+      "actual": {
+        "same": false
+      },
+      "at": "2026-09-19T13:59:28.842Z"
+    },
+    {
+      "id": "T10",
+      "status": "PASS",
+      "expected": "reverse date explicit",
+      "actual": {
+        "past": true
+      },
+      "at": "2026-09-19T13:59:28.865Z"
+    },
+    {
+      "id": "T11",
+      "status": "OBSERVED",
+      "expected": "4/3/3 and each Person once in results",
+      "actual": "SpinFlow\n룰렛돌리기\n유틸리티\n블로그\n소개\n팀 구성이 완료되었습니다!\n도구 목록\n랜덤 팀 편성기\n참가자 이름 입력 (줄바꿈으로 구분)\n\n총 10명\n\n팀(조) 개수 설정\n3\n팀 나누기\n편성 결과\n1팀 (4명)\nPerson0, Person6, Person4, Person5\n2팀 (3명)\nPerson3, Person8, Person1\n3팀 (3명)\nPerson9, Person7, Person2\n👥 공정한 팀 편성이 필요한 순간\n학교/학원: 조별 과제, 발표 순서 정하기\n워크샵/엠티: 레크리에이션 게임 조 편성\n스포츠: 풋살, 농구 공평한 팀 나누기\n도구 소개\n\n이름을 한 줄씩 입력하면 무작위로 팀을 나눠드립니다. 스터디, 워크숍, 게임 대결에서 팀을 정하는 무료 도구입니다.\n\n사용 방법\n1\n참여자 이름을 한 줄씩 입력하세요.\n2\n나눌 팀 수를 설정하세요.\n3\n'팀 나누기' 버튼을 클릭하세요.\n4\n결과를 확인하고 공유하세요.\n자주 묻는 질문\n최대 몇 명까지 가능한가요?\n▼\n팀 인원이 균등하게 나뉘지 않으면 어떻게 되나요?\n▼\n관련 도구\n룰렛 돌리기\n\n당첨자 한 명 추첨\n\n주사위 던지기\n\n순서 정하기\n\n동전 던지기\n\n두 팀 선택 결정\n\n페이지 업데이트: 2026-05-05\n\nSpinFlow\n룰렛돌리기\n유틸리티 도구\n블로그\n소개\n\n© 2026 SpinFlow. All Rights Reserved.\n\nFAQ\n문의하기\n개인정보처리방침\n이용약관",
+      "at": "2026-09-19T13:59:30.740Z"
+    },
+    {
+      "id": "T12",
+      "status": "OBSERVED",
+      "expected": "length 4 and 50",
+      "actual": {
+        "min": [
+          {
+            "type": "range",
+            "value": "4"
+          },
+          {
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "type": "checkbox",
+            "value": "on"
+          }
+        ],
+        "max": [
+          {
+            "type": "range",
+            "value": "50"
+          },
+          {
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "type": "checkbox",
+            "value": "on"
+          },
+          {
+            "type": "checkbox",
+            "value": "on"
+          }
+        ]
+      },
+      "at": "2026-09-19T13:59:31.557Z"
+    },
+    {
+      "id": "T13",
+      "status": "OBSERVED",
+      "expected": "QR decodes to original and PNG exports",
+      "actual": {
+        "decoded": "NOT RUN: browser BarcodeDetector unavailable",
+        "download": "qrcode.png"
+      },
+      "at": "2026-09-19T13:59:32.884Z"
+    },
+    {
+      "id": "T14",
+      "status": "PASS",
+      "expected": "No horizontal viewport overflow; sampled text tool only",
+      "actual": [
+        {
+          "width": 360,
+          "scrollWidth": 360,
+          "textareaVisible": true
+        },
+        {
+          "width": 390,
+          "scrollWidth": 390,
+          "textareaVisible": true
+        },
+        {
+          "width": 768,
+          "scrollWidth": 768,
+          "textareaVisible": true
+        },
+        {
+          "width": 1280,
+          "scrollWidth": 1280,
+          "textareaVisible": true
+        }
+      ],
+      "at": "2026-09-19T13:59:33.715Z"
+    },
+    {
+      "id": "LIVE/tools/text-counter",
+      "status": "OBSERVED",
+      "expected": "Compare live DOM to HTTP separately",
+      "actual": {
+        "title": "글자수 세기 (네이버/자소서 기준)",
+        "h1": [
+          "글자수 세기 (네이버/자소서 기준)"
+        ],
+        "text": "SpinFlow\n글자수 세기 (네이버/자소서 기준)\n공백 포함\n0자\n공백 제외\n0자\n바이트(Byte)\n0B\n단어 / 줄\n0 / 0\n* 한글 1자 = 3Byte (UTF-8 기준)\n0 문단\n도구 소개\n\n자기소개서, 블로그, 레포트 작성 시 필수! 공백 포함/제외 글자수, 바이트(Byte), 단어 수, 줄 수를 실시간으로 계산합니다. 네이버, 사람인, 잡코리아 등 다양한 플랫폼의 글자수 기준에 대응합니다.\n\n사용 방법\n1\n텍스트 입력창에 글자를 직접 타이핑하거나 붙여넣기(Ctrl+V) 하세요\n2\n입력과 동시에 글자수, 바이트, 단어수 등이 실시간으로 계산됩니다\n3\n필요 시 복사 버튼으로 작성한 내용을 클립보드에 저장하세요\n4\n초기화 버튼으로 내용을 모두 지울 수 있습니다\n활용 팁\n💡\n자기소개서는 보통 '공백 제외' 기준 500~1,000자를 요구합니다\n💡\n네이버 블로그는 '바이트' 기준을 사용하는 경우가 많습니다 (한글 1자 = 3Byte)\n💡\nSEO를 위한 블로그 포스팅은 공백 제외 1,500자 이상을 권장합니다\n💡\n제목은 모바일 표시 기준 20~25자가 적당합니다\n자주 묻는 질문\n공백 포함과 공백 제외 중 어떤 것을 봐야 하나요?\n▼\n바이트(Byte)는 왜 글자수와 다른가요?\n▼\n작성한 내용이 저장되나요?\n▼\n최대 몇 자까지 입력할 수 있나요?\n▼\n관련 도구\n대소문자 변환기\n\n텍스트의 대소문자를 일괄 변환\n\nLorem Ipsum 생성기\n\n더미 텍스트 생성\n\nJSON 포맷터\n\nJSON 데이터 정리 및 포맷팅\n\n페이지 업데이트: 2026-05-05\n\nSpinFlow\n룰렛돌리기\n유틸리티 도구\n블로그\n소개\n\n© 2026 SpinFlow. All Rights Reserved.\n\nFAQ\n문의하기\n개인정보처리방침\n이용약관",
+        "links": [
+          {
+            "text": "SpinFlow",
+            "url": "/"
+          },
+          {
+            "text": "룰렛돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티",
+            "url": "/tools"
+          },
+          {
+            "text": "블로그",
+            "url": "/blog"
+          },
+          {
+            "text": "소개",
+            "url": "/about"
+          },
+          {
+            "text": "도구 목록",
+            "url": "/tools"
+          },
+          {
+            "text": "대소문자 변환기텍스트의 대소문자를 일괄 변환",
+            "url": "/tools/case-converter"
+          },
+          {
+            "text": "Lorem Ipsum 생성기더미 텍스트 생성",
+            "url": "/tools/lorem-ipsum"
+          },
+          {
+            "text": "JSON 포맷터JSON 데이터 정리 및 포맷팅",
+            "url": "/tools/json-formatter"
+          },
+          {
+            "text": "SpinFlow",
+            "url": "/"
+          },
+          {
+            "text": "룰렛돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티 도구",
+            "url": "/tools"
+          },
+          {
+            "text": "블로그",
+            "url": "/blog"
+          },
+          {
+            "text": "소개",
+            "url": "/about"
+          },
+          {
+            "text": "FAQ",
+            "url": "/faq"
+          },
+          {
+            "text": "문의하기",
+            "url": "/contact"
+          },
+          {
+            "text": "개인정보처리방침",
+            "url": "/privacy"
+          },
+          {
+            "text": "이용약관",
+            "url": "/terms"
+          }
+        ],
+        "canonical": "https://spinkorea.kr/tools/text-counter",
+        "robots": "index,follow"
+      },
+      "at": "2026-09-19T13:59:34.711Z"
+    },
+    {
+      "id": "LIVE/contact",
+      "status": "OBSERVED",
+      "expected": "Compare live DOM to HTTP separately",
+      "actual": {
+        "title": "문의하기 | SpinFlow",
+        "h1": [
+          "문의하기"
+        ],
+        "text": "SpinFlow\n\nCONTACT\n\n문의하기\n\n도구 오류, 콘텐츠 정정 요청, 개인정보 문의, 광고·제휴 제안은 아래 연락 경로로 보내주세요.\n\nGitHub Issues\ngithub.com/lsk7209/spinkorea/issues\n\n기능 오류, 오타, 계산 결과 이상, 개선 제안은 가능한 한 관련 URL과 재현 방법을 함께 남겨주세요.\n\n개인정보·제휴 문의\n\n개인정보 처리, 광고 노출, 제휴 제안처럼 공개로 남기기 어려운 내용도 현재는 GitHub Issues로 받고 있습니다. 이슈 제목에 \"[개인정보]\" 또는 \"[제휴]\"를 붙이고 요청 목적을 적어 주시면 우선 확인합니다.\n\n응답 기준\n\n일반 문의는 평일 기준으로 순차 검토합니다. 서비스 장애, 명백한 개인정보 문제, 잘못된 광고 표시 등 이용자 보호와 관련된 문의는 우선 확인합니다.\n\n문의 전 확인\n\n개인정보 처리 방식은 개인정보처리방침, 서비스 이용 조건은 이용약관에 정리되어 있습니다.\n\nSpinFlow\n룰렛돌리기\n유틸리티 도구\n블로그\n소개\n\n© 2026 SpinFlow. All Rights Reserved.\n\nFAQ\n문의하기\n개인정보처리방침\n이용약관",
+        "links": [
+          {
+            "text": "SpinFlow",
+            "url": "/"
+          },
+          {
+            "text": "룰렛돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티",
+            "url": "/tools"
+          },
+          {
+            "text": "블로그",
+            "url": "/blog"
+          },
+          {
+            "text": "소개",
+            "url": "/about"
+          },
+          {
+            "text": "github.com/lsk7209/spinkorea/issues",
+            "url": "https://github.com/lsk7209/spinkorea/issues"
+          },
+          {
+            "text": "GitHub Issues",
+            "url": "https://github.com/lsk7209/spinkorea/issues"
+          },
+          {
+            "text": "개인정보처리방침",
+            "url": "/privacy"
+          },
+          {
+            "text": "이용약관",
+            "url": "/terms"
+          },
+          {
+            "text": "SpinFlow",
+            "url": "/"
+          },
+          {
+            "text": "룰렛돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티 도구",
+            "url": "/tools"
+          },
+          {
+            "text": "블로그",
+            "url": "/blog"
+          },
+          {
+            "text": "소개",
+            "url": "/about"
+          },
+          {
+            "text": "FAQ",
+            "url": "/faq"
+          },
+          {
+            "text": "문의하기",
+            "url": "/contact"
+          },
+          {
+            "text": "개인정보처리방침",
+            "url": "/privacy"
+          },
+          {
+            "text": "이용약관",
+            "url": "/terms"
+          }
+        ],
+        "canonical": "https://spinkorea.kr/contact",
+        "robots": "index,follow"
+      },
+      "at": "2026-09-19T13:59:35.485Z"
+    },
+    {
+      "id": "LIVE/privacy/",
+      "status": "OBSERVED",
+      "expected": "Compare live DOM to HTTP separately",
+      "actual": {
+        "title": "개인정보처리방침 - SpinFlow",
+        "h1": [
+          "개인정보처리방침"
+        ],
+        "text": "SpinFlow\n\nPRIVACY POLICY\n\n개인정보처리방침\n\n최종 업데이트: 2026년 6월 8일\n\nSpinFlow는 회원가입 없이 사용할 수 있는 무료 웹 유틸리티 서비스입니다. 이용자의 개인정보를 최소한으로 처리하며, 서비스 운영과 품질 개선에 필요한 범위에서만 분석 및 광고 관련 기술을 사용할 수 있습니다.\n\n1. 수집될 수 있는 정보\n방문 페이지, 유입 경로, 체류 시간, 브라우저 유형 등 비식별 분석 정보\n기기 종류, 운영체제, 화면 크기 등 서비스 품질 점검에 필요한 기술 정보\n문의 또는 오류 제보 시 사용자가 직접 제공한 연락 정보와 문의 내용\n\n룰렛, 추첨, 텍스트 도구 등 대부분의 도구 입력값은 브라우저에서 처리되며 별도 서버 저장을 전제로 하지 않습니다. 단, 사용자가 직접 문의로 보낸 내용은 답변과 정정 처리를 위해 확인될 수 있습니다.\n\n2. 이용 목적\n서비스 제공, 오류 진단, 보안 점검\n도구 사용성 개선과 콘텐츠 품질 개선\n광고 노출, 트래픽 분석, 악성 이용 방지\n문의 대응과 정정 요청 처리\n3. 쿠키와 제3자 서비스\n\nSpinFlow는 Google Analytics, Google AdSense 등 제3자 서비스를 사용할 수 있습니다. Google을 포함한 제3자 사업자는 쿠키 또는 유사 기술을 사용해 광고 노출, 광고 성과 측정, 방문 통계 분석을 수행할 수 있습니다.\n\nGoogle의 개인정보 처리 방식은 Google 개인정보처리방침에서 확인할 수 있습니다. 개인 맞춤 광고 설정은 Google 광고 설정 또는 브라우저 쿠키 설정에서 관리할 수 있습니다.\n\n4. 보관과 파기\n\n문의 기록은 답변과 분쟁 방지에 필요한 기간 동안 보관될 수 있으며, 목적이 달성되면 삭제하거나 식별이 어려운 형태로 관리합니다. 분석 데이터의 보관 기간은 각 제3자 서비스의 정책을 따릅니다.\n\n5. 이용자의 권리\n\n이용자는 개인정보 열람, 정정, 삭제, 처리 중지를 요청할 수 있습니다. 관련 요청은 문의하기 페이지를 통해 보내주세요.\n\n6. 방침 변경\n\n법령, 서비스 구조, 광고 및 분석 도구 변경에 따라 본 방침이 수정될 수 있습니다. 중요한 변경 사항은 사이트 내에서 확인할 수 있도록 반영합니다.\n\nSpinFlow\n룰렛돌리기\n유틸리티 도구\n블로그\n소개\n\n© 2026 SpinFlow. All Rights Reserved.\n\nFAQ\n문의하기\n개인정보처리방침\n이용약관",
+        "links": [
+          {
+            "text": "SpinFlow",
+            "url": "/"
+          },
+          {
+            "text": "룰렛돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티",
+            "url": "/tools"
+          },
+          {
+            "text": "블로그",
+            "url": "/blog"
+          },
+          {
+            "text": "소개",
+            "url": "/about"
+          },
+          {
+            "text": "Google 개인정보처리방침",
+            "url": "https://policies.google.com/privacy"
+          },
+          {
+            "text": "문의하기",
+            "url": "/contact"
+          },
+          {
+            "text": "SpinFlow",
+            "url": "/"
+          },
+          {
+            "text": "룰렛돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티 도구",
+            "url": "/tools"
+          },
+          {
+            "text": "블로그",
+            "url": "/blog"
+          },
+          {
+            "text": "소개",
+            "url": "/about"
+          },
+          {
+            "text": "FAQ",
+            "url": "/faq"
+          },
+          {
+            "text": "문의하기",
+            "url": "/contact"
+          },
+          {
+            "text": "개인정보처리방침",
+            "url": "/privacy"
+          },
+          {
+            "text": "이용약관",
+            "url": "/terms"
+          }
+        ],
+        "canonical": "https://spinkorea.kr/privacy/",
+        "robots": "index,follow"
+      },
+      "at": "2026-09-19T13:59:36.214Z"
+    },
+    {
+      "id": "LIVE/tools",
+      "status": "OBSERVED",
+      "expected": "Compare live DOM to HTTP separately",
+      "actual": {
+        "title": "무료 유틸리티 모음 51종 | SpinFlow — 계산기·변환·랜덤 도구",
+        "h1": [
+          "무료 웹 유틸리티 모음"
+        ],
+        "text": "SpinFlow\n무료 웹 유틸리티 모음\n\n일상을 더 편리하게 만드는 다양한 웹 도구들을 무료로 사용하세요.\n\n필요한 계산이나 변환을 선택하면 입력값은 브라우저에서 바로 처리됩니다. 검색창에서 도구 이름을 찾거나 목적별 바로가기를 선택하세요.\n\n연봉 실수령액 계산\n대출 이자 계산\n글자수 세기\n랜덤 팀 나누기\nQR 코드 만들기\nBMI 계산\n\n무료 도구\n\n유틸리티 모음\n\n빠른 결정, 변환, 생성까지 한 곳에서.\n\n최근 사용\n\n글자수 세기\n전체\n랜덤\n텍스트·개발\n계산기\n건강·피트니스\n날짜·시간\n생활 금융\n로또 번호 생성\n\n나만의 행운 번호 추첨\n\n바로가기\n↗\n주사위 던지기\n\n1~5개 6면 주사위\n\n바로가기\n↗\n동전 던지기\n\n앞면 vs 뒷면 승부\n\n바로가기\n↗\nYes or No\n\n결정 장애 해결사\n\n바로가기\n↗\n랜덤 팀 편성\n\n공정한 팀 나누기\n\n바로가기\n↗\n비밀번호 생성\n\n강력한 보안 암호\n\n바로가기\n↗\n글자수 세기\n\n자소서/블로그 글자수\n\n바로가기\n↗\n대소문자 변환\n\n영어 대소문자/카멜\n\n바로가기\n↗\n로렘 입숨\n\n더미 텍스트 생성\n\n바로가기\n↗\nJSON 포맷터\n\n정렬/압축/검사\n\n바로가기\n↗\nURL 인코더\n\nURL 인코딩/디코딩\n\n바로가기\n↗\nBase64 변환\n\n텍스트 ↔ Base64\n\n바로가기\n↗\nDiff 비교\n\n텍스트 차이 비교\n\n바로가기\n↗\n마크다운 미리보기\n\nMD 실시간 렌더링\n\n바로가기\n↗\n색상 변환기\n\nHEX/RGB/HSL 변환\n\n바로가기\n↗\nCSS 그림자 생성\n\nBox shadow 시각화\n\n바로가기\n↗\nQR 코드 생성\n\n링크를 QR로 변환\n\n바로가기\n↗\n진법 변환기\n\n2진수·8진수·10진수·16진수 변환\n\n바로가기\n↗\nUUID 생성기\n\nUUID v4 최대 10개 일괄 생성\n\n바로가기\n↗\n나이 계산기\n\n만 나이/생일 계산\n\n바로가기\n↗\n퍼센트 계산기\n\n할인율/증감률 계산\n\n바로가기\n↗\n시간 계산기\n\n시간 더하기/빼기\n\n바로가기\n↗\n단위 변환기\n\n길이/무게/온도 변환\n\n바로가기\n↗\n평수 계산기\n\n평↔m²↔ft² 면적 변환\n\n바로가기\n↗\n마진율 계산기\n\n원가·판매가·마진율 계산\n\n바로가기\n↗\n할인율 계산기\n\n정가·할인율·할인가 계산\n\n바로가기\n↗\n속도 계산기\n\n거리·시간·속도 3방향 계산\n\n바로가기\n↗\n연비 계산기\n\n주행거리·연비·연료비 계산\n\n바로가기\n↗\n통계 계산기\n\n평균·중앙값·표준편차 한번에\n\n바로가기\n↗\nBMI 계산기\n\n체질량 지수 측정\n\n바로가기\n↗\n칼로리 계산기\n\nBMR·일일 권장 칼로리\n\n바로가기\n↗\n체지방률 계산기\n\nNavy Method 체성분 분석\n\n바로가기\n↗\n수면 계산기\n\n90분 사이클 최적 기상 시각\n\n바로가기\n↗\n칼로리 소모 계산기\n\n운동별 소모 칼로리·지방 연소량\n\n바로가기\n↗\n수분 섭취량 계산기\n\n체중·활동량별 하루 권장 물 섭취량\n\n바로가기\n↗\n이상 체중 계산기\n\nBMI·Broca·Hamwi 기준 이상 체중\n\n바로가기\n↗\n날짜 계산기\n\n두 날짜 사이 기간 계산\n\n바로가기\n↗\n타이머\n\n카운트다운·스톱워치·뽀모도로\n\n바로가기\n↗\nD-Day 카운터\n\n기념일/목표일 계산\n\n바로가기\n↗\nUnix 타임스탬프\n\n날짜 ↔ 타임스탬프\n\n바로가기\n↗\n시급 계산기\n\n일급·월급·연봉 자동 환산\n\n바로가기\n↗\n대출 계산기\n\n월 상환금·총 이자 계산\n\n바로가기\n↗\n전월세 전환기\n\n전세↔월세 보증금 환산\n\n바로가기\n↗\n복리 계산기\n\n예금·적금 만기금액 계산\n\n바로가기\n↗\n퇴직금 계산기\n\n법정 퇴직금 자동 계산\n\n바로가기\n↗\n연차 계산기\n\n연차일수·잔여·수당 계산\n\n바로가기\n↗\n실수령액 계산기\n\n4대보험·세금 공제 후 월급\n\n바로가기\n↗\n부가세 계산기\n\n공급가액·부가세·공급대가 계산\n\n바로가기\n↗\n더치페이 계산기\n\n총 금액을 n명으로 나누기\n\n바로가기\n↗\n투자 수익률 계산기\n\nROI·CAGR·목표 금액 계산\n\n바로가기\n↗\n단어 빈도 분석기\n\n텍스트에서 단어 빈도 TOP N 분석\n\n바로가기\n↗\nSpinFlow\n룰렛돌리기\n유틸리티 도구\n블로그\n소개\n\n© 2026 SpinFlow. All Rights Reserved.\n\nFAQ\n문의하기\n개인정보처리방침\n이용약관",
+        "links": [
+          {
+            "text": "SpinFlow",
+            "url": "/"
+          },
+          {
+            "text": "룰렛돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티",
+            "url": "/tools"
+          },
+          {
+            "text": "블로그",
+            "url": "/blog"
+          },
+          {
+            "text": "소개",
+            "url": "/about"
+          },
+          {
+            "text": "연봉 실수령액 계산",
+            "url": "/tools/net-salary"
+          },
+          {
+            "text": "대출 이자 계산",
+            "url": "/tools/loan-calculator"
+          },
+          {
+            "text": "글자수 세기",
+            "url": "/tools/text-counter"
+          },
+          {
+            "text": "랜덤 팀 나누기",
+            "url": "/tools/random-team"
+          },
+          {
+            "text": "QR 코드 만들기",
+            "url": "/tools/qr-code-generator"
+          },
+          {
+            "text": "BMI 계산",
+            "url": "/tools/bmi-calculator"
+          },
+          {
+            "text": "글자수 세기",
+            "url": "/tools/text-counter"
+          },
+          {
+            "text": "로또 번호 생성나만의 행운 번호 추첨바로가기↗",
+            "url": "/tools/lotto-generator"
+          },
+          {
+            "text": "주사위 던지기1~5개 6면 주사위바로가기↗",
+            "url": "/tools/dice-roller"
+          },
+          {
+            "text": "동전 던지기앞면 vs 뒷면 승부바로가기↗",
+            "url": "/tools/coin-flip"
+          },
+          {
+            "text": "Yes or No결정 장애 해결사바로가기↗",
+            "url": "/tools/yes-no-oracle"
+          },
+          {
+            "text": "랜덤 팀 편성공정한 팀 나누기바로가기↗",
+            "url": "/tools/random-team"
+          },
+          {
+            "text": "비밀번호 생성강력한 보안 암호바로가기↗",
+            "url": "/tools/random-password"
+          },
+          {
+            "text": "글자수 세기자소서/블로그 글자수바로가기↗",
+            "url": "/tools/text-counter"
+          },
+          {
+            "text": "대소문자 변환영어 대소문자/카멜바로가기↗",
+            "url": "/tools/case-converter"
+          },
+          {
+            "text": "로렘 입숨더미 텍스트 생성바로가기↗",
+            "url": "/tools/lorem-ipsum"
+          },
+          {
+            "text": "JSON 포맷터정렬/압축/검사바로가기↗",
+            "url": "/tools/json-formatter"
+          },
+          {
+            "text": "URL 인코더URL 인코딩/디코딩바로가기↗",
+            "url": "/tools/uri-encoder"
+          },
+          {
+            "text": "Base64 변환텍스트 ↔ Base64바로가기↗",
+            "url": "/tools/base64-encoder"
+          },
+          {
+            "text": "Diff 비교텍스트 차이 비교바로가기↗",
+            "url": "/tools/diff-checker"
+          },
+          {
+            "text": "마크다운 미리보기MD 실시간 렌더링바로가기↗",
+            "url": "/tools/markdown-previewer"
+          },
+          {
+            "text": "색상 변환기HEX/RGB/HSL 변환바로가기↗",
+            "url": "/tools/color-converter"
+          },
+          {
+            "text": "CSS 그림자 생성Box shadow 시각화바로가기↗",
+            "url": "/tools/css-shadow-generator"
+          },
+          {
+            "text": "QR 코드 생성링크를 QR로 변환바로가기↗",
+            "url": "/tools/qr-code-generator"
+          },
+          {
+            "text": "진법 변환기2진수·8진수·10진수·16진수 변환바로가기↗",
+            "url": "/tools/base-converter"
+          },
+          {
+            "text": "UUID 생성기UUID v4 최대 10개 일괄 생성바로가기↗",
+            "url": "/tools/uuid-generator"
+          },
+          {
+            "text": "나이 계산기만 나이/생일 계산바로가기↗",
+            "url": "/tools/age-calculator"
+          },
+          {
+            "text": "퍼센트 계산기할인율/증감률 계산바로가기↗",
+            "url": "/tools/percentage-calculator"
+          },
+          {
+            "text": "시간 계산기시간 더하기/빼기바로가기↗",
+            "url": "/tools/time-calculator"
+          },
+          {
+            "text": "단위 변환기길이/무게/온도 변환바로가기↗",
+            "url": "/tools/unit-converter"
+          },
+          {
+            "text": "평수 계산기평↔m²↔ft² 면적 변환바로가기↗",
+            "url": "/tools/area-converter"
+          },
+          {
+            "text": "마진율 계산기원가·판매가·마진율 계산바로가기↗",
+            "url": "/tools/margin-calculator"
+          },
+          {
+            "text": "할인율 계산기정가·할인율·할인가 계산바로가기↗",
+            "url": "/tools/discount-calculator"
+          },
+          {
+            "text": "속도 계산기거리·시간·속도 3방향 계산바로가기↗",
+            "url": "/tools/speed-calculator"
+          },
+          {
+            "text": "연비 계산기주행거리·연비·연료비 계산바로가기↗",
+            "url": "/tools/fuel-economy"
+          },
+          {
+            "text": "통계 계산기평균·중앙값·표준편차 한번에바로가기↗",
+            "url": "/tools/statistics-calculator"
+          },
+          {
+            "text": "BMI 계산기체질량 지수 측정바로가기↗",
+            "url": "/tools/bmi-calculator"
+          },
+          {
+            "text": "칼로리 계산기BMR·일일 권장 칼로리바로가기↗",
+            "url": "/tools/calorie-calculator"
+          },
+          {
+            "text": "체지방률 계산기Navy Method 체성분 분석바로가기↗",
+            "url": "/tools/body-fat"
+          },
+          {
+            "text": "수면 계산기90분 사이클 최적 기상 시각바로가기↗",
+            "url": "/tools/sleep-calculator"
+          },
+          {
+            "text": "칼로리 소모 계산기운동별 소모 칼로리·지방 연소량바로가기↗",
+            "url": "/tools/calorie-burn"
+          },
+          {
+            "text": "수분 섭취량 계산기체중·활동량별 하루 권장 물 섭취량바로가기↗",
+            "url": "/tools/water-intake"
+          },
+          {
+            "text": "이상 체중 계산기BMI·Broca·Hamwi 기준 이상 체중바로가기↗",
+            "url": "/tools/ideal-weight"
+          },
+          {
+            "text": "날짜 계산기두 날짜 사이 기간 계산바로가기↗",
+            "url": "/tools/date-calculator"
+          },
+          {
+            "text": "타이머카운트다운·스톱워치·뽀모도로바로가기↗",
+            "url": "/tools/timer"
+          },
+          {
+            "text": "D-Day 카운터기념일/목표일 계산바로가기↗",
+            "url": "/tools/d-day-counter"
+          },
+          {
+            "text": "Unix 타임스탬프날짜 ↔ 타임스탬프바로가기↗",
+            "url": "/tools/unix-timestamp"
+          },
+          {
+            "text": "시급 계산기일급·월급·연봉 자동 환산바로가기↗",
+            "url": "/tools/hourly-wage"
+          },
+          {
+            "text": "대출 계산기월 상환금·총 이자 계산바로가기↗",
+            "url": "/tools/loan-calculator"
+          },
+          {
+            "text": "전월세 전환기전세↔월세 보증금 환산바로가기↗",
+            "url": "/tools/jeonse-converter"
+          },
+          {
+            "text": "복리 계산기예금·적금 만기금액 계산바로가기↗",
+            "url": "/tools/compound-interest"
+          },
+          {
+            "text": "퇴직금 계산기법정 퇴직금 자동 계산바로가기↗",
+            "url": "/tools/severance-pay"
+          },
+          {
+            "text": "연차 계산기연차일수·잔여·수당 계산바로가기↗",
+            "url": "/tools/annual-leave"
+          },
+          {
+            "text": "실수령액 계산기4대보험·세금 공제 후 월급바로가기↗",
+            "url": "/tools/net-salary"
+          },
+          {
+            "text": "부가세 계산기공급가액·부가세·공급대가 계산바로가기↗",
+            "url": "/tools/vat-calculator"
+          },
+          {
+            "text": "더치페이 계산기총 금액을 n명으로 나누기바로가기↗",
+            "url": "/tools/dutch-pay"
+          },
+          {
+            "text": "투자 수익률 계산기ROI·CAGR·목표 금액 계산바로가기↗",
+            "url": "/tools/roi-calculator"
+          },
+          {
+            "text": "단어 빈도 분석기텍스트에서 단어 빈도 TOP N 분석바로가기↗",
+            "url": "/tools/word-frequency"
+          },
+          {
+            "text": "SpinFlow",
+            "url": "/"
+          },
+          {
+            "text": "룰렛돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티 도구",
+            "url": "/tools"
+          },
+          {
+            "text": "블로그",
+            "url": "/blog"
+          },
+          {
+            "text": "소개",
+            "url": "/about"
+          },
+          {
+            "text": "FAQ",
+            "url": "/faq"
+          },
+          {
+            "text": "문의하기",
+            "url": "/contact"
+          },
+          {
+            "text": "개인정보처리방침",
+            "url": "/privacy"
+          },
+          {
+            "text": "이용약관",
+            "url": "/terms"
+          }
+        ],
+        "canonical": "https://spinkorea.kr/tools",
+        "robots": "index,follow"
+      },
+      "at": "2026-09-19T13:59:36.992Z"
+    },
+    {
+      "id": "LIVE/blog/random-choice-log",
+      "status": "OBSERVED",
+      "expected": "Compare live DOM to HTTP separately",
+      "actual": {
+        "title": "랜덤 결과 기록 판단법, 참가자 목록 중심",
+        "h1": [
+          "랜덤 결과 기록 판단법, 참가자 목록 중심"
+        ],
+        "text": "SpinFlow\n블로그 홈\n2026-05-11\n#룰렛\n#랜덤\n#선택\n랜덤 결과 기록 판단법, 참가자 목록 중심\n\n랜덤 결과 기록은 필요한 순간부터 결과 기록과 공정성을 남기는 방법까지 안내합니다.\n\n글 본문을 불러오고 있습니다.\n관련 도구로 바로 확인해 보세요\n\n글에서 정리한 기준을 실제 선택, 계산, 기록 도구에 바로 적용할 수 있습니다.\n\n무료 룰렛 돌리기\n유틸리티 모음\nSpinFlow\n룰렛돌리기\n유틸리티 도구\n블로그\n소개\n\n© 2026 SpinFlow. All Rights Reserved.\n\nFAQ\n문의하기\n개인정보처리방침\n이용약관",
+        "links": [
+          {
+            "text": "SpinFlow",
+            "url": "/"
+          },
+          {
+            "text": "룰렛돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티",
+            "url": "/tools"
+          },
+          {
+            "text": "블로그",
+            "url": "/blog"
+          },
+          {
+            "text": "소개",
+            "url": "/about"
+          },
+          {
+            "text": "블로그 홈",
+            "url": "/blog"
+          },
+          {
+            "text": "무료 룰렛 돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티 모음",
+            "url": "/tools"
+          },
+          {
+            "text": "SpinFlow",
+            "url": "/"
+          },
+          {
+            "text": "룰렛돌리기",
+            "url": "/"
+          },
+          {
+            "text": "유틸리티 도구",
+            "url": "/tools"
+          },
+          {
+            "text": "블로그",
+            "url": "/blog"
+          },
+          {
+            "text": "소개",
+            "url": "/about"
+          },
+          {
+            "text": "FAQ",
+            "url": "/faq"
+          },
+          {
+            "text": "문의하기",
+            "url": "/contact"
+          },
+          {
+            "text": "개인정보처리방침",
+            "url": "/privacy"
+          },
+          {
+            "text": "이용약관",
+            "url": "/terms"
+          }
+        ],
+        "canonical": "https://spinkorea.kr/blog/random-choice-log",
+        "robots": "noindex,follow"
+      },
+      "at": "2026-09-19T13:59:37.827Z"
+    }
+  ],
+  "blocked": [
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "images.unsplash.com",
+      "path": "/photo-1564053489984-317bbd824340",
+      "hasDummy": false
+    }
+  ],
+  "errors": [
+    "Audit permission denied"
+  ]
+}

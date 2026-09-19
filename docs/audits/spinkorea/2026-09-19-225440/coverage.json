@@ -1,0 +1,17 @@
+{
+  "candidate_urls": 1313,
+  "http_urls": 158,
+  "sitemap_urls": 149,
+  "sitemap_http_checked": 149,
+  "sitemap_http_or_noindex_anomalies": 0,
+  "http_status_counts": {
+    "200": 157,
+    "404": 1
+  },
+  "deep_articles": 12,
+  "live_dom_unique_pages": 5,
+  "local_tool_pages": 8,
+  "function_cases": 21,
+  "function_pass": 15,
+  "function_fail": 6
+}

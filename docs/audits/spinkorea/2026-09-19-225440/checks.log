@@ -1,0 +1,7 @@
+node node_modules/typescript/bin/tsc --noEmit
+exit=0
+ROULETTE_STORAGE_OK
+RECENT_TOOLS_STORAGE_OK
+storage_exit=0
+SPIN_CONSISTENCY_OK
+spin_exit=0

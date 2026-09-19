@@ -1,0 +1,150 @@
+{
+  "at": "2026-09-19T14:01:33.680Z",
+  "results": [
+    {
+      "id": "T04-recheck",
+      "status": "PASS",
+      "expected": "Parser error displayed; initial test looked for wrong localized toast",
+      "actual": "Expected double-quoted property name in JSON at position 7 (line 1 column 8)",
+      "at": "2026-09-19T14:01:29.546Z"
+    },
+    {
+      "id": "T09-recheck",
+      "status": "PASS",
+      "expected": "Same-day message (initial matcher was wrong)",
+      "actual": true,
+      "at": "2026-09-19T14:01:30.310Z"
+    },
+    {
+      "id": "T12-recheck",
+      "status": "BLOCKED",
+      "expected": "test completes",
+      "actual": "locator.uncheck: Element is not visible\nCall log:\n\u001b[2m  - waiting for locator('input[type=checkbox]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input checked class=\"hidden\" type=\"checkbox\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n",
+      "at": "2026-09-19T14:01:31.323Z"
+    },
+    {
+      "id": "T15",
+      "status": "FAIL",
+      "expected": "Changing denominator to zero invalidates old result",
+      "actual": {
+        "before": "변화율\n▲ 10%",
+        "after": "변화율\n▲ 10%"
+      },
+      "at": "2026-09-19T14:01:32.306Z"
+    },
+    {
+      "id": "T16",
+      "status": "PASS",
+      "expected": "Division by zero has explicit unsupported-input state",
+      "actual": {
+        "infinite": false
+      },
+      "at": "2026-09-19T14:01:32.353Z"
+    },
+    {
+      "id": "T17",
+      "status": "PASS",
+      "expected": "Mock clipboard resolves and receives identical dummy",
+      "actual": {
+        "mock": true
+      },
+      "at": "2026-09-19T14:01:33.156Z"
+    },
+    {
+      "id": "LIVE-random-complete",
+      "status": "OBSERVED",
+      "expected": "Wait generated article chunk before judging",
+      "actual": {
+        "text": "SpinFlow\n룰렛돌리기\n유틸리티\n블로그\n소개\n블로그 홈\n2026-05-11\n#룰렛\n#랜덤\n#선택\n랜덤 결과 기록 판단법, 참가자 목록 중심\n\n랜덤 결과 기록은 필요한 순간부터 결과 기록과 공정성을 남기는 방법까지 안내합니다.\n\n글 본문을 불러오고 있습니다.\n관련 도구로 바로 확인해 보세요\n\n글에서 정리한 기준을 실제 선택, 계산, 기록 도구에 바로 적용할 수 있습니다.\n\n무료 룰렛 돌리기\n유틸리티 모음\nSpinFlow\n룰렛돌리기\n유틸리티 도구\n블로그\n소개\n\n© 2026 SpinFlow. All Rights Reserved.\n\nFAQ\n문의하기\n개인정보처리방침\n이용약관",
+        "hasParticles": [
+          [
+            "목록와",
+            false
+          ],
+          [
+            "설정를",
+            false
+          ],
+          [
+            "기록가",
+            false
+          ]
+        ]
+      },
+      "at": "2026-09-19T14:01:33.679Z"
+    }
+  ],
+  "blocked": [
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "pagead2.googlesyndication.com",
+      "path": "/pagead/js/adsbygoogle.js",
+      "hasDummy": false
+    },
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "hasDummy": false
+    },
+    {
+      "host": "images.unsplash.com",
+      "path": "/photo-1564053489984-317bbd824340",
+      "hasDummy": false
+    },
+    {
+      "host": "images.unsplash.com",
+      "path": "/photo-1564053489984-317bbd824340",
+      "hasDummy": false
+    }
+  ],
+  "errors": []
+}
