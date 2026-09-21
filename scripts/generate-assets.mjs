@@ -1076,6 +1076,11 @@ function writePublicAssets(posts) {
   );
 }
 
+function buildDeploymentMarker(env = process.env, builtAt = Date.now()) {
+  const sha = env.VERCEL_GIT_COMMIT_SHA;
+  return { commitSha: /^[a-f0-9]{40}$/.test(sha || "") ? sha : null, builtAt };
+}
+
 function writeDistAssets(posts) {
   const indexablePosts = posts.filter(isIndexablePost);
   const distDir = path.join(ROOT, "dist");
@@ -1154,6 +1159,7 @@ function writeDistAssets(posts) {
   fs.writeFileSync(path.join(distDir, "sitemap.xml"), buildSitemap(indexablePosts));
   fs.writeFileSync(path.join(distDir, "rss.xml"), buildRss(indexablePosts));
   fs.writeFileSync(path.join(distDir, "llms.txt"), buildLlms(indexablePosts));
+  fs.writeFileSync(path.join(distDir, "deployment-status.json"), JSON.stringify(buildDeploymentMarker()));
 }
 
 const posts = extractPosts();

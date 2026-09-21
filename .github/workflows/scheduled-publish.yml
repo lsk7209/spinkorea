@@ -67,12 +67,12 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: node --test scripts/deploy-scheduled.test.mjs
 
-      - name: Deploy exact commit and wait for production readiness
+      - name: Trigger deployment and verify fresh production commit
         id: deploy
         if: steps.gate.outputs.run == 'true'
         run: node scripts/deploy-scheduled.mjs
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
 
       - name: Notify Google Search Console sitemap
         if: ${{ steps.deploy.outcome == 'success' && (github.event_name == 'schedule' || inputs.notify == true) && env.GOOGLE_SERVICE_ACCOUNT_JSON != '' }}
