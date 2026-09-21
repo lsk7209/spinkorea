@@ -2,16 +2,28 @@ name: Scheduled publish
 
 on:
   workflow_dispatch:
+    inputs:
+      notify:
+        description: Notify search engines after verified deployment
+        type: boolean
+        default: false
   schedule:
     # 하루 1회(UTC 0시 = KST 9시). 빌드 비용 절감: 기존 5시간마다 풀빌드 →
     # 하루 1빌드로 그날 publishAt 도달분(약 5편)을 일괄 노출. 글별 publishAt(5h 간격)은 유지.
     - cron: "0 0 * * *"
 
+permissions:
+  contents: read
+
+concurrency:
+  group: scheduled-publish-production
+  cancel-in-progress: false
+
 jobs:
   publish-window:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     env:
-      VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
       GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
       GSC_SITE_URL: https://spinkorea.kr/
       GSC_SITEMAP_URL: https://spinkorea.kr/sitemap.xml
@@ -49,20 +61,23 @@ jobs:
         run: npm run content:validate
 
       - if: steps.gate.outputs.run == 'true'
-        run: npm run build
+        run: npm run type-check
 
-      - name: Trigger Vercel deploy hook
-        if: ${{ steps.gate.outputs.run == 'true' && env.VERCEL_DEPLOY_HOOK_URL != '' }}
-        run: curl -fsS -X POST "$VERCEL_DEPLOY_HOOK_URL"
+      - name: Test deployment readiness guard
+        if: steps.gate.outputs.run == 'true'
+        run: node --test scripts/deploy-scheduled.test.mjs
 
-      - name: Wait for deployment propagation
-        if: ${{ steps.gate.outputs.run == 'true' && env.VERCEL_DEPLOY_HOOK_URL != '' }}
-        run: sleep 180
+      - name: Deploy exact commit and wait for production readiness
+        id: deploy
+        if: steps.gate.outputs.run == 'true'
+        run: node scripts/deploy-scheduled.mjs
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
       - name: Notify Google Search Console sitemap
-        if: ${{ steps.gate.outputs.run == 'true' && env.GOOGLE_SERVICE_ACCOUNT_JSON != '' }}
+        if: ${{ steps.deploy.outcome == 'success' && (github.event_name == 'schedule' || inputs.notify == true) && env.GOOGLE_SERVICE_ACCOUNT_JSON != '' }}
         run: npm run notify:google
 
       - name: Notify IndexNow
-        if: steps.gate.outputs.run == 'true'
+        if: ${{ steps.deploy.outcome == 'success' && (github.event_name == 'schedule' || inputs.notify == true) }}
         run: npm run notify:indexnow
