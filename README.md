@@ -4,7 +4,7 @@
 
 ## 현재 기준 (2026-09-29)
 
-- 호스팅: **Vercel** (GitHub `main` push 시 연결된 Git 통합이 자동 배포). 설정은 `vercel.json`.
+- 호스팅: **Vercel**. `main` push만으로는 Production이 갱신되지 않는다(브랜치 push·PR은 Preview 배포). Production은 `.github/workflows/scheduled-publish.yml`이 deploy hook으로 배포하고 `/deployment-status.json`의 커밋 SHA로 반영을 검증한다(매일 KST 9시 예약, 또는 수동 `gh workflow run "Scheduled publish" --ref main -f notify=false`). 설정은 `vercel.json`.
 - 서버 API: `api/*.ts` Vercel Functions + `@libsql/client`(Turso). 현재 프런트엔드는 이 API를 호출하지 않는다. 위험 분석: `docs/spk2/api-threat-model-20260929.md`.
 - 과거 Cloudflare Pages/D1 설명(`db/`, 구 README)은 이력이며 현재 배포 경로가 아니다.
 - 예약 글은 `.github/workflows/scheduled-publish.yml`이 빌드 시점 기준으로 공개한다. 빌드는 `public/{sitemap.xml,rss.xml,llms.txt}`와 메타데이터 캐시를 다시 생성한다.
@@ -39,7 +39,7 @@ npm run preview   # 빌드 결과 미리보기
 ## 배포와 원복
 
 1. 기능 브랜치에서 `npm run verify:local`, `npm run verify:browser` 통과.
-2. PR 리뷰 후 `main` merge → Vercel 자동 배포. 배포 ID·SHA·시각을 `docs/HANDOFF.md`에 기록.
+2. PR 리뷰 후 `main` merge → `Scheduled publish` 워크플로를 수동 실행(notify=false)해 Production 배포와 SHA 반영을 검증. 배포 ID·SHA·시각을 `docs/HANDOFF.md`에 기록.
 3. 배포 후 확인: 주요 경로 200, 미지 경로(예: `/spinflow/audit-nonexistent-example`) 404, canonical/robots.
 4. 원복: 문제 커밋을 `git revert` 후 push(강제 push·reset 금지) 또는 Vercel 대시보드에서 직전 배포로 promote.
 

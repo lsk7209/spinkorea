@@ -1,3 +1,14 @@
+# Release handoff — 2026-09-29 19:50 KST — SPK2 batch RELEASED
+
+- Runtime: PR #3 (e7478c4) merged to main as 8787a60; Production deployed via Scheduled publish workflow_dispatch run 36556792808 (notify=false, no GSC/IndexNow). Guard verified /deployment-status.json commitSha=8787a60. Current production dpl_2Tin1fF9dcVtCcc12f5iUHD7FKKw.
+- Verification: branch Preview via vercel curl (aliases 200, unknown slug 404) before release; public GET smoke 13/13 as expected after release (details: docs/spk2/qa-report-20260929.md §7).
+- Deploy path correction: main push does NOT deploy Production; only the deploy hook in Scheduled publish does. README updated.
+- Rollback: git revert -m 1 8787a60 → PR → merge → run Scheduled publish (notify=false), or promote previous production dpl_DyFnyZ9a9MZdauC7Ce2SYzJ2GoDa.
+- Still open: private inbox (SPK2-12), API rate limit/Firewall and legacy shortened_urls cleanup, GA4/AdSense/CMP account checks.
+
+---
+
+
 # Current handoff — 2026-09-29 18:55 KST — SPK2 reliability batch LOCAL DONE
 
 - User goal: execute D:\다운로드\spinkorea_codex_improvement_plan.md (SPK2) with recommended scope; local fixes + verification, no external release.

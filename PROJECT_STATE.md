@@ -1,3 +1,10 @@
+# Current release state — 2026-09-29 19:50 KST
+
+SPK2 reliability batch RELEASED: main 8787a60 verified on https://spinkorea.kr via deployment marker (workflow run 36556792808, notify=false). Public smoke 13/13 as expected. Details: docs/HANDOFF.md, docs/spk2/qa-report-20260929.md.
+
+---
+
+
 # Current local state — 2026-09-29 18:55 KST
 
 SPK2 reliability batch LOCAL DONE on branch fix/spk2-reliability-batch (base main 95ff1b9, uncommitted/unpushed). Draw/restore/share/page-purpose/preset-404/metadata-merge/CTA/modal/motion/analytics fixes with npm test 96, api-harness 10, SPK2 browser 11/11 and full verify:local PASS. SPK2-12 BLOCKED, SPK2-13/14 spec-only. Detail: docs/spk2/qa-report-20260929.md; continuation: docs/HANDOFF.md.
