@@ -6,6 +6,8 @@ export interface BlogPostMeta {
   description: string;
   date: string;
   publishAt?: string;
+  /** Set only when an editable field actually changed (SPK2-06). */
+  updatedAt?: string;
   tags: string[];
   thumbnail?: string;
   qualityScore?: number;

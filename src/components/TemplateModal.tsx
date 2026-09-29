@@ -1,7 +1,8 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import { X, Search, LayoutGrid } from 'lucide-react';
 import { TEMPLATES } from '@/data/templates';
 import type { Template } from '@/data/templates';
+import { useModalDialog } from '@/hooks/use-modal-dialog';
 
 interface TemplateModalProps {
     isOpen: boolean;
@@ -14,6 +15,10 @@ const CATEGORIES = ['전체', '음식', '게임', '생활/결정', '운세/재�
 export default function TemplateModal({ isOpen, onClose, onSelect }: TemplateModalProps) {
     const [selectedCategory, setSelectedCategory] = useState('전체');
     const [searchQuery, setSearchQuery] = useState('');
+    const dialogRef = useRef<HTMLDivElement>(null);
+    const searchRef = useRef<HTMLInputElement>(null);
+
+    useModalDialog(isOpen, onClose, dialogRef, searchRef);
 
     const filteredTemplates = useMemo(() => {
         return TEMPLATES.filter((template) => {
@@ -32,27 +37,39 @@ export default function TemplateModal({ isOpen, onClose, onSelect }: TemplateMod
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
-            <div className="relative w-full max-w-4xl max-h-[85vh] flex flex-col bg-neon-dark border border-neon-primary/30 rounded-3xl shadow-neon-lg overflow-hidden animate-scale-up">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in"
+            onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}
+        >
+            <div
+                ref={dialogRef}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="template-modal-title"
+                tabIndex={-1}
+                className="relative w-full max-w-4xl max-h-[85vh] flex flex-col bg-neon-dark border border-neon-primary/30 rounded-3xl shadow-neon-lg overflow-hidden animate-scale-up"
+            >
 
                 {/* Header */}
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between p-6 pb-4 border-b border-neon-primary/20 gap-4 bg-neon-bg/50">
                     <div className="flex items-center gap-3">
-                        <div className="p-3 rounded-xl bg-neon-primary/10 text-neon-primary">
+                        <div className="p-3 rounded-xl bg-neon-primary/10 text-neon-primary" aria-hidden="true">
                             <LayoutGrid size={24} />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-bold text-white">
+                            <h2 id="template-modal-title" className="text-2xl font-bold text-white">
                                 추천 <span className="text-neon-primary">템플릿</span>
                             </h2>
                             <p className="text-sm text-gray-400">원하는 주제를 선택하여 룰렛을 꾸며보세요.</p>
                         </div>
                     </div>
                     <button
+                        type="button"
                         onClick={onClose}
+                        aria-label="템플릿 창 닫기"
                         className="absolute right-6 top-6 p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-colors"
                     >
-                        <X size={24} />
+                        <X size={24} aria-hidden="true" />
                     </button>
                 </div>
 
@@ -60,9 +77,12 @@ export default function TemplateModal({ isOpen, onClose, onSelect }: TemplateMod
                 <div className="p-6 pb-2 grid gap-6">
                     {/* Search */}
                     <div className="relative">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
+                        <label htmlFor="template-search" className="sr-only">템플릿 검색</label>
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={18} aria-hidden="true" />
                         <input
-                            type="text"
+                            ref={searchRef}
+                            id="template-search"
+                            type="search"
                             placeholder="템플릿 검색 (예: 점심, 벌칙...)"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
@@ -75,6 +95,8 @@ export default function TemplateModal({ isOpen, onClose, onSelect }: TemplateMod
                         {CATEGORIES.map((cat) => (
                             <button
                                 key={cat}
+                                type="button"
+                                aria-pressed={selectedCategory === cat}
                                 onClick={() => setSelectedCategory(cat)}
                                 className={`
                                     px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all border
@@ -96,6 +118,7 @@ export default function TemplateModal({ isOpen, onClose, onSelect }: TemplateMod
                             {filteredTemplates.map((template) => (
                                 <button
                                     key={template.id}
+                                    type="button"
                                     onClick={() => handleSelect(template)}
                                     className="group relative flex flex-col items-center p-5 gap-3 bg-neon-card border border-white/5 rounded-2xl hover:border-neon-primary/50 hover:bg-neon-primary/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-neon-md text-center"
                                 >

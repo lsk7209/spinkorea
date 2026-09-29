@@ -16,7 +16,18 @@ fs.mkdirSync(out, { recursive: true });
 const server = await createServer({ root, configFile: false, envDir: out, envPrefix: '__TEST_UNUSED_', cacheDir: path.join(out, 'vite-cache'), plugins: [react()], resolve: { alias: { '@': path.join(root, 'src') } }, server: { host: '127.0.0.1', port: 0 }, logLevel: 'error' });
 await server.listen();
 const origin = server.resolvedUrls.local[0].replace(/\/$/, '');
-const browser = await chromium.launch({ headless: true });
+const browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE || findInstalledHeadlessShell() });
+
+// Fall back to an already-installed headless shell when the CLI's pinned revision is missing (no downloads).
+function findInstalledHeadlessShell() {
+  const base = path.join(process.env.LOCALAPPDATA ?? '', 'ms-playwright');
+  if (!fs.existsSync(base)) return undefined;
+  for (const shell of fs.readdirSync(base).filter((name) => name.startsWith('chromium_headless_shell-')).sort().reverse()) {
+    const exe = path.join(base, shell, 'chrome-headless-shell-win64', 'chrome-headless-shell.exe');
+    if (fs.existsSync(exe)) return exe;
+  }
+  return undefined;
+}
 const context = await browser.newContext();
 await context.route('**/*', route => {
   const request = route.request();

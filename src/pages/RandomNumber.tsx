@@ -18,7 +18,7 @@ export default function RandomNumber() {
                     "price": "0",
                     "priceCurrency": "KRW"
                 },
-                "description": "브라우저 난수로 숫자를 선택하는 무료 랜덤 번호 도구입니다. 로또 번호, 순서 정하기, 소규모 활동에 참고용으로 활용하세요."
+                "description": "숫자 후보 목록에서 하나를 브라우저 난수로 뽑는 무료 룰렛입니다. 순서 정하기, 번호표, 소규모 활동에 참고용으로 활용하세요."
             },
             {
                 "@type": "FAQPage",
@@ -47,8 +47,11 @@ export default function RandomNumber() {
     return (
         <Home
             initialItems={lottoTemplate?.items}
-            title="랜덤 번호 추첨기 - 로또 번호 생성 | SpinFlow"
-            description="브라우저 난수로 숫자 범위를 선택하는 무료 도구입니다. 로또 조합, 소규모 활동, 순서 정하기에 참고용으로 사용하고 중복 규칙을 먼저 확인하세요."
+            preferInitialOnFirstLoad
+            heading="랜덤 숫자 뽑기 룰렛"
+            intro="1부터 45까지의 숫자 후보 중 하나를 룰렛으로 뽑습니다. 후보 목록은 직접 고칠 수 있으며, 여러 개가 필요하면 한 번씩 다시 돌리세요. 범위·개수 지정과 자동 중복 제외는 지원하지 않으므로 이미 나온 숫자는 목록에서 직접 지워야 합니다."
+            title="랜덤 숫자 뽑기 룰렛 - 숫자 후보 추첨 | SpinFlow"
+            description="숫자 후보 목록에서 하나를 브라우저 난수로 뽑는 무료 룰렛입니다. 여러 개가 필요하면 반복 실행하고, 중복을 피하려면 나온 숫자를 목록에서 지운 뒤 다시 돌리세요."
             keywords="랜덤번호추첨기, 로또번호생성기, 난수생성기, 번호뽑기, 당첨자추첨, 숫자뽑기, 행운의숫자, 로또추천, 무료추첨기, 순서정하기"
             ArticleComponent={RandomNumberArticle}
             structuredData={structuredData}

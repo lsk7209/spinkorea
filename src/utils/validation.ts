@@ -2,8 +2,9 @@
  * 항목 검증 및 전처리 유틸리티
  */
 
-const MAX_ITEMS = 100;
-const MAX_ITEM_LENGTH = 50;
+export const MAX_ITEMS = 100;
+/** UTF-16 code units (String.prototype.length), unchanged from the original editor rule. */
+export const MAX_ITEM_LENGTH = 50;
 
 /**
  * 항목 전처리: 공백 제거, 빈 줄 제거

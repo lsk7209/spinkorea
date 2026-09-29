@@ -78,7 +78,7 @@ assert(read("scripts/generate-assets.mjs").includes("trustedToolReferences"), "t
 assert(toolLayoutSource.includes("onInputCapture={handleToolInteraction}"), "tool input engagement is measured");
 assert(toolLayoutSource.includes("onClickCapture={handleToolInteraction}"), "tool click engagement is measured");
 assert(spinButtonSource.includes("hidden md:flex fixed"), "duplicate fixed SPIN control is hidden on mobile");
-assert(homeSource.includes("무료 룰렛 바로 돌리기"), "homepage has a direct primary CTA");
+assert(homeSource.includes("후보 확인하고 룰렛 열기"), "homepage primary CTA copy matches its scroll-to-roulette behavior (SPK2-17)");
 assert(read("src/pages/NotFound.tsx").includes('robots="noindex,follow"'), "soft-404 screen is noindex");
 
 console.log("Growth optimization verification complete.");

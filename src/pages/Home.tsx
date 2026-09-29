@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef, useEffect, type ComponentType } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
+import { useReducedMotion } from 'framer-motion';
 import { ArrowDown, CheckCircle2, LayoutGrid } from 'lucide-react';
 import { useStatePersistence } from '@/hooks/use-state-persistence';
 import { useRoulette } from '@/hooks/use-roulette';
@@ -18,7 +19,10 @@ import SEO from '@/components/SEO';
 import RecommendedPresets from '@/components/RecommendedPresets';
 import SpinHistory from '@/components/SpinHistory';
 import { TEMPLATES } from '@/data/templates';
-import { trackEvent } from '@/utils/analytics';
+import { getPresetIdForSlug } from '@/data/spinflow-presets';
+import { trackEvent, buildToolEnvelope } from '@/utils/analytics';
+import { areItemsEqual, REDUCED_MOTION_SPIN_DURATION_MS, SPIN_DURATION_MS } from '@/utils/draw-controller';
+import type { DrawSnapshot } from '@/utils/draw-controller';
 
 const DEFAULT_ITEMS = [
     '한식',
@@ -44,6 +48,26 @@ interface HomeProps {
      * 새로운 전용 페이지에서 라우터 변경 없이만 동작시키고 싶을 때 true로 설정.
      */
     disableDeepLinkPresetSync?: boolean;
+    /** 화면 H1. 전문 페이지는 자기 목적에 맞는 제목을 전달한다 (SPK2-04). */
+    heading?: string;
+    /** H1 아래 소개 문장. */
+    intro?: string;
+}
+
+const DEFAULT_HEADING = '온라인 룰렛 돌리기';
+const DEFAULT_INTRO = '무료 룰렛으로 점심 메뉴, 당첨자, 벌칙, 순서를 후보와 함께 투명하게 정하세요. SpinFlow는 설치 없이 바로 쓰는 스핀 돌리기와 생활 유틸리티를 제공합니다.';
+const WHEEL_BREAKPOINT_PX = 768;
+const DESKTOP_WHEEL_SIZE = 620;
+/** Page gutter + wheel frame padding kept free so the wheel never forces horizontal scroll. */
+const DESKTOP_WHEEL_GUTTER = 96;
+const MOBILE_WHEEL_MAX = 340;
+const MOBILE_WHEEL_GUTTER = 48;
+
+function getWheelSize(): number {
+    if (typeof window === 'undefined') return 320;
+    return window.innerWidth >= WHEEL_BREAKPOINT_PX
+        ? Math.min(DESKTOP_WHEEL_SIZE, window.innerWidth - DESKTOP_WHEEL_GUTTER)
+        : Math.min(MOBILE_WHEEL_MAX, window.innerWidth - MOBILE_WHEEL_GUTTER);
 }
 
 export default function Home({
@@ -55,6 +79,8 @@ export default function Home({
     structuredData,
     preferInitialOnFirstLoad = false,
     disableDeepLinkPresetSync = false,
+    heading = DEFAULT_HEADING,
+    intro = DEFAULT_INTRO,
 }: HomeProps) {
     const {
         items,
@@ -64,17 +90,14 @@ export default function Home({
         history,
         urlWarning,
         urlUnsafe,
+        restoreNotice,
+        dismissRestoreNotice,
     } = useStatePersistence(initialItems, { preferInitialOnFirstLoad });
 
-    const [wheelSize, setWheelSize] = useState(() => {
-        if (typeof window === 'undefined') return 320;
-        return window.innerWidth >= 768 ? 620 : Math.min(340, window.innerWidth - 48);
-    });
+    const [wheelSize, setWheelSize] = useState(getWheelSize);
 
     useEffect(() => {
-        const update = () => {
-            setWheelSize(window.innerWidth >= 768 ? 620 : Math.min(340, window.innerWidth - 48));
-        };
+        const update = () => setWheelSize(getWheelSize());
         window.addEventListener('resize', update);
         return () => window.removeEventListener('resize', update);
     }, []);
@@ -86,46 +109,57 @@ export default function Home({
     const lastAppliedSlugRef = useRef<string | null>(null);
     const location = useLocation();
     const navigate = useNavigate();
+    const prefersReducedMotion = useReducedMotion() ?? false;
+    const spinDurationMs = prefersReducedMotion ? REDUCED_MOTION_SPIN_DURATION_MS : SPIN_DURATION_MS;
 
     const handleResult = useCallback(
-        (result: string) => {
+        (result: string, draw: DrawSnapshot) => {
             saveResult(result);
             setShowResult(true);
             trackEvent('tool_result_viewed', {
+                ...buildToolEnvelope(window.location.pathname, 'roulette'),
                 tool: 'roulette',
-                item_count: items.length,
+                result_type: 'roulette_pick',
+                item_count: draw.items.length,
             });
         },
-        [items.length, saveResult]
+        [saveResult]
     );
 
-    const { isSpinning, result, winningIndex, spin } = useRoulette({
+    const { isSpinning, result, winningIndex, spin, reset } = useRoulette({
         items,
         onResult: handleResult,
+        spinDurationMs,
     });
 
     const handleSpin = useCallback(() => {
-        if (items.length === 0) {
+        const draw = spin();
+        if (!draw) {
             return;
         }
-        trackEvent('tool_used', {
-            tool: 'roulette',
-            item_count: items.length,
-        });
         setShowResult(false);
-        spin();
-    }, [items.length, spin]);
+        trackEvent('tool_used', {
+            ...buildToolEnvelope(window.location.pathname, 'roulette'),
+            tool: 'roulette',
+            item_count: draw.items.length,
+        });
+    }, [spin]);
 
+    // 후보가 바뀌면 이전 추첨 결과·하이라이트·결과 공유를 비운다. 기록(history)은 유지된다.
     const handleUpdateItems = useCallback(
         (newItems: string[]) => {
             if (isSpinning) {
                 return false;
             }
+            if (areItemsEqual(items, newItems)) {
+                return true;
+            }
             updateItems(newItems);
+            reset();
             setShowResult(false);
             return true;
         },
-        [isSpinning, updateItems]
+        [isSpinning, items, updateItems, reset]
     );
 
     const applyPreset = useCallback(
@@ -133,20 +167,22 @@ export default function Home({
             if (!handleUpdateItems(presetItems)) {
                 return;
             }
-            rouletteSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            rouletteSectionRef.current?.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
         },
-        [handleUpdateItems]
+        [handleUpdateItems, prefersReducedMotion]
     );
 
     const handlePrimaryCta = useCallback(() => {
         trackEvent('primary_cta_clicked', {
+            ...buildToolEnvelope(location.pathname, 'roulette'),
             placement: 'home_hero',
             destination: 'roulette',
         });
-        rouletteSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, []);
+        rouletteSectionRef.current?.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+    }, [location.pathname, prefersReducedMotion]);
 
-    // Intercept deep links like /spinflow/lunch or /spinflow/lotto and apply presets in-place without leaving /spinflow
+    // Intercept deep links like /spinflow/lunch or /spinflow/lotto and apply presets in-place without leaving /spinflow.
+    // Unknown slugs never reach Home: SpinflowPreset renders NotFound (SPK2-05).
     useEffect(() => {
         if (disableDeepLinkPresetSync) {
             return;
@@ -165,13 +201,7 @@ export default function Home({
             return;
         }
 
-        const presetIdMap: Record<string, string> = {
-            lunch: 'lunch-korean',
-            'truth-or-dare': 'truth-dare',
-            lotto: 'lotto',
-        };
-
-        const presetId = presetIdMap[slug];
+        const presetId = getPresetIdForSlug(slug);
         const presetItems =
             presetId && TEMPLATES.find((t) => t.id === presetId)?.items;
 
@@ -180,11 +210,11 @@ export default function Home({
                 return;
             }
             lastAppliedSlugRef.current = slug;
-            // Replace URL back to /spinflow to avoid further navigations / bookmarking deep slug
-            navigate('/spinflow', { replace: true });
-            rouletteSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Replace URL back to /spinflow, keeping the ?s= state just written so a reload/share keeps the preset.
+            navigate({ pathname: '/spinflow', search: window.location.search }, { replace: true });
+            rouletteSectionRef.current?.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
         }
-    }, [location.pathname, handleUpdateItems, navigate]);
+    }, [location.pathname, handleUpdateItems, navigate, prefersReducedMotion]);
 
     return (
         <div className="min-h-[100dvh] bg-slate-50 text-slate-950 flex flex-col">
@@ -201,20 +231,18 @@ export default function Home({
                     </div>
 
                     <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight text-slate-950 [word-break:keep-all]">
-                        온라인 룰렛 돌리기
+                        {heading}
                     </h1>
 
                     <p className="text-base md:text-xl text-slate-600 max-w-2xl leading-relaxed font-medium [word-break:keep-all]">
-                        무료 룰렛으로 점심 메뉴, 당첨자, 벌칙, 순서를 후보와 함께 투명하게 정하세요.{" "}
-                        <br className="hidden md:block" />
-                        SpinFlow는 설치 없이 바로 쓰는 스핀 돌리기와 생활 유틸리티를 제공합니다.
+                        {intro}
                     </p>
                     <button
                         type="button"
                         onClick={handlePrimaryCta}
                         className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-cyan-700 px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-cyan-700/20 transition-all hover:-translate-y-0.5 hover:bg-cyan-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
                     >
-                        무료 룰렛 바로 돌리기
+                        후보 확인하고 룰렛 열기
                         <ArrowDown size={18} aria-hidden="true" />
                     </button>
                     <ul className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-500" aria-label="서비스 특징">
@@ -228,6 +256,19 @@ export default function Home({
                 </div>
             </header>
 
+            {restoreNotice === 'invalid-share-link' && (
+                <div className="max-w-xl mx-auto w-full px-4 mt-6" role="alert">
+                    <div className="flex items-start justify-between gap-3 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900">
+                        <p>
+                            공유 링크의 후보 정보를 읽을 수 없어 기본 후보를 표시합니다. 링크가 잘렸거나 지원하지 않는 형식(최대 100개, 항목당 50자)일 수 있습니다.
+                        </p>
+                        <button type="button" onClick={dismissRestoreNotice} className="shrink-0 font-semibold underline">
+                            닫기
+                        </button>
+                    </div>
+                </div>
+            )}
+
             {lastResult && (
                 <div className="max-w-xl mx-auto w-full px-4 mb-8 text-center animate-pop z-20">
                     <LastResultBanner result={lastResult} />
@@ -239,7 +280,7 @@ export default function Home({
             {/* 메인 콘텐츠 */}
             <main
                 ref={rouletteSectionRef}
-                className="flex-1 flex flex-col md:flex-row items-center justify-center gap-10 px-4 py-10 pb-20 max-w-7xl mx-auto w-full"
+                className="flex-1 flex flex-col lg:flex-row items-center justify-center gap-10 px-4 py-10 pb-20 max-w-7xl mx-auto w-full"
             >
                 {/* 모바일: 룰렛 중앙, 데스크톱: 룰렛 좌측 */}
                 <div className="flex-shrink-0 rounded-3xl bg-slate-950 p-4 shadow-xl">
@@ -248,6 +289,8 @@ export default function Home({
                         winningIndex={winningIndex}
                         isSpinning={isSpinning}
                         size={wheelSize}
+                        spinDurationMs={spinDurationMs}
+                        reducedMotion={prefersReducedMotion}
                         onSpin={handleSpin}
                     />
                 </div>
@@ -339,7 +382,7 @@ export default function Home({
             />
 
             {/* 결과 표시 */}
-            <ResultDisplay result={result} show={showResult} />
+            <ResultDisplay result={result} show={showResult} reducedMotion={prefersReducedMotion} />
 
             {/* 템플릿 선택 모달 */}
             <TemplateModal

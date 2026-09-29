@@ -2,17 +2,17 @@
 export default function RandomNumberArticle() {
     return (
         <article className="w-full max-w-4xl mx-auto px-4 py-16 text-neon-primary/80">
-            <h1 className="text-3xl font-bold text-neon-primary mb-6">
-                랜덤 번호 생성기: 로또부터 이벤트 추첨까지
-            </h1>
+            <h2 className="text-3xl font-bold text-neon-primary mb-6">
+                랜덤 숫자 뽑기 룰렛: 숫자 후보 중 하나 고르기
+            </h2>
 
             {/* AEO/GEO Optimized Summary Block */}
             <div className="bg-white/5 border border-neon-primary/20 rounded-xl p-6 mb-8 backdrop-blur-sm">
                 <h2 className="text-xl font-semibold text-white mb-3">⚡ 3줄 요약</h2>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
-                    <li><strong>브라우저 난수:</strong> Crypto API 기반으로 입력한 범위 안에서 결과를 선택합니다.</li>
-                    <li><strong>다양한 활용:</strong> 로또 번호 조합, 이벤트 후보 선택, 순서 정하기처럼 기준을 먼저 합의할 수 있는 상황에 활용할 수 있습니다.</li>
-                    <li><strong>간편한 설정:</strong> 원하는 숫자 범위를 설정하거나 템플릿을 사용하여 즉시 추첨을 시작할 수 있습니다.</li>
+                    <li><strong>브라우저 난수:</strong> Crypto API 기반으로 목록에 있는 숫자 후보 중 하나를 선택합니다.</li>
+                    <li><strong>한 번에 하나:</strong> 여러 개가 필요하면 반복해서 돌리고, 중복을 피하려면 나온 숫자를 목록에서 지웁니다.</li>
+                    <li><strong>간편한 설정:</strong> 기본 1~45 후보를 그대로 쓰거나 '항목 수정'에서 숫자 후보를 직접 입력할 수 있습니다. 범위·개수 입력 기능은 없습니다.</li>
                 </ul>
             </div>
 
@@ -21,8 +21,8 @@ export default function RandomNumberArticle() {
                     브라우저 난수로 선택 과정 정리
                 </h2>
                 <p className="mb-4 leading-relaxed">
-                    SpinFlow의 <strong>랜덤 번호 생성기</strong>는 단순한 재미를 넘어,
-                    입력한 범위에서 숫자를 빠르게 선택하고, 참여자와 결과를 확인하기 쉽게 정리하는 도구입니다.
+                    SpinFlow의 <strong>랜덤 숫자 뽑기 룰렛</strong>은 목록에 있는 숫자 후보 중 하나를 빠르게 선택하고,
+                    참여자와 결과를 확인하기 쉽게 정리하는 도구입니다.
                     브라우저의 Crypto API 기반 난수를 사용하지만, 이 설명만으로 공식 추첨 절차나 감사 기록이 만들어지는 것은 아닙니다.
                 </p>
                 <p className="mb-4 leading-relaxed">
@@ -38,11 +38,11 @@ export default function RandomNumberArticle() {
                 </h2>
                 <div className="grid md:grid-cols-2 gap-6 mt-6">
                     <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                        <h3 className="text-xl font-bold text-white mb-3">🎰 로또 번호 추첨</h3>
+                        <h3 className="text-xl font-bold text-white mb-3">🎰 로또 번호가 필요할 때</h3>
                         <p className="text-sm">
-                            1부터 45까지의 숫자 중 6개를 뽑아야 하시나요?
-                            SpinFlow 템플릿을 사용하여 1부터 45까지 6개 번호 형식의 조합을 만들어보세요.
-                            생성 결과는 조합을 준비하는 참고 자료이며 당첨 확률이나 당첨을 보장하지 않습니다.
+                            이 룰렛은 한 번에 숫자 하나만 뽑습니다.
+                            1부터 45까지 6개 번호 조합이 한 번에 필요하다면 <a href="/tools/lotto-generator" className="underline">로또 번호 생성기</a>를 사용하세요.
+                            어떤 방식이든 결과는 참고 자료이며 당첨 확률을 높이거나 당첨을 보장하지 않습니다.
                         </p>
                     </div>
                     <div className="bg-white/5 p-6 rounded-xl border border-white/10">
@@ -64,9 +64,8 @@ export default function RandomNumberArticle() {
                     <div className="bg-white/5 p-6 rounded-xl border border-white/10">
                         <h3 className="text-xl font-bold text-white mb-3">🎲 보드게임 & TRPG</h3>
                         <p className="text-sm">
-                            주사위가 없거나 특별한 범위의 난수가 필요할 때 활용하세요.
-                            1-6 주사위 뿐만 아니라 1-20, 1-100 등 원하는 범위 설정을
-                            항목 입력을 통해 자유롭게 구현할 수 있습니다.
+                            주사위가 없거나 특별한 숫자 후보가 필요할 때 활용하세요.
+                            1-20, 1-100 같은 후보는 '항목 수정'에 숫자를 한 줄씩 입력해 만들 수 있습니다(최대 100개).
                         </p>
                     </div>
                 </div>

@@ -18,6 +18,7 @@ const About = lazy(() => import("@/pages/About"));
 const FAQ = lazy(() => import("@/pages/FAQ"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const SpinflowStandalone = lazy(() => import("@/pages/SpinflowStandalone"));
+const SpinflowPreset = lazy(() => import("@/pages/SpinflowPreset"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
 // 툴 페이지
@@ -93,7 +94,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/spinflow" element={<Home />} />
-          <Route path="/spinflow/:slug" element={<Home />} />
+          <Route path="/spinflow/:slug" element={<SpinflowPreset />} />
           <Route path="/spinflow-standalone" element={<SpinflowStandalone />} />
           <Route path="/lunch-menu" element={<LunchMenu />} />
           <Route path="/random-number" element={<RandomNumber />} />

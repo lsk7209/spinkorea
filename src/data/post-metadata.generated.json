@@ -21145,7 +21145,7 @@
   },
   {
     "slug": "hex-rgb-hsl-rounding",
-    "title": "HEX·RGB·HSL 변환값이 조금씩 다른 이유",
+    "title": "색상 코드 변환, HEX·RGB·HSL 값이 조금씩 다른 이유",
     "description": "색상 모델과 반올림을 이해하고 원본 색을 잃지 않게 기록하는 법을 설명합니다.",
     "date": "2026-09-16",
     "publishAt": "2026-09-16T13:00:00+09:00",
@@ -21174,7 +21174,8 @@
         "path": "/blog"
       }
     ],
-    "source": "editorial"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "css-shadow-states",

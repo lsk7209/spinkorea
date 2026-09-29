@@ -2,10 +2,10 @@
  * URL 및 localStorage 기반 상태 지속성 훅
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import type { RouletteState, LastResult } from '@/types';
-import { getStateFromUrl, updateUrlWithState } from '@/utils/url-state';
-import { isRouletteState, readStoredJson, parseStoredHistory, parseStoredResult } from '@/utils/roulette-storage';
+import { buildShareUrl, readStateFromSearch, updateUrlWithState } from '@/utils/url-state';
+import { isRouletteState, readStoredJson, parseStoredHistory, parseStoredResult, SUPPORTED_STATE_VERSION } from '@/utils/roulette-storage';
 
 const LAST_STATE_KEY = 'spinflow:lastState';
 const LAST_RESULT_KEY = 'spinflow:lastResult';
@@ -21,6 +21,8 @@ interface StatePersistenceOptions {
   preferInitialOnFirstLoad?: boolean;
 }
 
+export type RestoreNotice = 'invalid-share-link' | null;
+
 /**
  * 상태 지속성 훅
  * @param initialItems - 초기 항목 배열
@@ -29,19 +31,20 @@ interface StatePersistenceOptions {
 export function useStatePersistence(initialItems: string[] = [], options: StatePersistenceOptions = {}) {
   const { preferInitialOnFirstLoad = false } = options;
   const [items, setItems] = useState<string[]>(initialItems);
-  const [urlWarning, setUrlWarning] = useState(false);
-  const [urlUnsafe, setUrlUnsafe] = useState(false);
   const [lastResult, setLastResult] = useState<LastResult | null>(null);
   const [history, setHistory] = useState<string[]>([]);
+  const [restoreNotice, setRestoreNotice] = useState<RestoreNotice>(null);
 
-  // 초기 로드: URL 우선, 없으면 localStorage
+  // 초기 로드: 유효한 공유 URL 우선. 공유 URL이 거부되면 저장값으로 조용히 대체하지 않는다.
   useEffect(() => {
-    const urlState = getStateFromUrl();
-    if (urlState && urlState.items.length > 0) {
-      setItems(urlState.items);
+    const urlState = readStateFromSearch(window.location.search);
+    if (urlState.status === 'ok') {
+      setItems(urlState.state.items);
+    } else if (urlState.status === 'invalid') {
+      setRestoreNotice('invalid-share-link');
     } else if (!preferInitialOnFirstLoad) {
       const state = readStoredJson(() => localStorage.getItem(LAST_STATE_KEY));
-      if (isRouletteState(state) && state.items.length > 0) {
+      if (isRouletteState(state)) {
         setItems(state.items);
       }
     }
@@ -56,23 +59,27 @@ export function useStatePersistence(initialItems: string[] = [], options: StateP
     if (savedResult !== null && !restoredResult) {
       try { localStorage.removeItem(LAST_RESULT_KEY); } catch { /* Storage is optional. */ }
     }
+    // Initial restore intentionally runs once per mount.
   }, []);
+
+  // 공유 링크는 항상 현재 검증된 후보로 만든다 (완성 URL 길이 기준 경고).
+  const shareInfo = useMemo(
+    () => (typeof window === 'undefined' ? null : buildShareUrl(items, window.location.href)),
+    [items],
+  );
 
   // 항목 업데이트 및 상태 저장
   const updateItems = useCallback((newItems: string[]) => {
     setItems(newItems);
-    
+    setRestoreNotice(null);
+
     const state: RouletteState = {
-      v: 1,
+      v: SUPPORTED_STATE_VERSION,
       items: newItems,
     };
 
-    // URL 업데이트
-    const urlInfo = updateUrlWithState(state);
-    setUrlWarning(urlInfo.warning);
-    setUrlUnsafe(urlInfo.unsafe);
+    updateUrlWithState(state);
 
-    // localStorage 저장
     try {
       localStorage.setItem(LAST_STATE_KEY, JSON.stringify(state));
     } catch (error) {
@@ -109,8 +116,10 @@ export function useStatePersistence(initialItems: string[] = [], options: StateP
     saveResult,
     lastResult,
     history,
-    urlWarning,
-    urlUnsafe,
+    shareUrl: shareInfo?.url ?? null,
+    urlWarning: shareInfo?.warning ?? false,
+    urlUnsafe: shareInfo?.unsafe ?? false,
+    restoreNotice,
+    dismissRestoreNotice: () => setRestoreNotice(null),
   };
 }
-
