@@ -36,8 +36,12 @@ assert.match(randomNumber, /<h1[^>]*>랜덤 숫자 뽑기 룰렛<\/h1>/);
 assert.doesNotMatch(randomNumber, /숫자 범위를 선택/);
 pass('random-number static H1 and copy match the React page');
 
-assert.ok(fs.existsSync('dist/404.html'), '404.html exists for unmatched routes');
-assert.equal(fs.existsSync('dist/spinflow/audit-nonexistent-example'), false);
+assert.ok(fs.existsSync('dist/404.html'), '404.html exists for unmatched routes');assert.equal(fs.existsSync('dist/spinflow/audit-nonexistent-example'), false);
 pass('no static HTML for unknown /spinflow slug; Vercel falls through to 404.html');
+
+const ageShell = read('dist/tools/age-calculator/index.html').match(/id="related-tools">([\s\S]*?)<\/ul>/)?.[1] ?? '';
+assert.match(ageShell, /href="\/tools\/d-day-counter"/, 'static related tools follow the React declaration');
+assert.doesNotMatch(ageShell, /href="\/"/, 'static related tools are not the generic first site pages');
+pass('static related tools match the React page declaration (age-calculator)');
 
 console.log(`BUILT_OUTPUT_OK ${results.length}`);

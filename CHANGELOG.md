@@ -17,6 +17,9 @@
 - 768px에서 가로 넘침, reduced-motion에서 회전·confetti 축소(SPK2-10).
 - 분석: 공통 envelope, 입력 원문 키 차단, 초기화 실패 내성, lazy 페이지 제목 대기(SPK2-11).
 
+### Fixed (follow-up)
+- 정적 HTML의 관련 도구 목록을 각 도구 페이지 선언과 동일하게 생성(SPK2-07/08).
+
 ### Security
 - API: `/api/shorten`은 `https://spinkorea.kr` 공유 링크만 허용·CORS 고정·Host 헤더 미사용, `/s/:id`는 리디렉션 전 재검증(오픈 리디렉트 차단), `/api/stats`는 결과 원문을 저장하지 않음, 잘못된 본문은 400(SPK2-13).
 

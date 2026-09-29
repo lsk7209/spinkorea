@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { mergePostMetadata, parseExistingMetadata } from "./lib/metadata-merge.mjs";
+import { buildRelatedToolMap, selectRelatedPages } from "./lib/related-tools.mjs";
 
 const ROOT = process.cwd();
 const SITE_ORIGIN = "https://spinkorea.kr";
@@ -15,6 +16,7 @@ const RUNTIME_POST_METADATA_PATH = path.join(ROOT, "src", "data", "post-metadata
 const STATIC_CONTENT_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-generated-content-html.json");
 
 const sitePages = JSON.parse(fs.readFileSync(SITE_PAGES_PATH, "utf8"));
+const relatedToolMap = buildRelatedToolMap(ROOT);
 const guidance = JSON.parse(fs.readFileSync(path.join(ROOT, "src/data/site-guidance.json"), "utf8"));
 
 const approvalMetaOverrides = {
@@ -760,9 +762,7 @@ function toRuntimePostMetadata(posts) {
 }
 
 function renderShell(page, posts = []) {
-  const related = sitePages
-    .filter((item) => item.path !== page.path)
-    .slice(0, 6)
+  const related = selectRelatedPages(page, sitePages, relatedToolMap)
     .map((item) => `<li><a href="${item.path}">${escapeHtml(item.heading)}</a></li>`)
     .join("");
   const homeBody = localizedApprovalBodies[page.path] ?? approvalBodies[page.path] ?? [];
