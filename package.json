@@ -11,7 +11,7 @@
     "test": "node --test \"tests/*.test.mjs\"",
     "test:api-harness": "node --experimental-test-module-mocks --test tests/api/api-contract.test.mjs",
     "verify:browser": "node scripts/verify-spk2-browser.mjs",
-    "verify:local": "npm run type-check && npm test && npm run test:api-harness && node scripts/verify-roulette-storage.mjs && node scripts/verify-spin-consistency.mjs && node scripts/verify-tool-reliability.mjs && node scripts/verify-loan.mjs && npm run content:validate && npm run build && node scripts/verify-spk2-build.mjs && npm run verify:growth && node scripts/verify-search-scope.mjs",
+    "verify:local": "npm run type-check && npm test && npm run test:api-harness && node scripts/verify-roulette-storage.mjs && node scripts/verify-spin-consistency.mjs && node scripts/verify-tool-reliability.mjs && node scripts/verify-loan.mjs && npm run content:validate && npm run build && node scripts/verify-spk2-build.mjs && node scripts/verify-korean-particles.mjs --max=0 && npm run verify:growth && node scripts/verify-search-scope.mjs",
     "content:generate": "node scripts/generate-content-plan.mjs",
     "content:validate": "node scripts/validate-content-plan.mjs",
     "verify:growth": "node scripts/verify-growth-optimization.mjs",
