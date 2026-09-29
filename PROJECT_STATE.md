@@ -1,3 +1,9 @@
+# Current local state — 2026-09-29 18:55 KST
+
+SPK2 reliability batch LOCAL DONE on branch fix/spk2-reliability-batch (base main 95ff1b9, uncommitted/unpushed). Draw/restore/share/page-purpose/preset-404/metadata-merge/CTA/modal/motion/analytics fixes with npm test 96, api-harness 10, SPK2 browser 11/11 and full verify:local PASS. SPK2-12 BLOCKED, SPK2-13/14 spec-only. Detail: docs/spk2/qa-report-20260929.md; continuation: docs/HANDOFF.md.
+
+---
+
 # Current project release state — 2026-09-20 08:59 대한민국 표준시
 
 SpinKorea requested release is complete: runtime ce9d881021c0e123c1e5721543de47e4ca296770, same-SHA Production6547101903 success, public https://spinkorea.kr verified. Local build689/browser62 and public browser30/HTTP9 all pass. All727 metadata identities/dates/schedules/source flags preserved. Documentation-only evidence commit follows runtime deployment. Unrelated untracked work retained. Operational inbox/CMP/account/crawler evidence remains unverified and outside this release. Canonical continuation: docs/HANDOFF.md; proof: docs/audits/spinkorea/2026-09-19-225440/release-20260920.md.

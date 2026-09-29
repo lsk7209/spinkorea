@@ -10,6 +10,8 @@
 
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { SPIN_DURATION_MS } from '@/utils/draw-controller';
+import { computeTargetRotation } from '@/utils/wheel-geometry';
 
 // 개선된 색상 팔레트
 const solidColors = [
@@ -29,6 +31,9 @@ interface RouletteWheelProps {
   isSpinning: boolean;
   size?: number;
   onSpin?: () => void;
+  /** Must match the draw controller timing so the pointer and result agree. */
+  spinDurationMs?: number;
+  reducedMotion?: boolean;
 }
 
 export default function RouletteWheel({
@@ -37,6 +42,8 @@ export default function RouletteWheel({
   isSpinning,
   size = 300,
   onSpin,
+  spinDurationMs = SPIN_DURATION_MS,
+  reducedMotion = false,
 }: RouletteWheelProps) {
   const radius = size / 2;
   const centerX = radius;
@@ -64,7 +71,10 @@ export default function RouletteWheel({
 
       const largeArcFlag = anglePerSector > 180 ? 1 : 0;
 
-      const path = `M ${centerX} ${centerY} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2} Z`;
+      // A single candidate is a full circle; an SVG arc with identical start/end points renders nothing.
+      const path = items.length === 1
+        ? `M ${centerX - radius} ${centerY} A ${radius} ${radius} 0 1 1 ${centerX + radius} ${centerY} A ${radius} ${radius} 0 1 1 ${centerX - radius} ${centerY} Z`
+        : `M ${centerX} ${centerY} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2} Z`;
 
       // 텍스트 위치 계산
       const textAngle = (startAngle + endAngle) / 2;
@@ -94,27 +104,14 @@ export default function RouletteWheel({
     }
 
     if (isSpinning) {
-      // 스핀 시작
-      const anglePerSector = 360 / items.length;
-
-      // 당첨 섹터의 중앙 각도 (0도 기준)
-      // index 0의 중앙 = anglePerSector / 2 (3시 방향 기준)
-      const sectorCenterAngle = winningIndex * anglePerSector + anglePerSector / 2;
-
-      // 목표: 해당 섹터 중앙이 -90도(12시)에 오도록 회전
-      // 0도(3시)에 있는 섹터 중앙을 -90도(12시)로 보내려면: -90 - sectorCenterAngle
-      const targetRotation = -90 - sectorCenterAngle;
-
-      const currentRotation = currentRotationRef.current;
-      const currentOffset = currentRotation % 360;
-      const deltaToTarget = targetRotation - currentOffset;
-      const minFullRotations = 2880; // 8바퀴 (기존 3바퀴에서 증가)
-      const totalRotation = currentRotation + minFullRotations + deltaToTarget;
+      // 당첨 섹터 중앙이 12시 포인터에 오도록 회전 (wheel-geometry에서 계산·테스트)
+      const minFullRotations = reducedMotion ? 360 : 2880; // 기본 8바퀴, 모션 감소 시 1바퀴
+      const totalRotation = computeTargetRotation(currentRotationRef.current, winningIndex, items.length, minFullRotations);
 
       setRotation(totalRotation);
       currentRotationRef.current = totalRotation;
     }
-  }, [isSpinning, winningIndex, items.length]);
+  }, [isSpinning, winningIndex, items.length, reducedMotion]);
 
   return (
     <div className="relative flex items-center justify-center" style={{ width: size, height: size }}>
@@ -139,8 +136,8 @@ export default function RouletteWheel({
             rotate: rotation,
           }}
           transition={{
-            duration: isSpinning ? 5 : 0.5, // 5초 동안 회전
-            ease: isSpinning ? [0.2, 0.8, 0.2, 0.99] : 'easeOut', // 초기 가속 후 천천히 감속
+            duration: isSpinning ? spinDurationMs / 1000 : 0.5,
+            ease: isSpinning && !reducedMotion ? [0.2, 0.8, 0.2, 0.99] : 'easeOut', // 초기 가속 후 천천히 감속
           }}
           style={{
             transformOrigin: `${centerX}px ${centerY}px`,
@@ -205,11 +202,11 @@ export default function RouletteWheel({
         <motion.g
           style={{ transformOrigin: `${centerX}px ${centerY - radius - 5}px` }}
           animate={{
-            rotate: isSpinning ? [0, -15, 0, 5, 0] : 0,
+            rotate: isSpinning && !reducedMotion ? [0, -15, 0, 5, 0] : 0,
           }}
           transition={{
             duration: 0.1,
-            repeat: isSpinning ? Infinity : 0,
+            repeat: isSpinning && !reducedMotion ? Infinity : 0,
             ease: "linear"
           }}
         >

@@ -1,11 +1,28 @@
 import type { VercelRequest, VercelResponse } from "../types";
 import { createClient } from "@libsql/client";
 
+const CANONICAL_ORIGIN = "https://spinkorea.kr";
+const SAFE_PATH = /^\/(?:[a-z0-9-]+(?:\/[a-z0-9-]+)*)?$/;
+
 function getDb() {
   return createClient({
     url: process.env.TURSO_DATABASE_URL!,
     authToken: process.env.TURSO_AUTH_TOKEN,
   });
+}
+
+/**
+ * SPK2-13: re-validate at redirect time so rows stored before the shorten
+ * allowlist existed cannot redirect off-site.
+ */
+export function isSafeRedirectTarget(value: unknown): value is string {
+  if (typeof value !== "string") return false;
+  try {
+    const url = new URL(value);
+    return url.origin === CANONICAL_ORIGIN && !url.username && !url.password && !url.port && SAFE_PATH.test(url.pathname);
+  } catch {
+    return false;
+  }
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -26,13 +43,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       args: [id],
     });
 
-    if (result.rows.length === 0) {
+    const target = result.rows[0]?.original_url;
+    if (!isSafeRedirectTarget(target)) {
       return res.status(404).json({ error: "Not found" });
     }
 
-    return res.redirect(301, result.rows[0].original_url as string);
+    return res.redirect(302, target);
   } catch (error) {
-    console.error("Redirect error:", error);
+    console.error("Redirect error:", error instanceof Error ? error.name : "unknown");
     return res.status(500).json({ error: "Internal server error" });
   }
 }

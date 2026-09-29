@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/random-number</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-09-29</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/tools</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/blog</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-29</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/lotto-generator</loc>
@@ -249,6 +249,46 @@
     <lastmod>2026-06-10</lastmod>
   </url>
   <url>
+    <loc>https://spinkorea.kr/blog/markdown-mobile-preview</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/text-length-frequency-workflow</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/base-converter-prefix</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/mean-median-survey</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/pyeong-square-meter</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/speed-distance-time-units</loc>
+    <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/date-calculator-inclusive</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/meeting-timer-timebox</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/unix-seconds-milliseconds</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/uuid-test-fixture</loc>
+    <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
     <loc>https://spinkorea.kr/blog/word-frequency-editing</loc>
     <lastmod>2026-09-19</lastmod>
   </url>
@@ -262,7 +302,7 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/blog/hex-rgb-hsl-rounding</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-29</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/blog/diff-whitespace-review</loc>

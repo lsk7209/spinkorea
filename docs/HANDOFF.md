@@ -1,3 +1,14 @@
+# Current handoff — 2026-09-29 18:55 KST — SPK2 reliability batch LOCAL DONE
+
+- User goal: execute D:\다운로드\spinkorea_codex_improvement_plan.md (SPK2) with recommended scope; local fixes + verification, no external release.
+- Exact state: branch fix/spk2-reliability-batch from main 95ff1b9, all changes uncommitted/unpushed. Code DONE + local verification DONE. Deployment, recrawl, performance: NOT RUN / NOT MEASURED.
+- Completed: SPK2-01/02/03/04/05/06/08/09/10/11/16/17 code fixes; SPK2-07/15/18 partial; SPK2-13/14 spec + mocked harness only; SPK2-12 BLOCKED (no operator-owned private contact).
+- Evidence: docs/spk2/qa-report-20260929.md (issue table, commands, exit codes). verify:local exit0 (test 96/96, api-harness 10/10, build 698 rendered, spk2-build 4/4, growth 25, search-scope PASS); verify:browser 11/11 pageerrors0; tool-reliability-browser 32/32.
+- Side effects: build refreshed public/{sitemap,rss,llms} incl. already-due scheduled posts; hex-rgb-hsl-rounding title synced with updatedAt 2026-09-29. node_modules was accidentally removed via temp worktree junction and restored with npm ci (lockfile unchanged).
+- Needs approval: commit/PR/deploy; API allowlist/disable/rate limit (docs/spk2/api-threat-model-20260929.md); private inbox; GA4/AdSense/CMP.
+- Single next step: review diff, commit on the branch, open PR; after deploy confirm /spinflow/audit-nonexistent-example returns HTTP 404 and lunch/lotto/truth-or-dare aliases return 200.
+
+---
 # Current release handoff — 2026-09-20 08:59 대한민국 표준시
 
 - User goal: deploy the audited SpinKorea tool/content repairs, including SPK-014.

@@ -2,9 +2,9 @@
 export default function LunchArticle() {
     return (
         <article className="w-full max-w-4xl mx-auto px-4 py-16 text-neon-primary/80">
-            <h1 className="text-3xl font-bold text-neon-primary mb-6">
+            <h2 className="text-3xl font-bold text-neon-primary mb-6">
                 점심 메뉴 추천: 결정 장애 해결 가이드
-            </h1>
+            </h2>
 
             {/* AEO/GEO Optimized Summary Block */}
             <div className="bg-white/5 border border-neon-primary/20 rounded-xl p-6 mb-8 backdrop-blur-sm">

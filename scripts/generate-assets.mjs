@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { mergePostMetadata, parseExistingMetadata } from "./lib/metadata-merge.mjs";
 
 const ROOT = process.cwd();
 const SITE_ORIGIN = "https://spinkorea.kr";
@@ -142,7 +143,7 @@ const approvalBodies = {
     "점심 메뉴 결과를 실제 주문으로 이어갈 때는 결과를 확인한 뒤 영업시간, 품절, 알레르기, 동행자의 선택 가능 여부를 다시 확인하세요. 룰렛은 후보 중 하나를 고르는 단계만 돕고, 주문 가능 여부를 자동으로 확인하거나 식단 안전성을 판정하지 않습니다.",
   ],
   "/random-number": [
-    "랜덤 숫자 뽑기는 번호표, 발표 순서, 간단한 게임, 수업 활동, 이벤트 준비처럼 숫자 하나 또는 여러 개가 필요한 순간에 쓰는 무료 도구입니다. 숫자 범위와 중복 허용 여부를 미리 정하면 결과를 더 쉽게 설명할 수 있습니다.",
+    "랜덤 숫자 뽑기 룰렛은 번호표, 발표 순서, 간단한 게임, 수업 활동처럼 숫자 후보 중 하나가 필요한 순간에 쓰는 무료 도구입니다. 기본 후보는 1부터 45까지이며, 한 번 돌릴 때마다 숫자 하나를 뽑습니다. 범위·개수 입력과 자동 중복 제외 기능은 없으므로 여러 개가 필요하면 반복해서 돌리고, 이미 나온 숫자는 목록에서 직접 지우세요.",
     "이 도구는 브라우저의 난수 기능을 활용해 일반적인 무작위 숫자 선택을 돕습니다. 다만 금전이 걸린 추첨, 법적 증빙이 필요한 복권형 이벤트, 보안 토큰 생성, 암호 키 생성처럼 높은 신뢰성이 필요한 용도에는 별도의 공식 절차나 전문 시스템을 사용해야 합니다.",
     "공정하게 사용하려면 참가자 수, 번호 범위, 제외 번호, 재추첨 조건을 먼저 합의하세요. 결과가 나온 뒤 조건을 바꾸면 참가자가 결과를 신뢰하기 어렵습니다. 필요한 경우 결과와 시간을 별도로 기록해 두는 것이 좋습니다.",
     "SpinFlow의 숫자 결과는 사용자의 의사결정을 돕는 참고용입니다. 학교 활동, 소규모 모임, 회의 순서 정하기처럼 저위험 상황에 가장 적합하며, 개인정보나 민감한 식별번호를 입력하지 않는 것이 안전합니다.",
@@ -238,7 +239,7 @@ const approvalBodies = {
 
 const approvalSectionHeadings = {
   "/lunch-menu": "조건을 먼저 정하면 점심 선택이 쉬워집니다",
-  "/random-number": "추첨 전에 범위와 규칙을 합의하세요",
+  "/random-number": "추첨 전에 숫자 후보와 규칙을 합의하세요",
   "/tools": "작업별로 도구를 선택하는 방법",
   "/faq": "사용 전에 알아둘 서비스 기준",
   "/blog": "도구를 실제 상황에 연결하는 가이드",
@@ -527,17 +528,30 @@ function extractAllPosts() {
   return [...extractCuratedPosts(), ...extractGeneratedPosts(), ...extractLegacyPosts()];
 }
 
-function mergeWithExistingMetadata(posts) {
-  if (!fs.existsSync(POST_METADATA_PATH)) return posts;
+let loggedMetadataChanges = false;
 
-  try {
-    const existing = JSON.parse(fs.readFileSync(POST_METADATA_PATH, "utf8"));
-    if (!Array.isArray(existing)) return posts;
-    const existingSlugs = new Set(existing.map((post) => post.slug));
-    return [...existing, ...posts.filter((post) => !existingSlugs.has(post.slug))];
-  } catch {
-    return posts;
+// SPK2-06: identity/schedule/source stay fixed; edited title/description/tags
+// reach every derived output. Corrupt caches fail the build (fail-closed).
+function mergeWithExistingMetadata(posts) {
+  const raw = fs.existsSync(POST_METADATA_PATH) ? fs.readFileSync(POST_METADATA_PATH, "utf8") : null;
+  const existing = parseExistingMetadata(raw);
+  if (!existing) return posts;
+
+  const { posts: merged, changes } = mergePostMetadata(existing, posts, { modifiedDate: TODAY });
+  if (changes.length > 0 && !loggedMetadataChanges) {
+    loggedMetadataChanges = true;
+    console.log(`[metadata] updated editable fields for ${changes.length} post(s):`);
+    for (const change of changes) console.log(`  - ${change.slug}: ${change.fields.join(", ")}`);
   }
+  return merged;
+}
+
+function getModifiedAt(post) {
+  return post.updatedAt ? `${post.updatedAt}T00:00:00+09:00` : getPublishAt(post);
+}
+
+function getModifiedDate(post) {
+  return post.updatedAt ?? getPublishDate(post);
 }
 
 function extractPosts() {
@@ -557,7 +571,7 @@ function buildSitemap(posts) {
   }));
   const postUrls = posts.map((post) => ({
     loc: `${SITE_ORIGIN}/blog/${post.slug}`,
-    lastmod: getPublishDate(post),
+    lastmod: getModifiedDate(post),
   }));
 
   const urls = [...pageUrls, ...postUrls]
@@ -648,7 +662,7 @@ const localizedApprovalBodies = {
     "SpinFlow 룰렛은 사용자가 입력한 후보 중 하나를 브라우저의 보안 난수 기능으로 선택하는 무료 결정 도구입니다. 점심 메뉴, 발표 순서, 수업 활동, 소규모 게임처럼 무작위 선택이 적절한 상황에 사용할 수 있습니다.",
     "사용 전에는 후보 목록, 중복 허용 여부, 실행 횟수와 재추첨 조건을 참가자끼리 먼저 합의하세요. 결과가 중요한 경우에는 최종 목록과 결과를 별도로 기록해야 하며 브라우저 기록만을 공식 증빙으로 사용하면 안 됩니다.",
     "금전, 채용, 의료, 법률 또는 공식 경품 추첨처럼 책임과 감사 절차가 필요한 결정에는 이 도구만 사용하지 마세요. 해당 기관의 공식 규정과 기록 절차를 따라야 합니다.",
-    "후보가 두 개뿐이면 동전 던지기, 숫자 범위가 필요하면 랜덤 숫자 뽑기, 참가자를 여러 그룹으로 나누려면 랜덤 팀 편성기가 더 적합할 수 있습니다. 목적에 맞는 도구를 선택하면 입력과 결과를 더 쉽게 이해할 수 있습니다.",
+    "후보가 두 개뿐이면 동전 던지기, 숫자 후보에서 하나를 뽑으려면 랜덤 숫자 뽑기, 참가자를 여러 그룹으로 나누려면 랜덤 팀 편성기가 더 적합할 수 있습니다. 목적에 맞는 도구를 선택하면 입력과 결과를 더 쉽게 이해할 수 있습니다.",
     "전화번호, 주소, 계정 정보, 건강 기록이나 내부 업무 정보처럼 민감한 내용은 후보에 입력하지 마세요. 공유 링크를 만들기 전에도 URL에 포함된 항목이 외부에 공개되어도 되는지 확인해야 합니다.",
   ],
 };
@@ -731,12 +745,13 @@ function structuredDataForPage(page) {
 }
 
 function toRuntimePostMetadata(posts) {
-  return posts.map(({ slug, title, description, date, publishAt, tags, thumbnail, qualityScore, source }) => ({
+  return posts.map(({ slug, title, description, date, publishAt, updatedAt, tags, thumbnail, qualityScore, source }) => ({
     slug,
     title,
     description,
     date,
     ...(publishAt ? { publishAt } : {}),
+    ...(updatedAt ? { updatedAt } : {}),
     tags,
     ...(thumbnail ? { thumbnail } : {}),
     ...(qualityScore !== undefined ? { qualityScore } : {}),
@@ -1111,7 +1126,7 @@ function writeDistAssets(posts) {
       ogType: "article",
       image: imageUrl,
       articlePublishedTime: publishedAt,
-      articleModifiedTime: publishedAt,
+      articleModifiedTime: getModifiedAt(post),
       structuredData: {
         "@context": "https://schema.org",
         "@graph": [
@@ -1137,7 +1152,7 @@ function writeDistAssets(posts) {
               url: imageUrl,
             },
             datePublished: publishedAt,
-            dateModified: publishedAt,
+            dateModified: getModifiedAt(post),
             url: postUrl,
             inLanguage: "ko-KR",
             author: { "@id": `${SITE_ORIGIN}/#organization` },

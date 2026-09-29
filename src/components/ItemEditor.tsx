@@ -46,11 +46,15 @@ export default function ItemEditor({ items, onUpdate, isSpinning = false }: Item
     }
   }, [onUpdate]);
 
+  // 프리셋도 편집과 같은 validator를 거친다. "초기화"는 입력만 비우고 오류를 안내한다.
   const handlePreset = (presetItems: string[]) => {
     const newText = presetItems.join('\n');
     setText(newText);
-    onUpdate(presetItems);
-    setErrors([]);
+    const result = processAndValidateItems(newText);
+    setErrors(result?.errors ?? []);
+    if (result && result.errors.length === 0) {
+      onUpdate(result.items);
+    }
   };
 
   return (
@@ -86,6 +90,8 @@ export default function ItemEditor({ items, onUpdate, isSpinning = false }: Item
           onChange={handleChange}
           disabled={isSpinning}
           rows={10}
+          aria-invalid={errors.length > 0}
+          aria-describedby={errors.length > 0 ? 'item-editor-errors item-editor-hint' : 'item-editor-hint'}
           className="
             w-full px-4 py-3
             bg-white border border-gray-200 rounded-xl
@@ -99,13 +105,13 @@ export default function ItemEditor({ items, onUpdate, isSpinning = false }: Item
           placeholder="항목1&#10;항목2&#10;항목3"
         />
         {errors.length > 0 && (
-          <div className="text-sm text-red-300 bg-red-500/10 border border-red-500/30 rounded-lg p-3 animate-pulse">
+          <div id="item-editor-errors" role="alert" className="text-sm text-red-300 bg-red-500/10 border border-red-500/30 rounded-lg p-3">
             {errors.map((error, idx) => (
               <p key={idx}>{error}</p>
             ))}
           </div>
         )}
-        <p className="text-xs text-gray-400 text-right">
+        <p id="item-editor-hint" className="text-xs text-gray-400 text-right">
           최대 100개, 항목당 50자
         </p>
       </div>

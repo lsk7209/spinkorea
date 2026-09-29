@@ -5,6 +5,7 @@ import { toast, Toaster } from 'sonner';
 import SEO, { type SEOProps } from '@/components/SEO';
 import { recordRecentTool } from '@/hooks/useRecentTools';
 import { trackEvent } from '@/utils/analytics';
+import { copyText } from '@/utils/share';
 import sitePages from '@/data/site-pages.json';
 
 const SITE_ORIGIN = 'https://spinkorea.kr';
@@ -77,9 +78,10 @@ export default function ToolLayout({
             try {
                 await navigator.share({ title, text: description, url });
             } catch {}
-        } else {
-            await navigator.clipboard.writeText(url);
+        } else if (await copyText(url)) {
             toast.success('링크가 복사되었습니다!');
+        } else {
+            toast.error('복사하지 못했습니다. 브라우저의 클립보드 권한을 확인해 주세요.');
         }
     };
 

@@ -5,8 +5,88 @@
     <link>https://spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 19 Sep 2026 04:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 04:00:00 GMT</lastBuildDate>
     <atom:link href="https://spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Markdown 표와 코드블록은 모바일에서 다시 확인하세요</title>
+      <link>https://spinkorea.kr/blog/markdown-mobile-preview</link>
+      <description>Markdown 문법이 맞아도 읽기 어려울 수 있는 모바일 표와 링크를 검수합니다.</description>
+      <pubDate>Tue, 29 Sep 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/markdown-mobile-preview</guid>
+    </item>
+
+    <item>
+      <title>글자수와 단어 빈도를 함께 보는 짧은 편집 루틴</title>
+      <link>https://spinkorea.kr/blog/text-length-frequency-workflow</link>
+      <description>공백 포함 글자수를 맞추고 반복어를 문맥별로 정리하는 두 단계 편집법입니다.</description>
+      <pubDate>Mon, 28 Sep 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/text-length-frequency-workflow</guid>
+    </item>
+
+    <item>
+      <title>2진수·16진수 변환 뒤 접두사를 다시 붙이는 이유</title>
+      <link>https://spinkorea.kr/blog/base-converter-prefix</link>
+      <description>진법 숫자와 표기 접두사를 구분해 복사 과정의 해석 오류를 줄입니다.</description>
+      <pubDate>Sun, 27 Sep 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/base-converter-prefix</guid>
+    </item>
+
+    <item>
+      <title>설문 결과는 평균과 중앙값을 같이 보면 달라집니다</title>
+      <link>https://spinkorea.kr/blog/mean-median-survey</link>
+      <description>표본이 작은 자료에서 평균과 중앙값, 범위를 함께 읽는 기초 방법을 안내합니다.</description>
+      <pubDate>Sat, 26 Sep 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/mean-median-survey</guid>
+    </item>
+
+    <item>
+      <title>평과 제곱미터를 바꿀 때 전용면적을 따로 적으세요</title>
+      <link>https://spinkorea.kr/blog/pyeong-square-meter</link>
+      <description>면적 단위 변환값과 매물에 표시된 면적 종류를 혼동하지 않는 기록법입니다.</description>
+      <pubDate>Fri, 25 Sep 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/pyeong-square-meter</guid>
+    </item>
+
+    <item>
+      <title>거리·시간·속도 중 두 값을 넣을 때 단위를 맞추는 법</title>
+      <link>https://spinkorea.kr/blog/speed-distance-time-units</link>
+      <description>속도 역산 전에 거리와 시간 단위를 통일하고 결과의 적용 한계를 설명합니다.</description>
+      <pubDate>Thu, 24 Sep 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/speed-distance-time-units</guid>
+    </item>
+
+    <item>
+      <title>날짜 계산에서 시작일 포함 여부를 먼저 정하기</title>
+      <link>https://spinkorea.kr/blog/date-calculator-inclusive</link>
+      <description>포함일과 제외일 차이를 이해하고 마감 역산 결과를 일정표와 대조합니다.</description>
+      <pubDate>Wed, 23 Sep 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/date-calculator-inclusive</guid>
+    </item>
+
+    <item>
+      <title>회의 타이머는 종료 신호와 다음 행동까지 정해야 합니다</title>
+      <link>https://spinkorea.kr/blog/meeting-timer-timebox</link>
+      <description>타임박스가 단순 알람으로 끝나지 않도록 시작 조건과 종료 규칙을 설계합니다.</description>
+      <pubDate>Tue, 22 Sep 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/meeting-timer-timebox</guid>
+    </item>
+
+    <item>
+      <title>Unix timestamp 10자리와 13자리 구분법</title>
+      <link>https://spinkorea.kr/blog/unix-seconds-milliseconds</link>
+      <description>타임스탬프 단위와 시간대를 구분해 1970년 또는 먼 미래 날짜 오류를 찾습니다.</description>
+      <pubDate>Mon, 21 Sep 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/unix-seconds-milliseconds</guid>
+    </item>
+
+    <item>
+      <title>UUID 테스트 데이터는 실제 고객 정보와 분리하세요</title>
+      <link>https://spinkorea.kr/blog/uuid-test-fixture</link>
+      <description>UUID 형식과 충돌 가능성의 의미, 테스트 데이터 안전 원칙을 함께 정리합니다.</description>
+      <pubDate>Sun, 20 Sep 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/uuid-test-fixture</guid>
+    </item>
 
     <item>
       <title>단어 빈도표로 초안의 반복 표현을 고치는 방법</title>
@@ -33,7 +113,7 @@
     </item>
 
     <item>
-      <title>HEX·RGB·HSL 변환값이 조금씩 다른 이유</title>
+      <title>색상 코드 변환, HEX·RGB·HSL 값이 조금씩 다른 이유</title>
       <link>https://spinkorea.kr/blog/hex-rgb-hsl-rounding</link>
       <description>색상 모델과 반올림을 이해하고 원본 색을 잃지 않게 기록하는 법을 설명합니다.</description>
       <pubDate>Wed, 16 Sep 2026 04:00:00 GMT</pubDate>

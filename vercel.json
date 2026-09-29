@@ -55,7 +55,7 @@
       "destination": "/index.html"
     },
     {
-      "source": "/spinflow/:slug",
+      "source": "/spinflow/:slug(lunch|truth-or-dare|lotto)",
       "destination": "/index.html"
     }
   ]
