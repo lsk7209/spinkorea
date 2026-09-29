@@ -185,6 +185,486 @@
     </item>
 
     <item>
+      <title>후보 제외 기록, 뽑힌 후보를 순환에서 빼는 법</title>
+      <link>https://spinkorea.kr/blog/random-option-retire</link>
+      <description>한 번 뽑힌 후보를 계속 포함해 생기는 반복을 막도록, 뽑은 항목을 목록에서 지우고 제외 이력을 남겨 순환 선택 규칙을 만드는 방법을 정리했습니다.</description>
+      <pubDate>Sun, 02 Aug 2026 18:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-option-retire</guid>
+    </item>
+
+    <item>
+      <title>공정 추첨 리포트, 스폰서에게 결과를 남기는 표</title>
+      <link>https://spinkorea.kr/blog/fair-draw-report</link>
+      <description>추첨 결과를 스폰서나 관계자에게 보고서로 남길 때, 공정 추첨 리포트에 담을 항목과 표 구성을 상황별로 정리했습니다.</description>
+      <pubDate>Sun, 02 Aug 2026 13:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/fair-draw-report</guid>
+    </item>
+
+    <item>
+      <title>당첨자 라벨 정리 판단법, 참가자 목록 중심</title>
+      <link>https://spinkorea.kr/blog/random-winner-label</link>
+      <description>발송 목록을 만들 때 이름과 연락처 라벨이 섞이지 않도록 당첨자 정보를 항목별로 나눠 정리하는 방법과 개인정보 주의점을 정리합니다.</description>
+      <pubDate>Sun, 02 Aug 2026 08:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-winner-label</guid>
+    </item>
+
+    <item>
+      <title>설문 보상 추첨, 대상 기준 정해 공정하게 뽑기</title>
+      <link>https://spinkorea.kr/blog/survey-reward-pick</link>
+      <description>보상 대상 선정 기준이 불명확한 문제를 다룹니다. 설문 보상 추첨의 대상 기준을 정하고 익명 응답에서 당첨자를 뽑는 방법을 정리했습니다.</description>
+      <pubDate>Sun, 02 Aug 2026 03:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/survey-reward-pick</guid>
+    </item>
+
+    <item>
+      <title>추첨 재현 메모로 같은 조건 다시 남기기</title>
+      <link>https://spinkorea.kr/blog/draw-replay-note</link>
+      <description>나중에 같은 조건을 재현하기 어려운 문제를 다룹니다. 이 룰렛은 시드 재현이 없으므로 후보와 절차를 메모로 남겨 조건을 복원하는 방법을 안내합니다.</description>
+      <pubDate>Sat, 01 Aug 2026 22:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/draw-replay-note</guid>
+    </item>
+
+    <item>
+      <title>룰렛 후보 초기화로 지난 명단 잘못 뽑기 막기</title>
+      <link>https://spinkorea.kr/blog/choice-wheel-reset</link>
+      <description>지난 후보가 남아 잘못 뽑힐 때, 룰렛 후보 초기화 시점과 방법, 최근 기록이 남는 범위를 상황별로 정리했습니다.</description>
+      <pubDate>Sat, 01 Aug 2026 17:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/choice-wheel-reset</guid>
+    </item>
+
+    <item>
+      <title>회의 발표자 추첨 비교법, 확률 설정과 중복 방지</title>
+      <link>https://spinkorea.kr/blog/meeting-speaker-draw</link>
+      <description>발언 기회가 일부에게만 몰리는 문제를 회의 발표자 추첨으로 풀어 짧은 회의에서 순서를 정하고 중복 없이 돌리는 방법을 정리했습니다.</description>
+      <pubDate>Sat, 01 Aug 2026 12:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/meeting-speaker-draw</guid>
+    </item>
+
+    <item>
+      <title>경품 매칭 랜덤으로 당첨자-상품 연결하기</title>
+      <link>https://spinkorea.kr/blog/random-prize-mapping</link>
+      <description>여러 경품을 나눌 때 경품 매칭 랜덤으로 당첨자와 상품을 헷갈리지 않게 연결하는 순서와 기록 방법을 예시로 정리했습니다.</description>
+      <pubDate>Sat, 01 Aug 2026 07:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-prize-mapping</guid>
+    </item>
+
+    <item>
+      <title>응모 마감 기준, 마감 이후 응모를 처리하는 법</title>
+      <link>https://spinkorea.kr/blog/event-entry-cutoff</link>
+      <description>마감 이후 들어온 응모를 처리할 기준이 없어 생기는 혼선을 위해, 마감 시각을 명확히 정하고 후보를 확정해 공정하게 추첨하는 절차를 정리했습니다.</description>
+      <pubDate>Sat, 01 Aug 2026 02:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/event-entry-cutoff</guid>
+    </item>
+
+    <item>
+      <title>추첨 결과 보관 기간, 얼마나 남길지 정하는 법</title>
+      <link>https://spinkorea.kr/blog/draw-result-retention</link>
+      <description>추첨 결과 기록을 얼마나 오래 남길지 애매할 때, 목적과 개인정보를 고려해 추첨 결과 보관 기간과 파기 시점을 정하는 방법을 정리했습니다.</description>
+      <pubDate>Fri, 31 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/draw-result-retention</guid>
+    </item>
+
+    <item>
+      <title>휴식 주제 랜덤 발행 전 검토, 참가자 목록</title>
+      <link>https://spinkorea.kr/blog/random-break-topic</link>
+      <description>팀 휴식 활동을 준비할 때 쉬는 시간 대화가 늘 같은 주제로 흐르지 않도록 대화 주제를 모아 무작위로 꺼내 쓰는 방법을 정리합니다.</description>
+      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-break-topic</guid>
+    </item>
+
+    <item>
+      <title>봉사 순서 추첨, 불공정 시비 없이 순번 정하기</title>
+      <link>https://spinkorea.kr/blog/volunteer-order-draw</link>
+      <description>순번을 정할 때 불공정하다는 말이 나오는 문제를 다룹니다. 봉사 순서 추첨을 균등하게 하고 기록으로 남기는 방법을 정리했습니다.</description>
+      <pubDate>Fri, 31 Jul 2026 11:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/volunteer-order-draw</guid>
+    </item>
+
+    <item>
+      <title>수업 조 편성 균형을 무작위로 맞추는 법</title>
+      <link>https://spinkorea.kr/blog/class-group-balance</link>
+      <description>친한 학생끼리만 모여 참여가 줄어드는 문제를 무작위 조 편성으로 푸는 방법을 정리합니다. 팀 나누기 도구로 균등하게 나누고 제약을 반영하는 절차를 안내합니다.</description>
+      <pubDate>Fri, 31 Jul 2026 06:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/class-group-balance</guid>
+    </item>
+
+    <item>
+      <title>랜덤 추첨 개인정보 공개 범위 정하는 법</title>
+      <link>https://spinkorea.kr/blog/random-picker-privacy</link>
+      <description>당첨자 발표 전 참가자 정보 공개 범위가 애매할 때, 번호·닉네임 사용과 최소 수집 원칙으로 노출을 줄이는 순서를 정리했습니다.</description>
+      <pubDate>Fri, 31 Jul 2026 01:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-picker-privacy</guid>
+    </item>
+
+    <item>
+      <title>추첨 결과 CSV 빠른 정리, 확률 설정까지</title>
+      <link>https://spinkorea.kr/blog/draw-result-csv</link>
+      <description>결과 공유 파일의 항목 기준이 제각각인 문제를 추첨 결과 CSV 정리로 풀어 결과 텍스트를 표로 옮기는 순서와 개인정보 원칙을 담았습니다.</description>
+      <pubDate>Thu, 30 Jul 2026 20:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/draw-result-csv</guid>
+    </item>
+
+    <item>
+      <title>라이브 추첨 체크리스트로 실수 막기</title>
+      <link>https://spinkorea.kr/blog/live-raffle-checklist</link>
+      <description>실시간 진행 중 빠뜨리기 쉬운 항목을 라이브 추첨 체크리스트로 정리해, 후보 확정부터 결과 기록까지 순서대로 챙기는 방법을 예시로 정리했습니다.</description>
+      <pubDate>Thu, 30 Jul 2026 15:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/live-raffle-checklist</guid>
+    </item>
+
+    <item>
+      <title>랜덤 선택 이유, 왜 무작위로 정했는지 설명하기</title>
+      <link>https://spinkorea.kr/blog/random-choice-reason</link>
+      <description>왜 랜덤으로 정했는지 팀에 설명하기 어려운 문제를 위해, 무작위 선택이 타당한 상황과 그렇지 않은 상황을 구분해 결정을 공지하는 방법을 정리했습니다.</description>
+      <pubDate>Thu, 30 Jul 2026 10:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-choice-reason</guid>
+    </item>
+
+    <item>
+      <title>추첨 제외 기준, 결과 뒤 논쟁을 막는 정리법</title>
+      <link>https://spinkorea.kr/blog/draw-exclusion-rule</link>
+      <description>제외 조건이 추첨 후에 분쟁이 되지 않도록 이벤트 약관에 담을 추첨 제외 기준을 미리 확정하고 명단 단계에서 반영하는 방법을 정리했습니다.</description>
+      <pubDate>Thu, 30 Jul 2026 05:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/draw-exclusion-rule</guid>
+    </item>
+
+    <item>
+      <title>추첨 중복 병합 적용 순서, 결과 기록 확인</title>
+      <link>https://spinkorea.kr/blog/lottery-duplicate-merge</link>
+      <description>엑셀 명단을 정리할 때 같은 참가자가 다른 표기로 들어간 항목을 찾아 하나로 합치는 순서와 확인 방법을 정리합니다.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/lottery-duplicate-merge</guid>
+    </item>
+
+    <item>
+      <title>무작위 순서 증명, 조작 의심 없이 순서 공개하기</title>
+      <link>https://spinkorea.kr/blog/random-sequence-proof</link>
+      <description>순서가 임의로 조작됐다는 의심이 생기는 문제를 다룹니다. 무작위 순서 증명을 위해 균등 섞기와 과정 기록을 갖추는 방법을 정리했습니다.</description>
+      <pubDate>Wed, 29 Jul 2026 19:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-sequence-proof</guid>
+    </item>
+
+    <item>
+      <title>추첨 투명성 안내로 과정까지 설명하기</title>
+      <link>https://spinkorea.kr/blog/raffle-transparency-note</link>
+      <description>결과는 맞지만 과정 설명이 부족해 신뢰가 낮아지는 문제를 다룹니다. 난수 방식과 후보 확정, 기록 절차를 발표문에 담는 방법을 근거와 함께 안내합니다.</description>
+      <pubDate>Wed, 29 Jul 2026 14:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/raffle-transparency-note</guid>
+    </item>
+
+    <item>
+      <title>추첨 후보 확정 시점과 신뢰를 지키는 법</title>
+      <link>https://spinkorea.kr/blog/draw-candidate-freeze</link>
+      <description>추첨 직전 후보가 바뀌면 신뢰가 흔들립니다. 후보를 언제 닫고 어떻게 고정된 상태를 보여 줄지 상황별로 정리했습니다.</description>
+      <pubDate>Wed, 29 Jul 2026 09:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/draw-candidate-freeze</guid>
+    </item>
+
+    <item>
+      <title>역할 랜덤 배정 판단법, 참가자 목록 중심</title>
+      <link>https://spinkorea.kr/blog/random-role-assignment</link>
+      <description>힘든 역할이 특정 사람에게 몰리는 문제를 역할 랜덤 배정으로 풀어 참가자 목록 정리와 중복 없이 배정하는 순서를 정리했습니다.</description>
+      <pubDate>Wed, 29 Jul 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-role-assignment</guid>
+    </item>
+
+    <item>
+      <title>팀 순환 공정성, 편향 없이 조 바꾸기</title>
+      <link>https://spinkorea.kr/blog/team-rotation-fairness</link>
+      <description>팀 배정이 반복되며 편향돼 보일 때 팀 순환 공정성을 유지하며 조를 바꾸는 방법과, 기록으로 반복을 관리하는 절차를 예시로 정리했습니다.</description>
+      <pubDate>Tue, 28 Jul 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/team-rotation-fairness</guid>
+    </item>
+
+    <item>
+      <title>추첨 화면 기록, 라이브 결과를 증명하는 법</title>
+      <link>https://spinkorea.kr/blog/draw-screen-record</link>
+      <description>라이브 추첨 장면을 나중에 증명하기 어려운 문제를 위해 화면 녹화 전 후보를 확정하고 결과 기록과 함께 증빙을 갖추는 절차를 정리했습니다.</description>
+      <pubDate>Tue, 28 Jul 2026 18:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/draw-screen-record</guid>
+    </item>
+
+    <item>
+      <title>예비 당첨 정책, 언제 순번을 올릴지 정하는 FAQ</title>
+      <link>https://spinkorea.kr/blog/backup-winner-policy</link>
+      <description>예비 당첨자를 언제 정당첨으로 올릴지 애매할 때, 응답 기한과 승계 조건을 미리 정하는 예비 당첨 정책을 질문 형식으로 정리했습니다.</description>
+      <pubDate>Tue, 28 Jul 2026 13:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/backup-winner-policy</guid>
+    </item>
+
+    <item>
+      <title>랜덤 추첨 고지문 비교법, 확률 설정과 중복 방지</title>
+      <link>https://spinkorea.kr/blog/random-draw-disclaimer</link>
+      <description>이벤트 페이지를 공개할 때 참가 조건과 추첨 방식을 미리 밝히는 고지문에 무엇을 담아야 하는지 항목별로 정리합니다.</description>
+      <pubDate>Tue, 28 Jul 2026 08:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-draw-disclaimer</guid>
+    </item>
+
+    <item>
+      <title>응모 폼 검증, 중복과 누락 걸러 추첨 준비하기</title>
+      <link>https://spinkorea.kr/blog/raffle-form-validation</link>
+      <description>중복 응모와 누락 응답이 섞이는 문제를 다룹니다. 응모 폼 검증 순서와 정리한 명단을 도구에 넣어 추첨하는 방법을 정리했습니다.</description>
+      <pubDate>Tue, 28 Jul 2026 03:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/raffle-form-validation</guid>
+    </item>
+
+    <item>
+      <title>당첨자 연락 순서로 미응답 예비 순번 정하기</title>
+      <link>https://spinkorea.kr/blog/winner-contact-order</link>
+      <description>당첨자가 연락에 응답하지 않을 때 다음 순번 기준이 없어 곤란해지는 상황을 막는 방법을 정리합니다. 예비 순번을 추첨으로 미리 정하고 기록하는 절차를 안내합니다.</description>
+      <pubDate>Mon, 27 Jul 2026 22:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/winner-contact-order</guid>
+    </item>
+
+    <item>
+      <title>추첨 감사 로그를 직접 남기는 기록 방법</title>
+      <link>https://spinkorea.kr/blog/draw-audit-log-sheet</link>
+      <description>이 도구에는 서버 감사 로그가 없습니다. 추첨 기준과 결과가 흩어지지 않도록 직접 기록할 항목과 순서를 정리했습니다.</description>
+      <pubDate>Mon, 27 Jul 2026 17:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/draw-audit-log-sheet</guid>
+    </item>
+
+    <item>
+      <title>추첨 참여 동의 실전 흐름, 중복 방지부터</title>
+      <link>https://spinkorea.kr/blog/draw-participant-consent</link>
+      <description>참가자가 추첨 조건을 뒤늦게 확인하는 문제를 추첨 참여 동의 안내로 풀어 응모 폼에 담을 항목과 개인정보 원칙을 정리했습니다.</description>
+      <pubDate>Mon, 22 Jun 2026 02:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/draw-participant-consent</guid>
+    </item>
+
+    <item>
+      <title>룰렛 결과 설명으로 조작 의심 풀기</title>
+      <link>https://spinkorea.kr/blog/spin-result-explain</link>
+      <description>룰렛 결과가 우연인지 조작인지 의심받을 때, 룰렛 결과 설명을 근거와 절차로 명확히 하는 방법을 예시로 정리했습니다.</description>
+      <pubDate>Sun, 21 Jun 2026 21:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/spin-result-explain</guid>
+    </item>
+
+    <item>
+      <title>랜덤 선택 보관, 지난 결정을 다시 찾는 법</title>
+      <link>https://spinkorea.kr/blog/random-choice-archive</link>
+      <description>지난 랜덤 선택을 찾지 못해 같은 결정을 반복하지 않도록, 브라우저 저장의 한계를 이해하고 결과를 밖으로 옮겨 보관하는 방법을 정리했습니다.</description>
+      <pubDate>Sun, 21 Jun 2026 16:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-choice-archive</guid>
+    </item>
+
+    <item>
+      <title>예비 당첨자 목록 만들기, 순서까지 남기는 법</title>
+      <link>https://spinkorea.kr/blog/winner-backup-list</link>
+      <description>당첨자가 응답하지 않을 때를 대비해 예비 당첨자 목록을 순서대로 뽑아 기록하는 절차와, 룰렛으로 순번을 만드는 방법을 정리했습니다.</description>
+      <pubDate>Sun, 21 Jun 2026 11:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/winner-backup-list</guid>
+    </item>
+
+    <item>
+      <title>질문 카드 섞기, 참가자 목록 전에 볼 점</title>
+      <link>https://spinkorea.kr/blog/question-card-shuffle</link>
+      <description>아이스브레이킹 카드를 쓸 때 질문 순서가 예측되지 않도록 카드를 무작위로 섞고 뽑는 방법과 편향을 피하는 요령을 정리합니다.</description>
+      <pubDate>Sun, 21 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/question-card-shuffle</guid>
+    </item>
+
+    <item>
+      <title>무작위 표본 확인, 일부만 검수해도 되는지 판단</title>
+      <link>https://spinkorea.kr/blog/random-sample-check</link>
+      <description>일부 항목만 골라도 되는지 판단하기 어려운 문제를 다룹니다. 무작위 표본 확인의 개념과 도구로 표본을 뽑는 절차를 정리했습니다.</description>
+      <pubDate>Sun, 21 Jun 2026 01:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-sample-check</guid>
+    </item>
+
+    <item>
+      <title>메뉴 투표 동률을 룰렛으로 빠르게 가르기</title>
+      <link>https://spinkorea.kr/blog/menu-vote-tiebreak</link>
+      <description>점심 메뉴 투표가 같은 표로 갈렸을 때 결정을 미루지 않도록 무작위로 가르는 방법을 정리합니다. 동률 후보만 넣어 돌리는 절차와 사전 합의의 중요성을 안내합니다.</description>
+      <pubDate>Sat, 20 Jun 2026 20:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/menu-vote-tiebreak</guid>
+    </item>
+
+    <item>
+      <title>하루 선택 캡슐로 아침 결정 빠르게 끝내기</title>
+      <link>https://spinkorea.kr/blog/daily-choice-capsule</link>
+      <description>작은 선택이 많아 하루 시작이 늦어질 때, 후보를 캡슐처럼 묶어 룰렛으로 빠르게 정하는 순서와 기록 방법을 정리했습니다.</description>
+      <pubDate>Sat, 20 Jun 2026 15:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/daily-choice-capsule</guid>
+    </item>
+
+    <item>
+      <title>추첨 재시도 원칙 체크리스트: 참가자 목록 핵심</title>
+      <link>https://spinkorea.kr/blog/draw-retry-policy</link>
+      <description>결과가 마음에 안 든다고 계속 다시 뽑는 문제를 추첨 재시도 원칙으로 정리해 재추첨을 언제 허용할지 사전에 정하는 방법을 담았습니다.</description>
+      <pubDate>Sat, 20 Jun 2026 10:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/draw-retry-policy</guid>
+    </item>
+
+    <item>
+      <title>팀 게임 균형 배정으로 실력 쏠림 막기</title>
+      <link>https://spinkorea.kr/blog/team-game-balance</link>
+      <description>친목 게임에서 한 팀에 실력이 몰릴 때 팀 게임 균형 배정을 무작위와 판단으로 맞추는 방법과 기록 절차를 예시로 정리했습니다.</description>
+      <pubDate>Sat, 20 Jun 2026 05:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/team-game-balance</guid>
+    </item>
+
+    <item>
+      <title>로또 번호 메모, 생성과 저장을 분리하는 법</title>
+      <link>https://spinkorea.kr/blog/lotto-number-note</link>
+      <description>로또 번호를 무작위로 만드는 일과 그 번호를 기록·보관하는 일을 분리해, 당첨을 보장하지 않는다는 사실을 전제로 안전하게 메모하는 방법을 정리했습니다.</description>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/lotto-number-note</guid>
+    </item>
+
+    <item>
+      <title>랜덤 순서 안내문, 참가자가 바로 이해하게 쓰기</title>
+      <link>https://spinkorea.kr/blog/random-order-script</link>
+      <description>행사 전 순서를 무작위로 정한다고 알릴 때 참가자가 방식을 바로 이해하도록 랜덤 순서 안내문에 담을 요소와 예시 문장을 정리했습니다.</description>
+      <pubDate>Fri, 19 Jun 2026 19:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-order-script</guid>
+    </item>
+
+    <item>
+      <title>행사 좌석 추첨 운영 체크, 확률 설정 반영</title>
+      <link>https://spinkorea.kr/blog/event-seat-lottery</link>
+      <description>선착순 대신 좌석을 추첨할 때 좋은 자리 배정이 공정해 보이도록 좌석 번호를 뽑고 결과를 남기는 절차와 주의점을 정리합니다.</description>
+      <pubDate>Fri, 19 Jun 2026 14:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/event-seat-lottery</guid>
+    </item>
+
+    <item>
+      <title>랜덤 규칙 점검, 공개 추첨 전 기준 확인 순서</title>
+      <link>https://spinkorea.kr/blog/random-rule-audit</link>
+      <description>규칙이 실행 중 바뀌어 신뢰가 낮아지는 문제를 다룹니다. 랜덤 규칙 점검 순서와 공개 추첨 전 확인할 항목을 정리했습니다.</description>
+      <pubDate>Fri, 19 Jun 2026 09:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-rule-audit</guid>
+    </item>
+
+    <item>
+      <title>추첨 결과 공유로 과정까지 보이게 알리기</title>
+      <link>https://spinkorea.kr/blog/draw-result-share</link>
+      <description>결과만 올려 과정이 보이지 않는다는 지적을 피하도록, 추첨 결과를 공유하는 방법을 정리합니다. 결과 텍스트 복사와 후보 링크의 차이, 개인정보 주의점을 안내합니다.</description>
+      <pubDate>Fri, 19 Jun 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/draw-result-share</guid>
+    </item>
+
+    <item>
+      <title>공정한 순번 회전으로 앞자리 편중 없애기</title>
+      <link>https://spinkorea.kr/blog/fair-turn-rotation</link>
+      <description>앞 순서가 반복되어 불만이 생길 때, 룰렛으로 순번을 회전하고 뽑힌 사람을 제외하며 한 바퀴를 채우는 방법을 정리했습니다.</description>
+      <pubDate>Thu, 18 Jun 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/fair-turn-rotation</guid>
+    </item>
+
+    <item>
+      <title>랜덤 주제 갱신 개선 포인트, 공정성</title>
+      <link>https://spinkorea.kr/blog/random-topic-refresh</link>
+      <description>오래된 주제가 계속 반복되는 문제를 랜덤 주제 갱신으로 풀어 목록을 주기적으로 새로 고치고 중복 없이 뽑는 방법을 정리했습니다.</description>
+      <pubDate>Thu, 18 Jun 2026 18:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-topic-refresh</guid>
+    </item>
+
+    <item>
+      <title>후보 목록 압축, 룰렛으로 결정 속도 높이기</title>
+      <link>https://spinkorea.kr/blog/candidate-shortlist-wheel</link>
+      <description>후보가 너무 많아 결정이 늦어질 때 후보 목록 압축을 무작위로 돕는 방법과, 판단과 무작위를 나눠 최종 후보를 남기는 절차를 예시로 정리했습니다.</description>
+      <pubDate>Thu, 18 Jun 2026 13:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/candidate-shortlist-wheel</guid>
+    </item>
+
+    <item>
+      <title>경품 등급 추첨, 순서와 당첨자 헷갈림 없이</title>
+      <link>https://spinkorea.kr/blog/prize-tier-draw</link>
+      <description>여러 등급의 경품을 나눌 때 등급 순서와 당첨자를 헷갈리지 않도록 후보를 확정하고 상위 등급부터 뽑아 지우는 절차와 증빙 방법을 정리했습니다.</description>
+      <pubDate>Thu, 18 Jun 2026 08:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/prize-tier-draw</guid>
+    </item>
+
+    <item>
+      <title>팀 점심 순번, 한 사람에게 쏠리지 않게 정하기</title>
+      <link>https://spinkorea.kr/blog/team-lunch-rotation</link>
+      <description>점심 제안 담당이 특정 사람에게 몰리지 않도록 팀 점심 순번을 랜덤으로 정하고, 담당한 사람을 빼며 한 바퀴 순번을 만드는 방법을 정리했습니다.</description>
+      <pubDate>Thu, 18 Jun 2026 03:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/team-lunch-rotation</guid>
+    </item>
+
+    <item>
+      <title>휴식 활동 랜덤 실전 흐름, 중복 방지부터</title>
+      <link>https://spinkorea.kr/blog/random-break-activity</link>
+      <description>짧은 휴식 미션을 정할 때 매번 고민하지 않도록 활동 후보를 모아 무작위로 뽑고 최근 활동이 겹치지 않게 관리하는 방법을 정리합니다.</description>
+      <pubDate>Wed, 17 Jun 2026 22:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-break-activity</guid>
+    </item>
+
+    <item>
+      <title>퀴즈 순서 랜덤으로 난이도 편향 줄이는 법</title>
+      <link>https://spinkorea.kr/blog/quiz-order-random</link>
+      <description>문제 순서가 난이도에 영향을 주는 문제를 다룹니다. 퀴즈 순서 랜덤을 섞기 도구로 균등하게 만드는 방법과 한계를 정리했습니다.</description>
+      <pubDate>Wed, 17 Jun 2026 17:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/quiz-order-random</guid>
+    </item>
+
+    <item>
+      <title>멘토 매칭 랜덤으로 배정 기준 투명하게</title>
+      <link>https://spinkorea.kr/blog/mentor-match-random</link>
+      <description>멘토와 멘티 배정이 불투명하다는 말을 듣지 않도록 무작위 매칭 절차를 정리합니다. 팀 나누기와 룰렛을 함께 써서 조를 짜는 방법과 제약 조건 처리법을 안내합니다.</description>
+      <pubDate>Wed, 17 Jun 2026 12:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/mentor-match-random</guid>
+    </item>
+
+    <item>
+      <title>랜덤 짝 리뷰로 피드백 범위 넓히기</title>
+      <link>https://spinkorea.kr/blog/random-pair-review</link>
+      <description>리뷰 짝이 반복되어 피드백이 좁아질 때, 룰렛으로 짝을 정하고 이미 만난 짝을 제외하며 골고루 섞는 순서를 정리했습니다.</description>
+      <pubDate>Wed, 17 Jun 2026 07:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-pair-review</guid>
+    </item>
+
+    <item>
+      <title>응모자 명단 정리, 참가자 목록 전에 볼 점</title>
+      <link>https://spinkorea.kr/blog/raffle-entry-cleaning</link>
+      <description>추첨 전 응모 조건을 어긴 항목이 명단에 섞이는 문제를 응모자 명단 정리 순서와 중복 병합, 개인정보 원칙으로 풀어 정리했습니다.</description>
+      <pubDate>Wed, 17 Jun 2026 02:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/raffle-entry-cleaning</guid>
+    </item>
+
+    <item>
+      <title>가족 집안일 룰렛으로 분담 균형 맞추기</title>
+      <link>https://spinkorea.kr/blog/family-chore-wheel</link>
+      <description>집안일이 한쪽으로 기울 때 가족 집안일 룰렛으로 분담을 정하는 방법과, 공정하게 운영하고 기록을 남기는 절차를 예시로 정리했습니다.</description>
+      <pubDate>Tue, 16 Jun 2026 21:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/family-chore-wheel</guid>
+    </item>
+
+    <item>
+      <title>독서모임 주제 룰렛, 매번 비슷한 토론 벗어나기</title>
+      <link>https://spinkorea.kr/blog/book-club-topic-wheel</link>
+      <description>독서모임 토론 주제가 매번 비슷해지지 않도록 질문 후보를 모으고 룰렛으로 골라, 이미 다룬 주제를 빼며 기록하는 운영 방법을 정리했습니다.</description>
+      <pubDate>Tue, 16 Jun 2026 16:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/book-club-topic-wheel</guid>
+    </item>
+
+    <item>
+      <title>워크숍 조 편성, 친한 사람 쏠림 없이 랜덤하게</title>
+      <link>https://spinkorea.kr/blog/workshop-group-random</link>
+      <description>사내 워크숍에서 친한 사람끼리 몰리지 않도록 팀 나누기로 조를 균등하게 편성하고, 남는 인원 배정 규칙과 기록까지 정리했습니다.</description>
+      <pubDate>Tue, 16 Jun 2026 11:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/workshop-group-random</guid>
+    </item>
+
+    <item>
+      <title>익명 피드백 추첨 체크리스트: 참가자 목록 핵심</title>
+      <link>https://spinkorea.kr/blog/anonymous-feedback-draw</link>
+      <description>설문 참여 보상을 뽑을 때 응답의 익명성을 지키면서 당첨자를 확인하는 방법과, 식별 정보를 분리해 다루는 절차를 정리합니다.</description>
+      <pubDate>Tue, 16 Jun 2026 06:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/anonymous-feedback-draw</guid>
+    </item>
+
+    <item>
+      <title>이벤트 추첨 증빙, 소규모 경품 공정하게 마감</title>
+      <link>https://spinkorea.kr/blog/lottery-event-proof</link>
+      <description>추첨 과정 설명이 부족해 결과 신뢰가 낮아지는 문제를 다룹니다. 이벤트 추첨 증빙을 무료 도구와 진행자 절차로 갖추는 방법을 정리했습니다.</description>
+      <pubDate>Tue, 16 Jun 2026 01:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/lottery-event-proof</guid>
+    </item>
+
+    <item>
       <title>온라인 계산기 vs 엑셀: 언제 무엇을 써야 하나</title>
       <link>https://spinkorea.kr/blog/calculator-vs-excel</link>
       <description>간단한 계산에 엑셀을 여는 것은 낭비입니다. 상황별로 온라인 계산기와 스프레드시트를 현명하게 선택하는 기준.</description>
@@ -281,11 +761,83 @@
     </item>
 
     <item>
+      <title>랜덤 선택 규칙 템플릿으로 매번 다시 안 정하기</title>
+      <link>https://spinkorea.kr/blog/choice-rule-template</link>
+      <description>반복 이벤트마다 새 기준을 만드느라 시간을 쓰지 않도록, 후보 확정부터 재추첨까지 담은 랜덤 선택 규칙 템플릿을 정리합니다. 항목별로 무엇을 적을지 예와 함께 안내합니다.</description>
+      <pubDate>Tue, 12 May 2026 11:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/choice-rule-template</guid>
+    </item>
+
+    <item>
+      <title>랜덤 시드 이해로 추첨 결과 설명하기</title>
+      <link>https://spinkorea.kr/blog/random-seed-explainer</link>
+      <description>무작위 결과가 어떻게 나왔는지 설명하기 어려울 때, 시드 개념과 이 도구의 난수 방식 차이를 정리해 운영자가 근거를 대도록 돕습니다.</description>
+      <pubDate>Tue, 12 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-seed-explainer</guid>
+    </item>
+
+    <item>
+      <title>추첨 결과 안내문 초보 흐름, 확률 설정 중심</title>
+      <link>https://spinkorea.kr/blog/raffle-announcement-copy</link>
+      <description>결과 안내가 짧아 신뢰가 낮아지는 문제를 추첨 결과 안내문에 담을 항목과 문장 순서로 풀어 이벤트 결과 페이지 작성법을 정리했습니다.</description>
+      <pubDate>Tue, 12 May 2026 01:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/raffle-announcement-copy</guid>
+    </item>
+
+    <item>
+      <title>동률 투표 랜덤 결정으로 교착 풀기</title>
+      <link>https://spinkorea.kr/blog/random-vote-tiebreaker</link>
+      <description>투표가 같은 표로 갈렸을 때 동률 투표 랜덤 결정을 공정하게 적용하는 절차와, 룰렛으로 결정하고 기록을 남기는 방법을 예시로 정리했습니다.</description>
+      <pubDate>Mon, 11 May 2026 20:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-vote-tiebreaker</guid>
+    </item>
+
+    <item>
       <title>텍스트 분석의 기초: 글자수·단어수·문장수가 중요한 이유</title>
       <link>https://spinkorea.kr/blog/text-analysis-basics</link>
       <description>SNS 글자 제한, 독해 수준 측정, SEO 콘텐츠 최적화까지. 텍스트 분석이 필요한 모든 상황을 알아봅니다.</description>
       <pubDate>Mon, 11 May 2026 15:00:00 GMT</pubDate>
       <guid>https://spinkorea.kr/blog/text-analysis-basics</guid>
+    </item>
+
+    <item>
+      <title>온라인 모임 진행자, 역할 몰림 없이 뽑는 법</title>
+      <link>https://spinkorea.kr/blog/online-meeting-picker</link>
+      <description>진행 역할이 한 사람에게 몰리지 않도록 온라인 모임에서 진행자를 무작위로 뽑고, 화면을 함께 보며 결과를 기록해 공정하게 정하는 방법을 정리했습니다.</description>
+      <pubDate>Mon, 11 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/online-meeting-picker</guid>
+    </item>
+
+    <item>
+      <title>벌칙 룰렛 기준, 과하지 않고 공정하게 정하기</title>
+      <link>https://spinkorea.kr/blog/penalty-wheel-rule</link>
+      <description>게임 벌칙이 과하거나 불공정해지지 않도록 벌칙 룰렛 기준을 정하고, 대상자와 벌칙을 나눠 돌리며 부담을 분산하는 방법을 정리했습니다.</description>
+      <pubDate>Mon, 11 May 2026 10:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/penalty-wheel-rule</guid>
+    </item>
+
+    <item>
+      <title>선택 피로 줄이기 상황별 표, 결과 기록</title>
+      <link>https://spinkorea.kr/blog/choice-fatigue-random</link>
+      <description>하루에 쌓이는 작은 결정을 룰렛에 맡겨 집중력을 아끼는 방법과, 무작위에 맡겨도 되는 선택과 아닌 선택을 구분하는 기준을 정리합니다.</description>
+      <pubDate>Mon, 11 May 2026 05:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/choice-fatigue-random</guid>
+    </item>
+
+    <item>
+      <title>랜덤 결과 기록, 어디에 남고 어떻게 공유하나</title>
+      <link>https://spinkorea.kr/blog/random-choice-log</link>
+      <description>결과를 나중에 확인하기 어려운 문제를 다룹니다. 랜덤 결과 기록이 브라우저에 남는 범위와 텍스트 복사로 공유하는 현실적인 방법을 정리했습니다.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-choice-log</guid>
+    </item>
+
+    <item>
+      <title>이름 추첨 기준으로 동명이인 혼선 없애기</title>
+      <link>https://spinkorea.kr/blog/name-draw-clean-rule</link>
+      <description>동명이인과 별명이 섞인 명단을 룰렛에 넣기 전에 정리하는 기준을 정리합니다. 표기 통일과 개인정보 최소화, 결과 기록 방법을 함께 안내합니다.</description>
+      <pubDate>Sun, 10 May 2026 19:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/name-draw-clean-rule</guid>
     </item>
 
     <item>
@@ -297,11 +849,91 @@
     </item>
 
     <item>
+      <title>라이브 추첨 운영 체크리스트와 증빙 절차</title>
+      <link>https://spinkorea.kr/blog/live-stream-giveaway</link>
+      <description>라이브 방송 중 추첨에서 오류로 신뢰가 흔들리지 않도록, 후보 확정과 화면 녹화, 결과 보관까지 실시간 운영 순서를 정리했습니다.</description>
+      <pubDate>Sun, 10 May 2026 14:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/live-stream-giveaway</guid>
+    </item>
+
+    <item>
+      <title>랜덤 번호 검증 FAQ: 공정성 답변</title>
+      <link>https://spinkorea.kr/blog/random-number-audit</link>
+      <description>번호 추첨 과정이 불투명해 보인다는 지적에 답하도록 랜덤 번호 검증을 진행 전 공지와 결과 보관으로 준비하는 방법을 정리했습니다.</description>
+      <pubDate>Sun, 10 May 2026 09:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-number-audit</guid>
+    </item>
+
+    <item>
+      <title>회의 안건 우선순위, 룰렛으로 빠르게 정리</title>
+      <link>https://spinkorea.kr/blog/meeting-agenda-priority</link>
+      <description>짧은 회의에서 회의 안건 우선순위를 빠르게 정하는 방법과, 룰렛으로 순서를 뽑을 때 공정성과 기록을 챙기는 절차를 예시로 정리했습니다.</description>
+      <pubDate>Sun, 10 May 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/meeting-agenda-priority</guid>
+    </item>
+
+    <item>
+      <title>저녁 메뉴 룰렛, 퇴근 후 결정 피로 줄이기</title>
+      <link>https://spinkorea.kr/blog/dinner-menu-wheel</link>
+      <description>퇴근 후 저녁 메뉴 고르기에 드는 에너지를 줄이도록 후보를 정리하고 룰렛으로 한 번에 정하는 순서와, 결과를 기록해 반복 논쟁을 줄이는 방법을 정리했습니다.</description>
+      <pubDate>Sat, 09 May 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/dinner-menu-wheel</guid>
+    </item>
+
+    <item>
+      <title>점심 메뉴 결정 룰로 매일 반복되는 논쟁 끝내기</title>
+      <link>https://spinkorea.kr/blog/lunch-choice-rule</link>
+      <description>팀 점심 메뉴 논쟁을 줄이는 결정 룰을 온라인 룰렛으로 만드는 법과, 최근 먹은 메뉴를 빼며 돌리는 절차, 승복 규칙까지 정리했습니다.</description>
+      <pubDate>Sat, 09 May 2026 18:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/lunch-choice-rule</guid>
+    </item>
+
+    <item>
       <title>D-Day 카운터로 인생 관리하기: 중요한 날을 카운트다운으로</title>
       <link>https://spinkorea.kr/blog/dday-life-management</link>
       <description>시험, 프로젝트 마감, 여행, 기념일... D-Day 카운터가 미루기를 방지하고 동기를 높이는 이유.</description>
       <pubDate>Sat, 09 May 2026 15:00:00 GMT</pubDate>
       <guid>https://spinkorea.kr/blog/dday-life-management</guid>
+    </item>
+
+    <item>
+      <title>랜덤 질문 리스트, 공정성 먼저 보기</title>
+      <link>https://spinkorea.kr/blog/random-question-bank</link>
+      <description>커뮤니티 질문 카드를 만들 때 같은 질문이 반복되지 않게, 질문 목록을 모으고 무작위로 뽑아 관리하는 방법을 정리합니다.</description>
+      <pubDate>Sat, 09 May 2026 13:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-question-bank</guid>
+    </item>
+
+    <item>
+      <title>팀 빌딩 활동 선택, 선호 갈릴 때 정하는 법</title>
+      <link>https://spinkorea.kr/blog/team-building-picker</link>
+      <description>활동 선호가 갈려 결론이 늦어질 때 팀 빌딩 활동 선택을 무작위로 정하고 참가자가 납득할 기록을 남기는 방법을 정리했습니다.</description>
+      <pubDate>Sat, 09 May 2026 08:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/team-building-picker</guid>
+    </item>
+
+    <item>
+      <title>설문 선택지 추첨으로 테스트 문항 좁히기</title>
+      <link>https://spinkorea.kr/blog/survey-option-picker</link>
+      <description>테스트할 설문 문항이나 A/B 후보가 너무 많을 때 룰렛으로 표본을 뽑는 방법을 정리합니다. 무작위 표본의 의미와 도구의 한계를 함께 설명합니다.</description>
+      <pubDate>Sat, 09 May 2026 03:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/survey-option-picker</guid>
+    </item>
+
+    <item>
+      <title>수업 활동 추첨으로 참여 골고루 나누기</title>
+      <link>https://spinkorea.kr/blog/class-activity-draw</link>
+      <description>발표가 몇몇 학생에게 몰릴 때, 수업 활동 추첨으로 참여를 고르게 나누는 순서와 이미 뽑힌 학생을 제외하는 방법을 정리했습니다.</description>
+      <pubDate>Fri, 08 May 2026 22:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/class-activity-draw</guid>
+    </item>
+
+    <item>
+      <title>아이스브레이킹 질문 검토 순서, 중복 방지 활용</title>
+      <link>https://spinkorea.kr/blog/icebreaking-question-wheel</link>
+      <description>온라인 모임 시작의 어색함을 아이스브레이킹 질문 룰렛으로 푸는 방법을 질문 목록 준비부터 중복 없이 뽑는 순서까지 정리했습니다.</description>
+      <pubDate>Fri, 08 May 2026 17:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/icebreaking-question-wheel</guid>
     </item>
 
     <item>
@@ -313,11 +945,83 @@
     </item>
 
     <item>
+      <title>랜덤 미션 만들기로 활동 활력 높이기</title>
+      <link>https://spinkorea.kr/blog/random-mission-maker</link>
+      <description>팀 빌딩이나 모임에서 랜덤 미션 만들기로 참여를 끌어올리는 방법과, 후보 구성·확률·기록을 다루는 실전 절차를 예시로 정리했습니다.</description>
+      <pubDate>Fri, 08 May 2026 12:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/random-mission-maker</guid>
+    </item>
+
+    <item>
+      <title>게임 순서 랜덤, 첫 순서 불만을 줄이는 법</title>
+      <link>https://spinkorea.kr/blog/game-turn-randomizer</link>
+      <description>보드게임 첫 순서가 유리하다는 불만을 줄이도록 순서를 무작위로 정하고, 여러 판을 돌 때 순서를 바꿔 기록으로 남기는 방법을 정리했습니다.</description>
+      <pubDate>Fri, 08 May 2026 07:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/game-turn-randomizer</guid>
+    </item>
+
+    <item>
+      <title>스터디 주제 추첨으로 쉬운 것만 고르는 습관 깨기</title>
+      <link>https://spinkorea.kr/blog/study-topic-picker</link>
+      <description>스터디에서 쉬운 주제만 반복 선택되는 문제를 온라인 룰렛으로 균등하게 배정하고, 다룬 주제를 빼면서 돌리는 방법을 정리했습니다.</description>
+      <pubDate>Fri, 08 May 2026 02:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/study-topic-picker</guid>
+    </item>
+
+    <item>
+      <title>선물 교환 추첨 초보 흐름, 확률 설정 중심</title>
+      <link>https://spinkorea.kr/blog/gift-exchange-draw</link>
+      <description>연말 선물 교환에서 누가 누구에게 줄지 미리 드러나지 않게, 룰렛과 순서 섞기로 짝을 정하는 실전 흐름과 주의점을 정리합니다.</description>
+      <pubDate>Thu, 07 May 2026 21:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/gift-exchange-draw</guid>
+    </item>
+
+    <item>
+      <title>데이트 코스 룰렛으로 매번 다른 저녁 정하기</title>
+      <link>https://spinkorea.kr/blog/date-course-picker</link>
+      <description>매번 비슷한 코스만 고르는 문제를 데이트 코스 룰렛으로 푸는 방법과 결과를 기록해 다음에 겹치지 않게 관리하는 요령을 정리했습니다.</description>
+      <pubDate>Thu, 07 May 2026 16:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/date-course-picker</guid>
+    </item>
+
+    <item>
       <title>API와 JSON: 앱들이 서로 대화하는 방법</title>
       <link>https://spinkorea.kr/blog/json-api-explained</link>
       <description>카카오 로그인, 날씨 앱, 지도 서비스... 모두 API와 JSON으로 작동합니다. 비개발자도 이해하는 완벽 가이드.</description>
       <pubDate>Thu, 07 May 2026 15:00:00 GMT</pubDate>
       <guid>https://spinkorea.kr/blog/json-api-explained</guid>
+    </item>
+
+    <item>
+      <title>여행지 랜덤 선택으로 비교 피로 끝내기</title>
+      <link>https://spinkorea.kr/blog/travel-destination-picker</link>
+      <description>주말 여행지를 정하지 못하고 계속 후보만 비교하는 상황을 룰렛으로 끊는 방법을 정리합니다. 후보를 어떻게 좁히고 결과를 어떻게 받아들일지 구체적인 순서로 안내합니다.</description>
+      <pubDate>Thu, 07 May 2026 11:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/travel-destination-picker</guid>
+    </item>
+
+    <item>
+      <title>회식 장소 랜덤 선택으로 결정 시간 줄이기</title>
+      <link>https://spinkorea.kr/blog/dinner-place-selection</link>
+      <description>후보가 많아 회식 장소가 안 정해질 때, 룰렛으로 빠르게 좁히는 순서와 중복·재추첨을 다루는 방법을 실제 예시로 정리했습니다.</description>
+      <pubDate>Thu, 07 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/dinner-place-selection</guid>
+    </item>
+
+    <item>
+      <title>자리 배치 랜덤 상황별 표, 결과 기록</title>
+      <link>https://spinkorea.kr/blog/seat-assignment-random</link>
+      <description>워크숍에서 늘 같은 사람끼리 앉는 문제를 자리 배치 랜덤으로 푸는 방법을 상황별 표와 실제 진행 순서로 정리했습니다.</description>
+      <pubDate>Thu, 07 May 2026 01:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/seat-assignment-random</guid>
+    </item>
+
+    <item>
+      <title>커피 내기 룰렛으로 담당 정하는 법</title>
+      <link>https://spinkorea.kr/blog/coffee-bet-rule</link>
+      <description>커피 담당을 가볍게 정하는 룰렛 사용법과, 내기가 부담으로 번지지 않게 규칙을 미리 합의하는 방법을 예시로 정리했습니다.</description>
+      <pubDate>Wed, 06 May 2026 20:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/coffee-bet-rule</guid>
     </item>
 
     <item>
@@ -329,11 +1033,67 @@
     </item>
 
     <item>
+      <title>청소 당번 뽑기, 결과 기록까지 남기는 운영법</title>
+      <link>https://spinkorea.kr/blog/cleaning-duty-draw</link>
+      <description>청소 당번이 특정 사람에게 몰리지 않도록 후보를 정리하고, 뽑은 사람을 목록에서 지워 다시 돌리는 순서와 기록 방법을 정리했습니다.</description>
+      <pubDate>Wed, 06 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/cleaning-duty-draw</guid>
+    </item>
+
+    <item>
+      <title>발표 순서 추첨, 불만 없이 정하는 실전법</title>
+      <link>https://spinkorea.kr/blog/presentation-order-draw</link>
+      <description>스터디 발표자를 뽑을 때 순서 시비가 생기지 않도록 후보 확정과 한 명씩 추첨, 결과 기록까지 온라인 룰렛으로 처리하는 방법을 정리했습니다.</description>
+      <pubDate>Wed, 06 May 2026 10:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/presentation-order-draw</guid>
+    </item>
+
+    <item>
+      <title>참가자 목록 정리 FAQ: 공정성 답변</title>
+      <link>https://spinkorea.kr/blog/participant-list-cleanup</link>
+      <description>구글폼 응답을 룰렛에 넣기 전, 표기가 다른 이름 때문에 생기는 중복과 누락을 줄이는 정리 순서와 확인 방법을 설명합니다.</description>
+      <pubDate>Wed, 06 May 2026 05:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/participant-list-cleanup</guid>
+    </item>
+
+    <item>
+      <title>가중치 랜덤 선택, 중복 항목으로 확률 나누는 법</title>
+      <link>https://spinkorea.kr/blog/weighted-choice-rule</link>
+      <description>가중치를 따로 설정하는 기능이 없는 룰렛에서 참여도에 따라 기회를 다르게 주는 현실적인 방법과 그 한계를 정리했습니다.</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/weighted-choice-rule</guid>
+    </item>
+
+    <item>
+      <title>중복 당첨 방지 룰: 뽑고 지우고 기록하기</title>
+      <link>https://spinkorea.kr/blog/duplicate-winner-prevention</link>
+      <description>한 사람이 여러 번 뽑히는 것을 막는 실행 순서를 정리합니다. 룰렛은 자동 제외가 없으므로 뽑은 항목을 직접 지우고 기록으로 남기는 방법을 사은품 여러 회 추첨 예시로 설명합니다.</description>
+      <pubDate>Tue, 05 May 2026 19:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/duplicate-winner-prevention</guid>
+    </item>
+
+    <item>
       <title>CSS box-shadow 마스터하기: 디자이너처럼 그림자 만들기</title>
       <link>https://spinkorea.kr/blog/css-shadow-design</link>
       <description>단순한 검은 그림자에서 뉴모피즘, 글로우 효과까지. CSS box-shadow의 모든 파라미터와 실전 활용법.</description>
       <pubDate>Tue, 05 May 2026 15:00:00 GMT</pubDate>
       <guid>https://spinkorea.kr/blog/css-shadow-design</guid>
+    </item>
+
+    <item>
+      <title>온라인 룰렛 선택지 제한, 몇 개가 적당할까</title>
+      <link>https://spinkorea.kr/blog/wheel-option-limit</link>
+      <description>회의 안건처럼 선택지가 많을 때 온라인 룰렛에 몇 개를 넣어야 결과가 한눈에 들어오는지, 후보를 줄이는 순서와 확인 방법을 정리했습니다.</description>
+      <pubDate>Tue, 05 May 2026 14:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/wheel-option-limit</guid>
+    </item>
+
+    <item>
+      <title>랜덤 추첨 공정성, 중복 방지 먼저 보기</title>
+      <link>https://spinkorea.kr/blog/fair-random-draw</link>
+      <description>참가자가 결과를 납득하도록 랜덤 추첨 공정성을 확보하는 방법을 후보 정리부터 결과 보관까지 실제 절차로 정리했습니다.</description>
+      <pubDate>Tue, 05 May 2026 09:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/fair-random-draw</guid>
     </item>
 
     <item>

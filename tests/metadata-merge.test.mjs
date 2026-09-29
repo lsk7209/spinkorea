@@ -32,12 +32,26 @@ describe('mergePostMetadata', () => {
       title: 'NEW',
       date: '2030-01-01',
       publishAt: '2030-01-01T00:00:00+09:00',
-      source: 'editorial',
+      source: 'curated',
     }];
     const [post] = mergePostMetadata(existing, fresh, { modifiedDate: '2026-09-29' }).posts;
     assert.equal(post.date, '2026-09-01');
     assert.equal(post.publishAt, '2026-09-01T13:00:00+09:00');
-    assert.equal(post.source, 'generated', 'generated noindex boundary is preserved');
+    assert.equal(post.source, 'generated', 'only generated->editorial promotion may change source');
+  });
+
+  it('promotes a reviewed generated post to editorial and stamps updatedAt', () => {
+    const fresh = [{ ...existing[0], source: 'editorial' }];
+    const { posts, changes } = mergePostMetadata(existing, fresh, { modifiedDate: '2026-09-29' });
+    assert.equal(posts[0].source, 'editorial');
+    assert.equal(posts[0].updatedAt, '2026-09-29');
+    assert.deepEqual(changes, [{ slug: 'post-a', fields: ['source'] }]);
+  });
+
+  it('never demotes editorial or changes curated sources', () => {
+    const editorial = [{ ...existing[0], source: 'editorial' }];
+    assert.equal(mergePostMetadata(editorial, [{ ...existing[0], source: 'generated' }]).posts[0].source, 'editorial');
+    assert.equal(mergePostMetadata([existing[1]], [{ ...existing[1], source: 'generated' }]).posts[0].source, 'curated');
   });
 
   it('T17: rebuilding without edits is a no-op (no new modified date)', () => {

@@ -5611,21 +5611,21 @@
   },
   {
     "slug": "random-option-retire",
-    "title": "후보 제외 기록 실전 흐름, 중복 방지부터",
-    "description": "후보 제외 기록 관련 결정을 반복하지 않도록 공정성, 중복 방지, 참가자 목록을 한 번에 비교합니다.",
+    "title": "후보 제외 기록, 뽑힌 후보를 순환에서 빼는 법",
+    "description": "한 번 뽑힌 후보를 계속 포함해 생기는 반복을 막도록, 뽑은 항목을 목록에서 지우고 제외 이력을 남겨 순환 선택 규칙을 만드는 방법을 정리했습니다.",
     "date": "2026-08-03",
     "publishAt": "2026-08-03T03:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "순환선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Simple random sample",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Simple_random_sample",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -5640,24 +5640,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "fair-draw-report",
-    "title": "공정 추첨 리포트 상황별 표, 결과 기록",
-    "description": "공정 추첨 리포트를 검색한 독자가 바로 따라 할 수 있도록 확률 설정부터 중복 방지까지 압축했습니다.",
+    "title": "공정 추첨 리포트, 스폰서에게 결과를 남기는 표",
+    "description": "추첨 결과를 스폰서나 관계자에게 보고서로 남길 때, 공정 추첨 리포트에 담을 항목과 표 구성을 상황별로 정리했습니다.",
     "date": "2026-08-02",
     "publishAt": "2026-08-02T22:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "리포트"
     ],
     "thumbnail": "https://picsum.photos/seed/fair-draw-report/1600/900",
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -5673,25 +5675,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-winner-label",
     "title": "당첨자 라벨 정리 판단법, 참가자 목록 중심",
-    "description": "당첨자 라벨 정리는 필요한 순간부터 결과 기록과 공정성을 남기는 방법까지 안내합니다.",
+    "description": "발송 목록을 만들 때 이름과 연락처 라벨이 섞이지 않도록 당첨자 정보를 항목별로 나눠 정리하는 방법과 개인정보 주의점을 정리합니다.",
     "date": "2026-08-02",
     "publishAt": "2026-08-02T17:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "당첨자",
+      "개인정보"
     ],
     "thumbnail": "https://picsum.photos/seed/random-winner-label/1600/900",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "개인정보보호위원회",
+    "primarySourceUrl": "https://www.pipc.go.kr/np/",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -5706,12 +5710,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "survey-reward-pick",
-    "title": "설문 보상 추첨 운영법, 결과 기록 남기기",
-    "description": "설문 보상 추첨 상황에서 중복 방지와 참가자 목록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "설문 보상 추첨, 대상 기준 정해 공정하게 뽑기",
+    "description": "보상 대상 선정 기준이 불명확한 문제를 다룹니다. 설문 보상 추첨의 대상 기준을 정하고 익명 응답에서 당첨자를 뽑는 방법을 정리했습니다.",
     "date": "2026-08-02",
     "publishAt": "2026-08-02T12:00:00+09:00",
     "tags": [
@@ -5723,8 +5728,8 @@
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "개인정보보호위원회",
+    "primarySourceUrl": "https://www.pipc.go.kr/np/",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -5739,24 +5744,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "draw-replay-note",
-    "title": "추첨 재현 메모, 참가자 목록 전에 볼 점",
-    "description": "추첨 재현 메모를 준비할 때 놓치기 쉬운 공정성, 중복 방지, 참가자 목록을 짧게 점검합니다.",
+    "title": "추첨 재현 메모로 같은 조건 다시 남기기",
+    "description": "나중에 같은 조건을 재현하기 어려운 문제를 다룹니다. 이 룰렛은 시드 재현이 없으므로 후보와 절차를 메모로 남겨 조건을 복원하는 방법을 안내합니다.",
     "date": "2026-08-02",
     "publishAt": "2026-08-02T07:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "기록",
+      "운영"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -5768,29 +5775,31 @@
         "path": "/random-number"
       },
       {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
+        "label": "생활·개발 유틸 모음",
+        "path": "/tools"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "choice-wheel-reset",
-    "title": "룰렛 후보 초기화 FAQ: 공정성 답변",
-    "description": "룰렛 후보 초기화는 결과 기록, 공정성, 중복 방지를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "룰렛 후보 초기화로 지난 명단 잘못 뽑기 막기",
+    "description": "지난 후보가 남아 잘못 뽑힐 때, 룰렛 후보 초기화 시점과 방법, 최근 기록이 남는 범위를 상황별로 정리했습니다.",
     "date": "2026-08-02",
     "publishAt": "2026-08-02T02:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "초기화",
+      "기록"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
     "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -5805,24 +5814,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "meeting-speaker-draw",
     "title": "회의 발표자 추첨 비교법, 확률 설정과 중복 방지",
-    "description": "회의 발표자 추첨을 글, 도구, 업무 흐름에 적용할 때 필요한 결과 기록과 중복 방지를 정리했습니다.",
+    "description": "발언 기회가 일부에게만 몰리는 문제를 회의 발표자 추첨으로 풀어 짧은 회의에서 순서를 정하고 중복 없이 돌리는 방법을 정리했습니다.",
     "date": "2026-08-01",
     "publishAt": "2026-08-01T21:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "회의",
+      "발표순서"
     ],
     "thumbnail": "https://picsum.photos/seed/meeting-speaker-draw/1600/900",
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -5838,24 +5849,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-prize-mapping",
-    "title": "경품 매칭 랜덤 실행 순서, 결과 기록까지",
-    "description": "경품 매칭 랜덤은 애매할 때 참가자 목록을 먼저 보고 결과 기록까지 확인하는 기준을 제시합니다.",
+    "title": "경품 매칭 랜덤으로 당첨자-상품 연결하기",
+    "description": "여러 경품을 나눌 때 경품 매칭 랜덤으로 당첨자와 상품을 헷갈리지 않게 연결하는 순서와 기록 방법을 예시로 정리했습니다.",
     "date": "2026-08-01",
     "publishAt": "2026-08-01T16:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "경품"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1564053489984-317bbd824340?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -5871,25 +5884,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "event-entry-cutoff",
-    "title": "응모 마감 기준 체크리스트: 참가자 목록 핵심",
-    "description": "응모 마감 기준 관련 결정을 반복하지 않도록 참가자 목록, 확률 설정, 결과 기록을 한 번에 비교합니다.",
+    "title": "응모 마감 기준, 마감 이후 응모를 처리하는 법",
+    "description": "마감 이후 들어온 응모를 처리할 기준이 없어 생기는 혼선을 위해, 마감 시각을 명확히 정하고 후보를 확정해 공정하게 추첨하는 절차를 정리했습니다.",
     "date": "2026-08-01",
     "publishAt": "2026-08-01T11:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "이벤트운영"
     ],
     "thumbnail": "https://picsum.photos/seed/event-entry-cutoff/1600/900",
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Simple random sample",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Simple_random_sample",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -5904,25 +5918,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "draw-result-retention",
-    "title": "추첨 결과 보관 기간, 공정성 먼저 보기",
-    "description": "추첨 결과 보관 기간을 검색한 독자가 바로 따라 할 수 있도록 공정성부터 확률 설정까지 압축했습니다.",
+    "title": "추첨 결과 보관 기간, 얼마나 남길지 정하는 법",
+    "description": "추첨 결과 기록을 얼마나 오래 남길지 애매할 때, 목적과 개인정보를 고려해 추첨 결과 보관 기간과 파기 시점을 정하는 방법을 정리했습니다.",
     "date": "2026-08-01",
     "publishAt": "2026-08-01T06:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "기록"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "MDN: Window.localStorage",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -5937,25 +5953,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-break-topic",
     "title": "휴식 주제 랜덤 발행 전 검토, 참가자 목록",
-    "description": "휴식 주제 랜덤은 필요한 순간부터 중복 방지와 참가자 목록을 남기는 방법까지 안내합니다.",
+    "description": "팀 휴식 활동을 준비할 때 쉬는 시간 대화가 늘 같은 주제로 흐르지 않도록 대화 주제를 모아 무작위로 꺼내 쓰는 방법을 정리합니다.",
     "date": "2026-08-01",
     "publishAt": "2026-08-01T01:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "휴식",
+      "대화"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Discrete uniform distribution",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Discrete_uniform_distribution",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -5970,12 +5988,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "volunteer-order-draw",
-    "title": "봉사 순서 추첨 사례별 정리, 공정성 중심",
-    "description": "봉사 순서 추첨 상황에서 확률 설정과 결과 기록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "봉사 순서 추첨, 불공정 시비 없이 순번 정하기",
+    "description": "순번을 정할 때 불공정하다는 말이 나오는 문제를 다룹니다. 봉사 순서 추첨을 균등하게 하고 기록으로 남기는 방법을 정리했습니다.",
     "date": "2026-07-31",
     "publishAt": "2026-07-31T20:00:00+09:00",
     "tags": [
@@ -5987,7 +6006,7 @@
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -6003,26 +6022,32 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "class-group-balance",
-    "title": "수업 조 편성 균형 운영 체크, 확률 설정 반영",
-    "description": "수업 조 편성 균형을 준비할 때 놓치기 쉬운 참가자 목록, 확률 설정, 결과 기록을 짧게 점검합니다.",
+    "title": "수업 조 편성 균형을 무작위로 맞추는 법",
+    "description": "친한 학생끼리만 모여 참여가 줄어드는 문제를 무작위 조 편성으로 푸는 방법을 정리합니다. 팀 나누기 도구로 균등하게 나누고 제약을 반영하는 절차를 안내합니다.",
     "date": "2026-07-31",
     "publishAt": "2026-07-31T15:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "조편성",
+      "수업"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
+      {
+        "label": "팀 나누기 도구",
+        "path": "/tools/random-team"
+      },
       {
         "label": "온라인 룰렛 바로 쓰기",
         "path": "/"
@@ -6030,31 +6055,29 @@
       {
         "label": "랜덤 숫자 추첨 도구",
         "path": "/random-number"
-      },
-      {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-picker-privacy",
-    "title": "랜덤 추첨 개인정보 검토 순서, 중복 방지 활용",
-    "description": "랜덤 추첨 개인정보는 중복 방지, 참가자 목록, 확률 설정을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "랜덤 추첨 개인정보 공개 범위 정하는 법",
+    "description": "당첨자 발표 전 참가자 정보 공개 범위가 애매할 때, 번호·닉네임 사용과 최소 수집 원칙으로 노출을 줄이는 순서를 정리했습니다.",
     "date": "2026-07-31",
     "publishAt": "2026-07-31T10:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "개인정보",
+      "이벤트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
     "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceUrl": "https://www.pipc.go.kr/np/",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6069,25 +6092,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "draw-result-csv",
     "title": "추첨 결과 CSV 빠른 정리, 확률 설정까지",
-    "description": "추첨 결과 CSV를 글, 도구, 업무 흐름에 적용할 때 필요한 중복 방지와 확률 설정을 정리했습니다.",
+    "description": "결과 공유 파일의 항목 기준이 제각각인 문제를 추첨 결과 CSV 정리로 풀어 결과 텍스트를 표로 옮기는 순서와 개인정보 원칙을 담았습니다.",
     "date": "2026-07-31",
     "publishAt": "2026-07-31T05:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "결과정리",
+      "명단"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "MDN: Clipboard.writeText()",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6102,24 +6127,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "live-raffle-checklist",
-    "title": "라이브 추첨 체크리스트 선택법, 결과 기록과 공정성",
-    "description": "라이브 추첨 체크리스트는 애매할 때 결과 기록을 먼저 보고 중복 방지까지 확인하는 기준을 제시합니다.",
+    "title": "라이브 추첨 체크리스트로 실수 막기",
+    "description": "실시간 진행 중 빠뜨리기 쉬운 항목을 라이브 추첨 체크리스트로 정리해, 후보 확정부터 결과 기록까지 순서대로 챙기는 방법을 예시로 정리했습니다.",
     "date": "2026-07-31",
     "publishAt": "2026-07-31T00:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "추첨"
     ],
     "thumbnail": "https://picsum.photos/seed/live-raffle-checklist/1600/900",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -6135,25 +6162,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-choice-reason",
-    "title": "랜덤 선택 이유 개선 포인트, 공정성",
-    "description": "랜덤 선택 이유 관련 결정을 반복하지 않도록 결과 기록, 공정성, 중복 방지를 한 번에 비교합니다.",
+    "title": "랜덤 선택 이유, 왜 무작위로 정했는지 설명하기",
+    "description": "왜 랜덤으로 정했는지 팀에 설명하기 어려운 문제를 위해, 무작위 선택이 타당한 상황과 그렇지 않은 상황을 구분해 결정을 공지하는 방법을 정리했습니다.",
     "date": "2026-07-30",
     "publishAt": "2026-07-30T19:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "의사결정"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Khan Academy: Probability",
+    "primarySourceUrl": "https://www.khanacademy.org/math/statistics-probability/probability-library",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6168,25 +6196,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "draw-exclusion-rule",
-    "title": "추첨 제외 기준 초보 흐름, 확률 설정 중심",
-    "description": "추첨 제외 기준을 검색한 독자가 바로 따라 할 수 있도록 참가자 목록부터 공정성까지 압축했습니다.",
+    "title": "추첨 제외 기준, 결과 뒤 논쟁을 막는 정리법",
+    "description": "제외 조건이 추첨 후에 분쟁이 되지 않도록 이벤트 약관에 담을 추첨 제외 기준을 미리 확정하고 명단 단계에서 반영하는 방법을 정리했습니다.",
     "date": "2026-07-30",
     "publishAt": "2026-07-30T14:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "추첨"
     ],
     "thumbnail": "https://picsum.photos/seed/draw-exclusion-rule/1600/900",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Discrete uniform distribution",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Discrete_uniform_distribution",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6201,25 +6231,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "lottery-duplicate-merge",
     "title": "추첨 중복 병합 적용 순서, 결과 기록 확인",
-    "description": "추첨 중복 병합은 필요한 순간부터 확률 설정과 결과 기록을 남기는 방법까지 안내합니다.",
+    "description": "엑셀 명단을 정리할 때 같은 참가자가 다른 표기로 들어간 항목을 찾아 하나로 합치는 순서와 확인 방법을 정리합니다.",
     "date": "2026-07-30",
     "publishAt": "2026-07-30T09:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "중복 병합",
+      "참가자 목록"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6234,12 +6266,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-sequence-proof",
-    "title": "무작위 순서 증명 실수 방지, 공정성 먼저",
-    "description": "무작위 순서 증명 상황에서 공정성과 중복 방지는 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "무작위 순서 증명, 조작 의심 없이 순서 공개하기",
+    "description": "순서가 임의로 조작됐다는 의심이 생기는 문제를 다룹니다. 무작위 순서 증명을 위해 균등 섞기와 과정 기록을 갖추는 방법을 정리했습니다.",
     "date": "2026-07-30",
     "publishAt": "2026-07-30T04:00:00+09:00",
     "tags": [
@@ -6251,8 +6284,8 @@
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6267,24 +6300,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "raffle-transparency-note",
-    "title": "추첨 투명성 안내 실전 흐름, 중복 방지부터",
-    "description": "추첨 투명성 안내를 준비할 때 놓치기 쉬운 결과 기록, 공정성, 중복 방지를 짧게 점검합니다.",
+    "title": "추첨 투명성 안내로 과정까지 설명하기",
+    "description": "결과는 맞지만 과정 설명이 부족해 신뢰가 낮아지는 문제를 다룹니다. 난수 방식과 후보 확정, 기록 절차를 발표문에 담는 방법을 근거와 함께 안내합니다.",
     "date": "2026-07-29",
     "publishAt": "2026-07-29T23:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "추첨",
+      "투명성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -6296,29 +6331,31 @@
         "path": "/random-number"
       },
       {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
+        "label": "생활·개발 유틸 모음",
+        "path": "/tools"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "draw-candidate-freeze",
-    "title": "추첨 후보 확정 상황별 표, 결과 기록",
-    "description": "추첨 후보 확정은 확률 설정, 결과 기록, 공정성을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "추첨 후보 확정 시점과 신뢰를 지키는 법",
+    "description": "추첨 직전 후보가 바뀌면 신뢰가 흔들립니다. 후보를 언제 닫고 어떻게 고정된 상태를 보여 줄지 상황별로 정리했습니다.",
     "date": "2026-07-29",
     "publishAt": "2026-07-29T18:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "명단",
+      "공정성"
     ],
     "thumbnail": "https://picsum.photos/seed/draw-candidate-freeze/1600/900",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
     "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6333,25 +6370,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-role-assignment",
     "title": "역할 랜덤 배정 판단법, 참가자 목록 중심",
-    "description": "역할 랜덤 배정을 글, 도구, 업무 흐름에 적용할 때 필요한 확률 설정과 공정성을 정리했습니다.",
+    "description": "힘든 역할이 특정 사람에게 몰리는 문제를 역할 랜덤 배정으로 풀어 참가자 목록 정리와 중복 없이 배정하는 순서를 정리했습니다.",
     "date": "2026-07-29",
     "publishAt": "2026-07-29T13:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "역할배정",
+      "프로젝트"
     ],
     "thumbnail": "https://picsum.photos/seed/random-role-assignment/1600/900",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6366,25 +6405,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "team-rotation-fairness",
-    "title": "팀 순환 공정성 운영법, 결과 기록 남기기",
-    "description": "팀 순환 공정성은 애매할 때 중복 방지를 먼저 보고 확률 설정까지 확인하는 기준을 제시합니다.",
+    "title": "팀 순환 공정성, 편향 없이 조 바꾸기",
+    "description": "팀 배정이 반복되며 편향돼 보일 때 팀 순환 공정성을 유지하며 조를 바꾸는 방법과, 기록으로 반복을 관리하는 절차를 예시로 정리했습니다.",
     "date": "2026-07-29",
     "publishAt": "2026-07-29T08:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "팀"
     ],
     "thumbnail": "https://picsum.photos/seed/team-rotation-fairness/1600/900",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6399,24 +6440,25 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "draw-screen-record",
-    "title": "추첨 화면 기록, 참가자 목록 전에 볼 점",
-    "description": "추첨 화면 기록 관련 결정을 반복하지 않도록 중복 방지, 참가자 목록, 확률 설정을 한 번에 비교합니다.",
+    "title": "추첨 화면 기록, 라이브 결과를 증명하는 법",
+    "description": "라이브 추첨 장면을 나중에 증명하기 어려운 문제를 위해 화면 녹화 전 후보를 확정하고 결과 기록과 함께 증빙을 갖추는 절차를 정리했습니다.",
     "date": "2026-07-29",
     "publishAt": "2026-07-29T03:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "라이브추첨"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -6432,25 +6474,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "backup-winner-policy",
-    "title": "예비 당첨 정책 FAQ: 공정성 답변",
-    "description": "예비 당첨 정책을 검색한 독자가 바로 따라 할 수 있도록 결과 기록부터 참가자 목록까지 압축했습니다.",
+    "title": "예비 당첨 정책, 언제 순번을 올릴지 정하는 FAQ",
+    "description": "예비 당첨자를 언제 정당첨으로 올릴지 애매할 때, 응답 기한과 승계 조건을 미리 정하는 예비 당첨 정책을 질문 형식으로 정리했습니다.",
     "date": "2026-07-28",
     "publishAt": "2026-07-28T22:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "추첨"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "개인정보보호위원회",
+    "primarySourceUrl": "https://www.pipc.go.kr/np/",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6465,25 +6509,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-draw-disclaimer",
     "title": "랜덤 추첨 고지문 비교법, 확률 설정과 중복 방지",
-    "description": "랜덤 추첨 고지문은 필요한 순간부터 공정성과 중복 방지를 남기는 방법까지 안내합니다.",
+    "description": "이벤트 페이지를 공개할 때 참가 조건과 추첨 방식을 미리 밝히는 고지문에 무엇을 담아야 하는지 항목별로 정리합니다.",
     "date": "2026-07-28",
     "publishAt": "2026-07-28T17:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "고지문",
+      "공정성"
     ],
     "thumbnail": "https://picsum.photos/seed/random-draw-disclaimer/1600/900",
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "국가법령정보센터: 개인정보 보호법",
+    "primarySourceUrl": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6498,12 +6544,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "raffle-form-validation",
-    "title": "응모 폼 검증 실행 순서, 결과 기록까지",
-    "description": "응모 폼 검증 상황에서 참가자 목록과 확률 설정은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "응모 폼 검증, 중복과 누락 걸러 추첨 준비하기",
+    "description": "중복 응모와 누락 응답이 섞이는 문제를 다룹니다. 응모 폼 검증 순서와 정리한 명단을 도구에 넣어 추첨하는 방법을 정리했습니다.",
     "date": "2026-07-28",
     "publishAt": "2026-07-28T12:00:00+09:00",
     "tags": [
@@ -6515,8 +6562,8 @@
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "국가법령정보센터: 개인정보 보호법",
+    "primarySourceUrl": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6531,25 +6578,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "winner-contact-order",
-    "title": "당첨자 연락 순서 체크리스트: 참가자 목록 핵심",
-    "description": "당첨자 연락 순서를 준비할 때 놓치기 쉬운 중복 방지, 참가자 목록, 확률 설정을 짧게 점검합니다.",
+    "title": "당첨자 연락 순서로 미응답 예비 순번 정하기",
+    "description": "당첨자가 연락에 응답하지 않을 때 다음 순번 기준이 없어 곤란해지는 상황을 막는 방법을 정리합니다. 예비 순번을 추첨으로 미리 정하고 기록하는 절차를 안내합니다.",
     "date": "2026-07-28",
     "publishAt": "2026-07-28T07:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "추첨",
+      "당첨자"
     ],
     "thumbnail": "https://picsum.photos/seed/winner-contact-order/1600/900",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Sampling (statistics) — without replacement",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Simple_random_sample",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6560,29 +6609,31 @@
         "path": "/random-number"
       },
       {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
+        "label": "팀 나누기 도구",
+        "path": "/tools/random-team"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "draw-audit-log-sheet",
-    "title": "추첨 감사 로그, 공정성 먼저 보기",
-    "description": "추첨 감사 로그는 공정성, 중복 방지, 참가자 목록을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "추첨 감사 로그를 직접 남기는 기록 방법",
+    "description": "이 도구에는 서버 감사 로그가 없습니다. 추첨 기준과 결과가 흩어지지 않도록 직접 기록할 항목과 순서를 정리했습니다.",
     "date": "2026-07-28",
     "publishAt": "2026-07-28T02:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "기록",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
     "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -6597,7 +6648,8 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "adsense-review-checklist",
@@ -12212,20 +12264,21 @@
   {
     "slug": "draw-participant-consent",
     "title": "추첨 참여 동의 실전 흐름, 중복 방지부터",
-    "description": "추첨 참여 동의 관련 결정을 반복하지 않도록 공정성, 중복 방지, 참가자 목록을 한 번에 비교합니다.",
+    "description": "참가자가 추첨 조건을 뒤늦게 확인하는 문제를 추첨 참여 동의 안내로 풀어 응모 폼에 담을 항목과 개인정보 원칙을 정리했습니다.",
     "date": "2026-06-22",
     "publishAt": "2026-06-22T11:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "참여동의",
+      "응모"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "국가법령정보센터: 개인정보 보호법",
+    "primarySourceUrl": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12240,24 +12293,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "spin-result-explain",
-    "title": "룰렛 결과 설명 상황별 표, 공정성",
-    "description": "룰렛 결과 설명을 검색한 독자가 바로 따라 할 수 있도록 확률 설정부터 중복 방지까지 압축했습니다.",
+    "title": "룰렛 결과 설명으로 조작 의심 풀기",
+    "description": "룰렛 결과가 우연인지 조작인지 의심받을 때, 룰렛 결과 설명을 근거와 절차로 명확히 하는 방법을 예시로 정리했습니다.",
     "date": "2026-06-22",
     "publishAt": "2026-06-22T06:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -12273,25 +12328,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-choice-archive",
-    "title": "랜덤 선택 보관 판단법, 참가자 목록 중심",
-    "description": "랜덤 선택 보관은 필요한 순간부터 결과 기록과 공정성을 남기는 방법까지 안내합니다.",
+    "title": "랜덤 선택 보관, 지난 결정을 다시 찾는 법",
+    "description": "지난 랜덤 선택을 찾지 못해 같은 결정을 반복하지 않도록, 브라우저 저장의 한계를 이해하고 결과를 밖으로 옮겨 보관하는 방법을 정리했습니다.",
     "date": "2026-06-22",
     "publishAt": "2026-06-22T01:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "결과기록"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "MDN: Window.localStorage",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12306,25 +12362,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "winner-backup-list",
-    "title": "예비 당첨자 목록 운영법, 결과 기록 남기기",
-    "description": "예비 당첨자 목록 상황에서 중복 방지와 참가자 목록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "예비 당첨자 목록 만들기, 순서까지 남기는 법",
+    "description": "당첨자가 응답하지 않을 때를 대비해 예비 당첨자 목록을 순서대로 뽑아 기록하는 절차와, 룰렛으로 순번을 만드는 방법을 정리했습니다.",
     "date": "2026-06-21",
     "publishAt": "2026-06-21T20:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "추첨"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Sampling (statistics) — without replacement",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Simple_random_sample",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12339,25 +12397,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "question-card-shuffle",
     "title": "질문 카드 섞기, 참가자 목록 전에 볼 점",
-    "description": "질문 카드 섞기를 준비할 때 놓치기 쉬운 공정성, 중복 방지, 참가자 목록을 짧게 점검합니다.",
+    "description": "아이스브레이킹 카드를 쓸 때 질문 순서가 예측되지 않도록 카드를 무작위로 섞고 뽑는 방법과 편향을 피하는 요령을 정리합니다.",
     "date": "2026-06-21",
     "publishAt": "2026-06-21T15:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "질문 카드",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12372,12 +12432,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-sample-check",
-    "title": "무작위 표본 확인 FAQ: 공정성 답변",
-    "description": "무작위 표본 확인은 결과 기록, 공정성, 중복 방지를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "무작위 표본 확인, 일부만 검수해도 되는지 판단",
+    "description": "일부 항목만 골라도 되는지 판단하기 어려운 문제를 다룹니다. 무작위 표본 확인의 개념과 도구로 표본을 뽑는 절차를 정리했습니다.",
     "date": "2026-06-21",
     "publishAt": "2026-06-21T10:00:00+09:00",
     "tags": [
@@ -12389,8 +12450,8 @@
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Sampling (statistics) — without replacement",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Simple_random_sample",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12405,50 +12466,54 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "menu-vote-tiebreak",
-    "title": "메뉴 투표 동률 비교법, 확률 설정과 중복 방지",
-    "description": "메뉴 투표 동률을 글, 도구, 업무 흐름에 적용할 때 필요한 결과 기록과 중복 방지를 정리했습니다.",
+    "title": "메뉴 투표 동률을 룰렛으로 빠르게 가르기",
+    "description": "점심 메뉴 투표가 같은 표로 갈렸을 때 결정을 미루지 않도록 무작위로 가르는 방법을 정리합니다. 동률 후보만 넣어 돌리는 절차와 사전 합의의 중요성을 안내합니다.",
     "date": "2026-06-21",
     "publishAt": "2026-06-21T05:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "메뉴",
+      "투표"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
+      {
+        "label": "점심 메뉴 룰렛",
+        "path": "/lunch-menu"
+      },
       {
         "label": "온라인 룰렛 바로 쓰기",
         "path": "/"
       },
       {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
-      },
-      {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
+        "label": "동전 던지기 도구",
+        "path": "/tools/coin-flip"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "daily-choice-capsule",
-    "title": "하루 선택 캡슐 실행 순서, 결과 기록까지",
-    "description": "하루 선택 캡슐은 애매할 때 참가자 목록을 먼저 보고 결과 기록까지 확인하는 기준을 제시합니다.",
+    "title": "하루 선택 캡슐로 아침 결정 빠르게 끝내기",
+    "description": "작은 선택이 많아 하루 시작이 늦어질 때, 후보를 캡슐처럼 묶어 룰렛으로 빠르게 정하는 순서와 기록 방법을 정리했습니다.",
     "date": "2026-06-21",
     "publishAt": "2026-06-21T00:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
+      "루틴",
       "선택"
     ],
     "thumbnail": "https://picsum.photos/seed/daily-choice-capsule/1600/900",
@@ -12471,24 +12536,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "draw-retry-policy",
     "title": "추첨 재시도 원칙 체크리스트: 참가자 목록 핵심",
-    "description": "추첨 재시도 원칙 관련 결정을 반복하지 않도록 참가자 목록, 확률 설정, 결과 기록을 한 번에 비교합니다.",
+    "description": "결과가 마음에 안 든다고 계속 다시 뽑는 문제를 추첨 재시도 원칙으로 정리해 재추첨을 언제 허용할지 사전에 정하는 방법을 담았습니다.",
     "date": "2026-06-20",
     "publishAt": "2026-06-20T19:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "재추첨",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -12504,25 +12571,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "team-game-balance",
-    "title": "팀 게임 균형 배정, 공정성 먼저 보기",
-    "description": "팀 게임 균형 배정을 검색한 독자가 바로 따라 할 수 있도록 공정성부터 확률 설정까지 압축했습니다.",
+    "title": "팀 게임 균형 배정으로 실력 쏠림 막기",
+    "description": "친목 게임에서 한 팀에 실력이 몰릴 때 팀 게임 균형 배정을 무작위와 판단으로 맞추는 방법과 기록 절차를 예시로 정리했습니다.",
     "date": "2026-06-20",
     "publishAt": "2026-06-20T14:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "팀"
     ],
     "thumbnail": "https://picsum.photos/seed/team-game-balance/1600/900",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12537,25 +12606,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "lotto-number-note",
-    "title": "로또 번호 메모 발행 전 검토, 참가자 목록",
-    "description": "로또 번호 메모는 필요한 순간부터 중복 방지와 참가자 목록을 남기는 방법까지 안내합니다.",
+    "title": "로또 번호 메모, 생성과 저장을 분리하는 법",
+    "description": "로또 번호를 무작위로 만드는 일과 그 번호를 기록·보관하는 일을 분리해, 당첨을 보장하지 않는다는 사실을 전제로 안전하게 메모하는 방법을 정리했습니다.",
     "date": "2026-06-20",
     "publishAt": "2026-06-20T09:00:00+09:00",
     "tags": [
-      "룰렛",
+      "로또",
       "랜덤",
-      "선택"
+      "번호생성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "동행복권",
+    "primarySourceUrl": "https://www.dhlottery.co.kr/",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12570,24 +12640,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-order-script",
-    "title": "랜덤 순서 안내문 사례별 정리, 공정성 중심",
-    "description": "랜덤 순서 안내문 상황에서 확률 설정과 결과 기록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "랜덤 순서 안내문, 참가자가 바로 이해하게 쓰기",
+    "description": "행사 전 순서를 무작위로 정한다고 알릴 때 참가자가 방식을 바로 이해하도록 랜덤 순서 안내문에 담을 요소와 예시 문장을 정리했습니다.",
     "date": "2026-06-20",
     "publishAt": "2026-06-20T04:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "안내문"
     ],
     "thumbnail": "https://picsum.photos/seed/random-order-script/1600/900",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -12603,25 +12675,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "event-seat-lottery",
     "title": "행사 좌석 추첨 운영 체크, 확률 설정 반영",
-    "description": "행사 좌석 추첨을 준비할 때 놓치기 쉬운 참가자 목록, 확률 설정, 결과 기록을 짧게 점검합니다.",
+    "description": "선착순 대신 좌석을 추첨할 때 좋은 자리 배정이 공정해 보이도록 좌석 번호를 뽑고 결과를 남기는 절차와 주의점을 정리합니다.",
     "date": "2026-06-19",
     "publishAt": "2026-06-19T23:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "좌석",
+      "공정성"
     ],
     "thumbnail": "https://picsum.photos/seed/event-seat-lottery/1600/900",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Sampling (statistics) — without replacement",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Simple_random_sample",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12636,12 +12710,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-rule-audit",
-    "title": "랜덤 규칙 점검 순서, 중복 방지 활용",
-    "description": "랜덤 규칙 점검은 중복 방지, 참가자 목록, 확률 설정을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "랜덤 규칙 점검, 공개 추첨 전 기준 확인 순서",
+    "description": "규칙이 실행 중 바뀌어 신뢰가 낮아지는 문제를 다룹니다. 랜덤 규칙 점검 순서와 공개 추첨 전 확인할 항목을 정리했습니다.",
     "date": "2026-06-19",
     "publishAt": "2026-06-19T18:00:00+09:00",
     "tags": [
@@ -12653,7 +12728,7 @@
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -12669,25 +12744,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "draw-result-share",
-    "title": "추첨 결과 공유 빠른 정리, 확률 설정까지",
-    "description": "추첨 결과 공유를 글, 도구, 업무 흐름에 적용할 때 필요한 중복 방지와 확률 설정을 정리했습니다.",
+    "title": "추첨 결과 공유로 과정까지 보이게 알리기",
+    "description": "결과만 올려 과정이 보이지 않는다는 지적을 피하도록, 추첨 결과를 공유하는 방법을 정리합니다. 결과 텍스트 복사와 후보 링크의 차이, 개인정보 주의점을 안내합니다.",
     "date": "2026-06-19",
     "publishAt": "2026-06-19T13:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "공유",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "MDN: Clipboard.writeText()",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12702,25 +12779,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "fair-turn-rotation",
-    "title": "공정한 순번 회전 선택법, 결과 기록과 공정성",
-    "description": "공정한 순번 회전은 애매할 때 결과 기록을 먼저 보고 중복 방지까지 확인하는 기준을 제시합니다.",
+    "title": "공정한 순번 회전으로 앞자리 편중 없애기",
+    "description": "앞 순서가 반복되어 불만이 생길 때, 룰렛으로 순번을 회전하고 뽑힌 사람을 제외하며 한 바퀴를 채우는 방법을 정리했습니다.",
     "date": "2026-06-19",
     "publishAt": "2026-06-19T08:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "순서",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
     "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12735,25 +12814,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-topic-refresh",
     "title": "랜덤 주제 갱신 개선 포인트, 공정성",
-    "description": "랜덤 주제 갱신 관련 결정을 반복하지 않도록 결과 기록, 공정성, 중복 방지를 한 번에 비교합니다.",
+    "description": "오래된 주제가 계속 반복되는 문제를 랜덤 주제 갱신으로 풀어 목록을 주기적으로 새로 고치고 중복 없이 뽑는 방법을 정리했습니다.",
     "date": "2026-06-19",
     "publishAt": "2026-06-19T03:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "주제갱신",
+      "커뮤니티"
     ],
     "thumbnail": "https://picsum.photos/seed/random-topic-refresh/1600/900",
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "MDN: Window.localStorage",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12768,24 +12849,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "candidate-shortlist-wheel",
-    "title": "후보 목록 압축 초보 흐름, 확률 설정 중심",
-    "description": "후보 목록 압축을 검색한 독자가 바로 따라 할 수 있도록 참가자 목록부터 공정성까지 압축했습니다.",
+    "title": "후보 목록 압축, 룰렛으로 결정 속도 높이기",
+    "description": "후보가 너무 많아 결정이 늦어질 때 후보 목록 압축을 무작위로 돕는 방법과, 판단과 무작위를 나눠 최종 후보를 남기는 절차를 예시로 정리했습니다.",
     "date": "2026-06-18",
     "publishAt": "2026-06-18T22:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "결정"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1564053489984-317bbd824340?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -12801,25 +12884,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "prize-tier-draw",
-    "title": "경품 등급 추첨 적용 순서, 결과 기록 확인",
-    "description": "경품 등급 추첨은 필요한 순간부터 확률 설정과 결과 기록을 남기는 방법까지 안내합니다.",
+    "title": "경품 등급 추첨, 순서와 당첨자 헷갈림 없이",
+    "description": "여러 등급의 경품을 나눌 때 등급 순서와 당첨자를 헷갈리지 않도록 후보를 확정하고 상위 등급부터 뽑아 지우는 절차와 증빙 방법을 정리했습니다.",
     "date": "2026-06-18",
     "publishAt": "2026-06-18T17:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "경품추첨"
     ],
     "thumbnail": "https://picsum.photos/seed/prize-tier-draw/1600/900",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Sampling (statistics) — without replacement",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Simple_random_sample",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12834,25 +12918,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "team-lunch-rotation",
-    "title": "팀 점심 순번 실수 방지, 공정성 먼저",
-    "description": "팀 점심 순번 상황에서 공정성과 중복 방지는 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "팀 점심 순번, 한 사람에게 쏠리지 않게 정하기",
+    "description": "점심 제안 담당이 특정 사람에게 몰리지 않도록 팀 점심 순번을 랜덤으로 정하고, 담당한 사람을 빼며 한 바퀴 순번을 만드는 방법을 정리했습니다.",
     "date": "2026-06-18",
     "publishAt": "2026-06-18T12:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "점심"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Sampling (statistics) — without replacement",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Simple_random_sample",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12867,24 +12953,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-break-activity",
     "title": "휴식 활동 랜덤 실전 흐름, 중복 방지부터",
-    "description": "휴식 활동 랜덤을 준비할 때 놓치기 쉬운 결과 기록, 공정성, 중복 방지를 짧게 점검합니다.",
+    "description": "짧은 휴식 미션을 정할 때 매번 고민하지 않도록 활동 후보를 모아 무작위로 뽑고 최근 활동이 겹치지 않게 관리하는 방법을 정리합니다.",
     "date": "2026-06-18",
     "publishAt": "2026-06-18T07:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "휴식",
+      "생산성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -12900,12 +12988,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "quiz-order-random",
-    "title": "퀴즈 순서 랜덤 상황별 표, 결과 기록",
-    "description": "퀴즈 순서 랜덤은 확률 설정, 결과 기록, 공정성을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "퀴즈 순서 랜덤으로 난이도 편향 줄이는 법",
+    "description": "문제 순서가 난이도에 영향을 주는 문제를 다룹니다. 퀴즈 순서 랜덤을 섞기 도구로 균등하게 만드는 방법과 한계를 정리했습니다.",
     "date": "2026-06-18",
     "publishAt": "2026-06-18T02:00:00+09:00",
     "tags": [
@@ -12917,8 +13006,8 @@
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12933,58 +13022,62 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "mentor-match-random",
-    "title": "멘토 매칭 랜덤 판단법, 참가자 목록 중심",
-    "description": "멘토 매칭 랜덤을 글, 도구, 업무 흐름에 적용할 때 필요한 확률 설정과 공정성을 정리했습니다.",
+    "title": "멘토 매칭 랜덤으로 배정 기준 투명하게",
+    "description": "멘토와 멘티 배정이 불투명하다는 말을 듣지 않도록 무작위 매칭 절차를 정리합니다. 팀 나누기와 룰렛을 함께 써서 조를 짜는 방법과 제약 조건 처리법을 안내합니다.",
     "date": "2026-06-17",
     "publishAt": "2026-06-17T21:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "매칭",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
         "path": "/"
       },
       {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
+        "label": "팀 나누기 도구",
+        "path": "/tools/random-team"
       },
       {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-pair-review",
-    "title": "랜덤 짝 리뷰 운영법, 결과 기록 남기기",
-    "description": "랜덤 짝 리뷰는 애매할 때 중복 방지를 먼저 보고 확률 설정까지 확인하는 기준을 제시합니다.",
+    "title": "랜덤 짝 리뷰로 피드백 범위 넓히기",
+    "description": "리뷰 짝이 반복되어 피드백이 좁아질 때, 룰렛으로 짝을 정하고 이미 만난 짝을 제외하며 골고루 섞는 순서를 정리했습니다.",
     "date": "2026-06-17",
     "publishAt": "2026-06-17T16:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "스터디",
+      "리뷰"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
     "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -12999,25 +13092,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "raffle-entry-cleaning",
     "title": "응모자 명단 정리, 참가자 목록 전에 볼 점",
-    "description": "응모자 명단 정리 관련 결정을 반복하지 않도록 중복 방지, 참가자 목록, 확률 설정을 한 번에 비교합니다.",
+    "description": "추첨 전 응모 조건을 어긴 항목이 명단에 섞이는 문제를 응모자 명단 정리 순서와 중복 병합, 개인정보 원칙으로 풀어 정리했습니다.",
     "date": "2026-06-17",
     "publishAt": "2026-06-17T11:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "명단정리",
+      "응모"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "국가법령정보센터: 개인정보 보호법",
+    "primarySourceUrl": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -13032,24 +13127,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "family-chore-wheel",
-    "title": "가족 집안일 룰렛 FAQ: 공정성 답변",
-    "description": "가족 집안일 룰렛을 검색한 독자가 바로 따라 할 수 있도록 결과 기록부터 참가자 목록까지 압축했습니다.",
+    "title": "가족 집안일 룰렛으로 분담 균형 맞추기",
+    "description": "집안일이 한쪽으로 기울 때 가족 집안일 룰렛으로 분담을 정하는 방법과, 공정하게 운영하고 기록을 남기는 절차를 예시로 정리했습니다.",
     "date": "2026-06-17",
     "publishAt": "2026-06-17T06:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "집안일"
     ],
     "thumbnail": "https://picsum.photos/seed/family-chore-wheel/1600/900",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -13065,25 +13162,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "book-club-topic-wheel",
-    "title": "독서모임 주제 룰렛 비교법, 확률 설정과 중복 방지",
-    "description": "독서모임 주제 룰렛은 필요한 순간부터 공정성과 중복 방지를 남기는 방법까지 안내합니다.",
+    "title": "독서모임 주제 룰렛, 매번 비슷한 토론 벗어나기",
+    "description": "독서모임 토론 주제가 매번 비슷해지지 않도록 질문 후보를 모으고 룰렛으로 골라, 이미 다룬 주제를 빼며 기록하는 운영 방법을 정리했습니다.",
     "date": "2026-06-17",
     "publishAt": "2026-06-17T01:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "독서모임"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Discrete uniform distribution",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Discrete_uniform_distribution",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -13098,25 +13196,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "workshop-group-random",
-    "title": "워크숍 조 편성 실행 순서, 결과 기록까지",
-    "description": "워크숍 조 편성 상황에서 참가자 목록과 확률 설정은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "워크숍 조 편성, 친한 사람 쏠림 없이 랜덤하게",
+    "description": "사내 워크숍에서 친한 사람끼리 몰리지 않도록 팀 나누기로 조를 균등하게 편성하고, 남는 인원 배정 규칙과 기록까지 정리했습니다.",
     "date": "2026-06-16",
     "publishAt": "2026-06-16T20:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "워크숍"
     ],
     "thumbnail": "https://picsum.photos/seed/workshop-group-random/1600/900",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -13131,25 +13231,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "anonymous-feedback-draw",
     "title": "익명 피드백 추첨 체크리스트: 참가자 목록 핵심",
-    "description": "익명 피드백 추첨을 준비할 때 놓치기 쉬운 중복 방지, 참가자 목록, 확률 설정을 짧게 점검합니다.",
+    "description": "설문 참여 보상을 뽑을 때 응답의 익명성을 지키면서 당첨자를 확인하는 방법과, 식별 정보를 분리해 다루는 절차를 정리합니다.",
     "date": "2026-06-16",
     "publishAt": "2026-06-16T15:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "익명",
+      "개인정보"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "개인정보보호위원회",
+    "primarySourceUrl": "https://www.pipc.go.kr/np/",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -13164,12 +13266,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "lottery-event-proof",
-    "title": "이벤트 추첨 증빙, 공정성 먼저 보기",
-    "description": "이벤트 추첨 증빙은 공정성, 중복 방지, 참가자 목록을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "이벤트 추첨 증빙, 소규모 경품 공정하게 마감",
+    "description": "추첨 과정 설명이 부족해 결과 신뢰가 낮아지는 문제를 다룹니다. 이벤트 추첨 증빙을 무료 도구와 진행자 절차로 갖추는 방법을 정리했습니다.",
     "date": "2026-06-16",
     "publishAt": "2026-06-16T10:00:00+09:00",
     "tags": [
@@ -13181,7 +13284,7 @@
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -13197,7 +13300,8 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "homepage-topic-cluster",
@@ -18814,20 +18918,21 @@
   },
   {
     "slug": "choice-rule-template",
-    "title": "랜덤 선택 규칙 템플릿 선택법, 결과 기록과 공정성",
-    "description": "랜덤 선택 규칙 템플릿 상황에서 결과 기록과 공정성은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "랜덤 선택 규칙 템플릿으로 매번 다시 안 정하기",
+    "description": "반복 이벤트마다 새 기준을 만드느라 시간을 쓰지 않도록, 후보 확정부터 재추첨까지 담은 랜덤 선택 규칙 템플릿을 정리합니다. 항목별로 무엇을 적을지 예와 함께 안내합니다.",
     "date": "2026-05-12",
     "publishAt": "2026-05-12T20:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "규칙",
+      "운영"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -18835,33 +18940,35 @@
         "path": "/"
       },
       {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
+        "label": "생활·개발 유틸 모음",
+        "path": "/tools"
       },
       {
         "label": "점심 메뉴 룰렛",
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-seed-explainer",
-    "title": "랜덤 시드 이해 개선 포인트, 공정성",
-    "description": "랜덤 시드 이해를 준비할 때 놓치기 쉬운 확률 설정, 결과 기록, 공정성을 짧게 점검합니다.",
+    "title": "랜덤 시드 이해로 추첨 결과 설명하기",
+    "description": "무작위 결과가 어떻게 나왔는지 설명하기 어려울 때, 시드 개념과 이 도구의 난수 방식 차이를 정리해 운영자가 근거를 대도록 돕습니다.",
     "date": "2026-05-12",
     "publishAt": "2026-05-12T15:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "시드",
+      "개발"
     ],
     "thumbnail": "https://picsum.photos/seed/random-seed-explainer/1600/900",
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
     "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceUrl": "https://csrc.nist.gov/pubs/sp/800/90/a/r1/final",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -18876,25 +18983,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "raffle-announcement-copy",
     "title": "추첨 결과 안내문 초보 흐름, 확률 설정 중심",
-    "description": "추첨 결과 안내문은 참가자 목록, 확률 설정, 결과 기록을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "description": "결과 안내가 짧아 신뢰가 낮아지는 문제를 추첨 결과 안내문에 담을 항목과 문장 순서로 풀어 이벤트 결과 페이지 작성법을 정리했습니다.",
     "date": "2026-05-12",
     "publishAt": "2026-05-12T10:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "안내문",
+      "이벤트"
     ],
     "thumbnail": "https://picsum.photos/seed/raffle-announcement-copy/1600/900",
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "MDN: Clipboard.writeText()",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -18909,24 +19018,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-vote-tiebreaker",
-    "title": "동률 투표 랜덤 결정 적용 순서, 결과 기록 확인",
-    "description": "동률 투표 랜덤 결정을 글, 도구, 업무 흐름에 적용할 때 필요한 참가자 목록과 결과 기록을 정리했습니다.",
+    "title": "동률 투표 랜덤 결정으로 교착 풀기",
+    "description": "투표가 같은 표로 갈렸을 때 동률 투표 랜덤 결정을 공정하게 적용하는 절차와, 룰렛으로 결정하고 기록을 남기는 방법을 예시로 정리했습니다.",
     "date": "2026-05-12",
     "publishAt": "2026-05-12T05:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "투표"
     ],
     "thumbnail": "https://picsum.photos/seed/random-vote-tiebreaker/1600/900",
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -18942,7 +19053,8 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "text-analysis-basics",
@@ -18960,21 +19072,21 @@
   },
   {
     "slug": "online-meeting-picker",
-    "title": "온라인 모임 진행자 실수 방지, 공정성 먼저",
-    "description": "온라인 모임 진행자는 애매할 때 공정성을 먼저 보고 참가자 목록까지 확인하는 기준을 제시합니다.",
+    "title": "온라인 모임 진행자, 역할 몰림 없이 뽑는 법",
+    "description": "진행 역할이 한 사람에게 몰리지 않도록 온라인 모임에서 진행자를 무작위로 뽑고, 화면을 함께 보며 결과를 기록해 공정하게 정하는 방법을 정리했습니다.",
     "date": "2026-05-12",
     "publishAt": "2026-05-12T00:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "온라인모임"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Discrete uniform distribution",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Discrete_uniform_distribution",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -18989,25 +19101,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "penalty-wheel-rule",
-    "title": "벌칙 룰렛 기준 실전 흐름, 중복 방지부터",
-    "description": "벌칙 룰렛 기준 관련 결정을 반복하지 않도록 공정성, 중복 방지, 참가자 목록을 한 번에 비교합니다.",
+    "title": "벌칙 룰렛 기준, 과하지 않고 공정하게 정하기",
+    "description": "게임 벌칙이 과하거나 불공정해지지 않도록 벌칙 룰렛 기준을 정하고, 대상자와 벌칙을 나눠 돌리며 부담을 분산하는 방법을 정리했습니다.",
     "date": "2026-05-11",
     "publishAt": "2026-05-11T19:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "벌칙"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Discrete uniform distribution",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Discrete_uniform_distribution",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19022,24 +19136,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "choice-fatigue-random",
     "title": "선택 피로 줄이기 상황별 표, 결과 기록",
-    "description": "선택 피로 줄이기를 검색한 독자가 바로 따라 할 수 있도록 확률 설정부터 중복 방지까지 압축했습니다.",
+    "description": "하루에 쌓이는 작은 결정을 룰렛에 맡겨 집중력을 아끼는 방법과, 무작위에 맡겨도 되는 선택과 아닌 선택을 구분하는 기준을 정리합니다.",
     "date": "2026-05-11",
     "publishAt": "2026-05-11T14:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "생산성"
     ],
     "thumbnail": "https://picsum.photos/seed/choice-fatigue-random/1600/900",
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19055,12 +19171,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-choice-log",
-    "title": "랜덤 결과 기록 판단법, 참가자 목록 중심",
-    "description": "랜덤 결과 기록은 필요한 순간부터 결과 기록과 공정성을 남기는 방법까지 안내합니다.",
+    "title": "랜덤 결과 기록, 어디에 남고 어떻게 공유하나",
+    "description": "결과를 나중에 확인하기 어려운 문제를 다룹니다. 랜덤 결과 기록이 브라우저에 남는 범위와 텍스트 복사로 공유하는 현실적인 방법을 정리했습니다.",
     "date": "2026-05-11",
     "publishAt": "2026-05-11T09:00:00+09:00",
     "tags": [
@@ -19072,8 +19189,8 @@
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "MDN: Window.localStorage",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19088,24 +19205,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "name-draw-clean-rule",
-    "title": "이름 추첨 기준 운영법, 결과 기록 남기기",
-    "description": "이름 추첨 기준 상황에서 중복 방지와 참가자 목록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "이름 추첨 기준으로 동명이인 혼선 없애기",
+    "description": "동명이인과 별명이 섞인 명단을 룰렛에 넣기 전에 정리하는 기준을 정리합니다. 표기 통일과 개인정보 최소화, 결과 기록 방법을 함께 안내합니다.",
     "date": "2026-05-11",
     "publishAt": "2026-05-11T04:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "추첨",
+      "명단"
     ],
     "thumbnail": "https://picsum.photos/seed/name-draw-clean-rule/1600/900",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19113,15 +19232,16 @@
         "path": "/"
       },
       {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
+        "label": "글자 수 세기 도구",
+        "path": "/tools/text-counter"
       },
       {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
+        "label": "랜덤 숫자 추첨 도구",
+        "path": "/random-number"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "boundaries-relationship",
@@ -19139,14 +19259,15 @@
   },
   {
     "slug": "live-stream-giveaway",
-    "title": "라이브 추첨 운영, 참가자 목록 전에 볼 점",
-    "description": "라이브 추첨 운영을 준비할 때 놓치기 쉬운 공정성, 중복 방지, 참가자 목록을 짧게 점검합니다.",
+    "title": "라이브 추첨 운영 체크리스트와 증빙 절차",
+    "description": "라이브 방송 중 추첨에서 오류로 신뢰가 흔들리지 않도록, 후보 확정과 화면 녹화, 결과 보관까지 실시간 운영 순서를 정리했습니다.",
     "date": "2026-05-10",
     "publishAt": "2026-05-10T23:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "라이브",
+      "이벤트"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
@@ -19168,24 +19289,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "random-number-audit",
     "title": "랜덤 번호 검증 FAQ: 공정성 답변",
-    "description": "랜덤 번호 검증은 결과 기록, 공정성, 중복 방지를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "description": "번호 추첨 과정이 불투명해 보인다는 지적에 답하도록 랜덤 번호 검증을 진행 전 공지와 결과 보관으로 준비하는 방법을 정리했습니다.",
     "date": "2026-05-10",
     "publishAt": "2026-05-10T18:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "번호추첨",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19201,24 +19324,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "meeting-agenda-priority",
-    "title": "회의 안건 우선순위 비교법, 확률 설정과 중복 방지",
-    "description": "회의 안건 우선순위를 글, 도구, 업무 흐름에 적용할 때 필요한 결과 기록과 중복 방지를 정리했습니다.",
+    "title": "회의 안건 우선순위, 룰렛으로 빠르게 정리",
+    "description": "짧은 회의에서 회의 안건 우선순위를 빠르게 정하는 방법과, 룰렛으로 순서를 뽑을 때 공정성과 기록을 챙기는 절차를 예시로 정리했습니다.",
     "date": "2026-05-10",
     "publishAt": "2026-05-10T13:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "회의"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19234,24 +19359,25 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "dinner-menu-wheel",
-    "title": "저녁 메뉴 룰렛 실행 순서, 결과 기록까지",
-    "description": "저녁 메뉴 룰렛은 애매할 때 참가자 목록을 먼저 보고 결과 기록까지 확인하는 기준을 제시합니다.",
+    "title": "저녁 메뉴 룰렛, 퇴근 후 결정 피로 줄이기",
+    "description": "퇴근 후 저녁 메뉴 고르기에 드는 에너지를 줄이도록 후보를 정리하고 룰렛으로 한 번에 정하는 순서와, 결과를 기록해 반복 논쟁을 줄이는 방법을 정리했습니다.",
     "date": "2026-05-10",
     "publishAt": "2026-05-10T08:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "저녁메뉴"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19267,24 +19393,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "lunch-choice-rule",
-    "title": "점심 메뉴 결정 룰 체크리스트: 참가자 목록 핵심",
-    "description": "점심 메뉴 결정 룰 관련 결정을 반복하지 않도록 참가자 목록, 확률 설정, 결과 기록을 한 번에 비교합니다.",
+    "title": "점심 메뉴 결정 룰로 매일 반복되는 논쟁 끝내기",
+    "description": "팀 점심 메뉴 논쟁을 줄이는 결정 룰을 온라인 룰렛으로 만드는 법과, 최근 먹은 메뉴를 빼며 돌리는 절차, 승복 규칙까지 정리했습니다.",
     "date": "2026-05-10",
     "publishAt": "2026-05-10T03:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "점심"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19300,7 +19428,8 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "dday-life-management",
@@ -19319,20 +19448,21 @@
   {
     "slug": "random-question-bank",
     "title": "랜덤 질문 리스트, 공정성 먼저 보기",
-    "description": "랜덤 질문 리스트를 검색한 독자가 바로 따라 할 수 있도록 공정성부터 확률 설정까지 압축했습니다.",
+    "description": "커뮤니티 질문 카드를 만들 때 같은 질문이 반복되지 않게, 질문 목록을 모으고 무작위로 뽑아 관리하는 방법을 정리합니다.",
     "date": "2026-05-09",
     "publishAt": "2026-05-09T22:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "질문",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Discrete uniform distribution",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Discrete_uniform_distribution",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19347,12 +19477,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "team-building-picker",
-    "title": "팀 빌딩 활동 선택 발행 전 검토, 참가자 목록",
-    "description": "팀 빌딩 활동 선택은 필요한 순간부터 중복 방지와 참가자 목록을 남기는 방법까지 안내합니다.",
+    "title": "팀 빌딩 활동 선택, 선호 갈릴 때 정하는 법",
+    "description": "활동 선호가 갈려 결론이 늦어질 때 팀 빌딩 활동 선택을 무작위로 정하고 참가자가 납득할 기록을 남기는 방법을 정리했습니다.",
     "date": "2026-05-09",
     "publishAt": "2026-05-09T17:00:00+09:00",
     "tags": [
@@ -19364,8 +19495,8 @@
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19380,25 +19511,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "survey-option-picker",
-    "title": "설문 선택지 추첨 사례별 정리, 공정성 중심",
-    "description": "설문 선택지 추첨 상황에서 확률 설정과 결과 기록은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "설문 선택지 추첨으로 테스트 문항 좁히기",
+    "description": "테스트할 설문 문항이나 A/B 후보가 너무 많을 때 룰렛으로 표본을 뽑는 방법을 정리합니다. 무작위 표본의 의미와 도구의 한계를 함께 설명합니다.",
     "date": "2026-05-09",
     "publishAt": "2026-05-09T12:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
+      "설문",
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Sampling (statistics) — without replacement",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Simple_random_sample",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19409,21 +19542,23 @@
         "path": "/random-number"
       },
       {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
+        "label": "생활·개발 유틸 모음",
+        "path": "/tools"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "class-activity-draw",
-    "title": "수업 활동 추첨 운영 체크, 확률 설정 반영",
-    "description": "수업 활동 추첨을 준비할 때 놓치기 쉬운 참가자 목록, 확률 설정, 결과 기록을 짧게 점검합니다.",
+    "title": "수업 활동 추첨으로 참여 골고루 나누기",
+    "description": "발표가 몇몇 학생에게 몰릴 때, 수업 활동 추첨으로 참여를 고르게 나누는 순서와 이미 뽑힌 학생을 제외하는 방법을 정리했습니다.",
     "date": "2026-05-09",
     "publishAt": "2026-05-09T07:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
+      "수업",
       "선택"
     ],
     "thumbnail": "https://picsum.photos/seed/class-activity-draw/1600/900",
@@ -19431,7 +19566,7 @@
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
     "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19446,24 +19581,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "icebreaking-question-wheel",
     "title": "아이스브레이킹 질문 검토 순서, 중복 방지 활용",
-    "description": "아이스브레이킹 질문은 중복 방지, 참가자 목록, 확률 설정을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "description": "온라인 모임 시작의 어색함을 아이스브레이킹 질문 룰렛으로 푸는 방법을 질문 목록 준비부터 중복 없이 뽑는 순서까지 정리했습니다.",
     "date": "2026-05-09",
     "publishAt": "2026-05-09T02:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "아이스브레이킹",
+      "모임"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19479,7 +19616,8 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "success-habits",
@@ -19497,20 +19635,21 @@
   },
   {
     "slug": "random-mission-maker",
-    "title": "랜덤 미션 만들기 빠른 정리, 확률 설정까지",
-    "description": "랜덤 미션 만들기를 글, 도구, 업무 흐름에 적용할 때 필요한 중복 방지와 확률 설정을 정리했습니다.",
+    "title": "랜덤 미션 만들기로 활동 활력 높이기",
+    "description": "팀 빌딩이나 모임에서 랜덤 미션 만들기로 참여를 끌어올리는 방법과, 후보 구성·확률·기록을 다루는 실전 절차를 예시로 정리했습니다.",
     "date": "2026-05-08",
     "publishAt": "2026-05-08T21:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "미션"
     ],
     "thumbnail": "https://picsum.photos/seed/random-mission-maker/1600/900",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19526,25 +19665,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "game-turn-randomizer",
-    "title": "게임 순서 랜덤 선택법, 결과 기록과 공정성",
-    "description": "게임 순서 랜덤은 애매할 때 결과 기록을 먼저 보고 중복 방지까지 확인하는 기준을 제시합니다.",
+    "title": "게임 순서 랜덤, 첫 순서 불만을 줄이는 법",
+    "description": "보드게임 첫 순서가 유리하다는 불만을 줄이도록 순서를 무작위로 정하고, 여러 판을 돌 때 순서를 바꿔 기록으로 남기는 방법을 정리했습니다.",
     "date": "2026-05-08",
     "publishAt": "2026-05-08T16:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "보드게임"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19559,25 +19699,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "study-topic-picker",
-    "title": "스터디 주제 추첨 개선 포인트, 공정성",
-    "description": "스터디 주제 추첨 관련 결정을 반복하지 않도록 결과 기록, 공정성, 중복 방지를 한 번에 비교합니다.",
+    "title": "스터디 주제 추첨으로 쉬운 것만 고르는 습관 깨기",
+    "description": "스터디에서 쉬운 주제만 반복 선택되는 문제를 온라인 룰렛으로 균등하게 배정하고, 다룬 주제를 빼면서 돌리는 방법을 정리했습니다.",
     "date": "2026-05-08",
     "publishAt": "2026-05-08T11:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "스터디"
     ],
     "thumbnail": "https://picsum.photos/seed/study-topic-picker/1600/900",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Discrete uniform distribution",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Discrete_uniform_distribution",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19592,25 +19734,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "gift-exchange-draw",
     "title": "선물 교환 추첨 초보 흐름, 확률 설정 중심",
-    "description": "선물 교환 추첨을 검색한 독자가 바로 따라 할 수 있도록 참가자 목록부터 공정성까지 압축했습니다.",
+    "description": "연말 선물 교환에서 누가 누구에게 줄지 미리 드러나지 않게, 룰렛과 순서 섞기로 짝을 정하는 실전 흐름과 주의점을 정리합니다.",
     "date": "2026-05-08",
     "publishAt": "2026-05-08T06:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선물 교환",
+      "공정성"
     ],
     "thumbnail": "https://picsum.photos/seed/gift-exchange-draw/1600/900",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19625,12 +19769,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "date-course-picker",
-    "title": "데이트 코스 룰렛 적용 순서, 결과 기록 확인",
-    "description": "데이트 코스 룰렛은 필요한 순간부터 확률 설정과 결과 기록을 남기는 방법까지 안내합니다.",
+    "title": "데이트 코스 룰렛으로 매번 다른 저녁 정하기",
+    "description": "매번 비슷한 코스만 고르는 문제를 데이트 코스 룰렛으로 푸는 방법과 결과를 기록해 다음에 겹치지 않게 관리하는 요령을 정리했습니다.",
     "date": "2026-05-08",
     "publishAt": "2026-05-08T01:00:00+09:00",
     "tags": [
@@ -19642,7 +19787,7 @@
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19658,7 +19803,8 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "json-api-explained",
@@ -19676,20 +19822,21 @@
   },
   {
     "slug": "travel-destination-picker",
-    "title": "여행지 랜덤 선택 실수 방지, 공정성 먼저",
-    "description": "여행지 랜덤 선택 상황에서 공정성과 중복 방지는 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "여행지 랜덤 선택으로 비교 피로 끝내기",
+    "description": "주말 여행지를 정하지 못하고 계속 후보만 비교하는 상황을 룰렛으로 끊는 방법을 정리합니다. 후보를 어떻게 좁히고 결과를 어떻게 받아들일지 구체적인 순서로 안내합니다.",
     "date": "2026-05-07",
     "publishAt": "2026-05-07T20:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
+      "여행",
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19697,25 +19844,27 @@
         "path": "/"
       },
       {
-        "label": "랜덤 숫자 추첨 도구",
-        "path": "/random-number"
-      },
-      {
         "label": "점심 메뉴 룰렛",
         "path": "/lunch-menu"
+      },
+      {
+        "label": "예/아니오 결정 도구",
+        "path": "/tools/yes-no-oracle"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "dinner-place-selection",
-    "title": "회식 장소 랜덤 선택 실전 흐름, 중복 방지부터",
-    "description": "회식 장소 랜덤 선택을 준비할 때 놓치기 쉬운 결과 기록, 공정성, 중복 방지를 짧게 점검합니다.",
+    "title": "회식 장소 랜덤 선택으로 결정 시간 줄이기",
+    "description": "후보가 많아 회식 장소가 안 정해질 때, 룰렛으로 빠르게 좁히는 순서와 중복·재추첨을 다루는 방법을 실제 예시로 정리했습니다.",
     "date": "2026-05-07",
     "publishAt": "2026-05-07T15:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
+      "회식",
       "선택"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1600&auto=format&fit=crop",
@@ -19738,25 +19887,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "seat-assignment-random",
     "title": "자리 배치 랜덤 상황별 표, 결과 기록",
-    "description": "자리 배치 랜덤은 확률 설정, 결과 기록, 공정성을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "description": "워크숍에서 늘 같은 사람끼리 앉는 문제를 자리 배치 랜덤으로 푸는 방법을 상황별 표와 실제 진행 순서로 정리했습니다.",
     "date": "2026-05-07",
     "publishAt": "2026-05-07T10:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "자리배치",
+      "워크숍"
     ],
     "thumbnail": "https://picsum.photos/seed/seat-assignment-random/1600/900",
     "qualityScore": 94,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Fisher–Yates shuffle",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19771,24 +19922,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "coffee-bet-rule",
-    "title": "커피 내기 룰렛 판단법, 참가자 목록 중심",
-    "description": "커피 내기 룰렛을 글, 도구, 업무 흐름에 적용할 때 필요한 확률 설정과 공정성을 정리했습니다.",
+    "title": "커피 내기 룰렛으로 담당 정하는 법",
+    "description": "커피 담당을 가볍게 정하는 룰렛 사용법과, 내기가 부담으로 번지지 않게 규칙을 미리 합의하는 방법을 예시로 정리했습니다.",
     "date": "2026-05-07",
     "publishAt": "2026-05-07T05:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "팀"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1564053489984-317bbd824340?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19804,7 +19957,8 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "gratitude-journal",
@@ -19822,21 +19976,21 @@
   },
   {
     "slug": "cleaning-duty-draw",
-    "title": "청소 당번 뽑기 운영법, 결과 기록 남기기",
-    "description": "청소 당번 뽑기는 애매할 때 중복 방지를 먼저 보고 확률 설정까지 확인하는 기준을 제시합니다.",
+    "title": "청소 당번 뽑기, 결과 기록까지 남기는 운영법",
+    "description": "청소 당번이 특정 사람에게 몰리지 않도록 후보를 정리하고, 뽑은 사람을 목록에서 지워 다시 돌리는 순서와 기록 방법을 정리했습니다.",
     "date": "2026-05-07",
     "publishAt": "2026-05-07T00:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "청소당번"
     ],
     "thumbnail": "https://picsum.photos/seed/cleaning-duty-draw/1600/900",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Discrete uniform distribution",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Discrete_uniform_distribution",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19851,24 +20005,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "presentation-order-draw",
-    "title": "발표 순서 추첨, 참가자 목록 전에 볼 점",
-    "description": "발표 순서 추첨 관련 결정을 반복하지 않도록 중복 방지, 참가자 목록, 확률 설정을 한 번에 비교합니다.",
+    "title": "발표 순서 추첨, 불만 없이 정하는 실전법",
+    "description": "스터디 발표자를 뽑을 때 순서 시비가 생기지 않도록 후보 확정과 한 명씩 추첨, 결과 기록까지 온라인 룰렛으로 처리하는 방법을 정리했습니다.",
     "date": "2026-05-06",
     "publishAt": "2026-05-06T19:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "발표"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19884,25 +20040,27 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "participant-list-cleanup",
     "title": "참가자 목록 정리 FAQ: 공정성 답변",
-    "description": "참가자 목록 정리를 검색한 독자가 바로 따라 할 수 있도록 결과 기록부터 참가자 목록까지 압축했습니다.",
+    "description": "구글폼 응답을 룰렛에 넣기 전, 표기가 다른 이름 때문에 생기는 중복과 누락을 줄이는 정리 순서와 확인 방법을 설명합니다.",
     "date": "2026-05-06",
     "publishAt": "2026-05-06T14:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "참가자 목록",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "룰렛·랜덤 결정",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "국립국어원",
+    "primarySourceUrl": "https://www.korean.go.kr/",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19917,12 +20075,13 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "weighted-choice-rule",
-    "title": "가중치 랜덤 선택 비교법, 확률 설정과 중복 방지",
-    "description": "가중치 랜덤 선택은 필요한 순간부터 공정성과 중복 방지를 남기는 방법까지 안내합니다.",
+    "title": "가중치 랜덤 선택, 중복 항목으로 확률 나누는 법",
+    "description": "가중치를 따로 설정하는 기능이 없는 룰렛에서 참여도에 따라 기회를 다르게 주는 현실적인 방법과 그 한계를 정리했습니다.",
     "date": "2026-05-06",
     "publishAt": "2026-05-06T09:00:00+09:00",
     "tags": [
@@ -19934,8 +20093,8 @@
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceName": "Wikipedia: Discrete uniform distribution",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Discrete_uniform_distribution",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -19950,24 +20109,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "duplicate-winner-prevention",
-    "title": "중복 당첨 방지 룰 실행 순서, 결과 기록까지",
-    "description": "중복 당첨 방지 룰 상황에서 참가자 목록과 확률 설정은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "중복 당첨 방지 룰: 뽑고 지우고 기록하기",
+    "description": "한 사람이 여러 번 뽑히는 것을 막는 실행 순서를 정리합니다. 룰렛은 자동 제외가 없으므로 뽑은 항목을 직접 지우고 기록으로 남기는 방법을 사은품 여러 회 추첨 예시로 설명합니다.",
     "date": "2026-05-06",
     "publishAt": "2026-05-06T04:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "추첨",
+      "공정성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -19979,11 +20140,12 @@
         "path": "/random-number"
       },
       {
-        "label": "점심 메뉴 룰렛",
-        "path": "/lunch-menu"
+        "label": "팀 나누기 도구",
+        "path": "/tools/random-team"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "css-shadow-design",
@@ -20001,21 +20163,22 @@
   },
   {
     "slug": "wheel-option-limit",
-    "title": "온라인 룰렛 선택지 제한 체크리스트: 참가자 목록 핵심",
-    "description": "온라인 룰렛 선택지 제한을 준비할 때 놓치기 쉬운 중복 방지, 참가자 목록, 확률 설정을 짧게 점검합니다.",
+    "title": "온라인 룰렛 선택지 제한, 몇 개가 적당할까",
+    "description": "회의 안건처럼 선택지가 많을 때 온라인 룰렛에 몇 개를 넣어야 결과가 한눈에 들어오는지, 후보를 줄이는 순서와 확인 방법을 정리했습니다.",
     "date": "2026-05-05",
     "publishAt": "2026-05-05T23:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "선택",
+      "회의"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "룰렛·랜덤 결정",
     "contentType": "Checklist",
     "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
+    "primarySourceUrl": "https://en.wikipedia.org/wiki/Discrete_uniform_distribution",
     "internalLinks": [
       {
         "label": "온라인 룰렛 바로 쓰기",
@@ -20030,24 +20193,26 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "fair-random-draw",
     "title": "랜덤 추첨 공정성, 중복 방지 먼저 보기",
-    "description": "랜덤 추첨 공정성은 공정성, 중복 방지, 참가자 목록을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "description": "참가자가 결과를 납득하도록 랜덤 추첨 공정성을 확보하는 방법을 후보 정리부터 결과 보관까지 실제 절차로 정리했습니다.",
     "date": "2026-05-05",
     "publishAt": "2026-05-05T18:00:00+09:00",
     "tags": [
       "룰렛",
       "랜덤",
-      "선택"
+      "공정성",
+      "추첨"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "룰렛·랜덤 결정",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
+    "primarySourceName": "MDN: Crypto.getRandomValues()",
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
     "internalLinks": [
       {
@@ -20063,7 +20228,8 @@
         "path": "/lunch-menu"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-29"
   },
   {
     "slug": "perfectionism-trap",
