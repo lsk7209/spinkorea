@@ -769,10 +769,10 @@ function renderShell(page, posts = []) {
   const approvalHeading = approvalSectionHeadings[page.path];
   const trustParagraphs = page.path === "/privacy"
     ? [guidance.privacy.inputProcessing, guidance.privacy.thirdParty, guidance.privacy.controls, guidance.privacy.rightsContact]
-    : page.path === "/contact" ? [guidance.contact.summary, guidance.contact.publicIssueCaution, "공개 오류 제보에는 관련 URL, 브라우저, 더미 입력값과 재현 순서를 남겨 주세요."]
+    : page.path === "/contact" ? [guidance.contact.summary, guidance.contact.emailCaution, guidance.contact.publicIssueCaution, "공개 오류 제보에는 관련 URL, 브라우저, 더미 입력값과 재현 순서를 남겨 주세요."]
     : (trustPageBodies[page.path] ?? []);
   const trustLinks = page.path === "/privacy" ? guidance.privacy.links
-    : page.path === "/contact" ? [{ name: "GitHub Issues — 공개 오류 제보", url: guidance.contact.issueUrl }] : [];
+    : page.path === "/contact" ? [{ name: "GitHub Issues — 공개 오류 제보", url: guidance.contact.issueUrl }, { name: `이메일 — 개인정보·비공개 문의 (${guidance.contact.email})`, url: "mailto:" + guidance.contact.email }] : [];
   const trustBody = trustParagraphs
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
     .join("\n");

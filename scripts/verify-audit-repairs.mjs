@@ -42,7 +42,7 @@ assert.deepEqual([...related.matchAll(/href="([^"]+)"/g)].map(m => m[1]).sort(),
 assert.ok(!text.includes('id="related-tools"'));
 includes(read('/privacy'), ['이전 방문 기록', 'myadcenter.google.com', '도구의 입력 처리와 방문']);
 includes(read('/privacy'), [guidance.privacy.rightsContact]);
-includes(read('/contact'), ['GitHub Issues', '공개 기술 제보', '비공개 수신 채널은 없습니다', guidance.contact.issueUrl]);
+includes(read('/contact'), ['GitHub Issues', '공개 기술 제보', 'mailto:igeonu377@gmail.com', guidance.contact.issueUrl]);
 includes(read('/contact'), [guidance.contact.summary]);
 includes(read('/tools/loan-calculator'), [guidance.loan.definition]);
 includes(read('/tools/sleep-calculator'), [guidance.sleep.definition]);
