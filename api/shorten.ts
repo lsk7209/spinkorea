@@ -11,6 +11,12 @@ const MAX_URL_LENGTH = 4096;
 const ALLOWED_QUERY_KEYS = new Set(["s"]);
 const SAFE_PATH = /^\/(?:[a-z0-9-]+(?:\/[a-z0-9-]+)*)?$/;
 
+const SHORT_ID_ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const SHORT_ID_LENGTH = 8;
+/** Largest multiple of the alphabet size below 256; bytes at or above it are rejected to avoid modulo bias. */
+const UNBIASED_BYTE_LIMIT = 256 - (256 % SHORT_ID_ALPHABET.length);
+const MAX_INSERT_ATTEMPTS = 3;
+
 function getDb() {
   return createClient({
     url: process.env.TURSO_DATABASE_URL!,
@@ -18,12 +24,27 @@ function getDb() {
   });
 }
 
-function generateShortId(): string {
-  const chars =
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  const bytes = new Uint8Array(8);
-  crypto.getRandomValues(bytes);
-  return Array.from(bytes, (b) => chars[b % chars.length]).join("");
+/** Uniformly random 8-char id via rejection sampling over crypto bytes. */
+export function generateShortId(): string {
+  let id = "";
+  const bytes = new Uint8Array(SHORT_ID_LENGTH * 2);
+  while (id.length < SHORT_ID_LENGTH) {
+    crypto.getRandomValues(bytes);
+    for (const byte of bytes) {
+      if (byte >= UNBIASED_BYTE_LIMIT) continue;
+      id += SHORT_ID_ALPHABET[byte % SHORT_ID_ALPHABET.length];
+      if (id.length === SHORT_ID_LENGTH) break;
+    }
+  }
+  return id;
+}
+
+/** libsql reports primary-key collisions as SQLITE_CONSTRAINT* codes. */
+function isUniqueViolation(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+  const code = (error as { code?: unknown }).code;
+  if (typeof code === "string" && code.startsWith("SQLITE_CONSTRAINT")) return true;
+  return /UNIQUE constraint failed/i.test(error.message);
 }
 
 export function isAllowedShareUrl(value: string): boolean {
@@ -70,15 +91,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     const db = getDb();
-    const shortId = generateShortId();
-
-    await db.execute({
-      sql: "INSERT INTO shortened_urls (id, original_url, created_at) VALUES (?, ?, ?)",
-      args: [shortId, originalUrl, Date.now()],
-    });
-
-    // Never build the public URL from the client-controlled Host header.
-    return res.status(200).json({ shortId, shortUrl: `${CANONICAL_ORIGIN}/s/${shortId}` });
+    for (let attempt = 1; attempt <= MAX_INSERT_ATTEMPTS; attempt++) {
+      const shortId = generateShortId();
+      try {
+        await db.execute({
+          sql: "INSERT INTO shortened_urls (id, original_url, created_at) VALUES (?, ?, ?)",
+          args: [shortId, originalUrl, Date.now()],
+        });
+        // Never build the public URL from the client-controlled Host header.
+        return res.status(200).json({ shortId, shortUrl: `${CANONICAL_ORIGIN}/s/${shortId}` });
+      } catch (error) {
+        // Retry only id collisions; any other DB failure goes to the outer handler.
+        if (!isUniqueViolation(error) || attempt === MAX_INSERT_ATTEMPTS) throw error;
+      }
+    }
+    throw new Error("unreachable");
   } catch (error) {
     // Log only the error type; never the URL or request body.
     console.error("Shorten error:", error instanceof Error ? error.name : "unknown");

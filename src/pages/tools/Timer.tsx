@@ -121,6 +121,7 @@ function CountdownTab() {
                   type="number"
                   min={0}
                   max={max}
+                  aria-label={`타이머 ${label}`}
                   value={value}
                   onChange={(e) => set(Math.min(max, Math.max(0, Number(e.target.value))))}
                   className="w-16 text-center text-2xl font-bold bg-black/30 border border-white/20 rounded-lg py-2 text-white focus:outline-none focus:border-neon-primary appearance-none"

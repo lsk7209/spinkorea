@@ -1,9 +1,24 @@
 import { useState } from "react";
 import { TrendingUp } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
+import {
+  calculateCompound,
+  COMPOUND_ERROR_MESSAGES,
+  MAX_YEARLY_ROWS,
+} from "@/utils/compound-interest";
 
 function fmt(n: number) {
   return Math.round(n).toLocaleString("ko-KR");
+}
+
+/** Empty required fields become NaN so validation reports them instead of silently using 0. */
+function parseRequired(value: string): number {
+  return value.trim() === "" ? Number.NaN : Number(value);
+}
+
+/** Empty amount fields mean 0 원; anything else must be a real number. */
+function parseAmount(value: string): number {
+  return value.trim() === "" ? 0 : Number(value);
 }
 
 const FREQ_OPTIONS = [
@@ -20,35 +35,16 @@ export default function CompoundInterestCalculator() {
   const [freq, setFreq] = useState(12);
   const [monthly, setMonthly] = useState("0");
 
-  const P = parseFloat(principal) || 0;
-  const r = (parseFloat(rate) || 0) / 100;
-  const n = freq;
-  const t = parseFloat(years) || 0;
-  const m = parseFloat(monthly) || 0;
-
-  // Final amount: A = P(1 + r/n)^(nt) + m*[((1 + r/n)^(nt) - 1) / (r/n)]
-  let finalAmount = 0;
-  if (r === 0) {
-    finalAmount = P + m * n * t;
-  } else {
-    const factor = Math.pow(1 + r / n, n * t);
-    finalAmount = P * factor + (m > 0 ? m * ((factor - 1) / (r / n)) : 0);
-  }
-  const totalContributions = P + m * n * t;
-  const totalInterest = finalAmount - totalContributions;
-  const effectiveRate = t > 0 && P + m * n * t > 0
-    ? (Math.pow(finalAmount / (P || 1), 1 / t) - 1) * 100
-    : 0;
-
-  // Yearly breakdown (capped at 30 rows)
-  const rows: { year: number; amount: number; interest: number }[] = [];
-  for (let y = 1; y <= Math.min(Math.round(t), 30); y++) {
-    const factor = r === 0 ? 1 : Math.pow(1 + r / n, n * y);
-    const a = r === 0
-      ? P + m * n * y
-      : P * factor + (m > 0 ? m * ((factor - 1) / (r / n)) : 0);
-    rows.push({ year: y, amount: a, interest: a - (P + m * n * y) });
-  }
+  const outcome = calculateCompound({
+    principal: parseAmount(principal),
+    annualRatePercent: parseRequired(rate),
+    years: parseRequired(years),
+    periodsPerYear: freq,
+    monthlyContribution: parseAmount(monthly),
+  });
+  const result = typeof outcome === "string" ? null : outcome;
+  const errorMessage = typeof outcome === "string" ? COMPOUND_ERROR_MESSAGES[outcome] : "";
+  const rows = result?.yearly ?? [];
 
   return (
     <ToolLayout
@@ -140,6 +136,7 @@ export default function CompoundInterestCalculator() {
                   key={opt.value}
                   type="button"
                   onClick={() => setFreq(opt.value)}
+                  aria-pressed={freq === opt.value}
                   className={`px-4 py-1.5 rounded-full text-sm font-bold transition-all ${freq === opt.value ? "bg-neon-primary text-black" : "bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10"}`}
                 >
                   {opt.label}
@@ -150,19 +147,31 @@ export default function CompoundInterestCalculator() {
         </div>
 
         {/* 결과 */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {[
-            { label: "만기 금액", value: `${fmt(finalAmount)}원`, color: "text-cyan-400" },
-            { label: "총 납입금", value: `${fmt(totalContributions)}원`, color: "text-gray-300" },
-            { label: "이자 수익", value: `+${fmt(totalInterest)}원`, color: "text-green-400" },
-            { label: "연평균 수익률", value: t > 0 ? `${effectiveRate.toFixed(2)}%` : "-", color: "text-yellow-400" },
-          ].map(({ label, value, color }) => (
-            <div key={label} className="bg-black/30 rounded-xl p-4 text-center">
-              <p className="text-xs text-gray-400 mb-1">{label}</p>
-              <p className={`text-lg font-black ${color} break-all`}>{value}</p>
-            </div>
-          ))}
-        </div>
+        {errorMessage && (
+          <p role="alert" className="bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-center text-red-400 font-bold">
+            {errorMessage}
+          </p>
+        )}
+        {result && (
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4" aria-live="polite">
+            {[
+              { label: "만기 금액", value: `${fmt(result.finalAmount)}원`, color: "text-cyan-400" },
+              { label: "총 납입금", value: `${fmt(result.totalContributions)}원`, color: "text-gray-300" },
+              { label: "이자 수익", value: `+${fmt(result.totalInterest)}원`, color: "text-green-400" },
+              { label: "실효 연이율", value: `${result.effectiveAnnualRatePercent.toFixed(2)}%`, color: "text-yellow-400" },
+            ].map(({ label, value, color }) => (
+              <div key={label} className="bg-black/30 rounded-xl p-4 text-center">
+                <p className="text-xs text-gray-400 mb-1">{label}</p>
+                <p className={`text-lg font-black ${color} break-all`}>{value}</p>
+              </div>
+            ))}
+          </div>
+        )}
+        {result && (
+          <p className="text-xs text-gray-500 -mt-4">
+            * 추가 납입은 매월 말 납입으로 가정하고, 선택한 복리 주기와 같은 실효 이율로 계산합니다(세전).
+          </p>
+        )}
 
         {/* 연도별 성장 */}
         {rows.length > 0 && (
@@ -187,8 +196,8 @@ export default function CompoundInterestCalculator() {
                   ))}
                 </tbody>
               </table>
-              {Math.round(t) > 30 && (
-                <p className="text-xs text-gray-500 mt-2">* 최대 30년까지 표시됩니다.</p>
+              {result && result.months > MAX_YEARLY_ROWS * 12 && (
+                <p className="text-xs text-gray-500 mt-2">* 최대 {MAX_YEARLY_ROWS}년까지 표시됩니다.</p>
               )}
             </div>
           </div>

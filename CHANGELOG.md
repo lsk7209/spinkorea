@@ -2,6 +2,30 @@
 
 형식: [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/). 이전 이력은 `docs/HANDOFF.md`, `PROJECT_STATE.md`, `docs/site-quality/change-log.md`에 있다.
 
+## [Unreleased] — fix/calculator-edge-cases (2026-09-30, 로컬 전용·미배포·미커밋)
+
+### Fixed
+- 시간 계산기: 더하기/빼기 결과가 자정을 넘으면 "(전날)", "(다음날)", "(N일 후/전)"를 표시(기존엔 01:00−2시간이 "23:00"만 표시).
+- 복리 계산기: 음수 월납입 시 연금항은 무시하고 총 납입금에서만 차감해 이자가 부풀던 문제. 매월 납입을 복리 주기와 무관하게 월 단위로 일관 적용하고, 음수·비유한·범위 밖 입력(이율 0–100%, 기간 0–100년)은 안내 후 결과 숨김. 원금만일 때 결과는 기존 공식과 동일. "연평균 수익률"(납입금 포함 시 왜곡) → "실효 연이율".
+- 만 나이 계산기: 미래 생년월일에서 음수 나이 표시 → 안내 문구, 입력 `max`=오늘.
+- 퇴직금 계산기: 퇴사일 ≤ 입사일 또는 빈 날짜에서 음수·NaN 근속기간 노출 → 안내 후 결과 숨김, 음수 임금 0 처리.
+- D-Day·만 나이: `new Date("YYYY-MM-DD")`(UTC 파싱) 때문에 UTC 음수 시간대에서 기념일·별자리가 하루 밀리던 문제 → 로컬 날짜 파싱.
+- Unix 타임스탬프: 초/밀리초를 자릿수 대신 절댓값 크기(≥1e12 → ms)로 판정해 음수·선행 0 오판 해결, 해석 단위 표시, 범위 밖 값 거부, 복사 실패 시 성공 토스트 미표시, 클릭 복사 영역을 `button`으로.
+
+### Accessibility
+- 퍼센트 계산기 6개, 속도 계산기 시/분, 타이머 시/분/초, 시간 계산기 시/분 입력에 접근 가능한 이름 부여. 토글 버튼 `aria-pressed`, 오류 `role="alert"`.
+
+### Security
+- `/api/shorten`: short ID가 `byte % 62`로 앞 8글자에 편향되던 문제를 rejection sampling으로 제거, PK 충돌 시 최대 3회 재시도(다른 DB 오류는 재시도하지 않음).
+
+### Changed
+- 의존성: 미사용 `nanoid`, 불필요한 `@types/diff`(diff 8은 자체 타입 포함) 제거. `@vitejs/plugin-react`를 devDependencies로 이동(5.1.1 고정).
+
+### Added
+- `src/utils/date-calc.ts`, `src/utils/compound-interest.ts`(순수 함수), `tests/calculators.test.mjs`(16), API 하니스 3건(충돌 재시도·비충돌 오류·ID 분포), `npm run verify:browser:calculators`(UTC-8 브라우저 7건).
+- 검증: `verify:local` exit 0(test 123/123, api-harness 15/15, build 699 렌더), `verify:browser` 11/11, `verify:browser:calculators` 7/7, `verify-tool-reliability-browser` 32/32, `verify-audit-repairs` PASS, pageerrors 0.
+- 검증기 갱신: `verify-tool-reliability-browser`·`verify-audit-repairs`가 5acd0f8 재작성 전의 `random-choice-log`(noindex 초안, `체험모임-v1`)를 기대하던 것을 현재 계약(approved·index·sitemap 포함)으로 수정.
+
 ## [Unreleased] — 텍스트·문서 도구 글 30편 재작성 (2026-09-30, 로컬 전용·미배포)
 
 ### Added

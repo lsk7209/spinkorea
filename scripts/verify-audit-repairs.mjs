@@ -26,13 +26,15 @@ const yesno = read('/blog/yes-no-oracle-guide');
 includes(yesno, ['MAYBE', 'TRY AGAIN', '/blog/yes-no-reversible-choice']);
 assert.doesNotMatch(yesno, /6개월 후 더 행복|책임을 분산/);
 const record = read('/blog/random-choice-log');
-includes(record, ['가상 사례', '참가자 목록 버전', '제외 조건', '중복 당첨', '재추첨', '변경 이력', 'noindex,follow']);
+includes(record, ['이 기록의 분명한 한계', '결과를 남기는 현실적인 방법', '후보 링크와 결과 링크의 차이']);
+assert.ok(!record.includes('noindex'));
 assert.doesNotMatch(record, /참가자 목록와|목록을 먼저 확인하고 선택 기준/);
 const sitemap = fs.readFileSync('dist/sitemap.xml', 'utf8');
-assert.ok(!sitemap.includes('/blog/random-choice-log'));
+// Since 5acd0f8 this post is an approved editorial rewrite: indexable and in the sitemap.
+assert.ok(sitemap.includes('/blog/random-choice-log'));
 for (const file of ['src/data/content-plan.generated.json', 'src/data/generated-content-chunks/chunk-01.json']) {
   const article = JSON.parse(fs.readFileSync(file, 'utf8')).find(row => row.slug === 'random-choice-log');
-  assert.ok(article.body.includes('체험모임-v1')); assert.notEqual(article.editorialReview, 'approved');
+  assert.ok(article.body.includes('이 기록의 분명한 한계')); assert.equal(article.editorialReview, 'approved');
 }
 const text = read('/tools/text-counter');
 includes(text, ['UTF-16', 'UTF-8', '9바이트']);

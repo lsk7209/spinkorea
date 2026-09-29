@@ -97,6 +97,7 @@ export default function PercentageCalculator() {
               <span className="shrink-0">전체 값</span>
               <input
                 type="number"
+                aria-label="전체 값"
                 value={val1_B}
                 onChange={(e) => setVal1_B(e.target.value)}
                 placeholder="예: 10000"
@@ -107,6 +108,7 @@ export default function PercentageCalculator() {
             <div className="flex items-center gap-2 w-full md:w-auto">
               <input
                 type="number"
+                aria-label="비율(%)"
                 value={val1_A}
                 onChange={(e) => setVal1_A(e.target.value)}
                 placeholder="예: 20"
@@ -135,6 +137,7 @@ export default function PercentageCalculator() {
               <span className="shrink-0">전체 값</span>
               <input
                 type="number"
+                aria-label="전체 값"
                 value={val2_B}
                 onChange={(e) => setVal2_B(e.target.value)}
                 placeholder="예: 50"
@@ -145,6 +148,7 @@ export default function PercentageCalculator() {
             <div className="flex items-center gap-2 w-full md:w-auto">
               <input
                 type="number"
+                aria-label="일부 값"
                 value={val2_A}
                 onChange={(e) => setVal2_A(e.target.value)}
                 placeholder="예: 5"
@@ -174,6 +178,7 @@ export default function PercentageCalculator() {
               <span className="shrink-0">기존 값</span>
               <input
                 type="number"
+                aria-label="기존 값"
                 value={val3_A}
                 onChange={(e) => setVal3_A(e.target.value)}
                 placeholder="예: 1000"
@@ -185,6 +190,7 @@ export default function PercentageCalculator() {
               <span className="shrink-0">변경된 값</span>
               <input
                 type="number"
+                aria-label="변경된 값"
                 value={val3_B}
                 onChange={(e) => setVal3_B(e.target.value)}
                 placeholder="예: 1500"

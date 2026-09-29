@@ -10,6 +10,7 @@ import {
 } from "date-fns";
 import { ko } from "date-fns/locale";
 import ToolLayout from "@/components/ToolLayout";
+import { isValidBirthDate, parseLocalDate } from "@/utils/date-calc";
 
 export default function AgeCalculator() {
   const [birthDate, setBirthDate] = useState("");
@@ -17,8 +18,9 @@ export default function AgeCalculator() {
 
   const result = useMemo(() => {
     if (!birthDate) return null;
-    const birth = new Date(birthDate);
-    if (isNaN(birth.getTime())) return null;
+    const birth = parseLocalDate(birthDate);
+    // Future birth dates would produce negative ages; show guidance instead.
+    if (!birth || !isValidBirthDate(birth, today)) return null;
 
     // 1. Man Age (International Age)
     // Calculated by full years passed since birth
@@ -47,11 +49,13 @@ export default function AgeCalculator() {
 
     return { manAge, koreanAge, yearAge, nextBirthday, dDay };
   }, [birthDate]);
+  const showBirthDateError = birthDate !== "" && result === null;
 
   // Zodiac helpers
   const getZodiacSign = (dateStr: string) => {
     if (!dateStr) return "";
-    const date = new Date(dateStr);
+    const date = parseLocalDate(dateStr);
+    if (!date) return "";
     const month = date.getMonth() + 1;
     const day = date.getDate();
 
@@ -82,7 +86,9 @@ export default function AgeCalculator() {
 
   const getChineseZodiac = (dateStr: string) => {
     if (!dateStr) return "";
-    const year = getYear(new Date(dateStr));
+    const date = parseLocalDate(dateStr);
+    if (!date) return "";
+    const year = getYear(date);
     const animals = [
       "원숭이",
       "닭",
@@ -155,8 +161,16 @@ export default function AgeCalculator() {
             type="date"
             value={birthDate}
             onChange={(e) => setBirthDate(e.target.value)}
+            max={format(today, "yyyy-MM-dd")}
+            aria-describedby={showBirthDateError ? "age-calculator-error" : undefined}
+            aria-invalid={showBirthDateError || undefined}
             className="bg-black/30 border border-white/20 rounded-lg px-6 py-4 text-white text-xl text-center focus:outline-none focus:border-neon-primary w-full max-w-xs mx-auto block"
           />
+          {showBirthDateError && (
+            <p id="age-calculator-error" role="alert" className="text-red-400 text-sm mt-3">
+              오늘 이전의 올바른 생년월일을 입력해 주세요.
+            </p>
+          )}
         </div>
 
         {result && (

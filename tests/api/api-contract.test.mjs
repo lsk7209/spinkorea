@@ -7,25 +7,40 @@ import assert from 'node:assert/strict';
 
 const dbCalls = [];
 let nextRows = [];
+/** Errors thrown by successive execute() calls before normal results resume. */
+const queuedErrors = [];
 mock.module('@libsql/client', {
   namedExports: {
     createClient: () => ({
-      execute: async (query) => { dbCalls.push(query); return { rows: nextRows }; },
+      execute: async (query) => {
+        dbCalls.push(query);
+        const error = queuedErrors.shift();
+        if (error) throw error;
+        return { rows: nextRows };
+      },
     }),
   },
 });
 
+function constraintError() {
+  return Object.assign(new Error('SQLITE_CONSTRAINT_PRIMARYKEY: UNIQUE constraint failed: shortened_urls.id'), {
+    code: 'SQLITE_CONSTRAINT_PRIMARYKEY',
+  });
+}
+
 let shorten;
+let generateShortId;
 let stats;
 let redirect;
 before(async () => {
-  shorten = (await import('../../api/shorten.ts')).default;
+  ({ default: shorten, generateShortId } = await import('../../api/shorten.ts'));
   stats = (await import('../../api/stats.ts')).default;
   redirect = (await import('../../api/s/[id].ts')).default;
 });
 
 afterEach(() => {
   dbCalls.length = 0;
+  queuedErrors.length = 0;
   nextRows = [];
   delete process.env.TURSO_DATABASE_URL;
 });
@@ -99,6 +114,47 @@ describe('api/shorten', () => {
     assert.equal(res.statusCode, 200);
     assert.match(res.body.shortUrl, /^https:\/\/spinkorea\.kr\/s\/[A-Za-z0-9]{8}$/);
     assert.equal(dbCalls.length, 1);
+  });
+
+  it('retries with a new id when the generated id collides', async () => {
+    process.env.TURSO_DATABASE_URL = 'libsql://mock';
+    queuedErrors.push(constraintError());
+    const res = await call(shorten, { body: { originalUrl: VALID_SHARE } });
+    assert.equal(res.statusCode, 200);
+    assert.equal(dbCalls.length, 2);
+    assert.notEqual(dbCalls[0].args[0], dbCalls[1].args[0]);
+    assert.equal(res.body.shortId, dbCalls[1].args[0]);
+  });
+
+  it('gives up after three collisions and does not retry other DB errors', async () => {
+    process.env.TURSO_DATABASE_URL = 'libsql://mock';
+    queuedErrors.push(constraintError(), constraintError(), constraintError());
+    const exhausted = await call(shorten, { body: { originalUrl: VALID_SHARE } });
+    assert.equal(exhausted.statusCode, 500);
+    assert.equal(dbCalls.length, 3);
+
+    dbCalls.length = 0;
+    queuedErrors.length = 0;
+    queuedErrors.push(new Error('network down'));
+    const failed = await call(shorten, { body: { originalUrl: VALID_SHARE } });
+    assert.equal(failed.statusCode, 500);
+    assert.equal(dbCalls.length, 1);
+  });
+
+  it('generates 8-char ids from the full alphabet without modulo bias', () => {
+    const counts = new Map();
+    const samples = 4000;
+    for (let i = 0; i < samples; i++) {
+      const id = generateShortId();
+      assert.match(id, /^[A-Za-z0-9]{8}$/);
+      for (const ch of id) counts.set(ch, (counts.get(ch) ?? 0) + 1);
+    }
+    assert.equal(counts.size, 62);
+    // Expected ≈ 516 per char; biased `byte % 62` would push a..h to ~1.2x. Generous bounds avoid flakiness.
+    const expected = (samples * 8) / 62;
+    for (const count of counts.values()) {
+      assert.ok(count > expected * 0.75 && count < expected * 1.25, `count ${count}`);
+    }
   });
 });
 

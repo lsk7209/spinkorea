@@ -1,3 +1,16 @@
+# Current handoff — 2026-09-30 08:50 KST — calculator edge cases LOCAL DONE
+
+- Goal: review project and apply improvements. Branch fix/calculator-edge-cases from main 2706218; all changes uncommitted/unpushed.
+- Done: Time/Compound/Age/Severance/DDay/Unix fixes, a11y labels (Percentage/Speed/Timer/Time), /api/shorten unbiased ID + collision retry, removed nanoid/@types/diff, plugin-react → devDeps. Details: CHANGELOG top entry.
+- Evidence: verify:local exit0 (test 123/123, api-harness 15/15, build 699), verify:browser 11/11, verify:browser:calculators 7/7 (timezone America/Los_Angeles), pageerrors 0. npm audit --omit=dev 0.
+- Side effects: build-refreshed public/{rss,sitemap}.xml and post-metadata caches were restored to HEAD (out of scope). Logs in output/.
+- Verifiers updated: tool-reliability-browser 32/32 and verify-audit-repairs PASS after aligning random-choice-log expectations with 5acd0f8 (approved/indexable).
+- Not done (needs approval/scope): commit/PR/deploy; API rate limit; major upgrades (vite 8, TS 7, tailwind 4, date-fns 4, lucide 1). Large content chunks (chunk-01 613KB) worth splitting later.
+- Next step: review diff → commit on branch → PR.
+
+---
+
+
 # Release handoff — 2026-09-29 19:50 KST — SPK2 batch RELEASED
 
 - Runtime: PR #3 (e7478c4) merged to main as 8787a60; Production deployed via Scheduled publish workflow_dispatch run 36556792808 (notify=false, no GSC/IndexNow). Guard verified /deployment-status.json commitSha=8787a60. Current production dpl_2Tin1fF9dcVtCcc12f5iUHD7FKKw.

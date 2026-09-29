@@ -111,7 +111,7 @@ try {
   });
   for (const [route, required] of [
     ['/blog/sleep-optimization', '390분'], ['/blog/password-strength', '해독 시간 표에 빠져 있던 공격 조건'],
-    ['/blog/yes-no-oracle-guide', '가상의 영화 선택 기록'], ['/blog/random-choice-log', '체험모임-v1'],
+    ['/blog/yes-no-oracle-guide', '가상의 영화 선택 기록'], ['/blog/random-choice-log', '이 기록의 분명한 한계'],
     ['/privacy', '이전 방문 기록'], ['/contact', 'igeonu377@gmail.com'],
   ]) await test(`${route} rendered corrected guidance`, async () => {
     await visit(route); await page.getByText(required, { exact: false }).first().waitFor();
@@ -119,7 +119,8 @@ try {
     if (route.startsWith('/blog/')) {
       const entry = metadata.find(row => route === '/blog/' + row.slug);
       assert.equal(await page.locator('h1').innerText(), entry.title);
-      assert.equal((await page.locator('meta[name=robots]').getAttribute('content')).includes('noindex'), route === '/blog/random-choice-log');
+      // All four posts are indexable; random-choice-log became approved editorial in 5acd0f8.
+      assert.equal((await page.locator('meta[name=robots]').getAttribute('content')).includes('noindex'), false);
     } else if (route === '/privacy') {
       for (const value of [guidance.privacy.thirdParty, guidance.privacy.inputProcessing, guidance.privacy.controls, guidance.privacy.rightsContact]) {
         await page.getByText(value, { exact: true }).waitFor();

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Calendar, Clock, Heart, Flag } from "lucide-react";
-import { format, differenceInCalendarDays, addDays, isSameDay } from "date-fns";
+import { format, addDays } from "date-fns";
 import { ko } from "date-fns/locale";
 import ToolLayout from "@/components/ToolLayout";
+import { calendarDaysBetween, parseLocalDate } from "@/utils/date-calc";
 
 export default function DDayCounter() {
   const [targetDate, setTargetDate] = useState(
@@ -14,13 +15,10 @@ export default function DDayCounter() {
 
   useEffect(() => {
     if (!targetDate) return;
+    const target = parseLocalDate(targetDate);
+    if (!target) return;
 
-    const today = new Date();
-    const target = new Date(targetDate);
-    today.setHours(0, 0, 0, 0); // Normalize today
-    target.setHours(0, 0, 0, 0); // Normalize target
-
-    const daysDiff = differenceInCalendarDays(target, today);
+    const daysDiff = calendarDaysBetween(new Date(), target);
     setDiff(daysDiff);
 
     if (daysDiff === 0) {
@@ -35,7 +33,8 @@ export default function DDayCounter() {
   // Predefined anniversaries (100 days, 1 year, etc.) based on target date
   const getAnniversaries = (baseDate: string) => {
     if (!baseDate) return [];
-    const start = new Date(baseDate);
+    const start = parseLocalDate(baseDate);
+    if (!start) return [];
     const list = [
       { label: "100일", days: 100 },
       { label: "200일", days: 200 },
