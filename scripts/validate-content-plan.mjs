@@ -118,6 +118,11 @@ function tokenizeTitle(title) {
   return new Set((title.match(/[\p{Letter}\p{Number}]+/gu) ?? []).filter((token) => token.length > 1 && !stopWords.has(token)));
 }
 
+/** Existing generated posts rewritten and approved in place (slug/date/schedule unchanged). */
+function isRevisedEditorial(article) {
+  return !isReviewedEditorial(article) && article.editorialReview === "approved";
+}
+
 function isReviewedEditorial(article) {
   return article.id.startsWith("editorial-") || article.id.startsWith("october-editorial-");
 }
@@ -219,7 +224,7 @@ for (const [index, article] of plan.entries()) {
     assert(diffHours === expectedHours, `publish interval mismatch: ${article.slug}`);
   }
 
-  if (isReviewedEditorial(article)) {
+  if (isReviewedEditorial(article) || isRevisedEditorial(article)) {
     const body = article.body ?? "";
     const plainBody = body.replace(/<[^>]+>/g, "");
     const h2Count = (body.match(/<h2>/g) ?? []).length;
@@ -228,7 +233,14 @@ for (const [index, article] of plan.entries()) {
     assert(h2Count >= 6, `editorial heading depth too low: ${article.slug}`);
     assert(linkCount === 3, `editorial internal link count mismatch: ${article.slug}`);
     assert(!/<script|\son\w+=|javascript:/i.test(body), `unsafe editorial HTML: ${article.slug}`);
-    assert(article.publishAt >= "2026-09-08T00:00:00+09:00", `editorial date too early: ${article.slug}`);
+    if (isRevisedEditorial(article)) {
+      const externalLinks = (body.match(/<a\s+href=["']https:\/\//g) ?? []).length;
+      assert(externalLinks >= 3 && externalLinks <= 5, `revised editorial source link count: ${article.slug}`);
+      assert(Array.isArray(article.research?.sources) && article.research.sources.length >= 3, `revised editorial research sources: ${article.slug}`);
+      assert(article.revisedAt, `revised editorial needs revisedAt: ${article.slug}`);
+    } else {
+      assert(article.publishAt >= "2026-09-08T00:00:00+09:00", `editorial date too early: ${article.slug}`);
+    }
   }
 
   allTitles.set(normalizedTitle, article.title);
@@ -246,16 +258,17 @@ for (const [index, article] of approvedEditorial.entries()) {
   assert(article.publishAt === expectedKst, `editorial daily slot mismatch: ${article.slug}`);
 }
 let maximumEditorialSimilarity = 0;
-for (let leftIndex = 0; leftIndex < approvedEditorial.length; leftIndex += 1) {
-  for (let rightIndex = leftIndex + 1; rightIndex < approvedEditorial.length; rightIndex += 1) {
+const allApprovedWithBody = plan.filter((article) => article.editorialReview === "approved" && article.body);
+for (let leftIndex = 0; leftIndex < allApprovedWithBody.length; leftIndex += 1) {
+  for (let rightIndex = leftIndex + 1; rightIndex < allApprovedWithBody.length; rightIndex += 1) {
     const similarity = jaccard(
-      bodyTokenSet(approvedEditorial[leftIndex].body ?? ""),
-      bodyTokenSet(approvedEditorial[rightIndex].body ?? ""),
+      bodyTokenSet(allApprovedWithBody[leftIndex].body ?? ""),
+      bodyTokenSet(allApprovedWithBody[rightIndex].body ?? ""),
     );
     maximumEditorialSimilarity = Math.max(maximumEditorialSimilarity, similarity);
     assert(
       similarity < 0.72,
-      `approved editorial body similarity too high: ${approvedEditorial[leftIndex].slug} / ${approvedEditorial[rightIndex].slug} ${similarity.toFixed(3)}`,
+      `approved editorial body similarity too high: ${allApprovedWithBody[leftIndex].slug} / ${allApprovedWithBody[rightIndex].slug} ${similarity.toFixed(3)}`,
     );
   }
 }

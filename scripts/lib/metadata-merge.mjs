@@ -12,7 +12,16 @@
 export const PRESERVED_FIELDS = Object.freeze(["slug", "date", "publishAt", "source"]);
 
 /** Fields the current content source owns and may update. */
-export const EDITABLE_FIELDS = Object.freeze(["title", "description", "tags", "thumbnail"]);
+export const EDITABLE_FIELDS = Object.freeze([
+  "title", "description", "tags", "thumbnail", "internalLinks", "primarySourceName", "primarySourceUrl",
+]);
+
+/**
+ * Review promotion is the only allowed `source` change: a generated post that
+ * the content plan now marks as editorially approved becomes "editorial".
+ * Anything else (demotion, curated/legacy changes) keeps the cached source.
+ */
+const ALLOWED_SOURCE_TRANSITIONS = new Set(["generated->editorial"]);
 
 function isSameValue(left, right) {
   return JSON.stringify(left ?? null) === JSON.stringify(right ?? null);
@@ -22,6 +31,8 @@ function mergeRecord(existing, fresh) {
   const changedFields = EDITABLE_FIELDS.filter(
     (field) => fresh[field] !== undefined && !isSameValue(existing[field], fresh[field]),
   );
+  const promotes = ALLOWED_SOURCE_TRANSITIONS.has(`${existing.source}->${fresh.source}`);
+  if (promotes) changedFields.push("source");
   if (changedFields.length === 0) {
     return { record: existing, changedFields };
   }

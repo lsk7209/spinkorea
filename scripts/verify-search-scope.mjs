@@ -6,7 +6,11 @@ const sitemap = fs.readFileSync(path.join(root, "dist", "sitemap.xml"), "utf8");
 const publicSitemap = fs.readFileSync(path.join(root, "public", "sitemap.xml"), "utf8");
 const rss = fs.readFileSync(path.join(root, "dist", "rss.xml"), "utf8");
 const llms = fs.readFileSync(path.join(root, "dist", "llms.txt"), "utf8");
-const generatedRoute = fs.readFileSync(path.join(root, "dist", "blog", "team-rotation-fairness", "index.html"), "utf8");
+// Pick a published post that is still "generated" (reviewed rewrites become editorial).
+const metadataForScope = JSON.parse(fs.readFileSync(path.join(root, "src", "data", "post-metadata.generated.json"), "utf8"));
+const generatedSample = metadataForScope.find((post) => post.source === "generated" && new Date(post.publishAt ?? post.date) <= new Date());
+if (!generatedSample) throw new Error("No published generated post to verify noindex.");
+const generatedRoute = fs.readFileSync(path.join(root, "dist", "blog", generatedSample.slug, "index.html"), "utf8");
 const curatedRoute = fs.readFileSync(path.join(root, "dist", "blog", "overcome-decision-fatigue", "index.html"), "utf8");
 const legacyRoute = fs.readFileSync(path.join(root, "dist", "blog", "fuel-economy-guide", "index.html"), "utf8");
 const generateAssetsSource = fs.readFileSync(path.join(root, "scripts", "generate-assets.mjs"), "utf8");
@@ -42,7 +46,7 @@ const checks = [
   ["public and dist sitemap URL metadata match", JSON.stringify(publicSitemapEntries) === JSON.stringify(sitemapEntries)],
   ["sitemap URLs are unique canonical HTTPS URLs", new Set(sitemapLocs).size === sitemapLocs.length && sitemapLocs.every((loc) => loc.startsWith("https://spinkorea.kr/"))],
   ["sitemap lastmod values use YYYY-MM-DD dates", sitemapEntries.every((entry) => /^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod) && !Number.isNaN(Date.parse(`${entry.lastmod}T00:00:00Z`)))],
-  ["sitemap excludes generated posts", !sitemap.includes("/blog/team-rotation-fairness")],
+  ["sitemap excludes generated posts", !sitemap.includes(`/blog/${generatedSample.slug}<`)],
   ["sitemap excludes legacy post", !sitemap.includes("/blog/fuel-economy-guide")],
   ["RSS excludes legacy post", !rss.includes("/blog/fuel-economy-guide")],
   ["llms feed excludes legacy post", !llms.includes("/blog/fuel-economy-guide")],
