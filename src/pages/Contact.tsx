@@ -63,9 +63,18 @@ export default function Contact() {
             },
             {
               icon: <Mail className="text-cyan-700" size={24} />,
-              title: "비공개 문의 경로 미설정",
+              title: "이메일 — 개인정보·비공개 문의",
               content: (
-                <p className="text-sm leading-6 text-slate-500">{guidance.contact.publicIssueCaution}</p>
+                <>
+                  <a
+                    href={`mailto:${guidance.contact.email}`}
+                    className="break-all text-sm font-semibold text-cyan-700 hover:underline"
+                  >
+                    {guidance.contact.email}
+                  </a>
+                  <p className="mt-3 text-sm leading-6 text-slate-500">{guidance.contact.emailCaution}</p>
+                  <p className="mt-3 text-sm leading-6 text-slate-500">{guidance.contact.publicIssueCaution}</p>
+                </>
               ),
             },
             {
