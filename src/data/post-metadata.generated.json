@@ -16710,20 +16710,21 @@
   {
     "slug": "reader-question-bank",
     "title": "독자 질문 모음 발행 전 검토, 순서",
-    "description": "독자 질문 모음은 필요한 순간부터 가독성과 검토 순서를 남기는 방법까지 안내합니다.",
+    "description": "흩어진 독자 질문 모음을 FAQ와 새 글 주제로 정리하는 수집·분류 순서와, 중복·길이를 사이트 도구로 점검하는 방법을 정리했다.",
     "date": "2026-05-26",
     "publishAt": "2026-05-26T09:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "FAQ",
+      "질문 수집",
+      "콘텐츠 기획",
+      "문서 작성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1503551723145-6c040742065b?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "텍스트·문서 도구",
     "contentType": "FAQ",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "GitHub Flavored Markdown Spec",
+    "primarySourceUrl": "https://github.github.com/gfm/",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -16738,25 +16739,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "content-refresh-note",
-    "title": "글 업데이트 메모 사례별 정리, 문서 기준 중심",
-    "description": "글 업데이트 메모 상황에서 표현 정리와 공유 전 확인은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "글 업데이트 메모 사례별 정리, 문서 기준",
+    "description": "글 업데이트 메모에 수정 이유를 남기는 형식과, 변경 전후 비교·길이 점검을 사이트 도구로 처리하는 방법을 사례별로 정리했다.",
     "date": "2026-05-26",
     "publishAt": "2026-05-26T04:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "콘텐츠 관리",
+      "업데이트 메모",
+      "변경 이력",
+      "문서 작성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "텍스트·문서 도구",
     "contentType": "Comparison",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "MDN: String.length",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -16771,25 +16774,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "help-page-structure",
-    "title": "도움말 페이지 구조 운영 체크, 표현 정리 반영",
-    "description": "도움말 페이지 구조를 준비할 때 놓치기 쉬운 검토 순서, 표현 정리, 공유 전 확인 항목을 짧게 점검합니다.",
+    "title": "도움말 페이지 구조 운영 체크, 표현 정리",
+    "description": "도움말 페이지 구조를 사용자가 답을 빨리 찾도록 설계하는 순서와, 제목·표·표기를 사이트 도구로 점검하는 방법을 정리했다.",
     "date": "2026-05-25",
     "publishAt": "2026-05-25T23:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "도움말",
+      "정보 구조",
+      "문서 작성",
+      "가독성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "텍스트·문서 도구",
     "contentType": "Explainer",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "CommonMark Spec",
+    "primarySourceUrl": "https://spec.commonmark.org/0.31.2/",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -16804,25 +16809,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "terms-summary-copy",
     "title": "약관 요약 문장 검토 순서, 가독성 활용",
-    "description": "약관 요약 문장은 가독성, 검토 순서, 표현 정리를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "description": "긴 약관을 이용자가 이해하는 요약 문장으로 다듬는 검토 순서와, 길이·표·표기를 사이트 도구로 점검하는 방법을 정리했다.",
     "date": "2026-05-25",
     "publishAt": "2026-05-25T18:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "약관",
+      "요약 문장",
+      "가독성",
+      "문서 검토"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1527430253228-e93688616381?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "텍스트·문서 도구",
     "contentType": "Checklist",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "국가법령정보센터: 전자상거래 등에서의 소비자보호에 관한 법률",
+    "primarySourceUrl": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%A0%84%EC%9E%90%EC%83%81%EA%B1%B0%EB%9E%98%EB%93%B1%EC%97%90%EC%84%9C%EC%9D%98%EC%86%8C%EB%B9%84%EC%9E%90%EB%B3%B4%ED%98%B8%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -16837,25 +16844,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "privacy-copy-check",
     "title": "개인정보 안내문 빠른 정리, 표현 정리까지",
-    "description": "개인정보 안내문을 글, 도구, 업무 흐름에 적용할 때 필요한 가독성과 표현 정리를 정리했습니다.",
+    "description": "개인정보 안내문에서 수집 목적과 보관 기간을 명확히 드러내는 문장 순서와, 길이·표기를 도구로 점검하는 실무 방법을 정리했다.",
     "date": "2026-05-25",
     "publishAt": "2026-05-25T13:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "개인정보",
+      "안내문",
+      "문서 작성",
+      "가독성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "텍스트·문서 도구",
     "contentType": "How-to",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "개인정보 보호위원회",
+    "primarySourceUrl": "https://www.pipc.go.kr/",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -16870,25 +16879,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "newsletter-preview",
-    "title": "뉴스레터 미리보기 선택법, 공유 전 확인과 문서 기준",
-    "description": "뉴스레터 미리보기는 애매할 때 공유 전 확인 항목을 먼저 보고 가독성까지 확인하는 기준을 제시합니다.",
+    "title": "뉴스레터 미리보기 선택법, 문서 기준부터",
+    "description": "뉴스레터 미리보기 문구를 열 이유가 보이도록 다듬는 순서와, 길이·바이트·중복 단어를 도구로 점검하는 방법을 정리했다.",
     "date": "2026-05-25",
     "publishAt": "2026-05-25T08:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "뉴스레터",
+      "미리보기 문구",
+      "글자수",
+      "가독성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "텍스트·문서 도구",
     "contentType": "FAQ",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -16903,205 +16914,218 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "before-after-copy",
     "title": "전후 비교 문장 개선 포인트, 문서 기준",
-    "description": "전후 비교 문장 관련 결정을 반복하지 않도록 공유 전 확인, 문서 기준, 가독성을 한 번에 비교합니다.",
+    "description": "개선 효과를 추상적으로 두지 않고 전후 문장을 구체적으로 대비시키는 방법과, 차이를 도구로 확인하는 순서를 안내합니다.",
     "date": "2026-05-25",
     "publishAt": "2026-05-25T03:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "사례",
+      "비교",
+      "표현 정리",
+      "가독성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1550399105-c4db5fb85c18?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "텍스트·문서 도구",
     "contentType": "Comparison",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
+        "label": "diff 비교",
+        "path": "/tools/diff-checker"
       },
       {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "question-heading-rule",
     "title": "질문형 소제목 초보 흐름, 표현 정리 중심",
-    "description": "질문형 소제목을 검색한 독자가 바로 따라 할 수 있도록 검토 순서부터 문서 기준까지 압축했습니다.",
+    "description": "소제목만 봐도 답을 예측할 수 있게 질문형 제목을 다듬는 원칙과, 길이·서식을 도구로 확인하는 순서를 안내합니다.",
     "date": "2026-05-24",
     "publishAt": "2026-05-24T22:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "소제목",
+      "FAQ",
+      "표현 정리",
+      "구조"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1468436139062-f60a71c5c892?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "텍스트·문서 도구",
     "contentType": "Explainer",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
-      },
-      {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
+      },
+      {
+        "label": "단어 빈도",
+        "path": "/tools/word-frequency"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "mobile-reading-break",
-    "title": "모바일 문단 길이 적용 순서, 공유 전 확인",
-    "description": "모바일 문단 길이는 필요한 순간부터 표현 정리와 공유 전 확인 항목을 남기는 방법까지 안내합니다.",
+    "title": "모바일 문단 길이 적용 순서, 공유 전 점검",
+    "description": "스마트폰에서 한 문단이 화면을 가득 채우지 않도록 문단을 나누는 기준과, 길이를 도구로 확인하는 순서를 안내합니다.",
     "date": "2026-05-24",
     "publishAt": "2026-05-24T17:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "모바일",
+      "가독성",
+      "문단",
+      "레이아웃"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "텍스트·문서 도구",
     "contentType": "Checklist",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
-      },
-      {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
+      },
+      {
+        "label": "단어 빈도",
+        "path": "/tools/word-frequency"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "document-version-note",
     "title": "문서 버전 기록 실수 방지, 가독성 먼저",
-    "description": "문서 버전 기록 상황에서 문서 기준과 가독성은 헷갈릴 때 보는 실무형 정리입니다.",
+    "description": "팀 문서의 수정 이력을 사람이 읽을 수 있게 남기는 형식과, 변경 위치를 도구로 대조하는 방법을 정리합니다.",
     "date": "2026-05-24",
     "publishAt": "2026-05-24T12:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "버전 기록",
+      "문서 관리",
+      "가독성",
+      "협업"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "텍스트·문서 도구",
     "contentType": "How-to",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
+        "label": "diff 비교",
+        "path": "/tools/diff-checker"
       },
       {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "summary-box-copy",
     "title": "요약 박스 구성 실전 흐름, 가독성부터",
-    "description": "요약 박스 구성을 준비할 때 놓치기 쉬운 공유 전 확인, 문서 기준, 가독성을 짧게 점검합니다.",
+    "description": "긴 글 앞에 놓는 요약 박스에 무엇을 담고 무엇을 빼야 하는지, 길이와 서식을 도구로 확인하며 정하는 순서를 안내합니다.",
     "date": "2026-05-24",
     "publishAt": "2026-05-24T07:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "요약",
+      "도입부",
+      "가독성",
+      "구조"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "텍스트·문서 도구",
     "contentType": "FAQ",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
-      },
-      {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "checklist-wording",
-    "title": "체크리스트 문장 상황별 표, 공유 전 확인",
-    "description": "체크리스트 문장은 표현 정리, 공유 전 확인, 문서 기준을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "체크리스트 문장 상황별 표, 공유 전 점검",
+    "description": "행동으로 옮기기 힘든 체크리스트 문장을 동사 중심으로 고치고, 길이와 중복 단어를 도구로 확인하는 방법을 정리합니다.",
     "date": "2026-05-24",
     "publishAt": "2026-05-24T02:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "체크리스트",
+      "표현 정리",
+      "가독성",
+      "실행형 글"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "텍스트·문서 도구",
     "contentType": "Comparison",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
+        "label": "단어 빈도",
+        "path": "/tools/word-frequency"
       },
       {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "calculator-vs-excel",
@@ -17119,21 +17143,22 @@
   },
   {
     "slug": "landing-copy-order",
-    "title": "랜딩 문구 순서 판단법, 표현 정리 중심",
-    "description": "랜딩 문구 순서를 글, 도구, 업무 흐름에 적용할 때 필요한 표현 정리와 문서 기준을 정리했습니다.",
+    "title": "랜딩 문구 순서, 독자 문제부터 놓는 법",
+    "description": "첫 화면에서 기능 설명이 앞서고 독자 문제가 늦게 나올 때, 랜딩 문구 순서를 문제 중심으로 바꾸고 길이를 도구로 점검하는 방법입니다.",
     "date": "2026-05-23",
     "publishAt": "2026-05-23T21:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "랜딩",
+      "카피 순서",
+      "전환",
+      "첫 화면"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "텍스트·문서 도구",
     "contentType": "Explainer",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -17148,25 +17173,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "social-share-copy",
-    "title": "공유 문구 작성 운영법, 가독성 남기기",
-    "description": "공유 문구 작성은 애매할 때 가독성을 먼저 보고 표현 정리까지 확인하는 기준을 제시합니다.",
+    "title": "공유 문구 작성으로 클릭 이유 드러내기",
+    "description": "커뮤니티에 글을 올릴 때 공유 문구 작성이 밋밋해 클릭 이유가 보이지 않는다면, 길이와 첫 문장을 도구로 점검해 다듬는 방법입니다.",
     "date": "2026-05-23",
     "publishAt": "2026-05-23T16:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "공유 문구",
+      "소셜",
+      "클릭 유도",
+      "요약"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "텍스트·문서 도구",
     "contentType": "Checklist",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "MDN: Blob",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Blob",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -17181,25 +17208,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "quote-cleanup-rule",
-    "title": "인용문 정리, 검토 순서 전에 볼 점",
-    "description": "인용문 정리 관련 결정을 반복하지 않도록 가독성, 검토 순서, 표현 정리를 한 번에 비교합니다.",
+    "title": "인용문 정리로 출처와 원문 구분하는 법",
+    "description": "자료 기반 글에서 인용문 정리가 안 되어 원문과 내 해석이 뒤섞일 때, 표시 규칙을 세우고 도구로 길이·표기를 점검하는 방법입니다.",
     "date": "2026-05-23",
     "publishAt": "2026-05-23T11:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "인용",
+      "출처 표기",
+      "자료 정리",
+      "편집"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "텍스트·문서 도구",
     "contentType": "How-to",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "CommonMark Spec",
+    "primarySourceUrl": "https://spec.commonmark.org/0.31.2/",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -17214,25 +17243,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "tone-of-voice-note",
-    "title": "문체 기준표 FAQ: 문서 기준 답변",
-    "description": "문체 기준표를 검색한 독자가 바로 따라 할 수 있도록 공유 전 확인부터 검토 순서까지 압축했습니다.",
+    "title": "문체 기준표로 말투 흔들림 잡는 방법",
+    "description": "글마다 말투가 바뀌어 한 사이트인데 딴 사람이 쓴 것 같을 때, 문체 기준표를 만들고 도구로 표기·길이를 맞춰 일관성을 지키는 방법입니다.",
     "date": "2026-05-23",
     "publishAt": "2026-05-23T06:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "문체",
+      "톤앤매너",
+      "일관성",
+      "편집 기준"
     ],
     "thumbnail": "https://picsum.photos/seed/tone-of-voice-note/1600/900",
     "qualityScore": 92,
     "category": "텍스트·문서 도구",
     "contentType": "FAQ",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -17247,25 +17278,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "bullet-list-edit",
-    "title": "목록 문장 다듬기 비교법, 표현 정리와 가독성",
-    "description": "목록 문장 다듬기는 필요한 순간부터 문서 기준과 가독성을 남기는 방법까지 안내합니다.",
+    "title": "목록 문장 다듬기, 길이와 문체 비교로 고르기",
+    "description": "체크리스트 항목마다 길이와 말투가 제각각일 때, 목록 문장 다듬기 기준을 세우고 글자수·미리보기로 나란히 비교해 통일하는 방법입니다.",
     "date": "2026-05-23",
     "publishAt": "2026-05-23T01:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "목록 정리",
+      "체크리스트",
+      "문체 통일",
+      "가독성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "텍스트·문서 도구",
     "contentType": "Comparison",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "GitHub Flavored Markdown Spec",
+    "primarySourceUrl": "https://github.github.com/gfm/",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -17280,7 +17313,8 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "digital-nomad-tools",
@@ -17298,21 +17332,22 @@
   },
   {
     "slug": "meta-description-draft",
-    "title": "메타 설명 초안 실행 순서, 공유 전 확인까지",
-    "description": "메타 설명 초안 상황에서 검토 순서와 표현 정리는 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "메타 설명 초안, 발행 전 길이 맞추는 순서",
+    "description": "메타 설명 초안이 본문과 따로 놀지 않도록 길이·핵심어·요약 순서를 잡고 글자수 도구로 잘림을 미리 점검하는 방법을 정리했습니다.",
     "date": "2026-05-22",
     "publishAt": "2026-05-22T20:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "메타 설명",
+      "SEO 문구",
+      "요약",
+      "길이 점검"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "텍스트·문서 도구",
     "contentType": "Explainer",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "MDN: String.length",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -17327,25 +17362,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "headline-trim-rule",
-    "title": "긴 제목 줄이기 체크리스트: 검토 순서 핵심",
-    "description": "긴 제목 줄이기를 준비할 때 놓치기 쉬운 가독성, 검토 순서, 표현 정리를 짧게 점검합니다.",
+    "title": "긴 제목 줄이기 체크리스트와 검토 순서",
+    "description": "검색 결과에서 제목이 잘릴 때, 긴 제목 줄이기 기준을 글자수와 바이트로 확인하며 다듬는 순서를 정리했습니다.",
     "date": "2026-05-22",
     "publishAt": "2026-05-22T15:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "제목",
+      "SEO",
+      "글자수",
+      "검토 순서"
     ],
     "thumbnail": "https://picsum.photos/seed/headline-trim-rule/1600/900",
     "qualityScore": 91,
     "category": "텍스트·문서 도구",
     "contentType": "Checklist",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "MDN: String.length",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -17356,77 +17393,82 @@
         "path": "/tools/case-converter"
       },
       {
-        "label": "마크다운 미리보기",
-        "path": "/tools/markdown-previewer"
+        "label": "차이 비교",
+        "path": "/tools/diff-checker"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "case-style-guide",
-    "title": "표기 스타일 통일, 문서 기준 먼저 보기",
-    "description": "표기 스타일 통일은 문서 기준, 가독성, 검토 순서를 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "표기 스타일 통일, 문서 기준부터 잡기",
+    "description": "같은 단어를 여러 방식으로 쓸 때, 표기 스타일 통일 기준을 정하고 영어 표기와 반복 단어를 도구로 점검하는 방법입니다.",
     "date": "2026-05-22",
     "publishAt": "2026-05-22T10:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "표기 통일",
+      "스타일 가이드",
+      "대소문자",
+      "브랜드 문서"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1519791883288-dc8bd696e667?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "텍스트·문서 도구",
     "contentType": "How-to",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "MDN: String.prototype.toLowerCase()",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase",
     "internalLinks": [
-      {
-        "label": "글자수 세기",
-        "path": "/tools/text-counter"
-      },
       {
         "label": "대소문자 변환",
         "path": "/tools/case-converter"
       },
       {
-        "label": "마크다운 미리보기",
-        "path": "/tools/markdown-previewer"
+        "label": "단어 빈도",
+        "path": "/tools/word-frequency"
+      },
+      {
+        "label": "차이 비교",
+        "path": "/tools/diff-checker"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "markdown-table-check",
-    "title": "마크다운 표 작성 발행 전 검토, 순서",
-    "description": "마크다운 표 작성을 글, 도구, 업무 흐름에 적용할 때 필요한 문서 기준과 검토 순서를 정리했습니다.",
+    "title": "마크다운 표 작성 후 발행 전 검토 순서",
+    "description": "표가 깨져 모바일에서 읽기 어려울 때, 마크다운 표 작성 문법을 점검하고 미리보기로 확인하는 순서를 정리했습니다.",
     "date": "2026-05-22",
     "publishAt": "2026-05-22T05:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "마크다운",
+      "표",
+      "GFM",
+      "미리보기"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1503551723145-6c040742065b?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 94,
     "category": "텍스트·문서 도구",
     "contentType": "FAQ",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "GitHub Flavored Markdown Spec",
+    "primarySourceUrl": "https://github.github.com/gfm/",
     "internalLinks": [
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      },
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
-      },
-      {
-        "label": "마크다운 미리보기",
-        "path": "/tools/markdown-previewer"
+        "label": "차이 비교",
+        "path": "/tools/diff-checker"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "text-formatting-situations",
@@ -17444,168 +17486,178 @@
   },
   {
     "slug": "copy-before-share",
-    "title": "공유 전 문서 검토 사례별 정리, 가독성 중심",
-    "description": "공유 전 문서 검토는 애매할 때 표현 정리를 먼저 보고 문서 기준까지 확인하는 기준을 제시합니다.",
+    "title": "공유 전 문서 검토, 구조부터 보는 순서",
+    "description": "구조 오류가 오탈자보다 크게 보일 때, 공유 전 문서 검토를 구조·길이·형식 순으로 진행하는 방법을 정리했습니다.",
     "date": "2026-05-22",
     "publishAt": "2026-05-22T00:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "문서 검토",
+      "구조",
+      "가독성",
+      "공유 전 확인"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "텍스트·문서 도구",
     "contentType": "Comparison",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "MDN: String.length",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
+        "label": "차이 비교",
+        "path": "/tools/diff-checker"
       },
       {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "plain-language-rule",
-    "title": "쉬운 문장 기준 운영 체크, 표현 정리 반영",
-    "description": "쉬운 문장 기준 관련 결정을 반복하지 않도록 표현 정리, 공유 전 확인, 문서 기준을 한 번에 비교합니다.",
+    "title": "쉬운 문장 기준 만들고 도구로 점검하기",
+    "description": "전문용어가 많아 독자가 멈출 때, 쉬운 문장 기준을 만들고 문장 길이와 반복 단어를 도구로 점검하는 방법입니다.",
     "date": "2026-05-21",
     "publishAt": "2026-05-21T19:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "쉬운 문장",
+      "가독성",
+      "초보자 가이드",
+      "단어 빈도"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "텍스트·문서 도구",
     "contentType": "Explainer",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
+        "label": "단어 빈도",
+        "path": "/tools/word-frequency"
       },
       {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "blog-intro-hook",
-    "title": "블로그 첫 문단 검토 순서, 가독성 활용",
-    "description": "블로그 첫 문단을 검색한 독자가 바로 따라 할 수 있도록 가독성부터 공유 전 확인까지 압축했습니다.",
+    "title": "블로그 첫 문단 검토 순서와 길이 기준",
+    "description": "도입부가 길어 이탈이 늘어날 때, 첫 문단의 글자수와 문장 길이를 도구로 확인하며 다듬는 순서를 정리했습니다.",
     "date": "2026-05-21",
     "publishAt": "2026-05-21T14:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "도입부",
+      "가독성",
+      "글자수",
+      "블로그 글쓰기"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1527430253228-e93688616381?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "텍스트·문서 도구",
     "contentType": "Checklist",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
-      },
-      {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
+      },
+      {
+        "label": "대소문자 변환",
+        "path": "/tools/case-converter"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "faq-answer-length",
-    "title": "FAQ 답변 길이 빠른 정리, 표현 정리까지",
-    "description": "FAQ 답변 길이는 필요한 순간부터 검토 순서와 표현 정리를 남기는 방법까지 안내합니다.",
+    "title": "FAQ 답변 길이, 핵심부터 짧게 쓰는 법",
+    "description": "고객 안내 문서를 만들 때 FAQ 답변 길이를 조절해 핵심을 앞에 두고, 길이와 중복을 도구로 점검하는 방법을 정리했다.",
     "date": "2026-05-21",
     "publishAt": "2026-05-21T09:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "FAQ",
+      "고객 안내",
+      "표현 정리",
+      "가독성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "텍스트·문서 도구",
     "contentType": "How-to",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
+        "label": "단어 빈도",
+        "path": "/tools/word-frequency"
       },
       {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "notice-copy-cleanup",
-    "title": "공지문 표현 정리 선택법, 공유 전 확인과 문서 기준",
-    "description": "공지문 표현 정리 상황에서 공유 전 확인과 문서 기준은 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "공지문 표현 정리로 대상과 행동 드러내기",
+    "description": "사내 공지를 올리기 전 공지문 표현 정리로 대상과 요청 행동을 분명히 하고, 길이와 구조를 도구로 점검하는 방법을 정리했다.",
     "date": "2026-05-21",
     "publishAt": "2026-05-21T04:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "공지문",
+      "표현 정리",
+      "사내 공지",
+      "가독성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "텍스트·문서 도구",
     "contentType": "FAQ",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
+        "label": "단어 빈도",
+        "path": "/tools/word-frequency"
       },
       {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "ai-era-skills",
@@ -17623,22 +17675,27 @@
   },
   {
     "slug": "meeting-note-format",
-    "title": "회의록 정리 형식 개선 포인트, 문서 기준",
-    "description": "회의록 정리 형식을 준비할 때 놓치기 쉬운 표현 정리, 공유 전 확인, 문서 기준을 짧게 점검합니다.",
+    "title": "회의록 정리 형식, 결정과 논의를 나누기",
+    "description": "회의 직후 회의록 정리 형식을 잡아 결정사항과 논의사항을 분리하고, 표와 미리보기로 구조를 점검하는 방법을 정리했다.",
     "date": "2026-05-20",
     "publishAt": "2026-05-20T23:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "회의록",
+      "문서 형식",
+      "업무 정리",
+      "마크다운"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1550399105-c4db5fb85c18?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "텍스트·문서 도구",
     "contentType": "Comparison",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "GitHub Flavored Markdown Spec",
+    "primarySourceUrl": "https://github.github.com/gfm/",
     "internalLinks": [
+      {
+        "label": "마크다운 미리보기",
+        "path": "/tools/markdown-previewer"
+      },
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
@@ -17646,64 +17703,64 @@
       {
         "label": "대소문자 변환",
         "path": "/tools/case-converter"
-      },
-      {
-        "label": "마크다운 미리보기",
-        "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "proposal-summary-check",
-    "title": "제안서 요약 문장 초보 흐름, 표현 정리 중심",
-    "description": "제안서 요약 문장은 검토 순서, 표현 정리, 공유 전 확인 항목을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "제안서 요약 문장, 핵심을 앞으로 빼는 법",
+    "description": "제안서를 공유하기 전 제안서 요약 문장이 핵심을 앞에 두는지 점검하고, 길이와 중복을 도구로 확인해 다듬는 흐름을 정리했다.",
     "date": "2026-05-20",
     "publishAt": "2026-05-20T18:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "제안서",
+      "요약",
+      "표현 정리",
+      "문서 검토"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1468436139062-f60a71c5c892?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "텍스트·문서 도구",
     "contentType": "Explainer",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
         "path": "/tools/text-counter"
       },
       {
-        "label": "대소문자 변환",
-        "path": "/tools/case-converter"
+        "label": "단어 빈도",
+        "path": "/tools/word-frequency"
       },
       {
         "label": "마크다운 미리보기",
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "email-subject-rule",
-    "title": "이메일 제목 작성 적용 순서, 공유 전 확인",
-    "description": "이메일 제목 작성을 글, 도구, 업무 흐름에 적용할 때 필요한 검토 순서와 공유 전 확인 항목을 정리했습니다.",
+    "title": "이메일 제목 작성, 목적이 보이게 쓰는 법",
+    "description": "업무 메일을 보내기 전 이메일 제목 작성 기준을 정하고, 길이와 표현을 도구로 점검해 목적이 한눈에 드러나게 다듬는 방법을 정리했다.",
     "date": "2026-05-20",
     "publishAt": "2026-05-20T13:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "이메일",
+      "제목",
+      "업무 메일",
+      "가독성"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "텍스트·문서 도구",
     "contentType": "Checklist",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "W3C: WCAG 2.1 — Readable (understandable text)",
+    "primarySourceUrl": "https://www.w3.org/WAI/WCAG21/Understanding/readable.html",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -17718,25 +17775,27 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "self-intro-length",
-    "title": "자기소개서 글자수 실수 방지, 문서 기준 먼저",
-    "description": "자기소개서 글자수는 애매할 때 문서 기준을 먼저 보고 검토 순서까지 확인하는 기준을 제시합니다.",
+    "title": "자기소개서 글자수 맞추는 실전 순서",
+    "description": "문항별 자기소개서 글자수 기준을 붙여넣기 한 번으로 확인하고, 제출란과 집계 차이를 줄이는 검토 순서를 정리했다.",
     "date": "2026-05-20",
     "publishAt": "2026-05-20T08:00:00+09:00",
     "tags": [
-      "문서",
-      "글쓰기",
-      "텍스트"
+      "자기소개서",
+      "글자수",
+      "지원서",
+      "문서 기준"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "텍스트·문서 도구",
     "contentType": "How-to",
-    "primarySourceName": "국립국어원",
-    "primarySourceUrl": "https://www.korean.go.kr/",
+    "primarySourceName": "MDN: String.length",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length",
     "internalLinks": [
       {
         "label": "글자수 세기",
@@ -17751,7 +17810,8 @@
         "path": "/tools/markdown-previewer"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-09-30"
   },
   {
     "slug": "weekly-cost-review",

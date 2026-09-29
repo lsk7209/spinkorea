@@ -1185,11 +1185,147 @@
     </item>
 
     <item>
+      <title>독자 질문 모음 발행 전 검토, 순서</title>
+      <link>https://spinkorea.kr/blog/reader-question-bank</link>
+      <description>흩어진 독자 질문 모음을 FAQ와 새 글 주제로 정리하는 수집·분류 순서와, 중복·길이를 사이트 도구로 점검하는 방법을 정리했다.</description>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/reader-question-bank</guid>
+    </item>
+
+    <item>
+      <title>글 업데이트 메모 사례별 정리, 문서 기준</title>
+      <link>https://spinkorea.kr/blog/content-refresh-note</link>
+      <description>글 업데이트 메모에 수정 이유를 남기는 형식과, 변경 전후 비교·길이 점검을 사이트 도구로 처리하는 방법을 사례별로 정리했다.</description>
+      <pubDate>Mon, 25 May 2026 19:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/content-refresh-note</guid>
+    </item>
+
+    <item>
+      <title>도움말 페이지 구조 운영 체크, 표현 정리</title>
+      <link>https://spinkorea.kr/blog/help-page-structure</link>
+      <description>도움말 페이지 구조를 사용자가 답을 빨리 찾도록 설계하는 순서와, 제목·표·표기를 사이트 도구로 점검하는 방법을 정리했다.</description>
+      <pubDate>Mon, 25 May 2026 14:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/help-page-structure</guid>
+    </item>
+
+    <item>
+      <title>약관 요약 문장 검토 순서, 가독성 활용</title>
+      <link>https://spinkorea.kr/blog/terms-summary-copy</link>
+      <description>긴 약관을 이용자가 이해하는 요약 문장으로 다듬는 검토 순서와, 길이·표·표기를 사이트 도구로 점검하는 방법을 정리했다.</description>
+      <pubDate>Mon, 25 May 2026 09:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/terms-summary-copy</guid>
+    </item>
+
+    <item>
+      <title>개인정보 안내문 빠른 정리, 표현 정리까지</title>
+      <link>https://spinkorea.kr/blog/privacy-copy-check</link>
+      <description>개인정보 안내문에서 수집 목적과 보관 기간을 명확히 드러내는 문장 순서와, 길이·표기를 도구로 점검하는 실무 방법을 정리했다.</description>
+      <pubDate>Mon, 25 May 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/privacy-copy-check</guid>
+    </item>
+
+    <item>
+      <title>뉴스레터 미리보기 선택법, 문서 기준부터</title>
+      <link>https://spinkorea.kr/blog/newsletter-preview</link>
+      <description>뉴스레터 미리보기 문구를 열 이유가 보이도록 다듬는 순서와, 길이·바이트·중복 단어를 도구로 점검하는 방법을 정리했다.</description>
+      <pubDate>Sun, 24 May 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/newsletter-preview</guid>
+    </item>
+
+    <item>
+      <title>전후 비교 문장 개선 포인트, 문서 기준</title>
+      <link>https://spinkorea.kr/blog/before-after-copy</link>
+      <description>개선 효과를 추상적으로 두지 않고 전후 문장을 구체적으로 대비시키는 방법과, 차이를 도구로 확인하는 순서를 안내합니다.</description>
+      <pubDate>Sun, 24 May 2026 18:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/before-after-copy</guid>
+    </item>
+
+    <item>
+      <title>질문형 소제목 초보 흐름, 표현 정리 중심</title>
+      <link>https://spinkorea.kr/blog/question-heading-rule</link>
+      <description>소제목만 봐도 답을 예측할 수 있게 질문형 제목을 다듬는 원칙과, 길이·서식을 도구로 확인하는 순서를 안내합니다.</description>
+      <pubDate>Sun, 24 May 2026 13:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/question-heading-rule</guid>
+    </item>
+
+    <item>
+      <title>모바일 문단 길이 적용 순서, 공유 전 점검</title>
+      <link>https://spinkorea.kr/blog/mobile-reading-break</link>
+      <description>스마트폰에서 한 문단이 화면을 가득 채우지 않도록 문단을 나누는 기준과, 길이를 도구로 확인하는 순서를 안내합니다.</description>
+      <pubDate>Sun, 24 May 2026 08:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/mobile-reading-break</guid>
+    </item>
+
+    <item>
+      <title>문서 버전 기록 실수 방지, 가독성 먼저</title>
+      <link>https://spinkorea.kr/blog/document-version-note</link>
+      <description>팀 문서의 수정 이력을 사람이 읽을 수 있게 남기는 형식과, 변경 위치를 도구로 대조하는 방법을 정리합니다.</description>
+      <pubDate>Sun, 24 May 2026 03:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/document-version-note</guid>
+    </item>
+
+    <item>
+      <title>요약 박스 구성 실전 흐름, 가독성부터</title>
+      <link>https://spinkorea.kr/blog/summary-box-copy</link>
+      <description>긴 글 앞에 놓는 요약 박스에 무엇을 담고 무엇을 빼야 하는지, 길이와 서식을 도구로 확인하며 정하는 순서를 안내합니다.</description>
+      <pubDate>Sat, 23 May 2026 22:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/summary-box-copy</guid>
+    </item>
+
+    <item>
+      <title>체크리스트 문장 상황별 표, 공유 전 점검</title>
+      <link>https://spinkorea.kr/blog/checklist-wording</link>
+      <description>행동으로 옮기기 힘든 체크리스트 문장을 동사 중심으로 고치고, 길이와 중복 단어를 도구로 확인하는 방법을 정리합니다.</description>
+      <pubDate>Sat, 23 May 2026 17:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/checklist-wording</guid>
+    </item>
+
+    <item>
       <title>온라인 계산기 vs 엑셀: 언제 무엇을 써야 하나</title>
       <link>https://spinkorea.kr/blog/calculator-vs-excel</link>
       <description>간단한 계산에 엑셀을 여는 것은 낭비입니다. 상황별로 온라인 계산기와 스프레드시트를 현명하게 선택하는 기준.</description>
       <pubDate>Sat, 23 May 2026 15:00:00 GMT</pubDate>
       <guid>https://spinkorea.kr/blog/calculator-vs-excel</guid>
+    </item>
+
+    <item>
+      <title>랜딩 문구 순서, 독자 문제부터 놓는 법</title>
+      <link>https://spinkorea.kr/blog/landing-copy-order</link>
+      <description>첫 화면에서 기능 설명이 앞서고 독자 문제가 늦게 나올 때, 랜딩 문구 순서를 문제 중심으로 바꾸고 길이를 도구로 점검하는 방법입니다.</description>
+      <pubDate>Sat, 23 May 2026 12:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/landing-copy-order</guid>
+    </item>
+
+    <item>
+      <title>공유 문구 작성으로 클릭 이유 드러내기</title>
+      <link>https://spinkorea.kr/blog/social-share-copy</link>
+      <description>커뮤니티에 글을 올릴 때 공유 문구 작성이 밋밋해 클릭 이유가 보이지 않는다면, 길이와 첫 문장을 도구로 점검해 다듬는 방법입니다.</description>
+      <pubDate>Sat, 23 May 2026 07:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/social-share-copy</guid>
+    </item>
+
+    <item>
+      <title>인용문 정리로 출처와 원문 구분하는 법</title>
+      <link>https://spinkorea.kr/blog/quote-cleanup-rule</link>
+      <description>자료 기반 글에서 인용문 정리가 안 되어 원문과 내 해석이 뒤섞일 때, 표시 규칙을 세우고 도구로 길이·표기를 점검하는 방법입니다.</description>
+      <pubDate>Sat, 23 May 2026 02:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/quote-cleanup-rule</guid>
+    </item>
+
+    <item>
+      <title>문체 기준표로 말투 흔들림 잡는 방법</title>
+      <link>https://spinkorea.kr/blog/tone-of-voice-note</link>
+      <description>글마다 말투가 바뀌어 한 사이트인데 딴 사람이 쓴 것 같을 때, 문체 기준표를 만들고 도구로 표기·길이를 맞춰 일관성을 지키는 방법입니다.</description>
+      <pubDate>Fri, 22 May 2026 21:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/tone-of-voice-note</guid>
+    </item>
+
+    <item>
+      <title>목록 문장 다듬기, 길이와 문체 비교로 고르기</title>
+      <link>https://spinkorea.kr/blog/bullet-list-edit</link>
+      <description>체크리스트 항목마다 길이와 말투가 제각각일 때, 목록 문장 다듬기 기준을 세우고 글자수·미리보기로 나란히 비교해 통일하는 방법입니다.</description>
+      <pubDate>Fri, 22 May 2026 16:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/bullet-list-edit</guid>
     </item>
 
     <item>
@@ -1201,6 +1337,38 @@
     </item>
 
     <item>
+      <title>메타 설명 초안, 발행 전 길이 맞추는 순서</title>
+      <link>https://spinkorea.kr/blog/meta-description-draft</link>
+      <description>메타 설명 초안이 본문과 따로 놀지 않도록 길이·핵심어·요약 순서를 잡고 글자수 도구로 잘림을 미리 점검하는 방법을 정리했습니다.</description>
+      <pubDate>Fri, 22 May 2026 11:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/meta-description-draft</guid>
+    </item>
+
+    <item>
+      <title>긴 제목 줄이기 체크리스트와 검토 순서</title>
+      <link>https://spinkorea.kr/blog/headline-trim-rule</link>
+      <description>검색 결과에서 제목이 잘릴 때, 긴 제목 줄이기 기준을 글자수와 바이트로 확인하며 다듬는 순서를 정리했습니다.</description>
+      <pubDate>Fri, 22 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/headline-trim-rule</guid>
+    </item>
+
+    <item>
+      <title>표기 스타일 통일, 문서 기준부터 잡기</title>
+      <link>https://spinkorea.kr/blog/case-style-guide</link>
+      <description>같은 단어를 여러 방식으로 쓸 때, 표기 스타일 통일 기준을 정하고 영어 표기와 반복 단어를 도구로 점검하는 방법입니다.</description>
+      <pubDate>Fri, 22 May 2026 01:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/case-style-guide</guid>
+    </item>
+
+    <item>
+      <title>마크다운 표 작성 후 발행 전 검토 순서</title>
+      <link>https://spinkorea.kr/blog/markdown-table-check</link>
+      <description>표가 깨져 모바일에서 읽기 어려울 때, 마크다운 표 작성 문법을 점검하고 미리보기로 확인하는 순서를 정리했습니다.</description>
+      <pubDate>Thu, 21 May 2026 20:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/markdown-table-check</guid>
+    </item>
+
+    <item>
       <title>텍스트 변환이 필요한 의외의 상황 7가지</title>
       <link>https://spinkorea.kr/blog/text-formatting-situations</link>
       <description>대소문자 변환, 특수문자 제거, 줄바꿈 정리... 텍스트를 정제하고 변환해야 하는 실무 상황 완벽 정리.</description>
@@ -1209,11 +1377,83 @@
     </item>
 
     <item>
+      <title>공유 전 문서 검토, 구조부터 보는 순서</title>
+      <link>https://spinkorea.kr/blog/copy-before-share</link>
+      <description>구조 오류가 오탈자보다 크게 보일 때, 공유 전 문서 검토를 구조·길이·형식 순으로 진행하는 방법을 정리했습니다.</description>
+      <pubDate>Thu, 21 May 2026 15:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/copy-before-share</guid>
+    </item>
+
+    <item>
+      <title>쉬운 문장 기준 만들고 도구로 점검하기</title>
+      <link>https://spinkorea.kr/blog/plain-language-rule</link>
+      <description>전문용어가 많아 독자가 멈출 때, 쉬운 문장 기준을 만들고 문장 길이와 반복 단어를 도구로 점검하는 방법입니다.</description>
+      <pubDate>Thu, 21 May 2026 10:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/plain-language-rule</guid>
+    </item>
+
+    <item>
+      <title>블로그 첫 문단 검토 순서와 길이 기준</title>
+      <link>https://spinkorea.kr/blog/blog-intro-hook</link>
+      <description>도입부가 길어 이탈이 늘어날 때, 첫 문단의 글자수와 문장 길이를 도구로 확인하며 다듬는 순서를 정리했습니다.</description>
+      <pubDate>Thu, 21 May 2026 05:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/blog-intro-hook</guid>
+    </item>
+
+    <item>
+      <title>FAQ 답변 길이, 핵심부터 짧게 쓰는 법</title>
+      <link>https://spinkorea.kr/blog/faq-answer-length</link>
+      <description>고객 안내 문서를 만들 때 FAQ 답변 길이를 조절해 핵심을 앞에 두고, 길이와 중복을 도구로 점검하는 방법을 정리했다.</description>
+      <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/faq-answer-length</guid>
+    </item>
+
+    <item>
+      <title>공지문 표현 정리로 대상과 행동 드러내기</title>
+      <link>https://spinkorea.kr/blog/notice-copy-cleanup</link>
+      <description>사내 공지를 올리기 전 공지문 표현 정리로 대상과 요청 행동을 분명히 하고, 길이와 구조를 도구로 점검하는 방법을 정리했다.</description>
+      <pubDate>Wed, 20 May 2026 19:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/notice-copy-cleanup</guid>
+    </item>
+
+    <item>
       <title>AI와 일할 때 기를 역량 5가지: 질문·검증·협업</title>
       <link>https://spinkorea.kr/blog/ai-era-skills</link>
       <description>AI 결과를 확인하고 업무 맥락에 맞게 활용하는 질문·판단·협업 방법을 살펴봅니다.</description>
       <pubDate>Wed, 20 May 2026 15:00:00 GMT</pubDate>
       <guid>https://spinkorea.kr/blog/ai-era-skills</guid>
+    </item>
+
+    <item>
+      <title>회의록 정리 형식, 결정과 논의를 나누기</title>
+      <link>https://spinkorea.kr/blog/meeting-note-format</link>
+      <description>회의 직후 회의록 정리 형식을 잡아 결정사항과 논의사항을 분리하고, 표와 미리보기로 구조를 점검하는 방법을 정리했다.</description>
+      <pubDate>Wed, 20 May 2026 14:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/meeting-note-format</guid>
+    </item>
+
+    <item>
+      <title>제안서 요약 문장, 핵심을 앞으로 빼는 법</title>
+      <link>https://spinkorea.kr/blog/proposal-summary-check</link>
+      <description>제안서를 공유하기 전 제안서 요약 문장이 핵심을 앞에 두는지 점검하고, 길이와 중복을 도구로 확인해 다듬는 흐름을 정리했다.</description>
+      <pubDate>Wed, 20 May 2026 09:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/proposal-summary-check</guid>
+    </item>
+
+    <item>
+      <title>이메일 제목 작성, 목적이 보이게 쓰는 법</title>
+      <link>https://spinkorea.kr/blog/email-subject-rule</link>
+      <description>업무 메일을 보내기 전 이메일 제목 작성 기준을 정하고, 길이와 표현을 도구로 점검해 목적이 한눈에 드러나게 다듬는 방법을 정리했다.</description>
+      <pubDate>Wed, 20 May 2026 04:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/email-subject-rule</guid>
+    </item>
+
+    <item>
+      <title>자기소개서 글자수 맞추는 실전 순서</title>
+      <link>https://spinkorea.kr/blog/self-intro-length</link>
+      <description>문항별 자기소개서 글자수 기준을 붙여넣기 한 번으로 확인하고, 제출란과 집계 차이를 줄이는 검토 순서를 정리했다.</description>
+      <pubDate>Tue, 19 May 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/self-intro-length</guid>
     </item>
 
     <item>

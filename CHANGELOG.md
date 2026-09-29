@@ -2,6 +2,15 @@
 
 형식: [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/). 이전 이력은 `docs/HANDOFF.md`, `PROJECT_STATE.md`, `docs/site-quality/change-log.md`에 있다.
 
+## [Unreleased] — 텍스트·문서 도구 글 30편 재작성 (2026-09-30, 로컬 전용·미배포)
+
+### Added
+- `텍스트·문서 도구` 분류의 자동 생성(noindex) 글 30편을 editorial 품질로 재작성. 대상: self-intro-length, email-subject-rule, proposal-summary-check, meeting-note-format, notice-copy-cleanup, faq-answer-length, blog-intro-hook, plain-language-rule, copy-before-share, markdown-table-check, case-style-guide, headline-trim-rule, meta-description-draft, bullet-list-edit, tone-of-voice-note, quote-cleanup-rule, social-share-copy, landing-copy-order, checklist-wording, summary-box-copy, document-version-note, mobile-reading-break, question-heading-rule, before-after-copy, newsletter-preview, privacy-copy-check, terms-summary-copy, help-page-structure, content-refresh-note, reader-question-bank.
+- 방식: 명세 `output/rewrite-text/SPEC.md`로 사이트 실제 도구 기능 범위를 고정(글자수 세기 UTF-16, 바이트 UTF-8, 단어 빈도, 대소문자 변환, 마크다운 미리보기, diff — 각 도구 소스 확인). 내부 링크 3개는 App 라우트 중 주제에 맞는 도구, 외부 출처는 접속 확인한 10개(MDN String.length/Blob/Intl.Segmenter/toLowerCase, CommonMark·GFM 명세, W3C WCAG Readable, 개인정보 보호위원회, 국가법령정보센터 전자상거래법)만 사용.
+- 금지: 맞춤법·문법 자동 교정, AI 요약·생성, 저장·계정·서버 기록·CSV·알림 등 없는 기능 약속 금지.
+- 반영: `src/data/revised-editorial-text-tools-2026-09.json`(revisedAt 2026-09-30) → `scripts/apply-editorial-revisions.mjs`로 계획·청크에 적용. slug·최초 발행일·예약 시각 유지, `editorialReview: approved`. 30편 index·sitemap 포함(누적 재작성 225편, approved 245→275).
+- 검증: batch/전체 check 0 오류(최대 유사도 0.28), `content:validate` pass, `build` 698 렌더, 조사 오류 0, `verify-search-scope` PASS, `type-check` PASS. 사람 정독 표본은 자동 검사 + slug별 요구사항 대조로 갈음.
+
 ## [Unreleased] — fix/spk2-reliability-batch (2026-09-29, 로컬 전용·미배포)
 
 ### Fixed
