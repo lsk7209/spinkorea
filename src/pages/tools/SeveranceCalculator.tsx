@@ -1,14 +1,10 @@
 import { useState } from "react";
 import { Briefcase } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
+import { serviceDaysBetween } from "@/utils/date-calc";
 
 function fmt(n: number) {
   return Math.round(n).toLocaleString("ko-KR");
-}
-
-function daysBetween(a: string, b: string): number {
-  const ms = new Date(b).getTime() - new Date(a).getTime();
-  return Math.floor(ms / (1000 * 60 * 60 * 24));
 }
 
 export default function SeveranceCalculator() {
@@ -17,13 +13,16 @@ export default function SeveranceCalculator() {
   const [monthlyWage, setMonthlyWage] = useState("3000000");
   const [bonusAnnual, setBonusAnnual] = useState("0");
 
-  const totalDays = daysBetween(startDate, endDate);
+  // null when a date is missing/invalid or the end date is not after the start date.
+  const serviceDays = serviceDaysBetween(startDate, endDate);
+  const hasValidPeriod = serviceDays !== null;
+  const totalDays = serviceDays ?? 0;
   const years = totalDays / 365;
 
   // 법정 퇴직금 계산
   // 1일 평균임금 = (최근 3개월 임금 합계 + 연간 상여금 × 3/12) / 최근 3개월 총 일수(91일 기준)
-  const monthly = parseFloat(monthlyWage) || 0;
-  const bonus = parseFloat(bonusAnnual) || 0;
+  const monthly = Math.max(0, parseFloat(monthlyWage) || 0);
+  const bonus = Math.max(0, parseFloat(bonusAnnual) || 0);
   const avgDaily = (monthly * 3 + (bonus * 3) / 12) / 91;
 
   // 퇴직금 = 1일 평균임금 × 30 × (재직일수 / 365)
@@ -123,12 +122,18 @@ export default function SeveranceCalculator() {
         </div>
 
         {/* 결과 */}
-        {!isEligible && totalDays > 0 && (
+        {!hasValidPeriod && (
+          <p role="alert" className="bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-center text-red-400 font-bold">
+            퇴사일은 입사일보다 뒤의 날짜여야 합니다. 두 날짜를 확인해 주세요.
+          </p>
+        )}
+        {hasValidPeriod && !isEligible && (
           <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-center">
             <p className="text-red-400 font-bold">근속기간 {totalDays}일 — 1년 미만은 법정 퇴직금 지급 의무가 없습니다.</p>
           </div>
         )}
 
+        {hasValidPeriod && (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {[
             { label: "근속 기간", value: `${Math.floor(totalDays / 365)}년 ${Math.floor((totalDays % 365) / 30)}개월`, color: "text-gray-300" },
@@ -142,6 +147,7 @@ export default function SeveranceCalculator() {
             </div>
           ))}
         </div>
+        )}
 
         {/* 연도별 누적 */}
         {rows.length > 0 && (

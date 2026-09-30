@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import { Clock, Timer, Hourglass, Plus, Minus } from "lucide-react";
 import {
-  format,
   addMinutes,
-  subMinutes,
   differenceInMinutes,
   parse,
   startOfToday,
 } from "date-fns";
 import ToolLayout from "@/components/ToolLayout";
+import { formatDayOffset, shiftClockTime } from "@/utils/date-calc";
 
 export default function TimeCalculator() {
   // Mode 1: Time Difference (Start - End)
@@ -43,31 +42,19 @@ export default function TimeCalculator() {
   }, [diffStart, diffEnd]);
 
   useEffect(() => {
-    // Mode 2 Calculation
-    if (baseTime) {
-      const today = startOfToday();
-      const base = parse(baseTime, "HH:mm", today);
-
-      const hoursToAdd = parseInt(addHours || "0");
-      const minutesToAdd = parseInt(addMinutesVal || "0");
-      const totalMinutes = hoursToAdd * 60 + minutesToAdd;
-
-      if (totalMinutes === 0) {
-        setCalcResult(format(base, "HH:mm"));
-        return;
-      }
-
-      let resultDate;
-      if (calcType === "add") {
-        resultDate = addMinutes(base, totalMinutes);
-      } else {
-        resultDate = subMinutes(base, totalMinutes);
-      }
-
-      // Format result (handle next day notation if needed, but HH:mm is standard)
-      // Just HH:mm is fine for daily calc
-      setCalcResult(format(resultDate, "HH:mm"));
+    // Mode 2 Calculation: show day crossings instead of silently wrapping at midnight.
+    if (!baseTime) return;
+    const hoursToAdd = Number(addHours || "0");
+    const minutesToAdd = Number(addMinutesVal || "0");
+    const totalMinutes = hoursToAdd * 60 + minutesToAdd;
+    const signedMinutes = calcType === "add" ? totalMinutes : -totalMinutes;
+    const shifted = shiftClockTime(baseTime, signedMinutes);
+    if (!shifted) {
+      setCalcResult("숫자를 입력해 주세요");
+      return;
     }
+    const dayLabel = formatDayOffset(shifted.dayOffset);
+    setCalcResult(dayLabel ? `${shifted.time} ${dayLabel}` : shifted.time);
   }, [baseTime, addHours, addMinutesVal, calcType]);
 
   return (
@@ -177,12 +164,16 @@ export default function TimeCalculator() {
 
             <div className="flex items-center justify-center gap-4 my-2">
               <button
+                type="button"
+                aria-pressed={calcType === "add"}
                 onClick={() => setCalcType("add")}
                 className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors ${calcType === "add" ? "bg-neon-secondary text-black font-bold" : "bg-white/10 text-gray-400"}`}
               >
                 <Plus size={18} /> 더하기
               </button>
               <button
+                type="button"
+                aria-pressed={calcType === "sub"}
                 onClick={() => setCalcType("sub")}
                 className={`flex-1 py-2 rounded-lg flex items-center justify-center gap-2 transition-colors ${calcType === "sub" ? "bg-red-400 text-black font-bold" : "bg-white/10 text-gray-400"}`}
               >
@@ -194,6 +185,8 @@ export default function TimeCalculator() {
               <div className="flex-1">
                 <input
                   type="number"
+                  min="0"
+                  aria-label="더하거나 뺄 시간(시)"
                   value={addHours}
                   onChange={(e) => setAddHours(e.target.value)}
                   placeholder="0"
@@ -206,6 +199,8 @@ export default function TimeCalculator() {
               <div className="flex-1">
                 <input
                   type="number"
+                  min="0"
+                  aria-label="더하거나 뺄 시간(분)"
                   value={addMinutesVal}
                   onChange={(e) => setAddMinutesVal(e.target.value)}
                   placeholder="0"

@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
 import { Clock, Calendar, ArrowRight, Copy } from "lucide-react";
-import { format, fromUnixTime, getUnixTime, parseISO } from "date-fns";
+import { format, fromUnixTime, getUnixTime, isValid, parseISO } from "date-fns";
 import { toast } from "sonner";
 import ToolLayout from "@/components/ToolLayout";
+import { parseUnixTimestamp } from "@/utils/date-calc";
 
 export default function UnixTimestamp() {
   const [now, setNow] = useState<number>(getUnixTime(new Date()));
   const [inputTimestamp, setInputTimestamp] = useState("");
   const [convertedDate, setConvertedDate] = useState("");
+  const [timestampError, setTimestampError] = useState("");
+  const [timestampUnitLabel, setTimestampUnitLabel] = useState("");
 
   const [inputDate, setInputDate] = useState(""); // ISO format YYYY-MM-DDTHH:mm:ss
   const [convertedTimestamp, setConvertedTimestamp] = useState("");
@@ -20,29 +23,25 @@ export default function UnixTimestamp() {
     return () => clearInterval(timer);
   }, []);
 
-  // Convert Timestamp -> Date
+  // Convert Timestamp -> Date (unit inferred from magnitude, not digit count)
   useEffect(() => {
     if (!inputTimestamp) {
       setConvertedDate("");
+      setTimestampError("");
+      setTimestampUnitLabel("");
       return;
     }
-    const ts = parseInt(inputTimestamp);
-    if (!isNaN(ts)) {
-      try {
-        // Determine if it's seconds or milliseconds
-        // Unix timestamp (seconds) usually 10 digits (until Year 2286)
-        // Milliseconds is 13 digits
-        const date =
-          inputTimestamp.length > 11
-            ? fromUnixTime(ts / 1000)
-            : fromUnixTime(ts);
-        setConvertedDate(format(date, "yyyy-MM-dd HH:mm:ss (XXX)"));
-      } catch (e) {
-        setConvertedDate("Invalid Timestamp");
-      }
-    } else {
-      setConvertedDate("Invalid Number");
+    const parsed = parseUnixTimestamp(inputTimestamp);
+    if (!parsed) {
+      setConvertedDate("");
+      setTimestampUnitLabel("");
+      setTimestampError("정수 타임스탬프(초 또는 밀리초)를 입력해 주세요.");
+      return;
     }
+    const unitLabel = parsed.unit === "milliseconds" ? "밀리초" : "초";
+    setTimestampError("");
+    setTimestampUnitLabel(`${unitLabel} 단위로 해석했습니다.`);
+    setConvertedDate(format(parsed.date, "yyyy-MM-dd HH:mm:ss (XXX)"));
   }, [inputTimestamp]);
 
   // Convert Date -> Timestamp
@@ -51,18 +50,18 @@ export default function UnixTimestamp() {
       setConvertedTimestamp("");
       return;
     }
-    try {
-      const date = parseISO(inputDate);
-      setConvertedTimestamp(getUnixTime(date).toString());
-    } catch (e) {
-      setConvertedTimestamp("Invalid Date");
-    }
+    const date = parseISO(inputDate);
+    setConvertedTimestamp(isValid(date) ? getUnixTime(date).toString() : "");
   }, [inputDate]);
 
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard = async (text: string) => {
     if (!text) return;
-    navigator.clipboard.writeText(text);
-    toast.success("복사되었습니다!");
+    try {
+      await navigator.clipboard.writeText(text);
+      toast.success("복사되었습니다!");
+    } catch {
+      toast.error("복사하지 못했습니다. 직접 선택해 복사해 주세요.");
+    }
   };
 
   return (
@@ -112,13 +111,15 @@ export default function UnixTimestamp() {
           <h3 className="text-neon-primary font-bold mb-2 flex items-center justify-center gap-2">
             <Clock size={20} /> 현재 Unix Timestamp
           </h3>
-          <div
+          <button
+            type="button"
             className="text-4xl md:text-6xl font-black text-white font-mono tracking-wider cursor-pointer active:scale-95 transition-transform"
             onClick={() => copyToClipboard(now.toString())}
             title="클릭하여 복사"
+            aria-label={`현재 Unix Timestamp ${now} 복사`}
           >
             {now}
-          </div>
+          </button>
           <p className="text-gray-400 text-sm mt-2 font-mono">
             {format(fromUnixTime(now), "yyyy-MM-dd HH:mm:ss")}
           </p>
@@ -148,18 +149,28 @@ export default function UnixTimestamp() {
               <div className="flex justify-center text-gray-500">
                 <ArrowRight size={20} className="rotate-90 md:rotate-0" />
               </div>
-              <div
-                className="bg-black/50 border border-white/10 rounded-lg p-3 text-neon-secondary font-mono text-sm break-all cursor-pointer hover:bg-black/70 transition-colors relative group"
+              <button
+                type="button"
+                disabled={!convertedDate}
+                aria-live="polite"
+                className="w-full text-left bg-black/50 border border-white/10 rounded-lg p-3 text-neon-secondary font-mono text-sm break-all cursor-pointer disabled:cursor-default hover:bg-black/70 transition-colors relative group"
                 onClick={() => copyToClipboard(convertedDate)}
               >
-                {convertedDate || "결과가 여기에 표시됩니다"}
+                {timestampError ? (
+                  <span role="alert" className="text-red-400 font-sans">{timestampError}</span>
+                ) : (
+                  convertedDate || "결과가 여기에 표시됩니다"
+                )}
                 {convertedDate && (
                   <Copy
                     size={14}
                     className="absolute top-2 right-2 opacity-50"
                   />
                 )}
-              </div>
+              </button>
+              {timestampUnitLabel && (
+                <p className="text-xs text-gray-500">{timestampUnitLabel}</p>
+              )}
             </div>
           </div>
 
@@ -183,8 +194,11 @@ export default function UnixTimestamp() {
               <div className="flex justify-center text-gray-500">
                 <ArrowRight size={20} className="rotate-90 md:rotate-0" />
               </div>
-              <div
-                className="bg-black/50 border border-white/10 rounded-lg p-3 text-blue-400 font-mono text-lg font-bold text-center break-all cursor-pointer hover:bg-black/70 transition-colors relative"
+              <button
+                type="button"
+                disabled={!convertedTimestamp}
+                aria-live="polite"
+                className="w-full bg-black/50 border border-white/10 rounded-lg p-3 text-blue-400 font-mono text-lg font-bold text-center break-all cursor-pointer disabled:cursor-default hover:bg-black/70 transition-colors relative"
                 onClick={() => copyToClipboard(convertedTimestamp)}
               >
                 {convertedTimestamp || "-"}
@@ -194,7 +208,7 @@ export default function UnixTimestamp() {
                     className="absolute top-2 right-2 opacity-50"
                   />
                 )}
-              </div>
+              </button>
             </div>
           </div>
         </div>

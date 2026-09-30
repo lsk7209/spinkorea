@@ -126,6 +126,7 @@ export default function SpeedCalculator() {
                   type="number"
                   min={0}
                   placeholder="0"
+                  aria-label="시간(시)"
                   value={timeH}
                   onChange={(e) => setTimeH(e.target.value)}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors pr-10"
@@ -138,6 +139,7 @@ export default function SpeedCalculator() {
                   min={0}
                   max={59}
                   placeholder="0"
+                  aria-label="시간(분)"
                   value={timeM}
                   onChange={(e) => setTimeM(e.target.value)}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-neon-primary/50 transition-colors pr-8"
