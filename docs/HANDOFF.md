@@ -1,6 +1,6 @@
 # Current handoff — 2026-09-30 08:50 KST — calculator edge cases LOCAL DONE
 
-- Goal: review project and apply improvements. Branch fix/calculator-edge-cases from main 2706218; all changes uncommitted/unpushed.
+- Goal: review project and apply improvements. Branch fix/calculator-edge-cases from main 2706218; pushed, PR #12 open (Vercel Preview + audit-hosting-costs pass). Not merged/deployed.
 - Done: Time/Compound/Age/Severance/DDay/Unix fixes, a11y labels (Percentage/Speed/Timer/Time), /api/shorten unbiased ID + collision retry, removed nanoid/@types/diff, plugin-react → devDeps. Details: CHANGELOG top entry.
 - Evidence: verify:local exit0 (test 123/123, api-harness 15/15, build 699), verify:browser 11/11, verify:browser:calculators 7/7 (timezone America/Los_Angeles), pageerrors 0. npm audit --omit=dev 0.
 - Side effects: build-refreshed public/{rss,sitemap}.xml and post-metadata caches were restored to HEAD (out of scope). Logs in output/.
