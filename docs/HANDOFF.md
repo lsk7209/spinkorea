@@ -1,3 +1,13 @@
+# Release handoff — 2026-09-30 10:15 KST — calculator edge cases RELEASED
+
+- PR #12 merged to main as b470a1b (merge commit). Production deployed via Scheduled publish workflow_dispatch run 36653285521 (notify=false; GSC/IndexNow steps skipped). /deployment-status.json commitSha=b470a1b (previous 2706218).
+- Public smoke: 12 routes 200 incl. 7 changed tools, /blog/random-choice-log, /spinflow/lunch; /spinflow/audit-nonexistent-example 404; canonicals self; production bundles contain new strings ((다음날) in date-calc chunk, unit label, severance guidance).
+- Rollback: git revert -m 1 b470a1b → PR → merge → Scheduled publish (notify=false), or promote the previous production deployment (commit 2706218) in Vercel.
+- Still open: API rate limit/Firewall, private inbox, GA4/AdSense/CMP checks, major dependency upgrades, large content chunk split.
+
+---
+
+
 # Current handoff — 2026-09-30 08:50 KST — calculator edge cases LOCAL DONE
 
 - Goal: review project and apply improvements. Branch fix/calculator-edge-cases from main 2706218; pushed, PR #12 open (Vercel Preview + audit-hosting-costs pass). Not merged/deployed.

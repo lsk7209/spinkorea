@@ -2,7 +2,7 @@
 
 형식: [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/). 이전 이력은 `docs/HANDOFF.md`, `PROJECT_STATE.md`, `docs/site-quality/change-log.md`에 있다.
 
-## [Unreleased] — fix/calculator-edge-cases (2026-09-30, 로컬 전용·미배포·미커밋)
+## [Released 2026-09-30] — fix/calculator-edge-cases (PR #12 → b470a1b, Production 배포·SHA 검증 완료)
 
 ### Fixed
 - 시간 계산기: 더하기/빼기 결과가 자정을 넘으면 "(전날)", "(다음날)", "(N일 후/전)"를 표시(기존엔 01:00−2시간이 "23:00"만 표시).
