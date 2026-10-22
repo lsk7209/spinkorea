@@ -1976,8 +1976,8 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
     content: (
       <div className="space-y-6 text-gray-300 leading-relaxed">
         <p>
-          구체적인 마감일이 있을 때 목표 달성률이 42% 높아진다는 연구 결과가
-          있습니다.{" "}
+          막연한 "언젠가"보다 구체적인 날짜가 있을 때 계획을 세우고 실행하기가
+          훨씬 쉬워집니다.{" "}
           <Link
             to="/tools/d-day-counter"
             className="text-neon-primary hover:underline"
@@ -3894,26 +3894,26 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
     content: (
       <div className="space-y-6 text-gray-300 leading-relaxed">
         <p>
-          스탠퍼드 연구에 따르면 멀티태스킹을 많이 하는 사람일수록{" "}
+          2009년 스탠퍼드 연구(Ophir, Nass, Wagner)에서는 미디어 멀티태스킹을
+          자주 하는 사람일수록{" "}
           <strong className="text-white">
-            집중력·기억력·주의 전환 능력이 모두 낮았습니다
+            관련 없는 정보를 걸러내는 능력과 과제 전환 능력이 낮게
+            측정되었습니다
           </strong>
-          . 뇌는 실제로 동시 처리가 아니라 고속 전환(Context Switching)을
-          합니다.
+          . 뇌는 여러 일을 동시에 처리하기보다 빠르게 오가며 전환(Context
+          Switching)하는 것으로 알려져 있습니다.
         </p>
         <h2 className="text-2xl font-bold text-white mt-8 mb-4">
           Context Switching의 비용
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            작업 전환당 평균 <strong>15~20분</strong>의 워밍업 시간 낭비
+            방해를 받은 뒤 원래 작업으로 돌아오기까지 시간이 걸립니다. UC
+            어바인 글로리아 마크 연구진은 직장인이 중단된 작업으로 복귀하는 데
+            평균 20분 넘게 걸린 사례를 보고했습니다(상황에 따라 크게 다름).
           </li>
-          <li>
-            실수 발생률 <strong>50% 증가</strong>
-          </li>
-          <li>
-            전체 처리 시간 <strong>40% 증가</strong> (MIT 연구)
-          </li>
+          <li>알림과 메신저 확인이 잦을수록 한 번에 이어지는 집중 시간이 짧아집니다.</li>
+          <li>전환이 잦은 작업은 놓치는 단계와 실수가 늘기 쉽습니다.</li>
         </ul>
         <h2 className="text-2xl font-bold text-white mt-8 mb-4">
           단일 집중을 위한 환경 설계
@@ -4768,7 +4768,7 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
           <strong className="text-white">
             완벽하지 않을 것이 두려워 시작하지 못하는 사람
           </strong>
-          입니다. 연구에 따르면 완벽주의자는 목표 달성률이 오히려 낮습니다.
+          입니다. 완벽주의 성향이 성과를 높인다는 근거는 일관되지 않고, 불안과 번아웃과는 연관된다는 연구가 많습니다.
         </p>
         <h2 className="text-2xl font-bold text-white mt-8 mb-4">
           완벽주의의 실제 비용
@@ -4912,12 +4912,13 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
     content: (
       <div className="space-y-6 text-gray-300 leading-relaxed">
         <p>
-          UC 데이비스 심리학자 로버트 에먼스의 연구: 감사 일기를 쓴 그룹은
-          그렇지 않은 그룹보다{" "}
+          UC 데이비스 심리학자 로버트 에먼스와 마이클 맥컬러프의 2003년 연구:
+          감사 일기를 쓴 그룹은 대조 그룹보다{" "}
           <strong className="text-white">
-            25% 더 행복했고, 수면이 개선되었으며, 운동을 더 많이 했습니다
+            삶을 더 긍정적으로 평가했고, 신체 증상을 적게 보고했으며, 운동
+            시간이 더 길었습니다
           </strong>
-          .
+          . 자가 보고 기반이라 개인차가 있습니다.
         </p>
         <h2 className="text-2xl font-bold text-white mt-8 mb-4">
           감사 일기가 효과적인 이유
