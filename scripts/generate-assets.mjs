@@ -13,6 +13,7 @@ const CONTENT_PLAN_PATH = path.join(ROOT, "src", "data", "content-plan.generated
 const LEGACY_POST_METADATA_PATH = path.join(ROOT, "src", "data", "legacy-post-metadata.json");
 const POST_METADATA_PATH = path.join(ROOT, "src", "data", "post-metadata.generated.json");
 const RUNTIME_POST_METADATA_PATH = path.join(ROOT, "src", "data", "post-metadata.runtime.generated.json");
+const TOOL_HTML_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-tool-html.json");
 const STATIC_CONTENT_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-generated-content-html.json");
 
 const sitePages = JSON.parse(fs.readFileSync(SITE_PAGES_PATH, "utf8"));
@@ -866,6 +867,14 @@ const trustedToolReferences = {
   },
 };
 
+let toolHtmlCache;
+function getToolHtml(pagePath) {
+  if (toolHtmlCache === undefined) {
+    toolHtmlCache = fs.existsSync(TOOL_HTML_PATH) ? JSON.parse(fs.readFileSync(TOOL_HTML_PATH, "utf8")) : {};
+  }
+  return toolHtmlCache[pagePath];
+}
+
 function renderToolGuide(page) {
   if (!page.path.startsWith("/tools/")) return "";
 
@@ -917,6 +926,23 @@ function renderToolGuide(page) {
   const referenceBody = trustedReference
     ? `<h2>기준·출처</h2><p><a href="${escapeHtml(trustedReference.url)}" rel="noopener noreferrer">${escapeHtml(trustedReference.name)}</a></p><p>${escapeHtml(trustedReference.note)} 최종 기준 검토일: 2026-08-28.</p>`
     : "";
+
+  // 도구 컴포넌트를 서버 렌더링한 결과가 있으면 도구별 사용법·FAQ를 그대로 쓰고 범용 안내 문단은 생략한다.
+  const toolHtml = getToolHtml(page.path);
+  if (toolHtml) {
+    return `<div id="tool-guide" class="tool-guide">
+    <h2>${escapeHtml(page.heading)} 사용 안내</h2>
+    ${toolHtml.replace(/<h1(\s|>)/g, "<h2$1").replace(/<\/h1>/g, "</h2>")}
+    ${detailBody}
+    ${referenceBody}
+    <h2>결과 해석과 주의사항</h2>
+    <p>${escapeHtml(resultGuide)}</p>
+    <h2>입력 정보와 개인정보</h2>
+    <p>${escapeHtml(privacyGuide)}</p>
+    ${page.path === "/tools/text-counter" ? `<h2>관련 도구로 이어가기</h2>\n    <ul>${related}</ul>` : ""}
+    ${page.lastmod ? `<p>페이지 업데이트: <time datetime="${page.lastmod}">${page.lastmod}</time></p>` : ""}
+  </div>`;
+  }
 
   return `<div id="tool-guide" class="tool-guide">
     <h2>${escapeHtml(page.heading)} 사용 안내</h2>
