@@ -26,6 +26,8 @@ lerna-debug.log*
 google-audit-output
 .omx
 *.token.json
+# 빌드 산출물: 글별 콘텐츠 파일 (scripts/split-article-chunks.mjs)
+src/data/article-cache/
 
 # Editor
 .vscode

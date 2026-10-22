@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import type { BlogPost } from "./posts";
-import contentManifest from "./generated-content-manifest.generated.json";
 
 export interface GeneratedArticlePlan {
   id: string;
@@ -25,10 +24,10 @@ export interface GeneratedArticlePlan {
   body?: string;
 }
 
-const ARTICLE_CHUNK_BY_SLUG = contentManifest as Record<string, string>;
-const ARTICLE_CHUNKS = import.meta.glob("./generated-content-chunks/*.json", {
+// 글 1편 = 파일 1개 (scripts/split-article-chunks.mjs 산출물). 글을 열 때 해당 글만 내려받는다.
+const ARTICLE_FILES = import.meta.glob("./article-cache/*.json", {
   import: "default",
-}) as Record<string, () => Promise<GeneratedArticlePlan[]>>;
+}) as Record<string, () => Promise<GeneratedArticlePlan>>;
 
 // ─── 언어 파티클 헬퍼 ──────────────────────────────────────────────
 function hasFinalConsonant(value: string): boolean {
@@ -805,11 +804,7 @@ function buildGeneratedBlogPost(article: GeneratedArticlePlan): BlogPost {
 }
 
 export async function loadGeneratedBlogPost(slug: string): Promise<BlogPost | undefined> {
-  const chunkFile = ARTICLE_CHUNK_BY_SLUG[slug];
-  if (!chunkFile) return undefined;
-  const loadChunk = ARTICLE_CHUNKS[`./generated-content-chunks/${chunkFile}`];
-  if (!loadChunk) return undefined;
-  const articles = await loadChunk();
-  const article = articles.find((item) => item.slug === slug);
-  return article ? buildGeneratedBlogPost(article) : undefined;
+  const loadArticle = ARTICLE_FILES[`./article-cache/${slug}.json`];
+  if (!loadArticle) return undefined;
+  return buildGeneratedBlogPost(await loadArticle());
 }

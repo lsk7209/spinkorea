@@ -1,17 +1,17 @@
 # Status | 마지막: 2026-10-22
 
 ## 현재 작업
-AdSense 신청 준비. 편집 글 보강(외부 링크·소제목) 배포 완료.
+AdSense 신청 준비. 핸드오프 남은 과제(링크·소제목·청크 분리) 완료.
 
 ## 최근 변경 (최근 5개만)
+- 10-22: 글 본문을 글별 파일로 분리 로드(글 1편당 440~628KB 청크 → 약 13KB)
 - 10-22: 편집 글 132편 범용 소제목 211개에 주제어 추가(5회 이상 반복 소제목 0개)
 - 10-22: 외부 링크 없던 편집 글 23편에 공식·표준 참고 링크 추가(`editorial-external-sources.json`)
 - 10-22: PR #17 신뢰 페이지 4종(/about·/contact·/privacy·/terms) 정적 HTML을 SSR로 교체
 - 10-22: PR #15 빌드 수정(`node_modules/.cache` 미생성 시 ENOENT)
-- 10-22: PR #14 미검토 생성 글 376편 비공개(404), 404 화면 AdSense 제거, 연락처 `cs@spinkorea.kr` 통일
 
 ## TODO
-- [ ] 콘텐츠 청크(450~640KB) 분리 — 생성 파이프라인 변경 필요
+- [ ] `postMetadata` 번들(368KB) 경량화 검토 — 글 페이지에서 로드 확인
 - [ ] (사용자) AdSense CMP 설정·GSC 색인 상태 확인
 - [ ] Bing IndexNow 403 재확인
 
@@ -24,5 +24,6 @@ AdSense 신청 준비. 편집 글 보강(외부 링크·소제목) 배포 완료
 
 ## 주의
 - 배포 hook URL 출력 금지, GitHub Secret으로만 사용
-- `/about` 운영 정보·푸터 이메일은 정적 HTML이 아닌 React 렌더(브라우저에서 확인)
+- 신뢰 페이지 4종 정적 HTML은 React SSR 결과(실패 시 고정 문단 폴백)
 - 빌드 시 `public/{sitemap,rss,llms}`·`post-metadata*.json` 변경은 의도치 않은 것 → 되돌릴 것
+- 글 본문 로드는 `src/data/article-cache/`(빌드·predev 시 `split-article-chunks.mjs`로 생성, git 제외) 기준
