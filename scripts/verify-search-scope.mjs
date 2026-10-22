@@ -12,7 +12,7 @@ const generatedSample = metadataForScope.find((post) => post.source === "generat
 if (!generatedSample) throw new Error("No published generated post to verify noindex.");
 const generatedRouteExists = fs.existsSync(path.join(root, "dist", "blog", generatedSample.slug, "index.html"));
 const curatedRoute = fs.readFileSync(path.join(root, "dist", "blog", "overcome-decision-fatigue", "index.html"), "utf8");
-const legacyRoute = fs.readFileSync(path.join(root, "dist", "blog", "fuel-economy-guide", "index.html"), "utf8");
+const legacyRouteExists = fs.existsSync(path.join(root, "dist", "blog", "fuel-economy-guide", "index.html"));
 const generateAssetsSource = fs.readFileSync(path.join(root, "scripts", "generate-assets.mjs"), "utf8");
 const blogPostSource = fs.readFileSync(path.join(root, "src", "pages", "BlogPost.tsx"), "utf8");
 const metadata = JSON.parse(fs.readFileSync(path.join(root, "src", "data", "post-metadata.generated.json"), "utf8"));
@@ -52,8 +52,7 @@ const checks = [
   ["llms feed excludes legacy post", !llms.includes("/blog/fuel-economy-guide")],
   ["sitemap retains reviewed editorial posts", sitemap.includes("/blog/overcome-decision-fatigue")],
   ["generated post is not prerendered (served as 404)", !generatedRouteExists],
-  ["legacy post has route-specific canonical", legacyRoute.includes('<link rel="canonical" href="https://spinkorea.kr/blog/fuel-economy-guide" />')],
-  ["legacy post remains reachable but has noindex", noindex.test(legacyRoute)],
+  ["legacy (unreviewed) post is not prerendered", !legacyRouteExists],
   ["reviewed post remains indexable", !noindex.test(curatedRoute)],
   ["approved editorial metadata uses editorial source", editorialMeta?.source === "editorial"],
   ["static generator indexes curated and editorial sources", generateAssetsSource.includes('post.source === "curated" || post.source === "editorial"')],
