@@ -1,0 +1,117 @@
+{
+  "random-number-exclusion": {
+    "name": "MDN Crypto.getRandomValues()",
+    "url": "https://developer.mozilla.org/ko/docs/Web/API/Crypto/getRandomValues",
+    "sentence": "브라우저에서 예측하기 어려운 난수를 만드는 표준 방식은 {link} 문서에서 확인할 수 있습니다."
+  },
+  "dice-multiple-sum": {
+    "name": "위키백과 '주사위'",
+    "url": "https://ko.wikipedia.org/wiki/%EC%A3%BC%EC%82%AC%EC%9C%84",
+    "sentence": "주사위의 면 구성과 여러 개를 굴렸을 때의 합 분포에 대한 일반적인 설명은 {link} 항목을 참고하세요."
+  },
+  "coin-flip-question": {
+    "name": "위키백과 '동전 던지기'",
+    "url": "https://ko.wikipedia.org/wiki/%EB%8F%99%EC%A0%84_%EB%8D%98%EC%A7%80%EA%B8%B0",
+    "sentence": "동전 던지기가 결정 방법으로 쓰여 온 사례와 확률에 대한 배경은 {link} 항목에 정리되어 있습니다."
+  },
+  "yes-no-reversible-choice": {
+    "name": "위키백과 '의사결정'",
+    "url": "https://ko.wikipedia.org/wiki/%EC%9D%98%EC%82%AC%EA%B2%B0%EC%A0%95",
+    "sentence": "선택지를 좁히고 기준을 정하는 과정에 대한 일반적인 개념은 {link} 항목에서 더 볼 수 있습니다."
+  },
+  "random-team-odd-members": {
+    "name": "Wikipedia 'Fisher–Yates shuffle'",
+    "url": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
+    "sentence": "명단을 치우침 없이 섞는 대표적인 알고리즘은 {link} 문서(영문)에서 확인할 수 있습니다."
+  },
+  "lotto-random-combination": {
+    "name": "동행복권 공식 사이트",
+    "url": "https://www.dhlottery.co.kr/",
+    "sentence": "로또 6/45의 공식 당첨 번호와 판매 규정은 반드시 {link}에서 확인하세요. 무작위 조합은 당첨 확률을 바꾸지 않습니다."
+  },
+  "lorem-ipsum-layout-qa": {
+    "name": "위키백과 '로렘 입숨'",
+    "url": "https://ko.wikipedia.org/wiki/%EB%A1%9C%EB%A0%98_%EC%9E%85%EC%88%A8",
+    "sentence": "더미 텍스트의 유래와 쓰임은 {link} 항목에서 확인할 수 있습니다."
+  },
+  "diff-whitespace-review": {
+    "name": "Git 공식 문서 git-diff",
+    "url": "https://git-scm.com/docs/git-diff",
+    "sentence": "공백 차이를 무시하거나 드러내는 비교 옵션(--ignore-all-space 등)은 {link}(영문)에 정리되어 있습니다."
+  },
+  "hex-rgb-hsl-rounding": {
+    "name": "MDN 'CSS 색상 값'",
+    "url": "https://developer.mozilla.org/ko/docs/Web/CSS/color_value",
+    "sentence": "HEX, RGB, HSL 표기 방식과 허용 범위는 {link} 문서에서 확인할 수 있습니다."
+  },
+  "css-shadow-states": {
+    "name": "MDN 'box-shadow'",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow",
+    "sentence": "box-shadow의 값 순서와 inset·여러 겹 그림자 문법은 {link} 문서(영문)를 기준으로 확인하세요."
+  },
+  "qr-print-scan-test": {
+    "name": "DENSO WAVE QR코드 공식 사이트",
+    "url": "https://www.qrcode.com/ko/",
+    "sentence": "QR코드의 오류 정정 레벨과 여백(quiet zone) 같은 규격 정보는 QR코드 개발사인 {link}에서 확인할 수 있습니다."
+  },
+  "word-frequency-editing": {
+    "name": "국립국어원 한국어 어문 규범",
+    "url": "https://korean.go.kr/kornorms/main/main.do",
+    "sentence": "반복어를 고칠 때 띄어쓰기나 표기 기준이 헷갈린다면 {link}을 함께 확인하세요."
+  },
+  "uuid-test-fixture": {
+    "name": "RFC 9562",
+    "url": "https://www.rfc-editor.org/rfc/rfc9562",
+    "sentence": "UUID 버전별 구조와 형식은 IETF 표준 문서인 {link}(영문)에 정의되어 있습니다."
+  },
+  "unix-seconds-milliseconds": {
+    "name": "MDN Date.now()",
+    "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/now",
+    "sentence": "JavaScript가 유닉스 시간을 밀리초 단위로 반환한다는 점은 {link} 문서에서 확인할 수 있습니다."
+  },
+  "meeting-timer-timebox": {
+    "name": "Wikipedia 'Timeboxing'",
+    "url": "https://en.wikipedia.org/wiki/Timeboxing",
+    "sentence": "작업에 고정된 시간을 배정하는 타임박싱의 개념은 {link} 문서(영문)에 정리되어 있습니다."
+  },
+  "date-calculator-inclusive": {
+    "name": "국가법령정보센터 민법",
+    "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EB%AF%BC%EB%B2%95",
+    "sentence": "법률상 기간 계산에서 첫날을 넣지 않는 원칙(민법 제157조)은 {link}에서 원문을 확인할 수 있습니다. 계약·행정 기한은 해당 문서의 기준을 우선하세요."
+  },
+  "speed-distance-time-units": {
+    "name": "BIPM SI 단위 안내",
+    "url": "https://www.bipm.org/en/measurement-units",
+    "sentence": "미터, 초 등 SI 기본 단위의 정의는 국제도량형국의 {link}(영문)에서 확인할 수 있습니다."
+  },
+  "pyeong-square-meter": {
+    "name": "국가법령정보센터 계량에 관한 법률",
+    "url": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B3%84%EB%9F%89%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0",
+    "sentence": "부동산 거래와 광고에서 제곱미터를 법정 단위로 쓰는 근거는 {link}에서 확인할 수 있습니다."
+  },
+  "mean-median-survey": {
+    "name": "위키백과 '중앙값'",
+    "url": "https://ko.wikipedia.org/wiki/%EC%A4%91%EC%95%99%EA%B0%92",
+    "sentence": "중앙값의 정의와 짝수 개 자료에서 계산하는 방법은 {link} 항목에서 확인할 수 있습니다."
+  },
+  "base-converter-prefix": {
+    "name": "MDN 'Lexical grammar'",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar",
+    "sentence": "0x, 0b, 0o 같은 진법 접두사 표기는 {link} 문서(영문)의 숫자 리터럴 부분에 정리되어 있습니다."
+  },
+  "text-length-frequency-workflow": {
+    "name": "Unicode 공식 소개",
+    "url": "https://www.unicode.org/standard/WhatIsUnicode.html",
+    "sentence": "글자 수가 도구마다 다르게 세어지는 이유인 문자 인코딩의 기본 개념은 {link}(영문)에서 확인할 수 있습니다."
+  },
+  "markdown-mobile-preview": {
+    "name": "CommonMark 명세",
+    "url": "https://spec.commonmark.org/",
+    "sentence": "마크다운 문법이 렌더러마다 다르게 보일 때는 표준 명세인 {link}(영문)를 기준으로 비교해 보세요."
+  },
+  "api-field-case-json": {
+    "name": "RFC 8259",
+    "url": "https://www.rfc-editor.org/rfc/rfc8259",
+    "sentence": "JSON 키 이름과 문자열 규칙의 표준 정의는 IETF 표준 문서인 {link}(영문)에서 확인할 수 있습니다."
+  }
+}
