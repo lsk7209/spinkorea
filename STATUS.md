@@ -13,10 +13,10 @@ AdSense 신청 준비. 핸드오프 남은 과제(링크·소제목·청크 분�
 ## TODO
 - [ ] (사용자) AdSense CMP 설정 확인 (EEA 트래픽 여부)
 - [ ] GSC 색인: 사이트맵 408 URL 제출·오류 0, 그러나 /about·도구·일부 글이 '발견됨-색인 안 됨'(10-22 조회) → 1~2주 후 재조회
-- [ ] (사용자) `cs@spinkorea.kr` 수신 불가(MX·TXT 없음, DNS는 hosting.co.kr) — 호스팅 메일 포워딩 또는 Zoho 등 MX 추가, 아니면 수신 가능한 주소로 교체
 - [ ] (사용자) Bing Webmaster Tools 사이트 인증(GSC 가져오기 가능) — IndexNow 403 원인 `UserForbiddedToAccessSite`, 키 파일은 정상
 
 ## 결정사항
+- 연락처 `cs@spinkorea.kr` 수신 불가(MX 없음) 상태 유지: 사용자 결정(10-22), 심사 시 연락처 확인 위험 감수
 - 배포는 `main` 머지가 아니라 `Scheduled publish` deploy hook으로만
 - 운영 canonical은 `https://spinkorea.kr`(www는 308로 apex 리다이렉트, 10-22 확인)
 - `source: generated` 글은 데이터 보존, 정적 HTML 미생성(404)
