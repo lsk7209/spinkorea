@@ -7,6 +7,7 @@ import { createServer } from "vite";
 
 const ROOT = process.cwd();
 const CONTENT_PLAN_PATH = path.join(ROOT, "src", "data", "content-plan.generated.json");
+const TOOL_OUTPUT_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-tool-html.json");
 const OUTPUT_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-generated-content-html.json");
 const BUILD_NOW = new Date(process.env.BUILD_NOW ?? process.env.PUBLISH_NOW ?? Date.now());
 
@@ -62,6 +63,31 @@ try {
       createElement(MemoryRouter, { initialEntries: [`/blog/${post.slug}`] }, post.content),
     );
   }
+
+
+  // 도구 페이지: 실제 React 컴포넌트를 서버 렌더링해 정적 HTML에도 도구별 사용법·FAQ가 담기게 한다.
+  const appSource = fs.readFileSync(path.join(ROOT, "src", "App.tsx"), "utf8");
+  const componentFiles = Object.fromEntries(
+    [...appSource.matchAll(/const (\w+) = lazy\(\s*\(\) => import\("@\/pages\/tools\/(\w+)"\)/g)].map((m) => [m[1], m[2]]),
+  );
+  const toolRoutes = [...appSource.matchAll(/path="(\/tools\/[\w-]+)"\s+element=\{<(\w+) \/>\}/g)];
+  const toolHtml = {};
+  let toolFailed = 0;
+  for (const [, routePath, comp] of toolRoutes) {
+    const file = componentFiles[comp];
+    if (!file) continue;
+    try {
+      const mod = await server.ssrLoadModule(`/src/pages/tools/${file}.tsx`);
+      toolHtml[routePath] = renderToStaticMarkup(
+        createElement(MemoryRouter, { initialEntries: [routePath] }, createElement(mod.default)),
+      );
+    } catch (error) {
+      toolFailed += 1;
+      console.warn(`[render-generated-content] tool SSR failed for ${routePath}: ${error.message}`);
+    }
+  }
+  fs.writeFileSync(TOOL_OUTPUT_PATH, `${JSON.stringify(toolHtml)}\n`);
+  console.log(`[render-generated-content] tools rendered=${Object.keys(toolHtml).length} failed=${toolFailed}`);
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, `${JSON.stringify(staticContentBySlug)}\n`);

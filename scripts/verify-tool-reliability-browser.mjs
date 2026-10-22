@@ -112,7 +112,7 @@ try {
   for (const [route, required] of [
     ['/blog/sleep-optimization', '390분'], ['/blog/password-strength', '해독 시간 표에 빠져 있던 공격 조건'],
     ['/blog/yes-no-oracle-guide', '가상의 영화 선택 기록'], ['/blog/random-choice-log', '이 기록의 분명한 한계'],
-    ['/privacy', '이전 방문 기록'], ['/contact', 'igeonu377@gmail.com'],
+    ['/privacy', '이전 방문 기록'], ['/contact', 'cs@spinkorea.kr'],
   ]) await test(`${route} rendered corrected guidance`, async () => {
     await visit(route); await page.getByText(required, { exact: false }).first().waitFor();
     assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'), 'https://spinkorea.kr' + route);

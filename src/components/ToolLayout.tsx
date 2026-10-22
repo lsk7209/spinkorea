@@ -7,6 +7,7 @@ import { recordRecentTool } from '@/hooks/useRecentTools';
 import { trackEvent } from '@/utils/analytics';
 import { copyText } from '@/utils/share';
 import sitePages from '@/data/site-pages.json';
+import { TOOL_GUIDES } from '@/data/tool-guides';
 
 const SITE_ORIGIN = 'https://spinkorea.kr';
 
@@ -212,6 +213,18 @@ export default function ToolLayout({
                         {description}
                     </p>
                 </div>
+
+                {/* 계산 방식·예시·주의점 */}
+                {TOOL_GUIDES[pathname]?.map((section) => (
+                    <div key={section.heading} className="card border-white/10 p-6">
+                        <h2 className="text-xl font-semibold text-neon-primary mb-3">{section.heading}</h2>
+                        <div className="space-y-3">
+                            {section.paragraphs.map((paragraph) => (
+                                <p key={paragraph} className="text-gray-200 leading-relaxed">{paragraph}</p>
+                            ))}
+                        </div>
+                    </div>
+                ))}
 
                 {/* How to Use */}
                 {howToUse && howToUse.length > 0 && (

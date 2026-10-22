@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
 const guidance = JSON.parse(fs.readFileSync('src/data/site-guidance.json', 'utf8'));
-const EMAIL = 'igeonu377@gmail.com';
+const EMAIL = 'cs@spinkorea.kr';
 
 describe('private contact', () => {
   it('guidance carries the operator email and no "no private channel" wording', () => {

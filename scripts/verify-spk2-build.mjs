@@ -6,7 +6,7 @@ import fs from 'node:fs';
 const read = (p) => fs.readFileSync(p, 'utf8');
 const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const metadata = JSON.parse(read('src/data/post-metadata.generated.json'));
-const edited = metadata.filter((post) => post.updatedAt);
+const edited = metadata.filter((post) => post.updatedAt && post.source !== 'generated');
 const results = [];
 const pass = (name) => { results.push(name); console.log(`PASS ${name}`); };
 

@@ -11,9 +11,11 @@ const blogPost = read("src/pages/BlogPost.tsx");
 const about = read("src/pages/About.tsx");
 const metadata = read("src/data/postMetadata.ts");
 const generator = read("scripts/generate-assets.mjs");
+const generatorSrc = generator;
 const adsTxt = read("public/ads.txt").trim();
 
-assert(blogPost.includes('post.source === "generated" ? "noindex,follow" : "index,follow"'), "generated posts must remain noindex");
+assert(blogPost.includes('foundPost?.source === "generated" ? undefined : foundPost'), "generated posts must not be served");
+assert(generatorSrc.includes('posts.filter((post) => post.source !== "generated")'), "generated posts must not be prerendered");
 assert(blogPost.includes("작성·검토: SpinFlow 편집팀"), "curated articles need a visible editor signal");
 assert(blogPost.includes('to="/about"'), "curated articles need an editorial-policy link");
 assert(blogPost.includes('to="/contact"'), "curated articles need a correction link");
@@ -24,6 +26,8 @@ assert(
   "only reviewed posts (curated or approved editorial) may be indexable",
 );
 assert(generator.includes('robots: isIndexablePost(post) ? undefined : "noindex,follow"'), "static shells must preserve generated-post noindex");
+assert(generator.includes("pagead2\\.googlesyndication\\.com") && generator.includes("/^noindex/i.test(route.robots)"), "noindex shells must not load the AdSense tag");
+assert(read("index.html").includes('name="google-adsense-account"'), "index.html needs the google-adsense-account meta");
 assert(/^google\.com, pub-\d+, DIRECT, f08c47fec0942fa0$/m.test(adsTxt), "ads.txt publisher record missing or malformed");
 
-console.log("AdSense readiness audit PASS: curated trust signals, generated noindex, and ads.txt are locked.");
+console.log("AdSense readiness audit PASS: curated trust signals, generated noindex, and ads.txt, and ad-free noindex shells are locked.");

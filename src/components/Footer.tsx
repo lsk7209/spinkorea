@@ -42,7 +42,7 @@ export default function Footer() {
                 {/* 하단 서브 메뉴 + 카피라이트 */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-gray-500">
-                        © {new Date().getFullYear()} SpinFlow. All Rights Reserved.
+                        © {new Date().getFullYear()} SpinFlow. All Rights Reserved. · <a href="mailto:cs@spinkorea.kr" className="hover:text-gray-800">cs@spinkorea.kr</a>
                     </p>
                     <nav className="flex flex-wrap gap-x-5 gap-y-2 justify-center">
                         {subNav.map((link) => (
