@@ -1120,7 +1120,8 @@ function writeDistAssets(posts) {
     structuredData: structuredDataForPage(page),
     body: renderShell(page, indexablePosts),
   }));
-  const postRoutes = posts.map((post) => {
+  // 미검토 자동 생성 글은 정적 HTML을 만들지 않아 Vercel이 404.html을 반환한다.
+  const postRoutes = posts.filter((post) => post.source !== "generated").map((post) => {
     const postUrl = `${SITE_ORIGIN}/blog/${post.slug}`;
     const publishedAt = getPublishAt(post);
     const imageUrl = post.thumbnail

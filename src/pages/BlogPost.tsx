@@ -91,7 +91,9 @@ function PostCTA({ tags }: { tags: string[] }) {
 
 export default function BlogPost() {
   const { slug } = useParams();
-  const post = findPublishedPostMetadata(slug);
+  // 검토되지 않은 자동 생성 글은 공개하지 않는다 (404 처리).
+  const foundPost = findPublishedPostMetadata(slug);
+  const post = foundPost?.source === "generated" ? undefined : foundPost;
   const [contentPost, setContentPost] = useState<BlogPost | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
   const [tocItems, setTocItems] = useState<TocItem[]>([]);

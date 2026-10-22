@@ -11,9 +11,11 @@ const blogPost = read("src/pages/BlogPost.tsx");
 const about = read("src/pages/About.tsx");
 const metadata = read("src/data/postMetadata.ts");
 const generator = read("scripts/generate-assets.mjs");
+const generatorSrc = generator;
 const adsTxt = read("public/ads.txt").trim();
 
-assert(blogPost.includes('post.source === "generated" ? "noindex,follow" : "index,follow"'), "generated posts must remain noindex");
+assert(blogPost.includes('foundPost?.source === "generated" ? undefined : foundPost'), "generated posts must not be served");
+assert(generatorSrc.includes('posts.filter((post) => post.source !== "generated")'), "generated posts must not be prerendered");
 assert(blogPost.includes("작성·검토: SpinFlow 편집팀"), "curated articles need a visible editor signal");
 assert(blogPost.includes('to="/about"'), "curated articles need an editorial-policy link");
 assert(blogPost.includes('to="/contact"'), "curated articles need a correction link");

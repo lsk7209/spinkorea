@@ -98,3 +98,10 @@
 - `scripts/audit-adsense-readiness.mjs`: 위 동작과 `google-adsense-account` 메타 단언 추가
 - `index.html`: `google-adsense-account` 메타 추가
 - `docs/adsense/adsense-readiness-review-2026-10-22.md`: 이 문서
+
+## 7. 후속 조치 (2026-10-22, 사용자 결정 반영)
+
+- A 처리: 생성 글 376편은 데이터를 보존한 채 **비공개 처리**했다. 정적 HTML을 만들지 않아 Vercel이 404를 반환하고(`scripts/generate-assets.mjs`), SPA에서도 not found로 처리한다(`src/pages/BlogPost.tsx`). 검토 후 `editorial`로 승격하면 다시 공개된다. 관련 검증 스크립트(`verify-search-scope`, `verify-spk2-build`, `audit-adsense-readiness`)를 새 동작에 맞췄다.
+- D 처리: 연락 이메일을 `cs@spinkorea.kr`로 통일(`site-guidance.json`, 푸터, 소개 페이지의 "운영 정보" 섹션). 운영 주체 실명/상호는 공개하지 않기로 했으므로 "SpinFlow 편집팀"과 수익 구조(무료, AdSense 광고 가능)만 명시했다.
+- 주의: `cs@spinkorea.kr`은 MX를 설정하지 않아 **수신되지 않는다**. 개인정보 열람·삭제 요청 창구로 안내 중이므로, 승인 심사에서 연락처 확인이 실패하거나 실제 요청을 놓칠 수 있다. 승인 전에 Cloudflare Email Routing 등 무료 전달 설정을 권장한다.
+- 미실행: 전체 `npm run build`/`verify:local` (의존성 미설치 환경).

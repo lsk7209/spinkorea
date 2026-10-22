@@ -1,4 +1,5 @@
 import SEO from "@/components/SEO";
+import guidance from "@/data/site-guidance.json";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Shuffle, ShieldCheck, Wallet } from "lucide-react";
 
@@ -115,6 +116,16 @@ export default function About() {
               </Link>
             </div>
           </div>
+        </section>
+
+        <section className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-950 mb-4">운영 정보</h2>
+          <dl className="space-y-3 text-sm leading-7 text-slate-600">
+            <div><dt className="font-bold text-slate-950">서비스</dt><dd>SpinFlow (스핀코리아, spinkorea.kr)</dd></div>
+            <div><dt className="font-bold text-slate-950">운영·콘텐츠 검토</dt><dd>SpinFlow 편집팀이 도구 로직과 공개 글을 직접 작성·검토합니다.</dd></div>
+            <div><dt className="font-bold text-slate-950">수익 구조</dt><dd>모든 도구는 무료이며, 서비스 운영비를 위해 Google AdSense 광고를 게재할 수 있습니다. 광고는 도구 결과와 콘텐츠에 영향을 주지 않습니다.</dd></div>
+            <div><dt className="font-bold text-slate-950">문의·정정 요청</dt><dd><a className="font-semibold text-cyan-700 hover:underline" href={`mailto:${guidance.contact.email}`}>{guidance.contact.email}</a></dd></div>
+          </dl>
         </section>
       </main>
     </div>
