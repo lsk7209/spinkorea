@@ -6,6 +6,9 @@ import {
   isValidBirthDate,
   parseLocalDate,
   parseUnixTimestamp,
+  retirementDateFromLastWorkDay,
+  severanceWagePeriod,
+  formatLocalDate,
   serviceDaysBetween,
   shiftClockTime,
 } from '../src/utils/date-calc.ts';
@@ -130,5 +133,34 @@ describe('calculateCompound', () => {
 
   it('caps the yearly table at 30 rows', () => {
     assert.equal(calculateCompound({ ...base, years: 50 }).yearly.length, 30);
+  });
+});
+
+describe('severanceWagePeriod', () => {
+  const daysFor = (retire) => severanceWagePeriod(parseLocalDate(retire)).days;
+
+  it('counts the calendar days of the 3 months before the retirement date', () => {
+    assert.equal(daysFor('2026-05-01'), 89);
+    assert.equal(daysFor('2026-04-01'), 90);
+    assert.equal(daysFor('2026-07-01'), 91);
+    assert.equal(daysFor('2026-01-01'), 92);
+    assert.equal(daysFor('2024-04-01'), 91);
+  });
+
+  it('reports inclusive start and end dates', () => {
+    const period = severanceWagePeriod(parseLocalDate('2026-05-01'));
+    assert.equal(formatLocalDate(period.start), '2026-02-01');
+    assert.equal(formatLocalDate(period.end), '2026-04-30');
+  });
+
+  it('clamps to month end instead of overflowing', () => {
+    assert.equal(formatLocalDate(severanceWagePeriod(parseLocalDate('2026-05-31')).start), '2026-02-28');
+    assert.equal(formatLocalDate(severanceWagePeriod(parseLocalDate('2024-05-31')).start), '2024-02-29');
+  });
+
+  it('defines the retirement date as the day after the last working day', () => {
+    const retire = retirementDateFromLastWorkDay(parseLocalDate('2026-04-30'));
+    assert.equal(formatLocalDate(retire), '2026-05-01');
+    assert.equal(formatLocalDate(retirementDateFromLastWorkDay(parseLocalDate('2024-02-29'))), '2024-03-01');
   });
 });
