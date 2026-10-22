@@ -24,6 +24,8 @@ assert(
   "only reviewed posts (curated or approved editorial) may be indexable",
 );
 assert(generator.includes('robots: isIndexablePost(post) ? undefined : "noindex,follow"'), "static shells must preserve generated-post noindex");
+assert(generator.includes("pagead2\\.googlesyndication\\.com") && generator.includes("/^noindex/i.test(route.robots)"), "noindex shells must not load the AdSense tag");
+assert(read("index.html").includes('name="google-adsense-account"'), "index.html needs the google-adsense-account meta");
 assert(/^google\.com, pub-\d+, DIRECT, f08c47fec0942fa0$/m.test(adsTxt), "ads.txt publisher record missing or malformed");
 
-console.log("AdSense readiness audit PASS: curated trust signals, generated noindex, and ads.txt are locked.");
+console.log("AdSense readiness audit PASS: curated trust signals, generated noindex, and ads.txt, and ad-free noindex shells are locked.");

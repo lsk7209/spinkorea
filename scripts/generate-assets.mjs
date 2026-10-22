@@ -1038,7 +1038,14 @@ function injectHtml(template, route) {
     .replace(/<meta\s+name=["']twitter:image["'][\s\S]*?>/gi, "")
     .replace(/<script\s+type=["']application\/ld\+json["'][\s\S]*?<\/script>/gi, "");
 
-  return cleanedTemplate
+  // noindex 화면(미검토 자동 생성 글, 404)에는 광고 태그를 싣지 않는다 (게시자 콘텐츠 없는 화면 광고 정책).
+  const adFreeTemplate = route.robots && /^noindex/i.test(route.robots)
+    ? cleanedTemplate
+        .replace(/<script[^>]*pagead2\.googlesyndication\.com[\s\S]*?<\/script>\s*/gi, "")
+        .replace(/<link[^>]*pagead2\.googlesyndication\.com[^>]*>\s*/gi, "")
+    : cleanedTemplate;
+
+  return adFreeTemplate
     .replace("</head>", `${headTags}\n</head>`)
     .replace('<div id="root"></div>', `<div id="root">${route.body}</div>`);
 }
