@@ -12,6 +12,7 @@ import {
   serviceDaysBetween,
   shiftClockTime,
 } from '../src/utils/date-calc.ts';
+import { calculatePension, supportedPensionMonthRange } from '../src/utils/pension.ts';
 import { calculateCompound } from '../src/utils/compound-interest.ts';
 
 describe('parseLocalDate', () => {
@@ -162,5 +163,46 @@ describe('severanceWagePeriod', () => {
     const retire = retirementDateFromLastWorkDay(parseLocalDate('2026-04-30'));
     assert.equal(formatLocalDate(retire), '2026-05-01');
     assert.equal(formatLocalDate(retirementDateFromLastWorkDay(parseLocalDate('2024-02-29'))), '2024-03-01');
+  });
+});
+
+describe('calculatePension', () => {
+  it('uses the limits of the period that contains the reference month', () => {
+    const june = calculatePension(9_000_000, '2026-06');
+    assert.equal(june.upper, 6_370_000);
+    assert.equal(june.standardIncome, 6_370_000);
+    const july = calculatePension(9_000_000, '2026-07');
+    assert.equal(july.upper, 6_590_000);
+    assert.equal(july.lower, 410_000);
+    assert.equal(july.standardIncome, 6_590_000);
+  });
+
+  it('handles values just below, on and above the upper limit', () => {
+    assert.equal(calculatePension(6_589_999, '2026-07').standardIncome, 6_589_000);
+    assert.equal(calculatePension(6_590_000, '2026-07').standardIncome, 6_590_000);
+    assert.equal(calculatePension(6_590_001, '2026-07').standardIncome, 6_590_000);
+    assert.equal(calculatePension(6_369_999, '2026-06').standardIncome, 6_369_000);
+    assert.equal(calculatePension(6_370_001, '2026-06').standardIncome, 6_370_000);
+  });
+
+  it('handles values just below, on and above the lower limit', () => {
+    assert.equal(calculatePension(409_999, '2026-07').standardIncome, 410_000);
+    assert.equal(calculatePension(410_000, '2026-07').standardIncome, 410_000);
+    assert.equal(calculatePension(411_000, '2026-07').standardIncome, 411_000);
+    assert.equal(calculatePension(399_999, '2026-06').standardIncome, 400_000);
+  });
+
+  it('applies the employee rate of the reference year', () => {
+    assert.equal(calculatePension(3_000_000, '2026-10').employeeRate, 0.0475);
+    assert.equal(calculatePension(3_000_000, '2026-10').premium, 142_500);
+  });
+
+  it('returns null for unsupported months and invalid wages', () => {
+    assert.equal(calculatePension(3_000_000, '2025-06'), null);
+    assert.equal(calculatePension(3_000_000, '2027-07'), null);
+    assert.equal(calculatePension(3_000_000, '2026-13'), null);
+    assert.equal(calculatePension(-1, '2026-10'), null);
+    assert.equal(calculatePension(Number.NaN, '2026-10'), null);
+    assert.deepEqual(supportedPensionMonthRange(), { min: '2025-07', max: '2027-06' });
   });
 });
