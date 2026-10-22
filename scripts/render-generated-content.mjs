@@ -86,6 +86,7 @@ try {
       console.warn(`[render-generated-content] tool SSR failed for ${routePath}: ${error.message}`);
     }
   }
+  fs.mkdirSync(path.dirname(TOOL_OUTPUT_PATH), { recursive: true });
   fs.writeFileSync(TOOL_OUTPUT_PATH, `${JSON.stringify(toolHtml)}\n`);
   console.log(`[render-generated-content] tools rendered=${Object.keys(toolHtml).length} failed=${toolFailed}`);
 
