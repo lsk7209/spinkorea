@@ -33,6 +33,18 @@ const editorialDrafts = Object.assign(
     .map((draftPath) => JSON.parse(fs.readFileSync(draftPath, "utf8"))),
 );
 
+// 본문에 외부 근거가 없던 글의 공식·표준 참고 자료. 본문 끝 문단으로만 노출한다.
+const externalSources = JSON.parse(
+  fs.readFileSync(path.join(root, "src/data/editorial-external-sources.json"), "utf8"),
+);
+
+function withExternalSource(slug, body) {
+  const source = externalSources[slug];
+  if (!source) return body;
+  const link = `<a href='${source.url}' target='_blank' rel='noopener noreferrer'>${source.name}</a>`;
+  return `${body}\n<p>${source.sentence.replace("{link}", link)}</p>`;
+}
+
 const topics = [
   ["random-number-exclusion", "랜덤 숫자 뽑기, 제외 번호를 먼저 정하는 순서", "랜덤 숫자 뽑기", "1부터 30까지 발표자 번호 3개를 뽑되 결석한 7번과 18번은 제외하는 상황", "/random-number", "랜덤 숫자에서 범위와 제외수를 입력 전에 합의하고 결과를 기록하는 방법을 설명합니다."],
   ["dice-multiple-sum", "주사위 여러 개 합계로 게임 판정표 만들기", "주사위 합계", "보드게임에서 주사위 두 개의 합이 8 이상이면 성공으로 정한 상황", "/tools/dice-roller", "여러 주사위의 개수와 면 수를 고정하고 합계 판정 규칙을 운영하는 순서를 정리합니다."],
@@ -94,7 +106,7 @@ const articles = topics.map((topic, index) => {
     primarySourceName: "SpinFlow 도구 화면", primarySourceUrl: `https://spinkorea.kr${primaryPath}`,
     internalLinks: [{ label: `${mainKeyword} 도구`, path: primaryPath }, { label: "전체 도구", path: "/tools" }, { label: "블로그", path: "/blog" }],
     tags: [mainKeyword, "도구 사용법", "체크리스트"], thumbnail: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1600&auto=format&fit=crop",
-    qualityScore: 95, duplicateStatus: "pass", cannibalizationStatus: "pass", body: editorialDrafts[slug] ?? bodyFor(topic, index),
+    qualityScore: 95, duplicateStatus: "pass", cannibalizationStatus: "pass", body: withExternalSource(slug, editorialDrafts[slug] ?? bodyFor(topic, index)),
   };
 });
 
