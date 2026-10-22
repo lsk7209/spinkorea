@@ -39,6 +39,11 @@
   ],
   "redirects": [
     {
+      "source": "/blog/strong-password-guide",
+      "destination": "/blog/password-security-guide",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.spinkorea.kr" }],
       "destination": "https://spinkorea.kr/:path*",

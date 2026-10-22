@@ -230,9 +230,9 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "password-security-guide",
-    title: "강력한 비밀번호 만들기: 해킹으로부터 계정을 지키는 완벽 가이드",
+    title: "강력한 비밀번호 만들기: 계정을 지키는 조건과 관리법",
     description:
-      "매년 수백만 개의 계정이 해킹됩니다. 안전한 비밀번호를 만들고 관리하는 방법을 알아보세요.",
+      "피해야 할 비밀번호 유형, 길이·무작위성 기준, 비밀번호 관리자와 2단계 인증, NIST 최신 지침까지 정리했습니다.",
     date: "2025-12-12",
     tags: ["보안", "비밀번호", "팁", "인터넷"],
     thumbnail:
@@ -241,24 +241,31 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
       <div className="space-y-6 text-gray-300 leading-relaxed">
         <p>
           "123456", "password", "qwerty"... 여전히 많은 사람들이 이런 비밀번호를
-          사용합니다. 2023년 기준, 가장 많이 사용되는 비밀번호 상위 10개는 1초도
-          안 되어 해킹될 수 있습니다. 오늘은 <strong>강력한 비밀번호</strong>를
-          만들고 관리하는 방법을 알아봅니다.
+          사용합니다. 이런 흔한 비밀번호는 공격자가 가장 먼저 시도하는 목록에
+          들어 있어 방어가 거의 되지 않습니다. 이 글은{" "}
+          <strong>강력한 비밀번호</strong>의 조건과 관리 방법을 정리합니다.
         </p>
 
         <h2 className="text-2xl font-bold text-white mt-8 mb-4">
           취약한 비밀번호의 위험성
         </h2>
         <p>
-          해커들은 '브루트 포스(Brute Force)' 공격으로 초당 수십억 개의 비밀번호
-          조합을 시도할 수 있습니다. 8자리 숫자로만 된 비밀번호는 단 몇 초 만에
-          뚫립니다.
+          유출된 비밀번호 해시 파일을 내려받아 오프라인에서 대입하는 공격은
+          해시 방식과 장비에 따라 초당 수십억 번까지 시도할 수 있습니다. 이
+          조건에서는 8자리 숫자만으로 된 비밀번호가 짧은 시간 안에 풀립니다.
+          반대로 로그인 시도 횟수를 제한하는 온라인 서비스에서는 같은 비밀번호도
+          훨씬 오래 버팁니다. 그래서 길이와 무작위성, 그리고 서비스마다 다른
+          비밀번호가 함께 필요합니다.
         </p>
-        <div className="bg-red-500/10 border border-red-500/30 p-4 rounded-lg">
-          <p className="text-red-300">
-            ⚠️ 피해야 할 비밀번호: 생일, 전화번호, 연속된 숫자, 키보드
-            패턴(qwerty), 이름+생년월일 조합
-          </p>
+        <div className="bg-red-500/10 border border-red-500/30 p-5 rounded-xl">
+          <p className="font-bold text-red-400 mb-3">🚫 피해야 할 비밀번호</p>
+          <ul className="space-y-1 text-sm">
+            <li>• 연속 숫자: 123456, 111111, 12345678</li>
+            <li>• 키보드 패턴: qwerty, asdfgh, zxcvbn</li>
+            <li>• 개인정보 포함: 생년월일, 이름, 전화번호</li>
+            <li>• 단순 단어: password, admin, login, welcome</li>
+            <li>• 짧은 비밀번호: 8자 미만</li>
+          </ul>
         </div>
 
         <h2 className="text-2xl font-bold text-white mt-8 mb-4">
@@ -286,8 +293,9 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
           >
             비밀번호 생성기
           </Link>
-          를 활용해보세요. 암호학적으로 안전한 랜덤 비밀번호를 즉시 생성할 수
-          있습니다.
+          를 활용해보세요. 암호학적으로 안전한 난수로 비밀번호를 생성합니다.
+          길이는 16자 이상, 문자 종류는 모두 켜 두고, 만든 비밀번호는 비밀번호
+          관리자에 저장하세요.
         </p>
 
         <h2 className="text-2xl font-bold text-white mt-8 mb-4">
@@ -313,6 +321,17 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
             자신의 정보가 유출되었는지 확인하세요.
           </li>
         </ol>
+        <p className="text-sm text-gray-400">
+          참고:{" "}
+          <a
+            href="https://pages.nist.gov/800-63-4/sp800-63b.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neon-primary hover:underline"
+          >
+            NIST SP 800-63B 디지털 신원 지침(인증·수명주기 관리)
+          </a>
+        </p>
 
         <h2 className="text-2xl font-bold text-white mt-8 mb-4">
           기억하기 쉬운 강력한 비밀번호 만들기
@@ -1275,151 +1294,6 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
             SpinFlow 무료 QR코드 생성기
           </Link>
           로 지금 바로 나만의 QR코드를 만들어보세요!
-        </p>
-      </div>
-    ),
-  },
-  {
-    slug: "strong-password-guide",
-    title: "강력한 비밀번호 만들기 완벽 가이드 - 해킹에서 내 계정 지키는 법",
-    description:
-      "123456, qwerty... 아직도 이런 비밀번호를 쓰고 계신가요? 해커도 못 뚫는 강력한 비밀번호 만드는 법과 무료 비밀번호 생성기 활용법을 알려드립니다.",
-    date: "2026-01-12",
-    tags: ["보안", "비밀번호", "해킹방지", "가이드"],
-    thumbnail:
-      "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2670&auto=format&fit=crop",
-    content: (
-      <div className="space-y-6 text-gray-300 leading-relaxed">
-        <p>
-          2024년 가장 많이 사용된 비밀번호 1위는 여전히{" "}
-          <strong className="text-white">"123456"</strong>입니다. 해커들은 이런
-          단순한 비밀번호를 <strong>1초도 안 걸려</strong> 뚫어버립니다. 계정
-          해킹의 80% 이상이 취약한 비밀번호 때문에 발생합니다. 오늘부터 강력한
-          비밀번호로 내 소중한 계정을 지키세요.
-        </p>
-
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          취약한 비밀번호 유형
-        </h2>
-        <div className="bg-red-500/10 border border-red-500/30 p-5 rounded-xl">
-          <p className="font-bold text-red-400 mb-3">
-            🚫 절대 사용하면 안 되는 비밀번호
-          </p>
-          <ul className="space-y-1 text-sm">
-            <li>• 연속 숫자: 123456, 111111, 12345678</li>
-            <li>• 키보드 패턴: qwerty, asdfgh, zxcvbn</li>
-            <li>• 개인정보 포함: 생년월일, 이름, 전화번호</li>
-            <li>• 단순 단어: password, admin, login, welcome</li>
-            <li>• 짧은 비밀번호: 8자 미만</li>
-          </ul>
-        </div>
-
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          강력한 비밀번호의 조건
-        </h2>
-        <div className="space-y-3">
-          {[
-            {
-              icon: "✅",
-              title: "최소 12자 이상",
-              desc: "8자는 브루트포스 공격으로 몇 분이면 뚫립니다. 12자 이상을 권장합니다.",
-            },
-            {
-              icon: "✅",
-              title: "대소문자 혼용",
-              desc: "대문자와 소문자를 섞어 경우의 수를 52배 늘리세요.",
-            },
-            {
-              icon: "✅",
-              title: "숫자 포함",
-              desc: "숫자를 추가하면 경우의 수가 62배로 증가합니다.",
-            },
-            {
-              icon: "✅",
-              title: "특수문자 포함",
-              desc: "!@#$%^&* 등을 추가하면 해독 시간이 수천 배 늘어납니다.",
-            },
-            {
-              icon: "✅",
-              title: "사이트별 다른 비밀번호",
-              desc: "한 곳이 유출되면 모든 계정이 위험해집니다.",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-3 bg-white/5 p-4 rounded-lg"
-            >
-              <span className="text-xl">{item.icon}</span>
-              <div>
-                <p className="font-bold text-white">{item.title}</p>
-                <p className="text-sm text-gray-400 mt-1">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          무료 비밀번호 생성기 활용하기
-        </h2>
-        <p>
-          완벽한 비밀번호를 직접 생각해내기 어렵다면{" "}
-          <Link
-            to="/tools/random-password"
-            className="text-neon-primary hover:underline"
-          >
-            SpinFlow 비밀번호 생성기
-          </Link>
-          를 사용하세요. 암호학적으로 안전한 난수를 사용해 예측 불가능한 강력한
-          비밀번호를 즉시 생성합니다.
-        </p>
-        <div className="bg-white/5 p-4 rounded-lg">
-          <p className="text-neon-primary font-bold mb-2">
-            💡 비밀번호 생성기 활용 팁
-          </p>
-          <ul className="space-y-1 text-sm">
-            <li>• 길이는 최소 16자 이상으로 설정하세요.</li>
-            <li>• 대소문자 + 숫자 + 특수문자 모두 활성화하세요.</li>
-            <li>• 생성된 비밀번호는 비밀번호 관리자 앱에 저장하세요.</li>
-          </ul>
-        </div>
-
-        <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-          비밀번호 관리 꿀팁
-        </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong>비밀번호 관리자 사용:</strong> 1Password, Bitwarden 등을
-            사용하면 수십 개의 강력한 비밀번호를 기억할 필요가 없습니다.
-          </li>
-          <li>
-            <strong>2단계 인증(2FA) 활성화:</strong> 비밀번호가 유출되더라도 2차
-            인증으로 보호할 수 있습니다.
-          </li>
-          <li>
-            <strong>유출 시에만 변경:</strong> NIST(미국 국립표준기술연구소)
-            지침은 유출 정황이 없는 비밀번호를 정기적으로 강제 변경하는 것을
-            권장하지 않습니다. 계정별로 다른 비밀번호를 사용하고, 유출이
-            확인되면 그때 바꾸는 방식이 더 효과적입니다.
-          </li>
-          <li>
-            <strong>유출 확인:</strong> haveibeenpwned.com에서 내 이메일이
-            유출됐는지 확인하세요.
-          </li>
-        </ul>
-
-        <hr className="border-white/10 my-8" />
-
-        <h3 className="text-xl font-bold text-white mb-4">결론</h3>
-        <p>
-          강력한 비밀번호는 온라인 보안의 첫 번째 방어선입니다. 오늘 바로{" "}
-          <Link
-            to="/tools/random-password"
-            className="text-neon-primary hover:underline"
-          >
-            SpinFlow 비밀번호 생성기
-          </Link>
-          로 안전한 비밀번호를 만들고, 내 소중한 계정을 지키세요. 5분 투자로
-          해킹 걱정 없는 디지털 생활을 시작할 수 있습니다!
         </p>
       </div>
     ),
