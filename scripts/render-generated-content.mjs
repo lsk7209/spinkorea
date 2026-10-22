@@ -9,7 +9,13 @@ const ROOT = process.cwd();
 const CONTENT_PLAN_PATH = path.join(ROOT, "src", "data", "content-plan.generated.json");
 const TOOL_OUTPUT_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-tool-html.json");
 const OUTPUT_PATH = path.join(ROOT, "node_modules", ".cache", "spinkorea-generated-content-html.json");
-const BUILD_NOW = new Date(process.env.BUILD_NOW ?? process.env.PUBLISH_NOW ?? Date.now());
+const TRUST_PAGES = [
+  ["/about", "About"],
+  ["/contact", "Contact"],
+  ["/privacy", "PrivacyPolicy"],
+  ["/terms", "Terms"],
+];
+const BUILD_NOW =new Date(process.env.BUILD_NOW ?? process.env.PUBLISH_NOW ?? Date.now());
 
 function getPublishAt(post) {
   return post.publishAt ?? `${post.date}T00:00:00+09:00`;
@@ -86,9 +92,21 @@ try {
       console.warn(`[render-generated-content] tool SSR failed for ${routePath}: ${error.message}`);
     }
   }
+  // 신뢰 페이지: 운영 정보·연락처 등 React 본문을 정적 HTML에도 그대로 싣는다.
+  for (const [routePath, file] of TRUST_PAGES) {
+    try {
+      const mod = await server.ssrLoadModule(`/src/pages/${file}.tsx`);
+      toolHtml[routePath] = renderToStaticMarkup(
+        createElement(MemoryRouter, { initialEntries: [routePath] }, createElement(mod.default)),
+      );
+    } catch (error) {
+      toolFailed += 1;
+      console.warn(`[render-generated-content] page SSR failed for ${routePath}: ${error.message}`);
+    }
+  }
   fs.mkdirSync(path.dirname(TOOL_OUTPUT_PATH), { recursive: true });
   fs.writeFileSync(TOOL_OUTPUT_PATH, `${JSON.stringify(toolHtml)}\n`);
-  console.log(`[render-generated-content] tools rendered=${Object.keys(toolHtml).length} failed=${toolFailed}`);
+  console.log(`[render-generated-content] tools+pages rendered=${Object.keys(toolHtml).length} failed=${toolFailed}`);
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, `${JSON.stringify(staticContentBySlug)}\n`);

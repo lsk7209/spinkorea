@@ -772,11 +772,14 @@ function renderShell(page, posts = []) {
     ? [guidance.privacy.inputProcessing, guidance.privacy.thirdParty, guidance.privacy.controls, guidance.privacy.rightsContact]
     : page.path === "/contact" ? [guidance.contact.summary, guidance.contact.emailCaution, guidance.contact.publicIssueCaution, "공개 오류 제보에는 관련 URL, 브라우저, 더미 입력값과 재현 순서를 남겨 주세요."]
     : (trustPageBodies[page.path] ?? []);
-  const trustLinks = page.path === "/privacy" ? guidance.privacy.links
+  // 신뢰 페이지는 React 본문 서버 렌더링 결과를 우선 쓰고, 없으면 고정 문단·링크로 대체한다.
+  const renderedTrustHtml = TRUST_PAGE_PATHS.has(page.path) ? getToolHtml(page.path) : undefined;
+  const trustLinks = renderedTrustHtml ? []
+    : page.path === "/privacy" ? guidance.privacy.links
     : page.path === "/contact" ? [{ name: "GitHub Issues — 공개 오류 제보", url: guidance.contact.issueUrl }, { name: `이메일 — 개인정보·비공개 문의 (${guidance.contact.email})`, url: "mailto:" + guidance.contact.email }] : [];
-  const trustBody = trustParagraphs
-    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
-    .join("\n");
+  const trustBody = renderedTrustHtml
+    ? demoteH1(renderedTrustHtml)
+    : trustParagraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n");
   const homeTrustBody = homeBody.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("\n");
   const toolGuide = renderToolGuide(page);
   const directoryItems = page.path === "/blog"
@@ -835,6 +838,7 @@ function renderShell(page, posts = []) {
     <a href="/contact/">Contact</a>
     <a href="/privacy/">Privacy Policy</a>
     <a href="/terms/">Terms of Use</a>
+    <a href="mailto:${guidance.contact.email}">${guidance.contact.email}</a>
   </nav>
   ${page.path === "/tools/text-counter" ? "" : `<section id="related-tools">
     <h2>관련 무료 도구</h2>
@@ -867,12 +871,19 @@ const trustedToolReferences = {
   },
 };
 
+const TRUST_PAGE_PATHS = new Set(["/about", "/contact", "/privacy", "/terms"]);
+
 let toolHtmlCache;
 function getToolHtml(pagePath) {
   if (toolHtmlCache === undefined) {
     toolHtmlCache = fs.existsSync(TOOL_HTML_PATH) ? JSON.parse(fs.readFileSync(TOOL_HTML_PATH, "utf8")) : {};
   }
   return toolHtmlCache[pagePath];
+}
+
+// 셸이 이미 <h1>을 가지므로 서버 렌더링 본문의 <h1>은 <h2>로 낮춘다.
+function demoteH1(html) {
+  return html.replace(/<h1(\s|>)/g, "<h2$1").replace(/<\/h1>/g, "</h2>");
 }
 
 function renderToolGuide(page) {
@@ -932,7 +943,7 @@ function renderToolGuide(page) {
   if (toolHtml) {
     return `<div id="tool-guide" class="tool-guide">
     <h2>${escapeHtml(page.heading)} 사용 안내</h2>
-    ${toolHtml.replace(/<h1(\s|>)/g, "<h2$1").replace(/<\/h1>/g, "</h2>")}
+    ${demoteH1(toolHtml)}
     ${detailBody}
     ${referenceBody}
     <h2>결과 해석과 주의사항</h2>
