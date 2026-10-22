@@ -747,8 +747,9 @@ function structuredDataForPage(page) {
   };
 }
 
+// 브라우저 번들용 메타데이터. 비공개(검토 전) 생성 글은 SPA에서도 404라 싣지 않는다.
 function toRuntimePostMetadata(posts) {
-  return posts.map(({ slug, title, description, date, publishAt, updatedAt, tags, thumbnail, qualityScore, source }) => ({
+  return posts.filter((post) => post.source !== "generated").map(({ slug, title, description, date, publishAt, updatedAt, tags, thumbnail, qualityScore, source }) => ({
     slug,
     title,
     description,
