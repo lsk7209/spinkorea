@@ -1,29 +1,28 @@
-# Status | 마지막: 2026-05-06
+# Status | 마지막: 2026-10-22
 
 ## 현재 작업
-GitHub Actions Node.js 20 deprecation 경고 대응 중.
+AdSense 신청 준비. PR #14·#15 배포 완료(`47d5023`), 라이브 점검 통과.
 
 ## 최근 변경 (최근 5개만)
-- 05-06: Scheduled publish 워크플로우 액션을 `actions/checkout@v6`, `actions/setup-node@v6`로 갱신
-- 05-06: 메인 title/description/H1을 `온라인 룰렛`, `무료 룰렛`, `스핀 돌리기` 노출 쿼리 기준으로 개선
-- 05-06: 2026-05-06 09:00 KST 예약글 `weighted-choice-rule`이 sitemap/RSS/llms에 포함
-- 05-06: GSC sitemap API 재제출 성공, submitted URL 96 / warnings 0 / errors 0 확인
-- 05-06: IndexNow HOST를 env로 오버라이드 가능하게 변경, 기본값은 운영 canonical `www.spinkorea.kr`
+- 10-22: PR #15 빌드 수정(`node_modules/.cache` 미생성 시 ENOENT) 후 Scheduled publish로 배포
+- 10-22: PR #14 미검토 생성 글 376편 비공개(404), 404 화면 AdSense 제거, 연락처 `cs@spinkorea.kr` 통일
+- 10-22: 도구 51종 정적 HTML을 SSR 결과로 교체, 핵심 도구 10종 계산 방식 해설 추가
+- 09-30: 계산기 경계값·시간대 오류 수정(PR #12)
+- 05-06: 메인 title/description/H1 노출 쿼리 기준 개선
 
 ## TODO
-- [ ] Bing Webmaster Tools IndexNow 403은 BWT IndexNow 탭에서 사이트 권한/수신 로그 재확인
-- [ ] AdSense OAuth 인증 후 `npm run audit:adsense -- --code=...` 재실행
-- [ ] GSC sitemap 발견 URL 갱신 상태 확인
+- [ ] 콘텐츠 청크(450~640KB) 분리 — 생성 파이프라인 변경 필요
+- [ ] 편집 글 275편 범용 소제목 개선, 외부 링크 없는 23편 보강
+- [ ] `npm run verify:browser` 회귀 검증
+- [ ] (사용자) AdSense CMP 설정·GSC 색인 상태 확인
+- [ ] Bing IndexNow 403 재확인
 
 ## 결정사항
-- WordPress 아님: 플러그인/테마 최적화 대상 없음
-- 운영 canonical은 현재 Vercel 리다이렉트 기준에 맞춰 `https://www.spinkorea.kr` 유지
-- 예약 발행: 2026-05-05 18:00 KST부터 5시간 간격 유지
-- 마지막 예약 글: 2026-09-07 13:00 KST
-- 생성 글 SEO: BlogPosting + FAQPage JSON-LD를 함께 출력
-- 생성 글 성능: 본문 데이터는 60개 단위 JSON 청크로 분리
+- 배포는 `main` 머지가 아니라 `Scheduled publish` deploy hook으로만
+- 운영 canonical은 `https://www.spinkorea.kr` 유지
+- `source: generated` 글은 데이터 보존, 정적 HTML 미생성(404)
 
 ## 주의
 - 배포 hook URL 출력 금지, GitHub Secret으로만 사용
-- GSC URL-prefix 속성은 `https://spinkorea.kr/sitemap.xml` 제출만 API 처리 가능하나 실제 운영 canonical은 www
-- Bing IndexNow 403은 optional warning으로 유지 중, Naver IndexNow는 200 확인
+- `/about` 운영 정보·푸터 이메일은 정적 HTML이 아닌 React 렌더(브라우저에서 확인)
+- 빌드 시 `public/{sitemap,rss,llms}`·`post-metadata*.json` 변경은 의도치 않은 것 → 되돌릴 것
