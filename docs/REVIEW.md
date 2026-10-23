@@ -1,3 +1,13 @@
+# Production verification — 2026-10-23
+
+배포 완료: [운영 사이트](https://spinkorea.kr), [PR30](https://github.com/lsk7209/spinkorea/pull/30), [배포 실행39892879387](https://github.com/lsk7209/spinkorea/actions/runs/39892879387). 원격 main·운영 marker SHA `f3b84b9056b9a0ba86200b2454875f98c41cb78e` 일치. Production 배포7269111209 성공. notify=false이며 Google/IndexNow 단계 skipped 확인.
+
+운영 브라우저에서 터치 편집·2명 추첨·실제 브라우저 클립보드·발표/Escape·AX 이름 확인, 주요11경로200·없는 경로404·H1단일·가로 넘침0·pageerrors0·광고 요청0을 확인했습니다. robots.txt/sitemap.xml200, 표본 HTML 기본 광고 script 없음. 모바일 제한 환경 LCP1432/812/904ms(중앙값904ms), CLS0. 실물 기기·실제 스크린리더·필드 INP·계정/CMP는 미확인입니다. 이전 로컬 기록의 '배포 미실행'은 아래 당시 상태이며 현재 상태는 이 문단과 HANDOFF가 우선합니다.
+
+증거: `output/release-20261023/summary.json`, `production-marker.json`, `deployment-result.json`, `live.json`, `public-http.json`, [운영 모바일 캡처](../output/release-20261023/live-mobile.png). 실제 배포 후 기록도 Git에 푸시합니다. 위 SHA와 배포 식별자는 기능 변경을 검증한 릴리스 기준이며 이후 문서 전용 커밋과 구분합니다.
+
+--- Release readiness history ---
+
 # Release readiness continuation — 2026-10-23
 
 사용자가 권장 순서(기기/성능 점검 → 배포 → 운영 화면 확인)를 승인하여 출시 절차를 진행합니다. `scripts/verify-release-browser.mjs`는 실제 빌드 산출물과 운영 URL을 같은 기준으로 확인합니다.

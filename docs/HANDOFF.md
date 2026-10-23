@@ -1,3 +1,16 @@
+# Production release verified — 2026-10-23 12:06 KST
+
+RELEASED_VERIFIED. User authorized the recommended device/performance → deployment → live verification sequence. PR [#30](https://github.com/lsk7209/spinkorea/pull/30) squash merged as `f3b84b9056b9a0ba86200b2454875f98c41cb78e`. Preview and Hosting Cost Guard passed; [Scheduled publish39892879387](https://github.com/lsk7209/spinkorea/actions/runs/39892879387) succeeded with notify=false and both Google/IndexNow steps skipped. GitHub Production deployment7269111209 succeeded; deployment URL https://spinkorea-eowoi26hp-limsubs-projects.vercel.app . Fresh https://spinkorea.kr/deployment-status.json confirms the same SHA.
+
+Production browser: touch edit/2-person batch/real Chromium clipboard/presentation/Escape PASS, AX unnamed interactive0,11 routes200/H1 single/no mobile overflow, unknown route404, pageerrors0/ad requests0. Public HTTP additionally confirms robots/sitemap200 and no default AdSense script in sampled HTML. Mobile lab CPU4/1.6Mbps/150ms/cache disabled: LCP1432/812/904ms, median904ms; CLS0. This is lab evidence, not field INP or real-device proof. Physical Android unavailable (adb list empty), actual screenreader and account/CMP state remain unverified.
+
+Local gates: verify:local PASS(unit143/API15/build721); browser regression11/11; calculator browser7/7; deploy guard8/8; hosting cost audit no critical; production npm audit0 vulnerabilities. No new dependencies. Original referenced development prompt remains unavailable.
+
+Evidence: output/release-20261023/{summary,production-marker,deployment-result,local,live,public-http}.json and live-mobile.png; local logs in output/redesign-release-*.log. Rollback baseline54fe3b30b5ea8d96eb842a56fe327c68ccd9796e; focused revert of release merge via PR and the same notify=false workflow. Never force push/reset unrelated work.
+
+Stop: no further release/account/DNS/DB/notification changes. Existing unrelated .gitignore/untracked files and older PRs28/29 retained. Release source is on remote main and production; final handoff/status additions are included in the subsequent documentation push. The functional release SHA and deployment evidence above identify the verified product change.
+
+--- Release preparation history ---
 # Release candidate — 2026-10-23
 
 User authorized the recommended device/performance → deployment → live verification sequence. Built-site touch/real Chromium clipboard/AX checks passed; lab LCP median868ms, CLS0, max observed long task775ms. Physical Android unavailable (adb list empty); actual screenreader/field INP still unverified. See docs/REVIEW.md for environment and limits.
