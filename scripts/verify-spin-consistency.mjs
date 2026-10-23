@@ -3,37 +3,14 @@ import fs from 'node:fs';
 
 const read = (path) => fs.readFileSync(path, 'utf8');
 const home = read('src/pages/Home.tsx');
-const editor = read('src/components/ItemEditor.tsx');
-const presets = read('src/components/RecommendedPresets.tsx');
-
-assert.match(
-  home,
-  /const handleUpdateItems = useCallback\([\s\S]*?if \(isSpinning\) \{\s*return false;\s*\}/,
-  'all item mutations must fail closed while the wheel is spinning',
-);
-assert.match(home, /<ItemEditor[^>]*isSpinning={isSpinning}/s, 'desktop editor receives the spin lock');
-assert.match(home, /<RecommendedPresets[^>]*isSpinning={isSpinning}/s, 'recommended presets receive the spin lock');
-assert.equal(
-  (home.match(/if \(!handleUpdateItems\(presetItems\)\) \{\s*return;\s*\}/g) ?? []).length,
-  2,
-  'recommended and deep-link presets only continue after an accepted item update',
-);
-assert.match(
-  home,
-  /onClick=\{\(\) => setIsEditorModalOpen\(true\)\}[\s\S]*?disabled=\{isSpinning\}/,
-  'mobile item editor cannot open during a spin',
-);
-assert.match(
-  home,
-  /onClick=\{\(\) => setIsTemplateModalOpen\(true\)\}[\s\S]*?disabled=\{isSpinning\}/,
-  'mobile template picker cannot open during a spin',
-);
-assert.equal(
-  (editor.match(/disabled=\{isSpinning\}/g) ?? []).length,
-  2,
-  'desktop preset buttons and textarea expose native disabled state',
-);
-assert.match(presets, /disabled=\{isSpinning\}/, 'recommended preset buttons expose native disabled state');
-assert.match(presets, /aria-busy=\{isSpinning\}/, 'preset group exposes the temporary busy state');
+assert.match(home, /if \(isSpinning\) return false;/, 'item edits are rejected during a draw');
+assert.match(home, /disabled=\{isSpinning\}/, 'editor controls expose the spin lock');
+assert.match(home, /const draw = spin\(\);\s*if \(!draw\) return;/, 'draw side effects follow an accepted spin');
+assert.match(home, /pendingRef\.current = \{ candidates: snapshot, roster: \[\.\.\.items\], count: drawCount, autoExclude, round: round \+ 1 \}/, 'batch conditions and original labels are captured at start');
+assert.match(home, /finishBatch\(pending\.candidates, draw\.index, pending\.count\)/, 'batch uses the wheel result and captured start conditions');
+assert.match(home, /setExcluded\(\(previous\) => new Set/, 'auto exclusion is separate from the saved source list');
+assert.match(home, /if \(isSpinning \|\| ticket\) return;/, 'completed wheel is held while its ticket is visible');
+assert.match(home, /if \(!areItemsEqual\(wheelItems, candidateNames\)\) \{\s*setWheelItems\(candidateNames\)/, 'next accepted draw updates the visible wheel snapshot');
+assert.match(home, /saveResult\(winners\.map/, 'stored result includes all batch winners');
 
 console.log('SPIN_CONSISTENCY_OK');

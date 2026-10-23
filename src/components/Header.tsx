@@ -1,111 +1,16 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
-
+import { useEffect, useRef, useState } from 'react';
 export default function Header() {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const location = useLocation();
-
-    // Scroll effect
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    // Close mobile menu on route change
-    useEffect(() => {
-        setIsMobileMenuOpen(false);
-    }, [location.pathname]);
-
-    const navLinks = [
-        { name: '룰렛돌리기', path: '/' },
-        { name: '유틸리티', path: '/tools' },
-        { name: '블로그', path: '/blog' },
-        { name: '소개', path: '/about' },
-    ];
-
-    const isActive = (path: string) => {
-        if (path === '/' && location.pathname !== '/') return false;
-        return location.pathname.startsWith(path);
-    };
-
-    return (
-        <>
-            <header
-                className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen
-                    ? 'bg-white/90 backdrop-blur-xl border-b border-slate-200 shadow-sm'
-                    : 'bg-white/80 backdrop-blur-xl border-b border-slate-100'
-                    }`}
-            >
-                <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-                    {/* Logo */}
-                    <Link
-                        to="/"
-                        className="flex items-center gap-2 group"
-                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    >
-                        <span className="text-2xl font-black bg-gradient-to-r from-aurora-primary to-aurora-accent bg-clip-text text-transparent group-hover:opacity-90 transition-opacity">
-                            SpinFlow
-                        </span>
-                    </Link>
-
-                    {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-1">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.path}
-                                to={link.path}
-                                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                                className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${isActive(link.path)
-                                    ? 'text-cyan-800 bg-cyan-50'
-                                    : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100'
-                                    }`}
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
-                    </nav>
-
-                    {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden p-2 text-slate-700 hover:text-slate-950 transition-colors"
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
-                </div>
-
-                {/* Mobile Nav Dropdown */}
-                {isMobileMenuOpen && (
-                    <div className="md:hidden absolute top-16 left-0 w-full bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-2xl animate-slide-down">
-                        <nav className="flex flex-col p-4 gap-2">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.path}
-                                    to={link.path}
-                                    onClick={() => {
-                                        setIsMobileMenuOpen(false);
-                                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                                    }}
-                                    className={`p-3 rounded-xl text-base font-bold transition-all ${isActive(link.path)
-                                        ? 'text-cyan-800 bg-cyan-50'
-                                        : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100'
-                                        }`}
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
-                        </nav>
-                    </div>
-                )}
-            </header>
-            {/* Spacer for fixed header to prevent content overlap */}
-            {/* <div className="h-16" /> Only needed if header is always opaque/taking space, currently overlaying hero */}
-        </>
-    );
+ const [open,setOpen]=useState(false); const location=useLocation(); const trigger=useRef<HTMLButtonElement>(null);
+ useEffect(()=>setOpen(false),[location.pathname]);
+ const links=[['룰렛','/'],['도구 모음','/tools'],['사용 가이드','/blog'],['소개','/about']];
+ const active=(path:string)=>path==='/' ? ['/', '/spinflow'].includes(location.pathname) : location.pathname.startsWith(path);
+ return <header className="site-header" onKeyDown={e=>{if(e.key==='Escape'){setOpen(false);trigger.current?.focus();}}}>
+ <a className="skip-link" href="#main-content">본문으로 건너뛰기</a>
+ <div className="site-header-inner"><Link to="/" className="brand"><strong>SpinFlow</strong><span>스핀코리아</span></Link>
+ <nav className="desktop-nav" aria-label="주 메뉴">{links.map(([label,path])=><Link key={path} to={path} aria-current={active(path)?'page':undefined}>{label}</Link>)}</nav>
+ <button ref={trigger} className="menu-toggle" aria-label={open?'메뉴 닫기':'메뉴 열기'} aria-expanded={open} aria-controls="mobile-navigation" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></div>
+ {open&&<nav id="mobile-navigation" className="mobile-navigation" aria-label="모바일 주 메뉴">{links.map(([label,path])=><Link key={path} to={path} aria-current={active(path)?'page':undefined}>{label}</Link>)}</nav>}
+ </header>;
 }

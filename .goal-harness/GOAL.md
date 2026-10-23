@@ -1,3 +1,7 @@
+# Redesign goal — 2026-10-23
+Deliver local functional SpinFlow 스핀코리아 redesign from four supplied reference boards and redesign spec. Preserve routes and exact draw identities/results, fixed batch uniqueness, privacy, accessibility and P0 correctness. No deployment, publish, account change, dependency installation or unrelated cleanup. Success: actual-state home/editor/results/presentation/team reuse, common paper/ink typography, guide templates, disabled advertising without slots; official salary table and dated pension limits plus actual retirement wage period; fresh tests/build/browser and independent review. Operational accounts and physical devices remain unverified.
+
+--- Historical record ---
 # Current release goal — 2026-09-20 08:59 대한민국 표준시
 
 COMPLETE: finish SPK-014 article/BMI corrections and deploy the combined audited local repairs through normal GitHub main push, then verify the exact connected deployment and public site. Runtime ce9d881021c0e123c1e5721543de47e4ca296770; Production6547101903 success; live30/30 and HTTP9/9. Stop condition met. No direct Vercel/account writes or expanded operational audit. Earlier goals below are historical.

@@ -14,16 +14,7 @@ import { SPIN_DURATION_MS } from '@/utils/draw-controller';
 import { computeTargetRotation } from '@/utils/wheel-geometry';
 
 // 개선된 색상 팔레트
-const solidColors = [
-  '#00d9ff',
-  '#ff006e',
-  '#00ff88',
-  '#ffaa00',
-  '#aa00ff',
-  '#00aaff',
-  '#ff0066',
-  '#66ff00',
-];
+const solidColors = ['#D9E9A5', '#F4C4AF', '#BCDCD6', '#F6E5AF'];
 
 interface RouletteWheelProps {
   items: string[];
@@ -45,9 +36,9 @@ export default function RouletteWheel({
   spinDurationMs = SPIN_DURATION_MS,
   reducedMotion = false,
 }: RouletteWheelProps) {
-  const radius = size / 2;
-  const centerX = radius;
-  const centerY = radius;
+  const radius = size / 2 - 16;
+  const centerX = size / 2;
+  const centerY = size / 2;
 
   // 섹터 각도 계산
   const sectors = useMemo(() => {
@@ -114,7 +105,7 @@ export default function RouletteWheel({
   }, [isSpinning, winningIndex, items.length, reducedMotion]);
 
   return (
-    <div className="relative flex items-center justify-center" style={{ width: size, height: size }}>
+    <div className="roulette-wheel relative flex items-center justify-center" style={{ width: size, height: size }}>
       <svg
         width={size}
         height={size}
@@ -131,6 +122,7 @@ export default function RouletteWheel({
           </filter>
         </defs>
 
+        <g aria-hidden="true">{Array.from({length:72},(_,i)=><line key={i} x1={centerX} y1={4} x2={centerX} y2={i%6===0?12:8} stroke="#62685F" strokeWidth="1" transform={`rotate(${i*5} ${centerX} ${centerY})`}/>)}</g>
         <motion.g
           animate={{
             rotate: rotation,
@@ -159,10 +151,10 @@ export default function RouletteWheel({
                 </defs>
                 <path
                   d={sector.path}
-                  fill={`url(#gradient-${sector.index})`}
-                  stroke={isWinner ? '#00d9ff' : 'rgba(0, 217, 255, 0.1)'}
+                  fill={solidColor}
+                  stroke={isWinner ? '#232623' : '#7A8175'}
                   strokeWidth={isWinner ? 3 : 1}
-                  filter={isWinner ? 'url(#glow)' : undefined}
+
                   className={isWinner ? 'neon-glow' : ''}
                   style={{
                     transition: 'all 0.3s ease',
@@ -173,13 +165,13 @@ export default function RouletteWheel({
                   y={sector.textY}
                   textAnchor="middle"
                   dominantBaseline="middle"
-                  fill={isWinner ? '#ffffff' : 'rgba(255, 255, 255, 0.9)'}
-                  fontSize={Math.max(11, size / items.length / 2.8)}
+                  fill="#232623"
+                  fontSize={Math.min(22, Math.max(10, size / items.length / 2.8))}
                   fontWeight={isWinner ? 'bold' : '600'}
-                  transform={`rotate(${sector.textAngle}, ${sector.textX}, ${sector.textY})`}
+
                   className="select-none"
                   style={{
-                    textShadow: isWinner ? '0 0 10px rgba(0, 217, 255, 0.8)' : '0 1px 2px rgba(0, 0, 0, 0.3)',
+                    textShadow: 'none',
                     transition: 'all 0.3s ease',
                   }}
                 >
@@ -212,10 +204,10 @@ export default function RouletteWheel({
         >
           <polygon
             points={`${centerX},${centerY - radius + 20} ${centerX - 24},${centerY - radius - 20} ${centerX + 24},${centerY - radius - 20}`}
-            fill="url(#pointer-gradient)"
+            fill="#C44524"
             stroke="rgba(255,255,255,0.6)"
             strokeWidth={2}
-            filter="url(#glow)"
+
             className="neon-glow"
             style={{
               pointerEvents: 'none',
@@ -231,7 +223,7 @@ export default function RouletteWheel({
           disabled={isSpinning || items.length === 0}
           className={`
             absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-            w-16 h-16 rounded-full z-20
+            wheel-center w-16 h-16 rounded-full z-20
             bg-white border-4 border-gray-100 shadow-xl
             flex items-center justify-center
             text-aurora-primary font-black text-sm tracking-widest

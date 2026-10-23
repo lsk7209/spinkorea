@@ -6,9 +6,13 @@ import {
   isValidBirthDate,
   parseLocalDate,
   parseUnixTimestamp,
+  retirementDateFromLastWorkDay,
+  severanceWagePeriod,
+  formatLocalDate,
   serviceDaysBetween,
   shiftClockTime,
 } from '../src/utils/date-calc.ts';
+import { calculatePension, supportedPensionMonthRange } from '../src/utils/pension.ts';
 import { calculateCompound } from '../src/utils/compound-interest.ts';
 
 describe('parseLocalDate', () => {
@@ -131,4 +135,88 @@ describe('calculateCompound', () => {
   it('caps the yearly table at 30 rows', () => {
     assert.equal(calculateCompound({ ...base, years: 50 }).yearly.length, 30);
   });
+});
+
+describe('severanceWagePeriod', () => {
+  const daysFor = (retire) => severanceWagePeriod(parseLocalDate(retire)).days;
+
+  it('counts the calendar days of the 3 months before the retirement date', () => {
+    assert.equal(daysFor('2026-05-01'), 89);
+    assert.equal(daysFor('2026-04-01'), 90);
+    assert.equal(daysFor('2026-07-01'), 91);
+    assert.equal(daysFor('2026-01-01'), 92);
+    assert.equal(daysFor('2024-04-01'), 91);
+  });
+
+  it('reports inclusive start and end dates', () => {
+    const period = severanceWagePeriod(parseLocalDate('2026-05-01'));
+    assert.equal(formatLocalDate(period.start), '2026-02-01');
+    assert.equal(formatLocalDate(period.end), '2026-04-30');
+  });
+
+  it('clamps to month end instead of overflowing', () => {
+    assert.equal(formatLocalDate(severanceWagePeriod(parseLocalDate('2026-05-31')).start), '2026-02-28');
+    assert.equal(formatLocalDate(severanceWagePeriod(parseLocalDate('2024-05-31')).start), '2024-02-29');
+  });
+
+  it('defines the retirement date as the day after the last working day', () => {
+    const retire = retirementDateFromLastWorkDay(parseLocalDate('2026-04-30'));
+    assert.equal(formatLocalDate(retire), '2026-05-01');
+    assert.equal(formatLocalDate(retirementDateFromLastWorkDay(parseLocalDate('2024-02-29'))), '2024-03-01');
+  });
+});
+
+describe('calculatePension', () => {
+  it('uses the limits of the period that contains the reference month', () => {
+    const june = calculatePension(9_000_000, '2026-06');
+    assert.equal(june.upper, 6_370_000);
+    assert.equal(june.standardIncome, 6_370_000);
+    const july = calculatePension(9_000_000, '2026-07');
+    assert.equal(july.upper, 6_590_000);
+    assert.equal(july.lower, 410_000);
+    assert.equal(july.standardIncome, 6_590_000);
+  });
+
+  it('handles values just below, on and above the upper limit', () => {
+    assert.equal(calculatePension(6_589_999, '2026-07').standardIncome, 6_589_000);
+    assert.equal(calculatePension(6_590_000, '2026-07').standardIncome, 6_590_000);
+    assert.equal(calculatePension(6_590_001, '2026-07').standardIncome, 6_590_000);
+    assert.equal(calculatePension(6_369_999, '2026-06').standardIncome, 6_369_000);
+    assert.equal(calculatePension(6_370_001, '2026-06').standardIncome, 6_370_000);
+  });
+
+  it('handles values just below, on and above the lower limit', () => {
+    assert.equal(calculatePension(409_999, '2026-07').standardIncome, 410_000);
+    assert.equal(calculatePension(410_000, '2026-07').standardIncome, 410_000);
+    assert.equal(calculatePension(411_000, '2026-07').standardIncome, 411_000);
+    assert.equal(calculatePension(399_999, '2026-06').standardIncome, 400_000);
+  });
+
+  it('applies the employee rate of the reference year', () => {
+    assert.equal(calculatePension(3_000_000, '2026-10').employeeRate, 0.0475);
+    assert.equal(calculatePension(3_000_000, '2026-10').premium, 142_500);
+  });
+
+  it('returns null for unsupported months and invalid wages', () => {
+    assert.equal(calculatePension(3_000_000, '2025-06'), null);
+    assert.equal(calculatePension(3_000_000, '2027-07'), null);
+    assert.equal(calculatePension(3_000_000, '2026-13'), null);
+    assert.equal(calculatePension(-1, '2026-10'), null);
+    assert.equal(calculatePension(Number.NaN, '2026-10'), null);
+    assert.deepEqual(supportedPensionMonthRange(), { min: '2025-07', max: '2027-06' });
+  });
+});
+
+
+describe('calendar-year retirement eligibility', () => {
+ it('does not mistake 365 days across leap day for a completed year', async () => {
+  const {hasCompletedServiceYear}=await import('../src/utils/date-calc.ts');
+  assert.equal(hasCompletedServiceYear(parseLocalDate('2023-03-01'),parseLocalDate('2024-02-29')),false);
+  assert.equal(hasCompletedServiceYear(parseLocalDate('2023-03-01'),parseLocalDate('2024-03-01')),true);
+  assert.equal(hasCompletedServiceYear(parseLocalDate('2024-02-29'),parseLocalDate('2025-02-28')),true);
+ });
+ it('truncates pension contributions below ten won separately from base truncation',()=>{
+  assert.equal(calculatePension(6590000,'2026-07').premium,313020);
+  assert.equal(calculatePension(6370000,'2026-06').premium,302570);
+ });
 });

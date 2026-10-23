@@ -195,7 +195,7 @@ export default function ToolLayout({
             </header>
 
             {/* Main Content */}
-            <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-8 md:py-12 space-y-8">
+            <main id="main-content" tabIndex={-1} className="flex-1 w-full max-w-4xl mx-auto px-4 py-8 md:py-12 space-y-8">
                 {/* Tool Container */}
                 <div
                     className="card card-hover p-6 md:p-8 shadow-2xl shadow-neon-primary/10"

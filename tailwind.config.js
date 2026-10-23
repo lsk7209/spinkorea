@@ -11,12 +11,12 @@ export default {
       },
       colors: {
         // Aurora Holographic Theme
-        'aurora-bg': '#030014', // Deep Space
-        'aurora-bg-light': '#0a0a2e',
-        'aurora-primary': '#4facfe', // Soft Blue
-        'aurora-secondary': '#00f2fe', // Cyan
-        'aurora-accent': '#ff0080', // Pink
-        'aurora-purple': '#7928ca', // Rich Purple
+        'aurora-bg': '#F6F3EA', // Deep Space
+        'aurora-bg-light': '#FFFEF8',
+        'aurora-primary': '#1F6A63', // Soft Blue
+        'aurora-secondary': '#1F6A63', // Cyan
+        'aurora-accent': '#C44524', // Pink
+        'aurora-purple': '#62685F', // Rich Purple
         'aurora-card': 'rgba(255, 255, 255, 0.03)', // Crystal clear glass
         'aurora-border': 'rgba(255, 255, 255, 0.08)',
       },

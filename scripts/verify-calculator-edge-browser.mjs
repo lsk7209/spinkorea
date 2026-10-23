@@ -79,7 +79,7 @@ try {
     await visit('/tools/severance-pay');
     await page.locator('#severance-calculator-1').fill('2026-06-09');
     await page.locator('#severance-calculator-2').fill('2022-01-01');
-    await main().getByRole('alert').getByText('퇴사일은 입사일보다').waitFor({ timeout: 3000 });
+    await main().getByRole('alert').getByText('마지막 근무일은 입사일 이후여야').waitFor({ timeout: 3000 });
     assert.equal(await main().getByText(/-\d+년/).count(), 0);
   });
 

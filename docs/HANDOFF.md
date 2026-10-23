@@ -1,3 +1,19 @@
+# Release candidate — 2026-10-23
+
+User authorized the recommended device/performance → deployment → live verification sequence. Built-site touch/real Chromium clipboard/AX checks passed; lab LCP median868ms, CLS0, max observed long task775ms. Physical Android unavailable (adb list empty); actual screenreader/field INP still unverified. See docs/REVIEW.md for environment and limits.
+
+Fresh verify:local PASS; updated browser regression11/11/pageerrors0, calculator browser7/7, deploy guard8/8. Release uses explicit source staging, a dedicated PR, existing cost guard, Scheduled publish notify=false and exact main-SHA marker reconciliation. Existing unrelated changes, old PRs28/29 and caches are preserved. No external DB/account/DNS mutations or search notifications.
+
+--- Previous local handoff ---
+# Local redesign handoff — 2026-10-23
+
+COMPLETE_LOCAL. Latest attached home/mobile and guide/result boards implemented as HTML/SVG text. Shared paper/ink design, real-state batch drawing, immutable 20-round records, presentation focus and privacy/ad boundaries complete. Salary official table/reference-month pension and actual-calendar retirement fixes included. See [REVIEW.md](REVIEW.md) for supported ranges, sources, screenshots and limits.
+
+Fresh evidence: full verify:local PASS; unit tests143/143; API15/15; final build721 rendered/0 failed; calculator browser7/7; redesign browser six widths with no page errors, overflow or ad requests. Independent final review findings repaired and re-reviewed. No commit/push/deploy/account writes. Physical-device/screenreader/performance/account state remains unverified. Original referenced development prompt unavailable; recovered requirements documented.
+
+Preserve unrelated dirty/untracked work. Generated date-only feed/sitemap/metadata churn restored; next normal build regenerates by existing publish-date rules. Stop at this local boundary; no automatic release.
+
+--- Previous handoff ---
 # Release handoff — 2026-09-30 10:15 KST — calculator edge cases RELEASED
 
 - PR #12 merged to main as b470a1b (merge commit). Production deployed via Scheduled publish workflow_dispatch run 36653285521 (notify=false; GSC/IndexNow steps skipped). /deployment-status.json commitSha=b470a1b (previous 2706218).

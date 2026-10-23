@@ -1,3 +1,21 @@
+# Release continuation — 2026-10-23
+Current State: REVIEWING / RELEASE_READY
+Goal: user authorized device/performance checks, deployment and production reconciliation.
+Plan: built-site touch/clipboard/AX/performance -> selective release commit/PR -> existing notify=false workflow -> exact-SHA production verification.
+Verification: verify:local PASS, unit143/API15, browser11/calculator7/deploy guard8, built touch/clipboard/AX and lab performance PASS.
+Device: adb devices empty; physical-device and real screenreader proof remain unavailable, use browser emulation/AX evidence and report gap.
+Boundary: preserve unrelated dirty files, no account/config/DNS/notification changes. Rollback by reverting this release through the same PR/workflow path.
+
+--- Previous local state ---
+# Redesign 2026-10-23
+Current State: DONE (COMPLETE_LOCAL)
+Current Phase: Verified local implementation and handoff
+Completed: Shared design, home/results/history/presentation, guides, calculator P0 repairs, privacy and disabled ads; independent review fixes.
+Verification: verify:local PASS; unit143/API15; build721/0 failed; calculator browser7/7; responsive browser six widths/errors0/overflow0/ad requests0.
+Remaining: No local implementation work. Physical device, complete screenreader audit, performance comparison, original missing development prompt and external account/release proof unverified.
+Next Action: None automatic. No commit/push/deploy/account changes. See docs/REVIEW.md and docs/HANDOFF.md.
+
+--- Historical state ---
 # Current release state — 2026-09-20 08:59 대한민국 표준시
 
 DONE. Runtime ce9d881021c0e123c1e5721543de47e4ca296770 pushed and same-SHA Production6547101903 / Hosting Cost Guard succeeded. Live browser30/30/pageerrors0 and9 HTTP routes200 confirm updated content/BMI and canonical/index behavior. Local build689, browser62/62 and domain/content/search checks PASS. Post-release documentation records evidence; unrelated untracked work remains preserved. Direct Vercel/account operations were not run. Current recovery: docs/HANDOFF.md.

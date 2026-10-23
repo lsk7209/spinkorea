@@ -18,7 +18,11 @@ export function initializeAnalytics(measurementId: string): Promise<boolean> {
     analyticsReady = import("react-ga4")
       .then(({ default: ReactGA }) => {
         ReactGA.initialize(measurementId, {
-          gtagOptions: { send_page_view: false },
+          gtagOptions: {
+            send_page_view: false,
+            page_location: `${window.location.origin}${normalizeRoutePath(window.location.pathname)}`,
+            page_referrer: document.referrer ? document.referrer.split(/[?#]/)[0] : '',
+          },
         });
         return true;
       })

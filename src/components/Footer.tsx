@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 const mainNav = [
     { name: '룰렛돌리기', path: '/' },
-    { name: '유틸리티 도구', path: '/tools' },
-    { name: '블로그', path: '/blog' },
+    { name: '도구 모음', path: '/tools' },
+    { name: '사용 가이드', path: '/blog' },
     { name: '소개', path: '/about' },
 ];
 
@@ -21,7 +21,7 @@ export default function Footer() {
                 {/* 메인 네비게이션 */}
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     <Link to="/" className="text-xl font-black text-gray-900">
-                        SpinFlow
+                        SpinFlow <span className="brand-korean">스핀코리아</span>
                     </Link>
                     <nav className="flex flex-wrap gap-x-6 gap-y-2">
                         {mainNav.map((link) => (
