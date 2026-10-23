@@ -23,6 +23,8 @@ import { getPresetIdForSlug } from '@/data/spinflow-presets';
 import { trackEvent, buildToolEnvelope } from '@/utils/analytics';
 import { areItemsEqual, REDUCED_MOTION_SPIN_DURATION_MS, SPIN_DURATION_MS } from '@/utils/draw-controller';
 import type { DrawSnapshot } from '@/utils/draw-controller';
+import { buildActiveItems, nextExcluded } from '@/utils/winner-exclusion';
+import WinnerExcludeControl from '@/components/WinnerExcludeControl';
 
 const DEFAULT_ITEMS = [
     '한식',
@@ -112,8 +114,16 @@ export default function Home({
     const prefersReducedMotion = useReducedMotion() ?? false;
     const spinDurationMs = prefersReducedMotion ? REDUCED_MOTION_SPIN_DURATION_MS : SPIN_DURATION_MS;
 
+    // 당첨자 제외(기본 꺼짐): 제외는 위치(인덱스)로 관리하고, 직전 당첨자는 다음 추첨 시작 때 반영한다.
+    const [excludeWinners, setExcludeWinners] = useState(false);
+    const [excluded, setExcluded] = useState<number[]>([]);
+    const [pendingWinner, setPendingWinner] = useState<number | null>(null);
+    const activeIndicesRef = useRef<number[]>([]);
+    const { active: activeItems } = buildActiveItems(items, excluded);
+
     const handleResult = useCallback(
         (result: string, draw: DrawSnapshot) => {
+            setPendingWinner(activeIndicesRef.current[draw.index] ?? null);
             saveResult(result);
             setShowResult(true);
             trackEvent('tool_result_viewed', {
@@ -127,23 +137,42 @@ export default function Home({
     );
 
     const { isSpinning, result, winningIndex, spin, reset } = useRoulette({
-        items,
+        items: activeItems,
         onResult: handleResult,
         spinDurationMs,
     });
 
     const handleSpin = useCallback(() => {
-        const draw = spin();
+        const nextExcludedList = nextExcluded(excluded, pendingWinner, excludeWinners);
+        const { active, originalIndices } = buildActiveItems(items, nextExcludedList);
+        if (active.length === 0) {
+            return;
+        }
+        const draw = spin(active);
         if (!draw) {
             return;
         }
+        activeIndicesRef.current = originalIndices;
+        setExcluded(nextExcludedList);
+        setPendingWinner(null);
         setShowResult(false);
         trackEvent('tool_used', {
             ...buildToolEnvelope(window.location.pathname, 'roulette'),
             tool: 'roulette',
             item_count: draw.items.length,
         });
-    }, [spin]);
+    }, [spin, items, excluded, pendingWinner, excludeWinners]);
+
+    const restoreExcluded = useCallback(() => {
+        if (isSpinning) return;
+        setExcluded([]);
+        setPendingWinner(null);
+    }, [isSpinning]);
+
+    const toggleExcludeWinners = useCallback((enabled: boolean) => {
+        setExcludeWinners(enabled);
+        if (!enabled) setPendingWinner(null);
+    }, []);
 
     // 후보가 바뀌면 이전 추첨 결과·하이라이트·결과 공유를 비운다. 기록(history)은 유지된다.
     const handleUpdateItems = useCallback(
@@ -156,6 +185,8 @@ export default function Home({
             }
             updateItems(newItems);
             reset();
+            setExcluded([]);
+            setPendingWinner(null);
             setShowResult(false);
             return true;
         },
@@ -293,6 +324,15 @@ export default function Home({
                         reducedMotion={prefersReducedMotion}
                         onSpin={handleSpin}
                     />
+                    <WinnerExcludeControl
+                        enabled={excludeWinners}
+                        disabled={isSpinning}
+                        excludedNames={excluded.map((index) => items[index]).filter((name): name is string => name !== undefined)}
+                        pendingName={pendingWinner !== null ? (items[pendingWinner] ?? null) : null}
+                        remaining={activeItems.length - (excludeWinners && pendingWinner !== null ? 1 : 0)}
+                        onToggle={toggleExcludeWinners}
+                        onRestore={restoreExcluded}
+                    />
                 </div>
 
                 {/* 데스크톱: 항목 편집 패널 (우측) */}
@@ -377,7 +417,7 @@ export default function Home({
             {/* SPIN 버튼 (FAB) */}
             <SpinButton
                 onClick={handleSpin}
-                disabled={items.length === 0}
+                disabled={activeItems.length - (excludeWinners && pendingWinner !== null ? 1 : 0) <= 0}
                 isSpinning={isSpinning}
             />
 

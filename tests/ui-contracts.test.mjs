@@ -12,7 +12,7 @@ describe('SPK2-01 Home draw reset', () => {
     assert.match(home, /areItemsEqual\(items, newItems\)[\s\S]*?updateItems\(newItems\);\s*reset\(\);/);
   });
   it('tracks tool_used only for an accepted draw', () => {
-    assert.match(home, /const draw = spin\(\);\s*if \(!draw\) \{\s*return;\s*\}/);
+    assert.match(home, /const draw = spin\(active\);\s*if \(!draw\) \{\s*return;\s*\}/);
   });
   it('completion event uses the draw snapshot, not the live list', () => {
     assert.match(home, /item_count: draw\.items\.length/);
