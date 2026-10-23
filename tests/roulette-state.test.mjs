@@ -108,3 +108,24 @@ describe('decodeState / readStateFromSearch', () => {
     assert.ok(JSON.stringify({ v: 1, items: controlItems }).length <= MAX_DECODED_STATE_LENGTH, 'escaped control chars fit');
   });
 });
+
+import { buildActiveItems, nextExcluded } from '../src/utils/winner-exclusion.ts';
+
+describe('winner exclusion', () => {
+  it('excludes by position so duplicate names are handled separately', () => {
+    const { active, originalIndices } = buildActiveItems(['A', 'B', 'A', 'C'], [0]);
+    assert.deepEqual(active, ['B', 'A', 'C']);
+    assert.deepEqual(originalIndices, [1, 2, 3]);
+  });
+
+  it('adds the previous winner only when the option is on', () => {
+    assert.deepEqual(nextExcluded([1], 2, true), [1, 2]);
+    assert.deepEqual(nextExcluded([1], 2, false), [1]);
+    assert.deepEqual(nextExcluded([1], null, true), [1]);
+    assert.deepEqual(nextExcluded([1, 2], 2, true), [1, 2]);
+  });
+
+  it('returns no candidates when everything is excluded', () => {
+    assert.equal(buildActiveItems(['A', 'B'], [0, 1]).active.length, 0);
+  });
+});
