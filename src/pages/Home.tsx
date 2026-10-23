@@ -105,6 +105,48 @@ export default function Home({
         return () => window.removeEventListener('resize', update);
     }, []);
 
+    // 전체화면: 같은 React 트리를 CSS 오버레이로 키우고, 가능하면 브라우저 전체화면도 함께 쓴다.
+    // API가 없거나 거부돼도 오버레이(확대 보기)로 계속 사용할 수 있고 후보·설정·결과 상태는 그대로다.
+    const wheelFrameRef = useRef<HTMLDivElement>(null);
+    const [isFullscreen, setIsFullscreen] = useState(false);
+    const [fullscreenNotice, setFullscreenNotice] = useState<string | null>(null);
+
+    const enterFullscreen = useCallback(() => {
+        setIsFullscreen(true);
+        setFullscreenNotice(null);
+        const request = wheelFrameRef.current?.requestFullscreen?.();
+        if (!request) {
+            setFullscreenNotice('이 브라우저는 전체화면을 지원하지 않아 확대 보기로 표시합니다.');
+            return;
+        }
+        request.catch(() => setFullscreenNotice('전체화면이 허용되지 않아 확대 보기로 표시합니다.'));
+    }, []);
+
+    const exitFullscreen = useCallback(() => {
+        setIsFullscreen(false);
+        if (document.fullscreenElement) document.exitFullscreen().catch(() => undefined);
+    }, []);
+
+    useEffect(() => {
+        if (!isFullscreen) return;
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') exitFullscreen();
+        };
+        const onFullscreenChange = () => {
+            if (!document.fullscreenElement) setIsFullscreen(false);
+        };
+        window.addEventListener('keydown', onKeyDown);
+        document.addEventListener('fullscreenchange', onFullscreenChange);
+        return () => {
+            window.removeEventListener('keydown', onKeyDown);
+            document.removeEventListener('fullscreenchange', onFullscreenChange);
+        };
+    }, [isFullscreen, exitFullscreen]);
+
+    const displayWheelSize = isFullscreen
+        ? Math.max(240, Math.min(window.innerWidth - 32, window.innerHeight - 260, 900))
+        : wheelSize;
+
     const [isEditorModalOpen, setIsEditorModalOpen] = useState(false);
     const [isTemplateModalOpen, setIsTemplateModalOpen] = useState(false);
     const [showResult, setShowResult] = useState(false);
@@ -330,12 +372,29 @@ export default function Home({
                 className="flex-1 flex flex-col lg:flex-row items-center justify-center gap-10 px-4 py-10 pb-20 max-w-7xl mx-auto w-full"
             >
                 {/* 모바일: 룰렛 중앙, 데스크톱: 룰렛 좌측 */}
-                <div className="flex-shrink-0 rounded-3xl bg-slate-950 p-4 shadow-xl">
+                <div
+                    ref={wheelFrameRef}
+                    className={
+                        isFullscreen
+                            ? 'fixed inset-0 z-[60] flex flex-col items-center justify-center overflow-auto bg-slate-950 p-4'
+                            : 'flex-shrink-0 rounded-3xl bg-slate-950 p-4 shadow-xl'
+                    }
+                >
+                    <div className="mb-2 flex w-full items-center justify-end gap-3 text-sm text-slate-300">
+                        {fullscreenNotice && isFullscreen && <span role="status">{fullscreenNotice}</span>}
+                        <button
+                            type="button"
+                            onClick={isFullscreen ? exitFullscreen : enterFullscreen}
+                            className="rounded-lg border border-slate-600 px-3 py-1.5 font-semibold text-white hover:border-cyan-500"
+                        >
+                            {isFullscreen ? '전체화면 닫기 (Esc)' : '전체화면'}
+                        </button>
+                    </div>
                     <RouletteWheel
                         items={items}
                         winningIndex={winningIndex}
                         isSpinning={isSpinning}
-                        size={wheelSize}
+                        size={displayWheelSize}
                         spinDurationMs={spinDurationMs}
                         reducedMotion={prefersReducedMotion}
                         onSpin={handleSpin}
