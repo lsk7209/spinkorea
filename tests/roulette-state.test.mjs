@@ -129,3 +129,39 @@ describe('winner exclusion', () => {
     assert.equal(buildActiveItems(['A', 'B'], [0, 1]).active.length, 0);
   });
 });
+
+import { addSavedList, parseSavedLists, removeSavedList, MAX_SAVED_LISTS } from '../src/utils/saved-lists.ts';
+
+describe('saved lists', () => {
+  const now = new Date('2026-10-23T00:00:00Z');
+  let counter = 0;
+  const makeId = () => `id${++counter}`;
+
+  it('saves, replaces by name and removes', () => {
+    const first = addSavedList([], '  3반  ', ['가', '나'], now, makeId);
+    assert.equal(first.ok, true);
+    assert.equal(first.lists[0].name, '3반');
+    const again = addSavedList(first.lists, '3반', ['다'], now, makeId);
+    assert.equal(again.replaced, true);
+    assert.equal(again.lists.length, 1);
+    assert.equal(again.lists[0].id, first.lists[0].id);
+    assert.deepEqual(removeSavedList(again.lists, again.lists[0].id), []);
+  });
+
+  it('rejects invalid names, items and a full store', () => {
+    assert.equal(addSavedList([], ' ', ['가'], now, makeId).reason, 'invalid-name');
+    assert.equal(addSavedList([], 'x', [], now, makeId).reason, 'invalid-items');
+    assert.equal(addSavedList([], 'x', [' 공백 '], now, makeId).reason, 'invalid-items');
+    let lists = [];
+    for (let i = 0; i < MAX_SAVED_LISTS; i++) lists = addSavedList(lists, `n${i}`, ['가'], now, makeId).lists;
+    assert.equal(addSavedList(lists, 'extra', ['가'], now, makeId).reason, 'limit');
+    assert.equal(addSavedList(lists, 'n0', ['나'], now, makeId).ok, true);
+  });
+
+  it('keeps only valid entries from corrupted storage', () => {
+    const good = { id: 'a', name: '좋음', items: ['가'], savedAt: now.toISOString() };
+    assert.deepEqual(parseSavedLists([good, { id: 1 }, null, 'x', { ...good, items: [] }]), [good]);
+    assert.deepEqual(parseSavedLists('broken'), []);
+    assert.deepEqual(parseSavedLists(null), []);
+  });
+});

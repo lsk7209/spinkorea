@@ -25,6 +25,7 @@ import { areItemsEqual, REDUCED_MOTION_SPIN_DURATION_MS, SPIN_DURATION_MS } from
 import type { DrawSnapshot } from '@/utils/draw-controller';
 import { buildActiveItems, nextExcluded } from '@/utils/winner-exclusion';
 import WinnerExcludeControl from '@/components/WinnerExcludeControl';
+import SavedLists from '@/components/SavedLists';
 
 const DEFAULT_ITEMS = [
     '한식',
@@ -193,6 +194,21 @@ export default function Home({
         [isSpinning, items, updateItems, reset]
     );
 
+    // 저장한 명단을 불러오면 교체되는 현재 명단을 한 단계 되돌릴 수 있게 보관한다.
+    const [undoItems, setUndoItems] = useState<string[] | null>(null);
+    const loadSavedList = useCallback(
+        (listItems: string[]) => {
+            const previous = items;
+            if (!handleUpdateItems(listItems)) return false;
+            setUndoItems(previous);
+            return true;
+        },
+        [items, handleUpdateItems]
+    );
+    const undoLoadedList = useCallback(() => {
+        if (undoItems && handleUpdateItems(undoItems)) setUndoItems(null);
+    }, [undoItems, handleUpdateItems]);
+
     const applyPreset = useCallback(
         (presetItems: string[]) => {
             if (!handleUpdateItems(presetItems)) {
@@ -339,6 +355,7 @@ export default function Home({
                 <div className="hidden md:block w-full max-w-md">
                     <div className="rounded-3xl bg-slate-950 border border-slate-800 p-6 shadow-xl">
                         <ItemEditor items={items} onUpdate={handleUpdateItems} isSpinning={isSpinning} />
+                        <SavedLists items={items} disabled={isSpinning} onLoad={loadSavedList} canUndo={undoItems !== null} onUndo={undoLoadedList} />
                         {urlWarning && (
                             <div className="mt-4 p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-xl">
                                 <p className="text-sm text-yellow-300">
@@ -410,6 +427,7 @@ export default function Home({
                             />
                         </div>
                     )}
+                    <SavedLists items={items} disabled={isSpinning} onLoad={loadSavedList} canUndo={undoItems !== null} onUndo={undoLoadedList} />
                     <SpinHistory history={history} />
                 </div>
             </main>
