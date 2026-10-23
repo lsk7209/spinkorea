@@ -1,30 +1,31 @@
-# Status | 마지막: 2026-10-22
+# Status | 마지막: 2026-10-23
 
 ## 현재 작업
-AdSense 신청 준비. 핸드오프 남은 과제(링크·소제목·청크 분리) 완료.
+외부 감사(2026-10-23) 개선. P0 계산기·정보 일치와 P1 룰렛 기능 구현·PR 완료, 소득세 간이세액표는 원본 대기.
 
 ## 최근 변경 (최근 5개만)
+- 10-23: PR #28(퇴직금 직전 3개월 일수·국민연금 기준월별 상·하한·제목/안내 정정), PR #29(룰렛 당첨자 제외·명단 저장·전체화면·N명 추첨) — 둘 다 미병합
 - 10-23: 큐레이션 글 근거 없는 수치 5곳 정정(멀티태스킹·목표 마감일·완벽주의·감사 일기)
-- 10-23: 비밀번호 중복 글 통합(`strong-password-guide` → `password-security-guide` 301), 병합 글은 `post-metadata*.generated.json`에서도 제거해야 사이트맵에서 빠짐
+- 10-23: 비밀번호 중복 글 통합(`strong-password-guide` → `password-security-guide` 301)
 - 10-22: 런타임 글 메타데이터에서 비공개 생성 글 제외(postMetadata 번들 377KB → 193KB)
-- 10-22: 글 본문을 글별 파일로 분리 로드(글 1편당 440~628KB 청크 → 약 13KB)
-- 10-22: 편집 글 132편 범용 소제목 211개에 주제어 추가(5회 이상 반복 소제목 0개)
+- 10-22: 글 본문을 글별 파일로 분리 로드
 
 ## TODO
-- [ ] (사용자) AdSense CMP 설정 확인 (EEA 트래픽 여부)
-- [ ] GSC 색인: 사이트맵 408 URL 제출·오류 0, 그러나 /about·도구·일부 글이 '발견됨-색인 안 됨'(10-22 조회) → 1~2주 후 재조회
-- [ ] (사용자) Bing Webmaster Tools 사이트 인증(GSC 가져오기 가능) — IndexNow 403 원인 `UserForbiddedToAccessSite`, 키 파일은 정상
+- [ ] 소득세: 국세청 간이세액표(2026.2.27 개정) 원본 확보 → 표 조회 방식 교체(연봉 4,200만·가족 본인만 = 127,220원 검증), 건보·장기요양·고용 요율 공식 출처 확인
+- [ ] 국민연금 하한 40만(2025-07~2026-06)·요율 4.5/5.0%·기준소득월액 천원 절사·보험료 원 미만 절사 공식 출처 대조
+- [ ] 게시일·수정일·계산 검토일 의미 구분, 공유 링크 길이·개인정보 안내, 명단→팀 편성 도구 연결, 추첨 중단
+- [ ] P2: 블로그 검색·탐색, 분석 이벤트/KPI, CI 검사(기준 데이터 만료·메타 일치), 성능 전후 측정, 건강·과학 수치 글 검토
+- [ ] 실제 모바일 기기·스크린리더 확인, 배포 후 /contact 메타·본문 일치 재확인
+- [ ] (사용자) AdSense CMP, Bing Webmaster 인증, GSC 색인 재조회(1~2주 후)
 
 ## 결정사항
-- 연락처 `cs@spinkorea.kr` 수신 불가(MX 없음) 상태 유지: 사용자 결정(10-22), 심사 시 연락처 확인 위험 감수
+- 연락처 `cs@spinkorea.kr` 수신 불가(MX 없음) 유지: 사용자 결정(10-22)
 - 배포는 `main` 머지가 아니라 `Scheduled publish` deploy hook으로만
-- 운영 canonical은 `https://spinkorea.kr`(www는 308로 apex 리다이렉트, 10-22 확인)
-- `source: generated` 글은 데이터 보존, 정적 HTML 미생성(404)
-- 9월 편집 글 본문은 `editorial-drafts-*.json` 원본 + `extend-editorial-schedule.mjs` 재실행으로 반영(직접 수정 금지)
-- 외부 참고 링크는 본문에만 추가, `primarySourceUrl`은 검증기 허용 도메인 유지
+- 퇴직일 = 마지막 근무일 다음 날, 평균임금 분모 = 퇴직일 직전 3개월 달력 일수
+- 당첨자 제외는 이름이 아닌 후보 위치 기준, 다음 추첨 시작 때 반영(휠 하이라이트 보존)
+- 제목 등 편집 글 수정은 revised-editorial-*.json 수정 후 `apply-editorial-revisions.mjs`(메타데이터만 고치면 빌드가 복원)
 
 ## 주의
-- 배포 hook URL 출력 금지, GitHub Secret으로만 사용
-- 신뢰 페이지 4종 정적 HTML은 React SSR 결과(실패 시 고정 문단 폴백)
 - 빌드 시 `public/{sitemap,rss,llms}`·`post-metadata*.json` 변경은 의도치 않은 것 → 되돌릴 것
-- 글 본문 로드는 `src/data/article-cache/`(빌드·predev 시 `split-article-chunks.mjs`로 생성, git 제외) 기준
+- lint/type-check/build/verify:local 직접 실행 금지(훅이 처리), 사용자 요청 시만
+- Home.tsx 등은 에디터 툴(Edit/Write) 후 포맷터가 따옴표·들여쓰기를 바꿈 → 큰 파일은 스크립트로 수정하고 diff 크기 확인

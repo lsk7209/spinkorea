@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { BadgePercent } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
+import { calculatePension, supportedPensionMonthRange } from "@/utils/pension";
 
 function fmt(n: number) {
   return Math.round(n).toLocaleString("ko-KR");
 }
 
-// 근로소득 간이세액표를 단순화한 구간별 근사식(비부양가족 1인 기준)이며
-// 국세청 공식 간이세액표(2026-03-01 개정본) 자체를 그대로 옮긴 것은 아닙니다.
-// 정확한 세액은 홈택스 원천세 신고 메뉴의 간이세액표를 확인하세요.
+// 소득세는 공식 간이세액표가 아니라 구간별 근사식(부양가족 공제는 1인당 정액 차감)입니다.
+// 공식표 반영 전까지 화면에도 "근사 추정"으로 표시합니다. 정확한 세액은 홈택스 간이세액표를 확인하세요.
 function estimateIncomeTax(monthly: number): number {
   if (monthly <= 1060000) return 0;
   if (monthly <= 1500000) return Math.max(0, (monthly - 1060000) * 0.06);
@@ -25,7 +25,13 @@ interface DeductionItem {
   color: string;
 }
 
+const DEFAULT_BASE_MONTH = new Date().toISOString().slice(0, 7);
+
 export default function NetSalaryCalculator() {
+  const { min: minMonth, max: maxMonth } = supportedPensionMonthRange();
+  const [baseMonth, setBaseMonth] = useState(
+    DEFAULT_BASE_MONTH >= minMonth && DEFAULT_BASE_MONTH <= maxMonth ? DEFAULT_BASE_MONTH : maxMonth,
+  );
   const [annualSalary, setAnnualSalary] = useState("40000000");
   const [dependents, setDependents] = useState(0);
 
@@ -33,7 +39,8 @@ export default function NetSalaryCalculator() {
   const monthly = annual / 12;
 
   // 4대보험 (직원 부담, 2026년 기준)
-  const nationalPension = Math.min(monthly * 0.0475, 302575); // 기준소득월액 상한 637만원 x 4.75%
+  const pension = calculatePension(monthly, baseMonth);
+  const nationalPension = pension?.premium ?? 0; // 기준월의 상·하한·요율 적용
   const healthInsurance = monthly * 0.03595; // 건강보험료율 7.19%의 절반(근로자 부담)
   const longTermCare = healthInsurance * 0.1314; // 장기요양보험료율(건강보험료 대비)
   const employmentInsurance = monthly * 0.009;
@@ -59,7 +66,7 @@ export default function NetSalaryCalculator() {
   const deductions: DeductionItem[] = [
     {
       name: "국민연금",
-      rate: "4.75%",
+      rate: pension ? `${(pension.employeeRate * 100).toFixed(2)}%` : "-",
       amount: nationalPension,
       color: "text-blue-400",
     },
@@ -83,7 +90,7 @@ export default function NetSalaryCalculator() {
     },
     {
       name: "소득세",
-      rate: "간이세액표",
+      rate: "근사 추정",
       amount: incomeTax,
       color: "text-orange-400",
     },
@@ -114,16 +121,16 @@ export default function NetSalaryCalculator() {
           url: "https://www.hometax.go.kr",
         },
       ]}
-      reviewedAt="2026-09-12"
-      disclaimer="4대보험 요율은 2026년 기준(국민연금 4.75%·상한 637만원, 건강보험 3.595%, 장기요양 건강보험료의 13.14%, 고용보험 0.9%)이며, 소득세는 국세청 공식 간이세액표를 단순화한 근사값입니다. 실제 공제액은 홈택스 원천세 메뉴에서 다시 확인하세요."
+      reviewedAt="2026-10-23"
+      disclaimer="국민연금은 선택한 기준월의 상·하한과 요율(2026-07~2027-06 상한 659만원·하한 41만원, 2026년 근로자 4.75%)을 적용합니다. 건강보험 3.595%, 장기요양 건강보험료의 13.14%, 고용보험 0.9%는 2026년 기준이며, 소득세는 국세청 간이세액표가 아닌 근사식이라 실제와 차이가 큽니다. 실제 공제액은 홈택스 원천세 메뉴에서 확인하세요."
       howToUse={[
         "세전 연봉을 입력하세요.",
         "부양가족 수(본인 제외)를 선택하면 소득세 공제가 조정됩니다.",
         "항목별 공제금액과 세후 실수령액을 확인하세요.",
       ]}
       tips={[
-        "소득세는 간이세액표를 단순화한 근사값이며 실제와 다를 수 있습니다. 정확한 금액은 홈택스에서 확인하세요.",
-        "국민연금은 기준소득월액 637만원 초과분에는 보험료가 추가되지 않습니다(2026년 기준 월 상한 302,575원).",
+        "소득세는 공식 간이세액표가 아닌 근사식이라 실제 원천징수액과 크게 다를 수 있습니다. 정확한 금액은 홈택스에서 확인하세요.",
+        "국민연금은 기준소득월액 상한을 넘는 급여에는 보험료가 추가되지 않으며, 상·하한은 매년 7월에 바뀝니다. 기준월을 바꿔 확인하세요.",
         "정확한 세금은 홈택스 또는 연말정산 시 확정됩니다.",
         "식대(월 20만원)·교통비 등 비과세 항목이 있으면 실수령이 더 높아집니다.",
       ]}
@@ -197,9 +204,29 @@ export default function NetSalaryCalculator() {
                 ))}
               </div>
             </div>
+            <div>
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="net-salary-base-month">
+                기준월 (국민연금 상·하한 적용)
+              </label>
+              <input id="net-salary-base-month"
+                type="month"
+                value={baseMonth}
+                min={minMonth}
+                max={maxMonth}
+                onChange={(e) => setBaseMonth(e.target.value)}
+                className="w-full bg-black/30 border border-white/20 rounded-lg px-3 py-2.5 text-white focus:outline-none focus:border-neon-primary"
+              />
+            </div>
           </div>
         </div>
 
+        {!pension && (
+          <p role="alert" className="bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-center text-red-400 font-bold">
+            {minMonth}~{maxMonth} 사이의 기준월을 선택해 주세요. 이 기간 밖은 상·하한 데이터가 없어 계산하지 않습니다.
+          </p>
+        )}
+        {pension && (
+        <>
         {/* 주요 결과 */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {[
@@ -280,7 +307,7 @@ export default function NetSalaryCalculator() {
                 {[2400, 3000, 3600, 4000, 5000, 6000, 8000, 10000].map(
                   (amt) => {
                     const m = (amt * 10000) / 12;
-                    const np = Math.min(m * 0.0475, 302575);
+                    const np = calculatePension(m, baseMonth)?.premium ?? 0;
                     const hi = m * 0.03595;
                     const lt = hi * 0.1314;
                     const ei = m * 0.009;
@@ -317,6 +344,8 @@ export default function NetSalaryCalculator() {
             다릅니다.
           </p>
         </div>
+        </>
+        )}
       </div>
     </ToolLayout>
   );
