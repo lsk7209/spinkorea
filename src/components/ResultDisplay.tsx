@@ -56,7 +56,7 @@ export default function ResultDisplay({ result, show, reducedMotion = false }: R
 
   return (
     <div
-      className="fixed top-24 left-1/2 -translate-x-1/2 z-40 w-max max-w-[calc(100vw-2rem)] text-center pointer-events-none"
+      className="fixed top-24 left-1/2 -translate-x-1/2 z-[70] w-max max-w-[calc(100vw-2rem)] text-center pointer-events-none"
       role="status"
       aria-live="polite"
       aria-atomic="true"
