@@ -24,6 +24,9 @@ import { trackEvent, buildToolEnvelope } from '@/utils/analytics';
 import { areItemsEqual, REDUCED_MOTION_SPIN_DURATION_MS, SPIN_DURATION_MS } from '@/utils/draw-controller';
 import type { DrawSnapshot } from '@/utils/draw-controller';
 import { buildActiveItems, nextExcluded } from '@/utils/winner-exclusion';
+import { pickDistinctIndices, validateDrawCount } from '@/utils/multi-draw';
+import { getRandomIndex } from '@/utils/random';
+import DrawCountControl from '@/components/DrawCountControl';
 import WinnerExcludeControl from '@/components/WinnerExcludeControl';
 import SavedLists from '@/components/SavedLists';
 
@@ -160,14 +163,23 @@ export default function Home({
     // 당첨자 제외(기본 꺼짐): 제외는 위치(인덱스)로 관리하고, 직전 당첨자는 다음 추첨 시작 때 반영한다.
     const [excludeWinners, setExcludeWinners] = useState(false);
     const [excluded, setExcluded] = useState<number[]>([]);
-    const [pendingWinner, setPendingWinner] = useState<number | null>(null);
+    const [pendingWinners, setPendingWinners] = useState<number[]>([]);
     const activeIndicesRef = useRef<number[]>([]);
     const { active: activeItems } = buildActiveItems(items, excluded);
+    // N명 추첨: 한 묶음의 당첨 위치(추첨 대상 기준). 휠은 마지막 당첨자를 가리킨다.
+    const [drawCountText, setDrawCountText] = useState('1');
+    const [batchWinners, setBatchWinners] = useState<string[] | null>(null);
+    const batchActiveRef = useRef<number[]>([]);
+    const remainingCandidates = activeItems.length - (excludeWinners ? pendingWinners.length : 0);
+    const drawCountCheck = validateDrawCount(drawCountText, remainingCandidates);
 
     const handleResult = useCallback(
         (result: string, draw: DrawSnapshot) => {
-            setPendingWinner(activeIndicesRef.current[draw.index] ?? null);
-            saveResult(result);
+            const batch = batchActiveRef.current.length > 0 ? batchActiveRef.current : [draw.index];
+            const names = batch.map((index) => draw.items[index]);
+            setPendingWinners(batch.flatMap((index) => activeIndicesRef.current[index] ?? []));
+            setBatchWinners(names.length > 1 ? names : null);
+            saveResult(names.length > 1 ? names.join(', ') : result);
             setShowResult(true);
             trackEvent('tool_result_viewed', {
                 ...buildToolEnvelope(window.location.pathname, 'roulette'),
@@ -184,11 +196,13 @@ export default function Home({
         onResult: handleResult,
         spinDurationMs,
     });
+    const displayResult = batchWinners ? batchWinners.join(', ') : result;
 
     const handleSpin = useCallback(() => {
-        const nextExcludedList = nextExcluded(excluded, pendingWinner, excludeWinners);
+        const nextExcludedList = nextExcluded(excluded, pendingWinners, excludeWinners);
         const { active, originalIndices } = buildActiveItems(items, nextExcludedList);
-        if (active.length === 0) {
+        const requested = validateDrawCount(drawCountText, active.length);
+        if (active.length === 0 || requested.count === null) {
             return;
         }
         const draw = spin(active);
@@ -196,25 +210,30 @@ export default function Home({
             return;
         }
         activeIndicesRef.current = originalIndices;
+        batchActiveRef.current = [
+            ...pickDistinctIndices(active.length, requested.count - 1, getRandomIndex, draw.index),
+            draw.index,
+        ];
         setExcluded(nextExcludedList);
-        setPendingWinner(null);
+        setPendingWinners([]);
+        setBatchWinners(null);
         setShowResult(false);
         trackEvent('tool_used', {
             ...buildToolEnvelope(window.location.pathname, 'roulette'),
             tool: 'roulette',
             item_count: draw.items.length,
         });
-    }, [spin, items, excluded, pendingWinner, excludeWinners]);
+    }, [spin, items, excluded, pendingWinners, excludeWinners, drawCountText]);
 
     const restoreExcluded = useCallback(() => {
         if (isSpinning) return;
         setExcluded([]);
-        setPendingWinner(null);
+        setPendingWinners([]);
     }, [isSpinning]);
 
     const toggleExcludeWinners = useCallback((enabled: boolean) => {
         setExcludeWinners(enabled);
-        if (!enabled) setPendingWinner(null);
+        if (!enabled) setPendingWinners([]);
     }, []);
 
     // 후보가 바뀌면 이전 추첨 결과·하이라이트·결과 공유를 비운다. 기록(history)은 유지된다.
@@ -229,7 +248,8 @@ export default function Home({
             updateItems(newItems);
             reset();
             setExcluded([]);
-            setPendingWinner(null);
+            setPendingWinners([]);
+            setBatchWinners(null);
             setShowResult(false);
             return true;
         },
@@ -403,10 +423,16 @@ export default function Home({
                         enabled={excludeWinners}
                         disabled={isSpinning}
                         excludedNames={excluded.map((index) => items[index]).filter((name): name is string => name !== undefined)}
-                        pendingName={pendingWinner !== null ? (items[pendingWinner] ?? null) : null}
-                        remaining={activeItems.length - (excludeWinners && pendingWinner !== null ? 1 : 0)}
+                        pendingName={pendingWinners.length > 0 ? pendingWinners.map((index) => items[index]).join(', ') : null}
+                        remaining={remainingCandidates}
                         onToggle={toggleExcludeWinners}
                         onRestore={restoreExcluded}
+                    />
+                    <DrawCountControl
+                        value={drawCountText}
+                        disabled={isSpinning}
+                        error={drawCountCheck.error}
+                        onChange={setDrawCountText}
                     />
                 </div>
 
@@ -429,11 +455,11 @@ export default function Home({
                                 </p>
                             </div>
                         )}
-                        {result && (
+                        {displayResult && (
                             <div className="mt-6">
                                 <ShareButtons
                                     items={items}
-                                    result={result}
+                                    result={displayResult}
                                     urlUnsafe={urlUnsafe}
                                 />
                             </div>
@@ -477,11 +503,11 @@ export default function Home({
                             </p>
                         </div>
                     )}
-                    {result && (
+                    {displayResult && (
                         <div className="mt-4">
                             <ShareButtons
                                 items={items}
-                                result={result}
+                                result={displayResult}
                                 urlUnsafe={urlUnsafe}
                             />
                         </div>
@@ -494,12 +520,12 @@ export default function Home({
             {/* SPIN 버튼 (FAB) */}
             <SpinButton
                 onClick={handleSpin}
-                disabled={activeItems.length - (excludeWinners && pendingWinner !== null ? 1 : 0) <= 0}
+                disabled={remainingCandidates <= 0 || drawCountCheck.error !== null}
                 isSpinning={isSpinning}
             />
 
             {/* 결과 표시 */}
-            <ResultDisplay result={result} show={showResult} reducedMotion={prefersReducedMotion} />
+            <ResultDisplay result={displayResult} show={showResult} reducedMotion={prefersReducedMotion} />
 
             {/* 템플릿 선택 모달 */}
             <TemplateModal

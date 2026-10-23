@@ -19,12 +19,12 @@ export function buildActiveItems(items: readonly string[], excluded: readonly nu
   return { active: originalIndices.map((index) => items[index]), originalIndices };
 }
 
-/** 다음 추첨에 적용할 제외 목록: 켜져 있고 직전 당첨자가 있을 때만 그 위치를 더한다. */
+/** 다음 추첨에 적용할 제외 목록: 켜져 있을 때만 직전 당첨자(여러 명 가능)의 위치를 더한다. */
 export function nextExcluded(
   excluded: readonly number[],
-  pendingWinner: number | null,
+  pendingWinners: readonly number[],
   excludeWinners: boolean,
 ): number[] {
-  if (!excludeWinners || pendingWinner === null || excluded.includes(pendingWinner)) return [...excluded];
-  return [...excluded, pendingWinner];
+  if (!excludeWinners) return [...excluded];
+  return [...new Set([...excluded, ...pendingWinners])];
 }
