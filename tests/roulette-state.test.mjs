@@ -119,10 +119,10 @@ describe('winner exclusion', () => {
   });
 
   it('adds the previous winner only when the option is on', () => {
-    assert.deepEqual(nextExcluded([1], 2, true), [1, 2]);
-    assert.deepEqual(nextExcluded([1], 2, false), [1]);
-    assert.deepEqual(nextExcluded([1], null, true), [1]);
-    assert.deepEqual(nextExcluded([1, 2], 2, true), [1, 2]);
+    assert.deepEqual(nextExcluded([1], [2], true), [1, 2]);
+    assert.deepEqual(nextExcluded([1], [2], false), [1]);
+    assert.deepEqual(nextExcluded([1], [], true), [1]);
+    assert.deepEqual(nextExcluded([1, 2], [2, 3], true), [1, 2, 3]);
   });
 
   it('returns no candidates when everything is excluded', () => {
@@ -163,5 +163,45 @@ describe('saved lists', () => {
     assert.deepEqual(parseSavedLists([good, { id: 1 }, null, 'x', { ...good, items: [] }]), [good]);
     assert.deepEqual(parseSavedLists('broken'), []);
     assert.deepEqual(parseSavedLists(null), []);
+  });
+});
+
+import { pickDistinctIndices, validateDrawCount } from '../src/utils/multi-draw.ts';
+
+describe('multi draw', () => {
+  it('never repeats a candidate and never returns the excluded index', () => {
+    for (let trial = 0; trial < 200; trial++) {
+      const picked = pickDistinctIndices(6, 4, (length) => Math.floor(Math.random() * length), 2);
+      assert.equal(new Set(picked).size, 4);
+      assert.ok(!picked.includes(2));
+      assert.ok(picked.every((index) => index >= 0 && index < 6));
+    }
+  });
+
+  it('can pick every remaining candidate and refuses more than exist', () => {
+    assert.deepEqual([...pickDistinctIndices(3, 3, () => 0)].sort(), [0, 1, 2]);
+    assert.throws(() => pickDistinctIndices(3, 3, () => 0, 1), RangeError);
+    assert.deepEqual(pickDistinctIndices(3, 0, () => 0), []);
+  });
+
+  it('is uniform over ordered picks', () => {
+    const counts = new Map();
+    const trials = 30000;
+    for (let trial = 0; trial < trials; trial++) {
+      const key = pickDistinctIndices(3, 2, (length) => Math.floor(Math.random() * length)).join('-');
+      counts.set(key, (counts.get(key) ?? 0) + 1);
+    }
+    assert.equal(counts.size, 6);
+    for (const count of counts.values()) assert.ok(Math.abs(count / trials - 1 / 6) < 0.02);
+  });
+
+  it('validates the requested count without silently clamping', () => {
+    assert.equal(validateDrawCount('3', 5).count, 3);
+    assert.equal(validateDrawCount('5', 5).count, 5);
+    for (const text of ['', ' ', '0', '-1', '1.5', 'abc', '6']) {
+      const check = validateDrawCount(text, 5);
+      assert.equal(check.count, null, text);
+      assert.ok(check.error.length > 0, text);
+    }
   });
 });
