@@ -32,4 +32,4 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [QR 코드 인쇄 전 실제 크기로 스캔 테스트하는 순서](https://spinkorea.kr/blog/qr-print-scan-test) — 화면에서 만든 QR을 인쇄하기 전에 크기와 대비, 연결 주소를 확인하는 절차입니다.
 
 ## 기술 정보
-React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.xml, JSON-LD, AdSense 자동광고, GA4를 사용합니다.
+React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.xml, JSON-LD, GA4를 사용합니다. 기본 빌드에서는 광고 요청을 비활성화하며 광고용 빈 공간을 표시하지 않습니다.

@@ -14,11 +14,11 @@ export default function PrivacyPolicy() {
         <div className="max-w-3xl mx-auto">
           <p className="text-sm font-bold text-cyan-700 mb-3 uppercase tracking-widest">Privacy Policy</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-950 mb-4">개인정보처리방침</h1>
-          <p className="text-slate-500 text-sm">최종 업데이트: 2026년 9월 20일</p>
+          <p className="text-slate-500 text-sm">최종 업데이트: 2026년 10월 23일</p>
         </div>
       </header>
 
-      <main className="flex-1 max-w-3xl mx-auto w-full px-4 py-12">
+      <main id="main-content" tabIndex={-1} className="flex-1 max-w-3xl mx-auto w-full px-4 py-12">
         <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-8 space-y-8 prose prose-slate max-w-none prose-headings:text-slate-950 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-cyan-700">
           <p>
             SpinFlow는 회원가입 없이 사용할 수 있는 무료 웹 유틸리티 서비스입니다.

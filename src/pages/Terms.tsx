@@ -18,7 +18,7 @@ export default function Terms() {
         </div>
       </header>
 
-      <main className="flex-1 max-w-3xl mx-auto w-full px-4 py-12">
+      <main id="main-content" tabIndex={-1} className="flex-1 max-w-3xl mx-auto w-full px-4 py-12">
         <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-8 space-y-8 prose prose-slate max-w-none prose-headings:text-slate-950 prose-p:text-slate-600 prose-li:text-slate-600 prose-a:text-cyan-700">
           <section>
             <h2>1. 목적</h2>

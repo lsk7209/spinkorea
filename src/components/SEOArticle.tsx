@@ -17,16 +17,16 @@ export default function SEOArticle() {
         </h2>
         <p className="mb-4">
           SpinFlow는 공정한 난수 생성 알고리즘을 사용하여 결정을 도와주는 룰렛 웹 애플리케이션입니다.
-          항목을 입력하고 SPIN 버튼을 클릭하면 룰렛이 회전하며 무작위로 하나의 항목을 선택합니다.
+          후보를 입력하고 추첨 버튼을 누르면 설정한 수만큼 후보를 선택합니다. 한 묶음에서는 같은 후보를 두 번 선택하지 않습니다.
         </p>
         <p className="mb-4">
           데스크톱에서는 화면 우측의 텍스트 영역에서 항목을 편집할 수 있으며,
-          모바일에서는 "항목 수정하기" 버튼을 통해 전체화면 모달에서 편집할 수 있습니다.
+          모바일에서는 "명단 수정" 버튼을 통해 전체화면 모달에서 편집할 수 있습니다.
           한 줄에 하나의 항목을 입력하면 되며, 최대 100개까지 입력 가능합니다.
         </p>
         <p>
-          룰렛 결과는 URL에 자동으로 저장되며, 링크를 공유하면 다른 사람도 동일한 룰렛을 볼 수 있습니다.
-          또한 최근 결과는 5분간 표시되어 이전 결과를 확인할 수 있습니다.
+          원본 후보 명단은 URL에 압축되어 저장됩니다. 후보 링크에는 결과와 자동 제외 상태가 포함되지 않습니다.
+          확정 결과는 화면의 “결과와 조건 복사”로 따로 복사하세요.
         </p>
       </section>
 
@@ -118,7 +118,7 @@ export default function SEOArticle() {
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
-            <h3 className="font-bold text-slate-950 mb-2">🔒 100% 프라이버시</h3>
+            <h3 className="font-bold text-slate-950 mb-2">🔒 입력·공유 확인</h3>
             <p className="text-sm text-slate-600">
               룰렛 항목과 결과 선택은 브라우저에서 처리됩니다. 분석·광고 설정과 사용자가 직접 공유하는 정보는 별도로 확인해야 합니다.
             </p>

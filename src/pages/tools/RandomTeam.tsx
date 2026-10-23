@@ -1,18 +1,37 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Users, Check, Share2, Copy } from "lucide-react";
 import { toast } from "sonner";
 import ToolLayout from "@/components/ToolLayout";
 import { getSecureRandomInt } from "@/utils/random";
 import { trackToolCompleted } from "@/utils/analytics";
 
+interface TransferredRoster {
+  source: 'full' | 'remaining';
+  items: string[];
+}
+
+function readTransferredRoster(value: unknown): TransferredRoster | null {
+  if (!value || typeof value !== 'object' || !('spinflowRoster' in value)) return null;
+  const roster = value.spinflowRoster;
+  if (!roster || typeof roster !== 'object' || !('source' in roster) || !('items' in roster)) return null;
+  if (roster.source !== 'full' && roster.source !== 'remaining') return null;
+  if (!Array.isArray(roster.items) || roster.items.length < 1 || roster.items.length > 100
+    || !roster.items.every((item) => typeof item === 'string' && item.trim() === item && item.length > 0 && item.length <= 80)) return null;
+  return { source: roster.source, items: [...roster.items] };
+}
+
 export default function RandomTeam() {
-  const [names, setNames] = useState("");
+  const location = useLocation();
+  const [transferredRoster] = useState(() => readTransferredRoster(location.state));
+  const [names, setNames] = useState(() => transferredRoster?.items.join('\n') ?? "");
   const [teamCount, setTeamCount] = useState(2);
   const [teams, setTeams] = useState<string[][]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
 
   const generateTeams = () => {
-    const nameList = names.split("\n").filter((n) => n.trim() !== "");
+    const rawNames = names.split("\n").map(n=>n.trim()).filter(Boolean);
+    const nameList = rawNames.map((name,index)=>rawNames.filter(other=>other===name).length>1 ? `${name} (명단 ${index+1}번)` : name);
 
     if (nameList.length < teamCount) {
       toast.error("참가자 수가 팀 수보다 적습니다.");
@@ -98,6 +117,7 @@ export default function RandomTeam() {
       <div className="grid md:grid-cols-2 gap-8">
         {/* Input Area */}
         <div className="space-y-6">
+          {transferredRoster && <p className="rounded-lg border border-[#7A8175] bg-[#FFFEF8] p-3 text-sm text-[#232623]">룰렛의 {transferredRoster.source === 'full' ? '전체 명단' : '현재 남은 후보'} {transferredRoster.items.length}개를 가져왔습니다. 이 화면에서 수정해도 룰렛의 원본 명단은 바뀌지 않습니다.</p>}
           <div>
             <label className="block text-gray-400 text-sm font-medium mb-2" htmlFor="random-team-1">
               참가자 이름 입력 (줄바꿈으로 구분)

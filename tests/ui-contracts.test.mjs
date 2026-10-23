@@ -9,10 +9,10 @@ const read = (path) => fs.readFileSync(path, 'utf8');
 describe('SPK2-01 Home draw reset', () => {
   const home = read('src/pages/Home.tsx');
   it('resets the current draw when the candidate list actually changes', () => {
-    assert.match(home, /areItemsEqual\(items, newItems\)[\s\S]*?updateItems\(newItems\);\s*reset\(\);/);
+    assert.match(home, /areItemsEqual\(items, next\)[\s\S]*?updateItems\(next\);[\s\S]*?reset\(\);/);
   });
   it('tracks tool_used only for an accepted draw', () => {
-    assert.match(home, /const draw = spin\(\);\s*if \(!draw\) \{\s*return;\s*\}/);
+    assert.match(home, /const draw = spin\(\);\s*if \(!draw\) return;[\s\S]*?trackEvent\('tool_used'/);
   });
   it('completion event uses the draw snapshot, not the live list', () => {
     assert.match(home, /item_count: draw\.items\.length/);

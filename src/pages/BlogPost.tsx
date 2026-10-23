@@ -247,7 +247,7 @@ export default function BlogPost() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-950 flex flex-col pb-20">
+    <div className="guide-page min-h-screen bg-slate-50 text-slate-950 flex flex-col pb-20">
       <SEO
         title={post.title}
         description={post.description}
@@ -278,7 +278,7 @@ export default function BlogPost() {
         </div>
       </nav>
 
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <article className="flex-1 w-full max-w-4xl mx-auto px-4 mt-8">
           <header className="mb-10 text-center">
             <div className="flex items-center justify-center gap-4 text-sm text-slate-500 mb-6">
@@ -319,25 +319,12 @@ export default function BlogPost() {
             )}
           </header>
 
-          {post.thumbnail && (
-            <div className="mb-12 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-              <img
-                src={post.thumbnail}
-                alt={post.title}
-                width={1600}
-                height={900}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                className="w-full h-auto object-cover max-h-[500px]"
-              />
-            </div>
-          )}
-
           {tocItems.length >= 3 && (
             <nav className="mb-8 rounded-2xl border border-cyan-100 bg-cyan-50/60 p-5">
               <button
                 type="button"
+                aria-expanded={tocOpen}
+                aria-controls="guide-toc"
                 onClick={() => setTocOpen((o) => !o)}
                 className="flex w-full items-center justify-between text-sm font-bold text-slate-800"
               >
@@ -348,7 +335,7 @@ export default function BlogPost() {
                 <span className="text-slate-400 text-xs">{tocOpen ? "접기 ▲" : "펼치기 ▼"}</span>
               </button>
               {tocOpen && (
-                <ol className="mt-3 space-y-1.5">
+                <ol id="guide-toc" className="mt-3 space-y-1.5">
                   {tocItems.map((item) => (
                     <li
                       key={item.id}

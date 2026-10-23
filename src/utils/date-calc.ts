@@ -41,6 +41,41 @@ export function serviceDaysBetween(start: string, end: string): number | null {
   return days > 0 ? days : null;
 }
 
+/** 마지막 근무일의 다음 날이 퇴직일입니다. */
+export function retirementDateFromLastWorkDay(lastWorkDay: Date): Date {
+  return new Date(lastWorkDay.getFullYear(), lastWorkDay.getMonth(), lastWorkDay.getDate() + 1);
+}
+
+/** 달 수를 뺀 날짜. 해당 월에 같은 일자가 없으면 그 달의 말일로 맞춥니다(예: 5/31 − 3개월 = 2/28). */
+export function subtractMonthsClamped(date: Date, months: number): Date {
+  const firstOfTarget = new Date(date.getFullYear(), date.getMonth() - months, 1);
+  const lastDay = new Date(firstOfTarget.getFullYear(), firstOfTarget.getMonth() + 1, 0).getDate();
+  return new Date(firstOfTarget.getFullYear(), firstOfTarget.getMonth(), Math.min(date.getDate(), lastDay));
+}
+
+export interface WagePeriod {
+  /** 산정기간 첫날(포함). */
+  start: Date;
+  /** 산정기간 마지막 날(포함) = 퇴직일 전날. */
+  end: Date;
+  /** 산정기간 총 일수(달력 기준). */
+  days: number;
+}
+
+/** 퇴직일 직전 3개월(퇴직일 제외) 평균임금 산정기간. */
+export function severanceWagePeriod(retirementDate: Date): WagePeriod {
+  const start = subtractMonthsClamped(retirementDate, 3);
+  const end = new Date(retirementDate.getFullYear(), retirementDate.getMonth(), retirementDate.getDate() - 1);
+  return { start, end, days: calendarDaysBetween(start, retirementDate) };
+}
+
+/** `YYYY-MM-DD` 표기. */
+export function formatLocalDate(date: Date): string {
+  const mm = String(date.getMonth() + 1).padStart(2, "0");
+  const dd = String(date.getDate()).padStart(2, "0");
+  return `${date.getFullYear()}-${mm}-${dd}`;
+}
+
 /** Returns true when the birth date is a valid date that is not after today. */
 export function isValidBirthDate(birth: Date, today: Date): boolean {
   if (Number.isNaN(birth.getTime())) return false;
@@ -95,4 +130,10 @@ export function parseUnixTimestamp(input: string): ParsedTimestamp | null {
   const milliseconds = unit === "milliseconds" ? value : value * 1000;
   if (Math.abs(milliseconds) > MAX_DATE_MS) return null;
   return { date: new Date(milliseconds), unit };
+}
+
+/** A year of continuous service is a calendar anniversary, including leap years. */
+export function hasCompletedServiceYear(joinDate: Date, retirementDate: Date): boolean {
+  const anniversary = subtractMonthsClamped(joinDate, -12);
+  return calendarDaysBetween(anniversary, retirementDate) >= 0;
 }

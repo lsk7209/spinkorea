@@ -1,3 +1,13 @@
+# Acceptance — redesign 2026-10-23
+- Real HTML/vector text and runtime state; no page-sized screenshot assets, fabricated users/results/claims.
+- Paper/ink, serif headings, sans controls, four wheel colors/ticks, lime roster tabs, clipped orange actions, perforated results.
+- Fixed uniqueness within N draws; duplicate names identified; auto-exclusion separate; copied result and condition snapshot match display; retained records; safe storage failures; team roster transfer.
+- Accessible editing and presentation Esc/focus restore; responsive 320/360/390/768/1024/1440; no overflow.
+- No default ad loader or placeholder slots; account/CMP/auto ads unverified.
+- Official tax-table supported ranges; 2026 reference-month pension limits and truncation; actual 3-month retirement divisor/calendar-year eligibility; errors do not show plausible invalid results.
+- Routes/canonical/H1/initial HTML retained, full local checks, browser regression, independent review fixes. No claim of physical-device/performance/account/deployment proof.
+
+--- Historical record ---
 # Current release acceptance — 2026-09-20 08:59 대한민국 표준시
 
 PASS: audited article corrections with original slugs/dates/index scope; finite positive BMI and18.5/23/25/30/35 classification/gauge/FAQ; metadata/static/SPA parity; all local gates and62 browser checks; reviewer findings resolved;44 intended files selectively committed; normal Git push/exact origin SHA; same-SHA Production success; live SPA30/30 and9 HTTP routes200. No inbox/CMP/account/GSC/crawler or OS clipboard claim is made. Authorized release scope is complete.

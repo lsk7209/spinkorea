@@ -1,3 +1,10 @@
+# Redesign execution — 2026-10-23
+1. Inspect sources, references, initial Git state and P0 evidence. Preserve unrelated dirty work. Recover absent original development spec from existing improvement prompt and audit.
+2. Implement common visual tokens/header/wheel/guides and bounded home workflow in parallel. Keep engine, routing and existing storage defensive behavior.
+3. Reuse pre-existing local P0 branch patches by exact files, verify official sources, replace inaccurate withholding approximation with official data; repair supporting guidance.
+4. Run targeted + full local validation, inspect real desktop/mobile/presentation captures, repair review findings and recheck. Record source/operational boundaries in docs/REVIEW and HANDOFF. Stop after local evidence passes; no remote mutations.
+
+--- Historical record ---
 # Current release plan — 2026-09-20 08:59 대한민국 표준시
 
 Completed: recover baseline, implement audited corrections, validate locally, resolve two independent reviews, select44 release files, commit, re-fetch origin, normal main push, verify exact-SHA Production success and live public behavior, record handoff. A documentation-only commit follows the deployed runtime commit. No further product steps remain.

@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 
 export default function NotFound() {
   return (
-    <div className="min-h-[100dvh] bg-slate-50 flex flex-col items-center justify-center px-4">
+    <div id="main-content" tabIndex={-1} className="min-h-[100dvh] bg-slate-50 flex flex-col items-center justify-center px-4">
       <SEO
         title="404 - 페이지를 찾을 수 없음 | SpinFlow"
         description="요청한 페이지를 찾을 수 없습니다."

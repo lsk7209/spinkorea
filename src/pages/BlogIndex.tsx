@@ -12,9 +12,13 @@ const INITIAL_POST_COUNT = 12;
 
 export default function BlogIndex() {
   const posts = getIndexablePostMetadata();
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("");
+  const categories = [...new Set(posts.flatMap(post => post.tags))].sort();
+  const filteredPosts = posts.filter(post => (!category || post.tags.includes(category)) && `${post.title} ${post.description} ${post.tags.join(' ')}`.toLocaleLowerCase().includes(query.toLocaleLowerCase()));
   const [visibleCount, setVisibleCount] = useState(INITIAL_POST_COUNT);
-  const visiblePosts = posts.slice(0, visibleCount);
-  const hasMorePosts = visibleCount < posts.length;
+  const visiblePosts = filteredPosts.slice(0, visibleCount);
+  const hasMorePosts = visibleCount < filteredPosts.length;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -33,7 +37,7 @@ export default function BlogIndex() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-950 flex flex-col">
+    <div className="guide-page min-h-screen bg-slate-50 text-slate-950 flex flex-col">
       <SEO
         title="블로그 - 룰렛·생산성·도구 활용 가이드 | SpinFlow"
         description="룰렛 활용법, 결정 심리학, 생산성 팁, 온라인 도구 가이드를 정리한 SpinFlow 블로그입니다."
@@ -44,10 +48,10 @@ export default function BlogIndex() {
       <header className="w-full px-4 pt-28 pb-12 border-b border-slate-200 bg-white">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-sm font-bold text-cyan-700 mb-3 uppercase tracking-widest">
-            SpinFlow Blog
+            사용 가이드
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-950 mb-4">
-            결정·생산성·도구 가이드
+            함께 정하는 일을 더 쉽게
           </h1>
           <p className="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto">
             룰렛, 계산기, 변환 도구를 더 잘 쓰는 방법과 일상 생산성 팁을 정리합니다.
@@ -55,7 +59,13 @@ export default function BlogIndex() {
         </div>
       </header>
 
-      <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-12">
+      <main id="main-content" className="flex-1 max-w-6xl mx-auto w-full px-4 py-12">
+        <div className="guide-search">
+          <div><label htmlFor="guide-query">어떤 도움이 필요한가요?</label><input id="guide-query" type="search" value={query} onChange={e=>{setQuery(e.target.value);setVisibleCount(INITIAL_POST_COUNT);}} placeholder="제목, 내용으로 가이드 찾기" /></div>
+          <div><label htmlFor="guide-category">분류</label><select id="guide-category" value={category} onChange={e=>{setCategory(e.target.value);setVisibleCount(INITIAL_POST_COUNT);}}><option value="">전체 가이드</option>{categories.map(tag=><option key={tag}>{tag}</option>)}</select></div>
+        </div>
+        <p className="mb-6 text-sm" role="status">{filteredPosts.length}개의 가이드</p>
+        {filteredPosts.length===0 && <div className="guide-empty"><h2>찾는 가이드가 없습니다</h2><p>검색어를 줄이거나 다른 분류를 선택해 보세요.</p><button type="button" onClick={()=>{setQuery('');setCategory('');}}>전체 가이드 보기</button></div>}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {visiblePosts.map((post, index) => (
             <Link
@@ -70,19 +80,6 @@ export default function BlogIndex() {
               className="block group"
             >
               <article className="h-full bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg flex flex-col">
-                {post.thumbnail && (
-                  <div className="h-48 overflow-hidden">
-                    <img
-                      src={post.thumbnail}
-                      alt={post.title}
-                      width={1600}
-                      height={900}
-                      loading={index < 6 ? "eager" : "lazy"}
-                      decoding="async"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                )}
                 <div className="p-5 flex flex-col flex-1">
                   <div className="flex flex-wrap items-center gap-1.5 text-xs text-cyan-700 mb-2">
                     <span className="text-slate-400">{getPostPublishDate(post)}</span>
@@ -118,12 +115,12 @@ export default function BlogIndex() {
                 setVisibleCount((count) => count + INITIAL_POST_COUNT);
                 trackEvent('content_list_expanded', {
                   content_type: 'blog_post',
-                  visible_count: Math.min(visibleCount + INITIAL_POST_COUNT, posts.length),
+                  visible_count: Math.min(visibleCount + INITIAL_POST_COUNT, filteredPosts.length),
                 });
               }}
               className="rounded-full border border-cyan-200 bg-white px-8 py-3 font-bold text-cyan-800 shadow-sm transition-colors hover:bg-cyan-50"
             >
-              글 더 보기 ({posts.length - visibleCount}개 남음)
+              글 더 보기 ({filteredPosts.length - visibleCount}개 남음)
             </button>
           </div>
         )}

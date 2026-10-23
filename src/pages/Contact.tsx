@@ -38,7 +38,7 @@ export default function Contact() {
         </div>
       </header>
 
-      <main className="flex-1 max-w-4xl mx-auto w-full px-4 py-12">
+      <main id="main-content" tabIndex={-1} className="flex-1 max-w-4xl mx-auto w-full px-4 py-12">
         <div className="grid gap-5 md:grid-cols-2">
           {[
             {

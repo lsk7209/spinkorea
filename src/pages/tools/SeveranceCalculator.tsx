@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { Briefcase } from "lucide-react";
 import ToolLayout from "@/components/ToolLayout";
-import { serviceDaysBetween } from "@/utils/date-calc";
+import {
+  calendarDaysBetween,
+  hasCompletedServiceYear,
+  formatLocalDate,
+  parseLocalDate,
+  retirementDateFromLastWorkDay,
+  severanceWagePeriod,
+} from "@/utils/date-calc";
 
 function fmt(n: number) {
   return Math.round(n).toLocaleString("ko-KR");
@@ -13,22 +20,28 @@ export default function SeveranceCalculator() {
   const [monthlyWage, setMonthlyWage] = useState("3000000");
   const [bonusAnnual, setBonusAnnual] = useState("0");
 
-  // null when a date is missing/invalid or the end date is not after the start date.
-  const serviceDays = serviceDaysBetween(startDate, endDate);
-  const hasValidPeriod = serviceDays !== null;
-  const totalDays = serviceDays ?? 0;
+  // 퇴직일 = 마지막 근무일의 다음 날. 근속일수 = 퇴직일 − 입사일.
+  const joinDate = parseLocalDate(startDate);
+  const lastWorkDate = parseLocalDate(endDate);
+  const retirementDate = lastWorkDate ? retirementDateFromLastWorkDay(lastWorkDate) : null;
+  const serviceDays = joinDate && retirementDate ? calendarDaysBetween(joinDate, retirementDate) : 0;
+  const hasValidPeriod = serviceDays > 0 && retirementDate !== null;
+  const totalDays = hasValidPeriod ? serviceDays : 0;
   const years = totalDays / 365;
 
-  // 법정 퇴직금 계산
-  // 1일 평균임금 = (최근 3개월 임금 합계 + 연간 상여금 × 3/12) / 최근 3개월 총 일수(91일 기준)
+  // 평균임금 산정기간: 퇴직일 직전 3개월의 실제 달력 일수(89~92일)
+  const wagePeriod = hasValidPeriod && retirementDate ? severanceWagePeriod(retirementDate) : null;
+  const wageDays = wagePeriod?.days ?? 0;
+
+  // 1일 평균임금 = (최근 3개월 임금 합계 + 연간 상여금 × 3/12) / 산정기간 총일수
   const monthly = Math.max(0, parseFloat(monthlyWage) || 0);
   const bonus = Math.max(0, parseFloat(bonusAnnual) || 0);
-  const avgDaily = (monthly * 3 + (bonus * 3) / 12) / 91;
+  const avgDaily = wageDays > 0 ? (monthly * 3 + (bonus * 3) / 12) / wageDays : 0;
 
   // 퇴직금 = 1일 평균임금 × 30 × (재직일수 / 365)
   const severance = avgDaily * 30 * (totalDays / 365);
 
-  const isEligible = totalDays >= 365;
+  const isEligible = Boolean(hasValidPeriod && joinDate && retirementDate && hasCompletedServiceYear(joinDate, retirementDate));
 
   // Yearly breakdown
   const rows: { year: number; days: number; severance: number }[] = [];
@@ -42,6 +55,9 @@ export default function SeveranceCalculator() {
     <ToolLayout
       title="퇴직금 계산기 | 법정 퇴직금 자동 계산"
       description="입사일, 퇴사일, 최근 3개월 평균임금을 입력하면 법정 퇴직금을 자동 계산합니다. 연간 상여금도 반영 가능합니다."
+      sources={[{name:'고용노동부 — 퇴직금 계산과 평균임금 산정기간',url:'https://moel.go.kr/retirementpayCal.do'}]}
+      reviewedAt="2026-10-23"
+      disclaimer="최근 3개월의 월 평균임금이 매월 동일하다고 가정한 참고 계산입니다. 산정 제외기간, 연차수당, 통상임금 하한, 퇴직연금 유형, 세금은 반영하지 않습니다. 통상임금이 평균임금보다 높거나 휴직·급여 변동이 있으면 고용노동부 계산기에서 실제 임금 내역으로 확인하세요."
       keywords="퇴직금계산기, 퇴직금계산, 법정퇴직금, 퇴직금공식, 평균임금, 근속연수계산"
       howToUse={[
         "입사일과 퇴사(예정)일을 선택하세요.",
@@ -91,7 +107,7 @@ export default function SeveranceCalculator() {
               />
             </div>
             <div>
-              <label className="block text-sm text-gray-400 mb-1" htmlFor="severance-calculator-2">퇴사일 (예정일)</label>
+              <label className="block text-sm text-gray-400 mb-1" htmlFor="severance-calculator-2">마지막 근무일</label>
               <input id="severance-calculator-2"
                 type="date"
                 value={endDate}
@@ -124,12 +140,12 @@ export default function SeveranceCalculator() {
         {/* 결과 */}
         {!hasValidPeriod && (
           <p role="alert" className="bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-center text-red-400 font-bold">
-            퇴사일은 입사일보다 뒤의 날짜여야 합니다. 두 날짜를 확인해 주세요.
+            마지막 근무일은 입사일 이후여야 합니다. 두 날짜를 확인해 주세요.
           </p>
         )}
         {hasValidPeriod && !isEligible && (
           <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-center">
-            <p className="text-red-400 font-bold">근속기간 {totalDays}일 — 1년 미만은 법정 퇴직금 지급 의무가 없습니다.</p>
+            <p className="text-red-400 font-bold">근속기간 {totalDays}일 — 계속근로기간 1년 미만이면 법정 퇴직금 대상이 아닙니다. (주 15시간 미만 근로 등 다른 요건은 별도 확인)</p>
           </div>
         )}
 
@@ -147,6 +163,13 @@ export default function SeveranceCalculator() {
             </div>
           ))}
         </div>
+        )}
+
+        {wagePeriod && (
+          <p className="bg-black/30 rounded-xl p-4 text-sm text-gray-300">
+            퇴직일 {formatLocalDate(retirementDate!)} 기준 평균임금 산정기간: {formatLocalDate(wagePeriod.start)} ~ {formatLocalDate(wagePeriod.end)} (총 {wageDays}일).
+            월 평균임금 × 3개월이 같다고 가정한 예상값이며, 월별 임금 변동·연차수당·산정 제외 기간은 반영하지 않습니다.
+          </p>
         )}
 
         {/* 연도별 누적 */}
@@ -180,7 +203,7 @@ export default function SeveranceCalculator() {
         <div className="border-t border-white/10 pt-6 text-sm">
           <div className="bg-black/20 p-4 rounded-lg space-y-1">
             <p className="text-neon-primary font-bold mb-2">법정 퇴직금 계산 공식</p>
-            <p className="text-gray-400">1일 평균임금 = (최근 3개월 임금 + 연 상여금 × 3/12) ÷ 91일</p>
+            <p className="text-gray-400">1일 평균임금 = (최근 3개월 임금 + 연 상여금 × 3/12) ÷ 직전 3개월 총일수(89~92일)</p>
             <p className="text-gray-400">퇴직금 = 1일 평균임금 × 30일 × (재직일수 ÷ 365)</p>
             <p className="text-gray-500 text-xs mt-2">* 근로기준법 제34조 및 「근로자퇴직급여 보장법」 기준</p>
           </div>

@@ -41,7 +41,7 @@ export default function ToolsIndex() {
     };
 
     return (
-        <div className="min-h-[100dvh] bg-aurora-bg pt-20 pb-20">
+        <div id="main-content" tabIndex={-1} className="min-h-[100dvh] bg-aurora-bg pt-20 pb-20">
             <SEO
                 title="무료 유틸리티 모음 51종 | SpinFlow — 계산기·변환·랜덤 도구"
                 description="연봉 실수령액·할인율·더치페이·투자수익률 계산기, 시급·대출·복리·퇴직금 계산기, 단어 빈도 분석기, UUID 생성기, 이상 체중 계산기 등 51가지 무료 웹 도구를 한 곳에서 사용하세요."
@@ -69,7 +69,7 @@ export default function ToolsIndex() {
                                 destination_path: tool.path,
                                 placement: 'quick_paths',
                             })}
-                            className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-100 transition-colors hover:border-cyan-300 hover:bg-cyan-400/20"
+                            className="rounded-full border border-[#7A8175] bg-[#D9E9A5] px-4 py-2 text-sm font-semibold text-[#232623] transition-colors hover:border-[#1F6A63] hover:bg-[#EDEFE2]"
                         >
                             {tool.name}
                         </Link>
