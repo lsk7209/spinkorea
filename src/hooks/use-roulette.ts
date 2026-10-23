@@ -36,8 +36,8 @@ export function useRoulette({ items, onResult, spinDurationMs = SPIN_DURATION_MS
   // 페이지 이동(unmount) 시 진행 중인 추첨을 무효화해 늦은 저장·이벤트를 막는다.
   useEffect(() => () => controllerRef.current?.cancel(), []);
 
-  const spin = useCallback((): DrawSnapshot | null => {
-    const draw = controllerRef.current?.start(items, (completed) => {
+  const spin = useCallback((itemsOverride?: string[]): DrawSnapshot | null => {
+    const draw = controllerRef.current?.start(itemsOverride ?? items, (completed) => {
       setResult(completed.result);
       setIsSpinning(false);
       onResultRef.current?.(completed.result, completed);

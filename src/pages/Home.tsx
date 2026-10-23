@@ -23,6 +23,12 @@ import { getPresetIdForSlug } from '@/data/spinflow-presets';
 import { trackEvent, buildToolEnvelope } from '@/utils/analytics';
 import { areItemsEqual, REDUCED_MOTION_SPIN_DURATION_MS, SPIN_DURATION_MS } from '@/utils/draw-controller';
 import type { DrawSnapshot } from '@/utils/draw-controller';
+import { buildActiveItems, nextExcluded } from '@/utils/winner-exclusion';
+import { pickDistinctIndices, validateDrawCount } from '@/utils/multi-draw';
+import { getRandomIndex } from '@/utils/random';
+import DrawCountControl from '@/components/DrawCountControl';
+import WinnerExcludeControl from '@/components/WinnerExcludeControl';
+import SavedLists from '@/components/SavedLists';
 
 const DEFAULT_ITEMS = [
     '한식',
@@ -102,6 +108,48 @@ export default function Home({
         return () => window.removeEventListener('resize', update);
     }, []);
 
+    // 전체화면: 같은 React 트리를 CSS 오버레이로 키우고, 가능하면 브라우저 전체화면도 함께 쓴다.
+    // API가 없거나 거부돼도 오버레이(확대 보기)로 계속 사용할 수 있고 후보·설정·결과 상태는 그대로다.
+    const wheelFrameRef = useRef<HTMLDivElement>(null);
+    const [isFullscreen, setIsFullscreen] = useState(false);
+    const [fullscreenNotice, setFullscreenNotice] = useState<string | null>(null);
+
+    const enterFullscreen = useCallback(() => {
+        setIsFullscreen(true);
+        setFullscreenNotice(null);
+        const request = wheelFrameRef.current?.requestFullscreen?.();
+        if (!request) {
+            setFullscreenNotice('이 브라우저는 전체화면을 지원하지 않아 확대 보기로 표시합니다.');
+            return;
+        }
+        request.catch(() => setFullscreenNotice('전체화면이 허용되지 않아 확대 보기로 표시합니다.'));
+    }, []);
+
+    const exitFullscreen = useCallback(() => {
+        setIsFullscreen(false);
+        if (document.fullscreenElement) document.exitFullscreen().catch(() => undefined);
+    }, []);
+
+    useEffect(() => {
+        if (!isFullscreen) return;
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') exitFullscreen();
+        };
+        const onFullscreenChange = () => {
+            if (!document.fullscreenElement) setIsFullscreen(false);
+        };
+        window.addEventListener('keydown', onKeyDown);
+        document.addEventListener('fullscreenchange', onFullscreenChange);
+        return () => {
+            window.removeEventListener('keydown', onKeyDown);
+            document.removeEventListener('fullscreenchange', onFullscreenChange);
+        };
+    }, [isFullscreen, exitFullscreen]);
+
+    const displayWheelSize = isFullscreen
+        ? Math.max(240, Math.min(window.innerWidth - 32, window.innerHeight - 260, 900))
+        : wheelSize;
+
     const [isEditorModalOpen, setIsEditorModalOpen] = useState(false);
     const [isTemplateModalOpen, setIsTemplateModalOpen] = useState(false);
     const [showResult, setShowResult] = useState(false);
@@ -112,9 +160,26 @@ export default function Home({
     const prefersReducedMotion = useReducedMotion() ?? false;
     const spinDurationMs = prefersReducedMotion ? REDUCED_MOTION_SPIN_DURATION_MS : SPIN_DURATION_MS;
 
+    // 당첨자 제외(기본 꺼짐): 제외는 위치(인덱스)로 관리하고, 직전 당첨자는 다음 추첨 시작 때 반영한다.
+    const [excludeWinners, setExcludeWinners] = useState(false);
+    const [excluded, setExcluded] = useState<number[]>([]);
+    const [pendingWinners, setPendingWinners] = useState<number[]>([]);
+    const activeIndicesRef = useRef<number[]>([]);
+    const { active: activeItems } = buildActiveItems(items, excluded);
+    // N명 추첨: 한 묶음의 당첨 위치(추첨 대상 기준). 휠은 마지막 당첨자를 가리킨다.
+    const [drawCountText, setDrawCountText] = useState('1');
+    const [batchWinners, setBatchWinners] = useState<string[] | null>(null);
+    const batchActiveRef = useRef<number[]>([]);
+    const remainingCandidates = activeItems.length - (excludeWinners ? pendingWinners.length : 0);
+    const drawCountCheck = validateDrawCount(drawCountText, remainingCandidates);
+
     const handleResult = useCallback(
         (result: string, draw: DrawSnapshot) => {
-            saveResult(result);
+            const batch = batchActiveRef.current.length > 0 ? batchActiveRef.current : [draw.index];
+            const names = batch.map((index) => draw.items[index]);
+            setPendingWinners(batch.flatMap((index) => activeIndicesRef.current[index] ?? []));
+            setBatchWinners(names.length > 1 ? names : null);
+            saveResult(names.length > 1 ? names.join(', ') : result);
             setShowResult(true);
             trackEvent('tool_result_viewed', {
                 ...buildToolEnvelope(window.location.pathname, 'roulette'),
@@ -127,23 +192,49 @@ export default function Home({
     );
 
     const { isSpinning, result, winningIndex, spin, reset } = useRoulette({
-        items,
+        items: activeItems,
         onResult: handleResult,
         spinDurationMs,
     });
+    const displayResult = batchWinners ? batchWinners.join(', ') : result;
 
     const handleSpin = useCallback(() => {
-        const draw = spin();
+        const nextExcludedList = nextExcluded(excluded, pendingWinners, excludeWinners);
+        const { active, originalIndices } = buildActiveItems(items, nextExcludedList);
+        const requested = validateDrawCount(drawCountText, active.length);
+        if (active.length === 0 || requested.count === null) {
+            return;
+        }
+        const draw = spin(active);
         if (!draw) {
             return;
         }
+        activeIndicesRef.current = originalIndices;
+        batchActiveRef.current = [
+            ...pickDistinctIndices(active.length, requested.count - 1, getRandomIndex, draw.index),
+            draw.index,
+        ];
+        setExcluded(nextExcludedList);
+        setPendingWinners([]);
+        setBatchWinners(null);
         setShowResult(false);
         trackEvent('tool_used', {
             ...buildToolEnvelope(window.location.pathname, 'roulette'),
             tool: 'roulette',
             item_count: draw.items.length,
         });
-    }, [spin]);
+    }, [spin, items, excluded, pendingWinners, excludeWinners, drawCountText]);
+
+    const restoreExcluded = useCallback(() => {
+        if (isSpinning) return;
+        setExcluded([]);
+        setPendingWinners([]);
+    }, [isSpinning]);
+
+    const toggleExcludeWinners = useCallback((enabled: boolean) => {
+        setExcludeWinners(enabled);
+        if (!enabled) setPendingWinners([]);
+    }, []);
 
     // 후보가 바뀌면 이전 추첨 결과·하이라이트·결과 공유를 비운다. 기록(history)은 유지된다.
     const handleUpdateItems = useCallback(
@@ -156,11 +247,29 @@ export default function Home({
             }
             updateItems(newItems);
             reset();
+            setExcluded([]);
+            setPendingWinners([]);
+            setBatchWinners(null);
             setShowResult(false);
             return true;
         },
         [isSpinning, items, updateItems, reset]
     );
+
+    // 저장한 명단을 불러오면 교체되는 현재 명단을 한 단계 되돌릴 수 있게 보관한다.
+    const [undoItems, setUndoItems] = useState<string[] | null>(null);
+    const loadSavedList = useCallback(
+        (listItems: string[]) => {
+            const previous = items;
+            if (!handleUpdateItems(listItems)) return false;
+            setUndoItems(previous);
+            return true;
+        },
+        [items, handleUpdateItems]
+    );
+    const undoLoadedList = useCallback(() => {
+        if (undoItems && handleUpdateItems(undoItems)) setUndoItems(null);
+    }, [undoItems, handleUpdateItems]);
 
     const applyPreset = useCallback(
         (presetItems: string[]) => {
@@ -283,15 +392,47 @@ export default function Home({
                 className="flex-1 flex flex-col lg:flex-row items-center justify-center gap-10 px-4 py-10 pb-20 max-w-7xl mx-auto w-full"
             >
                 {/* 모바일: 룰렛 중앙, 데스크톱: 룰렛 좌측 */}
-                <div className="flex-shrink-0 rounded-3xl bg-slate-950 p-4 shadow-xl">
+                <div
+                    ref={wheelFrameRef}
+                    className={
+                        isFullscreen
+                            ? 'fixed inset-0 z-[60] flex flex-col items-center justify-center overflow-auto bg-slate-950 p-4'
+                            : 'flex-shrink-0 rounded-3xl bg-slate-950 p-4 shadow-xl'
+                    }
+                >
+                    <div className="mb-2 flex w-full items-center justify-end gap-3 text-sm text-slate-300">
+                        {fullscreenNotice && isFullscreen && <span role="status">{fullscreenNotice}</span>}
+                        <button
+                            type="button"
+                            onClick={isFullscreen ? exitFullscreen : enterFullscreen}
+                            className="rounded-lg border border-slate-600 px-3 py-1.5 font-semibold text-white hover:border-cyan-500"
+                        >
+                            {isFullscreen ? '전체화면 닫기 (Esc)' : '전체화면'}
+                        </button>
+                    </div>
                     <RouletteWheel
                         items={items}
                         winningIndex={winningIndex}
                         isSpinning={isSpinning}
-                        size={wheelSize}
+                        size={displayWheelSize}
                         spinDurationMs={spinDurationMs}
                         reducedMotion={prefersReducedMotion}
                         onSpin={handleSpin}
+                    />
+                    <WinnerExcludeControl
+                        enabled={excludeWinners}
+                        disabled={isSpinning}
+                        excludedNames={excluded.map((index) => items[index]).filter((name): name is string => name !== undefined)}
+                        pendingName={pendingWinners.length > 0 ? pendingWinners.map((index) => items[index]).join(', ') : null}
+                        remaining={remainingCandidates}
+                        onToggle={toggleExcludeWinners}
+                        onRestore={restoreExcluded}
+                    />
+                    <DrawCountControl
+                        value={drawCountText}
+                        disabled={isSpinning}
+                        error={drawCountCheck.error}
+                        onChange={setDrawCountText}
                     />
                 </div>
 
@@ -299,6 +440,7 @@ export default function Home({
                 <div className="hidden md:block w-full max-w-md">
                     <div className="rounded-3xl bg-slate-950 border border-slate-800 p-6 shadow-xl">
                         <ItemEditor items={items} onUpdate={handleUpdateItems} isSpinning={isSpinning} />
+                        <SavedLists items={items} disabled={isSpinning} onLoad={loadSavedList} canUndo={undoItems !== null} onUndo={undoLoadedList} />
                         {urlWarning && (
                             <div className="mt-4 p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-xl">
                                 <p className="text-sm text-yellow-300">
@@ -313,11 +455,11 @@ export default function Home({
                                 </p>
                             </div>
                         )}
-                        {result && (
+                        {displayResult && (
                             <div className="mt-6">
                                 <ShareButtons
                                     items={items}
-                                    result={result}
+                                    result={displayResult}
                                     urlUnsafe={urlUnsafe}
                                 />
                             </div>
@@ -361,15 +503,16 @@ export default function Home({
                             </p>
                         </div>
                     )}
-                    {result && (
+                    {displayResult && (
                         <div className="mt-4">
                             <ShareButtons
                                 items={items}
-                                result={result}
+                                result={displayResult}
                                 urlUnsafe={urlUnsafe}
                             />
                         </div>
                     )}
+                    <SavedLists items={items} disabled={isSpinning} onLoad={loadSavedList} canUndo={undoItems !== null} onUndo={undoLoadedList} />
                     <SpinHistory history={history} />
                 </div>
             </main>
@@ -377,12 +520,12 @@ export default function Home({
             {/* SPIN 버튼 (FAB) */}
             <SpinButton
                 onClick={handleSpin}
-                disabled={items.length === 0}
+                disabled={remainingCandidates <= 0 || drawCountCheck.error !== null}
                 isSpinning={isSpinning}
             />
 
             {/* 결과 표시 */}
-            <ResultDisplay result={result} show={showResult} reducedMotion={prefersReducedMotion} />
+            <ResultDisplay result={displayResult} show={showResult} reducedMotion={prefersReducedMotion} />
 
             {/* 템플릿 선택 모달 */}
             <TemplateModal

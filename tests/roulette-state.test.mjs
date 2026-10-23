@@ -108,3 +108,100 @@ describe('decodeState / readStateFromSearch', () => {
     assert.ok(JSON.stringify({ v: 1, items: controlItems }).length <= MAX_DECODED_STATE_LENGTH, 'escaped control chars fit');
   });
 });
+
+import { buildActiveItems, nextExcluded } from '../src/utils/winner-exclusion.ts';
+
+describe('winner exclusion', () => {
+  it('excludes by position so duplicate names are handled separately', () => {
+    const { active, originalIndices } = buildActiveItems(['A', 'B', 'A', 'C'], [0]);
+    assert.deepEqual(active, ['B', 'A', 'C']);
+    assert.deepEqual(originalIndices, [1, 2, 3]);
+  });
+
+  it('adds the previous winner only when the option is on', () => {
+    assert.deepEqual(nextExcluded([1], [2], true), [1, 2]);
+    assert.deepEqual(nextExcluded([1], [2], false), [1]);
+    assert.deepEqual(nextExcluded([1], [], true), [1]);
+    assert.deepEqual(nextExcluded([1, 2], [2, 3], true), [1, 2, 3]);
+  });
+
+  it('returns no candidates when everything is excluded', () => {
+    assert.equal(buildActiveItems(['A', 'B'], [0, 1]).active.length, 0);
+  });
+});
+
+import { addSavedList, parseSavedLists, removeSavedList, MAX_SAVED_LISTS } from '../src/utils/saved-lists.ts';
+
+describe('saved lists', () => {
+  const now = new Date('2026-10-23T00:00:00Z');
+  let counter = 0;
+  const makeId = () => `id${++counter}`;
+
+  it('saves, replaces by name and removes', () => {
+    const first = addSavedList([], '  3반  ', ['가', '나'], now, makeId);
+    assert.equal(first.ok, true);
+    assert.equal(first.lists[0].name, '3반');
+    const again = addSavedList(first.lists, '3반', ['다'], now, makeId);
+    assert.equal(again.replaced, true);
+    assert.equal(again.lists.length, 1);
+    assert.equal(again.lists[0].id, first.lists[0].id);
+    assert.deepEqual(removeSavedList(again.lists, again.lists[0].id), []);
+  });
+
+  it('rejects invalid names, items and a full store', () => {
+    assert.equal(addSavedList([], ' ', ['가'], now, makeId).reason, 'invalid-name');
+    assert.equal(addSavedList([], 'x', [], now, makeId).reason, 'invalid-items');
+    assert.equal(addSavedList([], 'x', [' 공백 '], now, makeId).reason, 'invalid-items');
+    let lists = [];
+    for (let i = 0; i < MAX_SAVED_LISTS; i++) lists = addSavedList(lists, `n${i}`, ['가'], now, makeId).lists;
+    assert.equal(addSavedList(lists, 'extra', ['가'], now, makeId).reason, 'limit');
+    assert.equal(addSavedList(lists, 'n0', ['나'], now, makeId).ok, true);
+  });
+
+  it('keeps only valid entries from corrupted storage', () => {
+    const good = { id: 'a', name: '좋음', items: ['가'], savedAt: now.toISOString() };
+    assert.deepEqual(parseSavedLists([good, { id: 1 }, null, 'x', { ...good, items: [] }]), [good]);
+    assert.deepEqual(parseSavedLists('broken'), []);
+    assert.deepEqual(parseSavedLists(null), []);
+  });
+});
+
+import { pickDistinctIndices, validateDrawCount } from '../src/utils/multi-draw.ts';
+
+describe('multi draw', () => {
+  it('never repeats a candidate and never returns the excluded index', () => {
+    for (let trial = 0; trial < 200; trial++) {
+      const picked = pickDistinctIndices(6, 4, (length) => Math.floor(Math.random() * length), 2);
+      assert.equal(new Set(picked).size, 4);
+      assert.ok(!picked.includes(2));
+      assert.ok(picked.every((index) => index >= 0 && index < 6));
+    }
+  });
+
+  it('can pick every remaining candidate and refuses more than exist', () => {
+    assert.deepEqual([...pickDistinctIndices(3, 3, () => 0)].sort(), [0, 1, 2]);
+    assert.throws(() => pickDistinctIndices(3, 3, () => 0, 1), RangeError);
+    assert.deepEqual(pickDistinctIndices(3, 0, () => 0), []);
+  });
+
+  it('is uniform over ordered picks', () => {
+    const counts = new Map();
+    const trials = 30000;
+    for (let trial = 0; trial < trials; trial++) {
+      const key = pickDistinctIndices(3, 2, (length) => Math.floor(Math.random() * length)).join('-');
+      counts.set(key, (counts.get(key) ?? 0) + 1);
+    }
+    assert.equal(counts.size, 6);
+    for (const count of counts.values()) assert.ok(Math.abs(count / trials - 1 / 6) < 0.02);
+  });
+
+  it('validates the requested count without silently clamping', () => {
+    assert.equal(validateDrawCount('3', 5).count, 3);
+    assert.equal(validateDrawCount('5', 5).count, 5);
+    for (const text of ['', ' ', '0', '-1', '1.5', 'abc', '6']) {
+      const check = validateDrawCount(text, 5);
+      assert.equal(check.count, null, text);
+      assert.ok(check.error.length > 0, text);
+    }
+  });
+});
