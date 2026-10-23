@@ -891,12 +891,15 @@ function renderToolGuide(page) {
   if (!page.path.startsWith("/tools/")) return "";
 
   const pathName = page.path.toLowerCase();
-  const isRandom = ["lotto", "dice", "coin", "random", "team", "yes-no"].some((key) => pathName.includes(key));
+  const isPassword = pathName.includes("password");
+  const isRandom = !isPassword && ["lotto", "dice", "coin", "random", "team", "yes-no"].some((key) => pathName.includes(key));
   const isCalculator = ["calculator", "converter", "d-day", "timestamp", "timer", "wage", "salary", "pay", "leave", "interest"].some((key) => pathName.includes(key));
   const isDeveloper = ["json", "base64", "uri", "case", "diff", "markdown", "css", "color", "qr", "uuid", "lorem", "base-converter"].some((key) => pathName.includes(key));
   const isText = ["text", "word"].some((key) => pathName.includes(key));
 
-  const category = isRandom
+  const category = isPassword
+    ? "보안·생성 도구"
+    : isRandom
     ? "무작위 선택 도구"
     : isDeveloper
       ? "개발·디자인 보조 도구"
@@ -908,7 +911,10 @@ function renderToolGuide(page) {
 
   const resultGuide = page.path === "/tools/text-counter" ? guidance.textCounter.definition
     : page.path === "/tools/loan-calculator" ? guidance.loan.definition
-    : page.path === "/tools/sleep-calculator" ? guidance.sleep.definition : isRandom
+    : page.path === "/tools/sleep-calculator" ? guidance.sleep.definition
+    : isPassword
+    ? "생성된 비밀번호는 이 브라우저 안에서 만들어지며 서버로 전송되지 않습니다. 사용하는 서비스의 길이·특수문자 제한을 확인하고, 생성 후에는 비밀번호 관리자에 저장하세요. 다른 사이트와 같은 비밀번호를 재사용하지 마세요."
+    : isRandom
     ? "무작위 결과는 입력한 선택지와 설정을 기준으로 만들어집니다. 중복 항목을 허용할지 먼저 정하고, 결과가 나온 뒤에는 입력 목록을 바꾸지 않는 것이 기록과 공유에 유리합니다. 금전·법률·안전과 관련된 공식 추첨은 이 도구 대신 해당 기관의 절차를 사용하세요."
     : isDeveloper
       ? "변환·생성 결과는 복사하기 전에 원문과 결과를 함께 확인하세요. 특히 인코딩, JSON, Markdown, CSS, QR 결과는 사용하는 서비스의 형식과 길이 제한이 다를 수 있으므로 실제 적용 환경에서 한 번 더 테스트하는 것이 안전합니다."
