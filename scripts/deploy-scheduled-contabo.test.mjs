@@ -48,6 +48,19 @@ test('receipt requires exact successful build and expected fresh SHA', async () 
     assert.throws(() => parseBuildResponse(JSON.stringify(value), actual.pointer.sourceSha,
       actual.startedMs - 1000, actual.startedMs + 1000));
   }
+  const adoptedSha = '096946665295a050c925c38f38db9ccb857cb53f';
+  const adopted = JSON.parse(receipt(adoptedSha, 1000));
+  adopted.buildReceipt = '/var/lib/spinkorea-build/adoption-0969466/work/build-wfaafxbw/build.json';
+  assert.equal(parseBuildResponse(JSON.stringify(adopted), adoptedSha, 1000, 1200).buildReceipt,
+    adopted.buildReceipt);
+  for (const path of [
+    '/var/lib/spinkorea-build/adoption-d3b3563/work/build-wfaafxbw/build.json',
+    '/var/lib/spinkorea-build/adoption-0969466/work/../build-wfaafxbw/build.json',
+    '/var/lib/spinkorea-build/adoption-0969466/work/build-wfaafxbw/../build.json',
+  ]) {
+    assert.throws(() => parseBuildResponse(JSON.stringify({ ...adopted, buildReceipt: path }),
+      adoptedSha, 1000, 1200), /receipt does not match/);
+  }
 });
 
 test('public marker accepts only same expected SHA and fresh builtAt', async () => {

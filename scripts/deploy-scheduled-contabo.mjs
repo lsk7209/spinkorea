@@ -39,6 +39,12 @@ function transportConfig(env) {
 export function parseBuildResponse(raw, sha, requestedAt, now) {
   let value;
   try { value = JSON.parse(raw); } catch { throw new DeploymentError('Server build response is not JSON.'); }
+  // Receipt location is informational operator evidence; no client file access or authority derives from it.
+  const receiptSuffix = /^build-[a-z0-9_]{8}\/build\.json$/;
+  const receiptPrefixes = SHA.test(sha ?? '') ? ['/var/lib/spinkorea-build/work/',
+    `/var/lib/spinkorea-build/adoption-${sha.slice(0, 7)}/work/`] : [];
+  const validReceiptPath = typeof value?.buildReceipt === 'string' && receiptPrefixes.some(prefix =>
+    value.buildReceipt.startsWith(prefix) && receiptSuffix.test(value.buildReceipt.slice(prefix.length)));
   if (!value || typeof value !== 'object' || Array.isArray(value) ||
       Object.keys(value).sort().join(',') !== 'buildReceipt,bundleSha256,pointer,result,startedMs' ||
       value.result !== 'SERVER_BUILD_INSTALL_PASS' ||
@@ -49,8 +55,7 @@ export function parseBuildResponse(raw, sha, requestedAt, now) {
       value.startedMs > now + 60_000 || !HASH.test(value.bundleSha256 ?? '') ||
       !HASH.test(value.pointer.manifestSha256 ?? '') ||
       value.pointer.releaseId !== `${sha}-${value.bundleSha256.slice(0, 16)}` ||
-      typeof value.buildReceipt !== 'string' ||
-      !/^\/var\/lib\/spinkorea-build\/work\/build-[a-z0-9_]{8}\/build\.json$/.test(value.buildReceipt)) {
+      !validReceiptPath) {
     throw new DeploymentError('Server build receipt does not match expected commit and fresh attempt.');
   }
   return value;
