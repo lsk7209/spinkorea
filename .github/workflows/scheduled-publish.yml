@@ -8,8 +8,6 @@ on:
         type: boolean
         default: false
   schedule:
-    # 하루 1회(UTC 0시 = KST 9시). 빌드 비용 절감: 기존 5시간마다 풀빌드 →
-    # 하루 1빌드로 그날 publishAt 도달분(약 5편)을 일괄 노출. 글별 publishAt(5h 간격)은 유지.
     - cron: "0 0 * * *"
 
 permissions:
@@ -22,7 +20,8 @@ concurrency:
 jobs:
   publish-window:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    environment: contabo-publish
+    timeout-minutes: 30
     env:
       GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
       GSC_SITE_URL: https://spinkorea.kr/
@@ -36,8 +35,6 @@ jobs:
           node-version: 22
           cache: npm
 
-      # 게이트: 최근 26h 내 새로 publishAt 도달한 글이 없으면(=노출할 신규 글 없음) 빌드/배포 스킵.
-      # 수동 실행(workflow_dispatch)은 항상 빌드. 큐 소진 시 불필요한 풀빌드를 막아 비용 절감.
       - name: Check publish window
         id: gate
         run: |
@@ -63,16 +60,19 @@ jobs:
       - if: steps.gate.outputs.run == 'true'
         run: npm run type-check
 
-      - name: Test deployment readiness guard
+      - name: Test Contabo deployment adapter
         if: steps.gate.outputs.run == 'true'
-        run: node --test scripts/deploy-scheduled.test.mjs
+        run: node --test scripts/deploy-scheduled-contabo.test.mjs
 
-      - name: Trigger deployment and verify fresh production commit
+      - name: Build and install on Contabo, then verify fresh public marker
         id: deploy
         if: steps.gate.outputs.run == 'true'
-        run: node scripts/deploy-scheduled.mjs
+        run: node scripts/deploy-scheduled-contabo.mjs
         env:
-          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+          CONTABO_HOST: ${{ vars.SPINKOREA_CONTABO_HOST }}
+          CONTABO_USER: ${{ vars.SPINKOREA_CONTABO_USER }}
+          CONTABO_KNOWN_HOSTS: ${{ vars.SPINKOREA_CONTABO_KNOWN_HOSTS }}
+          CONTABO_SSH_KEY: ${{ secrets.SPINKOREA_CONTABO_PUBLISH_SSH_KEY }}
 
       - name: Notify Google Search Console sitemap
         if: ${{ steps.deploy.outcome == 'success' && (github.event_name == 'schedule' || inputs.notify == true) && env.GOOGLE_SERVICE_ACCOUNT_JSON != '' }}

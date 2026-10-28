@@ -1,0 +1,12 @@
+{
+  "buildReceipt": "/var/lib/spinkorea-build/work/build-wfaafxbw/build.json",
+  "bundleSha256": "96ae1b036f372cf35f01a6b71abe7b6dc2c623a6e89e8ec85a6c2a1c2d36e4fa",
+  "pointer": {
+    "manifestSha256": "144016c05d77ec07ec616876c4be7203d050088e33522fd82fd6d4f68ee1dee7",
+    "releaseId": "d3b356354a11c2334d22c424a56d5d955ddbf254-96ae1b036f372cf3",
+    "sourceSha": "d3b356354a11c2334d22c424a56d5d955ddbf254",
+    "version": 1
+  },
+  "result": "SERVER_BUILD_INSTALL_PASS",
+  "startedMs": 1793159679405
+}
