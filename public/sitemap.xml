@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/blog</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-27</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/tools/lotto-generator</loc>
@@ -247,6 +247,118 @@
   <url>
     <loc>https://spinkorea.kr/tools/word-frequency</loc>
     <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/dutch-pay-discount-rounding</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/reverse-discount-rounding</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/percentage-vs-percentage-point</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/dday-100-day-counting</loc>
+    <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/inch-cm-measurement-conversion</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/recipe-cup-ml-conversion</loc>
+    <lastmod>2026-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/time-add-minutes-blocks</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/overnight-time-difference</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/password-generator-policy-check</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/base64-data-url-mime-prefix</loc>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/case-converter-acronym-digit-boundary</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/diff-crlf-lf-line-ending</loc>
+    <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/json-duplicate-key-overwrite</loc>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/temperature-conversion-offset</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/text-counter-emoji-grapheme</loc>
+    <lastmod>2026-10-13</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/time-calculator-overnight</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/population-sample-standard-deviation</loc>
+    <lastmod>2026-10-11</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/css-box-shadow-focus-visible</loc>
+    <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/hex-color-contrast-ratio</loc>
+    <lastmod>2026-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/qr-code-capacity-version-ecc</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/markdown-raw-html-safety</loc>
+    <lastmod>2026-10-07</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/base64-korean-utf8</loc>
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/urierror-malformed-percent-encoding</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/url-space-plus-percent20</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/json-stringify-roundtrip-loss</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/json-large-integer-precision</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/uuid-v4-v7-choice</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://spinkorea.kr/blog/api-field-case-json</loc>
+    <lastmod>2026-09-30</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/blog/markdown-mobile-preview</loc>
@@ -1493,10 +1605,6 @@
     <lastmod>2026-01-20</lastmod>
   </url>
   <url>
-    <loc>https://spinkorea.kr/blog/strong-password-guide</loc>
-    <lastmod>2026-01-12</lastmod>
-  </url>
-  <url>
     <loc>https://spinkorea.kr/blog/qr-code-generator-guide</loc>
     <lastmod>2026-01-05</lastmod>
   </url>
@@ -1526,11 +1634,11 @@
   </url>
   <url>
     <loc>https://spinkorea.kr/blog/color-code-complete-guide</loc>
-    <lastmod>2025-12-13</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/blog/password-security-guide</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://spinkorea.kr/blog/bmi-healthy-weight-guide</loc>

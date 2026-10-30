@@ -362,9 +362,9 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "color-code-complete-guide",
-    title: "색상 코드 완벽 가이드: HEX, RGB, HSL 이해하기",
+    title: "색상 코드 가이드: HEX·RGB·HSL 변환과 투명도",
     description:
-      "웹 디자인에서 색상을 표현하는 다양한 방법을 알아봅니다. HEX, RGB, HSL의 차이점과 활용법을 완벽 정리합니다.",
+      "같은 색의 HEX·RGB·HSL 표현을 비교하고 3·4·6·8자리 HEX, 알파 투명도와 변환 시 반올림을 확인합니다.",
     date: "2025-12-13",
     tags: ["디자인", "웹개발", "색상", "가이드"],
     thumbnail:
@@ -382,8 +382,9 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
           HEX (16진수) 색상 코드
         </h2>
         <p>
-          가장 널리 사용되는 색상 표현 방식입니다. #기호로 시작하며 6자리의
-          16진수로 구성됩니다.
+          HEX는 #기호 뒤에 3·4·6·8자리 16진수를 쓰는 CSS 색상 표기입니다.
+          #RGB와 #RRGGBB는 색을, #RGBA와 #RRGGBBAA는 알파 투명도까지 표현합니다.
+          짧은 표기의 각 숫자는 두 번 반복됩니다. 예를 들어 #F53은 #FF5533이며, #FF5733과는 다릅니다.
         </p>
         <div className="bg-white/5 p-4 rounded-lg">
           <p className="font-mono text-lg">#FF5733</p>
@@ -405,7 +406,7 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
         </h2>
         <p>
           빨강(Red), 초록(Green), 파랑(Blue)의 세 가지 원색을 조합하여 색상을
-          표현합니다. 각 값은 0~255 사이의 숫자입니다.
+          표현합니다. 보통 각 채널을 0~255 숫자로 적으며 CSS에서는 백분율도 사용할 수 있습니다.
         </p>
         <div className="bg-white/5 p-4 rounded-lg">
           <p className="font-mono text-lg">rgb(255, 87, 51)</p>
@@ -415,8 +416,7 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
         </div>
         <ul className="list-disc pl-6 space-y-2 mt-4">
           <li>
-            <strong>장점:</strong> 투명도(Alpha) 추가 가능 → rgba(255, 87, 51,
-            0.5)
+            <strong>투명도:</strong> rgb(255 87 51 / 50%) 또는 기존 쉼표 표기인 rgba(255, 87, 51, 0.5)를 사용할 수 있습니다.
           </li>
           <li>
             <strong>단점:</strong> 색상/채도/밝기 조절이 어려움
@@ -431,9 +431,9 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
           방식입니다. 색상 조절이 가장 직관적입니다.
         </p>
         <div className="bg-white/5 p-4 rounded-lg">
-          <p className="font-mono text-lg">hsl(14, 100%, 60%)</p>
+          <p className="font-mono text-lg">hsl(10.588235 100% 60%)</p>
           <p className="text-sm text-gray-500 mt-2">
-            색상 14도(주황), 채도 100%, 밝기 60%
+            #FF5733의 색상각은 약 10.588235도, 채도 100%, 명도 60%입니다. 소수는 반올림했으며 같은 예시를 14도로 적으면 RGB 색상이 달라집니다.
           </p>
         </div>
         <ul className="list-disc pl-6 space-y-2 mt-4">
@@ -442,9 +442,14 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
             유리
           </li>
           <li>
-            <strong>단점:</strong> 아직 HEX만큼 보편적이지 않음
+            <strong>주의:</strong> HSL 명도 숫자가 같아도 사람이 느끼는 밝기나 글자 대비가 같은 것은 아닙니다.
           </li>
         </ul>
+
+        <p>
+          HSL에도 알파를 붙일 수 있습니다: <code>hsl(10.588235 100% 60% / 0.5)</code>.
+          지원 문법과 정의는 <a href="https://www.w3.org/TR/css-color-4/" className="underline" target="_blank" rel="noopener noreferrer">W3C CSS Color 4</a>에서 확인할 수 있습니다.
+        </p>
 
         <h2 className="text-2xl font-bold text-white mt-8 mb-4">
           언제 어떤 형식을 사용할까?
@@ -464,7 +469,7 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
               </tr>
               <tr className="border-b border-white/10">
                 <td className="py-2 px-4">투명도가 필요할 때</td>
-                <td className="py-2 px-4">RGBA</td>
+                <td className="py-2 px-4">RGB·HSL의 알파 또는 4·8자리 HEX</td>
               </tr>
               <tr className="border-b border-white/10">
                 <td className="py-2 px-4">색상 팔레트 생성</td>
@@ -490,11 +495,9 @@ export const CURATED_BLOG_POSTS: BlogPost[] = [
 
         <hr className="border-white/10 my-8" />
 
-        <h3 className="text-xl font-bold text-white mb-4">결론</h3>
+        <h2 className="text-xl font-bold text-white mb-4">변환 전에 확인할 점</h2>
         <p>
-          색상 코드는 처음엔 복잡해 보이지만, 각각의 특성을 이해하면 상황에 맞게
-          활용할 수 있습니다. 디자인 작업을 할 때 이 세 가지 형식을 자유자재로
-          활용해보세요!
+          불투명한 #FF5733은 rgb(255 87 51)과 같은 색입니다. 투명도를 추가하면 배경색에 따라 보이는 색이 달라집니다. HSL을 짧게 반올림했다면 RGB로 되돌렸을 때 작은 차이가 생길 수 있으니 최종 CSS와 실제 배경에서 확인하세요.
         </p>
       </div>
     ),

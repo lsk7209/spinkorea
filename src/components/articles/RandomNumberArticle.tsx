@@ -3,16 +3,16 @@ export default function RandomNumberArticle() {
     return (
         <article className="w-full max-w-4xl mx-auto px-4 py-16 text-neon-primary/80">
             <h2 className="text-3xl font-bold text-neon-primary mb-6">
-                랜덤 숫자 뽑기 룰렛: 숫자 후보 중 하나 고르기
+                랜덤 숫자 뽑기 룰렛: 한 번에 여러 후보 고르기
             </h2>
 
             {/* AEO/GEO Optimized Summary Block */}
             <div className="bg-white/5 border border-neon-primary/20 rounded-xl p-6 mb-8 backdrop-blur-sm">
                 <h2 className="text-xl font-semibold text-white mb-3">⚡ 3줄 요약</h2>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
-                    <li><strong>브라우저 난수:</strong> Crypto API 기반으로 목록에 있는 숫자 후보 중 하나를 선택합니다.</li>
-                    <li><strong>한 번에 하나:</strong> 여러 개가 필요하면 반복해서 돌리고, 중복을 피하려면 나온 숫자를 목록에서 지웁니다.</li>
-                    <li><strong>간편한 설정:</strong> 기본 1~45 후보를 그대로 쓰거나 '항목 수정'에서 숫자 후보를 직접 입력할 수 있습니다. 범위·개수 입력 기능은 없습니다.</li>
+                    <li><strong>브라우저 난수:</strong> Crypto API 기반으로 숫자 후보를 선택합니다. 공식 추첨을 위한 감사 기록을 제공하지는 않습니다.</li>
+                    <li><strong>묶음 내 중복 없음:</strong> '한 번에 뽑을 수'에서 수량을 정하면 같은 후보를 한 묶음에 두 번 뽑지 않습니다.</li>
+                    <li><strong>다음 추첨 설정:</strong> '추첨 후 자동 제외'를 켜면 이번 결과가 다음 추첨 후보에서 빠집니다. 기본 1~45 후보를 쓰거나 '명단 수정'에서 후보를 바꿀 수 있습니다(최대 100개).</li>
                 </ul>
             </div>
 
@@ -21,7 +21,7 @@ export default function RandomNumberArticle() {
                     브라우저 난수로 선택 과정 정리
                 </h2>
                 <p className="mb-4 leading-relaxed">
-                    SpinFlow의 <strong>랜덤 숫자 뽑기 룰렛</strong>은 목록에 있는 숫자 후보 중 하나를 빠르게 선택하고,
+                    SpinFlow의 <strong>랜덤 숫자 뽑기 룰렛</strong>은 목록에 있는 숫자 후보를 지정한 수만큼 선택하고,
                     참여자와 결과를 확인하기 쉽게 정리하는 도구입니다.
                     브라우저의 Crypto API 기반 난수를 사용하지만, 이 설명만으로 공식 추첨 절차나 감사 기록이 만들어지는 것은 아닙니다.
                 </p>
@@ -40,8 +40,8 @@ export default function RandomNumberArticle() {
                     <div className="bg-white/5 p-6 rounded-xl border border-white/10">
                         <h3 className="text-xl font-bold text-white mb-3">🎰 로또 번호가 필요할 때</h3>
                         <p className="text-sm">
-                            이 룰렛은 한 번에 숫자 하나만 뽑습니다.
-                            1부터 45까지 6개 번호 조합이 한 번에 필요하다면 <a href="/tools/lotto-generator" className="underline">로또 번호 생성기</a>를 사용하세요.
+                            기본 1~45 후보에서 '한 번에 뽑을 수'를 6으로 정하면 한 묶음 안에서 같은 후보 없이 숫자 여섯 개를 뽑을 수 있습니다.
+                            별도 조합 도구가 필요하면 <a href="/tools/lotto-generator" className="underline">로또 번호 생성기</a>를 사용하세요.
                             어떤 방식이든 결과는 참고 자료이며 당첨 확률을 높이거나 당첨을 보장하지 않습니다.
                         </p>
                     </div>
@@ -65,7 +65,7 @@ export default function RandomNumberArticle() {
                         <h3 className="text-xl font-bold text-white mb-3">🎲 보드게임 & TRPG</h3>
                         <p className="text-sm">
                             주사위가 없거나 특별한 숫자 후보가 필요할 때 활용하세요.
-                            1-20, 1-100 같은 후보는 '항목 수정'에 숫자를 한 줄씩 입력해 만들 수 있습니다(최대 100개).
+                            1-20, 1-100 같은 후보는 '명단 수정' 또는 '명단 편집 열기'에 숫자를 한 줄씩 입력해 만들 수 있습니다(최대 100개).
                         </p>
                     </div>
                 </div>
@@ -92,13 +92,27 @@ export default function RandomNumberArticle() {
                             <span className="text-neon-primary transition-transform group-open:rotate-180">▼</span>
                         </summary>
                         <p className="mt-4 text-gray-300 semi-bold pl-4 border-l-2 border-neon-primary">
-                            현재 룰렛 방식은 독립 시행이므로 중복이 나올 수 있습니다.
-                            하지만 룰렛에서 당첨된 항목을 '항목 수정'에서 지우고 다시 돌리면
-                            비복원 추출(중복 없는 뽑기)과 동일한 효과를 낼 수 있습니다.
+                            기본 1~45 목록에서는 한 묶음 안에 같은 번호가 다시 나오지 않습니다.
+                            '추첨 후 자동 제외'를 켜면 이번 결과가 다음 추첨 후보에서도 빠집니다.
+                            끄면 다음 회차에는 다시 나올 수 있으며, 같은 숫자를 명단에 여러 줄 넣으면 각각 별도 후보입니다.
+                        </p>
+                    </details>
+                    <details className="group bg-neon-card rounded-lg border border-neon-primary/20 p-4 open:bg-neon-primary/5 transition-all">
+                        <summary className="font-bold text-white cursor-pointer list-none flex justify-between items-center">
+                            <span>Q. 한 번에 여러 번호를 뽑을 수 있나요?</span>
+                            <span className="text-neon-primary transition-transform group-open:rotate-180">▼</span>
+                        </summary>
+                        <p className="mt-4 text-gray-300 semi-bold pl-4 border-l-2 border-neon-primary">
+                            '한 번에 뽑을 수'에서 현재 남은 후보 수 이하로 수량을 정할 수 있습니다.
+                            명단은 최대 100개까지 입력할 수 있습니다.
                         </p>
                     </details>
                 </div>
             </section>
+
+            <p className="text-sm text-gray-300">
+                '후보 목록 링크 복사'에는 원본 후보 목록만 담깁니다. 추첨 결과나 제외 상태는 링크에 포함되지 않습니다.
+            </p>
 
             <div className="mt-8 text-center bg-neon-primary/10 p-6 rounded-2xl border border-neon-primary/30">
                 <h3 className="text-lg font-bold text-white mb-2">행운을 시험해볼 준비가 되셨나요?</h3>
