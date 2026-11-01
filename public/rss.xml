@@ -1409,6 +1409,14 @@
     </item>
 
     <item>
+      <title>API 요청 검증과 디버깅 순서: 400·401·422 오류 해결 가이드</title>
+      <link>https://spinkorea.kr/blog/api-request-check</link>
+      <description>API 연동 시 발생하는 요청 본문 깨짐, 쿼리 파라미터 인코딩 누락, 인증 헤더 오류를 진단하고 cURL로 검증하는 실전 디버깅 절차를 정리합니다.</description>
+      <pubDate>Tue, 26 May 2026 05:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/api-request-check</guid>
+    </item>
+
+    <item>
       <title>독자 질문 모음 발행 전 검토, 순서</title>
       <link>https://spinkorea.kr/blog/reader-question-bank</link>
       <description>흩어진 독자 질문 모음을 FAQ와 새 글 주제로 정리하는 수집·분류 순서와, 중복·길이를 사이트 도구로 점검하는 방법을 정리했다.</description>

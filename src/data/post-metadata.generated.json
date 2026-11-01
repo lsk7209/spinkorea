@@ -16676,36 +16676,38 @@
   },
   {
     "slug": "api-request-check",
-    "title": "API 요청 검증, 디버깅 먼저 보기",
-    "description": "API 요청 검증을 검색한 독자가 바로 따라 할 수 있도록 검증 절차부터 보안 확인까지 압축했습니다.",
+    "title": "API 요청 검증과 디버깅 순서: 400·401·422 오류 해결 가이드",
+    "description": "API 연동 시 발생하는 요청 본문 깨짐, 쿼리 파라미터 인코딩 누락, 인증 헤더 오류를 진단하고 cURL로 검증하는 실전 디버깅 절차를 정리합니다.",
     "date": "2026-05-26",
     "publishAt": "2026-05-26T14:00:00+09:00",
     "tags": [
-      "개발",
-      "웹도구",
-      "검증"
+      "API",
+      "디버깅",
+      "HTTP",
+      "개발자도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "개발자 웹 도구",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/",
+    "primarySourceName": "MDN Web Docs: HTTP 요청 메서드와 상태 코드",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods",
     "internalLinks": [
       {
-        "label": "JSON 포매터",
+        "label": "JSON 포맷터로 페이로드 구조 검증하기",
         "path": "/tools/json-formatter"
       },
       {
-        "label": "URI 인코더",
+        "label": "URI 인코더로 쿼리스트링 특수문자 변환하기",
         "path": "/tools/uri-encoder"
       },
       {
-        "label": "Base64 인코더",
+        "label": "Base64 인코더로 인증 토큰 디코딩하기",
         "path": "/tools/base64-encoder"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-11-01"
   },
   {
     "slug": "reader-question-bank",

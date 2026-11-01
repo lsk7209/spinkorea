@@ -2083,6 +2083,23 @@
     "source": "editorial"
   },
   {
+    "slug": "api-request-check",
+    "title": "API 요청 검증과 디버깅 순서: 400·401·422 오류 해결 가이드",
+    "description": "API 연동 시 발생하는 요청 본문 깨짐, 쿼리 파라미터 인코딩 누락, 인증 헤더 오류를 진단하고 cURL로 검증하는 실전 디버깅 절차를 정리합니다.",
+    "date": "2026-05-26",
+    "publishAt": "2026-05-26T14:00:00+09:00",
+    "updatedAt": "2026-11-01",
+    "tags": [
+      "API",
+      "디버깅",
+      "HTTP",
+      "개발자도구"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "source": "editorial"
+  },
+  {
     "slug": "reader-question-bank",
     "title": "독자 질문 모음 발행 전 검토, 순서",
     "description": "흩어진 독자 질문 모음을 FAQ와 새 글 주제로 정리하는 수집·분류 순서와, 중복·길이를 사이트 도구로 점검하는 방법을 정리했다.",
