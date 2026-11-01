@@ -22934,5 +22934,141 @@
       }
     ],
     "source": "editorial"
+  },
+  {
+    "slug": "salary-net-pay-2026-guide",
+    "title": "2026 연봉 실수령액 계산 가이드: 4대보험 공제율과 세후 월급표",
+    "description": "2026년 기준 4대보험 요율과 개정 근로소득 간이세액표를 적용해 세전 연봉에서 세후 실수령액을 정확히 산출하는 공식과 실제 공제 항목을 상세히 설명합니다.",
+    "date": "2026-11-02",
+    "publishAt": "2026-11-02T08:00:00+09:00",
+    "tags": [
+      "연봉실수령액",
+      "4대보험",
+      "생활금융",
+      "급여계산"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "생활 금융",
+    "contentType": "가이드형",
+    "primarySourceName": "국가법령정보센터 근로소득 간이세액표",
+    "primarySourceUrl": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110201&flSeq=169798151",
+    "internalLinks": [
+      {
+        "label": "연봉 실수령액 계산기에서 내 월급 계산하기",
+        "path": "/tools/net-salary"
+      },
+      {
+        "label": "퇴직금 계산기로 평균임금 확인하기",
+        "path": "/tools/severance-pay"
+      },
+      {
+        "label": "시급 계산기로 시간당 가치 환산하기",
+        "path": "/tools/hourly-wage"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "severance-pay-calculation-2026",
+    "title": "2026 퇴직금 계산방법과 지급기준: 평균임금 산정부터 IRP 절세까지",
+    "description": "근로자퇴직급여 보장법에 따른 1년 이상 계속근로 요건, 3개월 평균임금과 통상임금 비교 공식, 퇴직소득세 절세를 위한 IRP 수령 절차를 총정리합니다.",
+    "date": "2026-11-03",
+    "publishAt": "2026-11-03T08:00:00+09:00",
+    "tags": [
+      "퇴직금",
+      "퇴직연금",
+      "평균임금",
+      "생활금융"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "생활 금융",
+    "contentType": "가이드형",
+    "primarySourceName": "국가법령정보센터 근로자퇴직급여 보장법",
+    "primarySourceUrl": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=255747",
+    "internalLinks": [
+      {
+        "label": "퇴직금 계산기에서 법정 퇴직금 산출하기",
+        "path": "/tools/severance-pay"
+      },
+      {
+        "label": "연차 계산기로 미사용 연차수당 확인하기",
+        "path": "/tools/annual-leave"
+      },
+      {
+        "label": "연봉 실수령액 계산기로 세후 월급 비교하기",
+        "path": "/tools/net-salary"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "loan-repayment-methods-comparison",
+    "title": "대출 상환 방식 비교: 원리금균등 vs 원금균등 이자 절약과 중도상환",
+    "description": "원리금균등, 원금균등, 만기일시상환의 월 납입액과 총이자 차이를 수식으로 비교하고 대출 중도상환수수료 감면 시점을 고려한 최적의 상환 전략을 안내합니다.",
+    "date": "2026-11-04",
+    "publishAt": "2026-11-04T08:00:00+09:00",
+    "tags": [
+      "대출계산기",
+      "원리금균등",
+      "원금균등",
+      "생활금융"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "생활 금융",
+    "contentType": "비교형",
+    "primarySourceName": "금융감독원 금융소비자정보포털 파인",
+    "primarySourceUrl": "https://www.fss.or.kr/fss/bbs/B0000188/list.do?menuNo=200218",
+    "internalLinks": [
+      {
+        "label": "대출 계산기에서 상환 방식별 월 납입금 비교하기",
+        "path": "/tools/loan-calculator"
+      },
+      {
+        "label": "복리 계산기로 적금 만기액 확인하기",
+        "path": "/tools/compound-interest"
+      },
+      {
+        "label": "전월세 전환기로 전세 보증금 이자 비교하기",
+        "path": "/tools/jeonse-converter"
+      }
+    ],
+    "source": "editorial"
+  },
+  {
+    "slug": "jeonse-to-monthly-rent-conversion",
+    "title": "2026 법정 전월세 전환율 기준과 월세 보증금 환산 공식",
+    "description": "주택임대차보호법에 따른 법정 전월세 전환율 상한선(한국은행 기준금리+2.0%)과 전세를 월세로, 월세를 전세로 상호 환산하는 정확한 계산법을 해설합니다.",
+    "date": "2026-11-05",
+    "publishAt": "2026-11-05T08:00:00+09:00",
+    "tags": [
+      "전월세계산기",
+      "전월세전환율",
+      "주택임대차",
+      "생활금융"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "생활 금융",
+    "contentType": "가이드형",
+    "primarySourceName": "국가법령정보센터 주택임대차보호법 시행령",
+    "primarySourceUrl": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=250109",
+    "internalLinks": [
+      {
+        "label": "전월세 전환기에서 보증금 환산 계산하기",
+        "path": "/tools/jeonse-converter"
+      },
+      {
+        "label": "대출 계산기에서 전세대출 이자 비교하기",
+        "path": "/tools/loan-calculator"
+      },
+      {
+        "label": "평수 계산기로 공급면적 대비 주거비용 확인하기",
+        "path": "/tools/area-converter"
+      }
+    ],
+    "source": "editorial"
   }
 ]

@@ -44,3 +44,9 @@ src/data/article-cache/
 # Temp audit files
 broken_thumbs.json
 thumb_urls.json
+.gstack/
+.kiro/
+.omc/
+.playwright-cli/
+output/
+docs/audits/spinkorea/2026-09-19-225440/vite-cache/

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "project": "spinkorea",
+  "domain": "https://spinkorea.kr",
+  "cycle_schedule": [
+    { "cycle": 1, "time_kst": "00:00", "task": "finance_new_article" },
+    { "cycle": 2, "time_kst": "06:00", "task": "link_rebalance" },
+    { "cycle": 3, "time_kst": "12:00", "task": "health_roulette_new_article" },
+    { "cycle": 4, "time_kst": "18:00", "task": "thin_content_expansion_and_full_verify" }
+  ],
+  "current_cycle": 1,
+  "last_run_at": "2026-11-01T09:08:48+09:00",
+  "zero_link_tools": [
+    { "path": "/tools/margin-calculator", "name": "마진율 계산기" },
+    { "path": "/tools/fuel-economy", "name": "연비 계산기" },
+    { "path": "/tools/bmi-calculator", "name": "BMI 계산기" },
+    { "path": "/tools/calorie-calculator", "name": "칼로리 계산기" },
+    { "path": "/tools/body-fat", "name": "체지방률 계산기" },
+    { "path": "/tools/calorie-burn", "name": "칼로리 소모 계산기" },
+    { "path": "/tools/ideal-weight", "name": "이상 체중 계산기" },
+    { "path": "/tools/jeonse-converter", "name": "전월세 전환기" },
+    { "path": "/tools/severance-pay", "name": "퇴직금 계산기" },
+    { "path": "/tools/annual-leave", "name": "연차 계산기" },
+    { "path": "/tools/roi-calculator", "name": "투자 수익률 계산기" }
+  ],
+  "thin_articles_queue": [
+    "random-app-reliability",
+    "draw-custom-background",
+    "school-group-assignment",
+    "team-decision-comparison",
+    "prize-winner-notification"
+  ],
+  "history": [
+    {
+      "timestamp": "2026-11-01T09:15:00+09:00",
+      "cycle": 1,
+      "action": "setup_daemon_and_replenish_november_queue",
+      "summary": "Initialized 6-hour daemon architecture, ledger, prompt, and drafted November 1st batch of high-RPM financial articles to fix search-scope failure.",
+      "tests_passed": true
+    }
+  ]
+}

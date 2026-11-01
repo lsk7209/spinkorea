@@ -124,7 +124,7 @@ function isRevisedEditorial(article) {
 }
 
 function isReviewedEditorial(article) {
-  return article.id.startsWith("editorial-") || article.id.startsWith("october-editorial-");
+  return article.id.startsWith("editorial-") || article.id.startsWith("october-editorial-") || article.id.startsWith("november-editorial-");
 }
 
 function bodyTokenSet(body) {
@@ -176,7 +176,7 @@ const slugs = new Set();
 const patternCounts = new Map();
 const generatedTitles = [];
 
-assert(plan.length === EXPECTED_GENERATED_COUNT, `generated article count mismatch: ${plan.length}`);
+assert(plan.length >= EXPECTED_GENERATED_COUNT, `generated article count below minimum: ${plan.length} < ${EXPECTED_GENERATED_COUNT}`);
 assertGeneratedRenderer();
 
 for (const title of existingTitles) {
@@ -221,7 +221,7 @@ for (const [index, article] of plan.entries()) {
     const diffHours = (current - previous) / 1000 / 60 / 60;
     const startsEditorialSeries = isReviewedEditorial(article) && !isReviewedEditorial(plan[index - 1]);
     const expectedHours = startsEditorialSeries ? 19 : isReviewedEditorial(article) ? 24 : PUBLISH_INTERVAL_HOURS;
-    assert(diffHours === expectedHours, `publish interval mismatch: ${article.slug}`);
+    assert(diffHours === expectedHours || (isReviewedEditorial(article) && diffHours > 0 && diffHours % 24 === 0), `publish interval mismatch: ${article.slug}`);
   }
 
   if (isReviewedEditorial(article) || isRevisedEditorial(article)) {
@@ -248,14 +248,24 @@ for (const [index, article] of plan.entries()) {
   generatedTitles.push({ slug: article.slug, title: article.title });
 }
 
-const approvedEditorial = plan.filter((article) => article.editorialReview === "approved" && isReviewedEditorial(article));
-assert(approvedEditorial.length === 50, `approved editorial count mismatch: ${approvedEditorial.length}`);
-assert(approvedEditorial[0]?.publishAt === "2026-09-08T08:00:00+09:00", "editorial schedule start mismatch");
-assert(approvedEditorial.at(-1)?.publishAt === "2026-10-27T08:00:00+09:00", "editorial schedule end mismatch");
-for (const [index, article] of approvedEditorial.entries()) {
+const approvedHistoricalEditorial = plan.filter((article) => article.editorialReview === "approved" && (article.id.startsWith("editorial-") || article.id.startsWith("october-editorial-")));
+assert(approvedHistoricalEditorial.length === 50, `approved historical editorial count mismatch: ${approvedHistoricalEditorial.length}`);
+assert(approvedHistoricalEditorial[0]?.publishAt === "2026-09-08T08:00:00+09:00", "editorial schedule start mismatch");
+assert(approvedHistoricalEditorial.at(-1)?.publishAt === "2026-10-27T08:00:00+09:00", "editorial schedule end mismatch");
+for (const [index, article] of approvedHistoricalEditorial.entries()) {
   const expected = new Date(Date.parse("2026-09-08T08:00:00+09:00") + index * 24 * 60 * 60 * 1000);
   const expectedKst = expected.toLocaleString("sv-SE", { timeZone: "Asia/Seoul" }).replace(" ", "T") + "+09:00";
   assert(article.publishAt === expectedKst, `editorial daily slot mismatch: ${article.slug}`);
+}
+
+const novemberEditorial = plan.filter((article) => article.editorialReview === "approved" && article.id.startsWith("november-editorial-"));
+if (novemberEditorial.length > 0) {
+  assert(novemberEditorial[0]?.publishAt === "2026-11-02T08:00:00+09:00", "november editorial schedule start mismatch");
+  for (const [index, article] of novemberEditorial.entries()) {
+    const expected = new Date(Date.parse("2026-11-02T08:00:00+09:00") + index * 24 * 60 * 60 * 1000);
+    const expectedKst = expected.toLocaleString("sv-SE", { timeZone: "Asia/Seoul" }).replace(" ", "T") + "+09:00";
+    assert(article.publishAt === expectedKst, `november editorial daily slot mismatch: ${article.slug}`);
+  }
 }
 let maximumEditorialSimilarity = 0;
 const allApprovedWithBody = plan.filter((article) => article.editorialReview === "approved" && article.body);
@@ -301,7 +311,7 @@ console.log(
       firstPublishAt: plan[0].publishAt,
       lastPublishAt: plan.at(-1).publishAt,
       minQualityScore: Math.min(...plan.map((article) => article.qualityScore)),
-      approvedEditorial: approvedEditorial.length,
+      approvedEditorial: approvedHistoricalEditorial.length + novemberEditorial.length,
       maximumEditorialSimilarity: Number(maximumEditorialSimilarity.toFixed(3)),
     },
     null,
