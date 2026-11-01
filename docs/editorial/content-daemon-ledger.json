@@ -8,12 +8,11 @@
     { "cycle": 3, "time_kst": "12:00", "task": "health_roulette_new_article" },
     { "cycle": 4, "time_kst": "18:00", "task": "thin_content_expansion_and_full_verify" }
   ],
-  "current_cycle": 1,
-  "last_run_at": "2026-11-01T15:13:00+09:00",
+  "current_cycle": 2,
+  "last_run_at": "2026-11-01T19:21:00+09:00",
   "zero_link_tools": [
     { "path": "/tools/calorie-burn", "name": "칼로리 소모 계산기" },
-    { "path": "/tools/ideal-weight", "name": "이상 체중 계산기" },
-    { "path": "/tools/roi-calculator", "name": "투자 수익률 계산기" }
+    { "path": "/tools/ideal-weight", "name": "이상 체중 계산기" }
   ],
   "thin_articles_queue": [
     "webhook-signature-test",
@@ -49,6 +48,13 @@
       "cycle": 4,
       "action": "thin_content_expansion_api_request_check",
       "summary": "Rewrote generated-101 'api-request-check' into high-value developer guide (4,923 chars, 7 H2s, cURL MRE & 400/401/422 debug protocol). Linked json-formatter, uri-encoder, and base64-encoder. Passed all 149 tests and search-scope checks.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-01T19:21:00+09:00",
+      "cycle": 1,
+      "action": "finance_new_article_roi_cagr_guide",
+      "summary": "Drafted and scheduled new reviewed editorial post 'roi-cagr-investment-return-guide' (4,642 chars, 7 H2s, 3 internal tool links) for 2026-11-07. Zero-link tool roi-calculator resolved. All tests and search-scope checks passed.",
       "tests_passed": true
     }
   ]

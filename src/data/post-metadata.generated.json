@@ -23108,5 +23108,40 @@
     ],
     "source": "editorial",
     "updatedAt": "2026-11-01"
+  },
+  {
+    "slug": "roi-cagr-investment-return-guide",
+    "title": "투자 수익률 ROI 계산법과 연평균 복리 CAGR: 실질 수익률 비교",
+    "description": "단순 투자 수익률(ROI)과 연평균 복리 수익률(CAGR)의 공식 차이를 밝히고, 인플레이션과 세금을 감안한 실질 수익률 계산법을 정리합니다.",
+    "date": "2026-11-07",
+    "publishAt": "2026-11-07T08:00:00+09:00",
+    "tags": [
+      "투자수익률",
+      "ROI",
+      "CAGR",
+      "재테크",
+      "복리계산"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "생활 금융",
+    "contentType": "가이드형",
+    "primarySourceName": "금융감독원 파인 금융상품 공시 기준",
+    "primarySourceUrl": "https://fine.fss.or.kr/",
+    "internalLinks": [
+      {
+        "label": "투자 수익률 계산기로 내 투자 성과 측정하기",
+        "path": "/tools/roi-calculator"
+      },
+      {
+        "label": "복리 계산기로 장기 복리 누적액 비교하기",
+        "path": "/tools/compound-interest"
+      },
+      {
+        "label": "마진율 계산기로 순이익률 점검하기",
+        "path": "/tools/margin-calculator"
+      }
+    ],
+    "source": "editorial"
   }
 ]
