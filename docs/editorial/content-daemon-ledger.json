@@ -8,12 +8,9 @@
     { "cycle": 3, "time_kst": "12:00", "task": "health_roulette_new_article" },
     { "cycle": 4, "time_kst": "18:00", "task": "thin_content_expansion_and_full_verify" }
   ],
-  "current_cycle": 2,
-  "last_run_at": "2026-11-01T19:21:00+09:00",
-  "zero_link_tools": [
-    { "path": "/tools/calorie-burn", "name": "칼로리 소모 계산기" },
-    { "path": "/tools/ideal-weight", "name": "이상 체중 계산기" }
-  ],
+  "current_cycle": 3,
+  "last_run_at": "2026-11-02T01:22:00+09:00",
+  "zero_link_tools": [],
   "thin_articles_queue": [
     "webhook-signature-test",
     "http-status-note",
@@ -55,6 +52,13 @@
       "cycle": 1,
       "action": "finance_new_article_roi_cagr_guide",
       "summary": "Drafted and scheduled new reviewed editorial post 'roi-cagr-investment-return-guide' (4,642 chars, 7 H2s, 3 internal tool links) for 2026-11-07. Zero-link tool roi-calculator resolved. All tests and search-scope checks passed.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-02T01:22:00+09:00",
+      "cycle": 2,
+      "action": "link_rebalance_calorie_burn_and_ideal_weight",
+      "summary": "Rebalanced daily-step-average to calorie-burn and monthly-health-log to ideal-weight. Enriched both articles (>3,680 chars, METs formula, Broca method). ZERO LINK TOOLS 100% RESOLVED (0 tools remaining). All tests and search-scope checks passed.",
       "tests_passed": true
     }
   ]

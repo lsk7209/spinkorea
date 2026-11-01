@@ -5058,8 +5058,8 @@
         "path": "/tools/statistics-calculator"
       },
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
+        "label": "이상 체중 계산기",
+        "path": "/tools/ideal-weight"
       },
       {
         "label": "날짜 계산기",
@@ -5067,7 +5067,7 @@
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-02"
   },
   {
     "slug": "schedule-buffer-check",
@@ -11624,8 +11624,8 @@
     "primarySourceUrl": "https://health.kdca.go.kr/",
     "internalLinks": [
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
+        "label": "칼로리 소모 계산기",
+        "path": "/tools/calorie-burn"
       },
       {
         "label": "단위 변환기",
@@ -11637,7 +11637,7 @@
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-02"
   },
   {
     "slug": "monthly-reading-count",
