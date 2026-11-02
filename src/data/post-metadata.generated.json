@@ -23180,5 +23180,40 @@
       }
     ],
     "source": "editorial"
+  },
+  {
+    "slug": "holiday-allowance-2026-calculation-guide",
+    "title": "2026 주휴수당 지급 기준과 계산법: 15시간 미만 쪼개기 알바 판별",
+    "description": "근로기준법 제55조에 따른 주휴수당 발생 요건(주 15시간 이상, 소정근로일 개근)과 알바·파트타임 주휴수당 산정 공식을 사례별로 상세히 정리합니다.",
+    "date": "2026-11-09",
+    "publishAt": "2026-11-09T08:00:00+09:00",
+    "tags": [
+      "주휴수당",
+      "아르바이트",
+      "근로기준법",
+      "시급계산",
+      "노동법"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "생활 금융",
+    "contentType": "가이드형",
+    "primarySourceName": "고용노동부 주휴수당 행정해석 및 근로기준법령",
+    "primarySourceUrl": "https://www.moel.go.kr/",
+    "internalLinks": [
+      {
+        "label": "시급 계산기로 주휴수당 포함 실질 시급 환산하기",
+        "path": "/tools/hourly-wage"
+      },
+      {
+        "label": "연차 계산기로 미사용 연차수당 발생 여부 확인하기",
+        "path": "/tools/annual-leave"
+      },
+      {
+        "label": "실수령액 계산기로 4대보험 공제 후 월급 계산하기",
+        "path": "/tools/net-salary"
+      }
+    ],
+    "source": "editorial"
   }
 ]
