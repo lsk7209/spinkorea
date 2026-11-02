@@ -5,8 +5,16 @@
     <link>https://spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 26 Oct 2026 23:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 23:00:00 GMT</lastBuildDate>
     <atom:link href="https://spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>2026 연봉 실수령액 계산 가이드: 4대보험 공제율과 세후 월급표</title>
+      <link>https://spinkorea.kr/blog/salary-net-pay-2026-guide</link>
+      <description>2026년 기준 4대보험 요율과 개정 근로소득 간이세액표를 적용해 세전 연봉에서 세후 실수령액을 정확히 산출하는 공식과 실제 공제 항목을 상세히 설명합니다.</description>
+      <pubDate>Sun, 01 Nov 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/salary-net-pay-2026-guide</guid>
+    </item>
 
     <item>
       <title>더치페이 할인 금액과 반올림, 1원 차이를 투명하게 나누는 법</title>
@@ -1406,6 +1414,14 @@
       <description>추첨 과정 설명이 부족해 결과 신뢰가 낮아지는 문제를 다룹니다. 이벤트 추첨 증빙을 무료 도구와 진행자 절차로 갖추는 방법을 정리했습니다.</description>
       <pubDate>Tue, 16 Jun 2026 01:00:00 GMT</pubDate>
       <guid>https://spinkorea.kr/blog/lottery-event-proof</guid>
+    </item>
+
+    <item>
+      <title>웹훅 서명 확인 체크리스트: HMAC-SHA256 검증과 재전송 공격 방어</title>
+      <link>https://spinkorea.kr/blog/webhook-signature-test</link>
+      <description>결제 및 알림 웹훅에서 HMAC-SHA256 디지털 서명을 검증하고 타임스탬프 허용 오차와 멱등성을 보장해 위조 요청을 차단하는 실무 가이드를 정리합니다.</description>
+      <pubDate>Tue, 26 May 2026 10:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/webhook-signature-test</guid>
     </item>
 
     <item>

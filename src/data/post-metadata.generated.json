@@ -16643,36 +16643,38 @@
   },
   {
     "slug": "webhook-signature-test",
-    "title": "웹훅 서명 확인 체크리스트: 자동화 핵심",
-    "description": "웹훅 서명 확인 관련 결정을 반복하지 않도록 자동화, 보안 확인, 배포 전 점검 항목을 한 번에 비교합니다.",
+    "title": "웹훅 서명 확인 체크리스트: HMAC-SHA256 검증과 재전송 공격 방어",
+    "description": "결제 및 알림 웹훅에서 HMAC-SHA256 디지털 서명을 검증하고 타임스탬프 허용 오차와 멱등성을 보장해 위조 요청을 차단하는 실무 가이드를 정리합니다.",
     "date": "2026-05-26",
     "publishAt": "2026-05-26T19:00:00+09:00",
     "tags": [
-      "개발",
-      "웹도구",
-      "검증"
+      "웹훅",
+      "HMAC",
+      "보안",
+      "API검증"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "개발자 웹 도구",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/",
+    "primarySourceName": "MDN Web Docs: Web Crypto API SubtleCrypto",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign",
     "internalLinks": [
       {
-        "label": "JSON 포매터",
+        "label": "JSON 포맷터로 웹훅 원시 본문 검증하기",
         "path": "/tools/json-formatter"
       },
       {
-        "label": "URI 인코더",
-        "path": "/tools/uri-encoder"
+        "label": "Base64 인코더로 서명 해시 디코딩하기",
+        "path": "/tools/base64-encoder"
       },
       {
-        "label": "Base64 인코더",
-        "path": "/tools/base64-encoder"
+        "label": "URI 인코더로 웹훅 콜백 URL 처리하기",
+        "path": "/tools/uri-encoder"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-11-02"
   },
   {
     "slug": "api-request-check",

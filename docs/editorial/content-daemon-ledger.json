@@ -8,15 +8,15 @@
     { "cycle": 3, "time_kst": "12:00", "task": "health_roulette_new_article" },
     { "cycle": 4, "time_kst": "18:00", "task": "thin_content_expansion_and_full_verify" }
   ],
-  "current_cycle": 4,
-  "last_run_at": "2026-11-02T07:21:00+09:00",
+  "current_cycle": 1,
+  "last_run_at": "2026-11-02T17:11:00+09:00",
   "zero_link_tools": [],
   "thin_articles_queue": [
-    "webhook-signature-test",
     "http-status-note",
     "cache-header-check",
     "canonical-url-audit",
-    "robots-rule-review"
+    "robots-rule-review",
+    "sitemap-lastmod-check"
   ],
   "history": [
     {
@@ -66,6 +66,13 @@
       "cycle": 3,
       "action": "health_new_article_sleep_cycle_guide",
       "summary": "Drafted and scheduled new reviewed editorial post 'sleep-cycle-wake-up-time-guide' (4,131 chars, 7 H2s, 3 internal tool links) for 2026-11-08. Linked sleep-calculator, water-intake, and time-calculator. All tests and search-scope checks passed.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-02T17:11:00+09:00",
+      "cycle": 4,
+      "action": "thin_content_expansion_webhook_signature_test",
+      "summary": "Rewrote generated-102 'webhook-signature-test' into high-value developer guide (4,854 chars, 7 H2s, HMAC-SHA256 & replay attack protocol). Linked json-formatter, base64-encoder, and uri-encoder. All tests and search-scope checks passed.",
       "tests_passed": true
     }
   ]

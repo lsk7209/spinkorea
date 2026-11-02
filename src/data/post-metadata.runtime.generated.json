@@ -2083,6 +2083,23 @@
     "source": "editorial"
   },
   {
+    "slug": "webhook-signature-test",
+    "title": "웹훅 서명 확인 체크리스트: HMAC-SHA256 검증과 재전송 공격 방어",
+    "description": "결제 및 알림 웹훅에서 HMAC-SHA256 디지털 서명을 검증하고 타임스탬프 허용 오차와 멱등성을 보장해 위조 요청을 차단하는 실무 가이드를 정리합니다.",
+    "date": "2026-05-26",
+    "publishAt": "2026-05-26T19:00:00+09:00",
+    "updatedAt": "2026-11-02",
+    "tags": [
+      "웹훅",
+      "HMAC",
+      "보안",
+      "API검증"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "source": "editorial"
+  },
+  {
     "slug": "api-request-check",
     "title": "API 요청 검증과 디버깅 순서: 400·401·422 오류 해결 가이드",
     "description": "API 연동 시 발생하는 요청 본문 깨짐, 쿼리 파라미터 인코딩 누락, 인증 헤더 오류를 진단하고 cURL로 검증하는 실전 디버깅 절차를 정리합니다.",
