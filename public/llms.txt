@@ -18,6 +18,8 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [로또 번호 생성기](https://spinkorea.kr/tools/lotto-generator) — 버튼 한 번으로 로또 번호 조합을 생성합니다.
 
 ## 최신 블로그
+- [대출 상환 방식 비교: 원리금균등 vs 원금균등 이자 절약과 중도상환](https://spinkorea.kr/blog/loan-repayment-methods-comparison) — 원리금균등, 원금균등, 만기일시상환의 월 납입액과 총이자 차이를 수식으로 비교하고 대출 중도상환수수료 감면 시점을 고려한 최적의 상환 전략을 안내합니다.
+- [2026 퇴직금 계산방법과 지급기준: 평균임금 산정부터 IRP 절세까지](https://spinkorea.kr/blog/severance-pay-calculation-2026) — 근로자퇴직급여 보장법에 따른 1년 이상 계속근로 요건, 3개월 평균임금과 통상임금 비교 공식, 퇴직소득세 절세를 위한 IRP 수령 절차를 총정리합니다.
 - [2026 연봉 실수령액 계산 가이드: 4대보험 공제율과 세후 월급표](https://spinkorea.kr/blog/salary-net-pay-2026-guide) — 2026년 기준 4대보험 요율과 개정 근로소득 간이세액표를 적용해 세전 연봉에서 세후 실수령액을 정확히 산출하는 공식과 실제 공제 항목을 상세히 설명합니다.
 - [더치페이 할인 금액과 반올림, 1원 차이를 투명하게 나누는 법](https://spinkorea.kr/blog/dutch-pay-discount-rounding) — SpinKorea 더치페이 계산기가 할인액을 고정 금액으로 처리하고 올림·내림·반올림을 선택하는 방식을 실제 영수증 예시로 설명하며, 균등 정산의 1원 차이를 숨기지 않는 방법을 정리합니다.
 - [할인된 가격에서 원가를 역산할 때 반올림이 달라지는 이유](https://spinkorea.kr/blog/reverse-discount-rounding) — 할인된 가격과 할인율만으로 원래 가격을 역산하는 공식을 설명하고, 30%와 33% 할인 사례에서 SpinKorea 계산기의 정수 표시가 검산에 어떤 차이를 만드는지 정리합니다.
@@ -28,8 +30,6 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [시간 더하기 계산기에서 135분을 2시간 15분으로 넣는 법](https://spinkorea.kr/blog/time-add-minutes-blocks) — 시간 계산기의 시간·분 입력이 실제 분량을 어떻게 더하고 빼는지 135분 사례와 입력 제한까지 단계별로 정리합니다.
 - [밤을 넘긴 시간 차이, 23시 40분부터 새벽 2시 15분까지 계산하는 법](https://spinkorea.kr/blog/overnight-time-difference) — 자정을 지난 시간 차이를 다음 날 구간으로 읽는 원리와 휴게시간, 날짜·시간대 한계를 시간 계산기 사용 흐름에 맞춰 설명합니다.
 - [비밀번호 생성기 결과가 거절될 때 길이와 문자 규칙 맞추기](https://spinkorea.kr/blog/password-generator-policy-check) — 비밀번호 생성기 결과가 가입 폼에서 거절되는 이유를 길이·문자·붙여넣기·관리자 사용 관점에서 점검합니다.
-- [Base64 Data URL이 안 보일 때 MIME 접두사 확인하기](https://spinkorea.kr/blog/base64-data-url-mime-prefix) — Base64 Data URL이 이미지로 보이지 않는 원인을 MIME 타입, 쉼표, 문자 인코딩, 길이별로 진단합니다.
-- [API 필드명 케이스 변환에서 약어와 숫자 경계 정하기](https://spinkorea.kr/blog/case-converter-acronym-digit-boundary) — API 필드명 케이스 변환에서 약어·숫자 경계가 달라지는 실제 결과와 충돌 검수법을 정리합니다.
 
 ## 기술 정보
 React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.xml, JSON-LD, GA4를 사용합니다. 기본 빌드에서는 광고 요청을 비활성화하며 광고용 빈 공간을 표시하지 않습니다.

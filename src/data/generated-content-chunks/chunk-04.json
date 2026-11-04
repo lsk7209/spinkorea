@@ -2488,8 +2488,8 @@
         "path": "/tools/time-calculator"
       },
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
+        "label": "연차 계산기",
+        "path": "/tools/annual-leave"
       },
       {
         "label": "단위 변환기",

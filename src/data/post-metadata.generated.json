@@ -5265,16 +5265,16 @@
         "path": "/tools/unit-converter"
       },
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
-      },
-      {
         "label": "할인율 계산기",
         "path": "/tools/discount-calculator"
+      },
+      {
+        "label": "마진율 계산기",
+        "path": "/tools/margin-calculator"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-04"
   },
   {
     "slug": "subscription-renew-alert",
@@ -12008,16 +12008,16 @@
         "path": "/tools/percentage-calculator"
       },
       {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
+        "label": "복리 계산기",
+        "path": "/tools/compound-interest"
       },
       {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
+        "label": "실수령액 계산기",
+        "path": "/tools/net-salary"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-04"
   },
   {
     "slug": "study-dday-schedule",
@@ -12320,8 +12320,8 @@
         "path": "/tools/time-calculator"
       },
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
+        "label": "연차 계산기",
+        "path": "/tools/annual-leave"
       },
       {
         "label": "단위 변환기",
@@ -12329,7 +12329,7 @@
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-04"
   },
   {
     "slug": "monthly-budget-split",
@@ -18446,20 +18446,20 @@
     "primarySourceUrl": "https://en.wikipedia.org/wiki/Unit_price",
     "internalLinks": [
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
+        "label": "연비 계산기",
+        "path": "/tools/fuel-economy"
       },
       {
         "label": "단위 변환기",
         "path": "/tools/unit-converter"
+      },
+      {
+        "label": "더치페이 계산기",
+        "path": "/tools/dutch-pay"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-04"
   },
   {
     "slug": "household-category-rule",
@@ -18785,20 +18785,20 @@
     "primarySourceUrl": "https://fine.fss.or.kr/",
     "internalLinks": [
       {
+        "label": "대출 계산기",
+        "path": "/tools/loan-calculator"
+      },
+      {
+        "label": "복리 계산기",
+        "path": "/tools/compound-interest"
+      },
+      {
         "label": "퍼센트 계산기",
         "path": "/tools/percentage-calculator"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      },
-      {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-04"
   },
   {
     "slug": "compound-interest-memo",
@@ -18820,20 +18820,20 @@
     "primarySourceUrl": "https://en.wikipedia.org/wiki/Compound_interest",
     "internalLinks": [
       {
+        "label": "복리 계산기",
+        "path": "/tools/compound-interest"
+      },
+      {
+        "label": "ROI 계산기",
+        "path": "/tools/roi-calculator"
+      },
+      {
         "label": "퍼센트 계산기",
         "path": "/tools/percentage-calculator"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      },
-      {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-04"
   },
   {
     "slug": "electricity-use-note",

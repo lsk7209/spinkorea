@@ -5,8 +5,24 @@
     <link>https://spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 01 Nov 2026 23:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 23:00:00 GMT</lastBuildDate>
     <atom:link href="https://spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>대출 상환 방식 비교: 원리금균등 vs 원금균등 이자 절약과 중도상환</title>
+      <link>https://spinkorea.kr/blog/loan-repayment-methods-comparison</link>
+      <description>원리금균등, 원금균등, 만기일시상환의 월 납입액과 총이자 차이를 수식으로 비교하고 대출 중도상환수수료 감면 시점을 고려한 최적의 상환 전략을 안내합니다.</description>
+      <pubDate>Tue, 03 Nov 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/loan-repayment-methods-comparison</guid>
+    </item>
+
+    <item>
+      <title>2026 퇴직금 계산방법과 지급기준: 평균임금 산정부터 IRP 절세까지</title>
+      <link>https://spinkorea.kr/blog/severance-pay-calculation-2026</link>
+      <description>근로자퇴직급여 보장법에 따른 1년 이상 계속근로 요건, 3개월 평균임금과 통상임금 비교 공식, 퇴직소득세 절세를 위한 IRP 수령 절차를 총정리합니다.</description>
+      <pubDate>Mon, 02 Nov 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/severance-pay-calculation-2026</guid>
+    </item>
 
     <item>
       <title>2026 연봉 실수령액 계산 가이드: 4대보험 공제율과 세후 월급표</title>

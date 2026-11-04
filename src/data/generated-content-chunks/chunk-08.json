@@ -1070,12 +1070,12 @@
         "path": "/tools/unit-converter"
       },
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
-      },
-      {
         "label": "할인율 계산기",
         "path": "/tools/discount-calculator"
+      },
+      {
+        "label": "마진율 계산기",
+        "path": "/tools/margin-calculator"
       }
     ],
     "tags": [

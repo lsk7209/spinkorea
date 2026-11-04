@@ -8,8 +8,8 @@
     { "cycle": 3, "time_kst": "12:00", "task": "health_roulette_new_article" },
     { "cycle": 4, "time_kst": "18:00", "task": "thin_content_expansion_and_full_verify" }
   ],
-  "current_cycle": 2,
-  "last_run_at": "2026-11-02T19:21:00+09:00",
+  "current_cycle": 3,
+  "last_run_at": "2026-11-04T20:10:00+09:00",
   "zero_link_tools": [],
   "thin_articles_queue": [
     "http-status-note",
@@ -80,6 +80,13 @@
       "cycle": 1,
       "action": "finance_new_article_holiday_allowance_guide",
       "summary": "Drafted and scheduled new reviewed editorial post 'holiday-allowance-2026-calculation-guide' (4,427 chars, 7 H2s, 3 internal tool links) for 2026-11-09. Linked hourly-wage, annual-leave, and net-salary. All tests and search-scope checks passed.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-04T20:10:00+09:00",
+      "cycle": 2,
+      "action": "link_rebalance_round_3_finance_and_travel",
+      "summary": "Rebalanced loan-interest-rough to loan-calculator/compound-interest/percentage-calculator, monthly-savings-rate to net-salary/compound-interest/percentage-calculator, compound-interest-memo to roi-calculator, and fuel-cost-split to dutch-pay. Fixed all metadata/body discrepancies (bulk-buy-break-even, holiday-workday-count). Passed 149 tests and 100% search scope checks.",
       "tests_passed": true
     }
   ]
