@@ -16610,36 +16610,39 @@
   },
   {
     "slug": "http-status-note",
-    "title": "HTTP 상태코드 정리 실행 순서, 배포 전 점검까지",
-    "description": "HTTP 상태코드 정리는 애매할 때 자동화를 먼저 보고 배포 전 점검까지 확인하는 기준을 제시합니다.",
+    "title": "HTTP 상태코드 정리: 200부터 500 에러까지 배포 전 디버깅 가이드",
+    "description": "REST API 및 웹 서비스 배포 전 2xx 성공, 3xx 리다이렉트, 4xx 클라이언트 오류, 5xx 서버 장애의 HTTP 상태코드를 완벽히 정리하고 cURL 디버깅 점검표를 제시합니다.",
     "date": "2026-05-27",
     "publishAt": "2026-05-27T00:00:00+09:00",
     "tags": [
-      "개발",
-      "웹도구",
-      "검증"
+      "HTTP",
+      "상태코드",
+      "웹개발",
+      "API디버깅",
+      "서버에러"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "개발자 웹 도구",
     "contentType": "Explainer",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/",
+    "primarySourceName": "MDN Web Docs: HTTP 상태 코드 공식 사양",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status",
     "internalLinks": [
       {
-        "label": "JSON 포매터",
+        "label": "JSON 포맷터로 에러 페이로드 구조 검증하기",
         "path": "/tools/json-formatter"
       },
       {
-        "label": "URI 인코더",
+        "label": "URI 인코더로 리다이렉트 URL 인코딩하기",
         "path": "/tools/uri-encoder"
       },
       {
-        "label": "Base64 인코더",
+        "label": "Base64 인코더로 인증 헤더 토큰 확인하기",
         "path": "/tools/base64-encoder"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-11-05"
   },
   {
     "slug": "webhook-signature-test",

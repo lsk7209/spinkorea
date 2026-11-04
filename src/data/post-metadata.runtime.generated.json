@@ -2083,6 +2083,24 @@
     "source": "editorial"
   },
   {
+    "slug": "http-status-note",
+    "title": "HTTP 상태코드 정리: 200부터 500 에러까지 배포 전 디버깅 가이드",
+    "description": "REST API 및 웹 서비스 배포 전 2xx 성공, 3xx 리다이렉트, 4xx 클라이언트 오류, 5xx 서버 장애의 HTTP 상태코드를 완벽히 정리하고 cURL 디버깅 점검표를 제시합니다.",
+    "date": "2026-05-27",
+    "publishAt": "2026-05-27T00:00:00+09:00",
+    "updatedAt": "2026-11-05",
+    "tags": [
+      "HTTP",
+      "상태코드",
+      "웹개발",
+      "API디버깅",
+      "서버에러"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "source": "editorial"
+  },
+  {
     "slug": "webhook-signature-test",
     "title": "웹훅 서명 확인 체크리스트: HMAC-SHA256 검증과 재전송 공격 방어",
     "description": "결제 및 알림 웹훅에서 HMAC-SHA256 디지털 서명을 검증하고 타임스탬프 허용 오차와 멱등성을 보장해 위조 요청을 차단하는 실무 가이드를 정리합니다.",

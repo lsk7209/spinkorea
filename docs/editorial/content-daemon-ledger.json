@@ -8,11 +8,10 @@
     { "cycle": 3, "time_kst": "12:00", "task": "health_roulette_new_article" },
     { "cycle": 4, "time_kst": "18:00", "task": "thin_content_expansion_and_full_verify" }
   ],
-  "current_cycle": 4,
-  "last_run_at": "2026-11-05T00:05:00+09:00",
+  "current_cycle": 1,
+  "last_run_at": "2026-11-05T06:05:00+09:00",
   "zero_link_tools": [],
   "thin_articles_queue": [
-    "http-status-note",
     "cache-header-check",
     "canonical-url-audit",
     "robots-rule-review",
@@ -94,6 +93,13 @@
       "cycle": 3,
       "action": "health_new_article_intermittent_fasting_guide",
       "summary": "Drafted and scheduled new reviewed editorial post 'intermittent-fasting-16-8-guide' (5,718 chars, 7 H2s, 3 internal tool links) for 2026-11-10. Linked timer, water-intake, and calorie-burn. All tests and search-scope checks passed.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-05T06:05:00+09:00",
+      "cycle": 4,
+      "action": "thin_content_expansion_http_status_note",
+      "summary": "Rewrote generated-103 'http-status-note' into comprehensive 6k HTTP debugging guide (6,079 chars, 7 H2s, 1xx-5xx hierarchy, 502/504 proxy diagnostics). Linked json-formatter, uri-encoder, and base64-encoder. Upgraded to approved editorial and published to sitemap. All tests and search-scope checks passed.",
       "tests_passed": true
     }
   ]
