@@ -5797,5 +5797,22 @@
     "thumbnail": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "source": "editorial"
+  },
+  {
+    "slug": "smartstore-margin-rate-vat-guide",
+    "title": "스마트스토어 마진율 계산법과 부가세 10% 분리: 수수료 정산표",
+    "description": "스마트스토어 이커머스 셀러를 위한 마진율과 마크업의 수학적 차이, 네이버 주문관리 및 매출연동 수수료 정산, 판매가 속 10% 부가세 분리 공식을 정리합니다.",
+    "date": "2026-11-11",
+    "publishAt": "2026-11-11T08:00:00+09:00",
+    "tags": [
+      "스마트스토어",
+      "마진율",
+      "부가세계산",
+      "이커머스",
+      "온라인판매"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "source": "editorial"
   }
 ]

@@ -5,8 +5,16 @@
     <link>https://spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 03 Nov 2026 23:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 23:00:00 GMT</lastBuildDate>
     <atom:link href="https://spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>2026 법정 전월세 전환율 기준과 월세 보증금 환산 공식</title>
+      <link>https://spinkorea.kr/blog/jeonse-to-monthly-rent-conversion</link>
+      <description>주택임대차보호법에 따른 법정 전월세 전환율 상한선(한국은행 기준금리+2.0%)과 전세를 월세로, 월세를 전세로 상호 환산하는 정확한 계산법을 해설합니다.</description>
+      <pubDate>Wed, 04 Nov 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/jeonse-to-monthly-rent-conversion</guid>
+    </item>
 
     <item>
       <title>대출 상환 방식 비교: 원리금균등 vs 원금균등 이자 절약과 중도상환</title>

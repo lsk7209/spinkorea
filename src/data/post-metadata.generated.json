@@ -23253,5 +23253,40 @@
       }
     ],
     "source": "editorial"
+  },
+  {
+    "slug": "smartstore-margin-rate-vat-guide",
+    "title": "스마트스토어 마진율 계산법과 부가세 10% 분리: 수수료 정산표",
+    "description": "스마트스토어 이커머스 셀러를 위한 마진율과 마크업의 수학적 차이, 네이버 주문관리 및 매출연동 수수료 정산, 판매가 속 10% 부가세 분리 공식을 정리합니다.",
+    "date": "2026-11-11",
+    "publishAt": "2026-11-11T08:00:00+09:00",
+    "tags": [
+      "스마트스토어",
+      "마진율",
+      "부가세계산",
+      "이커머스",
+      "온라인판매"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "category": "생활 금융",
+    "contentType": "가이드형",
+    "primarySourceName": "국세청 홈택스 부가가치세 안내 및 IETF 표준",
+    "primarySourceUrl": "https://www.hometax.go.kr/",
+    "internalLinks": [
+      {
+        "label": "마진율 계산기로 플랫폼 수수료 반영 순이익 산출하기",
+        "path": "/tools/margin-calculator"
+      },
+      {
+        "label": "부가세 계산기로 판매가 속 공급가액과 부가세 분리하기",
+        "path": "/tools/vat-calculator"
+      },
+      {
+        "label": "할인율 계산기로 프로모션 쿠폰 적용 후 정산액 확인하기",
+        "path": "/tools/discount-calculator"
+      }
+    ],
+    "source": "editorial"
   }
 ]
