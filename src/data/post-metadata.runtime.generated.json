@@ -5814,5 +5814,22 @@
     "thumbnail": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "source": "editorial"
+  },
+  {
+    "slug": "bmr-tdee-calorie-calculation-guide",
+    "title": "기초대사량 BMR 계산법과 TDEE 칼로리: 다이어트 정체기 탈출",
+    "description": "미플린-세인트 지어 공식에 기반한 기초대사량(BMR)과 TDEE 계산법, 굶는 다이어트로 인한 대사 적응(정체기) 극복 및 체지방 감량 칼로리 설계를 정리합니다.",
+    "date": "2026-11-12",
+    "publishAt": "2026-11-12T08:00:00+09:00",
+    "tags": [
+      "기초대사량",
+      "BMR",
+      "TDEE",
+      "다이어트",
+      "칼로리계산"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 95,
+    "source": "editorial"
   }
 ]
