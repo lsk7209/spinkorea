@@ -2083,6 +2083,24 @@
     "source": "editorial"
   },
   {
+    "slug": "cache-header-check",
+    "title": "캐시 헤더 점검 가이드: Cache-Control과 ETag 디버깅",
+    "description": "Cache-Control, ETag, max-age 등 웹 캐시 헤더의 동작 원리와 브라우저·CDN 캐시 무효화 전략 및 배포 전 cURL 디버깅 점검표를 완벽히 정리합니다.",
+    "date": "2026-05-27",
+    "publishAt": "2026-05-27T05:00:00+09:00",
+    "updatedAt": "2026-11-06",
+    "tags": [
+      "HTTP",
+      "캐시",
+      "Cache-Control",
+      "ETag",
+      "웹개발"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 91,
+    "source": "editorial"
+  },
+  {
     "slug": "http-status-note",
     "title": "HTTP 상태코드 정리: 200부터 500 에러까지 배포 전 디버깅 가이드",
     "description": "REST API 및 웹 서비스 배포 전 2xx 성공, 3xx 리다이렉트, 4xx 클라이언트 오류, 5xx 서버 장애의 HTTP 상태코드를 완벽히 정리하고 cURL 디버깅 점검표를 제시합니다.",

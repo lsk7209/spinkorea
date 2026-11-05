@@ -16577,36 +16577,39 @@
   },
   {
     "slug": "cache-header-check",
-    "title": "캐시 헤더 점검 비교법, 보안 확인과 디버깅",
-    "description": "캐시 헤더 점검 항목을 글, 도구, 업무 흐름에 적용할 때 필요한 배포 전 점검과 디버깅을 정리했습니다.",
+    "title": "캐시 헤더 점검 가이드: Cache-Control과 ETag 디버깅",
+    "description": "Cache-Control, ETag, max-age 등 웹 캐시 헤더의 동작 원리와 브라우저·CDN 캐시 무효화 전략 및 배포 전 cURL 디버깅 점검표를 완벽히 정리합니다.",
     "date": "2026-05-27",
     "publishAt": "2026-05-27T05:00:00+09:00",
     "tags": [
-      "개발",
-      "웹도구",
-      "검증"
+      "HTTP",
+      "캐시",
+      "Cache-Control",
+      "ETag",
+      "웹개발"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 91,
     "category": "개발자 웹 도구",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/",
+    "primarySourceName": "MDN Web Docs: HTTP 캐싱 공식 사양",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching",
     "internalLinks": [
       {
-        "label": "JSON 포매터",
+        "label": "JSON 포맷터로 API 캐시 응답 검증하기",
         "path": "/tools/json-formatter"
       },
       {
-        "label": "URI 인코더",
+        "label": "URI 인코더로 캐시 버스팅 쿼리스트링 생성하기",
         "path": "/tools/uri-encoder"
       },
       {
-        "label": "Base64 인코더",
+        "label": "Base64 인코더로 ETag 토큰 해시 비교하기",
         "path": "/tools/base64-encoder"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-11-06"
   },
   {
     "slug": "http-status-note",
