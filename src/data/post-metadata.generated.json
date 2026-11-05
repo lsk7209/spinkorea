@@ -11554,20 +11554,20 @@
     "primarySourceUrl": "https://en.wikipedia.org/wiki/Unit_price",
     "internalLinks": [
       {
+        "label": "할인율 계산기",
+        "path": "/tools/discount-calculator"
+      },
+      {
+        "label": "날짜 계산기",
+        "path": "/tools/date-calculator"
+      },
+      {
         "label": "퍼센트 계산기",
         "path": "/tools/percentage-calculator"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      },
-      {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-05"
   },
   {
     "slug": "water-bill-share",
@@ -12246,20 +12246,20 @@
     "primarySourceUrl": "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-ratios-prop-topic",
     "internalLinks": [
       {
+        "label": "더치페이 계산기",
+        "path": "/tools/dutch-pay"
+      },
+      {
+        "label": "부가세 계산기",
+        "path": "/tools/vat-calculator"
+      },
+      {
         "label": "퍼센트 계산기",
         "path": "/tools/percentage-calculator"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      },
-      {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-05"
   },
   {
     "slug": "installment-total-cost",
