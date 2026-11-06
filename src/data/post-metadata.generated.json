@@ -11173,20 +11173,20 @@
     "primarySourceUrl": "https://en.wikipedia.org/wiki/Unit_price",
     "internalLinks": [
       {
-        "label": "퍼센트 계산기",
+        "label": "할인율 계산기로 신품 대비 감가율 산출하기",
+        "path": "/tools/discount-calculator"
+      },
+      {
+        "label": "마진율 계산기로 수수료 차감 후 순수익 계산하기",
+        "path": "/tools/margin-calculator"
+      },
+      {
+        "label": "퍼센트 계산기로 시세 대비 가격 변동률 비교하기",
         "path": "/tools/percentage-calculator"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      },
-      {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-06"
   },
   {
     "slug": "weekly-cleaning-time",
@@ -11900,20 +11900,20 @@
     "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
     "internalLinks": [
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
+        "label": "연비 계산기로 주행거리당 정비비 추적하기",
+        "path": "/tools/fuel-economy"
       },
       {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
+        "label": "날짜 계산기로 소모품 교체 경과일 계산하기",
+        "path": "/tools/date-calculator"
       },
       {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
+        "label": "디데이 계산기로 다음 정기검사 마감일 확인하기",
+        "path": "/tools/d-day-counter"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-06"
   },
   {
     "slug": "pet-care-cost",
