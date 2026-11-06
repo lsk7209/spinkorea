@@ -8,8 +8,8 @@
     { "cycle": 3, "time_kst": "12:00", "task": "health_roulette_new_article" },
     { "cycle": 4, "time_kst": "18:00", "task": "thin_content_expansion_and_full_verify" }
   ],
-  "current_cycle": 1,
-  "last_run_at": "2026-11-06T06:05:00+09:00",
+  "current_cycle": 2,
+  "last_run_at": "2026-11-06T12:05:00+09:00",
   "zero_link_tools": [],
   "thin_articles_queue": [
     "canonical-url-audit",
@@ -127,6 +127,13 @@
       "cycle": 4,
       "action": "thin_content_expansion_cache_header_check",
       "summary": "Rewrote generated-104 'cache-header-check' into comprehensive 6k HTTP cache & CDN debugging guide (6,130 chars, 7 H2s, no-cache vs no-store, 304 ETag revalidation, SPA immutable caching). Linked json-formatter, uri-encoder, and base64-encoder. Upgraded to approved editorial and published to sitemap. All tests and search-scope checks passed.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-06T12:05:00+09:00",
+      "cycle": 1,
+      "action": "finance_new_article_apartment_area_pyeong_guide",
+      "summary": "Drafted and scheduled new reviewed editorial post 'apartment-area-sqm-to-pyeong-guide' (5,756 chars, 7 H2s, 3 internal tool links) for 2026-11-13. Linked area-converter, loan-calculator, and jeonse-converter. Passed 149 tests and 100% search scope checks.",
       "tests_passed": true
     }
   ]

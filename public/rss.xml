@@ -5,8 +5,16 @@
     <link>https://spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 04 Nov 2026 23:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 23:00:00 GMT</lastBuildDate>
     <atom:link href="https://spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>한국인 BMI 기준과 체지방률 정상 범위: 2026 비만 판정법</title>
+      <link>https://spinkorea.kr/blog/korean-bmi-standards-and-body-fat-guide</link>
+      <description>대한비만학회 아시아-태평양 BMI 기준(25 이상 비만)과 체지방률 정상 범위를 대조해 마른 비만 위험을 판정하고 건강한 감량 칼로리를 설계하는 법을 정리합니다.</description>
+      <pubDate>Thu, 05 Nov 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/korean-bmi-standards-and-body-fat-guide</guid>
+    </item>
 
     <item>
       <title>2026 법정 전월세 전환율 기준과 월세 보증금 환산 공식</title>
