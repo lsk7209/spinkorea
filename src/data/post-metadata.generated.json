@@ -16544,36 +16544,39 @@
   },
   {
     "slug": "canonical-url-audit",
-    "title": "캐노니컬 URL 검사 FAQ: 검증 절차 답변",
-    "description": "캐노니컬 URL 검사는 배포 전 점검, 검증 절차, 디버깅을 나눠 실제 실행 순서로 정리한 글입니다.",
+    "title": "캐노니컬 URL 검사 가이드: 중복 페이지 색인과 SEO 점검표",
+    "description": "rel=canonical 표준 링크 태그의 동작 원리, HTTP/HTTPS 및 쿼리 파라미터 중복 페이지 색인 방지 전략, 그리고 배포 전 cURL과 구글 서치 콘솔 검증법을 정리합니다.",
     "date": "2026-05-27",
     "publishAt": "2026-05-27T10:00:00+09:00",
     "tags": [
-      "개발",
-      "웹도구",
-      "검증"
+      "SEO",
+      "캐노니컬URL",
+      "검색엔진최적화",
+      "웹개발",
+      "rel=canonical"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 92,
     "category": "개발자 웹 도구",
     "contentType": "FAQ",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/",
+    "primarySourceName": "Google Search Central: 중복 URL 통합 가이드",
+    "primarySourceUrl": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
     "internalLinks": [
       {
-        "label": "JSON 포매터",
-        "path": "/tools/json-formatter"
-      },
-      {
-        "label": "URI 인코더",
+        "label": "URI 인코더로 캐노니컬 URL 특수문자 및 쿼리 정규화하기",
         "path": "/tools/uri-encoder"
       },
       {
-        "label": "Base64 인코더",
+        "label": "JSON 포맷터로 JSON-LD 구조화 데이터 URL 일치 검증하기",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "Base64 인코더로 메타 태그 해시 및 인증 토큰 점검하기",
         "path": "/tools/base64-encoder"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-11-07"
   },
   {
     "slug": "cache-header-check",

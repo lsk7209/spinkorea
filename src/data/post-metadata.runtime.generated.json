@@ -2083,6 +2083,24 @@
     "source": "editorial"
   },
   {
+    "slug": "canonical-url-audit",
+    "title": "캐노니컬 URL 검사 가이드: 중복 페이지 색인과 SEO 점검표",
+    "description": "rel=canonical 표준 링크 태그의 동작 원리, HTTP/HTTPS 및 쿼리 파라미터 중복 페이지 색인 방지 전략, 그리고 배포 전 cURL과 구글 서치 콘솔 검증법을 정리합니다.",
+    "date": "2026-05-27",
+    "publishAt": "2026-05-27T10:00:00+09:00",
+    "updatedAt": "2026-11-07",
+    "tags": [
+      "SEO",
+      "캐노니컬URL",
+      "검색엔진최적화",
+      "웹개발",
+      "rel=canonical"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 92,
+    "source": "editorial"
+  },
+  {
     "slug": "cache-header-check",
     "title": "캐시 헤더 점검 가이드: Cache-Control과 ETag 디버깅",
     "description": "Cache-Control, ETag, max-age 등 웹 캐시 헤더의 동작 원리와 브라우저·CDN 캐시 무효화 전략 및 배포 전 cURL 디버깅 점검표를 완벽히 정리합니다.",

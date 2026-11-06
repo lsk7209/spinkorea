@@ -1449,6 +1449,14 @@
     </item>
 
     <item>
+      <title>캐노니컬 URL 검사 가이드: 중복 페이지 색인과 SEO 점검표</title>
+      <link>https://spinkorea.kr/blog/canonical-url-audit</link>
+      <description>rel=canonical 표준 링크 태그의 동작 원리, HTTP/HTTPS 및 쿼리 파라미터 중복 페이지 색인 방지 전략, 그리고 배포 전 cURL과 구글 서치 콘솔 검증법을 정리합니다.</description>
+      <pubDate>Wed, 27 May 2026 01:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/canonical-url-audit</guid>
+    </item>
+
+    <item>
       <title>캐시 헤더 점검 가이드: Cache-Control과 ETag 디버깅</title>
       <link>https://spinkorea.kr/blog/cache-header-check</link>
       <description>Cache-Control, ETag, max-age 등 웹 캐시 헤더의 동작 원리와 브라우저·CDN 캐시 무효화 전략 및 배포 전 cURL 디버깅 점검표를 완벽히 정리합니다.</description>
