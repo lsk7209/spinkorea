@@ -18750,8 +18750,8 @@
         "path": "/tools/net-salary"
       },
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
+        "label": "퇴직금 계산기",
+        "path": "/tools/severance-pay"
       },
       {
         "label": "시급 계산기",
@@ -18759,7 +18759,7 @@
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-07"
   },
   {
     "slug": "note-taking-art",
@@ -19128,12 +19128,12 @@
         "path": "/tools/discount-calculator"
       },
       {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
+        "label": "마진율 계산기",
+        "path": "/tools/margin-calculator"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-07"
   },
   {
     "slug": "focus-thieves",

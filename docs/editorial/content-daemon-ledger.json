@@ -8,8 +8,8 @@
     { "cycle": 3, "time_kst": "12:00", "task": "health_roulette_new_article" },
     { "cycle": 4, "time_kst": "18:00", "task": "thin_content_expansion_and_full_verify" }
   ],
-  "current_cycle": 2,
-  "last_run_at": "2026-11-07T12:05:00+09:00",
+  "current_cycle": 3,
+  "last_run_at": "2026-11-07T18:05:00+09:00",
   "zero_link_tools": [],
   "thin_articles_queue": [
     "robots-rule-review",
@@ -161,6 +161,13 @@
       "cycle": 1,
       "action": "finance_new_article_annual_leave_allowance_guide",
       "summary": "Drafted and scheduled new reviewed editorial post 'annual-leave-allowance-2026-calculation-guide' (4,977 chars, 7 H2s, 3 internal tool links) for 2026-11-15. Linked annual-leave, severance-pay, and net-salary. Passed all 149 tests, content:validate (64 approved editorials), and search-scope checks.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-07T18:05:00+09:00",
+      "cycle": 2,
+      "action": "link_rebalance_round_6_discount_rate_and_salary_net",
+      "summary": "Rebalanced discount-rate-check to discount-calculator/percentage-calculator/margin-calculator (replaced unit-converter with business margin analysis, 3,800 chars) and salary-net-estimate to net-salary/hourly-wage/severance-pay (replaced percentage-calculator with statutory severance pay package analysis, 3,760 chars). Replaced generic converters with high-relevance financial tools. Passed all 149 tests and 100% search scope checks.",
       "tests_passed": true
     }
   ]
