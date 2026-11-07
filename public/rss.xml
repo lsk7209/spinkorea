@@ -1457,6 +1457,14 @@
     </item>
 
     <item>
+      <title>robots.txt 규칙 작성법과 크롤러 제어 가이드: 실전 검증</title>
+      <link>https://spinkorea.kr/blog/robots-rule-review</link>
+      <description>robots.txt 규칙 문법(User-agent, Disallow, Allow, Crawl-delay)과 구글·네이버 봇 제어, 보안 주의사항 및 cURL 기반 크롤링 진단법을 완벽히 정리합니다.</description>
+      <pubDate>Wed, 27 May 2026 06:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/robots-rule-review</guid>
+    </item>
+
+    <item>
       <title>캐노니컬 URL 검사 가이드: 중복 페이지 색인과 SEO 점검표</title>
       <link>https://spinkorea.kr/blog/canonical-url-audit</link>
       <description>rel=canonical 표준 링크 태그의 동작 원리, HTTP/HTTPS 및 쿼리 파라미터 중복 페이지 색인 방지 전략, 그리고 배포 전 cURL과 구글 서치 콘솔 검증법을 정리합니다.</description>

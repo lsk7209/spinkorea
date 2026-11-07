@@ -16511,36 +16511,39 @@
   },
   {
     "slug": "robots-rule-review",
-    "title": "robots.txt 규칙, 자동화 전에 볼 점",
-    "description": "robots.txt 규칙을 준비할 때 놓치기 쉬운 검증 절차, 디버깅, 자동화를 짧게 점검합니다.",
+    "title": "robots.txt 규칙 작성법과 크롤러 제어 가이드: 실전 검증",
+    "description": "robots.txt 규칙 문법(User-agent, Disallow, Allow, Crawl-delay)과 구글·네이버 봇 제어, 보안 주의사항 및 cURL 기반 크롤링 진단법을 완벽히 정리합니다.",
     "date": "2026-05-27",
     "publishAt": "2026-05-27T15:00:00+09:00",
     "tags": [
-      "개발",
-      "웹도구",
-      "검증"
+      "robots.txt",
+      "크롤러",
+      "검색엔진",
+      "SEO",
+      "웹개발"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "개발자 웹 도구",
     "contentType": "How-to",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/",
+    "primarySourceName": "Google Search Central: robots.txt 소개 및 작성 사양",
+    "primarySourceUrl": "https://developers.google.com/search/docs/crawling-indexing/robots/intro",
     "internalLinks": [
       {
-        "label": "JSON 포매터",
-        "path": "/tools/json-formatter"
-      },
-      {
-        "label": "URI 인코더",
+        "label": "URI 인코더로 크롤러 차단 경로의 URL 특수문자 검증하기",
         "path": "/tools/uri-encoder"
       },
       {
-        "label": "Base64 인코더",
+        "label": "JSON 포맷터로 검색엔진 구조화 데이터(JSON-LD) 유효성 검사하기",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "Base64 인코더로 크롤러 User-Agent 및 웹훅 토큰 인코딩하기",
         "path": "/tools/base64-encoder"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-11-08"
   },
   {
     "slug": "canonical-url-audit",
