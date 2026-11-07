@@ -18,6 +18,7 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [로또 번호 생성기](https://spinkorea.kr/tools/lotto-generator) — 버튼 한 번으로 로또 번호 조합을 생성합니다.
 
 ## 최신 블로그
+- [투자 수익률 ROI 계산법과 연평균 복리 CAGR: 실질 수익률 비교](https://spinkorea.kr/blog/roi-cagr-investment-return-guide) — 단순 투자 수익률(ROI)과 연평균 복리 수익률(CAGR)의 공식 차이를 밝히고, 인플레이션과 세금을 감안한 실질 수익률 계산법을 정리합니다.
 - [한국인 BMI 기준과 체지방률 정상 범위: 2026 비만 판정법](https://spinkorea.kr/blog/korean-bmi-standards-and-body-fat-guide) — 대한비만학회 아시아-태평양 BMI 기준(25 이상 비만)과 체지방률 정상 범위를 대조해 마른 비만 위험을 판정하고 건강한 감량 칼로리를 설계하는 법을 정리합니다.
 - [2026 법정 전월세 전환율 기준과 월세 보증금 환산 공식](https://spinkorea.kr/blog/jeonse-to-monthly-rent-conversion) — 주택임대차보호법에 따른 법정 전월세 전환율 상한선(한국은행 기준금리+2.0%)과 전세를 월세로, 월세를 전세로 상호 환산하는 정확한 계산법을 해설합니다.
 - [대출 상환 방식 비교: 원리금균등 vs 원금균등 이자 절약과 중도상환](https://spinkorea.kr/blog/loan-repayment-methods-comparison) — 원리금균등, 원금균등, 만기일시상환의 월 납입액과 총이자 차이를 수식으로 비교하고 대출 중도상환수수료 감면 시점을 고려한 최적의 상환 전략을 안내합니다.
@@ -29,7 +30,6 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [D-Day 100일과 100일째 날짜가 다른 이유, 시작일 포함해 계산하기](https://spinkorea.kr/blog/dday-100-day-counting) — D-Day 카운터의 달력 일수와 시작일을 1일로 세는 100일째 날짜를 실제 예시로 비교하고, 2026년 10월 24일을 기준으로 날짜를 틀리지 않게 기록하는 방법을 정리합니다.
 - [인치·센티미터 변환에서 2.54를 곱하는 순서와 반올림 기준](https://spinkorea.kr/blog/inch-cm-measurement-conversion) — SpinKorea 단위 변환기의 inch·cm 계산 과정을 실제 치수 예제와 CSS 화면 단위의 한계까지 연결해 설명합니다.
 - [컵을 mL로 바꿀 때 200mL와 240mL를 먼저 구분하는 법](https://spinkorea.kr/blog/recipe-cup-ml-conversion) — SpinKorea 단위 변환기의 cup=200mL 동작과 미국 레시피의 240mL 관행을 구분해 컵·mL 변환과 재료별 한계를 설명합니다.
-- [시간 더하기 계산기에서 135분을 2시간 15분으로 넣는 법](https://spinkorea.kr/blog/time-add-minutes-blocks) — 시간 계산기의 시간·분 입력이 실제 분량을 어떻게 더하고 빼는지 135분 사례와 입력 제한까지 단계별로 정리합니다.
 
 ## 기술 정보
 React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.xml, JSON-LD, GA4를 사용합니다. 기본 빌드에서는 광고 요청을 비활성화하며 광고용 빈 공간을 표시하지 않습니다.

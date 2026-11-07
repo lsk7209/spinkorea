@@ -5,8 +5,16 @@
     <link>https://spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 05 Nov 2026 23:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 23:00:00 GMT</lastBuildDate>
     <atom:link href="https://spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>투자 수익률 ROI 계산법과 연평균 복리 CAGR: 실질 수익률 비교</title>
+      <link>https://spinkorea.kr/blog/roi-cagr-investment-return-guide</link>
+      <description>단순 투자 수익률(ROI)과 연평균 복리 수익률(CAGR)의 공식 차이를 밝히고, 인플레이션과 세금을 감안한 실질 수익률 계산법을 정리합니다.</description>
+      <pubDate>Fri, 06 Nov 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/roi-cagr-investment-return-guide</guid>
+    </item>
 
     <item>
       <title>한국인 BMI 기준과 체지방률 정상 범위: 2026 비만 판정법</title>
