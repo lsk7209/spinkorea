@@ -5,8 +5,16 @@
     <link>https://spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 06 Nov 2026 23:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 23:00:00 GMT</lastBuildDate>
     <atom:link href="https://spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>수면 주기 계산법과 상쾌한 기상 시각: 90분 수면 빚 회복표</title>
+      <link>https://spinkorea.kr/blog/sleep-cycle-wake-up-time-guide</link>
+      <description>90분 렘수면 주기를 바탕으로 피로 없이 일어나는 최적 기상 시각과 입면 잠복기 14분을 반영한 수면 시간 계산 공식을 상세히 정리합니다.</description>
+      <pubDate>Sat, 07 Nov 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/sleep-cycle-wake-up-time-guide</guid>
+    </item>
 
     <item>
       <title>투자 수익률 ROI 계산법과 연평균 복리 CAGR: 실질 수익률 비교</title>
