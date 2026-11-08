@@ -16478,36 +16478,39 @@
   },
   {
     "slug": "sitemap-lastmod-check",
-    "title": "사이트맵 날짜 확인 운영법, 배포 전 점검 남기기",
-    "description": "사이트맵 날짜 확인 상황에서 디버깅과 자동화는 헷갈릴 때 보는 실무형 정리입니다.",
+    "title": "사이트맵 날짜 확인과 lastmod 최적화 가이드: 배포 검증",
+    "description": "XML 사이트맵 lastmod의 W3C 규격, 구글봇 크롤링 신호 원리, 가짜 날짜 갱신 페널티, cURL 헤더 검증 및 CI/CD 자동화 배포 절차를 정리합니다.",
     "date": "2026-05-27",
     "publishAt": "2026-05-27T20:00:00+09:00",
     "tags": [
-      "개발",
-      "웹도구",
-      "검증"
+      "사이트맵",
+      "lastmod",
+      "SEO",
+      "검색엔진",
+      "웹개발"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1563206767-5b18f218e8de?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 93,
     "category": "개발자 웹 도구",
     "contentType": "Checklist",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/",
+    "primarySourceName": "Google Search Central: 사이트맵 빌드 및 lastmod 태그 가이드",
+    "primarySourceUrl": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
     "internalLinks": [
       {
-        "label": "JSON 포매터",
-        "path": "/tools/json-formatter"
-      },
-      {
-        "label": "URI 인코더",
+        "label": "URI 인코더로 사이트맵 loc URL의 특수문자 및 퍼센트 인코딩 검증하기",
         "path": "/tools/uri-encoder"
       },
       {
-        "label": "Base64 인코더",
+        "label": "JSON 포맷터로 검색엔진 구조화 데이터(JSON-LD) 유효성 검사하기",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "Base64 인코더로 검색엔진 제출 웹훅 및 인덱싱 API 토큰 인코딩하기",
         "path": "/tools/base64-encoder"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-11-09"
   },
   {
     "slug": "robots-rule-review",

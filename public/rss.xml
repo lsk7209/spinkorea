@@ -1465,6 +1465,14 @@
     </item>
 
     <item>
+      <title>사이트맵 날짜 확인과 lastmod 최적화 가이드: 배포 검증</title>
+      <link>https://spinkorea.kr/blog/sitemap-lastmod-check</link>
+      <description>XML 사이트맵 lastmod의 W3C 규격, 구글봇 크롤링 신호 원리, 가짜 날짜 갱신 페널티, cURL 헤더 검증 및 CI/CD 자동화 배포 절차를 정리합니다.</description>
+      <pubDate>Wed, 27 May 2026 11:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/sitemap-lastmod-check</guid>
+    </item>
+
+    <item>
       <title>robots.txt 규칙 작성법과 크롤러 제어 가이드: 실전 검증</title>
       <link>https://spinkorea.kr/blog/robots-rule-review</link>
       <description>robots.txt 규칙 문법(User-agent, Disallow, Allow, Crawl-delay)과 구글·네이버 봇 제어, 보안 주의사항 및 cURL 기반 크롤링 진단법을 완벽히 정리합니다.</description>

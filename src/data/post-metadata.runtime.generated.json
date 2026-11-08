@@ -2083,6 +2083,24 @@
     "source": "editorial"
   },
   {
+    "slug": "sitemap-lastmod-check",
+    "title": "사이트맵 날짜 확인과 lastmod 최적화 가이드: 배포 검증",
+    "description": "XML 사이트맵 lastmod의 W3C 규격, 구글봇 크롤링 신호 원리, 가짜 날짜 갱신 페널티, cURL 헤더 검증 및 CI/CD 자동화 배포 절차를 정리합니다.",
+    "date": "2026-05-27",
+    "publishAt": "2026-05-27T20:00:00+09:00",
+    "updatedAt": "2026-11-09",
+    "tags": [
+      "사이트맵",
+      "lastmod",
+      "SEO",
+      "검색엔진",
+      "웹개발"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1563206767-5b18f218e8de?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "source": "editorial"
+  },
+  {
     "slug": "robots-rule-review",
     "title": "robots.txt 규칙 작성법과 크롤러 제어 가이드: 실전 검증",
     "description": "robots.txt 규칙 문법(User-agent, Disallow, Allow, Crawl-delay)과 구글·네이버 봇 제어, 보안 주의사항 및 cURL 기반 크롤링 진단법을 완벽히 정리합니다.",
