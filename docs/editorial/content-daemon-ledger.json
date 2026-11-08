@@ -3,13 +3,29 @@
   "project": "spinkorea",
   "domain": "https://spinkorea.kr",
   "cycle_schedule": [
-    { "cycle": 1, "time_kst": "00:00", "task": "finance_new_article" },
-    { "cycle": 2, "time_kst": "06:00", "task": "link_rebalance" },
-    { "cycle": 3, "time_kst": "12:00", "task": "health_roulette_new_article" },
-    { "cycle": 4, "time_kst": "18:00", "task": "thin_content_expansion_and_full_verify" }
+    {
+      "cycle": 1,
+      "time_kst": "00:00",
+      "task": "finance_new_article"
+    },
+    {
+      "cycle": 2,
+      "time_kst": "06:00",
+      "task": "link_rebalance"
+    },
+    {
+      "cycle": 3,
+      "time_kst": "12:00",
+      "task": "health_roulette_new_article"
+    },
+    {
+      "cycle": 4,
+      "time_kst": "18:00",
+      "task": "thin_content_expansion_and_full_verify"
+    }
   ],
-  "current_cycle": 3,
-  "last_run_at": "2026-11-08T18:05:00+09:00",
+  "current_cycle": 4,
+  "last_run_at": "2026-11-09T00:05:00+09:00",
   "zero_link_tools": [],
   "thin_articles_queue": [
     "sitemap-lastmod-check"
@@ -195,6 +211,13 @@
       "cycle": 2,
       "action": "link_rebalance_round_7_work_hour_and_moving_cost",
       "summary": "Rebalanced work-hour-summary to time-calculator/hourly-wage/annual-leave (replaced percentage-calculator with statutory annual leave qualification analysis, 3,694 chars) and moving-check-cost to percentage-calculator/jeonse-converter/loan-calculator (replaced unit-converter and time-calculator with real estate jeonse-to-rent conversion and moving loan amortization, 3,528 chars). Passed all 149 tests and 100% search scope checks.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-09T00:05:00+09:00",
+      "cycle": 3,
+      "action": "health_new_article_ideal_body_weight_guide",
+      "summary": "Drafted and scheduled new reviewed editorial post 'ideal-body-weight-and-body-fat-guide' (5,500 chars, 6 H2s, 3 internal tool links) for 2026-11-18. Linked ideal-weight, body-fat, and calorie-burn. Passed all 149 tests, content:validate (67 approved editorials), and search-scope checks.",
       "tests_passed": true
     }
   ]
