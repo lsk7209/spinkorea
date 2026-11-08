@@ -18566,16 +18566,16 @@
         "path": "/tools/percentage-calculator"
       },
       {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
+        "label": "전월세전환기",
+        "path": "/tools/jeonse-converter"
       },
       {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
+        "label": "대출 계산기",
+        "path": "/tools/loan-calculator"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-08"
   },
   {
     "slug": "dice-probability",
@@ -19028,12 +19028,12 @@
         "path": "/tools/hourly-wage"
       },
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
+        "label": "연차 계산기",
+        "path": "/tools/annual-leave"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-08"
   },
   {
     "slug": "split-bill-calculation",
