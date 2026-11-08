@@ -1,9 +1,10 @@
-# Status | 마지막: 2026-10-22
+# Status | 마지막: 2026-11-08
 
 ## 현재 작업
 AdSense 신청 준비. 핸드오프 남은 과제(링크·소제목·청크 분리) 완료.
 
 ## 최근 변경 (최근 5개만)
+- 11-08: AdSense pub-7865…로 교체·ads.txt 반영, Contabo 수동 승인 배포(서버 policy approved_sha 갱신 필요, push만으론 배포 안 됨), 연락처 메일 교체
 - 10-23: 큐레이션 글 근거 없는 수치 5곳 정정(멀티태스킹·목표 마감일·완벽주의·감사 일기)
 - 10-23: 비밀번호 중복 글 통합(`strong-password-guide` → `password-security-guide` 301), 병합 글은 `post-metadata*.generated.json`에서도 제거해야 사이트맵에서 빠짐
 - 10-22: 런타임 글 메타데이터에서 비공개 생성 글 제외(postMetadata 번들 377KB → 193KB)
@@ -16,7 +17,7 @@ AdSense 신청 준비. 핸드오프 남은 과제(링크·소제목·청크 분�
 - [ ] (사용자) Bing Webmaster Tools 사이트 인증(GSC 가져오기 가능) — IndexNow 403 원인 `UserForbiddedToAccessSite`, 키 파일은 정상
 
 ## 결정사항
-- 연락처 `cs@spinkorea.kr` 수신 불가(MX 없음) 상태 유지: 사용자 결정(10-22), 심사 시 연락처 확인 위험 감수
+- 공개 연락처를 `lsk7209@gmail.com`으로 교체(11-08): `cs@spinkorea.kr`은 MX 없어 수신 불가였음(심사 위험)
 - 배포는 `main` 머지가 아니라 `Scheduled publish` deploy hook으로만
 - 운영 canonical은 `https://spinkorea.kr`(www는 308로 apex 리다이렉트, 10-22 확인)
 - `source: generated` 글은 데이터 보존, 정적 HTML 미생성(404)
