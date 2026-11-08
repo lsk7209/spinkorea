@@ -17,6 +17,7 @@ AdSense 신청 준비. 핸드오프 남은 과제(링크·소제목·청크 분�
 - [ ] (사용자) Bing Webmaster Tools 사이트 인증(GSC 가져오기 가능) — IndexNow 403 원인 `UserForbiddedToAccessSite`, 키 파일은 정상
 
 ## 결정사항
+- 애드센스 심사 기간(11-08~): 콘텐츠 데몬 신규 글 중단·보강/링크 교정만(프롬프트 수정, 외부 스케줄러에 반영 필요), ads.txt는 새 ID(pub-7865…)만 유지
 - 공개 연락처를 `lsk7209@gmail.com`으로 교체(11-08): `cs@spinkorea.kr`은 MX 없어 수신 불가였음(심사 위험)
 - 배포는 `main` 머지가 아니라 `Scheduled publish` deploy hook으로만
 - 운영 canonical은 `https://spinkorea.kr`(www는 308로 apex 리다이렉트, 10-22 확인)
