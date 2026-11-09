@@ -24,8 +24,8 @@
       "task": "thin_content_expansion_and_full_verify"
     }
   ],
-  "current_cycle": 2,
-  "last_run_at": "2026-11-09T12:00:00+09:00",
+  "current_cycle": 3,
+  "last_run_at": "2026-11-10T00:05:00+09:00",
   "zero_link_tools": [],
   "thin_articles_queue": [
     "json-parse-error"
@@ -232,6 +232,13 @@
       "cycle": 1,
       "action": "finance_new_article_freelancer_3_3_tax_guide",
       "summary": "Drafted and scheduled new reviewed editorial post 'freelancer-3-3-tax-calculation-guide' (5,500 chars, 7 H2s, 3 internal tool links) for 2026-11-19. Linked net-salary, vat-calculator, and percentage-calculator. Passed all 149 tests, content:validate (68 approved editorials), and search-scope checks.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-10T00:05:00+09:00",
+      "cycle": 2,
+      "action": "link_rebalance_round_8_return_shipping_and_subscription_cut",
+      "summary": "Rebalanced return-shipping-cost to percentage-calculator/discount-calculator/vat-calculator (replaced unit-converter and time-calculator with partial return discount recalculation and VAT tax breakdown, 4,500 chars) and monthly-subscription-cut to net-salary/percentage-calculator/compound-interest (replaced unit-converter and time-calculator with take-home salary ratio analysis and 10-year 50k compound savings growth model, 4,600 chars). Passed all 149 tests, content:validate (68 approved editorials), and search-scope checks.",
       "tests_passed": true
     }
   ]

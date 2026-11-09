@@ -11502,8 +11502,8 @@
   },
   {
     "slug": "return-shipping-cost",
-    "title": "반품 배송비 계산 선택법, 생활 적용과 입력값 확인",
-    "description": "무료 반품 조건과 실제 부담 금액을 구분하는 방법을 정리했습니다. 반품비가 상품가에서 차지하는 비율을 따져 반품 여부를 판단하는 기준을 담았습니다.",
+    "title": "반품 배송비 계산과 환불액 역산법: 무료배송 취소·부가세 정리",
+    "description": "단순 변심 반품 시 왕복 배송비 부담 조건, 조건부 무료배송 취소에 따른 실질 환불액 역산, 부가가치세(VAT) 공제 및 절약 판단 기준을 정리합니다.",
     "date": "2026-06-27",
     "publishAt": "2026-06-27T16:00:00+09:00",
     "tags": [
@@ -11519,20 +11519,20 @@
     "primarySourceUrl": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%A0%84%EC%9E%90%EC%83%81%EA%B1%B0%EB%9E%98%EB%93%B1%EC%97%90%EC%84%9C%EC%9D%98%EC%86%8C%EB%B9%84%EC%9E%90%EB%B3%B4%ED%98%B8%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0",
     "internalLinks": [
       {
-        "label": "퍼센트 계산기",
+        "label": "퍼센트 계산기로 상품가 대비 반품 배송비 손실 비율 산출하기",
         "path": "/tools/percentage-calculator"
       },
       {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
+        "label": "할인율 계산기로 묶음 할인 및 조건부 무료배송 취소 후 최종 환불액 역산하기",
+        "path": "/tools/discount-calculator"
       },
       {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
+        "label": "부가세 계산기로 왕복 택배비 공급가액과 부가가치세(10%) 매입세액 공제 확인하기",
+        "path": "/tools/vat-calculator"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-10"
   },
   {
     "slug": "phone-plan-compare",
@@ -12194,8 +12194,8 @@
   },
   {
     "slug": "monthly-subscription-cut",
-    "title": "구독 정리 우선순위 선택법, 생활 적용과 계산 기준",
-    "description": "여러 구독 중 무엇을 해지할지 고르는 기준을 정리했습니다. 월 지출 대비 비중과 사용 빈도를 비율로 따져 우선순위를 세우는 방법을 담았습니다.",
+    "title": "월 구독 정리 우선순위와 절약 계산법: 복리 효과와 실수령액 비교",
+    "description": "OTT·소프트웨어 월 구독료 누적 지출 분석, 월 실수령액 대비 고정비 적정 비율(5% 이내), 불필요한 구독 해지 금액의 10년 복리 저축 효과를 정리합니다.",
     "date": "2026-06-23",
     "publishAt": "2026-06-23T12:00:00+09:00",
     "tags": [
@@ -12207,24 +12207,24 @@
     "qualityScore": 92,
     "category": "계산기·생활 유틸",
     "contentType": "FAQ",
-    "primarySourceName": "BLS: Calculating percent changes",
-    "primarySourceUrl": "https://www.bls.gov/cpi/factsheets/calculating-percent-changes.htm",
+    "primarySourceName": "한국소비자원: 디지털 구독서비스 다크패턴 소비자 주의보",
+    "primarySourceUrl": "https://www.kca.go.kr/",
     "internalLinks": [
       {
-        "label": "퍼센트 계산기",
+        "label": "실수령액 계산기로 세후 실수령 소득 기준 가처분 소득 대비 구독비 예산 점검하기",
+        "path": "/tools/net-salary"
+      },
+      {
+        "label": "퍼센트 계산기로 월 실수령액 대비 총 구독료 고정 지출 비율 산출하기",
         "path": "/tools/percentage-calculator"
       },
       {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
-      },
-      {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
+        "label": "복리 계산기로 월 5만원 구독료 절약 시 10년 연 5% 복리 저축 자산 산출하기",
+        "path": "/tools/compound-interest"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-10"
   },
   {
     "slug": "tip-split-korea",
