@@ -18,6 +18,7 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [로또 번호 생성기](https://spinkorea.kr/tools/lotto-generator) — 버튼 한 번으로 로또 번호 조합을 생성합니다.
 
 ## 최신 블로그
+- [간헐적 단식 16 8 방법과 시간표: 공복 수분 섭취와 칼로리 소모](https://spinkorea.kr/blog/intermittent-fasting-16-8-guide) — 16:8 간헐적 단식의 과학적 원리와 최적의 시간표 설정법, 단식 중 필수 수분 섭취량 계산 및 공복 운동 시 칼로리 소모 극대화 공식을 분석합니다.
 - [2026 주휴수당 지급 기준과 계산법: 15시간 미만 쪼개기 알바 판별](https://spinkorea.kr/blog/holiday-allowance-2026-calculation-guide) — 근로기준법 제55조에 따른 주휴수당 발생 요건(주 15시간 이상, 소정근로일 개근)과 알바·파트타임 주휴수당 산정 공식을 사례별로 상세히 정리합니다.
 - [수면 주기 계산법과 상쾌한 기상 시각: 90분 수면 빚 회복표](https://spinkorea.kr/blog/sleep-cycle-wake-up-time-guide) — 90분 렘수면 주기를 바탕으로 피로 없이 일어나는 최적 기상 시각과 입면 잠복기 14분을 반영한 수면 시간 계산 공식을 상세히 정리합니다.
 - [투자 수익률 ROI 계산법과 연평균 복리 CAGR: 실질 수익률 비교](https://spinkorea.kr/blog/roi-cagr-investment-return-guide) — 단순 투자 수익률(ROI)과 연평균 복리 수익률(CAGR)의 공식 차이를 밝히고, 인플레이션과 세금을 감안한 실질 수익률 계산법을 정리합니다.
@@ -29,7 +30,6 @@ SpinFlow는 결정 피로를 줄여주는 무료 웹 서비스입니다. 온라�
 - [더치페이 할인 금액과 반올림, 1원 차이를 투명하게 나누는 법](https://spinkorea.kr/blog/dutch-pay-discount-rounding) — SpinKorea 더치페이 계산기가 할인액을 고정 금액으로 처리하고 올림·내림·반올림을 선택하는 방식을 실제 영수증 예시로 설명하며, 균등 정산의 1원 차이를 숨기지 않는 방법을 정리합니다.
 - [할인된 가격에서 원가를 역산할 때 반올림이 달라지는 이유](https://spinkorea.kr/blog/reverse-discount-rounding) — 할인된 가격과 할인율만으로 원래 가격을 역산하는 공식을 설명하고, 30%와 33% 할인 사례에서 SpinKorea 계산기의 정수 표시가 검산에 어떤 차이를 만드는지 정리합니다.
 - [퍼센트와 퍼센트포인트 차이, 20%에서 25%를 정확히 읽는 법](https://spinkorea.kr/blog/percentage-vs-percentage-point) — 20%에서 25%로 바뀐 사례를 퍼센트포인트와 상대 변화율로 나누어 설명하고, SpinKorea 퍼센트 계산기의 세 모드와 분모·반올림 주의점을 실제 숫자로 정리합니다.
-- [D-Day 100일과 100일째 날짜가 다른 이유, 시작일 포함해 계산하기](https://spinkorea.kr/blog/dday-100-day-counting) — D-Day 카운터의 달력 일수와 시작일을 1일로 세는 100일째 날짜를 실제 예시로 비교하고, 2026년 10월 24일을 기준으로 날짜를 틀리지 않게 기록하는 방법을 정리합니다.
 
 ## 기술 정보
 React, TypeScript, Vite, Tailwind CSS 기반이며 robots.txt, sitemap.xml, rss.xml, JSON-LD, GA4를 사용합니다. 기본 빌드에서는 광고 요청을 비활성화하며 광고용 빈 공간을 표시하지 않습니다.

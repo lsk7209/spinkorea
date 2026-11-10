@@ -2083,6 +2083,24 @@
     "source": "editorial"
   },
   {
+    "slug": "json-parse-error",
+    "title": "JSON 파싱 오류 원인 5가지와 해결법: SyntaxError 디버깅",
+    "description": "JSON.parse() SyntaxError의 5대 원인(Trailing Comma, 따옴표 규칙, 제어문자, BigInt)과 안전한 파싱 함수(safeJsonParse) 구현법을 정리합니다.",
+    "date": "2026-05-28",
+    "publishAt": "2026-05-28T01:00:00+09:00",
+    "updatedAt": "2026-11-10",
+    "tags": [
+      "JSON",
+      "SyntaxError",
+      "파싱오류",
+      "웹개발",
+      "디버깅"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop",
+    "qualityScore": 93,
+    "source": "editorial"
+  },
+  {
     "slug": "sitemap-lastmod-check",
     "title": "사이트맵 날짜 확인과 lastmod 최적화 가이드: 배포 검증",
     "description": "XML 사이트맵 lastmod의 W3C 규격, 구글봇 크롤링 신호 원리, 가짜 날짜 갱신 페널티, cURL 헤더 검증 및 CI/CD 자동화 배포 절차를 정리합니다.",
