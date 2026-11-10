@@ -18211,38 +18211,39 @@
   },
   {
     "slug": "grocery-unit-price",
-    "title": "장보기 단가 비교, 묶음이 정말 싼지 따지기",
-    "description": "용량이 다른 상품을 100g이나 1L 같은 같은 단위로 맞춰 단가를 비교하는 법과, 사이트 단위 변환기·퍼센트 계산기로 되는 계산을 예시로 정리합니다.",
+    "title": "장보기 단가 비교 및 할인율 계산법: 묶음 상품 단위 가격",
+    "description": "용량이 다른 상품의 100g·100ml당 기준 단가 역산, 마트 1+1 묶음 행사 실질 할인율 비교, 과세·면세 부가세 10% 분리 영수증 검토법을 정리합니다.",
     "date": "2026-05-18",
     "publishAt": "2026-05-18T01:00:00+09:00",
     "tags": [
       "장보기",
-      "단가",
-      "비교",
-      "생활"
+      "단가비교",
+      "할인율",
+      "부가세",
+      "계산기"
     ],
     "thumbnail": "https://picsum.photos/seed/grocery-unit-price/1600/900",
     "qualityScore": 91,
     "category": "계산기·생활 유틸",
     "contentType": "FAQ",
-    "primarySourceName": "Wikipedia: Unit price",
-    "primarySourceUrl": "https://en.wikipedia.org/wiki/Unit_price",
+    "primarySourceName": "한국소비자원: 생필품 가격정보 종합포털 참가격",
+    "primarySourceUrl": "https://www.kca.go.kr/",
     "internalLinks": [
       {
-        "label": "단위 변환기",
+        "label": "할인율 계산기로 마트 1+1 행사, 묶음 할인율 및 실질 체감 할인율 비교하기",
+        "path": "/tools/discount-calculator"
+      },
+      {
+        "label": "단위 변환기로 g·kg, ml·L 등 이종 용량 단위 환산 및 100g당 단가 산출하기",
         "path": "/tools/unit-converter"
       },
       {
-        "label": "퍼센트 계산기",
-        "path": "/tools/percentage-calculator"
-      },
-      {
-        "label": "시간 계산기",
-        "path": "/tools/time-calculator"
+        "label": "부가세 계산기로 가공식품 과세(10%)와 농수산물 면세(0%) 분리 계산하기",
+        "path": "/tools/vat-calculator"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-11"
   },
   {
     "slug": "url-shortener-tech",
@@ -18973,38 +18974,39 @@
   },
   {
     "slug": "travel-budget-sheet",
-    "title": "여행 예산 나누기, 항목별로 미리 갈라 두기",
-    "description": "숙박·식비·교통을 항목으로 먼저 갈라 두고, 공동 비용은 인원수로 나눠 한쪽에 몰리지 않게 정리하는 순서를 예시로 설명합니다.",
+    "title": "여행 예산 나누기 계산법: 더치페이 정산과 부가세 10% 체크",
+    "description": "숙박·교통·식비 등 카테고리별 여행 예산 배분, 더치페이 계산기 1/N 정산, 해외 호텔 부가세(VAT 10%) 및 봉사료 포함 최종 지출 계산법을 정리합니다.",
     "date": "2026-05-13",
     "publishAt": "2026-05-13T21:00:00+09:00",
     "tags": [
       "여행",
       "예산",
       "더치페이",
+      "부가세",
       "계산기"
     ],
     "thumbnail": "https://picsum.photos/seed/travel-budget-sheet/1600/900",
     "qualityScore": 91,
     "category": "계산기·생활 유틸",
     "contentType": "FAQ",
-    "primarySourceName": "BLS: Calculating percent changes",
-    "primarySourceUrl": "https://www.bls.gov/cpi/factsheets/calculating-percent-changes.htm",
+    "primarySourceName": "한국소비자원: 국외여행 및 숙박 분쟁해결기준",
+    "primarySourceUrl": "https://www.kca.go.kr/",
     "internalLinks": [
       {
-        "label": "더치페이 계산기",
+        "label": "더치페이 계산기로 동행자 간 공동 경비 1/N 정산 및 잔여 차액 처리하기",
         "path": "/tools/dutch-pay"
       },
       {
-        "label": "퍼센트 계산기",
+        "label": "퍼센트 계산기로 숙박비·식비·교통비 등 항목별 여행 예산 배분 비율 점검하기",
         "path": "/tools/percentage-calculator"
       },
       {
-        "label": "단위 변환기",
-        "path": "/tools/unit-converter"
+        "label": "부가세 계산기로 해외 결제 및 숙박 예약 부가세 10%와 봉사료 포함 최종 금액 산출하기",
+        "path": "/tools/vat-calculator"
       }
     ],
     "source": "editorial",
-    "updatedAt": "2026-09-30"
+    "updatedAt": "2026-11-11"
   },
   {
     "slug": "work-hour-summary",

@@ -24,8 +24,8 @@
       "task": "thin_content_expansion_and_full_verify"
     }
   ],
-  "current_cycle": 2,
-  "last_run_at": "2026-11-10T18:12:00+09:00",
+  "current_cycle": 3,
+  "last_run_at": "2026-11-11T01:38:00+09:00",
   "zero_link_tools": [],
   "thin_articles_queue": [
     "url-encoding-case"
@@ -260,6 +260,13 @@
       "cycle": 1,
       "action": "finance_new_article_car_fuel_economy_guide",
       "summary": "Drafted and scheduled new reviewed editorial post 'car-fuel-economy-and-gas-cost-calculation-guide' (5,700 chars, 7 H2s, 3 internal tool links) for 2026-11-21. Linked fuel-economy, dutch-pay, and percentage-calculator. Passed all 149 tests, content:validate (70 approved editorials), and 17 search-scope checks.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-11T01:38:00+09:00",
+      "cycle": 2,
+      "action": "link_rebalance_round_9_travel_budget_and_grocery_unit_price",
+      "summary": "Rebalanced travel-budget-sheet to dutch-pay/percentage-calculator/vat-calculator (replaced unit-converter with hotel/travel VAT 10% and service charge calculations, 4,107 chars) and grocery-unit-price to discount-calculator/unit-converter/vat-calculator (replaced time-calculator and percentage-calculator with 1+1 promotion real discount rate, shrinkflation detection, and grocery tax-exempt vs 10% taxable receipt breakdown, 3,877 chars). Passed all 149 tests, content:validate (70 approved editorials), and 17 search-scope checks.",
       "tests_passed": true
     }
   ]
