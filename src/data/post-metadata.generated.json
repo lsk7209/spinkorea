@@ -16412,36 +16412,39 @@
   },
   {
     "slug": "url-encoding-case",
-    "title": "URL 인코딩 기준 상황별 표, 배포 전 점검",
-    "description": "URL 인코딩 기준을 검색한 독자가 바로 따라 할 수 있도록 보안 확인부터 디버깅까지 압축했습니다.",
+    "title": "URL 인코딩 기준 및 RFC 3986: 쿼리스트링 퍼센트 인코딩 가이드",
+    "description": "RFC 3986 및 1738 표준 URI 예약문자 규격, encodeURI와 encodeURIComponent의 차이, 쿼리 파라미터 공백(+ vs %20) 처리 및 이중 인코딩 디버깅법을 정리합니다.",
     "date": "2026-05-28",
     "publishAt": "2026-05-28T06:00:00+09:00",
     "tags": [
-      "개발",
-      "웹도구",
-      "검증"
+      "URL",
+      "인코딩",
+      "퍼센트인코딩",
+      "웹표준",
+      "개발자도구"
     ],
     "thumbnail": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1600&auto=format&fit=crop",
     "qualityScore": 95,
     "category": "개발자 웹 도구",
     "contentType": "Comparison",
-    "primarySourceName": "MDN Web Docs",
-    "primarySourceUrl": "https://developer.mozilla.org/",
+    "primarySourceName": "MDN Web Docs: encodeURIComponent() 사양과 RFC 3986",
+    "primarySourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent",
     "internalLinks": [
       {
-        "label": "JSON 포매터",
-        "path": "/tools/json-formatter"
-      },
-      {
-        "label": "URI 인코더",
+        "label": "URI 인코더로 쿼리스트링 특수문자 및 한글 퍼센트 인코딩 변환하기",
         "path": "/tools/uri-encoder"
       },
       {
-        "label": "Base64 인코더",
+        "label": "JSON 포맷터로 인코딩된 URL 페이로드 및 쿼리 파라미터 객체 구조 검증하기",
+        "path": "/tools/json-formatter"
+      },
+      {
+        "label": "Base64 인코더로 데이터 URL 및 바이너리 쿼리 토큰 상호 변환하기",
         "path": "/tools/base64-encoder"
       }
     ],
-    "source": "generated"
+    "source": "editorial",
+    "updatedAt": "2026-11-11"
   },
   {
     "slug": "json-parse-error",

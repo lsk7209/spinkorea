@@ -5,8 +5,16 @@
     <link>https://spinkorea.kr/blog</link>
     <description>결정 피로 극복, 생산성 향상, 디지털 웰빙과 무료 웹 유틸리티 활용 가이드입니다.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 09 Nov 2026 23:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 23:00:00 GMT</lastBuildDate>
     <atom:link href="https://spinkorea.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>스마트스토어 마진율 계산법과 부가세 10% 분리: 수수료 정산표</title>
+      <link>https://spinkorea.kr/blog/smartstore-margin-rate-vat-guide</link>
+      <description>스마트스토어 이커머스 셀러를 위한 마진율과 마크업의 수학적 차이, 네이버 주문관리 및 매출연동 수수료 정산, 판매가 속 10% 부가세 분리 공식을 정리합니다.</description>
+      <pubDate>Tue, 10 Nov 2026 23:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/smartstore-margin-rate-vat-guide</guid>
+    </item>
 
     <item>
       <title>간헐적 단식 16 8 방법과 시간표: 공복 수분 섭취와 칼로리 소모</title>
@@ -1478,6 +1486,14 @@
       <description>추첨 과정 설명이 부족해 결과 신뢰가 낮아지는 문제를 다룹니다. 이벤트 추첨 증빙을 무료 도구와 진행자 절차로 갖추는 방법을 정리했습니다.</description>
       <pubDate>Tue, 16 Jun 2026 01:00:00 GMT</pubDate>
       <guid>https://spinkorea.kr/blog/lottery-event-proof</guid>
+    </item>
+
+    <item>
+      <title>URL 인코딩 기준 및 RFC 3986: 쿼리스트링 퍼센트 인코딩 가이드</title>
+      <link>https://spinkorea.kr/blog/url-encoding-case</link>
+      <description>RFC 3986 및 1738 표준 URI 예약문자 규격, encodeURI와 encodeURIComponent의 차이, 쿼리 파라미터 공백(+ vs %20) 처리 및 이중 인코딩 디버깅법을 정리합니다.</description>
+      <pubDate>Wed, 27 May 2026 21:00:00 GMT</pubDate>
+      <guid>https://spinkorea.kr/blog/url-encoding-case</guid>
     </item>
 
     <item>

@@ -24,12 +24,10 @@
       "task": "thin_content_expansion_and_full_verify"
     }
   ],
-  "current_cycle": 4,
-  "last_run_at": "2026-11-11T06:05:00+09:00",
+  "current_cycle": 1,
+  "last_run_at": "2026-11-11T12:03:00+09:00",
   "zero_link_tools": [],
-  "thin_articles_queue": [
-    "url-encoding-case"
-  ],
+  "thin_articles_queue": [],
   "history": [
     {
       "timestamp": "2026-11-01T09:15:00+09:00",
@@ -274,6 +272,13 @@
       "cycle": 3,
       "action": "health_new_article_alcohol_breakdown_guide",
       "summary": "Drafted and scheduled new reviewed editorial post 'alcohol-breakdown-time-and-widmark-guide' (4,266 chars, 8 H2s, 3 internal tool links) for 2026-11-22. Linked time-calculator, water-intake, and timer. Passed all 149 tests, content:validate (71 approved editorials), and 17 search-scope checks.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-11T12:03:00+09:00",
+      "cycle": 4,
+      "action": "thin_content_expansion_url_encoding_case",
+      "summary": "Rewrote generated-109 'url-encoding-case' into comprehensive 5.6k URL percent-encoding & RFC 3986 engineering guide (5,602 chars, 9 H2s, reserved/unreserved matrix, encodeURI vs encodeURIComponent, %20 vs + space difference, double encoding defense, URLSearchParams & cURL protocol). Linked uri-encoder, json-formatter, and base64-encoder. Upgraded to approved editorial and published to sitemap. Drained thinContentQueue to 0. Passed all 149 tests, content:validate (71 approved editorials), and 17 search-scope checks.",
       "tests_passed": true
     }
   ]
