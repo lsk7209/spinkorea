@@ -24,8 +24,8 @@
       "task": "thin_content_expansion_and_full_verify"
     }
   ],
-  "current_cycle": 2,
-  "last_run_at": "2026-11-11T18:03:00+09:00",
+  "current_cycle": 3,
+  "last_run_at": "2026-11-12T00:06:00+09:00",
   "zero_link_tools": [],
   "thin_articles_queue": [],
   "history": [
@@ -286,6 +286,13 @@
       "cycle": 1,
       "action": "finance_new_article_savings_interest_tax_guide",
       "summary": "Drafted and scheduled new reviewed editorial post 'savings-interest-tax-and-net-return-guide' (4,917 chars, 8 H2s, 3 internal tool links) for 2026-11-23. Linked compound-interest, percentage-calculator, and net-salary. Passed all 149 tests, content:validate (72 approved editorials), and 17 search-scope checks.",
+      "tests_passed": true
+    },
+    {
+      "timestamp": "2026-11-12T00:06:00+09:00",
+      "cycle": 2,
+      "action": "link_rebalance_round_10_school_budget_and_fixed_cost_map",
+      "summary": "Rebalanced school-supply-budget to discount-calculator/dutch-pay/percentage-calculator (replaced unit-converter with stationery bundle real discount rate, group purchase 1/N allocation, KC certification safety rules, and educational budget control, 4,214 chars) and monthly-fixed-cost-map to net-salary/percentage-calculator/compound-interest (replaced date-calculator and dutch-pay with 50-30-20 budget principle, 100k savings 10-year compound interest growth of 15.53m, and utility smoothing buffer accounts, 3,923 chars). Passed all 149 tests, content:validate (72 approved editorials), and 17 search-scope checks.",
       "tests_passed": true
     }
   ]
